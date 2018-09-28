@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# Remove sentences that contained English character or word
+# Remove sentences that contain English character or word
 # Ye Kyaw Thu, Waseda University, Tokyo, Japan
 #
 # usage: perl rm-EnglishSentences.pl <input-file>
