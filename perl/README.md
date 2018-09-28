@@ -1,5 +1,5 @@
 
-# TOC of preprocessing and postediting tools especially for NLP
+# Preprocessing and postediting tools especially for NLP
 
 # bash
 
