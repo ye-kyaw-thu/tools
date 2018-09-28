@@ -11,9 +11,9 @@ use utf8;
 # input file already finished word breaking
 # How to run: word-analysis.pl <input-filename> [options]
 # e.g.
-# word-analysis.pl Myanmar.clean.txt
-# word-analysis.pl Myanmar.clean.txt longest-shortest
-# word-analysis.pl Myanmar.clean.txt count 
+# word-analysis.pl 10-lines
+# word-analysis.pl 10-lines longest-shortest
+# word-analysis.pl 10-lines count 
 
 binmode STDIN, ":utf8";
 binmode STDOUT, ":utf8";
