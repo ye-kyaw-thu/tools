@@ -1,12 +1,15 @@
 #!/usr/bin/env perl
 
-# printing sentences that contain emoji character
-# with -r option, the program will print sentences that do not contain emoji character
+# default: printing sentences that contain emoji character
+# with "-r" option for printing sentences that do not contain emoji character
+# with "-c" option for cleaning emoji character
+# 
 # Ye Kyaw Thu, NICT, Kyoto, Japan
 #
 # last updated: 25 April 2015
-# usage: perl print-emojiSentences.pl <input-file> [option]
+# usage: perl print-emojiSentences.pl <input-file> [options]
 # e.g. perl ./print-emojiSentences.pl ./tst-emoji 
+# e.g. perl ./print-emojiSentences.pl ./tst-emoji c
 # e.g. perl ./print-emojiSentences.pl ./tst-emoji r
 
 use strict;
@@ -26,8 +29,7 @@ if (! defined $ARGV[1]){
       my $line = <$inputFILE>;
       if (($line ne '') & ($line !~ /^ *$/) & ($line =~ /(\p{Emoticons})/g)) {
          chomp($line);
-         
-        print "$line\n";
+         print "$line\n";
        }
 
     }
@@ -40,13 +42,25 @@ elsif ($ARGV[1] eq "r"){
       my $line = <$inputFILE>;
       if (($line ne '') & ($line !~ /^ *$/) & ($line !~ /(\p{Emoticons})/g)) {
          chomp($line);
-         
-        print "$line\n";
+         print "$line\n";
        }
 
     }
+}
+elsif ($ARGV[1] eq "c"){
 
+   while (!eof($inputFILE)) {
+     
+      my $line = <$inputFILE>;
+      if (($line ne '') & ($line !~ /^ *$/)) {
+         chomp($line);
+         $line =~  s/(\p{Emoticons})//g;
+         if ($line ne ''){
+            print "$line\n";
+          }
+       }
 
+    }
 }
 
 
