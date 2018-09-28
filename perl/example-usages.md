@@ -88,7 +88,7 @@ total: 1
 total: 1
 
 Average words per line : 19.80
-lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines -longest-shortest
+
 lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines longest-shortest
 Longest sentence : 35 words
 	4 : အစော ဆုံး ခိုင်မာ သည့် သမိုင်း အထောက်အထား မှာ ၁၅၈၆ ၁၅၈၈ အတွင်း မြန်မာ နိုင်ငံ သို့ ရောက် ရှိ လာ ခဲ့ သည့် အင်္ဂလိပ် လူမျိုး ခရီးသွား RalphFitch ၏ မှတ်တမ်း ဖြစ် ပြီး ၎င်း က Cosmin မြို့ ဟု မှတ်သား ခဲ့ သည် ။
@@ -100,6 +100,7 @@ Shortest sentence : 4 word(s)
 total : 1
 
 Average words per line : 19.80
+
 lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines count
 4 word(s) : 1 sentence(s)
 6 word(s) : 1 sentence(s)
