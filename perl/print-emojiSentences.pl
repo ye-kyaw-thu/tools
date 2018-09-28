@@ -5,7 +5,7 @@
 # Ye Kyaw Thu, NICT, Kyoto, Japan
 #
 # last updated: 25 April 2015
-# usage: perl print-emojiSentences.pl <input-file>
+# usage: perl print-emojiSentences.pl <input-file> [option]
 # e.g. perl ./print-emojiSentences.pl ./tst-emoji 
 # e.g. perl ./print-emojiSentences.pl ./tst-emoji r
 
