@@ -1,4 +1,4 @@
-# TOC of perl scripts
+# TOC of perl Scripts
 
 1. clean-space.pl  
    (စာကြောင်းရဲ့ ရှေ့ဆုံးနဲ့ နောက်ဆုံးမှာ ရှိနေတဲ့ မလိုအပ်တဲ့ space တွေ၊ နှစ်ခါထပ်ပါနေတဲ့ space တွေ၊ blank line တွေကို ရှင်းဖို့)  
