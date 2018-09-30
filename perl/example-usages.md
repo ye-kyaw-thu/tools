@@ -183,3 +183,44 @@ lar@lar-air:~/tool/perl$ perl ./print-emojiSentences.pl ./tst-emoji c
 ခင်လှိုင်လဲငါ့လိုပဲ ရွာပြင်ရောက်တော့ မယ်
 
 ```
+
+## dq-multilines.pl
+
+```bash
+
+lar@lar-air:~/tool/perl$ cat ./dq-tst 
+"Hello
+Who
+are
+you?"
+abc
+def
+"abc
+def"
+This is a car
+"This
+is
+a
+cat."
+lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -raw
+"Hello
+Who
+are
+you?"
+"abc
+def"
+"This
+is
+a
+cat."
+lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -single
+"Hello Who are you?"
+"abc def"
+"This is a cat."
+lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -remove
+abc
+def
+This is a car
+
+
+```
