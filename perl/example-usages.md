@@ -202,6 +202,7 @@ This is a car
 is
 a
 cat."
+
 lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -raw
 "Hello
 Who
@@ -213,6 +214,7 @@ def"
 is
 a
 cat."
+
 lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -single
 "Hello Who are you?"
 "abc def"
