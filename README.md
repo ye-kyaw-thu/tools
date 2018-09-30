@@ -14,5 +14,7 @@ Natural Language Processing သုတေသန လုပ်ကြတော့မ
 1. clean-space.pl
 2. rm-EnglishSentences.pl
 3. word-analysis.pl
+4. print-emojiSentences.pl
+5. dq-multilines.pl
 
 # python
