@@ -219,6 +219,7 @@ lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -single
 "Hello Who are you?"
 "abc def"
 "This is a cat."
+
 lar@lar-air:~/tool/perl$ perl ./dq-multilines.pl ./dq-tst -remove
 abc
 def
