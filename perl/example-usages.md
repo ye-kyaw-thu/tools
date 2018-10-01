@@ -40,6 +40,7 @@ Do you speak English?
 ဘာလုပ်နေတာလဲ။ thinking လုပ်နေတာလား။
 က a ခ b ဂ c
 a b c d e f g
+
 lar@lar-air:~/tool/perl$ perl ./rm-EnglishSentences.pl ./tst-input2 
 မြန်မာစာ နဲ့ အင်္ဂလိပ်စာ
 ကခဂ နဲ့ အေဘီစီ
