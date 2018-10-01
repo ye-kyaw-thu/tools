@@ -16,6 +16,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 2. rm-EnglishSentences.pl
 3. word-analysis.pl
 4. print-emojiSentences.pl
-5. dq-multilines.pl
+5. dq-multilines.pl  
+6. mk-abstract-para.pl
 
 # python
