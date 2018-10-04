@@ -1,4 +1,22 @@
+# Example usages of bash programs
 
+မှတ်ချက်။ ။ bash ပရိုဂရမ်တွေကို run တဲ့အခါမှာ အောက်ပါအတိုင်း ပုံစံနှစ်မျိုးနဲ့ run လို့ရပါတယ်။  
+
+```bash
+$bash program.sh  
+```
+
+(သို့မဟုတ်)  
+
+```bash
+$./program.sh
+```
+
+bash ပရိုဂရမ်ဖိုင်နာမည်ရဲ့ ရှေ့ကနေ bash ဆိုပြီးမရိုက်ပဲနဲ့ run ဖို့အတွက်က chmod +x ./program.sh ဆိုပြီး executable mode ကို ပြောင်းပေးထားဖို့ လိုအပ်ပါတယ်။  
+
+## clean-space.pl
+
+```bash
 
 lar@lar-air:~/tool$ tar -xzvf ./rt_pvc-1.0.0.tgz 
 RtAudio.h
