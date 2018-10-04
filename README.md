@@ -10,6 +10,8 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 
 # bash
 
+1. read-and-move.sh 
+
 # perl
 
 1. clean-space.pl
