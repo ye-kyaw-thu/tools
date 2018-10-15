@@ -10,7 +10,8 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 
 # bash
 
-1. read-and-move.sh 
+1. read-and-move.sh  
+2. change-filenames.sh
 
 # perl
 
