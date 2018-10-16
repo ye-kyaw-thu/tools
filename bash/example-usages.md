@@ -144,6 +144,9 @@ Evaluation time (1-image): 0.575s
 34 0.012266385
 2018-10-16 01:54:25.573635: W tensorflow/core/framework/op_def_util.cc:346] Op BatchNormWithGlobalNormalization is deprecated. It will cease to work in GraphDef version 9. Use tf.nn.batch_normalization().
 2018-10-16 01:54:25.776136: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+...
+...
+...
 ```
 
 ရက်စွဲတွေနဲ့ စတဲ့ စာကြောင်းတွေက tensorflow မော်ဒယ်ကို သုံးတဲ့အခါမှာ ပေးတဲ့ warning message တွေပါ။  
@@ -155,5 +158,37 @@ rm-date-sentences.sh ကို အောက်ပါအတိုင်းသု�
 ./rm-date-sentences.sh ./ot-5person-200k.log > ./ot-5person-200k.log.clean
 ```
 
+ot-5person-200k.log.clean ဖိုင်ထဲမှာတော့ date နဲ့စတဲ့ စာကြောင်းတွေက ရှင်းထားပြီးသားဖြစ်နေတာကို အောက်ပါအတိုင်း တွေ့ရပါလိမ့်မယ်။  
 
+```
+Testing with open-test data ook for Class1...
+
+
+Evaluation time (1-image): 0.551s
+
+21 0.33185694
+23 0.21179184
+20 0.20961815
+24 0.07168844
+38 0.037272394
+
+Evaluation time (1-image): 0.575s
+
+1 0.90066767
+31 0.04104986
+29 0.016420923
+36 0.012420018
+34 0.012266385
+
+Evaluation time (1-image): 0.537s
+
+1 0.45257574
+21 0.43286347
+34 0.06279393
+20 0.02177601
+29 0.015827697
+...
+...
+...
+```
 
