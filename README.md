@@ -13,6 +13,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 1. read-and-move.sh  
 2. change-filenames.sh  
 3. rm-date-sentences.sh  
+4. print-classID-prediction-result.sh
 
 # perl
 
