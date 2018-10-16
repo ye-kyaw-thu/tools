@@ -192,3 +192,49 @@ Evaluation time (1-image): 0.537s
 ...
 ```
 
+## print-classID-prediction-result.sh
+
+```
+Classification Result for Class-1:
+
+Class-1 14
+Class-4 2
+Class-8 11
+Class-19        1
+Class-21        2
+Class-26        1
+Class-34        2
+Class-38        1
+Class-39        1
+Class-40        1
+
+Classification Result for Class-2:
+
+Class-2 21
+Class-3 3
+Class-4 1
+Class-13        2
+Class-14        1
+Class-17        2
+Class-23        1
+Class-24        1
+Class-26        1
+Class-28        1
+Class-35        1
+Class-37        1
+
+Classification Result for Class-3:
+
+Class-2 1
+Class-3 18
+Class-4 2
+Class-5 1
+Class-8 2
+Class-11        1
+Class-13        5
+Class-14        1
+Class-15        1
+Class-17        1
+Class-21        2
+Class-24        1
+```
