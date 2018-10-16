@@ -1,15 +1,15 @@
 # TOC of bash Scripts
 
-1. read-and-move.sh  
+1. [read-and-move.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/read-and-move.sh)  
 (text ဖိုင်ထဲမှာရှိတဲ့ ဖိုင်နာမည်တွေကို တဖိုင်ချင်းဖတ်ပြီးတော့ ကိုယ်ရွှေ့ချင်တဲ့ ဖိုလ်ဒါအောက်ကို ရွှေ့ပေးဖို့ အတွက် သုံးခဲ့တယ်)  
 
-2. change-filenames.sh  
+2. [change-filenames.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/change-filenames.sh)  
 (လက်ရှိရောက်နေတဲ့ path အောက်မှာ ရှိတဲ့ဖိုလ်ဒါတွေအထဲက ဖိုင်တွေကို နာမည်ပြောင်းဖို့အတွက် သုံးရန်။  
   ဖိုင်နာမည်ကို နာမည်ပြောင်းတဲ့အခါမှာ ဖိုလ်ဒါရဲ့ နာမည်ကိုပါ ယူသုံးပြထားပါတယ်။)  
   
-3. rm-date-sentences.sh  
+3. [rm-date-sentences.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-date-sentences.sh)  
 (log ဖိုင်ထဲကနေ YYYY-MM-DD format နဲ့ ရေးထားတဲ့ ရက်စွဲတွေ ဥပမာ 2018-10-16 လိုမျိုး ရက်စွဲတွေနဲ့ စတဲ့စာကြောင်းတွေကို ဖယ်ဖို့အတွက် သုံးခဲ့တယ်)  
 
-4. print-classID-prediction-result.sh  
+4. [print-classID-prediction-result.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-classID-prediction-result.sh)  
 (image classification testing လုပ်စဉ်မှာ သိမ်းထားတဲ့ log ဖိုင်ထဲကနေ၊ Class-ID အလိုက် confusion-matrix graph ဆွဲဖို့အတွက်  
 မှန်မှန်ကန်ကန် classification လုပ်ပေးနိုင်တဲ့ အရေအတွက်၊ မှားပြီးတော့ classification လုပ်ထားတာတွေကို ရေတွက်ဖို့အတွက် သုံးခဲ့တယ်)  
