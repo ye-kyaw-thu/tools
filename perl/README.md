@@ -1,18 +1,18 @@
 # TOC of perl Scripts
 
-1. clean-space.pl  
+1. [clean-space.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-space.pl)  
    (စာကြောင်းရဲ့ ရှေ့ဆုံးနဲ့ နောက်ဆုံးမှာ ရှိနေတဲ့ မလိုအပ်တဲ့ space တွေ၊ နှစ်ခါထပ်ပါနေတဲ့ space တွေ၊ blank line တွေကို ရှင်းဖို့)  
-2. rm-EnglishSentences.pl  
+2. [rm-EnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-EnglishSentences.pl)  
    (အင်္ဂလိပ်စာ ပါနေသော စာကြောင်းများကို ဖယ်ရှားဖို့)  
-3. word-analysis.pl  
+3. [word-analysis.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/word-analysis.pl)  
    (ပေးလိုက်တဲ့ input ဖိုင်ထဲမှာရှိတဲ့ စာလုံးတွေနဲ့ပတ်သက်တဲ့အချက်အလက်၊ စာလုံးရေအနည်းဆုံး စာကြောင်း၊ အများဆုံးစာကြောင်း စတာတွေကို ရိုက်ထုတ်ပြဖို့)  
-4. print-emojiSentences.pl  
+4. [print-emojiSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-emojiSentences.pl)  
    (emoji သို့မဟုတ် emoticon တွေပါတဲ့ စာကြောင်းတွေကိုပဲ ရွေးရိုက်ထုတ်ပြခိုင်းတာမျိုး၊ emoji မပါတဲ့ စာကြောင်းတွေကိုပဲ ရွေးရိုက်ထုတ်ပြခိုင်းတာမျိုး၊  
     emoji စာလုံးတွေကိုပဲ ဖျက်ခိုင်းတာမျိုး လုပ်ဖို့)  
-5. dq-multilines.pl
+5. [dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)
    (double quotation mark ကြားထဲမှာရှိပြီးတော့၊ enter တစ်ခုထက်မက ခေါက်ထားတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ရန်၊ စာကြောင်း တစ်ကြောင်းတည်းအဖြစ် ပြောင်းလဲရန် အတွက်)
    
-6. mk-abstract-para.pl  
+6. [mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)  
    (စာတမ်းတွေရဲ့ abstract ကို PDF ဖိုင်ကနေ ကော်ပီကူးယူလိုက်တဲ့အခါမှာတွဲပါလာတဲ့ hyphen တွေနဲ့ ကော်လံတစ်ခုအဖြစ် မလိုအပ်ပဲ enter ခေါက်ထားတာတွေကို ရှင်းဖို့အတွက်)  
    
    
