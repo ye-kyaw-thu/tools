@@ -10,10 +10,10 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 
 # bash
 
-1. read-and-move.sh  
-2. change-filenames.sh  
-3. rm-date-sentences.sh  
-4. print-classID-prediction-result.sh
+1. [read-and-move.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/read-and-move.sh)  
+2. [change-filenames.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/change-filenames.sh)  
+3. [rm-date-sentences.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-date-sentences.sh)  
+4. [print-classID-prediction-result.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-classID-prediction-result.sh)
 
 # perl
 
