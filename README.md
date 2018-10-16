@@ -17,11 +17,11 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 
 # perl
 
-1. clean-space.pl
-2. rm-EnglishSentences.pl
-3. word-analysis.pl
-4. print-emojiSentences.pl
-5. dq-multilines.pl  
-6. mk-abstract-para.pl
+1. [clean-space.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-space.pl)
+2. [rm-EnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-EnglishSentences.pl)
+3. [word-analysis.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/word-analysis.pl)
+4. [print-emojiSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-emojiSentences.pl)
+5. [dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)  
+6. [mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)
 
 # python
