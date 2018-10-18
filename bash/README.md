@@ -13,3 +13,6 @@
 4. [print-classID-prediction-result.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-classID-prediction-result.sh)  
 (image classification testing လုပ်စဉ်မှာ သိမ်းထားတဲ့ log ဖိုင်ထဲကနေ၊ Class-ID အလိုက် confusion-matrix graph ဆွဲဖို့အတွက်  
 မှန်မှန်ကန်ကန် classification လုပ်ပေးနိုင်တဲ့ အရေအတွက်၊ မှားပြီးတော့ classification လုပ်ထားတာတွေကို ရေတွက်ဖို့အတွက် သုံးခဲ့တယ်)  
+
+5. [compare-img-or-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/compare-img-or-pdf.sh)  
+(image ဖိုင်နှစ်ခု သို့မဟုတ် pdf ဖိုင်နှစ်ခုကို နှိုင်းယှဉ်ပြီးတော့ မတူတာကို ကြည့်ဖို့အတွက် သုံးခဲ့တယ်။ မှားရိုက်ထားတဲ့ မြန်မာစာလုံးတွေကို မှန်တာနဲ့ယှဉ်ပြဖို့အတွက် သုံးနိုင်တယ်။)
