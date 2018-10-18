@@ -268,7 +268,8 @@ compare-img-or-pdf.sh က ပုံဖိုင်အဖြစ်သိမ်း
 ဥပမာ run ပြဖို့အတွက် သုံးထားတဲ့ဖိုင်တွေက [test-data/4compare-img-or-pdf/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/4compare-img-or-pdf) ဖိုလ်ဒါအောက်မှာ သိမ်းထားပါတယ်။  
 
 ```bash
-./compare-img-or-pdf.sh ./errors-from-aru-corpus-white-bg.png  ./errors-from-aru-corpus-edited-white-bg.png diff1.png
+../compare-img-or-pdf.sh ./errors-from-aru-corpus.pdf  ./errors-from-aru-corpus-edited.pdf diff2.png
 ```
-အထက်ပါ command ကို run လိုက်ရင် diff1.png ဖိုင်ကို output အဖြစ်ရပါလိမ့်မယ်။  
+အထက်ပါ command ကို run လိုက်ရင် [diff2.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/4compare-img-or-pdf/diff2.png) ဖိုင်ကို output အဖြစ်ရပါလိမ့်မယ်။  
+
 
