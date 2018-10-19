@@ -1,3 +1,5 @@
+အောက်ပါ perl script တစ်ခုချင်းစီရဲ အသုံးပြုပုံအသေးစိတ်ကို [example-usages.md](https://github.com/ye-kyaw-thu/tools/blob/master/perl/example-usages.md) ဖိုင်မှာ ရှင်းပြထားပါတယ်။  
+
 # TOC of perl Scripts
 
 1. [clean-space.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-space.pl)  
