@@ -343,3 +343,27 @@ head ./myg2p.ver1.txt.shuf.1k.sorted-by-col4:
 23578	အအေးမိ	အ အေး မိ	a- ei: mi.
 ==========
 ```
+## kill-all-detached.sh  
+
+```bash
+ka2pluskha2@y-Lab-1:~$ screen -ls
+There are screens on:
+        29273.pts-1.asr-proto-1 (10/22/2018 05:38:27 PM)        (Attached)
+        29213.pts-1.asr-proto-1 (10/22/2018 05:36:14 PM)        (Detached)
+        29175.pts-1.asr-proto-1 (10/22/2018 05:34:36 PM)        (Detached)
+3 Sockets in /run/screen/S-ka2pluskha2.
+ka2pluskha2@y-Lab-1:~$ screen -ls | grep Detached
+        29213.pts-1.asr-proto-1 (10/22/2018 05:36:14 PM)        (Detached)
+        29175.pts-1.asr-proto-1 (10/22/2018 05:34:36 PM)        (Detached)
+ka2pluskha2@y-Lab-1:~$ screen -ls | grep Detached | cut -d. -f1 
+        29213
+        29175
+ka2pluskha2@y-Lab-1:~$ screen -ls | grep Detached | cut -d. -f1 | sed 's/\t//' 
+29213
+29175
+ka2pluskha2@y-Lab-1:~$ screen -ls | grep Detached | cut -d. -f1 | sed 's/\t//' | xargs kill
+ka2pluskha2@asr-proto-1:~$ screen -ls
+There is a screen on:
+        29273.pts-1.asr-proto-1 (10/22/2018 05:38:27 PM)        (Attached)
+1 Socket in /run/screen/S-ka2pluskha2.
+```
