@@ -24,3 +24,6 @@
 
 7. [kill-all-detached.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/kill-all-detached.sh)  
 (server တစ်ခုခုကို terminal ချိတ် run ကြတဲ့အခါမှာ screen ဆိုတဲ့ command ကိုခံပြီးမှ ကိုယ်လုပ်စရာရှိတာကို လုပ်လေ့ရှိပါတယ်။ တရက်တရက် server တွေမှာ ဝင်လိုက်ထွက်လိုက် နဲ့ အလုပ်လုပ်ရင်း detached ဖြစ်နေတဲ့ screen session တွေအားလုံးကို kill လုပ်ဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။ အသုံးဝင်ပါလိမ့်မယ်။)  
+
+8. [unzip-all-with-one-passwd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/unzip-all-with-one-passwd.sh)  
+(zip command နဲ့ password တစ်ခုတည်းသုံးပြီးတော့ ချုံ့ထားတဲ့ ဖိုင်တွေကို ဖြေဖို့အတွက် ရေးခဲ့ပါတယ်။)
