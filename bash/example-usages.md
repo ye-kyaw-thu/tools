@@ -344,14 +344,19 @@ head ./myg2p.ver1.txt.shuf.1k.sorted-by-col4:
 ==========
 ```
 ## kill-all-detached.sh  
+ကုမ္ပဏီကြီးတွေမှာ၊ သုတေသနဌာနတွေမှာ အလုပ်လုပ်တဲ့အခါမှာ desktop, notebook ကနေ running server (e.g. cluster server, GPU server, Google cloud server ...) တစ်လုံးအထဲကို ကိုယ့် local terminal ကနေ login ဝင်ပြီးတော့မှ လုပ်ချင်တဲ့ experiment တွေကို run လေ့ရှိပါတယ်။ အထူးသဖြင့် machine learning ကိစ္စတွေ၊ neural network model ဆောက်တဲ့ ကိစ္စတွေကို notebook တို့၊ desktop တို့မှာ လုပ်လေ့မရှိကြပါဘူး။ အဲဒီလို သုံးတဲ့အခါမှာ လုပ်စရာရှိတဲ့အလုပ်တွေကို server မှာ run ထားပြီးတော့ terminal ကနေ ထွက်လိုက်သိတိုင်အောင်၊ ကိုယ့် local စက်ကို shutdown လုပ်လိုက်ရင်တောင်၊ server မှာ run ထားခဲ့တဲ့ ပရိုဂရမ်တွေက ဆက်လက် run နေပြီးတော့ အဲဒီ output screen တွေကိုလည်း လက်ရှိရောက်နေတဲ့ နေရာကနေ ဝင်ကြည့်ရှုနိုင်အောင် screen ဆိုတဲ့ command ကို သုံးကြပါတယ်။ ဒီ script ကတော့ အဲဒီ screen command ကို သုံးပြီး အလုပ်လုပ်တဲ့အခါမှာ ကြုံရတတ်တဲ့ အလုပ်တွေပြီးနေတာက သေချာပြီးတော့၊ ဝင်ကြည့်ဖို့လည်း မလိုအပ်တော့တဲ့ detached ဖြစ်နေတဲ့ screen တွေအားလုံးကိုရွေးသတ်ဖို့အတွက် ရေးခဲ့တာပါ။ Attached ဖြစ်နေတဲ့ screen session တွေကိုတော့ kill မလုပ်ပဲ ချန်ထားခဲ့ပါလိမ့်မယ်။ ဒီ command ကို run မလုပ်ခင်မှာ detached ဖြစ်နေတဲ့ screen တွေက တကယ်တမ်း အသုံးဝင်မဝင်ကို check လုပ်ပြီးမှ၊ သေချာမှ run ပါလို့ သတိပေးချင်ပါတယ်။    
+
+script ထဲက pipe နဲ့ ချိတ်ပြီး run ပြထားတဲ့ command တွေကို အောက်ပါအတိုင်း တစ်ခုချင်း run ပြထားတဲ့အတွက် နားလည်ရလွယ်ပါလိမ့်မယ်။  
 
 ```bash
+
 ka2pluskha2@y-Lab-1:~$ screen -ls
 There are screens on:
         29273.pts-1.asr-proto-1 (10/22/2018 05:38:27 PM)        (Attached)
         29213.pts-1.asr-proto-1 (10/22/2018 05:36:14 PM)        (Detached)
         29175.pts-1.asr-proto-1 (10/22/2018 05:34:36 PM)        (Detached)
 3 Sockets in /run/screen/S-ka2pluskha2.
+
 ka2pluskha2@y-Lab-1:~$ screen -ls | grep Detached
         29213.pts-1.asr-proto-1 (10/22/2018 05:36:14 PM)        (Detached)
         29175.pts-1.asr-proto-1 (10/22/2018 05:34:36 PM)        (Detached)
