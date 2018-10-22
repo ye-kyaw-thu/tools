@@ -19,5 +19,8 @@
 5. [compare-img-or-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/compare-img-or-pdf.sh)  
 (image ဖိုင်နှစ်ခု သို့မဟုတ် pdf ဖိုင်နှစ်ခုကို ပုံအနေနဲ့နှိုင်းယှဉ်ပြီးတော့ မတူတာကို ကြည့်ဖို့အတွက် သုံးခဲ့တယ်။ မှားရိုက်ထားတဲ့ မြန်မာစာလုံးတွေကို မှန်တာနဲ့ယှဉ်ပြဖို့အတွက် သုံးနိုင်တယ်။)  
 
-6. [chk-sort-by-columns](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-sort-by-columns.sh)
-(input-file ရဲ့ columnအလိုက် sorting စီပေးဖို့အတွက် ရေးခဲ့တယ်။ ဥပမာ columnက ၄ ခုရှိရင် ပထမဆုံး column1 နဲ့ sorting စီပေးမယ်၊ ပြီးရင် column2 နဲ့ စီပေးမယ်၊ column3, column4 စသည်ဖြင့် အသီးသီး sorting စီပေးပြီး column တစ်ခုစီအတွက် output ဖိုင်တစ်ခုစီ ထုတ်ပေးပါလိမ့်မယ်။ sorting မစီခင်မှာ ဂဏန်းတွေကိုရိုက်ထားတဲ့ column ဖြစ်နေသလားဆိုတာကို check လုပ်ပြီး၊ ဖြစ်နေရင် numerical sorting လုပ်ပေးပါလိမ့်မယ်။)
+6. [chk-sort-by-columns.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-sort-by-columns.sh)
+(input-file ရဲ့ columnအလိုက် sorting စီပေးဖို့အတွက် ရေးခဲ့တယ်။ ဥပမာ columnက ၄ ခုရှိရင် ပထမဆုံး column1 နဲ့ sorting စီပေးမယ်၊ ပြီးရင် column2 နဲ့ စီပေးမယ်၊ column3, column4 စသည်ဖြင့် အသီးသီး sorting စီပေးပြီး column တစ်ခုစီအတွက် output ဖိုင်တစ်ခုစီ ထုတ်ပေးပါလိမ့်မယ်။ sorting မစီခင်မှာ ဂဏန်းတွေကိုရိုက်ထားတဲ့ column ဖြစ်နေသလားဆိုတာကို check လုပ်ပြီး၊ ဖြစ်နေရင် numerical sorting လုပ်ပေးပါလိမ့်မယ်။)  
+
+7. kill-all-detached.sh  
+(server တစ်ခုခုကို terminal ချိတ် run ကြတဲ့အခါမှာ screen ဆိုတဲ့ command ကိုခံပြီးမှ ကိုယ်လုပ်စရာရှိတာကို လုပ်လေ့ရှိပါတယ်။ တရက်တရက် server တွေမှာ ဝင်လိုက်ထွက်လိုက် နဲ့ အလုပ်လုပ်ရင်း detached ဖြစ်နေတဲ့ screen session တွေအားလုံးကို kill လုပ်ဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။ အသုံးဝင်ပါလိမ့်မယ်။)  
