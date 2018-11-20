@@ -27,3 +27,8 @@
 
 8. [unzip-all-with-one-passwd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/unzip-all-with-one-passwd.sh)  
 (zip command နဲ့ password တစ်ခုတည်းသုံးပြီးတော့ ချုံ့ထားတဲ့ ဖိုင်တွေကို ဖြေဖို့အတွက် ရေးခဲ့ပါတယ်။)
+
+9. [cut-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cut-filename.sh)  
+(argument ကနေ pass လုပ်ပေးလိုက်တဲ့ path/filename ကနေ ဖိုင်နာမည်ကို ဆွဲထုတ်တာ၊ path ကိုပဲ ဆွဲထုတ်တာ၊ extension မပါပဲ ဖိုင်နာမည်ကိုပဲ ဆွဲထုတ်တာ၊  
+extension ကိုပဲ သပ်သပ် ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့ပါတယ်။)  
+
