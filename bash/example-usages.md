@@ -403,5 +403,14 @@ hello-word.c
 lar@lar-air:~/tool/bash/4github/filename$ ./cut-filename.sh /home/lar/tool/bash/4github/filename/hello-word.c -f
 /home/lar/tool/bash/4github/filename/hello-word
 
-lar@lar-air:~/tool/bash/4github/filename$ ./cut-filename.sh /home/lar/tool/bash/4github/filename/hello-word.c -e
+lar@lar-air:~/tool/bash/4github/filename$ ./cut-filename.sh /home/lar/tool/bash/4github/filename/hello-word.c -e  
+
+lar@lar-air:~/tool/bash/4github/filename$ ./cut-filename.sh
+usage: cut-filename <filename> [ -p | -np | -f | -e ]
+here,
+-p or --path for printing path only
+-np or --no-path for printing filename without path
+-f or --filename for filename without extension
+-e or --extension for file extension without name
+
 ```
