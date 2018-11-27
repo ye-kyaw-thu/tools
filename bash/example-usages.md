@@ -413,4 +413,25 @@ lar@lar-air:~/tool/bash/4github/filename$ ./cut-filename.sh /home/lar/tool/bash/
 
 lar@lar-air:~/tool/bash/4github/filename$ ./cut-filename.sh /home/lar/tool/bash/4github/filename/hello-word.c -e  
 
+```  
+
+## ./calc-avg.sh  
+ဖိုင်ထဲမှာ ကော်လံတစ်ခုအနေနဲ့ ရှိနေတဲ့ ဂဏန်းတွေအားလုံးရဲ့ ပျှမ်းမျှတန်ဖိုးကို တွက်ထုတ်ဖို့အတွက် ရေးခဲ့ပါတယ်။  
+
 ```
+$ cat ./no-of-files.txt 
+454
+337
+306
+383
+345
+319
+341
+297
+280
+333
+
+$ ./calc-avg.sh ./no-of-files.txt 
+33.95
+```
+
