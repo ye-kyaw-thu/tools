@@ -465,3 +465,23 @@ Result and Discussion
 Error Analysis on NMT Approaches
 Conclusion
 ```
+
+## list-mistake-5-suggestion.sh  
+
+ပေးလိုက်တဲ့ text ဖိုင်ထဲမှာ ရိုက်ထားတဲ့ အင်္ဂလိပ်စာ စာလုံးပေါင်း အမှားတွေနဲ့ ဖြစ်နိုင်ချေရှိတဲ့ spelling suggestion စာလုံး ၅လုံးကို ဘေးချင်းယှဉ် တွဲရိက်ပြပေးဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ မှားတဲ့ စာလုံးဘေးမှာရှိနေတဲ့ နံပါတ် ၂ခုအနက် ပထမ နံပါတ်ကတော့ spelling suggestion အဖြစ်ထုတ်ပေးနိုင်တဲ့ စာလုံးအရေအတွက်ကို ဆိုလိုပြီး၊ ဒုတိယနံပါတ်ကတော့ စာလုံးပေါင်းအမှားစာလုံးက စာကြောင်းရဲ့ စာလုံး (i.e. character) ဘယ်နှစ်လုံးမြောက်မှာ ရှာတွေ့တယ်လို့ ဖော်ပြနေတာဖြစ်ပါတယ်။ 
+
+```
+lar@lar-air:~/tool/bash/spell$ cat mistakes.txt 
+I use to shop at that market.
+The doctor will advice you.
+How are yuo?
+Yes, I am doing NLP research.
+This year, I visited Banmaw.
+We got better BLEU scores for Myanmar-English machine translation.
+
+lar@lar-air:~/tool/bash/spell$ ./list-mistake-5-suggestion.sh mistakes.txt 
+yu|||7 8|||you, yo, Yugo, yup, yuk
+NL|||5 16|||LP, NP, NAP, NIP, ALP
+Banma|||43 21|||Ban maw, Ban-maw, Banal, Barnum, Bantam
+BLE|||6 14|||BLUE, BL EU, BL-EU, BLU, BLEW
+```
