@@ -32,3 +32,5 @@
 (argument ကနေ pass လုပ်ပေးလိုက်တဲ့ path/filename.ext ကနေ ဖိုင်နာမည်ကို ဆွဲထုတ်တာ "i.e. filename.ext", path/ ကိုပဲ ဆွဲထုတ်တာ၊ extension မပါပဲ ဖိုင်နာမည်ကိုပဲ "i.e. filename" ဆွဲထုတ်တာ၊ extension ကိုပဲ သပ်သပ် ဆွဲထုတ်ဖို့အတွက် "i.e. ext" ရေးခဲ့ပါတယ်။)  
 10. [calc-avg.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-avg.sh)  
 (ဖိုင်တစ်ဖိုင်ထဲမှာ ကော်လံတစ်ခုအနေနဲ့ သိမ်းထားတဲ့ ဂဏန်းတွေအားလုံးကို ပေါင်းပြီးတော့ ပျှမ်းမျှ တွက်ထုတ်ပေးဖို့အတွက် ရေးထားတဲ့ bash shell script ပါ။ ဒဿမ နှစ်လုံးနဲ့ပဲ ရိုက်ပြအောင် setting လုပ်ထားပါတယ်။)  
+11. [print-latex-section.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-latex-section.sh)  
+(latex source ဖိုင်ထဲကနေ \section{}, \subsection{}, \subsubsection{} တွေနဲ့ ရေးထားတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်။)  
