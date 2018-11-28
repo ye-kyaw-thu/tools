@@ -435,3 +435,34 @@ $ ./calc-avg.sh ./no-of-files.txt
 33.95
 ```
 
+## ./print-latex-section.sh  
+International conference စာတမ်းတွေကို အများသောအားဖြင့် latex နဲ့ရေးကြပါတယ်။ အဲဒီလိုရေးထားတဲ့ latex source ဖိုင်ကနေ \section{}, \subsection{} နဲ့ \subsubsection{} tag တွေနဲ့ ရေးထားတဲ့ ခေါင်းစဉ်တွေကို အစဉ်လိုက်ဆွဲထုတ်ဖို့အတွက် ရေးထားတဲ့ script ပါ။  
+
+```
+lar@lar-air:~/paper/ona2018/paper/nov23ver1$ ./print-latex-section.sh ./ona.tex 
+Introduction
+MT for Sign Language
+MSL and Myanmar Language
+Corpus Preparation
+Segmentation
+|--Word Segmentation
+|--Syllable Segmentation
+|--SentencePiece
+|--Byte-Pair-Encoding
+Experimental Methodology
+|--Phrase-based Statistical Machine Translation (PBSMT)
+|--Encoder-Decoder Models for NMT
+    |----Stacked Recurrent Neural Network (RNN) with Attention
+    |----Self-attentional Transformer
+    |----Fully Convolutional Models (ConvSeq2Seq)
+Experiments
+|--Corpus statistics
+|--Moses SMT system
+|--Framework for NMT
+|--Training Details
+|--Evaluation
+Result and Discussion
+Error Analysis on NMT Approaches
+Conclusion
+
+```
