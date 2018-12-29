@@ -36,3 +36,6 @@
 (latex source ဖိုင်ထဲကနေ \section{}, \subsection{}, \subsubsection{} တွေနဲ့ ရေးထားတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်။)  
 12. [list-mistake-5-suggestion.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/list-mistake-5-suggestion.sh)  
 (input-file ထဲက အင်္ဂလိပ်စာ spelling mistake တွေနဲ့ ဖြစ်နိုင်တဲ့ စာလုံးအမှန် ၅လုံးကို list လုပ်ပေးတဲ့ ပရိုဂရမ်ပါ။ aspell ဆိုတဲ့ spelling checking program ကို သုံးထားပါတယ်။)  
+13. [mytxt2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytxt2pdf.sh)  
+(မြန်မာစာ စာကြောင်းတွေ ပါနေတဲ့ text ဖိုင်ကို PDF ဖိုင်အဖြစ် ပြောင်းဖို့အတွက် pandoc ကို သုံးပြထားတဲ့ shell script ပါ)  
+
