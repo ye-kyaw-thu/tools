@@ -485,3 +485,12 @@ NL|||5 16|||LP, NP, NAP, NIP, ALP
 Banma|||43 21|||Ban maw, Ban-maw, Banal, Barnum, Bantam
 BLE|||6 14|||BLUE, BL EU, BL-EU, BLU, BLEW
 ```
+## mytxt2pdf.sh  
+
+မြန်မာစာ စာကြောင်းတွေပါနေတဲ့ text ဖိုင်ကို linux command line tool တွေကို သုံးပြီးတော့ PDF အဖြစ်ပြောင်းတဲ့ အခါမှာ မြန်မာစာ စာလုံးတွေကို မှန်မှန်ကန်ကန် မပြသပေးနိုင်တာမျိုးကို ကြုံရပါလိမ့်မယ်။ အဲဒီအတွက် pandoc ကို သုံးပြီးတော့ သူ့ရဲ့ option တွေဖြစ်တဲ့ --variable mainfont="Myanmar3" နဲ့ --latex-engine=xelatex ကို တွဲသုံးပြီးတော့ မြန်မာစာ စာလုံးတွေကို မှန်မှန်ကန်ကန် PDF ဖိုင် output မှာ ပြသပေးနိုင်အောင် ရေးထားတဲ့ bash shell script တစ်ပုဒ်ပါ။  
+
+```
+$ ./mytxt2pdf.sh reply.txt output.pdf
+```
+
+အသေးစိတ်ကို 
