@@ -342,7 +342,7 @@ see the test file: [symbols-test-data.txt](https://github.com/ye-kyaw-thu/tools/
 ကျွန်တော်ရှင်းထုတ်ချင်တဲ့ စာကြောင်းတွေနဲ့ program testing အတွက်ပြင်ဆင်ခဲ့တဲ့ test ဖိုင်ဖြစ်ပါတယ်။   
 
 ```
-$ perl ../script/rm-symbol-and-myVowel-only-sentences.pl ../script/symbols-test-data.txt
+$ perl ../rm-symbol-and-myVowel-only-sentences.pl ../symbols-test-data.txt
 ဘေ
 က
 ပုံမှန် စာကြောင်း
