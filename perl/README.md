@@ -16,6 +16,8 @@
    
 6. [mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)  
    (စာတမ်းတွေရဲ့ abstract ကို PDF ဖိုင်ကနေ ကော်ပီကူးယူလိုက်တဲ့အခါမှာတွဲပါလာတဲ့ hyphen တွေနဲ့ ကော်လံတစ်ခုအဖြစ် မလိုအပ်ပဲ enter ခေါက်ထားတာတွေကို ရှင်းဖို့အတွက်)  
+7. [print-mySentenceOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-mySentenceOnly.pl)
+   (မြန်မာဂဏန်းတွေမပါပဲ မြန်မာစာလုံးနဲ့ တချို့သော puncutation symbol တွေကိုပဲ ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်။ စာကြောင်းတွေ သန်းနဲ့ချီရှိတဲ့ corpus ထဲကနေ မြန်မာစာလုံးတွေနဲ့ အသုံးများတဲ့       သင်္ကေတ တချို့ကိုပဲ ဆွဲထုတ်ယူဖို့ အသုံးဝင်ပါလိမ့်မယ်။)  
    
    
 
