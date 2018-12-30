@@ -2,7 +2,7 @@
 
 # for removing symbols, Myanmar vowels and Independent vowels only sentences
 # Note: Although this program is working well for my cleaning case,
-# you might need to update RE based on your requirements
+# you might need to update the RE syntax based on your requirements
 # Ye Kyaw Thu, Waseda University, Tokyo, Japan
 #
 # usage: perl ./rm-symbol-and-myVowel-only-sentences.pl <input-filename>
