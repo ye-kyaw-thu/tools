@@ -229,7 +229,7 @@ This is a car
 
 ```
 
-## mk-abstract-para.txt
+## mk-abstract-para.pl
 
 ```bash
 lar@lar-air:~/tool/perl$ cat ./NAACL-HLT-2016-abstract.txt 
@@ -258,4 +258,79 @@ performance of phrase-based decoders.
 lar@lar-air:~/tool/perl$ perl ./mk-abstract-para.pl ./NAACL-HLT-2016-abstract.txt 
 This paper presents an study of the use of interlocking phrases in phrase-based statistical machine translation. We examine the effect on translation quality when the translation units used in the translation hypotheses are allowed to overlap on the source side, on the target side and on both sides. A large-scale evaluation on 380 language pairs was conducted. Our results show that overall the use of overlapping phrases improved translation quality by 0.3 BLEU points on average. Further analysis revealed that language pairs requiring a larger amount of re-ordering benefited the most from our approach. When the evaluation was restricted to such pairs, the average improvement increased to up to 0.75 BLEU points with over 97% of the pairs improving. Our approach requires only a simple modification to the decoding algorithm and we believe it should be generally applicable to improve the performance of phrase-based decoders.
 
+```
+
+## print-mySentenceOnly.pl
+
+```
+$ cat ./tst4mySentenceOnly.txt 
+မောင်မောင်ကို အင်္ဂလိပ်လို Mg Mg လို့ရေးတယ်။
+မောင်မောင် ကို ဂျပန်လို ကော ဘယ်လိုရေးသလဲ။
+မောင်မောင် ကို ဂျပန်လို マウン・マウン လို့ရေးတယ်။
+ရဲကိုကော ဂျပန်လို ဘယ်လို+လဲ။
+ရဲကိုတော့ ဂျပန်လိုイェလိုပေါင်းတယ်။
+မင်္ဂလာပါကို ထိုင်းလိုဆိုရင် ဘယ်လို ရေးသလဲ။
+မင်္ဂလာပါ ကိုထိုင်းလိုက สวัสดี လို့ရေးတယ်။
+မင်္ဂလာပါကို တရုပ်လို ဘယ်လိုရေးသလဲ။
+မင်္ဂလာပါကို တရုပ်လိုတော့ 你好 လို့ရေးတယ်။
+မင်္ဂလာပါကို ဟင်ဒီလိုဘယ်လို ရေးသလဲ။
+မင်္ဂလာပါကို ဟင်ဒီလိုက नमस्ते ရေးပါတယ် ။
+ဟေး!!!
+နေကောင်းလား?
+"ကျန်းမာပါတယ်" ကွာ
+`ကြားရတာ ဝမ်းသာတယ်` ဗျို့
+Mg Mg ကို မြန်မာလို မောင်မောင်လို့ရေးကြတယ်။
+$ ဈေးတွေက တက်နေတယ်ဆို။
+ဟေး~!
+ (၁၀၀ ကျပ်) လို့ရေးထားတယ်
+မဟုတ်ပါဘူးကွာ [၁၀၀၀ ကျပ်] လို့ရေးထားတယ်
+ဒုံး . . ဒုံး . . . ဒုံး . .
+သာ ဓု . . . သာ ဓု . . . သာ ဓု
+မွေး နေ့ မှ သည် - - - - - - နောင် နှစ် ပေါင်း များ စွာ
+~ အ စိုး ရ ဝန် ထမ်း
+( ၂ ) ဘဏ် စာ ရင်း ရှင်း တမ်း
+အောင် မြင် ပါ စေ "
+ချို သဲ 🤭🤭🤭🤭🤭🤭
+မ ဂၤ လာ ပါ
+အား ပေး နေ ပါ တယ် . .💪💪💪
+ချစ် စ ရာ လေး : - * : - * 
+👍
+၂၃၄၅ ၈၉၀ ၉၉၉၉ ၀၀၀၀၂
+( ဂ ) အ ကန့် အ သတ် ရှိ
+[ ဂ ] အ ကန့် အ သတ် မ ရှိ
+" " "ပြဿနာ" " "
+၎င်း က လည်း သက်သေပါပဲ
+ညီမလေး 👋
+☑ အမှတ်ပေး လိုက်ပါတယ်
+အများကြီး လှူနိုင်ပါစေ ☺️☺️☺️
+မန္တလေးမှာ နေပါတယ်
+မြန်မြန်, သွားမှ ဖြစ်မယ်
+အားးးးးး
+မ လာ နဲ႔
+မဂၤႅာပါ
+
+$ perl ./print-mySentenceOnly.pl ./tst4mySentenceOnly.txt 
+မောင်မောင် ကို ဂျပန်လို ကော ဘယ်လိုရေးသလဲ။
+မင်္ဂလာပါကို ထိုင်းလိုဆိုရင် ဘယ်လို ရေးသလဲ။
+မင်္ဂလာပါကို တရုပ်လို ဘယ်လိုရေးသလဲ။
+မင်္ဂလာပါကို ဟင်ဒီလိုဘယ်လို ရေးသလဲ။
+ဟေး!!!
+နေကောင်းလား?
+"ကျန်းမာပါတယ်" ကွာ
+`ကြားရတာ ဝမ်းသာတယ်` ဗျို့
+$ ဈေးတွေက တက်နေတယ်ဆို။
+ဟေး~!
+ဒုံး . . ဒုံး . . . ဒုံး . .
+သာ ဓု . . . သာ ဓု . . . သာ ဓု
+မွေး နေ့ မှ သည် - - - - - - နောင် နှစ် ပေါင်း များ စွာ
+~ အ စိုး ရ ဝန် ထမ်း
+အောင် မြင် ပါ စေ "
+ချစ် စ ရာ လေး : - * : - * 
+( ဂ ) အ ကန့် အ သတ် ရှိ
+[ ဂ ] အ ကန့် အ သတ် မ ရှိ
+" " "ပြဿနာ" " "
+၎င်း က လည်း သက်သေပါပဲ
+မန္တလေးမှာ နေပါတယ်
+မြန်မြန်, သွားမှ ဖြစ်မယ်
+အားးးးးး
 ```
