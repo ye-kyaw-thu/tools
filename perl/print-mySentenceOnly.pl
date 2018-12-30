@@ -23,8 +23,8 @@ while (!eof($inputFILE)) {
         chomp($line);
  
 # if you want to include English add "A-Z|0-9"
-#  if you want to include Myanmar numbers replace
-#  " ံ-ဿ|၊-၏" with "ံ-၏"
+# if you want to include Myanmar numbers replace
+# " ံ-ဿ|၊-၏" with "ံ-၏"
 
         if ($line !~ m/[^က-အ|ဣ-ဧ|ဩ-ဲ|ံ-ဿ|၊-၏|\p{P}|\s|\`|\$|\~]/){
            print "$line\n";
