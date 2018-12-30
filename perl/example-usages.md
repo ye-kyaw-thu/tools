@@ -334,3 +334,16 @@ $ ဈေးတွေက တက်နေတယ်ဆို။
 မြန်မြန်, သွားမှ ဖြစ်မယ်
 အားးးးးး
 ```
+
+## rm-symbol-and-myVowel-only-sentences.pl  
+
+see the test file: 
+
+```
+$ perl ../script/rm-symbol-and-myVowel-only-sentences.pl ../script/symbols-test-data.txt
+ဘေ
+က
+ပုံမှန် စာကြောင်း
+ငါကလည်း ပုံမှန် စာကြောင်း နော် !!!
+I love all languages!
+```
