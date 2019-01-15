@@ -38,4 +38,6 @@
 (input-file ထဲက အင်္ဂလိပ်စာ spelling mistake တွေနဲ့ ဖြစ်နိုင်တဲ့ စာလုံးအမှန် ၅လုံးကို list လုပ်ပေးတဲ့ ပရိုဂရမ်ပါ။ aspell ဆိုတဲ့ spelling checking program ကို သုံးထားပါတယ်။)  
 13. [mytxt2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytxt2pdf.sh)  
 (မြန်မာစာ စာကြောင်းတွေ ပါနေတဲ့ text ဖိုင်ကို PDF ဖိုင်အဖြစ် ပြောင်းဖို့အတွက် pandoc ကို သုံးပြထားတဲ့ shell script ပါ)  
+14. [prepare-open-test-data.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/prepare-open-test-data.sh)  
+(ရှိနေတဲ့ ဒေတာဖိုလ်ဒါထဲကနေ class ရှိသလောက်ကို open-test data အဖြစ် သပ်သပ်ခွဲထုတ်ချင်တဲ့အခါ အသုံးပြုနိုင်ပါတယ်)  
 
