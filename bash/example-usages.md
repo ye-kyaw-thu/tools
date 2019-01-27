@@ -591,8 +591,8 @@ vi editor သို့မဟုတ် emacs editor တွေကို သုံ�
 
 <p align="center"> 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/CRLF-eg.png" alt="" width="482x304"/>
-Fig. emacs editor can display ^M (i.e. CR) symbols  
-</p>  
+</p>
+<p align="center"> Fig. emacs editor can display ^M (i.e. CR) symbols </p>  
 
 ./print-CRLF.sh ပရိုဂရမ်နဲ့ CRLF နဲ့ အဆုံးသတ်ထားတဲ့ စာကြောင်းတွေကိုပဲ ဆွဲထုတ်ကြည့်ရအောင်။ ရှေ့ဆုံးက နံပါတ်တွေက လိုင်းနံပါတ်ဖြစ်ပါတယ်။  
 
