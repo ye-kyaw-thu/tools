@@ -572,7 +572,7 @@ $ file ./lf-crlf.txt
 
 ```
 print-CRLF.sh shell script က အဲဒီလိုမျိုး ဖိုင်တွေထဲကနေ ဘယ်လိုင်းနံပါတ်တွေက CRLF ပါနေသလဲဆိုတာကို grep နဲ့ ဆွဲထုတ်ဖို့အတွက် ရေးပြထားတာပါ။  
-အောက်ပါအတိုင်း example အနေနဲ့ သုံးပြထားပါတယ်။ lf-crlf.txt ဖိုင်ကိုလည်း တင်ပေးထားပါတယ်။  
+အောက်ပါအတိုင်း example အနေနဲ့ သုံးပြထားပါတယ်။ [lf-crlf.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/lf-crlf.txt) ဖိုင်ကိုလည်း တင်ပေးထားပါတယ်။  
 
 ```bash
 $ cat ./lf-crlf.txt 
