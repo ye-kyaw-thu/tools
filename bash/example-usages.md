@@ -589,8 +589,10 @@ Linux line break နဲ့ ဖြတ်ထားတဲ့ စာကြောင�
 ဘယ်စာကြောင်းက CRLF ကို သုံးထားတာလဲ၊ LF ကိုပဲသုံးထားတာလဲ ဆိုတာကို အထက်ပါအတိုင်း မမြင်နိုင်ပါဘူး။ 
 vi editor သို့မဟုတ် emacs editor တွေကို သုံးပြီးကြည့်မှသာ မြင်ရပါလိမ့်မယ်။
 
+<p align="center"> 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/CRLF-eg.png" alt="" width="482x304"/>
-<p align="center"> Fig. emacs editor can display ^M (i.e. CR) symbols </p>  
+Fig. emacs editor can display ^M (i.e. CR) symbols  
+</p>  
 
 ./print-CRLF.sh ပရိုဂရမ်နဲ့ CRLF နဲ့ အဆုံးသတ်ထားတဲ့ စာကြောင်းတွေကိုပဲ ဆွဲထုတ်ကြည့်ရအောင်။ ရှေ့ဆုံးက နံပါတ်တွေက လိုင်းနံပါတ်ဖြစ်ပါတယ်။  
 
