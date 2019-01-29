@@ -2,7 +2,7 @@
 
 # for grouping a large number of files
 # written by Ye Kyaw Thu, NECTEC, Thailand
-# how to run: ./file-group.sh 100
+# how to run: ./group-files.sh 100
 
 # if you want to recursively copy batch of 100 files, give 100
 batchSize=$1;
