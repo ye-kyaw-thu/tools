@@ -42,5 +42,8 @@
 (ရှိနေတဲ့ ဒေတာဖိုလ်ဒါထဲကနေ class ရှိသလောက်ကို open-test data အဖြစ် သပ်သပ်ခွဲထုတ်ချင်တဲ့အခါ အသုံးပြုနိုင်ပါတယ်)  
 15. [print-CRLF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-CRLF.sh)  
 (Windows OS ရဲ့ စာကြောင်းအဆုံးသင်္ကေတဖြစ်တဲ့ CRLF ပါနေတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် သုံးခဲ့တယ်)  
+16. [group-files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-files.sh)
+(ဖိုင်တွေအများကြီးကို n-file စီခွဲပြီး သိမ်းဖို့အတွက် ရေးခဲ့တယ်)  
+
 
 
