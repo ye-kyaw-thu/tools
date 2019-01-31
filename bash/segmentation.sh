@@ -1,7 +1,9 @@
 #!/bin/bash
 
 # for checking unsegmented sentences 
-# written by Ye, NECTEC, Thailand 
+# written by Ye, NECTEC, Thailand
+# How to run: ./segmentation.sh <filename that contained segmented and unsegmented sentences>
+# e.g. ./segmentation.sh ./thai.txt
 
 # read from $1 and make line array
 readarray -t lines < $1;
