@@ -30,20 +30,30 @@
 
 9. [cut-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cut-filename.sh)  
 (argument ကနေ pass လုပ်ပေးလိုက်တဲ့ path/filename.ext ကနေ ဖိုင်နာမည်ကို ဆွဲထုတ်တာ "i.e. filename.ext", path/ ကိုပဲ ဆွဲထုတ်တာ၊ extension မပါပဲ ဖိုင်နာမည်ကိုပဲ "i.e. filename" ဆွဲထုတ်တာ၊ extension ကိုပဲ သပ်သပ် ဆွဲထုတ်ဖို့အတွက် "i.e. ext" ရေးခဲ့ပါတယ်။)  
+
 10. [calc-avg.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-avg.sh)  
 (ဖိုင်တစ်ဖိုင်ထဲမှာ ကော်လံတစ်ခုအနေနဲ့ သိမ်းထားတဲ့ ဂဏန်းတွေအားလုံးကို ပေါင်းပြီးတော့ ပျှမ်းမျှ တွက်ထုတ်ပေးဖို့အတွက် ရေးထားတဲ့ bash shell script ပါ။ ဒဿမ နှစ်လုံးနဲ့ပဲ ရိုက်ပြအောင် setting လုပ်ထားပါတယ်။)  
+
 11. [print-latex-section.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-latex-section.sh)  
 (latex source ဖိုင်ထဲကနေ \section{}, \subsection{}, \subsubsection{} တွေနဲ့ ရေးထားတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်။)  
+
 12. [list-mistake-5-suggestion.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/list-mistake-5-suggestion.sh)  
 (input-file ထဲက အင်္ဂလိပ်စာ spelling mistake တွေနဲ့ ဖြစ်နိုင်တဲ့ စာလုံးအမှန် ၅လုံးကို list လုပ်ပေးတဲ့ ပရိုဂရမ်ပါ။ aspell ဆိုတဲ့ spelling checking program ကို သုံးထားပါတယ်။)  
+
 13. [mytxt2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytxt2pdf.sh)  
 (မြန်မာစာ စာကြောင်းတွေ ပါနေတဲ့ text ဖိုင်ကို PDF ဖိုင်အဖြစ် ပြောင်းဖို့အတွက် pandoc ကို သုံးပြထားတဲ့ shell script ပါ)  
+
 14. [prepare-open-test-data.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/prepare-open-test-data.sh)  
 (ရှိနေတဲ့ ဒေတာဖိုလ်ဒါထဲကနေ class ရှိသလောက်ကို open-test data အဖြစ် သပ်သပ်ခွဲထုတ်ချင်တဲ့အခါ အသုံးပြုနိုင်ပါတယ်)  
+
 15. [print-CRLF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-CRLF.sh)  
 (Windows OS ရဲ့ စာကြောင်းအဆုံးသင်္ကေတဖြစ်တဲ့ CRLF ပါနေတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် သုံးခဲ့တယ်)  
+
 16. [group-files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-files.sh)
 (ဖိုင်တွေအများကြီးကို n-file စီခွဲပြီး သိမ်းဖို့အတွက် ရေးခဲ့တယ်)  
+
+17. [segmentation.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/segmentation.sh)  
+(စာလုံးမဖြတ်ထားရသေးတဲ့ စာကြောင်း "|" မပါတဲ့ စာကြောင်းတွေကို၊ word segmentation program ကို pass လုပ်တဲ့ shell script)  
 
 
 
