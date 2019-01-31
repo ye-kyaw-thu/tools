@@ -688,6 +688,6 @@ $ ./segmentation.sh ./thai.txt
 คุณ|ชอบ|ทำ|อะไร
 คุณ|พูด|ภาษา|พม่า|ไหม
 ```
-thai.txt ဖိုင်ကိုတော့ တင်ပေးထားပါတယ်။  
+[thai.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/thai.txt) ဖိုင်ကိုတော့ တင်ပေးထားပါတယ်။  
 ထိုင်းစာလုံးဖြတ်ပေးတဲ့ ပရိုဂရမ်ကိုတော့ တင်မထားပါဘူး။  
 
