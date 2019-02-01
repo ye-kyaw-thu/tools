@@ -6,11 +6,9 @@
 # How to run: bash split-even-odd-pdf.sh <pdf-filename>
  
 #Extracting no of pages from pdf file:
-#pdfinfo ./paper.pdf | grep Pages | grep -o '[[:digit:]]*'
 PAGES=`pdfinfo $1 | grep Pages | grep -o '[[:digit:]]*'`
 
 echo "Total pages in your PDF file: $PAGES";
-
 
 #Splitting pages:
 pdftk $1 cat odd output odd.pdf;
@@ -18,4 +16,3 @@ echo "No. of pages of odd.pdf: " `pdfinfo odd.pdf | grep Pages | grep -o '[[:dig
 
 pdftk $1 cat even output even.pdf;
 echo "No. of pages of even.pdf: " `pdfinfo even.pdf | grep Pages | grep -o '[[:digit:]]*'`
-
