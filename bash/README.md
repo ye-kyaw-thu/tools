@@ -55,5 +55,8 @@
 17. [segmentation.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/segmentation.sh)  
 (စာလုံးမဖြတ်ထားရသေးတဲ့ စာကြောင်း "|" မပါတဲ့ စာကြောင်းတွေကို၊ word segmentation program ကို pass လုပ်တဲ့ shell script)  
 
+18. [split-even-odd-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/split-even-odd-pdf.sh)  
+(PDF ဖိုင်တစ်ဖိုင်ကို စုံဂဏန်း စာမျက်နှာတွေကို တစ်ဖိုင်၊ မဂဏန်း စာမျက်နှာတွေကို တစ်ဖိုင်စီ သပ်သပ်ခွဲသိမ်းဖို့အတွက် ရေးခဲ့တယ်)  
+
 
 
