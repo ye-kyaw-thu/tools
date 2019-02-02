@@ -2,7 +2,7 @@
 
 မှတ်ချက်။ ။ perl ပရိုဂရမ်တွေရဲ့ အသုံးပြုနည်းကို ဥပမာအဖြစ် စမ်းသုံးပြထားသော test-data ဖိုင်အများစုက အင်တာနက်ပေါ်က စာကြောင်းတွေကို တိုက်ရိုက်ယူသုံးထားသောကြောင့် စာလုံးပေါင်းမှားတာမျိုး၊ စာကြောင်းတွေက နားလည်ရခက်တာမျိုးလည်း ရှိနိုင်တာကို နားလည်ပေးကြပါ။  
 
-## clean-space.pl
+## [clean-space.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-space.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ cat ./tst-input 
@@ -26,7 +26,7 @@ B l u e
 lar@lar-air:~/tool/perl$
 ```
 
-## rmEnglishSentences.pl
+## [rmEnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rmEnglishSentences.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ cat tst-input2
@@ -46,7 +46,7 @@ lar@lar-air:~/tool/perl$ perl ./rm-EnglishSentences.pl ./tst-input2
 ကခဂ နဲ့ အေဘီစီ
 အင်္ဂလိပ်စကား ပြောနိုင်လား။
 ```
-## word-analysis.pl
+## [word-analysis.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/word-analysis.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines 
@@ -117,7 +117,7 @@ lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines count
 35 word(s) : 1 sentence(s)
 Average words per line : 19.80
 ```  
-## print-emojiSentences.pl   
+## [print-emojiSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-emojiSentences.pl)   
 
 ```bash
 
@@ -185,7 +185,7 @@ lar@lar-air:~/tool/perl$ perl ./print-emojiSentences.pl ./tst-emoji c
 
 ```
 
-## dq-multilines.pl
+## [dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)
 
 ```bash
 
@@ -229,7 +229,7 @@ This is a car
 
 ```
 
-## mk-abstract-para.pl
+## [mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ cat ./NAACL-HLT-2016-abstract.txt 
@@ -260,7 +260,7 @@ This paper presents an study of the use of interlocking phrases in phrase-based 
 
 ```
 
-## print-mySentenceOnly.pl
+## [print-mySentenceOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-mySentenceOnly.pl)
 
 ```
 $ cat ./tst4mySentenceOnly.txt 
@@ -335,7 +335,7 @@ $ ဈေးတွေက တက်နေတယ်ဆို။
 အားးးးးး
 ```
 
-## rm-symbol-and-myVowel-only-sentences.pl  
+## [rm-symbol-and-myVowel-only-sentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-symbol-and-myVowel-only-sentences.pl)  
 
 see the test file: [symbols-test-data.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/symbols-test-data.txt)  
 ဒီဖိုင်က အွန်လိုင်းကနေဆွဲယူထားတဲ့ မြန်မာစာ raw data ဖိုင်ကို cleaning လုပ်စဉ်က  
