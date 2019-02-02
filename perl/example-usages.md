@@ -26,7 +26,7 @@ B l u e
 lar@lar-air:~/tool/perl$
 ```
 
-## [rmEnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rmEnglishSentences.pl)
+## [rm-EnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-EnglishSentences.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ cat tst-input2
