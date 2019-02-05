@@ -2,6 +2,8 @@
 
 ## [chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
 
+chk-token.py က parallel text ဖိုင် နှစ်ဖိုင်ထဲက token အရေအတွက် မတူတဲ့စာကြောင်း၊ တနည်းအားဖြင့် word segmentation ဖြတ်ထားတာ မညီတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တာဖြစ်ပါတယ်။ writing.txt ဖိုင်ထဲမှာ word segmentation လုပ်ထားတဲ့ မြန်မာစာ စာကြောင်း စုစုပေါင်း ၅ကြောင်း အောက်ပါအတိုင်း ရှိပါတယ်။  
+
 ```bash
 $ cat ./writing.txt 
 အဓိက ကျ တဲ့ မေးခွန်း တွေ မေး ကြည့်
@@ -10,6 +12,8 @@ $ cat ./writing.txt
 သာဓု သာဓု သာဓု ပါ
 မေမြို့မှာ နေ ပါ တယ် ဗျ
 ```
+
+
 ```bash
 $ cat reading.txt 
 အဓိက ကျ ဒဲ့ မေးခွန်း ဒွေ မေး ကြည့်
