@@ -1,3 +1,37 @@
 # Example usages of python scripts
 
-## [chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)
+## [chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
+
+```bash
+$ cat ./writing.txt 
+အဓိက ကျ တဲ့ မေးခွန်း တွေ မေး ကြည့်
+စကား ပြော အရမ်း ကောင်း တယ်
+မင်္ဂလာ ပါ ဆရာမ
+သာဓု သာဓု သာဓု ပါ
+မေမြို့မှာ နေ ပါ တယ် ဗျ
+```
+```bash
+$ cat reading.txt 
+အဓိက ကျ ဒဲ့ မေးခွန်း ဒွေ မေး ကြည့်
+ဇဂါး ပြော အရမ်း ကောင်းတယ်
+မင်ဂလာပါ ဆရာမ
+သာဓု သာဓု သာဓု ဘာ
+မေမြို့ မှာ နေ ဘာ ဒယ် ဗျ
+```
+
+```bash
+$ python ./chk-token.py ./writing.txt ./reading.txt $'\t'
+စကား ပြော အရမ်း ကောင်း တယ်	ဇဂါး ပြော အရမ်း ကောင်းတယ်
+မင်္ဂလာ ပါ ဆရာမ	မင်ဂလာပါ ဆရာမ
+မေမြို့မှာ နေ ပါ တယ် ဗျ	မေမြို့ မှာ နေ ဘာ ဒယ် ဗျ
+```
+
+```bash
+$ python ./chk-token.py ./writing.txt ./reading.txt $'\n'
+စကား ပြော အရမ်း ကောင်း တယ်
+ဇဂါး ပြော အရမ်း ကောင်းတယ်
+မင်္ဂလာ ပါ ဆရာမ
+မင်ဂလာပါ ဆရာမ
+မေမြို့မှာ နေ ပါ တယ် ဗျ
+မေမြို့ မှာ နေ ဘာ ဒယ် ဗျ
+```
