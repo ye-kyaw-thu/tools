@@ -349,3 +349,23 @@ $ perl ../rm-symbol-and-myVowel-only-sentences.pl ../symbols-test-data.txt
 ငါကလည်း ပုံမှန် စာကြောင်း နော် !!!
 I love all languages!
 ```
+
+## [rm-space-btw-numbers.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-space-btw-numbers.pl)  
+
+```bash
+$ cat my-no.txt
+ဖုန်းနံပါတ်က ၃၂၇ ၁၁၀ ပါ။
+အဲဒါက အိမ်ဖုန်းပါနော်။
+မိုဘိုင်းဖုန်းနံပါတ်ကကော။
+မိုဘိုင်းဖုန်းနံပါတ်ကတော့ ၀၉၀ ၈၅၆၄   ၈၁၇၇ ပါ။
+ကောင်းပါပြီဗျာ။
+```
+
+```bash
+$ perl ./rm-space-btw-numbers.pl ./my-no.txt
+ဖုန်းနံပါတ်က ၃၂၇၁၁၀ ပါ။
+အဲဒါက အိမ်ဖုန်းပါနော်။
+မိုဘိုင်းဖုန်းနံပါတ်ကကော။
+မိုဘိုင်းဖုန်းနံပါတ်ကတော့ ၀၉၀၈၅၆၄၈၁၇၇ ပါ။
+ကောင်းပါပြီဗျာ။
+```
