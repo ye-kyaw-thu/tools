@@ -3,7 +3,8 @@
 # Remove space(s) between Myanmar numbers
 # Ye Kyaw Thu, Waseda University, Tokyo, Japan
 #
-# usage: perl .pl <input-file>
+# usage: perl rm-space-btw-numbers.pl <input-file>
+# e.g. perl ./rm-space-btw-numbers.pl ./my-no.txt
 # Ref: https://www.unicode.org/charts/PDF/U1000.pdf
 
 use strict;
