@@ -22,6 +22,8 @@
    (ဗျည်းမပါပဲ သရတွေချည်းပဲ (e.g. ျ၊ ်၊ ာ) ဖြစ်နေတဲ့ စာကြောင်းတွေ၊ punctuation marks (e.g. \*, -) တွေချည်းပဲ ဖြစ်နေတဲ့ စာကြောင်းတွေ၊ independent vowels      (e.g. ဣ၊ ဿ၊ ၍) တွေချည်းပဲ ဖြစ်နေတဲ့ စာကြောင်းတွေကို ရှင်းထုတ်ရန်)  
 9. [rm-space-btw-numbers.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-space-btw-numbers.pl)  
    (မြန်မာ ဂဏန်းတွေကြားထဲမှာ ရှိနေတဲ့ space တွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တယ်)  
+10. [print-ngram.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-ngram.pl)  
+   (ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးဖြတ်ထားတဲ့ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ ngram အတွဲတွေအဖြစ် print ထုတ်ဖို့ ရေးခဲ့တယ်)
    
    
    
