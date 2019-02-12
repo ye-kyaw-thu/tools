@@ -375,5 +375,69 @@ $ perl ./rm-space-btw-numbers.pl ./my-no.txt
 ```
 မှတ်ချက်။ ။ အထက်ပါ ကိစ္စမျိုးကို sed ကို သုံးပြီး လုပ်မယ်ဆိုရင် ခက်ခဲပါတယ်။ မြန်မာစာ စာလုံးတွေအတွက်ဆိုရင် hex value နဲ့ pass လုပ်ပေးရတာမျိုး လုပ်ရပါတယ်။ ဘယ်စာလုံးကနေ ဘယ်စာလုံးကြားဆိုတဲ့ (range) ကိစ္စမှာလည်း ကိုယ်လိုချင်တဲ့ ပုံစံအတိုင်း အလုပ် လုပ်မပေးတာတွေကို တွေ့ရပါလိမ့်မယ်။ ဒီလိုနေရာမှာတော့ perl နဲ့ ရေးရတာက ပိုအဆင်ပြေပါတယ်။  
 
+## 10. [print-ngram.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-ngram.pl)  
+
+ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးဖြတ်ထားတဲ့ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ ngram အတွဲတွေအဖြစ် print ထုတ်ဖို့ ရေးခဲ့တယ်။
+input.txt ဖိုင်ထဲမှာ အောက်ပါအတိုင်း စာကြောင်း ၅ကြောင်း ရှိပါတယ်။  
+
+lar@lar-air:~/tool/perl/ngram-tokenizer$ cat input.txt 
+This is a cat .
+Who are you ?
+My name is Ko Gyi .
+I don't know who you are .
+Beer Chang Beer Chang ... Beer Chang Beer Chang .
+lar@lar-air:~/tool/perl/ngram-tokenizer$ perl ./print-ngram.pl ./input.txt 2
+This is
+is a
+a cat
+cat .
+Who are
+are you
+you ?
+My name
+name is
+is Ko
+Ko Gyi
+Gyi .
+I don't
+don't know
+know who
+who you
+you are
+are .
+Beer Chang
+Chang Beer
+Beer Chang
+Chang ...
+... Beer
+Beer Chang
+Chang Beer
+Beer Chang
+Chang .
+lar@lar-air:~/tool/perl/ngram-tokenizer$ perl ./print-ngram.pl ./input.txt 3
+This is a
+is a cat
+a cat .
+Who are you
+are you ?
+My name is
+name is Ko
+is Ko Gyi
+Ko Gyi .
+I don't know
+don't know who
+know who you
+who you are
+you are .
+Beer Chang Beer
+Chang Beer Chang
+Beer Chang ...
+Chang ... Beer
+... Beer Chang
+Beer Chang Beer
+Chang Beer Chang
+Beer Chang .
+
+
 
 
