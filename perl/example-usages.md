@@ -26,7 +26,7 @@ B l u e
 lar@lar-air:~/tool/perl$
 ```
 
-## [rm-EnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-EnglishSentences.pl)
+## 2.[rm-EnglishSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-EnglishSentences.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ cat tst-input2
@@ -46,7 +46,7 @@ lar@lar-air:~/tool/perl$ perl ./rm-EnglishSentences.pl ./tst-input2
 ကခဂ နဲ့ အေဘီစီ
 အင်္ဂလိပ်စကား ပြောနိုင်လား။
 ```
-## [word-analysis.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/word-analysis.pl)
+## 3.[word-analysis.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/word-analysis.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines 
@@ -117,7 +117,7 @@ lar@lar-air:~/tool/perl$ ./word-analysis.pl ./10-lines count
 35 word(s) : 1 sentence(s)
 Average words per line : 19.80
 ```  
-## [print-emojiSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-emojiSentences.pl)   
+## 4.[print-emojiSentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-emojiSentences.pl)   
 
 ```bash
 
@@ -185,7 +185,7 @@ lar@lar-air:~/tool/perl$ perl ./print-emojiSentences.pl ./tst-emoji c
 
 ```
 
-## [dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)
+## 5.[dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)
 
 ```bash
 
@@ -229,7 +229,7 @@ This is a car
 
 ```
 
-## [mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)
+## 6.[mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)
 
 ```bash
 lar@lar-air:~/tool/perl$ cat ./NAACL-HLT-2016-abstract.txt 
@@ -260,7 +260,7 @@ This paper presents an study of the use of interlocking phrases in phrase-based 
 
 ```
 
-## [print-mySentenceOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-mySentenceOnly.pl)
+## 7.[print-mySentenceOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-mySentenceOnly.pl)
 
 ```
 $ cat ./tst4mySentenceOnly.txt 
@@ -335,7 +335,7 @@ $ ဈေးတွေက တက်နေတယ်ဆို။
 အားးးးးး
 ```
 
-## [rm-symbol-and-myVowel-only-sentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-symbol-and-myVowel-only-sentences.pl)  
+## 8.[rm-symbol-and-myVowel-only-sentences.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-symbol-and-myVowel-only-sentences.pl)  
 
 see the test file: [symbols-test-data.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/symbols-test-data.txt)  
 ဒီဖိုင်က အွန်လိုင်းကနေဆွဲယူထားတဲ့ မြန်မာစာ raw data ဖိုင်ကို cleaning လုပ်စဉ်က  
@@ -350,7 +350,7 @@ $ perl ../rm-symbol-and-myVowel-only-sentences.pl ../symbols-test-data.txt
 I love all languages!
 ```
 
-## [rm-space-btw-numbers.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-space-btw-numbers.pl)  
+## 9.[rm-space-btw-numbers.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-space-btw-numbers.pl)  
 
 [my-no.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/my-no.txt) ဖိုင်ထဲမှာ အောက်ပါအတိုင်း မြန်မာဂဏန်းတွေလည်း ပါဝင်နေပါတယ်။  
 
@@ -375,7 +375,7 @@ $ perl ./rm-space-btw-numbers.pl ./my-no.txt
 ```
 မှတ်ချက်။ ။ အထက်ပါ ကိစ္စမျိုးကို sed ကို သုံးပြီး လုပ်မယ်ဆိုရင် ခက်ခဲပါတယ်။ မြန်မာစာ စာလုံးတွေအတွက်ဆိုရင် hex value နဲ့ pass လုပ်ပေးရတာမျိုး လုပ်ရပါတယ်။ ဘယ်စာလုံးကနေ ဘယ်စာလုံးကြားဆိုတဲ့ (range) ကိစ္စမှာလည်း ကိုယ်လိုချင်တဲ့ ပုံစံအတိုင်း အလုပ် လုပ်မပေးတာတွေကို တွေ့ရပါလိမ့်မယ်။ ဒီလိုနေရာမှာတော့ perl နဲ့ ရေးရတာက ပိုအဆင်ပြေပါတယ်။  
 
-## 10. [print-ngram.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-ngram.pl)  
+## 10.[print-ngram.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-ngram.pl)  
 
 ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးဖြတ်ထားတဲ့ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ ngram အတွဲတွေအဖြစ် print ထုတ်ဖို့ ရေးခဲ့တယ်။
 input.txt ဖိုင်ထဲမှာ အောက်ပါအတိုင်း စာကြောင်း ၅ကြောင်း ရှိပါတယ်။  
