@@ -380,13 +380,19 @@ $ perl ./rm-space-btw-numbers.pl ./my-no.txt
 ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးဖြတ်ထားတဲ့ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ ngram အတွဲတွေအဖြစ် print ထုတ်ဖို့ ရေးခဲ့တယ်။
 input.txt ဖိုင်ထဲမှာ အောက်ပါအတိုင်း စာကြောင်း ၅ကြောင်း ရှိပါတယ်။  
 
-lar@lar-air:~/tool/perl/ngram-tokenizer$ cat input.txt 
+```bash
+$ cat input.txt 
 This is a cat .
 Who are you ?
 My name is Ko Gyi .
 I don't know who you are .
 Beer Chang Beer Chang ... Beer Chang Beer Chang .
-lar@lar-air:~/tool/perl/ngram-tokenizer$ perl ./print-ngram.pl ./input.txt 2
+```
+
+2gram စာလုံးအတွဲတွေအဖြစ် print ထုတ်စေချင်ရင် command line argument ကို 2 ပေးပြီး run ပါတယ်။  
+
+```bash
+$ perl ./print-ngram.pl ./input.txt 2
 This is
 is a
 a cat
@@ -414,7 +420,12 @@ Beer Chang
 Chang Beer
 Beer Chang
 Chang .
-lar@lar-air:~/tool/perl/ngram-tokenizer$ perl ./print-ngram.pl ./input.txt 3
+```
+
+3gram စာလုံးအတွဲတွေအဖြစ် print ထုတ်စေချင်ရင် command line argument ကို 3 ပေးပြီး run ပါတယ်။ 
+
+```bash
+$ perl ./print-ngram.pl ./input.txt 3
 This is a
 is a cat
 a cat .
@@ -437,7 +448,4 @@ Chang ... Beer
 Beer Chang Beer
 Chang Beer Chang
 Beer Chang .
-
-
-
-
+```
