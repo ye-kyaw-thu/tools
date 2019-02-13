@@ -61,6 +61,9 @@
 19. [even-odd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/even-odd.sh)  
 (ဖိုင်တစ်ဖိုင်ထဲမှာ ရှိနေတဲ့ စာကြောင်းတွေအထဲက စုံဂဏန်း စာကြောင်းတွေကိုပဲ ရိုက်ထုတ်ခိုင်းချင်တဲ့အခါမျိုး၊ မဂဏန်း စာကြောင်းတွေကိုပဲ ရိုက်ထုတ်ခိုင်းချင်တဲ့အခါမျိုးအတွက် ရေးခဲ့တယ်) 
 
+20. [rm-stopwords.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-stopwords.sh)  
+(stop words တွေကို corpus သို့မဟုတ် training data ဖိုင်ကနေ ဖျက်ဖို့အတွက် ရေးခဲ့ပါတယ်)  
+
 
 
 
