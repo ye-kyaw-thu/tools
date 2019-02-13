@@ -749,3 +749,12 @@ $ ./even-odd.sh ./mistake-pair.txt even
 ဆိုလိုတာ
 လူကြီး
 ```
+[even-odd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/even-odd.sh) ပရိုဂရမ်မှာ အောက်ပါအတိုင်း sed ရဲ့ n (next) နဲ့ p (print) ကို သုံးထားပါတယ်။  
+
+```
+# even line တွေကို ရိုက်ထုတ်ပေးဖို့အတွက် 
+sed -n 'n;p' $1;
+
+# odd line တွေကို ရိုက်ထုတ်ပေးဖို့အတွက်
+sed -n 'p;n' $1;
+```
