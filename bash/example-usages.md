@@ -712,6 +712,8 @@ myanmarconstitution2008mm.pdf ဖိုင်ကလည်း နဂိုအတ�
 
 ## 19. [even-odd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/even-odd.sh)  
 
+mistake-pair.txt ဖိုင်ထဲမှာ စာလုံးပေါင်းအမှားတွေနဲ့ အမှန်စာလုံးတွေကို အပေါ်အောက်ဆင့်ရိုက်ထားတယ်ဆိုပါစို့။  
+
 ```bash
 $ cat ./mistake-pair.txt 
 တေကိုတိုင်
