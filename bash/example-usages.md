@@ -761,7 +761,7 @@ sed -n 'p;n' $1;
 
 ## 20. [rm-stopwords.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-stopwords.sh)  
 
-ဆိုကြပါစို့ ကျွန်တော်တို့ ရဲ့ corpus က (my-test.txt)[https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-test.txt]  
+ဆိုကြပါစို့ ကျွန်တော်တို့ ရဲ့ corpus က [my-test.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/rm-stopwords/my-text.txt) ဖိုင်ဖြစ်ပြီး အဲဒီထဲမှာ စာကြောင်း ၁၀ ကြောင်းရှိတယ်။  
 
 ```bash
 $ cat ./my-text.txt 
@@ -776,6 +776,7 @@ $ cat ./my-text.txt
 ကျွန်တော် ကောင်းကောင်း သိ နေ တာ က အလုပ် ကြိုးစား တယ် ဆိုတာ လူ တိုင်း မ လုပ် နိုင် ပါ ။
 သူ က သူ့ အလုပ် ကို ချစ် တယ် ။
 ```
+NLP တချို့ အလုပ်တွေအတွက် အသုံးများတဲ့ စာလုံးတွေ၊ စာကြောင်းတွေ အများစုမှာ ထပ်ခါထပ်ခါ ပါနေတဲ့ စာလုံးတွေ (အင်္ဂလိပ်လိုက stop words လို့ ခေါ်) ကို ဖယ်ဖို့ လိုအပ်ပါတယ်။အဲဒီအတွက် ကျွန်တော်တို့က stopwords တွေကို စုထားပြီးသား ဆိုပါစို့။ ဥပမာ အနေနဲ့ stopwords  ၁၀လုံးကို stopwords-rs.txt ဖိုင်ထဲမှာ သိမ်းပေးထားတယ်။  
 
 ```bash
 $ cat ./stopwords-rs.txt 
@@ -790,6 +791,8 @@ $ cat ./stopwords-rs.txt
 ကျွန်တော်
 ကို
 ```
+
+rm-stopwords.sh ပရိုဂရမ်ကိုသုံးပြီးတော့ stop word တွေကို ဖယ်ကြည့်ရအောင်။  
 
 ```bash
 $ ./rm-stopwords.sh ./stopwords-rs.txt ./my-text.txt 
