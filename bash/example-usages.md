@@ -712,7 +712,7 @@ myanmarconstitution2008mm.pdf ဖိုင်ကလည်း နဂိုအတ�
 
 ## 19. [even-odd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/even-odd.sh)  
 
-mistake-pair.txt ဖိုင်ထဲမှာ စာလုံးပေါင်းအမှားတွေနဲ့ အမှန်စာလုံးတွေကို အပေါ်အောက်ဆင့်ရိုက်ထားတယ်ဆိုပါစို့။  
+[mistake-pair.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/mistake-pair.txt) ဖိုင်ထဲမှာ စာလုံးပေါင်းအမှားတွေနဲ့ အမှန်စာလုံးတွေကို အပေါ်အောက်ဆင့်ရိုက်ထားတယ်ဆိုပါစို့။  
 
 ```bash
 $ cat ./mistake-pair.txt 
@@ -728,6 +728,8 @@ $ cat ./mistake-pair.txt
 လူကြီး
 ```
 
+odd line no. စာကြောင်းတွေကိုပဲ print ထုတ်ခိုင်းချင်တဲ့အခါမှာ ဖိုင်နာမည် argument ရဲ့ အနောက်မှာ odd လို့ ရိုက်ထည့်ပြီး argument ပေးပါ။  
+
 ```bash
 $ ./even-odd.sh ./mistake-pair.txt odd 
 တေကိုတိုင်
@@ -736,6 +738,8 @@ $ ./even-odd.sh ./mistake-pair.txt odd
 ဆ်ုလိုတာ
 လူးကြီး
 ```
+
+even line no. စာကြောင်းတွေကိုပဲ print ထုတ်ပေးစေချင်တဲ့ အခါမှာ ဒုတိယ argument ကို even လို့ပေးပါ။  
 
 ```bash
 $ ./even-odd.sh ./mistake-pair.txt even
