@@ -10,4 +10,4 @@ corpusFile=$2;
 # sed -e "$(sed 's/.*/s\/& \/\/ig/' $stopwordFile)" $corpusFile;
 # Note space character after &
 
-sed -e "$(sed 's:.*:s/& //ig:' $stopwordFile)" $corpusFile;
+sed -e "$(sed 's:.*:s/^& //ig:' $stopwordFile)" $corpusFile | sed -e "$(sed 's:.*:s/& //ig:' $stopwordFile)" ;
