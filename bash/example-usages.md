@@ -710,4 +710,36 @@ No. of pages of even.pdf:  212
 မ ဂဏန်းစာမျက်နှာတွေချည်းပဲ စုထားတဲ့ ဖိုင်ကိုတော့ odd.pdf ဖိုင်နာမည်နဲ့ သိမ်းပေးသွားမှာဖြစ်ပါတယ်။  
 myanmarconstitution2008mm.pdf ဖိုင်ကလည်း နဂိုအတိုင်းပဲ ကျန်နေပါလိမ့်မယ်။  
 
+## 19. [even-odd.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/even-odd.sh)  
 
+```bash
+$ cat ./mistake-pair.txt 
+တေကိုတိုင်
+တွေကိုယ်တိုင်​
+အရည်အတွက်
+အရေအတွက်
+ဈေူကွက်
+ဈေးကွက်
+ဆ်ုလိုတာ
+ဆိုလိုတာ
+လူးကြီး
+လူကြီး
+```
+
+```bash
+$ ./even-odd.sh ./mistake-pair.txt odd 
+တေကိုတိုင်
+အရည်အတွက်
+ဈေူကွက်
+ဆ်ုလိုတာ
+လူးကြီး
+```
+
+```bash
+$ ./even-odd.sh ./mistake-pair.txt even
+တွေကိုယ်တိုင်​
+အရေအတွက်
+ဈေးကွက်
+ဆိုလိုတာ
+လူကြီး
+```
