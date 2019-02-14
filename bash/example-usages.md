@@ -925,3 +925,6 @@ $ sed -e "$(sed "s:.*:s/&//ig:" ./stopwords.txt)" ./my-text.txt
 
 ```
 
+Regular expression ရဲ့ word boundary တွေနဲ့ ပတ်သက်ပြီး အသေးစိတ် လေ့လာချင်သူများအတွက်က အောက်ပါ လင့်(ခ်) ကို ဖတ်ကြည့်ပါလို့ တိုက်တွန်းပါတယ်။  
+[Regex Boundaries and Delimiters—Standard and Advanced](https://www.rexegg.com/regex-boundaries.html)  
+
