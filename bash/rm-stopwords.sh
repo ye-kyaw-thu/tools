@@ -8,6 +8,10 @@
 stopwordFile=$1;
 corpusFile=$2;
 
+# adding my own start and end word boundaries for both stop word and corpus files for matching exact words
+# \<, \>, \b are working well for ASCII and not working for Myanmar words or unicode
+# I also tried with [[:<:]],[[:>:]] and \b{w}.
+# However I found following solution is the best for my case.   
 sed 's/^.*$/\<\|&\|\>/' $stopwordFile | sed 's/ /\|\>&\<\|/g' > $stopwordFile.tmp;
 sed 's/^.*$/\<\|&\|\>/' $corpusFile | sed 's/ /\|\>&\<\|/g' > $corpusFile.tmp;
 
