@@ -795,7 +795,7 @@ $ cat ./stopwords.txt
 က
 ```
 
-[rm-stopwords.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-stopwords.sh) ပရိုဂရမ်ကိုသုံးပြီးတော့ stop word တွေကို ဖယ်ကြည့်ရအောင်။  
+[rm-stopwords.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-stopwords.sh) ပရိုဂရမ်ကိုသုံးပြီးတော့ stop word တွေကို ဖယ်ကြည့်ရအောင်။ (ဒီနေရာမှာ stop word ဖိုင်မှာက စာလုံး ၁၂လုံး၊ corpus ဖိုင်ဖြစ်တဲ့ my-text.txt ဖိုင်မှာကလည်း စာကြောင်း ၁၂ကြောင်း ဖြစ်နေတာက တိုက်ဆိုင်တာပါ။ ခင်ဗျားတို့ stop word ကိုလည်း ကြိုက်သလောက် ထားလို့ရတယ်။ corpus ကလည်း စာကြောင်းရေး သန်းနဲ့ချီရှိရင်လည်း အိုကေပါတယ်။)  
 
 ```bash
 $ ./rm-stopwords.sh ./stopwords.txt ./my-text.txt
