@@ -2,7 +2,7 @@ use strict;
 use warnings;
 use utf8;
 
-# for printing code points (decimal, unicode) of each Myanmar character
+# for printing code points (decimal, unicode) of each Myanmar character and counting total no. of characters
 # written by Ye Kyaw Thu, Visiting Professor,
 # Language Semantic Technology Research Team (LST), NECTEC, Thailand
 # how to run: perl ./print-codepoint.pl <filename>
