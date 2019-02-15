@@ -451,7 +451,7 @@ Beer Chang .
 ```
 ## 11. [print-codepoint.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-codepoint.pl)  
 
-pair.txt ဖိုင်ထဲမှာ စာလုံးပေါင်းမှားတဲ့စာလုံး (သို့) ပုံမှန်အရေးအသားမဟုတ်တဲ့စာလုံးတွေနဲ့ မှန်ကန်တဲ့ မြန်မာစာလုံးတွေကို အပေါ်အောက်ဆင့်ရေးထားပါတယ်။  
+[pair.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/pair.txt) ဖိုင်ထဲမှာ စာလုံးပေါင်းမှားတဲ့စာလုံး (သို့) ပုံမှန်အရေးအသားမဟုတ်တဲ့စာလုံးတွေနဲ့ မှန်ကန်တဲ့ မြန်မာစာလုံးတွေကို အပေါ်အောက်ဆင့်ရေးထားပါတယ်။ တကယ်က အဲဒီစာလုံးတွေမှာ ကျွန်တော်တို့ မျက်စိနဲ့ မမြင်နိုင်တဲ့ non printable character တွေပါဝင်နေပါတယ်။   
 
 ```bash
 $ cat pair.txt
@@ -466,6 +466,8 @@ $ cat pair.txt
 ပြင်​စဉ်
 ပြင်​ဆင်
 ```
+
+စာလုံးတစ်လုံးချင်းစီရဲ့ character code point တွေကို ရိုက်ထုတ်ပေးဖို့အတွက် print-codepoint.pl ပရိုဂရမ်ကို ရေးခဲ့ပါတယ်။ run မယ်ဆိုရင် ကိုယ်စစ်ချင်တဲ့ ဖိုင်နာမည်ကို command line argument အနေနဲ့ ပေးရပါမယ်။ အထက်ပါ pair.txt ဖိုင်ကို ရိုက်ထုတ်ခိုင်းကြည့်ရအောင်။  
 
 ```bash
 $ perl ./print-codepoint.pl ./pair.txt 
