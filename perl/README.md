@@ -23,7 +23,9 @@
 9. [rm-space-btw-numbers.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-space-btw-numbers.pl)  
    (မြန်မာ ဂဏန်းတွေကြားထဲမှာ ရှိနေတဲ့ space တွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တယ်)  
 10. [print-ngram.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-ngram.pl)  
-   (ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးဖြတ်ထားတဲ့ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ ngram အတွဲတွေအဖြစ် print ထုတ်ဖို့ ရေးခဲ့တယ်)
+   (ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးဖြတ်ထားတဲ့ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ ngram အတွဲတွေအဖြစ် print ထုတ်ဖို့ ရေးခဲ့တယ်)  
+11. [print-codepoint.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-codepoint.pl)  
+   (ဖိုင်ထဲမှာရှိနေတဲ့ စာလုံးတစ်လုံးချင်းစီရဲ့ decimal, unicode code point တွေကို ရိုက်ထုတ်ပြဖို့နဲ့ မမြင်ရတဲ့စာလုံးတွေကိုပါ count လုပ်ပြီး စုစုပေါင်းစာလုံးအရေအတွက်ကိုပါ တွက်ပေးဖို့ ရေးခဲ့ပါတယ်။) 
    
    
    
