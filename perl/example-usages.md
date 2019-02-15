@@ -451,6 +451,8 @@ Beer Chang .
 ```
 ## 11. [print-codepoint.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-codepoint.pl)  
 
+pair.txt ဖိုင်ထဲမှာ စာလုံးပေါင်းမှားတဲ့စာလုံး (သို့) ပုံမှန်အရေးအသားမဟုတ်တဲ့စာလုံးတွေနဲ့ မှန်ကန်တဲ့ မြန်မာစာလုံးတွေကို အပေါ်အောက်ဆင့်ရေးထားပါတယ်။  
+
 ```bash
 $ cat pair.txt
 ဇွတ်​ကြီးပါဟယ်​လ်​
