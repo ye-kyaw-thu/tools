@@ -932,6 +932,30 @@ Regular expression ရဲ့ word boundary တွေနဲ့ ပတ်သက်
 
 website ကနေ တချို့ coding တွေကို ကိုယ်စက်ထဲမှာ စမ်းrun ဖို့အတွက် ကော်ပီကူးတဲ့အခါမှာ webiste အပေါ်မူတည်ပြီး ကိုယ်လိုချင်တဲ့ coding သာမကပဲ မလိုချင်တဲ့ space တွေ၊ လိုင်းနံပါတ်တွေပါ တွဲပါလာတဲ့အခါမျိုး ကြုံဖူးကြပါလိမ့်မယ်။ အဲဒီလိုအခြေအနေမျိုးအတွက် ကော်ပီကူးထားတဲ့ program ဖိုင်တွေထဲက မလိုချင်တဲ့အပိုင်းတွေကို ဖျက်ထုတ်ဖို့အတွက် ရေးခဲ့တာပါ။  
 
-```bash
+ဥပမာအနေနဲ့ run ပြဖို့ code-with-lineno.py ဆိုပြီး comment ပဲရေးပြထားတဲ့ fake python ဖိုင်ကို ဖန်တီးခဲ့ပါတယ်။  
 
+```bash
+$ cat ./code-with-lineno.py 
+    1 ##
+    2 # 
+    3 # @example Code
+    4 # 
+    5 # @copyright GNU Public License
+    6 # @author written 2011-2012 (www.mynlp.org) 
+    7 # @author Supported by the Zero University, 
+    8 #   Dept. of Cognitive NLP
+    9 # 
+   10 # @note
+
+$ ./rm-spaces-lineno.sh ./code-with-lineno.py 
+##
+# 
+# @example Code
+# 
+# @copyright GNU Public License
+# @author written 2011-2012 (www.mynlp.org) 
+# @author Supported by the Zero University, 
+#   Dept. of Cognitive NLP
+# 
+# @note
 ```
