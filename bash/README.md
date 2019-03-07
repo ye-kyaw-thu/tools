@@ -64,6 +64,9 @@
 20. [rm-stopwords.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-stopwords.sh)  
 (stop words တွေကို corpus သို့မဟုတ် training data ဖိုင်ကနေ ဖျက်ဖို့အတွက် ရေးခဲ့ပါတယ်)  
 
+21. [rm-spaces-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-spaces-lineno.sh)  
+(Website ကနေ ကုဒ်တွေကိုကော်ပီကူးယူတဲ့အခါမှာ တွဲပါလာတဲ့ space, line number တွေကို ဖြုတ်ဖို့အတွက် ရေးခဲ့တယ်)  
+
 
 
 
