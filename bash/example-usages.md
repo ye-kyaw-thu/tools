@@ -977,6 +977,7 @@ lar@lar-air:~/tool/bash/crypt$ ./blowfish.sh ./plain.txt abc123 enc
 out.enc ဖိုင်ဆိုပြီး encoded ဖိုင်တစ်ဖိုင် ရလာပါလိမ့်မယ်။  
 အဲဒီဖိုင်ကို ရိုက်ထုတ်ကြည့်ရင် encode လုပ်ထားတာကို တွေ့ရပါလိမ့်မယ်။  
 
+```bash
 lar@lar-air:~/tool/bash/crypt$ cat out.enc
 Salted__	��$�T٥,��1��w�F�;W��tG)գ�ԥ�\�ZҔA�
 ```
