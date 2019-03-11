@@ -67,6 +67,8 @@
 21. [rm-spaces-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-spaces-lineno.sh)  
 (Website ကနေ ကုဒ်တွေကိုကော်ပီကူးယူတဲ့အခါမှာ တွဲပါလာတဲ့ space, line number တွေကို ဖြုတ်ဖို့အတွက် ရေးခဲ့တယ်)  
 
+22. [blowfish.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/blowfish.sh)  
+(Blowfish Cryptography နဲ့ plain text ဖိုင်ကို encode/decode လုပ်ဖို့အတွက် ရေးခဲ့တယ်)  
 
 
 
