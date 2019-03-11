@@ -959,3 +959,38 @@ $ ./rm-spaces-lineno.sh ./code-with-lineno.py
 # 
 # @note
 ```
+
+## 22. [blowfish.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/blowfish.sh)  
+
+ပုံမှန်အားဖြင့် အရေးကြီးတဲ့ ဒေတာဖိုင်တွေကို အီးမေး(လ်)သုံးပြီး ပို့တဲ့အခါမှာ password ခံပြီး၊ zip လုပ်ပြီး၊ ပို့လေ့ရှိပါတယ်။ တခါတလေမှာ text ဖိုင်တွေကို encyrption လုပ်ပြီး ပို့တာမျိုးလည်း လုပ်လေ့ရှိပါတယ်။ Blowfish (symmetric-key block cipher) ကို သုံးဖို့အတွက် ရေးထားခဲ့တဲ့ shell script ပါ။ သုံးပုံသုံးနည်း နမူနာက အောက်ပါအတိုင်းပါ။  
+
+အရင်ဆုံး plain.txt ဖိုင်ထဲမှာ စာတစ်ကြောင်းရေးထားတာ ရှိပါတယ်။  
+```bash
+lar@lar-air:~/tool/bash/crypt$ cat plain.txt 
+Hello! Blowfish encoding!
+``` 
+
+./blowfish.sh ကို သုံးပြီး plain.txt ဖိုင်ကို encode လုပ်ကြည့်ရအောင်  
+```bash
+lar@lar-air:~/tool/bash/crypt$ ./blowfish.sh ./plain.txt abc123 enc
+```
+out.enc ဖိုင်ဆိုပြီး encoded ဖိုင်တစ်ဖိုင် ရလာပါလိမ့်မယ်။  
+အဲဒီဖိုင်ကို ရိုက်ထုတ်ကြည့်ရင် encode လုပ်ထားတာကို တွေ့ရပါလိမ့်မယ်။  
+
+lar@lar-air:~/tool/bash/crypt$ cat out.enc
+Salted__	��$�T٥,��1��w�F�;W��tG)գ�ԥ�\�ZҔA�
+```
+blowfish.sh ပရိုဂရမ်နဲ့ decode လုပ်ပြီး ထွက်လာတဲ့ out ဆိုတဲ့ဖိုင်ကို cat command နဲ့ ပြန်ရိုက်ခိုင်းကြည့်ရအောင်   
+```bash
+lar@lar-air:~/tool/bash/crypt$ ./blowfish.sh ./out.enc abc123 dec
+lar@lar-air:~/tool/bash/crypt$ cat out
+Hello! Blowfish encoding!
+```
+
+တကယ်လို့ pass phrase ပေးတာမှားရင် decode လုပ်လို့မရပါဘူး။  
+
+```bash
+lar@lar-air:~/tool/bash/crypt$ ./blowfish.sh ./out.enc abc dec
+bad decrypt
+140453512398488:error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:evp_enc.c:531:
+```
