@@ -389,7 +389,7 @@ I don't know who you are .
 Beer Chang Beer Chang ... Beer Chang Beer Chang .
 ```
 
-2gram စာလုံးအတွဲတွေအဖြစ် print ထုတ်စေချင်ရင် command line argument ကို 2 ပေးပြီး run ပါတယ်။  
+2-grams စာလုံးအတွဲတွေအဖြစ် print ထုတ်စေချင်ရင် command line argument ကို 2 ပေးပြီး run ပါတယ်။  
 
 ```
 $ perl ./print-ngram.pl ./input.txt 2
@@ -422,7 +422,7 @@ Beer Chang
 Chang .
 ```
 
-3gram စာလုံးအတွဲတွေအဖြစ် print ထုတ်စေချင်ရင် command line argument ကို 3 ပေးပြီး run ပါတယ်။ 
+3-grams စာလုံးအတွဲတွေအဖြစ် print ထုတ်စေချင်ရင် command line argument ကို 3 ပေးပြီး run ပါတယ်။ 
 
 ```
 $ perl ./print-ngram.pl ./input.txt 3
