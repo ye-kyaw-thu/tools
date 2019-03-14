@@ -34,7 +34,6 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 22. [blowfish.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/blowfish.sh)  
 
 
-
 # perl
 
 1. [clean-space.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-space.pl)
@@ -48,6 +47,10 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 9. [rm-space-btw-numbers.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-space-btw-numbers.pl)  
 10. [print-ngram.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-ngram.pl)  
 11. [print-codepoint.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-codepoint.pl)  
+12. [wc.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wc.pl)  
+    (စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ စာလုံးအရေအတွက်ကို ရေတွက်ပြီး print ထုတ်ပြဖို့ ရေးခဲ့တယ်)  
+13. [wordwrap.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordwrap.pl)  
+    (NLP အလုပ်တချို့မှာ (ဥပမာ Machine translation) စာကြောင်းတစ်ကြောင်းချင်းစီကို စာလုံးရေအရေအတွက် ဘယ်လောက်အထိပဲ ထားပါ ဆိုပြီးတော့ လုပ်ရတဲ့အခါရှိပါတယ်။ အဲဒီလို       ကိစ္စမျိုးအတွက် အသုံးဝင်ပါလိမ့်မယ်။)  
 
 
 # python
