@@ -500,7 +500,7 @@ $ perl ./print-codepoint.pl ./pair.txt
 ## 12. [wc.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wc.pl)  
 စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ စာလုံးအရေအတွက်ကို ရေတွက်ပြီး print ထုတ်ပြဖို့ ရေးခဲ့တယ်။  
 
-input-file ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို အရင်ဆုံး ရိုက်ကြည့်ရအောင်  
+[input-file](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/input-file) ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို အရင်ဆုံး ရိုက်ကြည့်ရအောင်  
 
 ```bash
 $ cat ./input-file
@@ -528,7 +528,7 @@ a b c d e f g h i j k 11
 ```
 
 ## 13. [wordwrap.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordwrap.pl)  
-   Machine translation နဲ့ ပတ်သက်တဲ့ မော်ဒယ်တွေကို မဆောက်ခင်မှာ preprocessing အလုပ်တော်တော်များများ လုပ်ရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ language-pair      တစ်ခုစီအတွက် စာကြောင်းတစ်ကြောင်းချင်းစီကို စာလုံးရေအရေအတွက် ဘယ်လောက်အထိဆိုတာကို သတ်မှတ်တာမျိုး လုပ်ရတဲ့ ကိစ္စပါ။ အင်္ဂလိပ်လိုပြောရရင်တော့ word wrapping လုပ်တယ်လို့      ခေါ်ပါတယ်။ သုံးပုံသုံးနည်း က အောက်ပါအတိုင်းပါ။    
+Machine translation နဲ့ ပတ်သက်တဲ့ မော်ဒယ်တွေကို မဆောက်ခင်မှာ preprocessing အလုပ်တော်တော်များများ လုပ်ရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ language-pair      တစ်ခုစီအတွက် စာကြောင်းတစ်ကြောင်းချင်းစီကို စာလုံးရေအရေအတွက် ဘယ်လောက်အထိဆိုတာကို သတ်မှတ်တာမျိုး လုပ်ရတဲ့ ကိစ္စပါ။ အင်္ဂလိပ်လိုပြောရရင်တော့ word wrapping လုပ်တယ်လို့      ခေါ်ပါတယ်။ သုံးပုံသုံးနည်း က အောက်ပါအတိုင်းပါ။ အထက်က perl program နံပါတ် ၁၂ မှာ ဥပမာပေးခဲ့တဲ့ [input-file](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/input-file) ကိုပဲ သုံးထားပါတယ်။   
 
 စာလုံး ၅လုံးထက်နည်းတဲ့ စာကြောင်းတွေကိုပဲ ရိုက်ထုတ်ပြခိုင်းရအောင်  
 
