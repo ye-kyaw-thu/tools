@@ -5,8 +5,8 @@
 # 14 Mar 2019 
 # 
 # How to run: perl wc.pl <input-file> <no-of-words>
-# e.g. ./wordwrap.pl ./input-file ">8"
-# e.g. ./wordwrap.pl ./input-file "<7" 
+# e.g. ./wordlimit.pl ./input-file ">8"
+# e.g. ./wordlimit.pl ./input-file "<7" 
 
 use strict;
 use warnings;
