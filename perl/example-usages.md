@@ -527,13 +527,13 @@ a b c d e f g h i j k 11
 1 2 3 4 5 6 6
 ```
 
-## 13. [wordwrap.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordwrap.pl)  
+## 13. [wordlimit.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordlimit.pl)  
 Machine translation နဲ့ ပတ်သက်တဲ့ မော်ဒယ်တွေကို မဆောက်ခင်မှာ preprocessing အလုပ်တော်တော်များများ လုပ်ရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ language-pair      တစ်ခုစီအတွက် စာကြောင်းတစ်ကြောင်းချင်းစီကို စာလုံးရေအရေအတွက် ဘယ်လောက်အထိဆိုတာကို သတ်မှတ်တာမျိုး လုပ်ရတဲ့ ကိစ္စပါ။ အင်္ဂလိပ်လိုပြောရရင်တော့ word wrapping လုပ်တယ်လို့      ခေါ်ပါတယ်။ သုံးပုံသုံးနည်း က အောက်ပါအတိုင်းပါ။ အထက်က perl program နံပါတ် ၁၂ မှာ ဥပမာပေးခဲ့တဲ့ [input-file](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/input-file) ကိုပဲ သုံးထားပါတယ်။   
 
 စာလုံး ၅လုံးထက်နည်းတဲ့ စာကြောင်းတွေကိုပဲ ရိုက်ထုတ်ပြခိုင်းရအောင်  
 
 ```bash
-$ ./wordwrap.pl ./input-file "<5"
+$ ./wordlimit.pl ./input-file "<5"
 How are you? 
 Who are you? 
 1 2 3 
@@ -542,7 +542,7 @@ Who are you?
 စာကြောင်းတစ်ကြောင်းမှာ စာလုံးအရေအတွက် ၇လုံးထက်များတာကိုပဲ ရိုက်ထုတ်ခိုင်းကြည့်ရအောင်   
 
 ```bash
-$ ./wordwrap.pl ./input-file ">7"
+$ ./wordlimit.pl ./input-file ">7"
 1 2 3 4 5 6 7 8 9 10 
 a b c d e f g h i j k 
 ```
