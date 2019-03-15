@@ -28,7 +28,7 @@
    (ဖိုင်ထဲမှာရှိနေတဲ့ စာလုံးတစ်လုံးချင်းစီရဲ့ decimal, unicode code point တွေကို ရိုက်ထုတ်ပြဖို့နဲ့ မမြင်ရတဲ့စာလုံးတွေကိုပါ count လုပ်ပြီး စုစုပေါင်းစာလုံးအရေအတွက်ကိုပါ တွက်ပေးဖို့ ရေးခဲ့ပါတယ်။) 
 12. [wc.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wc.pl)  
     (စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ စာလုံးအရေအတွက်ကို ရေတွက်ပြီး print ထုတ်ပြဖို့ ရေးခဲ့တယ်)  
-13. [wordwrap.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordwrap.pl)  
+13. [wordlimit.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordlimit.pl)  
     (NLP အလုပ်တချို့မှာ (ဥပမာ Machine translation) စာကြောင်းတစ်ကြောင်းချင်းစီကို စာလုံးရေအရေအတွက် ဘယ်လောက်အထိပဲ ထားပါ ဆိုပြီးတော့ လုပ်ရတဲ့အခါရှိပါတယ်။ အဲဒီလို       ကိစ္စမျိုးအတွက် အသုံးဝင်ပါလိမ့်မယ်။)  
    
    
