@@ -28,7 +28,7 @@ while (!eof($inputFILE)) {
    my $wc = scalar(@word);
 
    if (eval($wc. $operator_word)) {
-      print "@word \n";
+      print "@word\n";
    }
 
 }
