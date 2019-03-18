@@ -546,3 +546,77 @@ $ ./wordlimit.pl ./input-file ">7"
 1 2 3 4 5 6 7 8 9 10 
 a b c d e f g h i j k 
 ```
+
+## 14. [wordwrap.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordwrap.pl)  
+
+```
+$ cat english-input 
+Who are you?
+How are you?
+My name is blue papaya.
+1 2 3 4 5 6 7 8 9 10
+a b c d e f g h i j k
+I love you, you love me.
+for your refreshment
+Kachin Kayar Kayin Chin Mon Bamar Rakhine Shan
+Towards Sufficiency Economy with Science and Technology, NAC2006
+Pascal, C, C++, Visual Basic, Microsoft Access, MySQL, Bash, Perl, Python etc.
+one two three four five six seven eight nine ten
+```
+
+```
+lar@lar-air:~/tool/perl/word-wrap$ perl ./wordwrap.pl ./english-input 5
+Who are you?
+How are you?
+My name is blue papaya.
+1 2 3 4 5
+6 7 8 9 10
+a b c d e
+f g h i j
+k
+I love you, you love
+me.
+for your refreshment
+Kachin Kayar Kayin Chin Mon
+Bamar Rakhine Shan
+Towards Sufficiency Economy with Science
+and Technology, NAC2006
+Pascal, C, C++, Visual Basic,
+Microsoft Access, MySQL, Bash, Perl,
+Python etc.
+one two three four five
+six seven eight nine ten
+```
+
+```
+$ perl ./wordwrap.pl ./english-input 3
+Who are you?
+How are you?
+My name is
+blue papaya.
+1 2 3
+4 5 6
+7 8 9
+10
+a b c
+d e f
+g h i
+j k
+I love you,
+you love me.
+for your refreshment
+Kachin Kayar Kayin
+Chin Mon Bamar
+Rakhine Shan
+Towards Sufficiency Economy
+with Science and
+Technology, NAC2006
+Pascal, C, C++,
+Visual Basic, Microsoft
+Access, MySQL, Bash,
+Perl, Python etc.
+one two three
+four five six
+seven eight nine
+ten
+```
