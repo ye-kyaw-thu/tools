@@ -78,3 +78,23 @@ $ python ./numpy-array-element-compare.py ./file1.txt ./file2.txt
 [ True  True False  True  True  True]
 [ True  True  True  True False  True  True  True]
 ```
+
+## 3. [char-count-element-wise.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char-count-element-wise.py)  
+
+အရင်ဆုံး [my.txt](https://github.com/ye-kyaw-thu/tools/blob/master/python/test-data/my.txt) ဖိုင်ထဲမှာ ရှိတဲ့စာကြောင်းတွေကို ရိုက်ထုတ်ကြည့်ရအောင်။  
+
+```
+$ cat ./my.txt 
+သမီး နေကောင်း ရဲ့ လား ။
+ထမင်း စား ပြီး ပြီ လား ။
+စာအုပ် တွေ ကော ဖတ် ရဲ့ လား ။
+```
+
+အထက်ပါ my.txt ဖိုင်ထဲက စာလုံးတစ်လုံးချင်းစီမှာ မြန်မာစာလုံး "လား" ဆိုတာ ဘယ်နေရာတွေမှာ ပါနေသလဲ ဆိုတာကို ရှာကြည့်ချင်ရင် အောက်ပါအတိုင်း run ပါ။  
+
+```
+$ python ./char-count-element-wise.py ./my.txt လား
+[0 0 0 1 0]
+[0 0 0 0 1 0]
+[0 0 0 0 0 1 0]
+```
