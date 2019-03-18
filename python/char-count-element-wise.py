@@ -3,7 +3,7 @@ import numpy as np
 
 # for element-wise character counting
 # written by Ye Kyaw Thu, Okayama Prefectural University, Japan
-# How to run: python ./numpy-array-element-compare.py <filename> <character>
+# How to run: python ./char-count-element-wise.py <filename> <character or word>
 # e.g. python ./char-count-element-wise.py ./file1.txt a
 # e.g. python ./char-count-element-wise.py ./my.txt လား
 
