@@ -7,3 +7,6 @@
 
 2. [numpy-array-element-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/numpy-array-element-compare.py)
 (ဖိုင်နှစ်ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို numpy array အဖြစ် ပြောင်းပြီး၊ element တစ်ခုချင်းစီကို တိုက်စစ်ဖို့ရေးခဲ့တယ်။ ဖိုင်နှစ်ဖိုင်ထဲမှာရှိတဲ့ parallel စာကြောင်းတွေက၊ စာလုံးအရေအတွက်တူတဲ့အခြေအနေမျိုးဖြစ်မှ ဒီပရိုဂရမ်နဲ့ အဆင်ပြေလိမ့်မယ်)
+
+3. [char-count-element-wise.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char-count-element-wise.py)  
+(numpy array ထဲမှာရှိတဲ့ စာလုံးတွေထဲမှာ ကိုယ်လိုချင်တဲ့ စာလုံး (i.e. char, word) ကိုရှိမရှိ ရှာဖို့အတွက် ရေးခဲ့တယ်)  
