@@ -1,6 +1,6 @@
 # Example usages of python scripts
 
-## [chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
+## 1.[chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
 
 chk-token.py က parallel text ဖိုင် နှစ်ဖိုင်ထဲက token အရေအတွက် မတူတဲ့စာကြောင်း၊ တနည်းအားဖြင့် word segmentation ဖြတ်ထားတာ မညီတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တာဖြစ်ပါတယ်။ [writing.txt](https://github.com/ye-kyaw-thu/tools/blob/master/python/test-data/writing.txt) ဖိုင်ထဲမှာ word segmentation လုပ်ထားတဲ့ မြန်မာစာ စာကြောင်း စုစုပေါင်း ၅ကြောင်း အောက်ပါအတိုင်း ရှိပါတယ်။  
 
@@ -43,4 +43,32 @@ $ python ./chk-token.py ./writing.txt ./reading.txt $'\n'
 မင်ဂလာပါ ဆရာမ
 မေမြို့မှာ နေ ပါ တယ် ဗျ
 မေမြို့ မှာ နေ ဘာ ဒယ် ဗျ
+```
+## 2. [numpy-array-element-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/numpy-array-element-compare.py)  
+
+```bash
+$ cat file1.txt 
+Language as syllables
+for your reference
+Statistical Machine Translation
+Mg Mg is a boy .
+I am working on Myanmar-Rakhine machine translation .
+```
+
+```bash
+$ cat file2.txt 
+Language as tensors
+for your refreshment
+Neural Machine Translation
+Mg Mg are a boy .
+I am working on Rakhine-Myanmar machine translation .
+```
+
+```bash
+$ python ./numpy-array-element-compare.py ./file1.txt ./file2.txt 
+[ True  True False]
+[ True  True False]
+[False  True  True]
+[ True  True False  True  True  True]
+[ True  True  True  True False  True  True  True]
 ```
