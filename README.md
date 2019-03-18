@@ -54,3 +54,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 # python
 
 1. [chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
+2. [numpy-array-element-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/numpy-array-element-compare.py)  
