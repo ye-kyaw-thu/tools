@@ -549,6 +549,8 @@ a b c d e f g h i j k
 
 ## 14. [wordwrap.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/wordwrap.pl)  
 
+[english-input](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/english-input) ဖိုင်ထဲမှာ ရှိတဲ့စာကြောင်းတွေက အောက်ပါအတိုင်းပါ။  
+
 ```
 $ cat english-input 
 Who are you?
@@ -563,6 +565,8 @@ Towards Sufficiency Economy with Science and Technology, NAC2006
 Pascal, C, C++, Visual Basic, Microsoft Access, MySQL, Bash, Perl, Python etc.
 one two three four five six seven eight nine ten
 ```
+
+အထက်ပါစာကြောင်းတွေကို စာလုံး ၅လုံးကျော်တာနဲ့ နောက်တလိုင်းကိုဆင်းပေးခိုင်းစေချင်ရင် အောက်ပါအတိုင်း run ပါ။ command line argument အနေနဲ့က ဖိုင်နာမည်နဲ့ စာလုံးရေအရေအတွက်ကို perl program နာမည်ရဲ့ နောက်မှာ ရိုက်ထည့်ပေးယုံပါပဲ။  
 
 ```
 lar@lar-air:~/tool/perl/word-wrap$ perl ./wordwrap.pl ./english-input 5
@@ -587,6 +591,8 @@ Python etc.
 one two three four five
 six seven eight nine ten
 ```
+
+နောက်ထပ် ဥပမာအနေနဲ့ စာလုံးရေအရေအတွက်ကို ၃လုံးထားပြီး run ရင်အောက်ပါအတိုင်း ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
 
 ```
 $ perl ./wordwrap.pl ./english-input 3
