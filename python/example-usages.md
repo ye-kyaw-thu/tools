@@ -46,6 +46,8 @@ $ python ./chk-token.py ./writing.txt ./reading.txt $'\n'
 ```
 ## 2. [numpy-array-element-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/numpy-array-element-compare.py)  
 
+file1.txt ထဲမှာ ရှိတဲ့စာကြောင်းတွေကို ရိုက်ထုတ်ကြည့်ရအောင်။  
+
 ```bash
 $ cat file1.txt 
 Language as syllables
@@ -54,6 +56,7 @@ Statistical Machine Translation
 Mg Mg is a boy .
 I am working on Myanmar-Rakhine machine translation .
 ```
+file2.txt ထဲမှာ ရှိတဲ့စာကြောင်းတွေကို ရိုက်ထုတ်ကြည့်ရအောင်။  
 
 ```bash
 $ cat file2.txt 
@@ -63,6 +66,8 @@ Neural Machine Translation
 Mg Mg are a boy .
 I am working on Rakhine-Myanmar machine translation .
 ```
+
+./numpy-array-element-compare.py ပရိုဂရမ်ကို file1.txt နဲ့ file2.txt ကို command line argument အနေနဲ့ပေးပြီး စစ်ခိုင်းရင် အောက်ပါအတိုင်း output လုပ်ပေးပါလိမ့်မယ်။ numpy array နှစ်ခု ကိုတိုက်ကြည့်ပြီး မတူတဲ့ စာလုံးတွေရှိနေတဲ့ နေရာမှာ False ဆိုပြီး ပြပေးမှာ ဖြစ်ပါတယ်။  
 
 ```bash
 $ python ./numpy-array-element-compare.py ./file1.txt ./file2.txt 
