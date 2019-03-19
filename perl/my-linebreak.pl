@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # Myanmar sentence breaking based on syllable+potema list
-#(i.e. only prefix syllable and potema 2gram) data
+# (i.e. only prefix syllable and potema 2gram) data
 # Written by Ye Kyaw Thu,
 # Visiting Professor,
 # Language Semantic Technology Research Team (LST), NECTEC, Thailand
