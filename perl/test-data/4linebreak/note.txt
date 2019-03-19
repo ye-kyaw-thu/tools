@@ -1,0 +1,27 @@
+
+Some information for your reference:
+
+"all.syl" file is the syllable segmented file that I collected from several domain including wikipedia Myanmar dump data
+and it is also contained some Myanmar corpus that I developed (some are developing ...) with my master and doctoral students.
+
+$ wc all.syl
+   7142197  128439493 1241101274 all.syl
+
+I prepared syllable (only prefix) and potma combination frequency files as follows:
+
+$ wc *.freq
+   3081    9242   80422 1syl-potma.uniq.freq
+  29789  119156  990308 2syl-potma.uniq.freq
+ 100476  502380 4259628 3syl-potma.uniq.freq
+ 133346  630778 5330358 total
+ 
+ Currently, I only uploaded manually cleaned 1syllable-potma dictionary for your usage.
+ 
+ 
+ 
+ It will work well for raw data sentence breaking.
+ Of course, this is not the best tool. However, it will be useful for sentence breaking of formal Myanmar sentence in someway.
+ 
+ Regards,
+ Ye@Lab
+ 20 Mar 2019
