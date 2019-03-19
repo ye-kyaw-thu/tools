@@ -4,7 +4,7 @@
 # (i.e. only prefix syllable and potema 2gram) data
 # Written by Ye Kyaw Thu,
 # Visiting Professor,
-# Language Semantic Technology Research Team (LST), NECTEC, Thailand
+# Language and Semantic Technology Research Team (LST), NECTEC, Thailand
 #
 # How to use:
 # $ perl print-error-sent.pl <syl-potma-list-filename> <corpus-filename>
