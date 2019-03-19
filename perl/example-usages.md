@@ -629,6 +629,8 @@ ten
 
 ## 15. [get-syl-potma.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/get-syl-potma.pl)  
 
+အရင်ဆုံး [my-tst.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/my-tst.txt) ဖိုင်ထဲမှာ ဘယ်လို မြန်မာစာကြောင်းတွေရှိသလဲ ဆိုတာကို ကြည့်ကြရအောင်။  
+
 ```
 $cat ./my-tst.txt
 မင်္ဂ လာ ပါ ခင် ဗျား ။ ( ၀ ၂ ) ၃ ၁ ၆ ၉ ၇ ၊ ၃ ၅ ၀ ၁ ၃ ၊ ၃ ၄ ၂ ၆ ၃ ၊ ၃ ၅ ၄ ၃ ၀ ဖြစ် ပါ တယ် ။
@@ -638,6 +640,8 @@ $cat ./my-tst.txt
 ဟုတ် ကဲ့ ပါ ခင် ဗျာ ။
 ```
 
+ပုဒ်မ ရှေ့မှာ ရှိနေတဲ့ syllable တစ်လုံးတည်းကိုပဲ ဆွဲထုတ်ချင်ရင် နောက်ဆုံး command line argument ကို 1 ပေးပြီး run ပါ။ အောက်ပါအတိုင်း ဆွဲထုတ်ပေးပါလိမ့်မယ်။  
+
 ```
 $ perl ./get-syl-potma.pl ./my-tst.txt 1
 ဗျား ။
@@ -645,6 +649,8 @@ $ perl ./get-syl-potma.pl ./my-tst.txt 1
 ပြီ ။
 ဗျာ ။
 ```
+
+ပုဒ်မ ရှေ့မှာ ရှိနေတဲ့ syllable နှစ်လုံးကို ဆွဲထုတ်ချင်ရင်တော့ နောက်ဆုံး command line argument ကို 2 ပေးပြီး run ပါ။  
 
 ```
 $ perl ./get-syl-potma.pl ./my-tst.txt 2
@@ -654,6 +660,8 @@ $ perl ./get-syl-potma.pl ./my-tst.txt 2
 ခင် ဗျာ ။
 ```
 
+ပုဒ်မ ရှေ့မှာ ရှိနေတဲ့ syllable သုံးလုံးကို ဆွဲထုတ်ချင်ရင်တော့ နောက်ဆုံး command line argument ကို 3 ပေးပြီး run ပါ။ 
+
 ```
 $ perl ./get-syl-potma.pl ./my-tst.txt 3
 ပါ ခင် ဗျား ။
@@ -661,3 +669,4 @@ $ perl ./get-syl-potma.pl ./my-tst.txt 3
 များ နေ ပြီ ။
 ပါ ခင် ဗျာ ။
 ```
+
