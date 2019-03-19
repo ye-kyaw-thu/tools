@@ -48,6 +48,9 @@
 15.[get-syl-potma.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/get-syl-potma.pl)  
    (syllable ဖြတ်ထားတဲ့ ဖိုင်ထဲကနေ ပုဒ်မ နဲ့ တွဲနေတဲ့ ရှေ့က syllable တွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့တယ်)  
    
+16.[my-linebreak.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/my-linebreak.pl)  
+   (perl script for sentence breaking of continuous formal Myanmar sentences based on collected prefix syllable and potema symbol list)  
+   
    
 
 
