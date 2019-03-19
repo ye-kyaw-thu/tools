@@ -8,7 +8,7 @@
 #
 # How to use:
 # $ perl print-error-sent.pl <syl-potma-list-filename> <corpus-filename>
-# e.g. perl ./my-linebreak.pl ./1gram.potma.dict ./test-data > out
+# e.g. perl ./my-linebreak.pl ./1syl.potma.dict ./test-data > out
 
 use strict;
 use warnings;
