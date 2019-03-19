@@ -15,12 +15,16 @@ $ wc *.freq
  100476  502380 4259628 3syl-potma.uniq.freq
  133346  630778 5330358 total
  
- Currently, I only uploaded manually cleaned 1syllable-potma dictionary for your usage.
+ I used my "sylbreak.pl" perl script for syllable breaking of Myanmar raw text.
+ Currently, I only uploaded manually cleaned 1syllable-potma dictionary (filename: 1syl.potma.dict) for your usage.
  
- 
- 
- It will work well for raw data sentence breaking.
- Of course, this is not the best tool. However, it will be useful for sentence breaking of formal Myanmar sentence in someway.
+ $ wc ./1syl.potma.dict 
+ 2325  4650 40299 ./1syl.potma.dict
+
+ It work well for my raw data sentence breaking.
+ Of course, this is not the best tool.
+ I just want to show how I made sentence breaking for my collected data.
+ This method will be useful for sentence breaking of formal Myanmar sentences in someway.
  
  Regards,
  Ye@Lab
