@@ -626,3 +626,38 @@ four five six
 seven eight nine
 ten
 ```
+
+## 15. [get-syl-potma.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/get-syl-potma.pl)  
+
+```
+$cat ./my-tst.txt
+မင်္ဂ လာ ပါ ခင် ဗျား ။ ( ၀ ၂ ) ၃ ၁ ၆ ၉ ၇ ၊ ၃ ၅ ၀ ၁ ၃ ၊ ၃ ၄ ၂ ၆ ၃ ၊ ၃ ၅ ၄ ၃ ၀ ဖြစ် ပါ တယ် ။
+အား ပေး နေ တယ် နော်
+ခွက် ထဲ မှာ အ ခ န့် သား . . . ။
+အ ကု သိုလ် များ နေ ပြီ ။ လုံး လိုက် ချပ် ပြား ဖြစ် နေ
+ဟုတ် ကဲ့ ပါ ခင် ဗျာ ။
+```
+
+```
+$ perl ./get-syl-potma.pl ./my-tst.txt 1
+ဗျား ။
+. ။
+ပြီ ။
+ဗျာ ။
+```
+
+```
+$ perl ./get-syl-potma.pl ./my-tst.txt 2
+ခင် ဗျား ။
+. . ။
+နေ ပြီ ။
+ခင် ဗျာ ။
+```
+
+```
+$ perl ./get-syl-potma.pl ./my-tst.txt 3
+ပါ ခင် ဗျား ။
+. . . ။
+များ နေ ပြီ ။
+ပါ ခင် ဗျာ ။
+```
