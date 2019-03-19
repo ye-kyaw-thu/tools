@@ -3,7 +3,9 @@
 # retrieving syllables and potma
 # Ye Kyaw Thu, AI Lab., OPU, Japan
 #
-# e.g. $ perl get-syl-potma.pl <input-file> <no-of-syllable>
+# How to run: perl get-syl-potma.pl <input-file> <no-of-syllable>
+# e.g. 1: perl ./get-syl-potma.pl ./my-tst.txt 1
+# e.g. 2: perl ./get-syl-potma.pl ./my-tst.txt 3
 
 use strict;
 use warnings;
