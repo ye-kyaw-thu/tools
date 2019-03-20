@@ -754,3 +754,25 @@ $ perl ./my-linebreak.pl ./1syl.potma.dict ./test-data
 ```
 ကျွန်တော် 3-gram, 4-gram ... တွေနဲ့လည်း စမ်းဖြစ်ပါတယ်။ gram များလာတာနဲ့အမျှ dictionary ရဲ့ size ကလည်း ကြီးလာပါတယ်။ ကိုယ်သုံးမယ့် raw-data အတွက်က အထက်မှာ ကျွန်တော်လုပ်ပြထားသလို 1-gram လို dictionary နဲလည်း ကောင်းကောင်း အလုပ်လုပ်ပေးလို့ အိုက်ဒီယာရအောင် ရှဲလုပ်ပေးလိုက်တာပါ။  
 
+## 17. [rm-ne-tag.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-ne-tag.pl)  
+
+
+[my-ne-tag-data]https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/my-ne-tag-data
+
+```
+$ cat ./my-ne-tag-data
+ကျွန်တော်|[LOC]မြန်မာ[\LOC]|စစ်တုရင်|ကစားရတာ|ကြိုက်တယ်|။|
+[FOOD]ဘိန်းမုန့်[\FOOD]|နှစ်ခု|လောက်|။| 
+[TRA]မန္တလေး ဘူတာရုံ[\TRA]|က|ဘယ်နေရာမှာလဲ|။|
+[PER][TITLE]ဒေါက်တာ[\TITLE]|ရူပ[\PER] |ရဲ့|သုတေသန|ရုံးခန်း|ကပါ|။|
+[DTM]လေးနှစ်[\DTM]|လောက်|ရှိပြီ|။|
+```
+
+```
+$ perl ./rm-ne-tag.pl ./my-ne-tag-data
+ကျွန်တော် မြန်မာ စစ်တုရင် ကစားရတာ ကြိုက်တယ် ။ 
+ဘိန်းမုန့် နှစ်ခု လောက် ။  
+မန္တလေး ဘူတာရုံ က ဘယ်နေရာမှာလဲ ။ 
+ဒေါက်တာ ရူပ  ရဲ့ သုတေသန ရုံးခန်း ကပါ ။ 
+လေးနှစ် လောက် ရှိပြီ ။
+```
