@@ -1011,7 +1011,7 @@ $ cat oldfile
 မေးပါများ စကားရ
 ```
 
-လိုင်းနံပါတ် ၂ စာကြောင်းနဲ့ လိုင်းနံပါတ် ၄ စာကြောင်းကို အောက်ပါ [patchfile](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/patchfile) ထဲမှာ ရေးထားတဲ့ စာကြောင်းနှစ်ကြောင်းနဲ့ အစားထိုးချင်တယ်လို့ဆိုပါစို့။ format ကတော့ line no.<TAB>string ဆိုတဲ့ ပုံစံနဲ့ ရေးထားပါတယ်။  
+လိုင်းနံပါတ် ၂ စာကြောင်းနဲ့ လိုင်းနံပါတ် ၄ စာကြောင်းကို အောက်ပါ [patchfile](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/patchfile) ထဲမှာ ရေးထားတဲ့ စာကြောင်းနှစ်ကြောင်းနဲ့ အစားထိုးချင်တယ်လို့ဆိုပါစို့။ format ကတော့ line no.\<TAB\>string ဆိုတဲ့ ပုံစံနဲ့ ရေးထားပါတယ်။  
         
 ```
 $ cat patchfile 
