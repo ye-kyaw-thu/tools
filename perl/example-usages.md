@@ -756,10 +756,7 @@ $ perl ./my-linebreak.pl ./1syl.potma.dict ./test-data
 
 ## 17. [rm-ne-tag.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-ne-tag.pl)  
 
-
-[my-ne-tag-data]https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/my-ne-tag-data
-
-ကျွန်တော်တို့မှာ name entity tag တွေပါတဲ့ ဒေတာက အောက်ပါအတိုင်းရှိနေတယ် ဆိုကြပါစို့။ ဒီနေရာမှာ "|" သင်္ကေတကတော့ word boundary ကိုပြထားတာဖြစ်ပါတယ်။  
+ကျွန်တော်တို့မှာ name entity tag တွေပါတဲ့ ဒေတာဖိုင် [my-ne-tag-data]https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/my-ne-tag-data က အောက်ပါအတိုင်းရှိနေတယ် ဆိုကြပါစို့။ ဒီနေရာမှာ "|" သင်္ကေတကတော့ word boundary ကိုပြထားတာဖြစ်ပါတယ်။  
 
 ```
 $ cat ./my-ne-tag-data
