@@ -70,5 +70,8 @@
 22. [blowfish.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/blowfish.sh)  
 (Blowfish Cryptography နဲ့ plain text ဖိုင်ကို encode/decode လုပ်ဖို့အတွက် ရေးခဲ့တယ်)  
 
+23. [replace-with-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno.sh)  
+(ဖိုင်တစ်ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့ရှာပြီး တခြားစာကြောင်းတွေနဲ့ အစားထိုးဖို့အတွက် သုံးခဲ့တယ်)  
+
 
 
