@@ -759,6 +759,8 @@ $ perl ./my-linebreak.pl ./1syl.potma.dict ./test-data
 
 [my-ne-tag-data]https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/my-ne-tag-data
 
+ကျွန်တော်တို့မှာ name entity tag တွေပါတဲ့ ဒေတာက အောက်ပါအတိုင်းရှိနေတယ် ဆိုကြပါစို့။ ဒီနေရာမှာ "|" သင်္ကေတကတော့ word boundary ကိုပြထားတာဖြစ်ပါတယ်။  
+
 ```
 $ cat ./my-ne-tag-data
 ကျွန်တော်|[LOC]မြန်မာ[\LOC]|စစ်တုရင်|ကစားရတာ|ကြိုက်တယ်|။|
@@ -767,6 +769,8 @@ $ cat ./my-ne-tag-data
 [PER][TITLE]ဒေါက်တာ[\TITLE]|ရူပ[\PER] |ရဲ့|သုတေသန|ရုံးခန်း|ကပါ|။|
 [DTM]လေးနှစ်[\DTM]|လောက်|ရှိပြီ|။|
 ```
+
+[rm-ne-tag.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-ne-tag.pl) ပရိုဂရမ်နဲ့ tag တွေကို ဖြုတ်ပြီးသွားတဲ့အခါမှာတော့ အေက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။ Regualr Expression ကို ဘယ်လိုသုံးသွားသလဲ ဆိုတာကိုတော့ code ကို ဝင်လေ့လာပါ။  
 
 ```
 $ perl ./rm-ne-tag.pl ./my-ne-tag-data
