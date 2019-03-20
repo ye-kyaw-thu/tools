@@ -995,3 +995,32 @@ lar@lar-air:~/tool/bash/crypt$ ./blowfish.sh ./out.enc abc dec
 bad decrypt
 140453512398488:error:06065064:digital envelope routines:EVP_DecryptFinal_ex:bad decrypt:evp_enc.c:531:
 ```
+
+## 23.[replace-with-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno.sh)  
+
+NLP အလုပ်တွေမှာ တစ်ခါတလေ ဖိုင်တစ်ဖိုင်ထဲကနေ စာကြောင်း တချို့ကိုပဲပဲ ဆွဲထုတ်ယူပြီး ပြုပြင်မှုတွေလုပ်ပါတယ်။ ပြီးတော့ အဲဒီ ပြင်ထားတဲ့ စာကြောင်းတွေကို နဂိုဖိုင်ထဲမှာ လိုင်းနံပါတ်နဲ့ ပြန်ရှာပြီး အစားထိုးရတဲ့အခါမျိုးတွေရှိတတ်ပါတယ်။ replace-with-lineno.sh က အဲဒီအတွက် ရေးခဲ့ပါတယ်။  
+
+```
+$ cat oldfile
+မအိပ်မနေအသက်ရှည်
+တရွာမပြောင်း သူကောင်းမဖြစ်
+တနေ့တလံ ပုဂံဘယ်ပြေးမလဲ
+ကျားကြီး ခြေရာကြီး
+မေးပါများ စကားရ
+```
+
+```
+$ cat patchfile 
+2	သေချင်တဲ့ကျား တောပြောင်း
+4	ဆင်ပိန် ကျွဲလောက်ရှိ
+```
+
+```
+$ ./replace-with-lineno.sh ./patchfile ./oldfile 
+$ cat oldfile
+မအိပ်မနေအသက်ရှည်
+သေချင်တဲ့ကျား တောပြောင်း
+တနေ့တလံ ပုဂံဘယ်ပြေးမလဲ
+ဆင်ပိန် ကျွဲလောက်ရှိ
+မေးပါများ စကားရ
+```
