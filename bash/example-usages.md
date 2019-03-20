@@ -1025,7 +1025,7 @@ $ cat patchfile
 $ ./replace-with-lineno.sh ./patchfile ./oldfile 
 ```
 
-run ပြီးတဲ့အခါမှာ oldfile ထဲမှာ update လုပ်သွားတာကို အောက်ပါအတိုင်း တွေ့ရပါလိမ့်မယ်။  
+run ပြီးတဲ့အခါမှာ oldfile ထဲမှာ စာကြောင်းနံပါတ် ၂ နဲ့ ၄ ကို update လုပ်သွားတာကို အောက်ပါအတိုင်း တွေ့ရပါလိမ့်မယ်။  
 
 ```
 $ cat oldfile
