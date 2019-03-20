@@ -51,6 +51,11 @@
 16.[my-linebreak.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/my-linebreak.pl)  
    (perl script for sentence breaking of multiline formal Myanmar sentences based on collected prefix syllable and potema symbol list)  
    
+17. [rm-ne-tag.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-ne-tag.pl)  
+(Name entity tag တွေကို ဖြုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။)  
+
+
+   
    
 
 
