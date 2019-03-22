@@ -23,6 +23,9 @@ while (!eof($inputFILE)) {
     my $line = <$inputFILE>;
     if (($line ne '') & ($line !~ /^ *$/)) {
         chomp($line);
+        
+        # see Myanmar Unicode table for \x{102B}-\x{103E} vowels
+        # https://www.unicode.org/charts/PDF/U1000.pdf
         if ($line !~ /.*\s[\x{102B}-\x{103E}].*\s.*|^[\x{102B}-\x{103E}].*\s.*|\s[\x{102B}-\x{103E}].*$/) {
            print "$line\n";
         }
