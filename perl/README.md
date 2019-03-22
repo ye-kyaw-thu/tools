@@ -53,6 +53,9 @@
    
 17.[rm-ne-tag.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-ne-tag.pl)  
    (Name entity tag တွေကို ဖြုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။)  
+   
+18.[clean-v-without-c.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-v-without-c.pl)  
+   (မြန်မာ ဗျည်းမပါပဲ သရတွေချည်းပဲ ရှိနေတဲ့ စာလုံးတစ်ချို့ကိုဖယ်ဖို့ ရေးခဲ့တဲ့ perl script ပါ။ အဲဒီလို ဗျည်းမပါပဲ သရတွဲတွေချည်းပဲ ရှိနေတဲ့ ဒေတာမျိုးက wininwa font နဲ့ ရိုက်ထားတဲ့ ဒေတာတွေကို utf8 ပြောင်းတဲ့အခါ မျိုးမှာ တွေ့ရတတ်ပါတယ်။ အထူးသဖြင့် original data က မြန်မာသတင်းစာ PDF ကနေ ယူတဲ့အခါမျိုးမှာ)  
 
 
    
