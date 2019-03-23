@@ -1036,3 +1036,42 @@ $ cat oldfile
 မေးပါများ စကားရ
 ```
 
+ကျွန်တော်ရဲ့ GitHub မှာ တင်ထားတဲ့ mypos ဒေတာကိုပဲ corpus အဖြစ်နဲ့ ယူသုံးပြထားပါတယ်။
+အဲဒီ စာလုံးဖြတ်ထားပြီးသား corpus ဖိုင်ကို အောက်ပါအတိုင်း wget command နဲ့ ဒေါင်းလုဒ်လုပ်ယူခဲ့ပါတယ်။
+
+$ wget https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-draft-ver-1.0/mypos-dver.1.0.word.txt
+--2019-03-24 01:59:15--  https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-draft-ver-1.0/mypos-dver.1.0.word.txt
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.8.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.8.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 3466670 (3.3M) [text/plain]
+Saving to: ‘mypos-dver.1.0.word.txt’
+
+mypos-dver.1.0.word.txt               100%[========================================================================>]   3.31M   420KB/s    in 11s     
+
+2019-03-24 01:59:29 (296 KB/s) - ‘mypos-dver.1.0.word.txt’ saved [3466670/3466670]
+
+Test-data ဖိုင်ဖြစ်တဲ့ test-data4oov ဖိုင်ထဲမှာတော့ အောက်ပါအတိုင်း ရှိပါတယ်။
+တကယ်က OOV ကို တိုင်းတာဖို့အတွက်ဆိုရင် test-data ဖိုင်မှာ လုပ်ထားတဲ့ word segmentation က corpus မှာ ဖြတ်ထားတဲ့ ပုံစံနဲ့ တူကိုတူရပါမယ်။ ဒီနေရာမှာတော့ ကျွန်တော် ဘာမှ မစဉ်းစားထားပဲ ဥပမာ အနေနဲ့ စိတ်ထဲရှိတာကို ကောက်ရိုက်ပြီး၊ ကြုံသလို word segmentation ကို ဖြတ်ထားပါတယ်။ example အနေနဲ့ run ပြချင်တာပဲ မို့လို့ပါ။
+
+$ cat ./test-data4oov 
+ဒီနေ့ OOV တွက် ပေး တဲ့ shell script ကို ရေး နေ ရင်း ၂၀၁၈ ခုနှစ် အတွက် အကယ်ဒမီ ပေးပွဲ က တီဗီ မှာ လာ နေ လို့ အမေ နဲ့ အတူ ကြည့် ဖြစ် ခဲ့ တယ် ။ နိုင်ငံခြား မှာ နေ တာ အရမ်း ကြာ သွားပြီး၊ မြန်မာ ရုပ်ရှင် လည်း မ ကြည့် ဖြစ် တာ ကြာ ပြီ မို့ မင်းသား ၊ မင်းသမီး တွေ အားလုံး က ကျွန်တော့် အတွက် တော့ အသစ် တွေ ပဲ ဖြစ် နေ ပါ တယ် ။ ဆု ရ သွား တဲ့ ရုပ်ရှင် တွေ ကို လည်း မ ကြည့် ဖူး ပေ မယ့် သူ တို့ တွေ အောင်မြင် တာ ကို ကြားသိ ရ လို့ ဝမ်းသာ ပီတိ ဖြစ် ရ ပါ တယ် ။
+
+test-data4oov ဖိုင်ထဲမှာပဲ ရှိပြီးတော့ corpus ဖြစ်တဲ့ mypos-dver.1.0.word.txt ဖိုင်ထဲမှာ မရှိတဲ့ OOV စာလုံးတွေ စကရင်မှာ ရိုက်ထုတ်ပြပေးစေချင်ရင်တော့ အောက်ပါအတိုင်း run ပါ။
+
+$ ./OOV-count.sh ./mypos-dver.1.0.word.txt ./test-data4oov 
+OOV
+script
+shell
+ဒီနေ့
+ပီတိ
+ပေးပွဲ
+သွားပြီး၊
+
+wc command ကို pass လုပ်ပြီးတော့ no. of OOV ကို ရိုက်ထုတ်ခိုင်းလို့လည်း ရပါတယ်။
+
+$ ./OOV-count.sh ./mypos-dver.1.0.word.txt ./test-data4oov | wc
+      7       7      93
+
+OOV စာလုံးတွေကို ဖိုင်တစ်ဖိုင်အနေနဲ့ သိမ်းဆည်းချင်ရင်တော့ အောက်ပါအတိုင်း
+$ ./OOV-count.sh ./mypos-dver.1.0.word.txt ./test-data4oov > oov.list
