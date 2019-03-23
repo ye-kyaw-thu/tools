@@ -73,5 +73,8 @@
 23. [replace-with-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno.sh)  
 (ဖိုင်တစ်ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့ရှာပြီး တခြားစာကြောင်းတွေနဲ့ အစားထိုးဖို့အတွက် သုံးခဲ့တယ်)  
 
+24. [OOV-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/OOV-count.sh)  
+(Out-Of-Vocabulary စာလုံးတွေကို linux command တစ်ခုဖြစ်တဲ့ comm ကို သုံးပြီးတော့ လွယ်လွယ်ကူကူ ရှာဖွေနိုင်ကြောင်းကို သင်ပေးချင်လို့ ရေးခဲ့ပါတယ်)  
+
 
 
