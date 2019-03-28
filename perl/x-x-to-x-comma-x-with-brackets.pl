@@ -25,7 +25,7 @@ while (!eof($inputFILE)) {
    
    foreach (@pair) { 
     my ($left, $right) = split('-', $_);
-    print "($left,$right) ";
+    print "($left,$right), ";
    }
 
    print "\n";
