@@ -7,5 +7,4 @@
 # e.g. ./find-blank-lines.sh 't*.*' 
 # Note: when you want to pass special characters such as *, you should use single quote!!!
 
-#grep -E --line-number --with-filename '^$' $1;
 find . -name "$1"  | xargs grep -E --line-number --with-filename '^$';
