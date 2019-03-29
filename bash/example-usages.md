@@ -1092,3 +1092,20 @@ OOV စာလုံးတွေကို ဖိုင်တစ်ဖိုင်
 $ ./OOV-count.sh ./mypos-dver.1.0.word.txt ./test-data4oov > oov.list
 ```
 
+## 25. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
+
+```
+$ ./find-blank-lines.sh train.my
+./train.my:14404:
+./train.my:15708:
+```
+
+```
+$ ./find-blank-lines.sh 't*.*'
+./train.my:14404:
+./train.my:15708:
+./train.rk:12526:
+./train.rk:14404:
+./train.rk:15708:
+```
+
