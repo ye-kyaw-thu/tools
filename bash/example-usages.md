@@ -1094,11 +1094,16 @@ $ ./OOV-count.sh ./mypos-dver.1.0.word.txt ./test-data4oov > oov.list
 
 ## 25. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
 
+find-blank-lines.sh က ဖိုင်တစ်ဖိုင်ထဲမှာရှိနေတဲ့ blank line တွေကို ရှာဖွေဖို့အတွက် သုံးလို့ရပါတယ်။  
+ဥပမာ train.my ဖိုင်ထဲမှာ ရှိနေတဲ့ blank line တွေကို လိုင်းနံပါတ်နဲ့တကွ ရိုက်ထုတ်ပေးစေချင်ရင် အောက်ပါအတိုင်း command ပေးပါ။  
+
 ```
 $ ./find-blank-lines.sh train.my
 ./train.my:14404:
 ./train.my:15708:
 ```
+
+တကယ်လို့ လက်ရှိ ဖိုလ်ဒါအောက်မှာ ရှိတဲ့ "tနဲ့စပြီး extension တစ်ခုပါနေတဲ့" ဖိုင်တွေထဲမှာ ရှိနေတဲ့ blank line တွေကို ရှာဖွေချင်ရင်တော့ အောက်ပါပုံစံမျိုး command ပေးပြီး run လို့ရပါတယ်။ တစ်ခု သတိထားရမှာက ခင်ဗျားပေးချင်တဲ့ regular expression တွေမှာ special character တွေ (ဥပမာ \* လိုမျိုး) ပါလာမယ်ဆိုရင် single quote အတွင်းမှာ regular expression ကို ရိုက်ပါ။ မဟုတ်ရင် လိုချင်တဲ့ ပုံစံအတိုင် အလုပ်လုပ်မှာ မဟုတ်ပါဘူး။   
 
 ```
 $ ./find-blank-lines.sh 't*.*'
