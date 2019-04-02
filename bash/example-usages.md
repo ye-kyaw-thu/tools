@@ -1038,6 +1038,7 @@ $ cat oldfile
 
 ## 24. [replace-with-lineno2.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno2.sh) 
 
+```
 $ cat ./ori.txt
 ကဏန်း(သတ္တဝါ)
 ကဏန်းမြင်း
@@ -1049,6 +1050,9 @@ $ cat ./ori.txt
 ကတော်(မင်း စိုး)
 ကတိုးကောင်
 ကတောက်ကဆတ်
+```
+
+```
 $ cat -n ./ori.txt > ori.no.txt
 $ cat ./ori.no.txt
      1	ကဏန်း(သတ္တဝါ)
@@ -1061,24 +1065,29 @@ $ cat ./ori.no.txt
      8	ကတော်(မင်း စိုး)
      9	ကတိုးကောင်
     10	ကတောက်ကဆတ်
+```
 
+```
 $ grep "(" ./ori.no.txt > 4edit.txt
 $ cat ./4edit.txt
      1	ကဏန်း(သတ္တဝါ)
      6	ကတောကမျော(ကသောကမျော)
      7	ကတော့(ဆီ)
      8	ကတော်(မင်း စိုး)
+```
 
-gedit 4edit.txt 
-Manually edited as follows:
+```
+
+$gedit 4edit.txt 
 
      1	ကဏန်း(သတ္တဝါ)	ကဏန်း သတ္တဝါ
      6	ကတောကမျော(ကသောကမျော)	ကတောကမျော
      7	ကတော့(ဆီ)	ဆီကတော့
      8	ကတော်(မင်း စိုး)	မင်းစိုးကတော်
 
+```
 
-
+```
 $ ./replace-with-line-no.sh ./4edit.txt ./ori.txt
 lineNo: 1
 originalText: ကဏန်း(သတ္တဝါ)
@@ -1092,7 +1101,9 @@ editedText: ဆီကတော့
 lineNo: 8
 originalText: ကတော်(မင်း စိုး)
 editedText: မင်းစိုးကတော်
+```
 
+```
 $ cat ./ori.txt
 ကဏန်း သတ္တဝါ
 ကဏန်းမြင်း
@@ -1104,8 +1115,7 @@ $ cat ./ori.txt
 မင်းစိုးကတော်
 ကတိုးကောင်
 ကတောက်ကဆတ်
-
-
+```
 
 ## 25. [OOV-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/OOV-count.sh)  
 
