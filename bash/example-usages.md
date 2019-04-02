@@ -1101,7 +1101,7 @@ $gedit 4edit.txt
 [replace-with-lineno2.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno2.sh) ဖိုင်ကို အောက်ပါအတိုင်း ./4edit.txt (လက်နဲ့ ပြင်ဆင်ထားတဲဖိုင်) နဲ့ ori.txt (နဂိုဖိုင်) ကို argument အနေနဲ့ ပေးလိုက်ပြီး run လိုက်ရင် ဘယ်လိုင်းတွေကို ပြင်ဆင်သွားတယ်ဆိုတာကို ရိုက်ပြပေးပြီး၊ ပြင်ရမယ့် လိုင်းတွေကိုလည်း လိုင်းနံပါတ်ရော၊ နဂိုစာကြောင်းကိုကော တိုက်ကြည့်ပြီး ori.txt ဖိုင်ကို overwrite လုပ်ပေးသွားမှာ ဖြစ်ပါတယ်။  
 
 ```
-$ ./replace-with-line-no.sh ./4edit.txt ./ori.txt
+$ ./replace-with-lineno2.sh ./4edit.txt ./ori.txt
 lineNo: 1
 originalText: ကဏန်း(သတ္တဝါ)
 editedText: ကဏန်း သတ္တဝါ
