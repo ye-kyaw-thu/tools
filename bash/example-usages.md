@@ -1036,7 +1036,78 @@ $ cat oldfile
 မေးပါများ စကားရ
 ```
 
-## 24. [OOV-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/OOV-count.sh)  
+## 24. [replace-with-lineno2.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno2.sh) 
+
+$ cat ./ori.txt
+ကဏန်း(သတ္တဝါ)
+ကဏန်းမြင်း
+ကတညုတတရား
+ကတိ
+ကတိကဝတ်
+ကတောကမျော(ကသောကမျော)
+ကတော့(ဆီ)
+ကတော်(မင်း စိုး)
+ကတိုးကောင်
+ကတောက်ကဆတ်
+$ cat -n ./ori.txt > ori.no.txt
+$ cat ./ori.no.txt
+     1	ကဏန်း(သတ္တဝါ)
+     2	ကဏန်းမြင်း
+     3	ကတညုတတရား
+     4	ကတိ
+     5	ကတိကဝတ်
+     6	ကတောကမျော(ကသောကမျော)
+     7	ကတော့(ဆီ)
+     8	ကတော်(မင်း စိုး)
+     9	ကတိုးကောင်
+    10	ကတောက်ကဆတ်
+
+$ grep "(" ./ori.no.txt > 4edit.txt
+$ cat ./4edit.txt
+     1	ကဏန်း(သတ္တဝါ)
+     6	ကတောကမျော(ကသောကမျော)
+     7	ကတော့(ဆီ)
+     8	ကတော်(မင်း စိုး)
+
+gedit 4edit.txt 
+Manually edited as follows:
+
+     1	ကဏန်း(သတ္တဝါ)	ကဏန်း သတ္တဝါ
+     6	ကတောကမျော(ကသောကမျော)	ကတောကမျော
+     7	ကတော့(ဆီ)	ဆီကတော့
+     8	ကတော်(မင်း စိုး)	မင်းစိုးကတော်
+
+
+
+$ ./replace-with-line-no.sh ./4edit.txt ./ori.txt
+lineNo: 1
+originalText: ကဏန်း(သတ္တဝါ)
+editedText: ကဏန်း သတ္တဝါ
+lineNo: 6
+originalText: ကတောကမျော(ကသောကမျော)
+editedText: ကတောကမျော
+lineNo: 7
+originalText: ကတော့(ဆီ)
+editedText: ဆီကတော့
+lineNo: 8
+originalText: ကတော်(မင်း စိုး)
+editedText: မင်းစိုးကတော်
+
+$ cat ./ori.txt
+ကဏန်း သတ္တဝါ
+ကဏန်းမြင်း
+ကတညုတတရား
+ကတိ
+ကတိကဝတ်
+ကတောကမျော
+ဆီကတော့
+မင်းစိုးကတော်
+ကတိုးကောင်
+ကတောက်ကဆတ်
+
+
+
+## 25. [OOV-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/OOV-count.sh)  
 
 ကျွန်တော် ကိုယ်တိုင်လည်း "comm" ကို မသိခဲ့စဉ်က Out-of-Vocabulary (OOV) စာလုံးတွေကို ရိုက်ထုတ်ပြပေးတဲ့ ပရိုဂရမ်ကို perl နဲ့ ရေးတာမျိုး လုပ်ခဲ့ဖူးပါတယ်။ တကယ်က "comm" Linux command နဲ့ဆိုရင် လွယ်လွယ်ကူကူ OOV ကို ရိုက်ထုတ်ခိုင်းလို့ရကြောင်းကို မြန်မာကျောင်းသား/သူတွေကို သိစေချင်လို့ ရေးတင်ပေးလိုက်တာပါ။ လက်ရှိမှာ language model ရဲ့ OOV ရှာပေးတဲ့ tool စတာတွေကိုလည်း လိုအပ်တဲ့အခါမှသာ သုံးပြီး၊ ပုံမှန်အားဖြင့် OOV ကိုတစ်ချက် စစ်ကြည့်ချင်တာမျိုးအတွက်က comm ကိုပဲ သုံးဖြစ်နေပါတယ်။   
 
@@ -1092,7 +1163,7 @@ OOV စာလုံးတွေကို ဖိုင်တစ်ဖိုင်
 $ ./OOV-count.sh ./mypos-dver.1.0.word.txt ./test-data4oov > oov.list
 ```
 
-## 25. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
+## 26. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
 
 find-blank-lines.sh က ဖိုင်တစ်ဖိုင်ထဲမှာရှိနေတဲ့ blank line တွေကို ရှာဖွေဖို့အတွက် သုံးလို့ရပါတယ်။  
 ဥပမာ train.my ဖိုင်ထဲမှာ ရှိနေတဲ့ blank line တွေကို လိုင်းနံပါတ်နဲ့တကွ ရိုက်ထုတ်ပေးစေချင်ရင် အောက်ပါအတိုင်း command ပေးပါ။  
