@@ -73,10 +73,13 @@
 23. [replace-with-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno.sh)  
 (ဖိုင်တစ်ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့ရှာပြီး တခြားစာကြောင်းတွေနဲ့ အစားထိုးဖို့အတွက် သုံးခဲ့တယ်)  
 
-24. [OOV-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/OOV-count.sh)  
+24. [replace-with-lineno2.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/replace-with-lineno2.sh)  
+(အထက်ပါ နံပါတ်၂၃ က ပရိုဂရမ်နဲ့ ဆင်ပါတယ်။ ဖိုင်တစ်ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့ရှာပြီး ပြင်ထားတဲ့စာကြောင်းတွေနဲ့ အစားထိုးဖို့ရေးခဲ့ပါတယ်။ နံပါတ် ၂၃ရဲ့ ပရိုဂရမ်နဲ့ မတူတာက replace-with-lineno2.sh မှာတော့ လိုင်းနံပါတ် တစ်ခုတည်းကို တိုက်စစ်တာမဟုတ်ပဲ၊ အရင် စာကြောင်းအဟောင်းကိုပါ တိုက်စစ်ပြီးတွေ့မှ အစားထိုးပါတယ်။)  
+
+25. [OOV-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/OOV-count.sh)  
 (Out-Of-Vocabulary စာလုံးတွေကို linux command တစ်ခုဖြစ်တဲ့ comm ကို သုံးပြီးတော့ လွယ်လွယ်ကူကူ ရှာဖွေနိုင်ကြောင်းကို သင်ပေးချင်လို့ ရေးခဲ့ပါတယ်)  
 
-25. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
+26. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
 (ဖိုလ်ဒါတစ်ခုအောက်မှာသိမ်းထားတဲ့ ဖိုင်တွေထဲမှာ ရှိနေတဲ့ blank line တွေကို ရှာဖို့အတွက် ရေးခဲ့ပါတယ်။ blank line တွေရဲ့ လိုင်းနံပါတ်ကိုပါ ရိုက်ထုတ်ပြပေးပါလိမ့်မယ်)  
 
 
