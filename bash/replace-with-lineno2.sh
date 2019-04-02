@@ -6,6 +6,7 @@
 # how to run: ./replace-with-line-no.sh <edited-filename> <original-filename>
 # File format of edited file is as follows:
 # line-number<TAB>original-sentence<TAB>edited-sentence
+# *** Note: original file will be overwrite!
 #  e.g. ./replace-with-line-no2.sh ./4edit.txt ./ori.txt
 
 while read line
