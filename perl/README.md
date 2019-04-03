@@ -59,6 +59,9 @@
    
 19.[x-x-to-x-comma-x-with-brackets.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/x-x-to-x-comma-x-with-brackets.pl)  
    (alignment ဖိုင်ရဲ့ "0-0 1-1 2-2 3-3 4-4" ပုံစံကနေ "(0,0) (1,1) (2,2) (3,3) (4,4)" ကိုပြောင်းဖို့ ရေးခဲ့ပါတယ်)  
+   
+20.[select-en-th-my.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/select-en-th-my.pl)  
+   (<TAB> နဲခြားပြီး ရိုက်ထားတဲ့ စာကြောင်းတွေမှာ field အားလုံးက စုံနေရဲ့လားဆိုတာကို စစ်ဆေးဖို့အတွက် ရေးခဲ့တယ်)  
 
 
    
