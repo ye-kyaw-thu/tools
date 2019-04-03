@@ -1,10 +1,11 @@
 #!/usr/bin/env perl
 
-# for checking parallel or not
+# for checking parallel or not (i.e. no blank field)
 # Written by Ye Kyaw Thu, Visiting Professor,
 # Language and Semantic Technology Research Team (LST), NECTEC, Thailand
 #
-# How to run: 
+# How to run: perl ./select-en-th-my.pl <filename> c|w
+# Here, c for correct and w for wrong
 # e.g. for print out parallel sentences: perl ./select-en-th-my.pl ./id-en-th-my.tst.txt c
 # e.g. for print out error sentences: perl ./select-en-th-my.pl ./id-en-th-my.tst.txt w
 
