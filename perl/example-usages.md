@@ -885,3 +885,26 @@ $ perl -p -e "s/\, $//g" ./align.b
 (0,0), (1,1), (2,2), (3,2), (3,3), (4,3), (5,4), (6,5), (7,6), (8,7), (9,7)
 ```
 
+20.[select-en-th-my.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/select-en-th-my.pl)  
+
+```
+$ cat ./id-en-th-my.tst.txt 
+1	Hello!	สวัสดี ครับ/ค่ะ	မင်္ဂလာ ပါ ။
+2	How are you?	สบายดีไหม ครับ/ค่ะ	
+3		คุณชื่ออะไร ครับ/คะ	မင်း နာမည် ဘယ်လို ခေါ် လဲ ။
+4	Where are you from?	คุณมาจากไหน ครับ/คะ	မင်း က ဘယ် က လာ တာ လဲ ။
+5	What is your job?	คุณทำงานอะไร ครับ/คะ	မင်း ဘာ အလုပ် လုပ် တာ လဲ ။
+```
+
+```
+$ perl ./select-en-th-my.pl ./id-en-th-my.tst.txt c
+1	Hello!	สวัสดี ครับ/ค่ะ	မင်္ဂလာ ပါ ။
+4	Where are you from?	คุณมาจากไหน ครับ/คะ	မင်း က ဘယ် က လာ တာ လဲ ။
+5	What is your job?	คุณทำงานอะไร ครับ/คะ	မင်း ဘာ အလုပ် လုပ် တာ လဲ ။
+```
+
+```
+$ perl ./select-en-th-my.pl ./id-en-th-my.tst.txt w
+2	How are you?	สบายดีไหม ครับ/ค่ะ	
+3		คุณชื่ออะไร ครับ/คะ	မင်း နာမည် ဘယ်လို ခေါ် လဲ ။
+```
