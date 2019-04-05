@@ -82,5 +82,8 @@
 26. [find-blank-lines.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-blank-lines.sh)  
 (ဖိုလ်ဒါတစ်ခုအောက်မှာသိမ်းထားတဲ့ ဖိုင်တွေထဲမှာ ရှိနေတဲ့ blank line တွေကို ရှာဖို့အတွက် ရေးခဲ့ပါတယ်။ blank line တွေရဲ့ လိုင်းနံပါတ်ကိုပါ ရိုက်ထုတ်ပြပေးပါလိမ့်မယ်)  
 
+27. [dot2png-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2png-pdf.sh)  
+(Graph description language နဲ့ ရေးထားတဲ့ dot ဖိုင်ကနေ ပုံဖိုင်format တစ်ခုဖြစ်တဲ့ png အဖြစ်ပြောင်းပြီး၊ အဲဒီ ပုံဖိုင်ကို pdf ဖိုင်ပြောင်းပေးတဲ့ shell script ပါ။)  
+
 
 
