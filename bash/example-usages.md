@@ -1224,12 +1224,14 @@ NLP အလုပ်နဲ့ ဘယ်လိုပတ်သက်သလဲလိ
 
 ဆိုကြပါစို့ ကျွန်တော်တို့ [Moses SMT toolkit](http://www.statmt.org/moses/) ကို သုံးပြီးတော့ PBSMT (Phrase-based Machine Translation) approach နဲ့ ထိုင်း-မြန်မာ ဘာသာပြန်တဲ့ experiment ကိုလုပ်ကြည့်တော့ ရလဒ်တွေက ဆိုးဆိုးဝါးဝါးဖြစ်နေတယ်။ အဲဒါကြောင့် ".dot" ဖိုင် ကိုသုံပြီးတော့ debug ကြည့်ကြရအောင်။  
 
-Moses SMT toolkit  ပြီးသွားတဲ့ process တွေအတွက် graph.1.dot လိုမျိုး dot ဖိုင်ကို ထုတ်ပေးပါတယ်။ ကောင်းပြီ။ အောက်ပါအတိုင်း ကျွန်တော်တို့ရဲ့ ဖိုလ်ဒါအောက်မှာ အဲဒီ graph.1.dot ဖိုင်ရယ် ကျွန်တော်ကရေးထားတဲ့ dot2png-pdf.sh ဖိုင်ရယ် စုစုပေါင်း ဖိုင်နှစ်ဖိုင်ရှိနေတဲ့ အခြေအနေနဲ့ သွားကြရအောင်။  
+Moses SMT toolkit က ပြီးသွားတဲ့ process တွေအတွက် graph.1.dot လိုမျိုး dot ဖိုင်ကို ထုတ်ပေးပါတယ်။ ကောင်းပြီ။ အောက်ပါအတိုင်း ကျွန်တော်တို့ရဲ့ ဖိုလ်ဒါအောက်မှာ အဲဒီ graph.1.dot ဖိုင်ရယ် ကျွန်တော်ကရေးထားတဲ့ dot2png-pdf.sh ဖိုင်ရယ် စုစုပေါင်း ဖိုင်နှစ်ဖိုင်ရှိနေတဲ့ အခြေအနေနဲ့ သွားကြရအောင်။  
 
 ```
 $ ls
 dot2png-pdf.sh  graph.1.dot
 ```
+
+[graph.1.dot](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/dot2-png-pdf/graph.1.dot) ဖိုင်ထဲမှာက အောက်ပါလိုမျိုး process flowchart ပုံထုတ်ပေးနိုင်ဖို့ ပရိုဂရမ်ရေးထားတာ ဖြစ်ပါတယ်။ စိတ်ဝင်စားတဲ့သူတွေက လေ့လာနိုင်လို့ရအောင် GitHub မှာ တင်ပေးထားပါတယ်။ လင့်(ခ်)လည်း ချိတ်ပေးထားလို့ အပြာရောင်ဖြစ်နေတဲ့ graph.1.dot နေရာကို ကလစ်နှိပ်ပြီးကြည့်ရင် အဲဒီဖိုင်တစ်ဖိုင်လုံးကို မြင်ရပါလိမ့်မယ်။  
 
 ```
 $ cat graph.1.dot
@@ -1265,15 +1267,25 @@ digraph Experiment1 {
 ...
 ```
 
+[graph.1.dot](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/dot2-png-pdf/graph.1.dot) ဖိုင်ကို .png, .pdf ဖိုင် ပြောင်းချင်ရင် အောက်ပါအတိုင်း run ပါ။  
+
 ```
 $ ./dot2png-pdf.sh ./graph.1.dot
 ```
+
+run တာက အဆင်ပြေပြေနဲ့ ပြီးစီးသွားရင် အောက်ပါအတိုင်း graph.1.png ဖိုင်နဲ့ graph.1.pdf ဖိုင် နှစ်ဖိုင်ကို output အဖြစ်နဲ့ ထုတ်ပေးပါလိမ့်မယ်။  
 
 ```
 $ ls 
 dot2png-pdf.sh  graph.1.dot  graph.1.pdf  graph.1.png
 ```
+
+Linux မှာ png ဖိုင်နဲ့ pdf ဖိုင်ကို ဖွင့်ကြည့်ဖို့အတွက် ပရိုဂရမ်တွေအများကြီး ရှိပါတယ်။ ကိုယ့်စက်ထဲမှာ မရှိရင်တော့ အင်တာနက် ချိတ်ထားတဲ့ စက်မှာဆိုရင် sudo apt-get install \<package-name\> လိုမျိုး command နဲ့ ပေးပြီး (Ubuntu OS မှာဆိုရင်) install အလွယ်တကူ လုပ်လို့ ရပါတယ်။ ကျွန်တော်ကတော့ အောက်ပါအတိုင်း ဖွင့်ကြည့်ခဲ့ပါတယ်။  
+        
 ```
 $ display ./graph.1.png 
 $ evince ./graph.1.pdf
 ``
+
+တကယ့်လက်တွေ့ dot ဖိုင်ကနေ ပြောင်းပြီး output အဖြစ်ထွက်လာတဲ့ [graph.1.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/dot2-png-pdf/graph.1.png) ဖိုင်ကိုရော [graph.1.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/dot2-png-pdf/graph.1.pdf) ဖိုင်ကိုရော လေ့လာနိုင်ရန် GitHub ရဲ့ ဒီpath [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2-png-pdf](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2-png-pdf) မှာ upload လုပ်ပေးထားပါတယ်။  
+
