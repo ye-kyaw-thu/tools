@@ -7,5 +7,5 @@
 
 pngFilename=$(basename $1 .dot).png;
 
-dot -Tpng $1 > $pngFilename
+dot -Tpng $1 > $pngFilename;
 convert $pngFilename $(basename $pngFilename .png).pdf;
