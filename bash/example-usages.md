@@ -1289,4 +1289,6 @@ $ evince ./graph.1.pdf
 
 တကယ့်လက်တွေ့ dot ဖိုင်ကနေ ပြောင်းပြီး output အဖြစ်ထွက်လာတဲ့ [graph.1.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/dot2-png-pdf/graph.1.png) ဖိုင်ကိုရော [graph.1.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/dot2-png-pdf/graph.1.pdf) ဖိုင်ကိုရော လေ့လာနိုင်ရန် GitHub ရဲ့ ဒီpath [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2-png-pdf](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2-png-pdf) မှာ upload လုပ်ပေးထားပါတယ်။  
 
-Download လုပ်ယူပြီးတော့ ကြည့်တာမဟုတ်ပဲ Browser မှာ ဖွင့်ကြည့်ရင်တော့ pdf ဖိုင်က screen မှာ fit ဖြစ်နေလို့ ကြည့်ရတာပိုအဆင်ပြေမယ်လို့ ထင်ပါတယ်။ ဖွင့်ကြည့်ရင် 
+Download လုပ်ယူပြီးတော့ ကြည့်တာမဟုတ်ပဲ Browser မှာ ဖွင့်ကြည့်ရင်တော့ pdf ဖိုင်က screen မှာ fit ဖြစ်နေလို့ ကြည့်ရတာပိုအဆင်ပြေမယ်လို့ ထင်ပါတယ်။ ဖွင့်ကြည့်ရင် နောက်ပိတ်ဆုံး အဆင့်ဖြစ်တဲ့ evaluation လုပ်တဲ့အခါမှာ အကြောင်းတစ်ခုခုကြောင့် error တက်ခဲ့ကြောင်းကို အနီရောင်နဲ့ပြထားတာကို တွေ့ရပါလိမ့်မယ်။  
+
+
