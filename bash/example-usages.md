@@ -1214,3 +1214,56 @@ $ ./find-blank-lines.sh 't*.*'
 
 နားလည်မယ်လို့ထင်ပါတယ်။ အထက်မှာ မြင်နေရတာကတော့ train.my ဖိုင်နဲ့ train.rk ဖိုင်ထဲမှာရှိနေတဲ့ blank line တွေနဲ့ ပါတ်သက်တဲ့ လိုင်းနံပါတ်တွေပါ။ ဒီ shell script က မြန်မာစာနဲ့ ရခိုင်စာကို rule-based machine translation အတွက် ပြင်ဆင်တုန်းမှာ သုံးခဲ့တဲ့ script တစ်ခုဖြစ်ပါတယ်။  
 
+27. [dot2png-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2png-pdf.sh)  
+
+```
+$ ls
+dot2png.sh  graph.1.dot
+```
+
+```
+$ cat graph.1.dot
+digraph Experiment1 {
+  ranksep=0;
+  subgraph cluster_0 {
+    fillcolor="lightyellow";
+    shape=box;
+    style=filled;
+    fontsize=10;
+    label="LM:myth";
+    55 [label="binarize",shape=box,fontsize=10,height=0,style=filled,fillcolor="#8080ff"];
+    56 [label="quantize",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    57 [label="randomize",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    58 [label="train",shape=box,fontsize=10,height=0,style=filled,fillcolor="#8080ff"];
+    59 [label="strip",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    60 [label="post-split-factorize",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    61 [label="split",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    62 [label="lowercase",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    63 [label="factorize",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    64 [label="mock-parse",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+    65 [label="tokenize",shape=box,fontsize=10,height=0,style=filled,fillcolor="lightyellow"];
+  }
+  subgraph cluster_1 {
+    fillcolor="lightyellow";
+    shape=box;
+    style=filled;
+    fontsize=10;
+    label="EVALUATION:test";
+ 
+...
+...
+...
+```
+
+```
+$ ./dot2png-pdf.sh ./graph.1.dot
+```
+
+```
+$ ls 
+dot2png-pdf.sh  graph.1.dot  graph.1.pdf  graph.1.png
+```
+```
+$ display ./graph.1.png 
+$ evince ./graph.1.pdf
+``
