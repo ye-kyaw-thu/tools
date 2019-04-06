@@ -117,3 +117,38 @@ $ python ./char-startswith-element-wise.py ./my.txt ပ
 [1 0 0 0 0 0 0]
 ```
 
+## 5. [fuzzy-match.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fuzzy-match.py)  
+
+```
+စက် ရုပ်	se' jou'
+$ python ./fuzzy-match.py ./f4 "se' jou"
+[("se' jou'", 100), ("se' se'", 95), ('jou. jou.', 95), ('jou: jou:', 95), ("se' joun", 93)]
+
+စက် ရုပ်	se' jou'
+စက် စက်	se' se'
+ရို့ ရို့	jou. jou.
+စက် ရုံ	se' joun
+```
+
+```
+$ python ./fuzzy-match.py ./f4 "ra- khain"
+[('ra- khain', 100), ('a- khain', 94), ('a- kha.', 90), ("a- kha'", 90), ('a- kha', 90)]
+
+ရ ခိုင်	ra- khain
+အ ခိုင်	a- khain
+အ ခ	a- kha.
+အ ခတ်	a- kha'
+အ ခါ	a- kha
+```
+
+```
+$ python ./fuzzy-match.py ./f3 "စာလု"
+[('စ လုံး', 100), ('စ လုံး', 100), ('စာ စီ', 95), ('စာ စီ', 95), ('စာ လုံး', 95)]
+
+$ python ./fuzzy-match.py ./f3 "ခ လုပ်"
+[('ခါး ချပ်', 95), ('ခို လှုံ', 95), ('ခိုး ချ', 95), ('ခိုး ပြေး', 95), ('ခု ခံ', 95)]
+
+$ python ./fuzzy-match.py ./f3 "ခိုး"
+[('က ချ လာ', 90), ('က ချင်', 90), ('က ချေ သည်', 90), ('က စော့ ခါး', 90), ('က တိုး ခွာ', 90)]
+```
+
