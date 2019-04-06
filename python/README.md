@@ -13,3 +13,7 @@
 
 4. [char-startswith-element-wise.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char-startswith-element-wise.py)
 (numpy array ထဲမှာရှိတဲ့ စာလုံးတွေ (i.e. element) ထဲမှာ ပေးလိုက်တဲ့ စာလုံးနဲ့စတဲ့ word တွေရှိသလား ဆိုတာကို ရှာဖို့အတွက် ရေးခဲ့တယ်)  
+
+5. [fuzzy-match.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fuzzy-match.py)  
+(myG2P အဘိဓာန်ထဲက phoneme တွေကို Fuzzy matching နဲ့ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်)  
+
