@@ -119,11 +119,17 @@ $ python ./char-startswith-element-wise.py ./my.txt ပ
 
 ## 5. [fuzzy-match.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fuzzy-match.py)  
 
+[myG2P](https://github.com/ye-kyaw-thu/myG2P) ထဲမှာရှိတဲ့ phoneme တွေကို fuzzy matching နဲ့ ဆွဲထုတ်ကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ python script ပါ။  
+
+f4 ဆိုတဲ့ ဖိုင်က myG2P ထဲက ကော်လံနံပါတ် ၄ ကိုပဲ (phoneme အပိုင်းတွေကိုပဲ) cut command နဲ့ ဖြတ်ထုတ်ထားတဲ့ ဖိုင်ပါ။ အဲဒီဖိုင်ကို phoneme dictionary အနေနဲ့ သုံးခဲ့ပါတယ်။ အောက်ပါ ဥပမာက စက်ရုပ်ရဲ့ phoneme ဖြစ်တဲ့ "se' jou'" ကို fuzzy matching လုပ်ကြည့်ပြီး ရလာတဲ့ top 5 ပါ။  
+
 ```
-စက် ရုပ်	se' jou'
 $ python ./fuzzy-match.py ./f4 "se' jou"
 [("se' jou'", 100), ("se' se'", 95), ('jou. jou.', 95), ('jou: jou:', 95), ("se' joun", 93)]
+```
 
+ရလာတဲ့ output တွေကို မြန်မာစာလုံးနဲ့ပါ တိုက်ကြည့်ရင်တော့ အောက်ပါအတိုင်း ဖြစ်ပါတယ်။ phoneme ရဲ့ နောက်မှာ ကပ်ပါနေတဲ့ နံပါတ်တွေကတော့
+```
 စက် ရုပ်	se' jou'
 စက် စက်	se' se'
 ရို့ ရို့	jou. jou.
@@ -152,3 +158,4 @@ $ python ./fuzzy-match.py ./f3 "ခိုး"
 [('က ချ လာ', 90), ('က ချင်', 90), ('က ချေ သည်', 90), ('က စော့ ခါး', 90), ('က တိုး ခွာ', 90)]
 ```
 
+https://github.com/seatgeek/fuzzywuzzy/blob/master/test_fuzzywuzzy.py
