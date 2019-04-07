@@ -169,5 +169,21 @@ $ python ./fuzzy-match.py ./f3 "ခိုး"
 [('က ချ လာ', 90), ('က ချင်', 90), ('က ချေ သည်', 90), ('က စော့ ခါး', 90), ('က တိုး ခွာ', 90)]
 ```
 
-မြန်မာစာအတွက် fuzzy matching လုပ်ဖို့ အတွက်ဆိုရင်တော့ လက်ရှိ library မှာ force_ascii=force_ascii ဆိုတဲ့အပိုင်းတွေကို force_ascii=False ဆိုပြီး ပြင်သုံးရမယ်လို့ ထင်ပါတယ်။ 
+မြန်မာစာအတွက် fuzzy matching လုပ်ဖို့ အတွက်ဆိုရင်တော့ လက်ရှိ library မှာ force_ascii=force_ascii ဆိုတဲ့အပိုင်းတွေကို force_ascii=False ဆိုပြီး ပြင်သုံးရမယ်လို့ ထင်ပါတယ်။ ကျွန်တော်လေ့လာမိသလောက် test run ပရိုဂရမ်မှာ အင်္ဂလိပ်စာမဟုတ်တဲ့ တခြားဘာသာစကားတွေအတွက်တော့ unicode တန်ဖိုးတွေအဖြစ်ပြောင်းလိုက်ပြီးတော့ run ပြထားတာကို အောက်ပါအတိုင်း တွေ့ရပါတယ်။  
+
+```
+        # Cyrillic.
+        s1 = "\u043f\u0441\u0438\u0445\u043e\u043b\u043e\u0433"
+        s2 = "\u043f\u0441\u0438\u0445\u043e\u0442\u0435\u0440\u0430\u043f\u0435\u0432\u0442"
+        score = fuzz.WRatio(s1, s2, force_ascii=False)
+        self.assertNotEqual(0, score)
+
+        # Chinese.
+        s1 = "\u6211\u4e86\u89e3\u6570\u5b66"
+        s2 = "\u6211\u5b66\u6570\u5b66"
+        score = fuzz.WRatio(s1, s2, force_ascii=False)
+        self.assertNotEqual(0, score)
+```
+
+
 
