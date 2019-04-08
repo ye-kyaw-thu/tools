@@ -85,5 +85,6 @@
 27. [dot2png-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2png-pdf.sh)  
 (Graph description language နဲ့ ရေးထားတဲ့ dot ဖိုင်ကနေ ပုံဖိုင်format တစ်ခုဖြစ်တဲ့ png အဖြစ်ပြောင်းပြီး၊ အဲဒီ ပုံဖိုင်ကို pdf ဖိုင်ပြောင်းပေးတဲ့ shell script ပါ။)  
 
-
+28. [add-start-end.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-start-end.sh)  
+(ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတစ်ကြောင်းချင်းစီကို စာကြောင်းအစ အမှတ်အသား "\<s\>" နဲ့ စာကြောင်းအဆုံး အမှတ်အသား "\<\\s\>" တွေကိုထည့်ဖို့အတွက် ရေးခဲ့တယ်)  
 
