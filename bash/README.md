@@ -90,3 +90,4 @@
 
 29. [get-words-with-position.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/get-words-with-position.sh)  
 (စာကြောင်း ထဲက စာလုံးတွေကို ကိုယ်လိုချင်တဲ့ အပိုင်းအလိုက် ဖြတ်ထုတ်ယူနိုင်ဖို့ ရေးခဲ့တယ်။ စာကြောင်းရဲ့ ဘယ်နေရာကစပြီး ဘယ်နှစ်လုံးမြောက်အထိ ဆိုတာကို command line argument နဲ့ ပေးပြီး ဆွဲထုတ်ယူနိုင်ပါတယ်)  
+
