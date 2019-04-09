@@ -1403,3 +1403,34 @@ lar@lar-air:~/tool/bash/4github/set-usage$ ./get-words-with-position.sh ./my-tex
 
 
 ```
+
+## 30. [count-string-length.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-string-length.sh)  
+
+ဖိုင်ထဲမှာ ရှိတဲ့စာကြောင်းတွေ တစ်ကြောင်းချင်းစီရဲ့ no. of character အရေအတွက်ကို သိချင်လို့ ရေးခဲ့တဲ့ bash shell script ပါ။  
+ဥပမာ အနေနဲ့ [my-text2.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-text2.txt)ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို ရေကြည့်ကြရအောင်။ [my-text2.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-text2.txt) ဖိုင်ထဲမှာတော့ အောက်ပါအတိုင်း မြန်မာစာကြောင်း စုစုကြောင်း ၈ကြောင်းရှိပါတယ်။  
+
+```
+$ cat ./my-text2.txt
+ကခဂဃင
+စဆ
+ဇဈည
+ကျန်းဂန်သာလို့ မာပါစ
+$၁၀၀၀
+ပညာရေးအသက်အာမခံဟာ ကလေးတွေရဲ့ ပညာရေးအတွက် အထောက်အပံ့ဖြစ်စေမယ့်အာမခံအမျိုးအစားဖြစ်
+တက္ကသိုလ်
+ဒီနှစ် သင်္ကြန် မကျပါ။
+```
+
+count-string-length.sh ပရိုဂရမ်ကို သုံးပြီး စာကြောင်းထဲမှာ ရှိတဲ့ စာလုံး (character) တစ်လုံးချင်းစီကို ရေတွက်ကြည့်မယ်ဆိုရင်တော့ ရေတွက်ချင်တဲ့ ဖိုင်နာမည်ကို argument အနေနဲ့ ပေးပေးယုံပါပဲ။ ဒီနေရာမှာ "တက္ကသိုလ်" နဲ့ "သင်္ကြန်" တိုလို ပါဌ်ဆင့် စာလုံးတွေဆိုရင်တော့ ဆင့်ဖို့အတွက် သုံးထားတဲ့ unicode character (U1039) ကိုလည်းထည့်ရေတွက်မှာ ဖြစ်ပါတယ်။  
+
+```
+$ ./count-string-length.sh ./my-text2.txt
+5
+2
+3
+20
+5
+80
+9
+22
+```
