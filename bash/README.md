@@ -94,3 +94,5 @@
 30. [count-string-length.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-string-length.sh)  
 (ဖိုင်ထဲမှာရှိနေတဲ့ စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ စာလုံးအရေအတွက်ကို ရေတွက်ဖို့အတွက် ရေးခဲ့တယ်)  
 
+31. [strip-substring.sh]()  
+
