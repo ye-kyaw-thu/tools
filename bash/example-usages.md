@@ -1446,7 +1446,8 @@ options: front-shortest|fs, back-shortest|bs, front-longest|fl and back-longest|
 ```
 
 run တဲ့ပုံစံအပြည့်အစုံကတော့ ./strip-substring \[fs|bs|fl|bl\] "string" "sub_string" ဆိုတဲ့ ပုံစံပါ။  
-အောက်ပါ ဥပမာက "ကျားဆိုမှကျား" ဆိုတဲ့ စာကြောင်းကနေ "\*ကျား" (ရှေ့မှာ ရှိချင်တဲ့ စာလုံးရှိပြီး ကျားဆိုတဲ့ စကားလုံးနဲ့ ဆုံးတဲ့) ဆိုတဲ့ Regular Expression နဲ့ ရှာခိုင်းရင် မြင်ရမယ့် output ကို ပြသထားတာဖြစ်ပါတယ်။  
+
+အောက်ပါ ဥပမာက "ကျားဆိုမှကျား" ဆိုတဲ့ စာကြောင်းကနေ "fs" ဆိုတဲ့ option နဲ့ "\*ကျား" (ရှေ့မှာ ရှိချင်တဲ့ စာလုံးရှိပြီး ကျားဆိုတဲ့ စကားလုံးနဲ့ ဆုံးတဲ့) ဆိုတဲ့ Regular Expression နဲ့ ရှာခိုင်းရင် မြင်ရမယ့် output ကို ပြသထားတာဖြစ်ပါတယ်။  
 
 ```
 $ ./strip-substring.sh fs "ကျားဆိုမှကျား" "*ကျား"
@@ -1455,12 +1456,15 @@ stripping from front (shortest match)
 ဆိုမှကျား
 ```
 
+bs option အဖြစ်ပြောင်းပြီး ရှာကြည့်ရင်တော့ အောက်ပါအတိုင်း ရလဒ်ကို ထုတ်ပေးပါလိမ့်မယ်။  
 
 ```
 $ ./strip-substring.sh bs "ကျားဆိုမှကျား" "*ကျား"
 stripping from back (shortest match)
 ကျားဆိုမှ
 ```
+
+fl, bl နဲ့ ရှာကြည့်ရင်တော့ စာကြောင်းတစ်ကြောင်းလုံးကို strip လုပ်သွားတာကို မြင်ကြရပါလိမ့်မယ်။  
 
 ```
 $ ./strip-substring.sh fl "ကျားဆိုမှကျား" "*ကျား"
@@ -1469,3 +1473,4 @@ stripping from front (longest match)
 $ ./strip-substring.sh bl "ကျားဆိုမှကျား" "*ကျား"
 stripping from back (longest match)
 ```
+
