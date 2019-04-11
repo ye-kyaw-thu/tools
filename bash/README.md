@@ -94,5 +94,6 @@
 30. [count-string-length.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-string-length.sh)  
 (ဖိုင်ထဲမှာရှိနေတဲ့ စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ စာလုံးအရေအတွက်ကို ရေတွက်ဖို့အတွက် ရေးခဲ့တယ်)  
 
-31. [strip-substring.sh]()  
+31. [strip-substring.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/strip-substring.sh)  
+(စာကြောင်း (string) ထဲကနေ လိုချင်တဲ့ စာတစ်ပိုင်းတစ်စ (substring) ကို ရှေ့က၊ နောက်ကနေ ပိုင်းဖြတ်ဖို့အတွက် ရေးခဲ့တယ်)  
 
