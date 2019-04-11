@@ -1434,3 +1434,38 @@ $ ./count-string-length.sh ./my-text2.txt
 9
 22
 ```
+
+## [strip-substring.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/strip-substring.sh)  
+
+string ထဲကနေ substring (စာကြောင်းရဲ့ အစိတ်အပိုင်းတစ်ခု) ကို ပိုင်းဖြတ်ယူဖို့အတွက် ရေးထားခဲ့တဲ့ bash ပရိုဂရမ်ဖြစ်ပါတယ်။  
+ခွင့်ပြုထားတဲ့ option က စုစုပေါင်း လေးမျိုးရှိပါတယ်။ အရှည်ရေးမယ်ဆိုရင် front-shortest (စာကြောင်းရဲ့ ရှေ့ဆုံးကနေပြီးတော့ shortest matching)၊ back-shortest (စာကြောင်းရဲ့ နောက်ဆုံးကနေ shortest-matching)၊ front-longest (စာကြောင်းရဲ့ ရှေ့ဆုံးကနေ longest-matching)၊ back-longest (စာကြောင်းရဲ့ နောက်ဆုံးနေရာကနေ longest-matching) ဆိုပြီး option တွေကိုပေးလို့ရပါတယ်။ fs, bs, fl, bl ဆိုပြီးတော့လည်း အတိုရိုက်ပြီး ကိုယ် strip လုပ်ချင်တဲ့ ပုံစံကို သတ်မှတ်ပေးလို့ ရပါတယ်။ run တဲ့အခါမှာ ဘာ option မှာ မပေးရင် help screen ပုံစံမျိုးအနေနဲ့ ခွင့်ပြုထားတဲ့ option တွေကို ပြပေးပါလိမ့်မယ်။  
+
+```
+$ ./strip-substring.sh
+options: front-shortest|fs, back-shortest|bs, front-longest|fl and back-longest|bl
+```
+
+run တဲ့ပုံစံအပြည့်အစုံကတော့ ./strip-substring \[fs|bs|fl|bl\] "string" "sub_string" ဆိုတဲ့ ပုံစံပါ။  
+အောက်ပါ ဥပမာက "ကျားဆိုမှကျား" ဆိုတဲ့ စာကြောင်းကနေ "\*ကျား" (ရှေ့မှာ ရှိချင်တဲ့ စာလုံးရှိပြီး ကျားဆိုတဲ့ စကားလုံးနဲ့ ဆုံးတဲ့) ဆိုတဲ့ Regular Expression နဲ့ ရှာခိုင်းရင် မြင်ရမယ့် output ကို ပြသထားတာဖြစ်ပါတယ်။  
+
+```
+$ ./strip-substring.sh fs "ကျားဆိုမှကျား" "*ကျား"
+strip_option:fs, string:ကျားဆိုမှကျား, sub_string:*ကျား
+stripping from front (shortest match)
+ဆိုမှကျား
+```
+
+
+```
+$ ./strip-substring.sh bs "ကျားဆိုမှကျား" "*ကျား"
+stripping from back (shortest match)
+ကျားဆိုမှ
+```
+
+```
+$ ./strip-substring.sh fl "ကျားဆိုမှကျား" "*ကျား"
+stripping from front (longest match)
+
+$ ./strip-substring.sh bl "ကျားဆိုမှကျား" "*ကျား"
+stripping from back (longest match)
+```
