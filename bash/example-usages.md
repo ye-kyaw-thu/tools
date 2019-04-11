@@ -1435,7 +1435,7 @@ $ ./count-string-length.sh ./my-text2.txt
 22
 ```
 
-## [strip-substring.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/strip-substring.sh)  
+## 31. [strip-substring.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/strip-substring.sh)  
 
 string ထဲကနေ substring (စာကြောင်းရဲ့ အစိတ်အပိုင်းတစ်ခု) ကို ပိုင်းဖြတ်ယူဖို့အတွက် ရေးထားခဲ့တဲ့ bash ပရိုဂရမ်ဖြစ်ပါတယ်။  
 ခွင့်ပြုထားတဲ့ option က စုစုပေါင်း လေးမျိုးရှိပါတယ်။ အရှည်ရေးမယ်ဆိုရင် front-shortest (စာကြောင်းရဲ့ ရှေ့ဆုံးကနေပြီးတော့ shortest matching)၊ back-shortest (စာကြောင်းရဲ့ နောက်ဆုံးကနေ shortest-matching)၊ front-longest (စာကြောင်းရဲ့ ရှေ့ဆုံးကနေ longest-matching)၊ back-longest (စာကြောင်းရဲ့ နောက်ဆုံးနေရာကနေ longest-matching) ဆိုပြီး option တွေကိုပေးလို့ရပါတယ်။ fs, bs, fl, bl ဆိုပြီးတော့လည်း အတိုရိုက်ပြီး ကိုယ် strip လုပ်ချင်တဲ့ ပုံစံကို သတ်မှတ်ပေးလို့ ရပါတယ်။ run တဲ့အခါမှာ ဘာ option မှာ မပေးရင် help screen ပုံစံမျိုးအနေနဲ့ ခွင့်ပြုထားတဲ့ option တွေကို ပြပေးပါလိမ့်မယ်။  
