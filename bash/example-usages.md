@@ -1474,3 +1474,4 @@ $ ./strip-substring.sh bl "ကျားဆိုမှကျား" "*ကျာ�
 stripping from back (longest match)
 ```
 
+## [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh)  
