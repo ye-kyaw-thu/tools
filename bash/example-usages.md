@@ -1474,4 +1474,48 @@ $ ./strip-substring.sh bl "ကျားဆိုမှကျား" "*ကျာ�
 stripping from back (longest match)
 ```
 
-## [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh)  
+## 32. [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh)  
+
+ဒီ shell script က speaker တစ်ယောက်ချင်းစီရဲ့ အသံဖိုင်တွေ (i.e. .wav) ကို ဖိုလ်ဒါတွေမှာ ခွဲပြီး သိမ်းထားတာက စုစုပေါင်း ဘယ်နှစ်နာရီ၊ ဘယ်နှစ်မိနစ်၊ ဘယ်နှစ်စက္ကန့်လောက် ရှိသလဲ ဆိုတာကို ရှာဖွေဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။  
+
+သုံးပုံသုံးနည်းကတော့ wave ဖိုင်တွေ သိမ်းထားတဲ့ ဖိုလ်ဒါတွေရဲ့ root folder မှာ ဒီ chk_total_duration.sh ကို ထားပြီး run ယုံပါပဲ။ တခြား ပရိုဂရမ် parameter လည်း ပေးဖို့ မလိုအပ်ပါဘူး။  
+
+လေ့လာတဲ့သူတွေအတွက် နားလည်ရလွယ်အောင် coding ကို မြန်မာလို comment ရေးပေးပြီး အကျဉ်းရှင်းပြပါမယ်။  
+
+
+```
+
+# . က လက်ရှိ ဖိုလ်ဒါ
+# -name "*.wav" က .wav extension နဲ့ ဆုံးတဲ့ ဖိုင်နာမည်တွေကို ရှာပေးပါ
+# > wavefiles.txt ရှာတွေ့တဲ့ .wav ဖိုင်နာမည်နဲ့တကွ folder path တွေကို wavefiles.txt ဆိုတဲ့ ဖိုင်မှာ သိမ်းခိုင်းထားတာပါ။
+find . -name "*.wav" > wavefiles.txt
+
+# အထက်မှာ သိမ်းခဲ့တဲ့ wavefiles.txt ထဲက ဖိုင်နာမည် တစ်ကြောင်းချင်းစီကို cat command နဲ့ ရိုက်ထုတ်တယ်  
+# ပြီးတော့ bash ရဲ့ while နဲ့ looping ပတ်ပြီးတော့ read ဖတ်ယူပြီး filename ဆိုတဲ့ variable မှာ သိမ်းပါတယ်။  
+# အဲဒီ ရလာတဲ့ ဖိုင်နာမည်တွေကို "soxi" command ကို pass လုပ်ပြီးတော့ duration ကို စက္ကန့်နဲ့ ရိုက်ပြခိုင်းပါတယ်။  
+# -D option က စက္ကန့်နဲ့ ရိုက်ပြပါလို့ လုပ်ခိုင်းထားတာ ဖြစ်ပါတယ်။  
+cat ./wavefiles.txt | while read -r filename
+#head ./wavefiles.txt | while read -r filename # for checking quickly ...
+do
+   soxi -D $filename
+
+done > secondsfile #soxi command ကနေ တွက်ပြီး ရလာတဲ့ wave ဖိုင် တစ်ခုချင်းစီရဲ့ duration seconds တွေကို secondsfile ဆိုတဲ့ နာမည်နဲ့ သိမ်းခိုင်းထားတာပါ
+
+# စက္ကန့်ကနေ သူနဲ့ ညီမျှတဲ့ နာရီ၊ မိနစ်၊ စက္ကန်အဖြစ် လူက ဖတ်ရတာ အဆင်ပြေတဲ့ format ကို ပြောင်းတာဖြစ်ပါတယ်။  
+sec2hr_min_sec() {
+ hr=$(bc <<< "${1}/3600")
+ min=$(bc <<< "(${1}%3600)/60")
+ sec=$(bc <<< "${1}%60")
+ printf "%02d:%02d:%05.2f\n" $hr $min $sec
+}
+
+# ကိုယ်ရဲ့ စက်ထဲမဟာ jq ဆိုတာ ရှိတယ်ဆိုရင် jq ကိုသုံးပြီးတော့ ပေါင်းခိုင်းလို့လည်း ရပါတယ်။  
+#total_seconds=$(cat ./secondsfile | jq -s 'add' )
+
+# ကျွန်တော်ကတော့ paste ကို သုံးတာက ဘယ်Linux စက်မှာ မဆို အဆင်ပြေမှာမို့ paste command ကိုလည်း သုံးပြထားပါတယ်။  
+# -d option မှာ delimiter ကို "+" ပေးပြီး ဖိုင်တစ်ဖိုင်ချင်းစီရဲ့ duration time တွေကို "+" နဲ့ ချိတ်ဆက်ပါတယ်။
+# ပြီးတော့မှာ အဲဒီ ချိတ်ဆက်ထားတဲ့ စာကြောင်း အရှည်ကြီးကို bc command ကို pass လုပ်ပြီးတော့ plus လုပ်ခိုင်းတာပါ။  
+total_seconds=$(cat ./secondsfile | paste -s -d+ - | bc)
+echo $(sec2hr_min_sec $total_seconds)
+
+```
