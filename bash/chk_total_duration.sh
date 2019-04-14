@@ -18,7 +18,7 @@ do
 
 done > secondsfile # duration seconds of each wavefile will be save
 
-
+# function for converting seconds to hour, minute and second
 sec2hr_min_sec() {
  hr=$(bc <<< "${1}/3600")
  min=$(bc <<< "(${1}%3600)/60")
