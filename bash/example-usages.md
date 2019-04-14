@@ -1485,13 +1485,13 @@ stripping from back (longest match)
 
 ```
 
-# . က လက်ရှိ ဖိုလ်ဒါ
+# "." က လက်ရှိ ဖိုလ်ဒါ
 # -name "*.wav" က .wav extension နဲ့ ဆုံးတဲ့ ဖိုင်နာမည်တွေကို ရှာပေးပါ
-# > wavefiles.txt ရှာတွေ့တဲ့ .wav ဖိုင်နာမည်နဲ့တကွ folder path တွေကို wavefiles.txt ဆိုတဲ့ ဖိုင်မှာ သိမ်းခိုင်းထားတာပါ။
+# "> wavefiles.txt" က ရှာတွေ့တဲ့ .wav ဖိုင်နာမည်နဲ့တကွ folder path တွေကို wavefiles.txt ဆိုတဲ့ ဖိုင်နာမည်နဲ့ သိမ်းခိုင်းထားတာပါ။
 find . -name "*.wav" > wavefiles.txt
 
 # အထက်မှာ သိမ်းခဲ့တဲ့ wavefiles.txt ထဲက ဖိုင်နာမည် တစ်ကြောင်းချင်းစီကို cat command နဲ့ ရိုက်ထုတ်တယ်  
-# ပြီးတော့ bash ရဲ့ while နဲ့ looping ပတ်ပြီးတော့ read ဖတ်ယူပြီး filename ဆိုတဲ့ variable မှာ သိမ်းပါတယ်။  
+# ပြီးတော့ bash ရဲ့ read ဖတ်ယူပြီး filename ဆိုတဲ့ variable မှာ သိမ်းပါတယ်။ အဲဒီအလုပ်ကို while နဲ့ looping ပတ်ပြီး ဖိုင်နာမည်အားလုံးကို ဖတ်ခိုင်းထားပါတယ်။  
 # အဲဒီ ရလာတဲ့ ဖိုင်နာမည်တွေကို "soxi" command ကို pass လုပ်ပြီးတော့ duration ကို စက္ကန့်နဲ့ ရိုက်ပြခိုင်းပါတယ်။  
 # -D option က စက္ကန့်နဲ့ ရိုက်ပြပါလို့ လုပ်ခိုင်းထားတာ ဖြစ်ပါတယ်။  
 cat ./wavefiles.txt | while read -r filename
