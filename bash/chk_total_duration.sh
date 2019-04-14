@@ -29,6 +29,6 @@ sec2hr_min_sec() {
 # if you have jq command, you can also use it as follows
 #total_seconds=$(cat ./secondsfile | jq -s 'add' )
 
-# 
+# read secondsfile line by line and connect with "+" sign and pass to "bc" command
 total_seconds=$(cat ./secondsfile | paste -s -d+ - | bc)
 echo $(sec2hr_min_sec $total_seconds)
