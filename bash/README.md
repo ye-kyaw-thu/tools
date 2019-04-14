@@ -97,3 +97,7 @@
 31. [strip-substring.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/strip-substring.sh)  
 (စာကြောင်း (string) ထဲကနေ လိုချင်တဲ့ စာတစ်ပိုင်းတစ်စ (substring) ကို ရှေ့က၊ နောက်ကနေ ပိုင်းဖြတ်ဖို့အတွက် ရေးခဲ့တယ်)  
 
+32. [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh)  
+(speaker တစ်ယောက်ချင်းစီနဲ့ အသံသွင်းထားတဲ့ wavefile တွေက ဘယ်နှစ်နာရီစာ ရှိသလဲ ဆိုတာကို သိချင်လို့ ရေးခဲ့တဲ့ shell script ပါ) 
+
+
