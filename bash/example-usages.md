@@ -1563,3 +1563,77 @@ $ ./chk-total-duration.sh
 
 filename စာရင်းတစ်ခုထဲမှာ ရှိနေတဲ့ ဖိုင်နာမည်တွေထဲက SentenceID ကိုဖြတ်ယူပြီး၊ အဲဒီ SentenceID တွေက filename စာရင်းထဲမှာ ဘယ်နှစ်ခါပါဝင်နေသလဲ ဆိုတာကို print လုပ်ဖို့အတွက် ရေးခဲ့ပါတယ်။ လက်တွေ့သုံးခဲ့တာကတော့ ဖိုင်စာရင်းထဲမှာ ရှိနေတာတွေက recording လုပ်ထားတဲ့ waveဖိုင် နာမည်တွေဖြစ်ပြီးတော့၊ အဲဒီ ဖိုင်နာမည်အထဲမှာ ပါဝင်နေတဲ့ စာကြောင်းနံပါတ် (Sentence ID) တစ်ခုချင်းစီအတွက် အသံဘယ်နှစ်ခါသွင်းထားသလဲ ဆိုတာကို သိအောင် ရှာဖွေတဲ့နေရာဖြစ်ပါတယ်။  
 
+ဥပမာအနေနဲ့ wave file ၁၀၀ဖိုင်ရဲ့ နာမည်ကို list လုပ်ပြီးတော့ သိမ်းထားတဲ့ [100-wave-filenames.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/100-wave-filenames.txt) ကိုတင်ပေးထားပါတယ်။  
+
+ဖိုင်နာမည်မှာ ပါနေတာကတော့  
+ * Univ1 က အဖွဲ့အစည်းရဲ့နာမည်  
+ * HninHnin, AungAung တို့ကတော့ speaker တွေရဲ့ နာမည်တွေပါ
+ * F/M က ယောကျ်ားလေးလား မိန်းကလေးလား ဆိုတဲ့ information ပါ
+ * burmese/shan စတာတွေကတော့ speaker ရဲ့ native language (မိခင်ဘာသာစကား) နဲ့ ပတ်သက်ပြီး သိမ်းထားတာပါ
+ * file extension ရဲ့ ရှေ့မှာပါဝင်နေတဲ့ နံပါတ်တွေကတော့ sentenceID ဖြစ်ပါတယ်  
+ 
+```
+$ head ./100-wave-filenames.txt
+/Univ1-HninHnin-F-25-burmese-2637.wav
+/Univ1-AungAung-M-20-burmese-1025.wav
+/Univ1-Sabai-F-29-burmese-1403.wav
+/Univ1-HtetHtet-M-20-burmese-1025.wav
+/Univ1-HlaHla-F-20-burmese-1403.wav
+/Univ1-NyeinNyein-M-29-Shan-2324.wav
+/Univ2-MyintMyint-F-22-burmese-25.wav
+/Univ1-SoeMoe-M-23-burmese-1039.wav
+/Univ2-Sandar-F-26-burmese-25.wav
+/Univ1-Kaung-M-22-burmese-1005.wav
+```
+
+run လိုက်ရင် အောက်ပါအတိုင်း ပထမ ကော်လံက sentenceID ဖြစ်ပြီးတော့၊ ဒုတိယ ကော်လံက ပါဝင်နေတဲ့ အကြိမ်အရေအတွက်ဖြစ်ပါတယ်။  
+
+```
+$ ./print-sentenceID-count.sh ./100-wave-filenames.txt 
+4 2
+12 3
+25 3
+92 1
+127 3
+154 3
+172 1
+210 1
+223 3
+506 1
+693 1
+1005 1
+1006 1
+1022 2
+1025 2
+1039 1
+1175 3
+1222 1
+1403 2
+1430 1
+1739 4
+1792 2
+1949 2
+1975 11
+2018 5
+2049 1
+2107 3
+2324 1
+2408 3
+2530 1
+2540 1
+2637 2
+2664 1
+2975 4
+4039 1
+5063 1
+5404 3
+5975 2
+6338 3
+6776 4
+6889 1
+9527 1
+9587 1
+10001 1
+10031 1
+12671 4
+```
