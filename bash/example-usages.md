@@ -1519,3 +1519,35 @@ total_seconds=$(cat ./secondsfile | paste -s -d+ - | bc)
 echo $(sec2hr_min_sec $total_seconds)
 
 ```
+
+အထက်ပါ script ကို run လိုက်ရင် ထွက်လာမယ့် output ဖိုင်တွေကို အိုက်ဒီယာရအောင် ပြရရင် အောက်ပါအတိုင်းဖြစ်ပါလိမ့်မယ်။  
+
+```
+$ head wavefiles.txt 
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2000.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2001.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2002.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2003.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2004.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2005.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2006.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2007.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2008.wav
+./S32/S32(2000_2100)/CompanyA-MgMg-M-25-burmese-2009.wav
+```
+
+secondsfile ထဲမှာတော့ အောက်ပါ အတိုင်း wave ဖိုင် တစ်ဖိုင်ချင်းစီရဲ့ duration စက္ကန့်တွေကို သိမ်းထားပါလိမ့်မယ်။  
+
+```
+$ head secondsfile 
+7.192381
+4.940045
+5.706304
+6.588662
+9.653696
+7.053061
+6.635102
+5.381224
+7.354921
+5.009705
+```
