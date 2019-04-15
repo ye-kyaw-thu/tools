@@ -101,5 +101,5 @@
 (speaker တစ်ယောက်ချင်းစီနဲ့ အသံသွင်းထားတဲ့ wavefile တွေက ဘယ်နှစ်နာရီစာ ရှိသလဲ ဆိုတာကို သိချင်လို့ ရေးခဲ့တဲ့ shell script ပါ)  
 
 33. [print-sentenceID-count.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-sentenceID-count.sh)  
-(filename စာရင်းတစ်ခုကနေ ဖိုင်နာမည်ထဲက SentenceID ကိုဖြတ်ယူပြီး၊ အဲဒီ SentenceID တွေက filename စာရင်းထဲမှာ ဘယ်နှစ်ခါပါဝင်နေသလဲ ဆိုတာကို print လုပ်ရန်)  
+(filename စာရင်းတစ်ခုထဲမှာ ရှိနေတဲ့ ဖိုင်နာမည်တွေထဲက SentenceID ကိုဖြတ်ယူပြီး၊ အဲဒီ SentenceID တွေက filename စာရင်းထဲမှာ ဘယ်နှစ်ခါပါဝင်နေသလဲ ဆိုတာကို print လုပ်ဖို့အတွက် ရေးခဲ့ပါတယ်)  
 
