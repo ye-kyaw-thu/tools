@@ -1674,4 +1674,15 @@ File Size      : 37.4k
 Bit Rate       : 256k
 Sample Encoding: 16-bit Signed Integer PCM
 ```
-လေ့လာချင်သူတွေအတွက် လေ့လာနိုင်အောင် အထက်ပါ wave ဖိုင်နှစ်ဖိုင်ကိုလည်း GitHub ရဲ့ [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files) ဖိုလ်ဒါအောက်မှာ တင်ပေးထားပါတယ်။   
+လေ့လာချင်သူတွေအတွက် လေ့လာနိုင်အောင် အထက်ပါ wave ဖိုင်နှစ်ဖိုင်ကိုလည်း GitHub ရဲ့ [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files) ဖိုလ်ဒါအောက်မှာ တင်ပေးထားပါတယ်။  
+
+## 35. [mk-spectrogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-spectrogram.sh)  
+
+```
+$ sox ./2018-11-13-20\:43\:15.16khz.mono.wav -n spectrogram -r -o ./2018-11-13-20\:43\:15.16khz.mono.png 
+$ display ./2018-11-13-20\:43\:15.16khz.mono.png 
+```
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/wave-files/2018-11-13-20:43:15.16khz.mono.png" alt="Class-1" width="800x" height="513x" />
+</p>
