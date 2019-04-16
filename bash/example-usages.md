@@ -1640,8 +1640,7 @@ $ ./print-sentenceID-count.sh ./100-wave-filenames.txt
 
 ## 34. [mk-16KHz-mono.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-16KHz-mono.sh)  
 
-Recording လုပ်ထားတဲ့ wave ဖိုင်တွေကို sampling rate က 16KHz နဲ့ mono channel အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့ပါတယ်။  
-run လိုက်ရင် လက်ရှိ ရောက်နေတဲ့ path အောက်မှာ ရှိနေတဲ့ ဖိုလ်ဒါတွေအထဲက wave ဖိုင်တွေအားလုံးကို 16KHz နဲ့ mono channel အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။  
+Recording လုပ်ထားတဲ့ wave ဖိုင်တွေကို sampling rate က 16KHz နဲ့ mono channel အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့ပါတယ်။ run လိုက်ရင် လက်ရှိ ရောက်နေတဲ့ path အောက်မှာ ရှိနေတဲ့ ဖိုလ်ဒါတွေအထဲက wave ဖိုင်တွေအားလုံးကို 16KHz နဲ့ mono channel အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။  
 
 Wave ဖိုင်တွေရဲ့ information (သို့) metadata ကို ကြည့်ချင်ရင်တော့ soxi command ကိုသုံးပါတယ်။ soxi ရဲ့အရှည်ကတော့ SoXI - Sound eXchange Information, display sound file metadata ဖြစ်ပါတယ်။ အသံဖိုင်တွေနဲ့ ပတ်သက်ပြီး အသုံးဝင်တဲ့ command တစ်ခုဖြစ်လို့ မှတ်သားထားသင့်ပါတယ်။  
 
