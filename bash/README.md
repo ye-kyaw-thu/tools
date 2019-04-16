@@ -106,4 +106,6 @@
 34. [mk-16KHz-mono.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-16KHz-mono.sh)  
 (recording လုပ်ထားတဲ့ wave file တွေကို mono channel နဲ့ 16KHz ပြောင်းဖို့အတွက် ရေးခဲ့တယ်)  
 
+35. [mk-spectrogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-spectrogram.sh)  
+(Wave ဖိုင်တွေကို spectrogram ပုံတွေအဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
 
