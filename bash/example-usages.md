@@ -1674,4 +1674,4 @@ File Size      : 37.4k
 Bit Rate       : 256k
 Sample Encoding: 16-bit Signed Integer PCM
 ```
-လေ့လာချင်သူတွေအတွက် လေ့လာနိုင်အောင် အထက်ပါ wave ဖိုင်နှစ်ဖိုင်ကိုလည်း GitHub မှာ တင်ပေးထားပါတယ်။  
+လေ့လာချင်သူတွေအတွက် လေ့လာနိုင်အောင် အထက်ပါ wave ဖိုင်နှစ်ဖိုင်ကိုလည်း GitHub ရဲ့ [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files) ဖိုလ်ဒါအောက်မှာ တင်ပေးထားပါတယ်။   
