@@ -1637,3 +1637,38 @@ $ ./print-sentenceID-count.sh ./100-wave-filenames.txt
 10031 1
 12671 4
 ```
+
+## 34. [mk-16KHz-mono.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-16KHz-mono.sh)  
+
+Recording လုပ်ထားတဲ့ wave ဖိုင်တွေကို sampling rate က 16KHz နဲ့ mono channel အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့ပါတယ်။  
+run လိုက်ရင် လက်ရှိ ရောက်နေတဲ့ path အောက်မှာ ရှိနေတဲ့ ဖိုလ်ဒါတွေအထဲက wave ဖိုင်တွေအားလုံးကို 16KHz နဲ့ mono channel အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။  
+
+Wave ဖိုင်တွေရဲ့ information (သို့) metadata ကို ကြည့်ချင်ရင်တော့ soxi command ကိုသုံးပါတယ်။ soxi ရဲ့အရှည်ကတော့ SoXI - Sound eXchange Information, display sound file metadata ဖြစ်ပါတယ်။ အသံဖိုင်တွေနဲ့ ပတ်သက်ပြီး အသုံးဝင်တဲ့ command တစ်ခုဖြစ်လို့ မှတ်သားထားသင့်ပါတယ်။  
+
+အသံသွင်းပြီး ရလာတဲ့ original ဖိုင်နမူနာအနေနဲ့ /2018-11-13-20\:43\:15.wav ဖိုင်ကို ကြည့်ကြရအောင်။ ဖိုင်နာမည်က recording လုပ်ခဲ့တဲ့ ရက်စွဲ၊ အချိန်နဲ့ သိမ်းထားတာမို့ command line မှာ ရိုက်တဲ့အခါမှာ ":" သင်္ကေတတွေကို "\" နဲ့ escape လုပ်ပြီးပြပေးပါလိမ့်မယ်။ အဲဒီဖိုင်ရဲ့ metadata ကို soxi command နဲ့ ကြည့်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။ ဒီနေရာမှာ Sample Rate က 44.1 KHz ဖြစ်ပြီးတော့ Channels ကလည်း 2 (stereo sound) ဖြစ်နေတာကို တွေ့ကြရပါလိမ့်မယ်။  
+
+```
+$ soxi ./2018-11-13-20\:43\:15.wav 
+
+Input File     : './2018-11-13-20:43:15.wav'
+Channels       : 2
+Sample Rate    : 44100
+Precision      : 16-bit
+Duration       : 00:00:01.17 = 51465 samples = 87.5255 CDDA sectors
+File Size      : 206k
+Bit Rate       : 1.41M
+Sample Encoding: 16-bit Signed Integer PCM
+```
+
+```
+$ soxi ./2018-11-13-20\:43\:15.16khz.mono.wav 
+
+Input File     : './2018-11-13-20:43:15.16khz.mono.wav'
+Channels       : 1
+Sample Rate    : 16000
+Precision      : 16-bit
+Duration       : 00:00:01.17 = 18672 samples ~ 87.525 CDDA sectors
+File Size      : 37.4k
+Bit Rate       : 256k
+Sample Encoding: 16-bit Signed Integer PCM
+```
