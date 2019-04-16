@@ -1678,10 +1678,19 @@ Sample Encoding: 16-bit Signed Integer PCM
 
 ## 35. [mk-spectrogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-spectrogram.sh)  
 
+Wave ဖိုင်တွေကို spectrogram ပုံတွေအဖြစ်ပြောင်းဖို့အတွက် သုံးခဲ့တဲ့ shell script ပါ။ လက်ရှိရောက်နေတဲ့ path အောက်မှာရှိတဲ့ ဖိုလ်ဒါတစ်ခုချင်းစီရဲ့အထဲကို ဝင်ရောက်ပြီး၊ အဲဒီဖိုလ်ဒါတွေအောက်မှာ ရှိနေတဲ့ Wave ဖိုင်တွေကို spectrogram ပုံ (.png) အဖြစ်ပြောင်း၊ ပြီးတော့ jpg အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။ png ဖိုင်တွေကိုတော့ ဖျက်သွားမှာဖြစ်ပါတယ်။ ကျွန်တော်က အဲဒီအချိန်မှာ သုံးတဲ့ transfer learning သုတေသနအတွက်က jpg ဖိုင်ကို သုံးမှာမို့၊ png ကနေ နောက်ထပ် jpg ဖိုင်အဖြစ် ပြောင်းထားတာ ဖြစ်ပါတယ်။ တကယ်လို့ ခင်ဗျားတို့က jpg ဖိုင် မလိုချင်ဘူး၊ png ဖိုင်ကိုပဲ လိုချင်တယ်ဆိုရင် ``` mogrify -strip -quality 80% -sampling-factor 4:4:4 -format jpg ./*.png; ``` လိုင်းကို comment ပိတ်လိုက်ပါ။ ကိုယ်လိုအပ်သလို ပြင်သုံးပါ။ အသုံးဝင်ပါလိမ့်မယ်။  
+
+ရေးထားတဲ့ script ကို အလွယ်ရှင်းပြရရင် sox command နဲ့ ရှိနေတဲ့ wave ဖိုင်ကို spectrogram ပုံအဖြစ်ပြောင်းချင်ရင် အောက်ပါအတိုင်း command ပေးလို့ရပါတယ်။  
+ထွက်လာတဲ့ png ဖိုင် ကိုတော့ ပုံတွေကိုဖွင့်ကြည့်တဲ့ command တစ်ခုဖြစ်တဲ့ display command နဲ့ ကြည့်လို့ရပါတယ်။  
+
 ```
 $ sox ./2018-11-13-20\:43\:15.16khz.mono.wav -n spectrogram -r -o ./2018-11-13-20\:43\:15.16khz.mono.png 
 $ display ./2018-11-13-20\:43\:15.16khz.mono.png 
 ```
+
+လေ့လာချင်သူများအတွက် လေ့လာနိုင်အောင် wave ဖိုင်ကနေပြောင်းထားတဲ့ spectrogram ဖိုင်ကိုလည်း GitHub ရဲ့ [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files) ဖိုလ်ဒါအောက်မှာ သိမ်းပေးထားပါတယ်။  
+
+[https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/wave-files/2018-11-13-20:43:15.16khz.mono.wav](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/wave-files/2018-11-13-20:43:15.16khz.mono.wav) ဖိုင်က မြန်မာသရအသံ "အာ" ကို recording လုပ်ထားတာ ဖြစ်ပြီးတော့ output အဖြစ်ထွက်လာမယ့် spectrogram ကတော့ အောက်ပါအတိုင်း ဖြစ်ပါလိမ့်မယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/wave-files/2018-11-13-20:43:15.16khz.mono.png" alt="Class-1" width="800x" height="513x" />
