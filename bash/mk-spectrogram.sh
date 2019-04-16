@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Changing wave files into spectrograms
+# written by Ye Kyaw Thu, Waseda University, Tokyo, Japan
+
 for fd in */ ; do
 
    cd ./$fd;
