@@ -1676,7 +1676,7 @@ Sample Encoding: 16-bit Signed Integer PCM
 လေ့လာချင်သူတွေအတွက် လေ့လာနိုင်အောင် အထက်ပါ wave ဖိုင်နှစ်ဖိုင်ကိုလည်း GitHub ရဲ့ [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files) ဖိုလ်ဒါအောက်မှာ တင်ပေးထားပါတယ်။  
 
 [mk-16KHz-mono.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-16KHz-mono.sh) သုံးတဲ့အခါမှာ ကိုယ်run မယ့် folder 
-structure ပေါ်ကို မူတည်ပြီး လိုက်လျောညီထွေဖြစ်အောင် လိုအပ်သလို ပြောင်းလဲရမှာ ဖြစ်ပါတယ်။ တကယ်လို့ 16KHz အဖြစ်ပြောင်းချင်တဲ့ wave ဖိုင်တွေက subfolder နှစ်ခုအောက်မှာ ရှိနေတယ်ဆိုရင် folder ဖတ်တဲ့ for loop ကို အောက်ပါအတိုင်း နှစ်ဆင့် လုပ်ပေးရမှာ ဖြစ်ပါတယ်။   
+structure ပေါ်ကို မူတည်ပြီး လိုက်လျောညီထွေဖြစ်အောင် လိုအပ်သလို ပြောင်းလဲရမှာ ဖြစ်ပါတယ်။ တကယ်လို့ 16KHz အဖြစ်ပြောင်းချင်တဲ့ wave ဖိုင်တွေက subfolder နှစ်ခုအောက်မှာ ရှိနေတယ်ဆိုရင် folder ဖတ်တဲ့ for loop ကို အောက်ပါအတိုင်း နှစ်ဆင့် လုပ်ပေးရမှာ ဖြစ်ပါတယ်။ ဖိုင် extension နဲ့ ပတ်သက်ပြီးလဲ ပြင်ချင် ရင် ``` for file in *.wav; do``` ဒီလိုင်းကို ဝင်ပြင်ပါ။  
 
 ```bash
 $ cat mk-16KHz-mono.sh 
@@ -1698,6 +1698,14 @@ for fd in */ ; do
       done
          cd ..;
 done
+```
+
+နောက်တချက် သတိပေးချင်တာက mk-16KHz-mono.sh ပရိုဂရမ်ကို ထပ်ခါထပ်ခါ run ရင် ရှိနေတဲ့ wave ဖိုင်တွေကို 16KHz အဖြစ် ပြောင်းပေးမှာမို့ မလိုအပ်တဲ့ ဖိုင်တွေကတိုးတိုးလာမှာ ဖြစ်ပါတယ်။ အောက်ပါ ဥပမာလိုမျိုး  
+
+```
+a.wav
+a.16khz.mono.wav
+a..16khz.mono.16khz.mono.wav
 ```
 
 ## 35. [mk-spectrogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-spectrogram.sh)  
