@@ -63,6 +63,8 @@
 20.[select-en-th-my.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/select-en-th-my.pl)  
    (<TAB> နဲခြားပြီး ရိုက်ထားတဲ့ စာကြောင်းတွေမှာ field အားလုံးက စုံနေရဲ့လားဆိုတာကို စစ်ဆေးဖို့အတွက် ရေးခဲ့တယ်)  
 
+21.[mk-speakers-json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-speakers-json.pl)  
+   (folder-path/filename ကနေ လိုချင်တဲ့ information ကို ဆွဲထုတ်ပြီး၊ json ဖိုင်ပုံစံအနေနဲ့ print လုပ်ပေးဖို့အတွက် ရေးခဲ့ပါတယ်)  
 
    
    
