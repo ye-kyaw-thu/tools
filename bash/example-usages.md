@@ -1678,7 +1678,7 @@ Sample Encoding: 16-bit Signed Integer PCM
 [mk-16KHz-mono.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-16KHz-mono.sh) သုံးတဲ့အခါမှာ ကိုယ်run မယ့် folder 
 structure ပေါ်ကို မူတည်ပြီး လိုက်လျောညီထွေဖြစ်အောင် လိုအပ်သလို ပြောင်းလဲရမှာ ဖြစ်ပါတယ်။ တကယ်လို့ 16KHz အဖြစ်ပြောင်းချင်တဲ့ wave ဖိုင်တွေက subfolder နှစ်ခုအောက်မှာ ရှိနေတယ်ဆိုရင် folder ဖတ်တဲ့ for loop ကို အောက်ပါအတိုင်း နှစ်ဆင့် လုပ်ပေးရမှာ ဖြစ်ပါတယ်။   
 
-```
+```bash
 $ cat mk-16KHz-mono.sh 
 #!/bin/bash
 
