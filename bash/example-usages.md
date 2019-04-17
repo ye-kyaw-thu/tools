@@ -1696,7 +1696,7 @@ for fd in */ ; do
          done 
             cd ..;
       done
-         cd..;
+         cd ..;
 done
 ```
 
