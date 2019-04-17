@@ -1675,6 +1675,31 @@ Sample Encoding: 16-bit Signed Integer PCM
 ```
 လေ့လာချင်သူတွေအတွက် လေ့လာနိုင်အောင် အထက်ပါ wave ဖိုင်နှစ်ဖိုင်ကိုလည်း GitHub ရဲ့ [https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files/](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/wave-files) ဖိုလ်ဒါအောက်မှာ တင်ပေးထားပါတယ်။  
 
+[mk-16KHz-mono.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-16KHz-mono.sh) သုံးတဲ့အခါမှာ ကိုယ်run မယ့် folder 
+structure ပေါ်ကို မူတည်ပြီး လိုက်လျောညီထွေဖြစ်အောင် လိုအပ်သလို ပြောင်းလဲရမှာ ဖြစ်ပါတယ်။ တကယ်လို့ 16KHz အဖြစ်ပြောင်းချင်တဲ့ wave ဖိုင်တွေက subfolder နှစ်ခုအောက်မှာ ရှိနေတယ်ဆိုရင် folder ဖတ်တဲ့ for loop ကို အောက်ပါအတိုင်း နှစ်ဆင့် လုပ်ပေးရမှာ ဖြစ်ပါတယ်။   
+
+```
+$ cat mk-16KHz-mono.sh 
+#!/bin/bash
+
+# Changing wave files into 16khz and mono
+# written by Ye Kyaw Thu, Waseda University, Tokyo, Japan
+
+for fd in */ ; do
+   cd ./$fd;
+      for fd in */ ; do
+         cd ./$fd;
+         for file in *.wav; do
+            filename_only="${file%.*}"
+            sox ./$file -b 16 -r 16k -c 1 ./$filename_only.16khz.mono.wav;
+            soxi ./$filename_only.16khz.mono.wav;
+         done 
+            cd ..;
+      done
+         cd..;
+done
+```
+
 ## 35. [mk-spectrogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-spectrogram.sh)  
 
 Wave ဖိုင်တွေကို spectrogram ပုံတွေအဖြစ်ပြောင်းဖို့အတွက် သုံးခဲ့တဲ့ shell script ပါ။ လက်ရှိရောက်နေတဲ့ path အောက်မှာရှိတဲ့ ဖိုလ်ဒါတစ်ခုချင်းစီရဲ့အထဲကို ဝင်ရောက်ပြီး၊ အဲဒီဖိုလ်ဒါတွေအောက်မှာ ရှိနေတဲ့ Wave ဖိုင်တွေကို spectrogram ပုံ (.png) အဖြစ်ပြောင်း၊ ပြီးတော့ jpg အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။ png ဖိုင်တွေကိုတော့ ဖျက်သွားမှာဖြစ်ပါတယ်။ ကျွန်တော်က အဲဒီအချိန်မှာ သုံးတဲ့ transfer learning သုတေသနအတွက်က jpg ဖိုင်ကို သုံးမှာမို့၊ png ကနေ နောက်ထပ် jpg ဖိုင်အဖြစ် ပြောင်းထားတာ ဖြစ်ပါတယ်။ တကယ်လို့ ခင်ဗျားတို့က jpg ဖိုင် မလိုချင်ဘူး၊ png ဖိုင်ကိုပဲ လိုချင်တယ်ဆိုရင် ``` mogrify -strip -quality 80% -sampling-factor 4:4:4 -format jpg ./*.png; ``` လိုင်းကို comment ပိတ်လိုက်ပါ။ ကိုယ်လိုအပ်သလို ပြင်သုံးပါ။ အသုံးဝင်ပါလိမ့်မယ်။  
