@@ -4,7 +4,7 @@
 # Written by Ye Kyaw Thu, Visiting Professor,
 # Language and Semantic Technology Research Team (LST), NECTEC, Thailand
 #
-# How to run: perl ./mk-speaker-json.pl <input-file>
+# How to run: perl ./mk-speakers-json.pl <input-file>
 # e.g. perl ./mk-speakers-json.pl ./100-wave-filenames2.txt > speakers-info.json
  
 use strict;
