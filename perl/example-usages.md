@@ -914,3 +914,136 @@ $ perl ./select-en-th-my.pl ./id-en-th-my.tst.txt w
 2	How are you?	สบายดีไหม ครับ/ค่ะ	
 3		คุณชื่ออะไร ครับ/คะ	မင်း နာမည် ဘယ်လို ခေါ် လဲ ။
 ```
+
+## 21.[mk-speakers-json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-speakers-json.pl)  
+
+ဆိုကြပါစို့ ASR model ဆောက်ဖို့အတွက် speaker အမျိုးမျိုးနဲ့ အသံသွင်းထားတဲ့ wave ဖိုင်တွေ ကျွန်တော့်မှာ ရှိပါတယ်။ အဲဒီ wave ဖိုင်တွေကို speaker တစ်ယောက်ချင်းစီရဲ့ speaker-ID အနေနဲ့ပေးထားတဲ့ဖိုလ်ဒါအောက်ထဲမှာ သိမ်းထားပါတယ်။ အရင်ဆုံး အဲဒီ folder-path နဲ့ တကွ ရှိသမျှ wave ဖိုင်တွေကို find command နဲ့ပဲဖြစ်ဖြစ် list လုပ်ပြီး ဖိုင်တစ်ဖိုင်ထဲမှာ သိမ်းထားပါတယ်။ အဲဒီ ဖိုင်က [100-wave-filenames2.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/json-output/100-wave-filenames2.txt) လိုမျိုးဖိုင်ပါ။ ဖိုင်ထဲမဟာ ပါနေတဲ့ ဖိုင်နာမည်တွေရဲ့ ပုံစံက အောက်ပါအတိုင်းပါ။  
+
+```
+/Spk1/Univ1-HninHnin-F-25-burmese-2637.wav
+/Spk2/Univ1-AungAung-M-20-burmese-1025.wav
+/Spk3/Univ1-Sabai-F-29-burmese-1403.wav
+/Spk4/Univ1-HtetHtet-M-20-burmese-1025.wav
+/Spk5/Univ1-HlaHla-F-20-burmese-1403.wav
+```
+
+နားလည်မယ်လို့ထင်ပါတယ်။ ဖိုင်နာမည်မှာလည်း အဖွဲ့အစည်းနာမည်၊ speaker ရဲ့ နာမည်၊ female/male အချက်အလက်၊ မိခင်ဘာသာစကား နဲ့ ဖတ်ထားတဲ့ စာကြောင်းနံပါတ် တွေပါနေပါတယ်။ [mk-speakers-json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-speakers-json.pl) က အဲဒီဖိုလ်ဒါနာမည်၊ ဖိုင်နာမည်ကနေ အချက်အလက်တွေကို ဆွဲထုတ်ယူပြီးတော့ json ဖိုင် format အနေနဲ့ စကရင်မှာ ရိုက်ထုတ်ပေးမှာ ဖြစ်ပါတယ်။  
+
+run မယ်ဆိုရင် perl ./mk-speakers-json.pl <filename> ဆိုတဲ့ ပုံစံနဲ့ အောက်ပါအတိုင်း run ပါတယ်။  
+
+```
+perl ./mk-speakers-json.pl ./100-wave-filenames2.txt 
+```
+
+ထွက်လာတဲ့ json ဖိုင်ကိုလည်း လေ့လာလို့ ရအောင် တင်ပေးထားပါတယ်။ [speakers-info.json](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/json-output/speakers-info.json) ဖိုင်ကို ဖွင့်ကြည့်ပါ။  
+
+ပုံမှန်အားဖြင့်က json ဖိုင်တွေက အချက်အလက်တွေကို serial အလိုက် တောက်လျှောက်သိမ်းသွားတာမို့၊ လူတွေအနေနဲ့က ဖတ်ရခက်ပါတယ်။ အဲဒီအတွက် Linux terminal မှာတော့ "jq" command လို json ဖိုင်တွေကို handle ကောင်းကောင်းလုပ်ပေးတဲ့ command line ပရိုဂရမ်တွေကို သုံးပြီး ကိုယ်လိုချင်တဲ့ အချက်အလက်တွေကို ဆွဲထုတ်ကြည့်လို့ ရပါတယ်။  
+
+ဥပမာ json ဖိုင်ကို လူ့မျက်လုံးနဲ့ ဖတ်ရလွယ်တဲ့ ပုံစံအနေနဲ့ printout လုပ်ပေးစေချင်ရင် အောက်ပါအတိုင်း command ပေးကြည့်နိုင်ပါတယ်။ record တွေက အများကြီးမို့လို့ အိုက်ဒီယာရရှိအောင် record တချို့ကိုပဲ print လုပ်ပြထားပါတယ်။   
+
+```bash
+$ jq '.' ./speakers-info.json
+{
+  "Spk40": {
+    "organization": "Univ2",
+    "name": "SarU",
+    "native_language": "burmese",
+    "gender": "F",
+    "age": "46",
+    "recorded_sentence": "1975,2408"
+  },
+  "Spk36": {
+    "organization": "Univ1",
+    "age": "23",
+    "native_language": "burmese",
+    "gender": "F",
+    "name": "TheThe",
+    "recorded_sentence": "1175"
+  },
+  "Spk43": {
+    "native_language": "Kayin",
+    "name": "SawGyi",
+    "gender": "M",
+    "age": "23",
+    "recorded_sentence": "12671,1949",
+    "organization": "Univ1"
+  },
+  "Spk15": {
+    "organization": "Univ1",
+    "age": "22",
+    "name": "HtweHtwe",
+    "native_language": "burmese",
+    "gender": "M",
+    "recorded_sentence": "4,12,12"
+  },
+  "Spk45": {
+    "organization": "Univ1",
+    "native_language": "burmese",
+    "gender": "M",
+    "name": "MyoAung",
+    "age": "28",
+    "recorded_sentence": "10001"
+  },
+  "Spk17": {
+    "organization": "Univ1",
+    "recorded_sentence": "223,9527",
+    "age": "33",
+    "name": "SuSu",
+    "native_language": "burmese",
+    "gender": "F"
+  },
+  ...
+  ...
+  ...
+```
+
+ဥပမာ json ဖိုင်ကနေ နာမည်၊ ကျား/မ၊ အသံသွင်းထားပြီးဖြစ်တဲ့ စာကြောင်းနံပါတ် တွေကိုပဲ ဆွဲထုတ်ကြည့်ချင်တယ်ဆိုရင် အောက်ပါအတိုင်း command ပေးပြီး ကြည့်ရှုနိုင်ပါတယ်။  
+
+```
+$ jq '.[]|[.name, .gender, .recorded_sentence]|join(",")' ./speakers-info.json 
+"SarU,F,1975,2408"
+"TheThe,F,1175"
+"SawGyi,M,12671,1949"
+"HtweHtwe,M,4,12,12"
+"MyoAung,M,10001"
+"SuSu,F,223,9527"
+"MyatMon,F,1975"
+"NayKyar,F,2018"
+"MyintMyint,F,25,6776,6889,1739"
+"KyawMoe,M,1975"
+"OoOo,F,1975,1975,5404,2018,5404"
+"HlaHla,F,1403"
+"YeKyaw,M,2975,6338,5404"
+"Thiha,M,2975,2408"
+"KoKo,M,1975,12671"
+"MuMu,F,223"
+"DoeLone,M,2664,12671"
+"HtetHtet,M,1025,223,6776,1975,1022,693,6338,10031,1949"
+"PhyoPhyo,M,210,12,92"
+"ZweKaung,M,1222,1975"
+"Sandar,F,25,172,127,154"
+"SoeMoe,M,1039,154"
+"ZinWaine,M,6776"
+"Ei,F,2540"
+"WuLin,M,506"
+"Kaung,M,1005,1006"
+"SeinSein,F,4,2107,1175,2975,2530"
+"HninHnin,F,2637,2637"
+"MinMin,M,1739"
+"MoeMoe,F,6776,5975,1792,9587,1739,6338"
+"YinYinMyint,F,1022"
+"NyeinNyein,M,2324,2408,2107"
+"HtooHtoo,M,2018"
+"ChawChaw,F,4039"
+"NayOo,M,2975"
+"MyatMyat,F,127,5063,1975"
+"YiYi,F,25"
+"Sabai,F,1403,1430"
+"WinWin,F,1975,5975"
+"Shwe,F,1975,1792,12671"
+"ZayYar,M,1175"
+"MaGyi,F,154"
+"KhineKhine,F,127,2107,2018,1739,2049"
+"AungAung,M,1025"
+"GanDaMar,F,2018"
+```
