@@ -15,7 +15,7 @@
   (emoji သို့မဟုတ် emoticon တွေပါတဲ့ စာကြောင်းတွေကိုပဲ ရွေးရိုက်ထုတ်ပြခိုင်းတာမျိုး၊ emoji မပါတဲ့ စာကြောင်းတွေကိုပဲ ရွေးရိုက်ထုတ်ပြခိုင်းတာမျိုး၊  
     emoji စာလုံးတွေကိုပဲ ဖျက်ခိုင်းတာမျိုး လုပ်ဖို့)  
     
-5.[dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)
+5.[dq-multilines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/dq-multilines.pl)  
   (double quotation mark ကြားထဲမှာရှိပြီးတော့၊ enter တစ်ခုထက်မက ခေါက်ထားတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ရန်၊ စာကြောင်း တစ်ကြောင်းတည်းအဖြစ် ပြောင်းလဲရန် အတွက်)
    
 6.[mk-abstract-para.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-abstract-para.pl)  
