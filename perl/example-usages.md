@@ -1047,3 +1047,20 @@ $ jq '.[]|[.name, .gender, .recorded_sentence]|join(",")' ./speakers-info.json
 "AungAung,M,1025"
 "GanDaMar,F,2018"
 ```
+
+## 22. [string-distance.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/string-distance.pl)  
+
+string နှစ်ခု (မြန်မာလိုဆိုရင်တော့ စာကြောင်းနှစ်ကြောင်း) မှာ ရှိနေတဲ့ စာလုံး တစ်လုံးချင်းစီကို ဘယ်ကနေညာတိုက်စစ်သွားပြီး၊ မတူရင် တန်ဖိုးကို 1+ တိုးတိုးသွားပြီးတော့ ရလာတဲ့ တန်ဖိုးကို 100 နဲ့ မြှောက်ပြီး၊ string length နဲ့ စားရင် string နှစ်ခုက ဘယ်လောက်တူသလဲ ဆိုတာကို အကြမ်းမျဉ်းတော့ တိုင်းကြည့်လို့ရပါတယ်။ string similarity တိုင်းတာတဲ့ ကိစ္စကို ရှင်းပြဖို့နဲ့ perl script ရေးတဲ့ လေ့ကျင့်ခန်းအနေနဲ့ ကျောင်းသားတွေကို စာသင်တဲ့နေရာမှာ သုံးဖို့ ဥပမာအနေနဲ့ ရေးပြထားတာဖြစ်ပါတယ်။   
+
+```
+$ perl ./string-distance.pl "ကျောင်းသား" "ကျောင်းသူ"
+20
+
+$ perl ./string-distance.pl "Who are you?" "Who am I?"
+58.3333333333333
+
+$ perl ./string-distance.pl "ပါပါ ပြန်လာပြီ" "ပပ ပြန်လာပြီ"
+92.8571428571429
+
+```
+
