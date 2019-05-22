@@ -65,6 +65,9 @@
 
 21.[mk-speakers-json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-speakers-json.pl)  
    (folder-path/filename ကနေ လိုချင်တဲ့ information ကို ဆွဲထုတ်ပြီး၊ json ဖိုင်ပုံစံအနေနဲ့ print လုပ်ပေးဖို့အတွက် ရေးခဲ့ပါတယ်)  
+   
+22.[string-distance.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/string-distance.pl)  
+   (string နှစ်ခုမှာ ရှိတဲ့ စာလုံးတစ်လုံးစီကို တိုက်စစ်ပြီး string similarity distance ကို အကြမ်းတွက်တဲ့ perl လေ့ကျင့်ခန်းပါ)  
 
    
    
