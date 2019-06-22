@@ -10,12 +10,10 @@
 
 for class in biking diving golf juggle jumping riding shooting spiking swing tennis walk_dog;
 do
-
    mkdir $class;
    for file in *$class*;
    do
       echo "moving $file into class $class ...";
       mv $file ./$class/;
-   done
-   
+   done   
 done
