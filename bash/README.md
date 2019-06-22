@@ -110,7 +110,7 @@
 (Wave ဖိုင်တွေကို spectrogram ပုံတွေအဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
 
 36. [group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-UCF11.sh)  
-(UCF YouTube Action Data Set ကို class အလိုက် အုပ်စုဖွဲ့ဖို့ သုံးခဲ့တယ်။ run တာက လွယ်လို့ example မှာ ရှင်းမပြတော့ဘူး။)  
+(UCF YouTube Action Data Set ကို class အလိုက် အုပ်စုဖွဲ့ဖို့ သုံးခဲ့တယ်။)  
 
 
 
