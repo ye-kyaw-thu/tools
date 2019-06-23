@@ -1746,5 +1746,55 @@ biking  Excluded Videos.txt  group-UCF11.sh  jumping  shooting  swing   walk_dog
 diving  golf                 juggle          riding   spiking   tennis
 ```
 
+## 37. [group-within-group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-within-group-UCF11.sh) 
+ဒီ ပရိုဂရမ်က အထက်က shell script no. 36 ပြီးတော့ run တဲ့ပရိုဂရမ်ပါ။   
+[UCF YouTube Action Data Set](https://www.crcv.ucf.edu/data/UCF_YouTube_Action.php) ကို download လုပ်ပြီး ဖြေချပြီးတော့ [group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-UCF11.sh) ကို run ပြီး action အုပ်စုလိုက်တူတဲ့ ဗီဒီယိုဖိုင်တွေကို category အလိုက်ခွဲပြီးတော့ စုလိုက်ပါတယ်။ အဲဒီ category အထဲမှာမှ ဗီဒီယိုတွေက အားလုံး ၂၅ ဗီဒီယိုစီပါပါတယ်။ ဒီ shell script no. 37 [group-within-group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-within-group-UCF11.sh) က အဲဒီ ဗီဒီယို ၂၅ ဖိုင်ကို ထပ်ပြီးတော့ ခွဲသိမ်းဖို့အတွက် ရေးခဲ့တာပါ။
 
+အဲဒါကြောင့် group-UCF11.sh ကို run ပြီးမှ group-within-group-UCF11.sh ကို run သွားတဲ့ပုံစံပါ။
+
+ဒီ shell script ပရိုဂရမ် နှစ်ပုဒ်က ကျွန်တော်ရဲ့ ဒေါက်တာတန်း ကျောင်းသူ ဆွေဇင်မိုး (UTYCC) ရဲ့ video level GradCam experiment လုပ်စဉ်မှာ pre-processing အလုပ်ဖြစ်တဲ့ ဗီဒီယိုတွေကို အုပ်စုဖွဲ့ဖို့ ရေးခဲ့တဲ့ ပရိုဂရမ်ဖြစ်ပါတယ်။ တကယ့် လက်တွေ့မှာ shell ပရိုဂရမ်ကို အသုံးချတဲ့ ပုံစံကို မြင်စေချင်လို့ GitHub မှာ တင်ပေးလိုက်ပါတယ်။   
+
+[group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-UCF11.sh) 
+
+```bash
+/UCF11/biking# ls
+v_biking_01_01.mpg   v_biking_06_01.mpg   v_biking_11_03.mpg   v_biking_17_02.mpg   v_biking_21_05.mpg
+v_biking_01_01.xgtf  v_biking_06_01.xgtf  v_biking_11_03.xgtf  v_biking_17_02.xgtf  v_biking_21_05.xgtf
+v_biking_01_02.mpg   v_biking_06_02.mpg   v_biking_11_04.mpg   v_biking_17_03.mpg   v_biking_21_06.mpg
+v_biking_01_02.xgtf  v_biking_06_02.xgtf  v_biking_11_04.xgtf  v_biking_17_03.xgtf  v_biking_21_06.xgtf
+v_biking_01_03.mpg   v_biking_06_03.mpg   v_biking_11_05.mpg   v_biking_17_04.mpg   v_biking_21_07.mpg
+v_biking_01_03.xgtf  v_biking_06_03.xgtf  v_biking_11_05.xgtf  v_biking_17_04.xgtf  v_biking_21_07.xgtf
+v_biking_01_04.mpg   v_biking_06_04.mpg   v_biking_11_06.mpg   v_biking_17_05.mpg   v_biking_21_08.mpg
+v_biking_01_04.xgtf  v_biking_06_04.xgtf  v_biking_11_06.xgtf  v_biking_17_05.xgtf  v_biking_21_08.xgtf
+v_biking_02_01.mpg   v_biking_06_05.mpg   v_biking_12_01.mpg   v_biking_17_06.mpg   v_biking_21_09.mpg
+v_biking_02_01.xgtf  v_biking_06_05.xgtf  v_biking_12_01.xgtf  v_biking_17_06.xgtf  v_biking_21_09.xgtf
+...
+...
+...
+v_biking_05_08.mpg   v_biking_11_01.mpg   v_biking_16_05.mpg   v_biking_21_03.mpg   v_biking_25_03.xgtf
+v_biking_05_08.xgtf  v_biking_11_01.xgtf  v_biking_16_05.xgtf  v_biking_21_03.xgtf  v_biking_25_04.mpg
+v_biking_05_09.mpg   v_biking_11_02.mpg   v_biking_17_01.mpg   v_biking_21_04.mpg   v_biking_25_04.xgtf
+v_biking_05_09.xgtf  v_biking_11_02.xgtf  v_biking_17_01.xgtf  v_biking_21_04.xgtf
+
+/data/UCF11/walk_dog# ls
+v_walk_dog_01_01.mpg   v_walk_dog_06_01.mpg   v_walk_dog_10_04.mpg   v_walk_dog_16_01.mpg   v_walk_dog_20_07.mpg
+v_walk_dog_01_01.xgtf  v_walk_dog_06_01.xgtf  v_walk_dog_10_04.xgtf  v_walk_dog_16_01.xgtf  v_walk_dog_20_07.xgtf
+v_walk_dog_01_02.mpg   v_walk_dog_06_02.mpg   v_walk_dog_10_05.mpg   v_walk_dog_16_02.mpg   v_walk_dog_21_01.mpg
+v_walk_dog_01_02.xgtf  v_walk_dog_06_02.xgtf  v_walk_dog_10_05.xgtf  v_walk_dog_16_02.xgtf  v_walk_dog_21_01.xgtf
+v_walk_dog_01_03.mpg   v_walk_dog_06_03.mpg   v_walk_dog_11_01.mpg   v_walk_dog_16_03.mpg   v_walk_dog_21_02.mpg
+v_walk_dog_01_03.xgtf  v_walk_dog_06_03.xgtf  v_walk_dog_11_01.xgtf  v_walk_dog_16_03.xgtf  v_walk_dog_21_02.xgtf
+...
+...
+...
+v_walk_dog_05_03.mpg   v_walk_dog_10_01.mpg   v_walk_dog_15_02.mpg   v_walk_dog_20_04.mpg   v_walk_dog_25_04.mpg
+v_walk_dog_05_03.xgtf  v_walk_dog_10_01.xgtf  v_walk_dog_15_02.xgtf  v_walk_dog_20_04.xgtf  v_walk_dog_25_04.xgtf
+v_walk_dog_05_04.mpg   v_walk_dog_10_02.mpg   v_walk_dog_15_03.mpg   v_walk_dog_20_05.mpg
+v_walk_dog_05_04.xgtf  v_walk_dog_10_02.xgtf  v_walk_dog_15_03.xgtf  v_walk_dog_20_05.xgtf
+v_walk_dog_05_05.mpg   v_walk_dog_10_03.mpg   v_walk_dog_15_04.mpg   v_walk_dog_20_06.mpg
+v_walk_dog_05_05.xgtf  v_walk_dog_10_03.xgtf  v_walk_dog_15_04.xgtf  v_walk_dog_20_06.xgtf
+```
+
+```bash
+
+```
 
