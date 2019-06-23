@@ -1800,8 +1800,36 @@ v_walk_dog_05_05.mpg   v_walk_dog_10_03.mpg   v_walk_dog_15_04.mpg   v_walk_dog_
 v_walk_dog_05_05.xgtf  v_walk_dog_10_03.xgtf  v_walk_dog_15_04.xgtf  v_walk_dog_20_06.xgtf
 ```
 
+တကယ်က UCF11 ဒေတာမှာက category တစ်ခုချင်းစီအတွက် ဗီဒီယိုဖိုင်က နှစ်ဆယ့်ငါးမျိုး ပါဝင်နေလို့ အဲဒါတွေကို ထပ်အုပ်စုဖွဲ့ဖို့အတွက် [group-within-group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-within-group-UCF11.sh) ကိုရေးခဲ့ပါတယ်။  
+
+
+[group-within-group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-within-group-UCF11.sh) ကို run ပြီးတဲ့အခါမှာတော့ အောက်ပါအတိုင်း ဗီဒီယိုဖိုင်တွေကို အုပ်စုဖွဲ့ပြီးသားဆိုတာကို တွေ့မြင်ရပါလိမ့်မယ်။  
 
 ```bash
-
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data# cd UCF11
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11# ls
+biking  diving  Excluded Videos.txt  golf  juggle  jumping  riding  shooting  spiking  swing  tennis  walk_dog
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11# cd biking/
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/biking# ls
+01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/biking# ls ./01/
+v_biking_01_01.mpg   v_biking_01_02.mpg   v_biking_01_03.mpg   v_biking_01_04.mpg
+v_biking_01_01.xgtf  v_biking_01_02.xgtf  v_biking_01_03.xgtf  v_biking_01_04.xgtf
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/biking# ls ./02/
+v_biking_02_01.mpg   v_biking_02_02.xgtf  v_biking_02_04.mpg   v_biking_02_05.xgtf  v_biking_02_07.mpg
+v_biking_02_01.xgtf  v_biking_02_03.mpg   v_biking_02_04.xgtf  v_biking_02_06.mpg   v_biking_02_07.xgtf
+v_biking_02_02.mpg   v_biking_02_03.xgtf  v_biking_02_05.mpg   v_biking_02_06.xgtf
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/biking# cd ..
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11# cd tennis
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/tennis# ls
+01  02  03  04  05  06  07  08  09  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/tennis# ls ./01
+v_tennis_01_01.mpg   v_tennis_01_02.xgtf  v_tennis_01_04.mpg   v_tennis_01_05.xgtf  v_tennis_01_07.mpg
+v_tennis_01_01.xgtf  v_tennis_01_03.mpg   v_tennis_01_04.xgtf  v_tennis_01_06.mpg   v_tennis_01_07.xgtf
+v_tennis_01_02.mpg   v_tennis_01_03.xgtf  v_tennis_01_05.mpg   v_tennis_01_06.xgtf
+root@2223cfe7eb4a:/home/yekyawthu/exp/vgradcam/data/UCF11/tennis# ls ./25
+v_tennis_25_01.mpg   v_tennis_25_02.xgtf  v_tennis_25_04.mpg   v_tennis_25_05.xgtf
+v_tennis_25_01.xgtf  v_tennis_25_03.mpg   v_tennis_25_04.xgtf  v_tennis_25_06.mpg
+v_tennis_25_02.mpg   v_tennis_25_03.xgtf  v_tennis_25_05.mpg   v_tennis_25_06.xgtf
 ```
 
