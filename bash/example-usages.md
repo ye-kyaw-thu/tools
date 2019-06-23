@@ -1754,7 +1754,9 @@ diving  golf                 juggle          riding   spiking   tennis
 
 ဒီ shell script ပရိုဂရမ် နှစ်ပုဒ်က ကျွန်တော်ရဲ့ ဒေါက်တာတန်း ကျောင်းသူ ဆွေဇင်မိုး (UTYCC) ရဲ့ video level GradCam experiment လုပ်စဉ်မှာ pre-processing အလုပ်ဖြစ်တဲ့ ဗီဒီယိုတွေကို အုပ်စုဖွဲ့ဖို့ ရေးခဲ့တဲ့ ပရိုဂရမ်ဖြစ်ပါတယ်။ တကယ့် လက်တွေ့မှာ shell ပရိုဂရမ်ကို အသုံးချတဲ့ ပုံစံကို မြင်စေချင်လို့ GitHub မှာ တင်ပေးလိုက်ပါတယ်။   
 
-[group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-UCF11.sh) 
+[group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-UCF11.sh) run ပြီးတဲ့အခါမှာ action category တစ်ခုချင်းစီအတွက် mpg ဖိုင်နဲ့ xgtf ဖိုင် (provide overlaid text transcription and annotation) တွေကို စုစည်းပေးထားတာကို တွေ့ရပါလိမ့်မယ်။  
+
+ဥပမာ biking ဖိုလ်ဒါထဲကို ဝင်ကြည့်မယ်ဆိုရင် အောက်ပါအတိုင်း  
 
 ```bash
 /UCF11/biking# ls
@@ -1775,7 +1777,11 @@ v_biking_05_08.mpg   v_biking_11_01.mpg   v_biking_16_05.mpg   v_biking_21_03.mp
 v_biking_05_08.xgtf  v_biking_11_01.xgtf  v_biking_16_05.xgtf  v_biking_21_03.xgtf  v_biking_25_04.mpg
 v_biking_05_09.mpg   v_biking_11_02.mpg   v_biking_17_01.mpg   v_biking_21_04.mpg   v_biking_25_04.xgtf
 v_biking_05_09.xgtf  v_biking_11_02.xgtf  v_biking_17_01.xgtf  v_biking_21_04.xgtf
+```
 
+walk_dog ဖိုလ်ဒါအထဲကို ဝင်ကြည့်မယ်ဆိုရင် အောက်ပါအတိုင်း အုပ်စုဖွဲ့ပေးထားတာကို မြင်တွေ့ရပါလိမ့်မယ်။  
+
+```bash
 /data/UCF11/walk_dog# ls
 v_walk_dog_01_01.mpg   v_walk_dog_06_01.mpg   v_walk_dog_10_04.mpg   v_walk_dog_16_01.mpg   v_walk_dog_20_07.mpg
 v_walk_dog_01_01.xgtf  v_walk_dog_06_01.xgtf  v_walk_dog_10_04.xgtf  v_walk_dog_16_01.xgtf  v_walk_dog_20_07.xgtf
@@ -1793,6 +1799,7 @@ v_walk_dog_05_04.xgtf  v_walk_dog_10_02.xgtf  v_walk_dog_15_03.xgtf  v_walk_dog_
 v_walk_dog_05_05.mpg   v_walk_dog_10_03.mpg   v_walk_dog_15_04.mpg   v_walk_dog_20_06.mpg
 v_walk_dog_05_05.xgtf  v_walk_dog_10_03.xgtf  v_walk_dog_15_04.xgtf  v_walk_dog_20_06.xgtf
 ```
+
 
 ```bash
 
