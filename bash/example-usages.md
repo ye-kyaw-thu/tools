@@ -1734,9 +1734,13 @@ $ display ./2018-11-13-20\:43\:15.16khz.mono.png
 ## 36. [group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-UCF11.sh)  
 [UCF YouTube Action Data Set](https://www.crcv.ucf.edu/data/UCF_YouTube_Action.php) ကို download လုပ်ပြီး ဖြေချလိုက်တဲ့အခါမှာ အားလုံးက ဖိုလ်ဒါ တစ်ခုတည်း အောက်မှာ ရှိနေလို့။ တခါတလေ action classification လုပ်ဖို့ အတွက် action categories အလိုက် movie ဖိုင်တွေ၊ သက်ဆိုင်ရာဖိုင်တွေကို ဖိုလ်ဒါ တစ်ခုချင်းစီ ခွဲသိမ်း ချင်တဲ့ အခါမျိုး ရှိပါတယ်။ group-UCF11.sh အတွက် အဲဒီအတွက် ရေးခဲ့တဲ့ shell script ပါ။  
 
+```bash
+./group-UCF11.sh ./UCF11/
+```
+
 run ပြီးသွားတဲ့အခါမှာ အောက်ပါအတိုင်း action category ၁၁ မျိုးအတွက် ဖိုလ်ဒါ ၁၁ ခုပေါ်လာပါလိမ့်မယ်။  
 
-```
+```bash
 $ ls
 biking  Excluded Videos.txt  group-UCF11.sh  jumping  shooting  swing   walk_dog
 diving  golf                 juggle          riding   spiking   tennis
