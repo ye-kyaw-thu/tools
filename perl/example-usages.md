@@ -1071,3 +1071,29 @@ $ perl ./string-distance.pl "ပါပါ ပြန်လာပြီ" "ပပ �
 
 ```
 
+## 23. [print-matched-char-seq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-matched-char-seq.pl)  
+   (RE နဲ့ ကိုယ်ရှာဖွေချင်တဲ့ character တွေကို string တစ်ခုစီမှာ တိုက်စစ်ပြီး၊ matched ဖြစ်တဲ့ character sequence ကို ရိုက်ထုတ်ကြည့်ဖို့အတွက် သုံးခဲ့တယ်) 
+   
+မြန်မာ-ကချင် parallel corpus ကို ပြင်ဆင်တဲ့အခါမှာ သုံးခဲ့တဲ့ script တစ်ခုပါ။  
+ဘာသာပြန်ပြီး ရလာတဲ့ အခါမှာ ကြုံရတာက မြန်မာစာဘက် အခြမ်းမှာလည်း စာကြောင်း တစ်ကြောင်းထက်ပိုတယ်။ ကချင်စာဘက် အခြမ်းမှာလည်း စာကြောင်း တစ်ကြောင်းထက်ပိုတယ် ဆိုတဲ့ အခြေအနေမှာ။ ပုံမှန် လုပ်တဲ့ Machine Translation အတွက်က အဲဒီ စာကြောင်းတွေကို တစ်ကြောင်းချင်းစီ parallel ပြန်တွဲပေးဖို့ လိုအပ်ပါတယ်။ အဲဒီအတွက်က အရင်ဆုံး မြန်မာစာဘက် အခြမ်းမှာ၊ ကချင်စာဘက်အခြမ်းမှာ စာကြောင်းရေ စုစုပေါင်းဘယ်လောက်ပါသလဲ ဆိုတာကို သိဖို့လိုအပ်ပါတယ်။ အဲဒီအတွက်က ကချင်စာရဲ့ စာကြောင်း အဆုံးသတ်မှာ သုံးကြတဲ့ sentence ending marker သုံးမျိုးဖြစ်တဲ့ (.?!) နဲ့ ဖြတ်ထုတ်လို့ ရပါတယ်။ ဥပမာ အောက်ပါ RE နဲ့ ဖြတ်ထုတ်တာမျိုးပါ။  
+
+```perl
+ my @kachinSentArray = split(/[\.|\?|\!]/, $kachinSent);
+```
+
+အထက်ပါအတိုင်း split function ကိုသုံးပြီး ဖြတ်ထုတ်လိုက်ရင် ရတဲ့ array ထဲမှာက sentence ending marker တွေက ပြုတ်ကျန်ခဲ့ပါလိမ့်မယ်။
+အဲဒီလိုပဲ မြန်မာစာဘက် အခြမ်းက စာကြောင်းတွေကိုလည်း တစ်ကြောင်းစီ ဖြတ်ထုတ်ပြီး၊ မြန်မာ-ကချင် parallel sentence လုပ်ချင်တဲ့အခါမှာ အခက်အခဲက ပြန်တွဲတဲ့အခါမှာ sentence ending marker တွေကို ပြန်ထည့်ဖို့အတွက် ဘယ်ကချင်စာကြောင်းက ဘယ် sentence ending နဲ့ ဆုံးတာလဲ ဆိုတာကို မှတ်ထားဖို့လိုအပ်ပါတယ်။ အခု တင်ပေးထားတဲ့ print-matched-char-seq.pl က မဖြတ်ခင်မှာ input လုပ်ပေးလိုက်တဲ့ ကချင်စာကြောင်းထဲမှာ ပါဝင်တဲ့ sentence ending marker sequence တွေကို သိမ်းထားဖို့အတွက် စမ်းရေးကြည့်ခဲ့တဲ့ perl script ပါ။ အသုံးဝင်ပါလိမ့်မယ်။  
+
+အသုံးပြုပုံ ဥပမာကတော့ ဆိုကြပါစို့ ကျွန်တော်တို့မှာ အောက်ပါအတိုင်း multi-sentence ကချင် စာကြောင်းတွေရှိတဲ့ ဖိုင် တစ်ဖိုင်ရှိနေတယ်။
+
+```bash
+lar@lar-air:/media/lar/Transcend/yLab/intern-1/kc-my-team/original/25-july-2019/script$ cat ./kc-input 
+Nga chyu one .
+Two tea .
+Tea i ? Coeffe i ? Lapai lahkra i ? Nest i ?
+N gup mi ram sha nga ai .
+U , Ka tsu , Jahkan , Shat ka-ngau boi lahkawng . Nang gaw . Hpa sha na rai ?
+A shan n bang ai . La sha ma hte nam sha ma hpa sha mayu ai rai ? Htet u le .
+```
+
+
