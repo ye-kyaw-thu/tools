@@ -68,6 +68,9 @@
    
 22.[string-distance.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/string-distance.pl)  
    (string နှစ်ခုမှာ ရှိတဲ့ စာလုံးတစ်လုံးစီကို တိုက်စစ်ပြီး string similarity distance ကို အကြမ်းတွက်တဲ့ perl လေ့ကျင့်ခန်းပါ)  
+   
+23.[print-matched-char-seq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-matched-char-seq.pl)  
+   (RE နဲ့ ကိုယ်ရှာဖွေချင်တဲ့ character တွေကို string တစ်ခုစီမှာ တိုက်စစ်ပြီး၊ matched ဖြစ်တဲ့ character sequence ကို ရိုက်ထုတ်ကြည့်ဖို့အတွက် သုံးခဲ့တယ်) 
 
    
    
