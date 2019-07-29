@@ -1098,7 +1098,7 @@ A shan n bang ai . La sha ma hte nam sha ma hpa sha mayu ai rai ? Htet u le .
 
 အဲဒီ kc-input ဖိုင်ထဲမှာရှိနေတဲ့ ကချင် စာကြောင်း တစ်ကြောင်းချင်းစီရဲ့ sentence ending marker တွေကို print ထုတ်ကြည့်ချင်ရင် အောက်ပါအတိုင်း run ပါ။  
 
-```bash
+```
 lar@lar-air:/media/lar/Transcend/yLab/intern-1/kc-my-team/original/25-july-2019/script$ perl ./print-matched-char-seq.pl ./kc-input 
 input: Nga chyu one .
 Matched Char Sequence: .
