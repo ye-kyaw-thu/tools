@@ -115,5 +115,10 @@
 37. [group-within-group-UCF11.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/group-within-group-UCF11.sh)  
 (shell script no. 36 နဲ့ ဆက်စပ်နေပါတယ်။ group-UCF11.sh ကို run ပြီးသွားတဲ့အခါမှာ စုပြီးသားဖြစ်တဲ့ mpg ဖိုင်တွေကို ထပ်ပြီးတော့ အုပ်စုခွဲဖို့အတွက် သုံးခဲ့ပါတယ်)  
 
+38. [dot2pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2pic.sh)  
+(Graph description language နဲ့ ရေးထားတဲ့ dot ဖိုင်ကနေ png, eps, svg ဖိုင်တွေ အဖြစ်ပြောင်း ဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
+
+
+
 
 
