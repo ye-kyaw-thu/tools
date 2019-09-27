@@ -1834,6 +1834,6 @@ v_tennis_25_02.mpg   v_tennis_25_03.xgtf  v_tennis_25_05.mpg   v_tennis_25_06.xg
 ```
 
 ## 38. [dot2pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2pic.sh)
-ဒီ shell script က ရှေ့မှာ ရေးပြထားတဲ့ ပရိုဂရမ်နံပါတ် 27.dot2png-pdf.sh လိုပါပဲ dot ဖိုင်ကနေ png, eps, svg ဖိုင်တွေ အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တာပါ။ convert လုပ်တာကို စမ်းဖို့အတွက် dot ဖိုင်ရော၊ run လိုက်ပြီးရင် output ဖိုင်တွေအဖြစ်ထွက်လာမယ့် ဖိုင်တွေကိုကော ဥပမာအနေနဲ့ လေ့လာလို့ ရအောင် bash ဖိုင်တွေရဲ့ test-data ဖိုလ်ဒါ အောက်က dot2pic ဖိုလ်ဒါအထဲမှာ upload လုပ်ပေးထားပါတယ်။  
+ဒီ shell script က ရှေ့မှာ ရေးပြထားတဲ့ ပရိုဂရမ်နံပါတ် 27. [dot2png-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2png-pdf.sh) လိုပါပဲ dot ဖိုင်ကနေ png, eps, svg ဖိုင်တွေ အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တာပါ။ convert လုပ်တာကို စမ်းဖို့အတွက် dot ဖိုင်ရော၊ run လိုက်ပြီးရင် output ဖိုင်တွေအဖြစ်ထွက်လာမယ့် ဖိုင်တွေကိုကော ဥပမာအနေနဲ့ လေ့လာလို့ ရအောင် bash ဖိုင်တွေရဲ့ test-data ဖိုလ်ဒါ အောက်က dot2pic ဖိုလ်ဒါအထဲမှာ upload လုပ်ပေးထားပါတယ်။  
 
 [dot2pic](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2pic) က original dot ဖိုင်နဲ့ convert လုပ်ပြီးတော့ ထွက်လာတဲ့ output graph ပုံတွေက statistical machine translation နဲ့ ပတ်သက်တဲ့ experiment လုပ်တဲ့အခါမှာ ကျောင်းသူတစ်ယောက်က error ဖြစ်နေကြောင်းပြောလို့ debug လုပ်ဖို့အတွက် သုံးခဲ့တဲ့ ဖိုင်တွေဖြစ်ပါတယ်။  
