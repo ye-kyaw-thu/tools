@@ -917,7 +917,7 @@ $ perl ./select-en-th-my.pl ./id-en-th-my.tst.txt w
 
 ## 21.[mk-speakers-json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-speakers-json.pl)  
 
-ဆိုကြပါစို့ ASR model ဆောက်ဖို့အတွက် speaker အမျိုးမျိုးနဲ့ အသံသွင်းထားတဲ့ wave ဖိုင်တွေ ကျွန်တော့်မှာ ရှိပါတယ်။ အဲဒီ wave ဖိုင်တွေကို speaker တစ်ယောက်ချင်းစီရဲ့ speaker-ID အနေနဲ့ပေးထားတဲ့ဖိုလ်ဒါအောက်ထဲမှာ သိမ်းထားပါတယ်။ အရင်ဆုံး အဲဒီ folder-path နဲ့ တကွ ရှိသမျှ wave ဖိုင်တွေကို find command နဲ့ပဲဖြစ်ဖြစ် list လုပ်ပြီး ဖိုင်တစ်ဖိုင်ထဲမှာ သိမ်းထားပါတယ်။ အဲဒီ ဖိုင်က [100-wave-filenames2.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/json-output/100-wave-filenames2.txt) လိုမျိုးဖိုင်ပါ။ ဖိုင်ထဲမဟာ ပါနေတဲ့ ဖိုင်နာမည်တွေရဲ့ ပုံစံက အောက်ပါအတိုင်းပါ။  
+ဆိုကြပါစို့ ASR model ဆောက်ဖို့အတွက် speaker အမျိုးမျိုးနဲ့ အသံသွင်းထားတဲ့ wave ဖိုင်တွေ ကျွန်တော့်မှာ ရှိပါတယ်။ အဲဒီ wave ဖိုင်တွေကို speaker တစ်ယောက်ချင်းစီရဲ့ speaker-ID အနေနဲ့ပေးထားတဲ့ဖိုလ်ဒါအောက်ထဲမှာ သိမ်းထားပါတယ်။ အရင်ဆုံး အဲဒီ folder-path နဲ့ တကွ ရှိသမျှ wave ဖိုင်တွေကို find command နဲ့ပဲဖြစ်ဖြစ် list လုပ်ပြီး ဖိုင်တစ်ဖိုင်ထဲမှာ သိမ်းထားပါတယ်။ အဲဒီ ဖိုင်က [100-wave-filenames2.txt](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/json-output/100-wave-filenames2.txt) လိုမျိုးဖိုင်ပါ။ ဖိုင်ထဲမှာ ပါနေတဲ့ ဖိုင်နာမည်တွေရဲ့ ပုံစံက အောက်ပါအတိုင်းပါ။  
 
 ```
 /Spk1/Univ1-HninHnin-F-25-burmese-2637.wav
