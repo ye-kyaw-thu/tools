@@ -118,6 +118,10 @@
 38. [dot2pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2pic.sh)  
 (Graph description language နဲ့ ရေးထားတဲ့ dot ဖိုင်ကနေ png, eps, svg ဖိုင်တွေ အဖြစ်ပြောင်း ဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
 
+39. [2mono-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/2mono-pdf.sh)  
+(color PDF ဖိုင်ကနေ black and white PDF ဖိုင်အဖြစ် ပြောင်းပေးတဲ့ bash script ပါ)  
+
+
 
 
 
