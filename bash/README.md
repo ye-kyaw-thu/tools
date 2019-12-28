@@ -124,6 +124,10 @@
 40. [calc-bleu-all.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-bleu-all.sh)  
 (Machine Translation experiment လုပ်အပြီး ရလာတဲ့ translated output ဖိုင်နဲ့ reference ဖိုင်ကို multi-bleu.perl ဆိုတဲ့ BLEU score calculation လုပ်ပေးတဲ့ perl script ဖိုင်ကို သုံးပြီး တွက်ပြထားတာဖြစ်ပါတယ်။ ဒီနေရာမှာ experiment က တစ်ခုထက်မက လုပ်ထားလို့ အဲဒီ ဖိုလ်ဒါတွေကို looping ပတ်ပြီး ဝင်တွက်ထားတာကို လေ့လာစေချင်ပါတယ်။ bash က အဲဒီလိုမျိုး အသုံးဝင်ပါတယ်။)  
 
+41. [calc-ribes-all.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-ribes-all.sh)  
+(နံပါတ် ၄၀ က bash script လိုပါပဲ။ ဒီနေရာမှာတော့ RIBES score ကိုတွက်ပေးတဲ့ RIBES.py ကို သုံးပြထားပါတယ်။ long distance language pair တွေကို machine translation လုပ်တဲ့အခါမှာ RIBES score က အသုံးဝင်ပါတယ်။)  
+
+
 
 
 
