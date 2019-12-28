@@ -1,4 +1,4 @@
-အောက်ပါ bash shell script ပရိုဂရမ် တစ်ခုချင်းစီရဲ့ အသုံးပြုပုံကို [example-usages.md](https://github.com/ye-kyaw-thu/tools/blob/master/bash/example-usages.md) ဖိုင်မှာ ရှင်းပြထားပါတယ်။  
+အောက်ပါ bash shell script ပရိုဂရမ် တစ်ချို့ရဲ့ အသုံးပြုပုံကို [example-usages.md](https://github.com/ye-kyaw-thu/tools/blob/master/bash/example-usages.md) ဖိုင်မှာ ရှင်းပြထားပါတယ်။  
 
 # TOC of bash Scripts
 
