@@ -131,7 +131,7 @@
 (xargs နဲ့ fgrep ကို သုံးပြီးတော့ ကိုယ်လိုချင်တဲ့ စာကြောင်းတွေကို ရှာဖွေဆွဲထုတ်ပြီး၊ matched ဖြစ်တဲ့ စာကြောင်း တွေကို အကြောင်းအရေအတွက် x အတိုင်း print လုပ်ခိုင်းတဲ့ shell script ပါ)  
 
 43. [split-train-dev-test.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/split-train-dev-test.sh)  
-(Statistical Machine Translation experiment တွေကို လုပ်တိုင်းမှာ ဒီလိုမျိုး ရှိတဲ့parallel data ဖိုင်ကနေ training data, development data, test data ခွဲဖို့အတွက် ပြင်ဆင်ရတဲ့ bash script ကို ကျွန်တော်ခဏခဏ ရေးဖြစ်ပါတယ်။ သုံးတဲ့အခါမှာ ကိုယ့်ဖိုင်နာမည်နဲ့ ကိုက်အောင်ပြောင်းပေးရတာ၊ for loop condition တွေကို ပြောင်းရတတွော ရှိပေမဲ့ SMT လုပ်ချင်တဲ့ သူတွေအတွက် အသုံးဝင်မှာမို့)  
+(Statistical Machine Translation experiment တွေကို လုပ်တိုင်းမှာ ဒီလိုမျိုး ရှိတဲ့parallel data ဖိုင်ကနေ training data, development data, test data ခွဲဖို့အတွက် ပြင်ဆင်ရတဲ့ bash script ကို ကျွန်တော်ခဏခဏ ရေးဖြစ်ပါတယ်။ သုံးတဲ့အခါမှာ ကိုယ့်ဖိုင်နာမည်နဲ့ ကိုက်အောင်ပြောင်းပေးရတာ၊ for loop condition တွေကို ပြောင်းရတာတွေ ရှိပေမဲ့ SMT လုပ်ချင်တဲ့ သူတွေအတွက် အသုံးဝင်မှာမို့)  
 
 
 
