@@ -52,6 +52,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 40. [calc-bleu-all.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-bleu-all.sh)  
 41. [calc-ribes-all.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-ribes-all.sh)  
 42. [print-matched-x.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-matched-x.sh)  
+43. [split-train-dev-test.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/split-train-dev-test.sh)  
 
 
 # perl
