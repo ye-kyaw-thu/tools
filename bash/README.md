@@ -127,6 +127,12 @@
 41. [calc-ribes-all.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-ribes-all.sh)  
 (နံပါတ် ၄၀ က bash script လိုပါပဲ။ ဒီနေရာမှာတော့ RIBES score ကိုတွက်ပေးတဲ့ RIBES.py ကို သုံးပြထားပါတယ်။ long distance language pair တွေကို machine translation လုပ်တဲ့အခါမှာ RIBES score က အသုံးဝင်ပါတယ်။)  
 
+42. [print-matched-x.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-matched-x.sh)  
+(xargs နဲ့ fgrep ကို သုံးပြီးတော့ ကိုယ်လိုချင်တဲ့ စာကြောင်းတွေကို ရှာဖွေဆွဲထုတ်ပြီး၊ matched ဖြစ်တဲ့ စာကြောင်း တွေကို အကြောင်းအရေအတွက် x အတိုင်း print လုပ်ခိုင်းတဲ့ shell script ပါ)  
+
+
+
+
 
 
 
