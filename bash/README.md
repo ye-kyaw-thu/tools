@@ -136,6 +136,9 @@
 44. [clean-space-all.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/clean-space-all.sh)  
 (shell ဖိုင်ထဲကနေ perl script [clean-space.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-space.pl) ကို ခေါ်သုံးပြထားပါတယ်။ SMT မ run ခင်မှာ၊ NLP model တစ်ခုခု မဆောက်ခင်မှာ ဒီလိုမျိုး space ရှင်းတဲ့ အလုပ်မျိုးက လုပ်ရပါတယ်)  
 
+45. [mk-g2p-model.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-g2p-model.sh)  
+(shell script for building grapheme-to-phoneme model with Phonetisaurus)  
+
 
 
 
