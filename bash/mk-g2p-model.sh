@@ -6,7 +6,21 @@
 # Used for ASR Winter School at CU Banmaw
 
 # How to run: bash ./mk-g2p-model.sh <dict-file> <test-file>
-# e.g. 
+# e.g. ./mk-g2p-model.sh ./train.dict ./test.my | tee run.log
+
+# You have to prepare train.dict file and test.my in advance
+# e.g. train.dict file is as follows:
+#
+#  $ head -n 3 train.dict
+# ဇေယျစန္ဒ	Ze Ya Sanda
+# ကောင်းပြည့်ဇော်	Kaung Pyah Zaw
+# ရူပါ	Yu Par
+# 
+# e.g. test.my file is as follows:
+# $ tail -n 3 ./test.my 
+# ကေသီစန်း
+# အိမ့်ပန်းချီ
+# မာလာရီ
 
 echo -e ">>> Corpus building ...\n";
 phonetisaurus-align --input=$1 --ofile=./$1.corpus --seq1_del=false
