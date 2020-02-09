@@ -139,6 +139,10 @@
 45. [mk-g2p-model.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-g2p-model.sh)  
 (shell script for building grapheme-to-phoneme model with Phonetisaurus)  
 
+46. [mk-syl-list.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-syl-list.sh)  
+(a shell script for list up Myanmar syllables)  
+
+
 
 
 
