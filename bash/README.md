@@ -142,6 +142,9 @@
 46. [mk-syl-list.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-syl-list.sh)  
 (a shell script for list up Myanmar syllables)  
 
+47. [rm-200b-200c.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-200b-200c.sh)  
+(ထုံးစံအတိုင်း မြန်မာ syllable တွေမှာ 200b, 200d တွေ ရောပါနေတတ်ပါတယ်။ ဒီ shell script က အဲဒီ မမြင်ရတဲ့ စာလုံးတွေကို ဖယ်ဖို့အတွက် ရေးခဲ့တာပါ။)  
+
 
 
 
