@@ -143,7 +143,12 @@
 (a shell script for list up Myanmar syllables)  
 
 47. [rm-200b-200d.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-200b-200d.sh)  
-(ထုံးစံအတိုင်း မြန်မာ syllable တွေမှာ 200b, 200d တွေ ရောပါနေတတ်ပါတယ်။ ဒီ shell script က အဲဒီ မမြင်ရတဲ့ စာလုံးတွေကို ဖယ်ဖို့အတွက် ရေးခဲ့တာပါ။)  
+(ထုံးစံအတိုင်း မြန်မာ syllable တွေမှာ 200b, 200d တွေ ရောပါနေတတ်ပါတယ်။ ဒီ shell script က အဲဒီ မမြင်ရတဲ့ စာလုံးတွေကို ဖယ်ဖို့အတွက် ရေးခဲ့တာပါ။)   
+
+48. [print-char.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-char.sh)  
+(ဖိုင်ကို ဖွင့်ဖတ်ပြီး စာလုံး တစ်လုံးချင်းစီ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။ စာတစ်ကြောင်းမှာ character တစ်လုံးစီ ရိုက်ထုတ်ပြီးတော့ enter ခေါက်ဆင်သွားတဲ့ ပုံစံပါ။)  
+
+
 
 
 
