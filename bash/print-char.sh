@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Written by Ye Kyaw Thu, LST Lab., NECTEC, Thailand
-# printing character by character
+# for printing character by character
 # How to run: ./print-char.sh <input-filename>
 
 inputFile=$1;
