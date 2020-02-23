@@ -71,6 +71,9 @@
    
 23.[print-matched-char-seq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-matched-char-seq.pl)  
    (RE နဲ့ ကိုယ်ရှာဖွေချင်တဲ့ character တွေကို string တစ်ခုစီမှာ တိုက်စစ်ပြီး၊ matched ဖြစ်တဲ့ character sequence ကို ရိုက်ထုတ်ကြည့်ဖို့အတွက် သုံးခဲ့တယ်) 
+   
+24. [search-common.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/search-common.pl)  
+    (ရှာချင်တဲ့ မြန်မာစာ စာကြောင်းတွေကို ဖိုင်တစ်ဖိုင်မှာ သိမ်းထားပြီးတော့၊ input ပေးလိုက်တဲ့ column သုံးခုဖိုင်ထဲက ပထမဆုံး column နဲ့ တိုက်စစ်ဖို့အတွက် သုံးခဲ့တယ်)
 
    
    
