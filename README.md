@@ -58,6 +58,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 46. [mk-syl-list.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-syl-list.sh)  
 47. [rm-200b-200d.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-200b-200d.sh)  
 48. [print-char.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-char.sh)    
+49. [prepare-10fold-smt-pair.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/prepare-10fold-smt-pair.sh)  
 
 
 # perl
