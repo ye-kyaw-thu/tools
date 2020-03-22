@@ -2,8 +2,8 @@
 
 # Written by Ye Kyaw Thu, LST Lab., NECTEC, Thailand
 # for searching x-letter word (e.g. 1 letter words, 2 letter words, 3 letter words ...)
-# here, you need word segmented input file.
-# of course, if you input syllable segmented input file,
+# here, you need a word segmented input file.
+# of course, if you input a syllable segmented input file,
 # it will works for searching 1 letter syllables, 2 letter syllables, 3 letter syllables etc.
 # no of letter is given by no of dots as command line argument no. 3,
 # How to run: ./x-letter-word.sh <input-file> <no-of-letters> <option>
