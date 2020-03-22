@@ -5,7 +5,7 @@
 # here, you need a word segmented input file.
 # of course, if you input a syllable segmented input file,
 # it will works for searching 1 letter syllables, 2 letter syllables, 3 letter syllables etc.
-# no of letter is given by no of dots as command line argument no. 3,
+# no. of letter is given by no. of dots as command line argument no. 3,
 # How to run: ./x-letter-word.sh <input-file> <no-of-letters> <option>
 # two options; -show for "showing matched words",
 # -count for "just counting" and it is also a default option
