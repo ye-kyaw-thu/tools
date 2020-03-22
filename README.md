@@ -60,7 +60,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 48. [print-char.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-char.sh)    
 49. [prepare-10fold-smt-pair.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/prepare-10fold-smt-pair.sh)  
 50. [rm-ctrl-m.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-ctrl-m.sh)  
-
+51. [x-letter-word.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/x-letter-word.sh)  
 
 
 # perl
