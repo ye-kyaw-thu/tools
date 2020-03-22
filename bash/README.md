@@ -152,7 +152,10 @@
 (input ပေးလိုက်တဲ့ ဖိုင် format က "မြန်မာစာကြောင်း|ဘိတ်စာကြောင်း|ထားဝယ်စာကြောင်း" ပါ။ အဲဒီ input ဖိုင်ကို $2 option နဲ့ ပေးလိုက်တဲ့ လိုင်းအရေအတွက်အတိုင်း ဖိုင်ကို ခွဲပေးပါလိမ့်မယ်။ ဒီနေရာမှာတော့ 10-fold cross validation လုပ်ချင်လို့ 10 ပိုင်းခွဲခဲ့ပါတယ်။ ခွဲထားတဲ့ ဖိုင်ကနေမှ SMT experiment run ချင်တဲ့ ဘိတ်စာကြောင်းနဲ့ ထားဝယ်စာကြောင်းတွေကို ဆွဲထုပ်ယူပြီး train, dev, test အဖြစ်ခွဲပေးမှာ ဖြစ်ပါတယ်။)  
 
 50. [rm-ctrl-m.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-ctrl-m.sh)  
-(Ctrl-M or ^M ကို perl one liner ကို သုံးပြီး ဖယ်ပြထားတဲ့ ပရိုဂရမ်ပါ။ shell script ထဲကနေ perl one line ကို ခေါ်သုံးပုံကိုလည်း ကျောင်းသားတွေကို သိစေချင်လို့ demo လုပ်ပြထားတာပါ)
+(Ctrl-M or ^M ကို perl one liner ကို သုံးပြီး ဖယ်ပြထားတဲ့ ပရိုဂရမ်ပါ။ shell script ထဲကနေ perl one line ကို ခေါ်သုံးပုံကိုလည်း ကျောင်းသားတွေကို သိစေချင်လို့ demo လုပ်ပြထားတာပါ)  
+
+51. [x-letter-word.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/x-letter-word.sh)  
+(x letter syllables, x letter words တွေကို ဆွဲထုတ်ဖို့အတွက် သုံးခဲ့တယ်။ input ဖိုင်ကတော့ syllable သို့မဟုတ် word segmentation လုပ်ပေးထားရမယ်။)  
 
 
 
