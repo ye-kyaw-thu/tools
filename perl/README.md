@@ -78,6 +78,10 @@
 25. [fixed-parallel-order.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fixed-parallel-order.pl)  
     (လိုင်းနံပါတ်တွေပါတဲ့ parallel corpus အထဲကနေ ဘာသာမပြန်ရသေးတဲ့ စာကြောင်းကို ဖယ်ရှားရန်၊ လိုင်းနံပါတ်လွဲနေတဲ့ စာကြောင်းတွေကို ပြန်ညှိဖို့အတွက် သုံးခဲတယ်)  
     
+26. [encode-input.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/encode-input.pl)  
+    (input ဖိုင်ထဲမှာ ရှိတဲ့ စာလုံးတွေ (word or syllable units) ကို တစ်လုံးချင်းဖတ်ပြီး word-ID နဲ့ encode လုပ်ပေးဖို့ သုံးတဲ့ script ပါ)  
+    
+    
 
    
    
