@@ -91,7 +91,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 24. [search-common.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/search-common.pl) 
 25. [fixed-parallel-order.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fixed-parallel-order.pl)  
 26. [encode-input.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/encode-input.pl)  
-
+27. [decode.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/decode.pl)  
 
 
 # python
