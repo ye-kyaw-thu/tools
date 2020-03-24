@@ -90,6 +90,8 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 23. [print-matched-char-seq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-matched-char-seq.pl)  
 24. [search-common.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/search-common.pl) 
 25. [fixed-parallel-order.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fixed-parallel-order.pl)  
+26.[encode-input.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/encode-input.pl)  
+
 
 
 # python
