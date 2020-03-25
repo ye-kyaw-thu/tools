@@ -85,7 +85,7 @@
    (အထက်က perl script နံပါတ် 26 နဲ့ ဆက်စပ်နေပါတယ်။ ပရိုဂရမ်နံပါတ် ၂၆ နဲ့ encode လုပ်ထားတဲ့ ဖိုင်ကို ပြန်ဖြေပြီး အော်ရဂျင်နယ်စာလုံးတွေပြန်ရဖို့အတွက် သုံးခဲ့တယ်)  
    
 28.[mk-one2one-freq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-one2one-freq.pl)  
-   (conversion from one-to-many Myanmar-Romanization parallel corpus to one-to-one Myanmar-Romanization based on the highest frequency of Romanized syllable)  
+   (one-to-many Myanmar-Romanization parallel corpus ကနေ one-to-one Myanmar-Romanization အဖြစ် ပြေင်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။ frequency အမြင့်ဆုံး Romanized syllable တွေကိုပဲ ဆွဲထုတ်ပြီး ပြန် mapping လုပ်ထားပါတယ်။)  
     
 
    
