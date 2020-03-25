@@ -157,21 +157,6 @@
 51. [x-letter-word.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/x-letter-word.sh)  
 (x letter syllables, x letter words တွေကို ဆွဲထုတ်ဖို့အတွက် သုံးခဲ့တယ်။ input ဖိုင်ကတော့ syllable သို့မဟုတ် word segmentation လုပ်ပေးထားရမယ်။)  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+52. [paste-column.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/paste-column.sh)  
+(ဖိုင်နှစ်ဖိုင်မှာ ရှိတဲ့ field သို့မဟုတ် column အလိုက် တွဲပေးဖို့အတွက် သုံးခဲ့တယ်)  
 
