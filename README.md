@@ -61,6 +61,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 49. [prepare-10fold-smt-pair.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/prepare-10fold-smt-pair.sh)  
 50. [rm-ctrl-m.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-ctrl-m.sh)  
 51. [x-letter-word.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/x-letter-word.sh)  
+52. [paste-column.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/paste-column.sh)  
 
 
 # perl
