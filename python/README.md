@@ -17,3 +17,7 @@
 5. [fuzzy-match.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fuzzy-match.py)  
 (myG2P အဘိဓာန်ထဲက phoneme တွေကို Fuzzy matching နဲ့ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်)  
 
+6. [hex2uni.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/hex2uni.py)  
+(Python ver.2 နဲ့ ရေးထားတဲ့ code တွေက မြန်မာစာလိုမျိုး utf8 စာကြောင်းတွေကို hex value တွေနဲ့ အလုပ်လုပ်တဲ့ အခါရှိပါတယ်။ အဲဒါတွေကို ဖတ်လိုရအောင် print ထုတ်ဖို့အတွက် သုံးခဲ့တယ်)  
+
+
