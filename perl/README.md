@@ -86,7 +86,9 @@
    
 28.[mk-one2one-freq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-one2one-freq.pl)  
    (one-to-many Myanmar-Romanization parallel corpus ကနေ one-to-one Myanmar-Romanization အဖြစ် ပြေင်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။ frequency အမြင့်ဆုံး Romanized syllable တွေကိုပဲ ဆွဲထုတ်ပြီး ပြန် mapping လုပ်ထားပါတယ်။)  
-    
+
+29.[mk-one-syl-confusion.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-one-syl-confusion.pl)  
+   (confusion pair ထဲကနေ left column ဘက်က syllable တစ်လုံးထဲပဲ ပါတဲ့ confusion pair တွေကိုပဲ ဆွဲထုတ်ဖို့အတွက် သုံးခဲ့တယ်)  
 
    
    
