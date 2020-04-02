@@ -95,6 +95,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 27. [decode.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/decode.pl)  
 28. [mk-one2one-freq.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-one2one-freq.pl)  
 29. [mk-one-syl-confusion.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-one-syl-confusion.pl)  
+30. [rm-onechar-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-onechar-line.pl)  
 
 
 # python
