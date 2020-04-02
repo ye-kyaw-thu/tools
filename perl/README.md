@@ -89,6 +89,11 @@
 
 29.[mk-one-syl-confusion.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-one-syl-confusion.pl)  
    (confusion pair အများကြီးထဲကနေ left column ဘက်က syllable တစ်လုံးထဲပဲ ပါတဲ့ confusion pair တွေကိုပဲ ဆွဲထုတ်ဖို့အတွက် သုံးခဲ့တယ်)  
+   
+30.[rm-onechar-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-onechar-line.pl)  
+   (character တစ်လုံးပဲ ရှိတဲ့ စာကြောင်းတွေကို ဖယ်ဖို့ သုံးခဲ့တဲ့ ပရိုဂရမ်ပါ)  
+   
+   
 
    
    
