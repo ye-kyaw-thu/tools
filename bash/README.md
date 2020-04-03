@@ -160,3 +160,8 @@
 52. [paste-column.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/paste-column.sh)  
 (ဖိုင်နှစ်ဖိုင်မှာ ရှိတဲ့ field သို့မဟုတ် column တွေအလိုက် တွဲပေးဖို့အတွက် သုံးခဲ့တယ်)  
 
+53. [lm-building-exec.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/lm-building-exec.sh)  
+(SRILM toolkit ကို သုံးပြီးတော့ language model ဘယ်လိုဆောက်ရသလဲ ဆိုတာကို ဒီမိုပြဖို့ ရေးခဲ့တဲ့ bash shell script ပါ)  
+
+
+
