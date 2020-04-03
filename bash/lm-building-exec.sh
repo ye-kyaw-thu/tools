@@ -47,6 +47,7 @@ echo -e "==========\n";
 
 # Use debug option
 # စာကြောင်း တစ်ကြောင်းချင်းစီကို perplexity တွက်ပေးနိုင်တဲ့ option ပါ
+# "-debug 2" gives the probability assigned to each token
 # လက်တွေ့မှာက binary LM ကို သုံးကြပေမဲ့ ARPA LM နဲ့လည်း -debug option ကို သုံးနိုင်
 echo "#calculating the language model perplexity with -debug option...";
 /home/lar/tool/srilm/bin/i686-m64/ngram -lm ./$1.lm.bin -ppl $2 -debug 2
