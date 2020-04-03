@@ -162,7 +162,6 @@
 
 53. [lm-building-exec.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/lm-building-exec.sh)  
 (SRILM toolkit ကို သုံးပြီးတော့ language model ဘယ်လိုဆောက်ရသလဲ ဆိုတာကို ဒီမိုပြဖို့ ရေးခဲ့တဲ့ bash shell script ပါ  
-[my-corpus.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-corpus.txt) ဖိုင်နဲ့ [my-test.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-test.txt) ဖိုင်ကိုလည်း bash/test-data/ အောက်မှာ upload လုပ်ပေးထားပါတယ်။)  
-
+demo running အတွက် သုံးထားတဲ့ ဖိုင်တွေဖြစ်တဲ့ [my-corpus.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-corpus.txt) ဖိုင်နဲ့ [my-test.txt](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/my-test.txt) ဖိုင်ကိုလည်း bash/test-data/ အောက်မှာ upload လုပ်ပေးထားပါတယ်။ ပထမဆုံး LM ဆောက်တဲ့သူတွေအတွက် လေ့လာရ လွယ်ကူအောင် running log ဖိုင်ဖြစ်တဲ့ [lm-building-exec.log](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/lm-building-exec.log) ကိုလည်း တင်ပေးထားပါတယ်)  
 
 
