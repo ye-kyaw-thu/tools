@@ -170,6 +170,10 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 55. [calc-ppl-with-kenlm-query.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-ppl-with-kenlm-query.sh)  
 (KenLM ရဲ့ query command ကို သုံးပြီးတော့ ppl including OOVs, ppl excluding OOVs တွေကို တွက်ဖို့အတွက် ရေးခဲ့တယ်)  
 
+56. [mk-two-lm-and-merge.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-two-lm-and-merge.sh)  
+(Language model နှစ်ခုကိုဆောက်ပြီးတော့ static interpolation လုပ်တာကို ကျောင်းသားတွေကို ဒီမိုလုပ်ပြဖို့ ရေးခဲ့တယ်)    
+
+
 
 
 
