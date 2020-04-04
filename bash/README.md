@@ -167,6 +167,9 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 54. [print-most-common.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-most-common.sh)  
 (SRILM toolkit ရဲ့ command တစ်ခုဖြစ်တဲ့ ngram-count ကို သုံးပြီးတော့ အသုံးများဆုံး စာလုံးတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်) 
 
+55. [calc-ppl-with-kenlm-query.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-ppl-with-kenlm-query.sh)  
+(KenLM ရဲ့ query command ကို သုံးပြီးတော့ ppl including OOVs, ppl excluding OOVs တွေကို တွက်ဖို့အတွက် ရေးခဲ့တယ်)  
+
 
 
 
