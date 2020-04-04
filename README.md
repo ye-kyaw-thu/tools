@@ -63,6 +63,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 51. [x-letter-word.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/x-letter-word.sh)  
 52. [paste-column.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/paste-column.sh)  
 53. [lm-building-exec.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/lm-building-exec.sh)  
+54. [print-most-common.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-most-common.sh)  
 
 
 # perl
