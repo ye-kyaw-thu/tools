@@ -173,6 +173,9 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 56. [mk-two-lm-and-merge.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-two-lm-and-merge.sh)  
 (Language model နှစ်ခုကိုဆောက်ပြီးတော့ static interpolation လုပ်တာကို ကျောင်းသားတွေကို ဒီမိုလုပ်ပြဖို့ ရေးခဲ့တယ်)    
 
+57. [mk-class-lm.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-class-lm.sh)  
+(word class ကို အခြေခံပြီးမှ language model ဆောက်တာကို ဒီမို လုပ်ပြဖို့အတွက် ရေးခဲ့တယ်)  
+
 
 
 
