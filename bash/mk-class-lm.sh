@@ -15,7 +15,7 @@ classNo=${2:0:1};
 echo "1-gram counting ...";
 ngram-count -order 1 -text ./$1 -write $1.1gram.count;
 
-# select only the 5000 most common words
+# select only the $2 most common words
 echo "sorting with freq and taking the top 5k words ...";
 sort -n -r -k 2 ./$1.1gram.count | head -n $2 | cut -f 1 > $1.1gram.count.top.${classNo}k;
 
