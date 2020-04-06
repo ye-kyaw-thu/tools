@@ -68,6 +68,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 56. [mk-two-lm-and-merge.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-two-lm-and-merge.sh)  
 57. [mk-class-lm.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-class-lm.sh)  
 58. [get-myPOS-tag.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/get-myPOS-tag.sh)  
+59. [rm-myPOStags.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-myPOStags.sh)  
 
 
 # perl
