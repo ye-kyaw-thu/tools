@@ -182,5 +182,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 59. [rm-myPOStags.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-myPOStags.sh)  
 (myPOS ရဲ့ tag တွေကို testing data အတွက် ပြင်တဲ့အခါမှာ ဖယ်ရပါတယ်။ POS tag တွေကို sed ကို သုံးပြီး ဖယ်ပြထားပါတယ်)  
 
-
+60. [print-same-col1.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-same-col1.sh)  
+(ဖိုင်နှစ်ဖိုင်က ပထမဆုံး field က တူသလားစစ်ပြီးတော့၊ တူခဲ့ရင် အဲဒီ ဖိုင်နှစ်ဖိုင်ထဲက ကိုယ်လိုချင်တဲ့ field တွေကို print လုပ်ပေးတဲ့ shell script ပါ။  
+တစ်ခုရှိတာက input file နှစ်ဖိုင် စလုံးကို sorting စီထားပြီးသား condition အတွက် ရေးထားတာ။)  
 
