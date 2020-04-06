@@ -179,8 +179,8 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 58. [get-myPOS-tag.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/get-myPOS-tag.sh)  
 (myPOS POS tagged corpus ထဲကနေ tag frequency နဲ့ သုံးထားတဲ့ tag တွေချည်းပဲကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်)  
 
-
-
+59. [rm-myPOStags.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-myPOStags.sh)  
+(myPOS ရဲ့ tag တွေကို testing data အတွက် ပြင်တဲ့အခါမှာ ဖယ်ရပါတယ်။ POS tag တွေကို sed ကို သုံးပြီး ဖယ်ပြထားပါတယ်)  
 
 
 
