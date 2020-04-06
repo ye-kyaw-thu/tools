@@ -67,6 +67,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 55. [calc-ppl-with-kenlm-query.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-ppl-with-kenlm-query.sh)  
 56. [mk-two-lm-and-merge.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-two-lm-and-merge.sh)  
 57. [mk-class-lm.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-class-lm.sh)  
+58. [get-myPOS-tag.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/get-myPOS-tag.sh)  
 
 
 # perl
