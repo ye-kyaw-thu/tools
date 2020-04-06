@@ -176,6 +176,9 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 57. [mk-class-lm.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-class-lm.sh)  
 (word class ကို အခြေခံပြီးမှ language model ဆောက်တာကို ဒီမို လုပ်ပြဖို့အတွက် ရေးခဲ့တယ်)  
 
+58. [get-myPOS-tag.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/get-myPOS-tag.sh)  
+(myPOS POS tagged corpus ထဲကနေ tag frequency နဲ့ သုံးထားတဲ့ tag တွေချည်းပဲကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်)  
+
 
 
 
