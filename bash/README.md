@@ -186,3 +186,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 (ဖိုင်နှစ်ဖိုင်က ပထမဆုံး field က တူသလားစစ်ပြီးတော့၊ တူခဲ့ရင် အဲဒီ ဖိုင်နှစ်ဖိုင်ထဲက ကိုယ်လိုချင်တဲ့ field တွေကို print လုပ်ပေးတဲ့ shell script ပါ။  
 တစ်ခုရှိတာက input file နှစ်ဖိုင် စလုံးကို sorting စီထားပြီးသား condition အတွက် ရေးထားတာ။)  
 
+61. [char-segmentation.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/char-segmentation.sh)  
+(NLP အလုပ်တွေမှာ character segementation ဆိုတာ ခဏခဏ လုပ်ကြရပါတယ်။ အဲဒီအတွက် bash script ရေးရတာကမခက်ပေမဲ့ လိုအပ်တဲ့အခါမှာ အသုံးဝင်လို့ တင်ပေးလိုက်တယ်။)  
+
