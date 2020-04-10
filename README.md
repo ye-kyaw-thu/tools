@@ -70,7 +70,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 58. [get-myPOS-tag.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/get-myPOS-tag.sh)  
 59. [rm-myPOStags.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-myPOStags.sh)  
 60. [print-same-col1.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/print-same-col1.sh)  
-
+61. [char-segmentation.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/char-segmentation.sh)  
 
 # perl
 
