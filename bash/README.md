@@ -189,3 +189,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 61. [char-segmentation.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/char-segmentation.sh)  
 (NLP အလုပ်တွေမှာ character segementation ဆိုတာ ခဏခဏ လုပ်ကြရပါတယ်။ ဥပမာ မြန်မာစာလုံးပေါင်း အသတ်ကို နှစ်ခါ ထပ်ရိုက်ပြီး မှားထားတာမျိုးကို စစ်ကြည့်တဲ့ အခါမျိုးပါ။ အဲဒီလို စာလုံးတစ်လုံးချင်းစီကို ရိုက်ထုတ်ပေးဖို့အတွက် bash script ရေးရတာကမခက်ပေမဲ့ လိုအပ်တဲ့အခါမှာ အသုံးပြုလို့ရအောင် တင်ပေးလိုက်တယ်။)  
 
+62. [chk-blank-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-blank-fields.sh)  
+(<TAB> ခြားပြီး သိမ်းထားတဲ့ ကော်လံသုံးခု သို့မဟုတ် field သုံးခု ရှိတဲ့ ဖိုင်ထဲကနေ blank field ပါနေတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့တကွ ရိုက်ထုတ်ပြဖို့ ရေးခဲ့တယ်။)  
+
+
