@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # for checking blank fields
-# Written by Ye Kyaw Thu, LST, 
+# Written by Ye Kyaw Thu, LST Lab, NECTEC, Thailand
 # I assumed the input file that contained 3 fields or columns
 # used this script for checking Myanmar<TAB>Rakhine<TAB>Dawei parallel corpus
 
