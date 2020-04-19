@@ -192,4 +192,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 62. [chk-blank-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-blank-fields.sh)  
 (\<TAB\> ခြားပြီး သိမ်းထားတဲ့ ကော်လံသုံးခု သို့မဟုတ် field သုံးခု ရှိတဲ့ ဖိုင်ထဲကနေ blank field ပါနေတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့တကွ ရိုက်ထုတ်ပြဖို့ ရေးခဲ့တယ်။)  
 
+63. [chk-field-length.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-field-length.sh)  
+(\<TAB\> ခြားပြီး သိမ်းထားတဲ့ ကော်လံသုံးခု သို့မဟုတ် field သုံးခု ရဲ့ length တွေကိုနှိုင်းယှဉ်ကြည်ဖို့ ရေခဲ့ပါတယ်။)  
 
