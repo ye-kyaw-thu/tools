@@ -195,3 +195,8 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 63. [chk-field-length.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-field-length.sh)  
 (\<TAB\> ခြားပြီး သိမ်းထားတဲ့ ကော်လံသုံးခု သို့မဟုတ် field သုံးခု ရဲ့ length တွေကိုနှိုင်းယှဉ်ကြည်ဖို့ ရေခဲ့ပါတယ်။)  
 
+64. [crop-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/crop-pdf.sh)  
+(PDF ဖိုင်ထဲကနေ empty ဖြစ်နေတဲ့ margin တွေကို ဖြတ်ထုတ်ဖို့ ရေးခဲ့တဲ့ shell script ပါ။ စာမျက်နှာ တစ်ခုလုံးကနေ စာသားတွေပဲ ရှိနေတဲ့ အပိုင်းကိုပဲ လိုချင်တဲ့အခါ အသုံးဝင်ပါလိမ့်မယ်။ OCR engine အတွက် PDF ဖိုင်ကနေ စာသားရှိတဲ့ အပိုင်းတွေကို input လုပ်ဖို့နေရာမျိုး၊ figure တွေရှိတဲ့ အပိုင်းတွေကိုပဲ PDF အနေနဲ့ quality မကျအောင် ဖြတ်ထုတ်ချင်တဲ့ အခါမျိုးမှာ အသုံးဝင်ပါလိမ့်မယ်။)
+
+
+
