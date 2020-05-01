@@ -1864,6 +1864,6 @@ PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
 [pg3-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/pg3-crop.pdf)  
 [pg4-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/pg4-crop.pdf)  
 
-Original PDF ဖိုင်နဲ့ နှိုင်းယှဉ်ကြည့်ရင် မြင်သာပါလိမ့်မယ်။  
+Original input PDF ဖိုင်ဖြစ်တဲ့ [example-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/example-crop.pdf) နဲ့ နှိုင်းယှဉ်ကြည့်ရင် margin တွေက စာတွေ၊ ပုံတွေရှိတဲ့ အပိုင်းတွေနဲ့ကပ်နေတာကို မြင်သာပါလိမ့်မယ်။  
 
 
