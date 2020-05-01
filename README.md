@@ -73,6 +73,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 61. [char-segmentation.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/char-segmentation.sh)  
 62. [chk-blank-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-blank-fields.sh)  
 63. [chk-field-length.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-field-length.sh)  
+64. [crop-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/crop-pdf.sh)  
 
 # perl
 
