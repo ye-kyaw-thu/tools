@@ -1838,7 +1838,7 @@ v_tennis_25_02.mpg   v_tennis_25_03.xgtf  v_tennis_25_05.mpg   v_tennis_25_06.xg
 
 [dot2pic](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2pic) က original dot ဖိုင်နဲ့ convert လုပ်ပြီးတော့ ထွက်လာတဲ့ output graph ပုံတွေက statistical machine translation နဲ့ ပတ်သက်တဲ့ experiment လုပ်တဲ့အခါမှာ ကျောင်းသူတစ်ယောက်က error ဖြစ်နေကြောင်းပြောလို့ debug လုပ်ဖို့အတွက် သုံးခဲ့တဲ့ ဖိုင်တွေဖြစ်ပါတယ်။  
 
-shell script 39 ကနေ 64 အထိက အချိန်ရတဲ့အခါ ဖြည့်စွက် ရှင်းပြနိုင်အောင် လုပ်ပါမယ်။  
+***shell script 39 ကနေ 64 အထိက အချိန်ရတဲ့အခါ ဖြည့်စွက် ရှင်းပြနိုင်အောင် လုပ်ပါမယ်။  
 
 ## 64. [crop-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/crop-pdf.sh)  
 
