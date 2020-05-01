@@ -1837,3 +1837,33 @@ v_tennis_25_02.mpg   v_tennis_25_03.xgtf  v_tennis_25_05.mpg   v_tennis_25_06.xg
 ဒီ shell script က ရှေ့မှာ ရေးပြထားတဲ့ ပရိုဂရမ်နံပါတ် 27. [dot2png-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/dot2png-pdf.sh) လိုပါပဲ dot ဖိုင်ကနေ png, eps, svg ဖိုင်တွေ အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တာပါ။ convert လုပ်တာကို စမ်းဖို့အတွက် dot ဖိုင်ရော၊ run လိုက်ပြီးရင် output ဖိုင်တွေအဖြစ်ထွက်လာမယ့် ဖိုင်တွေကိုကော ဥပမာအနေနဲ့ လေ့လာလို့ ရအောင် bash ဖိုင်တွေရဲ့ test-data ဖိုလ်ဒါ အောက်က dot2pic ဖိုလ်ဒါအထဲမှာ upload လုပ်ပေးထားပါတယ်။  
 
 [dot2pic](https://github.com/ye-kyaw-thu/tools/tree/master/bash/test-data/dot2pic) က original dot ဖိုင်နဲ့ convert လုပ်ပြီးတော့ ထွက်လာတဲ့ output graph ပုံတွေက statistical machine translation နဲ့ ပတ်သက်တဲ့ experiment လုပ်တဲ့အခါမှာ ကျောင်းသူတစ်ယောက်က error ဖြစ်နေကြောင်းပြောလို့ debug လုပ်ဖို့အတွက် သုံးခဲ့တဲ့ ဖိုင်တွေဖြစ်ပါတယ်။  
+
+shell script 39 ကနေ 64 အထိက အချိန်ရတဲ့အခါ ဖြည့်စွက် ရှင်းပြနိုင်အောင် လုပ်ပါမယ်။  
+
+## 64. [crop-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/crop-pdf.sh)  
+
+pdftk, pdfcrop ပရိုဂရမ်တွေက အသုံးဝင်တဲ့ pdf tool တွေပါ။ ဒီနေရာမှာတော့ pdfcrop ကို သုံးပြီးတော့ empty ဖြစ်နေတဲ့ margin တွေကို ဖြုတ်တာကို shell script ရေးပြထားပါတယ်။ အရင်ဆုံး [example-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/example-crop.pdf) ဖိုင်ကို ဖွင့်ကြည့်ပါ။ စာမျက်နှာ နံပါတ်-၁ နဲ့ နံပါတ်-၂ က SignWriting ကို Myanmar sign language ရဲ့ ဗျည်းနဲ့ တွဲရေးရတဲ့ သရတွေ၊ သူ့တစ်လုံးတည်း ရပ်တည်နိုင်တဲ့ သရထူး တွေကို mapping လုပ်ထားတဲ့ ဇယား ဖြစ်ပါတယ်။ စာမျက်နှာ နံပါတ်-၃ ကတော့ ပဋ္ဌာနပါဠိ (ပထမတွဲ) စာအုပ်ရဲ့ စာမျက်နှာ နံပါတ် ၁၂ ကို pdftk နဲ့ ဖြတ်ယူထားတာပါ ။ နောက်ဆုံး စာမျက်နှာ ဖြစ်တဲ့ စာမျက်နှာ နံပါတ်-၄ ကတော့ Richard Crang, Sheila Lyons-Sobaski, Robert Wise တို့ ရေးသားထားတဲ့ Plant Anatomy (A Concept-Based Approach to the Structure of Seed Plants) ဆိုတဲ့ free online book စာအုပ်ကနေ ဖြတ်ယူထားတဲ့ စာမျက်နှာပါ။  
+
+crop-pdf.sh ကို သုံးပြီးတော့ minimal margin တွေကိုပဲ ဆွဲထုတ်ကြည့်ရအောင်။  
+
+```bash
+./crop-pdf.sh ./example-crop.pdf 
+PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
+==> 1 page written on `pg1-crop.pdf'.
+PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
+==> 1 page written on `pg2-crop.pdf'.
+PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
+==> 1 page written on `pg3-crop.pdf'.
+PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
+==> 1 page written on `pg4-crop.pdf'.
+```
+
+ဖြတ်ထားပြီးသား output စာမျက်နှာ တစ်မျက်နှာစီကိုလည်း ဖိုင်တစ်ဖိုင်စီအနေနဲ့ သိမ်းပြထားပါတယ်။  
+[pg1-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/pg1-crop.pdf)  
+[pg2-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/pg2-crop.pdf)  
+[pg3-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/pg3-crop.pdf)  
+[pg4-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/pg4-crop.pdf)  
+
+Original PDF ဖိုင်နဲ့ နှိုင်းယှဉ်ကြည့်ရင် မြင်သာပါလိမ့်မယ်။  
+
+
