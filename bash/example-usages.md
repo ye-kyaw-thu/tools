@@ -1874,7 +1874,7 @@ Original input PDF ဖိုင်ဖြစ်တဲ့ [example-crop.pdf](https
 
 Run တဲ့အခါမှာ command line argument နှစ်ခု ပေးရပါလိမ့်မယ်။ ပထမတစ်ခုက Excel ဖိုင်ရဲ့ ဖိုင်နာမည် ဖြစ်ပြီးတော့၊ ဒုတိယ argument ကတော့ csv ဖိုင်တွေကို သိမ်းပေးစေချင်တဲ့ ဖိုလ်ဒါနာမည်ပါ။  
 ```
-./xlsx2csv-chk-fields.sh \<Excel-filename\> \<output-folder-name\>  
+./xlsx2csv-chk-fields.sh <Excel-filename> <output-folder-name>  
 ```   
 
 Run လိုက်လို့ ထွက်လာမဲ့ output ကို ဥပမာအနေနဲ့ ပြရရင် အောက်ပါအတိုင်း ဖြစ်ပါလိမ့်မယ်။  
