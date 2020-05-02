@@ -1866,4 +1866,8 @@ PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
 
 Original input PDF ဖိုင်ဖြစ်တဲ့ [example-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/example-crop.pdf) နဲ့ နှိုင်းယှဉ်ကြည့်ရင် margin တွေက စာတွေ၊ ပုံတွေရှိတဲ့ အပိုင်းတွေနဲ့ကပ်နေတာကို မြင်သာပါလိမ့်မယ်။  
 
+## [excel2csv-chk-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/from65/excel2csv-chk-fields.sh)  
 
+လက်တွေ့ NLP အတွက် ဒေတာတွေကို ပြင်ဆင်ကြတဲ့ အခါမှာ အော်ရဂျင်နယ်ဒေတာတွေက Excel ကို သုံးပြီးတော့ ပြင်ဆင်ကြတာမျိုးလည်း ရှိတတ်ပါတယ်။ အဲဒါကြောင့် အဲဒီဒေတာတွေကို NLP အလုပ်တွေကို လုပ်ဖို့အတွက်က အရင်ဆုံး Excel က ကော်လံတွေ ခွဲပြီး ရိုက်ထားတဲ့ ဒေတာတွေကို csv (comma-separated values) ဖိုင်အဖြစ် ပြောင်းတာမျိုးကို လုပ်ဖို့ လိုအပ်ပါတယ်။ Excel ဖိုင်ကို Excel software သို့မဟုတ် Linux OS ပေါ်မှာဆိုရင် LibreOffice တို့ကို သုံးပြီးတော့ csv ဖိုင်အဖြစ်လည်း ပြောင်းလို့ရပေမဲ့ command line ကနေပဲ Excel ဖိုင် .xlsx ကို csv ဖိုင်အဖြစ် ပြောင်းတတ်ရင် အရမ်းအဆင်ပြေပါတယ်။ Excel ဖိုင်ထဲမှာပဲ xls နဲ့ xlsx က မတူဘူး ဆိုတာကိုတော့ သိထားသင့်ပါတယ်။ ဒီနေရာမှာတော့ မရှင်းပြတော့ပါဘူး။ xlsx ကနေ csv အဖြစ် ပြောင်းဖို့အတွက် က Github မှာရှိတဲ့ Python ပရိုဂရမ် [xlsx2csv](https://github.com/dilshod/xlsx2csv) နဲ့ ပြောင်းလို့ ရပါတယ်။ ဒီနေရာမှာ ရေးထားတဲ့ shell script ကတော့ အဲဒီ xlsx2csv ကို ကိုယ်စက်ထဲမှာ installed လုပ်ထားပြီး ထုံးစံအတိုင်း bash shell script ကနေ ခေါ် run တဲ့ ပုံစံပါ။ 
+
+COVID-19 နဲ့ ပတ်သက်တဲ့ Excel ဖိုင်မှာက Sheet တွေက တစ်ခုထက် မက ပါဝင်တတ်ပါတယ်။ အဲဒါကြောင့် sheet တစ်ခုချင်းစီကို csv ဖိုင်အဖြစ် ဖိုလ်ဒါထဲမှာ သိမ်းလိုက်ပြီး အဲဒီ sheet တစ်ခုစီမှာ field ဘယ်နှစ်ခု ပါသလဲ ဆိုတာကို တွက်ပေဖို့အတွက် သုံးခဲ့တဲ့ shell script ဖြစ်ပါတယ်။  
