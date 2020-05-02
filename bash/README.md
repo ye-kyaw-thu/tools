@@ -198,5 +198,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 64. [crop-pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/crop-pdf.sh)  
 (PDF ဖိုင်ထဲကနေ empty ဖြစ်နေတဲ့ margin တွေကို ဖြတ်ထုတ်ဖို့ ရေးခဲ့တဲ့ shell script ပါ။ စာမျက်နှာ တစ်ခုလုံးကနေ စာသားတွေပဲ ရှိနေတဲ့ အပိုင်းကိုပဲ လိုချင်တဲ့အခါ အသုံးဝင်ပါလိမ့်မယ်။ OCR engine အတွက် PDF ဖိုင်ကနေ စာသားရှိတဲ့ အပိုင်းတွေကို input လုပ်ဖို့နေရာမျိုး၊ figure တွေရှိတဲ့ အပိုင်းတွေကိုပဲ PDF အနေနဲ့ quality မကျအောင် ဖြတ်ထုတ်ချင်တဲ့ အခါမျိုးမှာ အသုံးဝင်ပါလိမ့်မယ်။)
 
+65. [excel2csv-chk-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/from65/excel2csv-chk-fields.sh)  
+(Excel ဖိုင် (xls မဟုတ်ပဲ .xlsx) ထဲက sheet တစ်ခုချင်းစီကို csv ဖိုင်တွေအဖြစ် ပြောင်းပြီးတော့ field တွေ ဘယ်နှစ်ခုပါသလဲဆိုတာကို ရေတွက်ပေးပါလိမ့်မယ်)  
 
 
