@@ -1877,7 +1877,7 @@ Run တဲ့အခါမှာ command line argument နှစ်ခု ပေ�
 ./xlsx2csv-chk-fields.sh <Excel-filename> <output-folder-name>  
 ```   
 
-Run လိုက်လို့ ထွက်လာမဲ့ output ကို ဥပမာအနေနဲ့ ပြရရင် အောက်ပါအတိုင်း ဖြစ်ပါလိမ့်မယ်။  
+Run လိုက်လို့ ထွက်လာမဲ့ output screen ကို ဥပမာအနေနဲ့ ပြရရင် အောက်ပါအတိုင်း ဖြစ်ပါလိမ့်မယ်။  
 
 ```bash
 $ ./xlsx2csv-chk-fields.sh ./COVID-19_Languages.xlsx output
