@@ -14,7 +14,7 @@ from hangul_utils import *
 if len(sys.argv) < 3:
    print ("You must set two arguments!")
    print ("How to run:")
-   print ("python ./korean-breaks.py <raw-korean-text-filename> <word|morph|pos>")
+   print ("python ./korean-breaks.py <raw-korean-text-filename> <-word|-morph|-pos>")
    sys.exit()
 else:
    f1 = sys.argv[1]
