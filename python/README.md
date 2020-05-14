@@ -20,4 +20,7 @@
 6. [hex2uni.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/hex2uni.py)  
 (Python ver.2 နဲ့ ရေးထားတဲ့ code တွေက မြန်မာစာလိုမျိုး utf8 စာကြောင်းတွေကို hex value တွေနဲ့ အလုပ်လုပ်တဲ့ အခါရှိပါတယ်။ အဲဒါတွေကို ဖတ်လိုရအောင် print ထုတ်ဖို့အတွက် သုံးခဲ့တယ်)  
 
+7. [korean-breaks.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/korean-breaks.py)  
+(ကိုရီးယား စာကြောင်းတွေကို word segmentation, POS tagging လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ hangul-utils ကို သုံးထားပါတယ်။)  
+
 
