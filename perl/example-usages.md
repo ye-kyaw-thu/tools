@@ -1118,6 +1118,8 @@ Matched Char Sequence: . ? .
 
 အတို ရှင်းပြရရင် POS tagged corpus တစ်ခုကို developing လုပ်နေကြတယ် ဆိုပါစို့။ ထုံးစံအတိုင်းပဲ အဲဒီ corpus ထဲမှာ manual tagging အလုပ်မို့လို့ typing error တွေ၊ tag ရဲ့ symbol က slash "/" ဆိုပြီး သတ်မှတ်ထားတယ်ဆိုရင်လည်း slash ခြားဖို့ မေ့သွားတာမျိုးတွေ ဖြစ်တတ်ပါတယ်။ အဲဒီလိုင်းတွေကို လိုင်နံပါတ်နဲ့တကွ ဆွဲထုတ်ပြီးတော့ manual tagging လုပ်နေတဲ့သူဆီကို အကြောင်းကြားပြီးတော့ စာကြောင်းတွေကို ပြန်စစ်ပေးဖို့၊ POS tag တွေကို ပြန်ပြင်ပေးဖို့ ပြောရပါတယ်။ ပြန်ပြင်ပေးပြီး ရောက်လာတဲ့ အခါမှာတော့ အဲဒီ လိုင်းနံပါတ်တပ်ထားတဲ့ ပြင်ထားတဲ့ စာကြောင်းတွေသိမ်းထားတဲ့ ဖိုင်ကို ကိုင်ပြီး အော်ရဂျင်နယ် POS tagged corpus ကို ဝင် update လုပ်ပေးဖို့ လိုအပ်ပါတယ်။ ဒီ perl script က အဲဒီ အလုပ်အတွက် ရေးခဲ့တာ ဖြစ်ပါတယ်။ ဥပမာအနေနဲ့ စာကြောင်းအနည်းငယ်ကိုပဲ မြင်သာအောင် ပြပြီး ရှင်းမှာ ဖြစ်ပေမဲ့ လက်တွေမှာ ပြင်ရမယ့်စာကြောင်းတွေက corpus ကြီးရင်ကြီးသလို အများကြီးမို့၊ အခုလိုမျိုး script ရှိရင် အများကြီးအဆင်ပြေပါလိမ့်မယ်။  
 
+correction.txt ဆိုတဲ့ ဖိုင်ထဲမှာ line_number<TAB>Checked_POS_Tagged_Sentence ဆိုတဲ့ format နဲ့ အောက်ပါအတိုင်း ရှိနေပါတယ်။  
+	
 ```
 $ head correction.txt
 70 တစ်/tn လ/n လောက်/part ပါ/part ပဲ/part ။/punc
@@ -1132,6 +1134,8 @@ $ head correction.txt
 218 မြန်မာ/n သည်/ppm ကျွန်တော်/pron တို့/part နိုင်ငံ/n နှင့်/conj သံတမန်/n ရေးရာ/n စာချုပ်/n နှစ်/n ပေါင်း/n ၄၀/num ကျော်/adj ရှိ/v သော်လည်း/conj ကျွန်တော်/pron တို့/part နှင့်/conj အခု/n ထိ/ppm ဝေးကွာ/v သော/part စိမ်း/v သော/part နိုင်ငံ/n ဖြစ်/v နေ/part ပါ/part တယ်/ppm ။/punc
 ```
 
+POS tagged corpus ကြီးထဲကနေ မှားနေတဲ့ စာကြောင်းတွေ (သို့) အထက်ပါ လိုင်းနံပါတ်နဲ့ ဝင်ပြင်ချင်တဲ့ စာကြောင်းတွေကိုပဲ sed command နဲ့ ဆွဲထုတ်ပြရရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  ဒီနေရာမှာ -n က option က sed command ကို လိုင်းတိုင်းကို print မလုပ်ပါနဲ့ silent mode နဲ့ အလုပ်လုပ်ပေးပါ၊ သို့မဟုတ် အင်္ဂလိပ်လိုတော့ suppress automatic printing of pattern space လုပ်ပေးပါလို့ ဆိုလိုပါတယ်။ 70p ဆိုတာက လိုင်းနံပါတ် ၇၀ ကို print လုပ်ပေးပါလို့ condition ပေးထားတာ ဖြစ်ပါတယ်။  
+
 ```
 $ sed -n '70p;114p;133p;145p;173p;188p;192p;194p;204p;218p' ./myanmar.pos.rmpipe.txt
 တ/tn လ/n လောက်/part ပါပဲ ။/punc
@@ -1144,4 +1148,10 @@ $ sed -n '70p;114p;133p;145p;173p;188p;192p;194p;204p;218p' ./myanmar.pos.rmpipe
 ဟင့်အင်း/part ။/punc မ ရောင်း ပါ/part ဘူး/part ။/punc
 ဘယ်/adj ဟာ/pron က/ ပို/adj ကြီး/v လဲ/part ။/punc
 မြန်မာ/n သည်ppm ကျွန်တော်/pron တို့/part နိုင်ငံ/n နှင့်/conj သံတမန်/n ရေးရာ/n စာချုပ်/n နှစ်/n ပေါင်း/n ၄၀/num ကျော်/adj ရှိ/v သော်လည်း/conj ကျွန်တော်/pron တို့/part နှင့်/conj အခု/n ထိ/ppm ဝေးကွာသော/adj စိမ်းသော/adj နိုင်ငံ/n ဖြစ်/v နေ/part ပါ/part တယ်/ppm ။/punc
+```
+
+run တဲ့ပုံစံကတော့ အထက်ပါ ဖိုင်နှစ်ဖိုင်ကို command line argument အနေနဲ့ ပေးပြီးတော့ အောက်ပါအတိုင်း perl script ကို run ယုံပါပဲ။  
+
+```
+perl ./replace-with-lineno.pl ./correction.txt ./myanmar.pos.rmpipe.txt  > ./myanmar.pos.rmpipe.txt.corrected
 ```
