@@ -1114,3 +1114,34 @@ input: A shan n bang ai . La sha ma hte nam sha ma hpa sha mayu ai rai ? Htet u 
 Matched Char Sequence: . ? .
 ```
 
+## 31. [replace-with-lineno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/replace-with-lineno.pl)  
+
+အတို ရှင်းပြရရင် POS tagged corpus တစ်ခုကို developing လုပ်နေကြတယ် ဆိုပါစို့။ ထုံးစံအတိုင်းပဲ အဲဒီ corpus ထဲမှာ manual tagging အလုပ်မို့လို့ typing error တွေ၊ tag ရဲ့ symbol က slash "/" ဆိုပြီး သတ်မှတ်ထားတယ်ဆိုရင်လည်း slash ခြားဖို့ မေ့သွားတာမျိုးတွေ ဖြစ်တတ်ပါတယ်။ အဲဒီလိုင်းတွေကို လိုင်နံပါတ်နဲ့တကွ ဆွဲထုတ်ပြီးတော့ manual tagging လုပ်နေတဲ့သူဆီကို အကြောင်းကြားပြီးတော့ စာကြောင်းတွေကို ပြန်စစ်ပေးဖို့၊ POS tag တွေကို ပြန်ပြင်ပေးဖို့ ပြောရပါတယ်။ ပြန်ပြင်ပေးပြီး ရောက်လာတဲ့ အခါမှာတော့ အဲဒီ လိုင်းနံပါတ်တပ်ထားတဲ့ ပြင်ထားတဲ့ စာကြောင်းတွေသိမ်းထားတဲ့ ဖိုင်ကို ကိုင်ပြီး အော်ရဂျင်နယ် POS tagged corpus ကို ဝင် update လုပ်ပေးဖို့ လိုအပ်ပါတယ်။ ဒီ perl script က အဲဒီ အလုပ်အတွက် ရေးခဲ့တာ ဖြစ်ပါတယ်။ ဥပမာအနေနဲ့ စာကြောင်းအနည်းငယ်ကိုပဲ မြင်သာအောင် ပြပြီး ရှင်းမှာ ဖြစ်ပေမဲ့ လက်တွေမှာ ပြင်ရမယ့်စာကြောင်းတွေက corpus ကြီးရင်ကြီးသလို အများကြီးမို့၊ အခုလိုမျိုး script ရှိရင် အများကြီးအဆင်ပြေပါလိမ့်မယ်။  
+
+```
+$ head correction.txt
+70 တစ်/tn လ/n လောက်/part ပါ/part ပဲ/part ။/punc
+114 မနက်/n ခုနှစ်/tn နာရီ/n မှာ/ppm နှိုး/v ပေး/part ပါ/part ။/punc
+133 အခု/n အလုပ်/n လုပ်/v နေ/part ပါ/part တယ်/ppm ။/punc
+145 ဟုတ်ကဲ့/part ။/punc ရှိ/v ပါ/part တယ်/ppm ။/punc
+173 ပန်းသီး/n ၁/num လုံး/part ကို/ppm ဘယ်လောက်/adj လဲ/part ။/punc
+188 ဒီ/adj သစ်တော်သီး/n အချို/n လား/part အချဉ်/n လား/part ။/punc
+192 ဟုတ်ကဲ့/part ။/punc ထည့်/v ပေး/part ပါ/part မယ်/ppm ။/punc
+194 ဟင့်အင်း/part ။/punc မ/part ရောင်း/v ပါ/part ဘူး/part ။/punc
+204 ဘယ်/adj ဟာ/pron က/ppm ပို/adj ကြီး/v လဲ/part ။/punc
+218 မြန်မာ/n သည်/ppm ကျွန်တော်/pron တို့/part နိုင်ငံ/n နှင့်/conj သံတမန်/n ရေးရာ/n စာချုပ်/n နှစ်/n ပေါင်း/n ၄၀/num ကျော်/adj ရှိ/v သော်လည်း/conj ကျွန်တော်/pron တို့/part နှင့်/conj အခု/n ထိ/ppm ဝေးကွာ/v သော/part စိမ်း/v သော/part နိုင်ငံ/n ဖြစ်/v နေ/part ပါ/part တယ်/ppm ။/punc
+```
+
+```
+$ sed -n '70p;114p;133p;145p;173p;188p;192p;194p;204p;218p' ./myanmar.pos.rmpipe.txt
+တ/tn လ/n လောက်/part ပါပဲ ။/punc
+မနက်/n ခုနှစ်/tn နာရီ/n /မှာ/ppm နှိုး/v ပေး/part ပါ/part ။/punc
+အခု/n အလုပ်/n လုပ် နေ ပါ/part တယ်/ppm ။/punc
+ဟုတ်ကဲ့/part ။/punc ရှိ ပါ/part တယ်/ppm ။/punc
+ပန်းသီး/n ၁/num လုံး/p ကို/ppm ဘယ်လောက်/adj လဲ/part ။/punc
+ဒီ/adj သစ်တော်/n သီး/n အချို/n လား/part အချဉ်/n လား/ ။/punc
+ဟုတ်ကဲ့/part ။/punc ထည့်/ ပေး/part ပါ/part မယ်/ppm ။/punc
+ဟင့်အင်း/part ။/punc မ ရောင်း ပါ/part ဘူး/part ။/punc
+ဘယ်/adj ဟာ/pron က/ ပို/adj ကြီး/v လဲ/part ။/punc
+မြန်မာ/n သည်ppm ကျွန်တော်/pron တို့/part နိုင်ငံ/n နှင့်/conj သံတမန်/n ရေးရာ/n စာချုပ်/n နှစ်/n ပေါင်း/n ၄၀/num ကျော်/adj ရှိ/v သော်လည်း/conj ကျွန်တော်/pron တို့/part နှင့်/conj အခု/n ထိ/ppm ဝေးကွာသော/adj စိမ်းသော/adj နိုင်ငံ/n ဖြစ်/v နေ/part ပါ/part တယ်/ppm ။/punc
+```
