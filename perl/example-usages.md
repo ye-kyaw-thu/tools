@@ -1155,3 +1155,50 @@ run တဲ့ပုံစံကတော့ အထက်ပါ ဖိုင်�
 ```
 perl ./replace-with-lineno.pl ./correction.txt ./myanmar.pos.rmpipe.txt  > ./myanmar.pos.rmpipe.txt.corrected
 ```
+
+## 32. [chk-pos-tags.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-pos-tags.pl)  
+
+မြန်မာစာ NLP R&D တိုးတက်ဖွံ့ဖြိုးဖို့အတွက် ကျွန်တော်ဦးဆောင် လုပ်နေတဲ့ myPOS corpus ကို extension လုပ်ဖို့ စာကြောင်းတွေကို manual corpus တပ်ကြတဲ့အခါမှာ ထုံးစံအတိုင်းပဲ လူက လုပ်ရတဲ့ အလုပ်မို့လို့ အမှားမကင်းပါဘူး။ အများသောအားဖြင့် typing error ဖြစ်တာမျိုး၊ tag delimeter (e.g. /) ကိုပဲ ရိုက်ပြီး POS tag name ကို ရိုက်ထည့်ဖို့ မေ့သွားတာမျိုးတွေ ဖြစ်တတ်ပါတယ်။ အဲဒီအမှားတွေကို သတ်မှတ်ထားတဲ့ myPOS POS tag-set ၁၅ခုထဲမှာ ပါသလား၊ မပါသလား ဆိုတာကို တိုက်စစ်ဖို့အတွက် အကြမ်းရေးထားတဲ့ perl script ပါ။  
+
+command line argument အဖြစ်ပေးမဲ့ POS tagged corpus ဖိုင်ကို မြင်သာအောင် head command နဲ့ ပထမဆုံး စာကြောင်း ၁၀ကြောင်းကို ရိုက်ထုတ်ကြည့်ရအောင်။  
+
+```
+$ head ./myanmar.pos.rmpipe.txt
+မင်္ဂလာ/n ပါ/part ။/punc
+မင်္ဂလာ/n ပါ/part ။/punc
+မင်္ဂလာ/n ပါ/part ။/punc
+ကျေးဇူးတင်/v ပါ/part တယ်/ppm ။/punc
+ရ/v ပါ/part တယ်/ppm/part ။/punc
+ကျေးဇူးတင်/v စရာ/part မ/part လို/v ပါ/part ဘူး/part ။/punc
+စိတ်မကောင်း/v ပါ/part ဘူး/part ။/punc
+ခွင့်လွှတ်/v ပါ/part ။/punc
+ရ/v ပါ/part တယ်/ppm ။/punc
+ဟုတ်/v လား/part ။/punc
+```
+
+chk-pos-tags.pl ဖိုင်ကို run တဲ့အခါမှာ အောက်ပါအတိုင်း မှားတဲ့စာကြောင်း ရဲ့လိုင်းနံပါတ်ရော၊ စာကြောင်းရော ရိုက်ထုတ်ပြပါလိမ့်မယ်။  
+ပြီးတော့ ပထမဆုံး မှားတဲ့ စာလုံးအပိုင်းကိုလည်း ရိုက်ထုတ်ပြမှာဖြစ်ပါတယ်။ တစ်ခုရှိတာက တစ်ခုထက်မက ပိုတဲ့ အမှားတွေက စာကြောင်းတစ်ကြောင်းထဲမှာလည်း ရှိနေနိုင်ပါတယ်။ အဲဒါကြောင့် ပြန်စစ်ဆေးတဲ့ အခါမှာတော့ စာကြောင်းတစ်ကြောင်းလုံးကို ဂရုစိုက် စစ်ဆေးစေချင်ပါတယ်။ POS tagging ရဲ့ သဘောသဘာဝအရ စာလုံး တစ်လုံးကို tag မလုပ်ခင်မှာလည်း ရှေ့နောက် စာလုံးတွေကို တွဲကြည့်ရမှာ ဖြစ်ပါတယ်။  
+
+```
+OS)/smt-with-pos/my-pos-tagging/err-chk-github$ ./chk-pos-tags.pl ./myanmar.pos.rmpipe.txt | head -n 20
+Tag ERROR! Line no (70): တ/tn လ/n လောက်/part ပါပဲ ။/punc
+ပါပဲ:
+Tag ERROR! Line no (114): မနက်/n ခုနှစ်/tn နာရီ/n /မှာ/ppm နှိုး/v ပေး/part ပါ/part ။/punc
+:မှာ
+Tag ERROR! Line no (133): အခု/n အလုပ်/n လုပ် နေ ပါ/part တယ်/ppm ။/punc
+လုပ်:
+Tag ERROR! Line no (145): ဟုတ်ကဲ့/part ။/punc ရှိ ပါ/part တယ်/ppm ။/punc
+ရှိ:
+Tag ERROR! Line no (173): ပန်းသီး/n ၁/num လုံး/p ကို/ppm ဘယ်လောက်/adj လဲ/part ။/punc
+လုံး:p
+Tag ERROR! Line no (188): ဒီ/adj သစ်တော်/n သီး/n အချို/n လား/part အချဉ်/n လား/ ။/punc
+လား:
+Tag ERROR! Line no (192): ဟုတ်ကဲ့/part ။/punc ထည့်/ ပေး/part ပါ/part မယ်/ppm ။/punc
+ထည့်:
+Tag ERROR! Line no (194): ဟင့်အင်း/part ။/punc မ ရောင်း ပါ/part ဘူး/part ။/punc
+မ:
+Tag ERROR! Line no (204): ဘယ်/adj ဟာ/pron က/ ပို/adj ကြီး/v လဲ/part ။/punc
+က:
+Tag ERROR! Line no (218): မြန်မာ/n သည်ppm ကျွန်တော်/pron တို့/part နိုင်ငံ/n နှင့်/conj သံတမန်/n ရေးရာ/n စာချုပ်/n နှစ်/n ပေါင်း/n ၄၀/num ကျော်/adj ရှိ/v သော်လည်း/conj ကျွန်တော်/pron တို့/part နှင့်/conj အခု/n ထိ/ppm ဝေးကွာသော/adj စိမ်းသော/adj နိုင်ငံ/n ဖြစ်/v နေ/part ပါ/part တယ်/ppm ။/punc
+သည်ppm:
+```
