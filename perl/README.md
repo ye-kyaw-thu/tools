@@ -96,5 +96,8 @@
 31. [replace-with-lineno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/replace-with-lineno.pl)  
     (POS tagging ကို manual tagging လုပ်တဲ့အခါမှာ ပထမဆုံး ဗားရှင်းမှာ အမှားတွေ ရှိကိုရှိပါတယ်။ အဲဒီ အမှားရှိတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့တကွ ဆွဲထုတ်ပြီးတော့ manual tagging ပြန်လုပ်ကြရပါတယ်။ အမှားတွေကို ပြင်ကြရပါတယ်။ အခု replace-with-lineno.pl ပရိုဂရမ်က အဲဒီ update လုပ်ထားတဲ့ POS tagged စာကြောင်းတွေကို လိုင်းနံပါတ်အလိုက် original POS tagged corpus ထဲကို ဝင်ပြင်ဖို့အတွက်၊ တနည်းအားဖြင့် search and replace with line number လုပ်ဖို့အတွက် သုံးခဲ့ပါတယ်။)  
     
+32. [chk-pos-tags.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-pos-tags.pl)  
+    (POS tag corpus ကို manual ဆောက်တဲ့အခါမှာ သတ်မှတ်ထားတဲ့ POS tag-set မဟုတ်ပဲ မှားနေတဲ့ POS tag ပါနေတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်)  
+    
 
-   
+
