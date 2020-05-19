@@ -1905,6 +1905,8 @@ no. of field: 23
 
 ## 66. [change-format.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/change-format.sh)  
 
+eg.ko.pos.txt ဖိုင်ထဲမှာ ရှိနေတဲ့ format က အောက်ပါအတိုင်းပါ။ ကိုရီးယား စာကြောင်းတွေကို POS tagger တစ်ခုနဲ့ tagging လုပ်ပြီးတော့ ထွက်လာတဲ့ output example ပါ။ တကယ်တမ်း ဒီ POS tag တွေကို machine translation လုပ်တဲ့ အခါမှာ factor (i.e vector) တစ်ခုအနေနဲ့ ယူသုံးဖို့အတွက် model ဆောက်ဖို့အတွက် input ပေးတဲ့ ပုံစံက အောက်ပါပုံစံအတိုင်းမဟုတ်ပဲ word|tag ဆိုတဲ့ ပုံစံပါ။ change-format.sh က လက်ရှိ format ကနေ ကိုယ်လိုချင်တဲ့ ပုံစံတစ်ခုကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ bash one line shell script ပါ။  
+
 ```
 $ cat ./eg.ko.pos.txt
 ['여름|NNG', '이|JKS', '되|VV', '자|EC', '못|NNG', '의|JKG', '물|NNG', '이|JKS', '다|MAG', '말라|VV+EC', '버렸|VX+EP', '다|EF', '.|SF']
@@ -1918,6 +1920,8 @@ $ cat ./eg.ko.pos.txt
 ['미얀마|NNP', '나라|NNG', '부탁|NNG', '합니다|XSV+EF', '.|SF']
 ['햇빛|NNG', '이|JKS', '너무|MAG', '강해서|VA+EC', '손|NNG', '으로|JKB', '해|NNG', '를|JKO', '가리|VV', '고|EC', '걸|VV', '었|EP', '어요|EF', '.|SF']
 ```
+
+run တဲ့ အခါမှာတော့ အထက်ပါ ဖိုင်ကို ./change-format.sh ပရိုဂရမ်ကို command line argument အနေနဲ့ pass လုပ်ပေးလိုက်ယုံပါပဲ။ output ကတော့ အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။ script ထဲမှာ "cat -" ကိုသုံးပြထားပါတယ်။ cat command ရဲ့ "-" option ကတော့ STDIN ကနေ input ကို accept လုပ်တဲ့ option ဖြစ်ပါတယ်။  
 
 ```
 $ ./change-format.sh < ./eg.ko.pos.txt
