@@ -201,4 +201,8 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 65. [excel2csv-chk-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/from65/excel2csv-chk-fields.sh)  
 (Excel ဖိုင် (xls မဟုတ်ပဲ .xlsx) ထဲက sheet တစ်ခုချင်းစီကို csv ဖိုင်တွေအဖြစ် ပြောင်းပြီးတော့ field တွေ ဘယ်နှစ်ခုပါသလဲဆိုတာကို ရေတွက်ပေးပါလိမ့်မယ်)  
 
+66. [change-format.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/change-format.sh)  
+(format တစ်ခုကနေ ကိုယ်လိုချင်တဲ့ format ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ one line shell script ပါ)  
+
+
 
