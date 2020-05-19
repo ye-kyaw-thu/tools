@@ -1903,3 +1903,32 @@ no. of field: 37
 no. of field: 23
 ```
 
+## 66. [change-format.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/change-format.sh)  
+
+```
+$ cat ./eg.ko.pos.txt
+['여름|NNG', '이|JKS', '되|VV', '자|EC', '못|NNG', '의|JKG', '물|NNG', '이|JKS', '다|MAG', '말라|VV+EC', '버렸|VX+EP', '다|EF', '.|SF']
+['구급차|NNG', '좀|MAG', '빨리|MAG', '보내|VV+EC', '주|VX', '시|EP', '겠|EP', '어요|EF', '?|SF']
+['저|NP', '는|JX', '밥|NNG', '을|JKO', '먹|VV', '었|EP', '습니다|EF', '.|SF']
+['학생|NNG', '시절|NNG', '을|JKO', '돌아보|VV', '다|EF', '.|SF']
+['모든|MM', '것|NNB', '이|JKS', '내|NP+JKG', '잘못|NNG', '이|VCP', '지|EC', '유구무언|NNG', '이|VCP', '다|EF', '.|SF']
+['그|MM', '녀|NNG', '는|JX', '아직|MAG', '사랑니|NNG', '가|JKS', '안|MAG', '났|VV+EP', '다|EF', '.|SF']
+['날|NNG', '이|JKS', '새|VV', '니|EC', '맑|VA', '고|EC', '고요|NNG', '한|XSA+ETM', '아침|NNG', '이|VCP', '었|EP', '다|EF', '.|SF']
+['이야기|NNG', '소리|NNG', '가|JKS', '가끔|MAG', '창|NNG', '밖|NNG', '으로|JKB', '새|VV', '어|EC', '나왔|VV+EP', '다|EF', '.|SF']
+['미얀마|NNP', '나라|NNG', '부탁|NNG', '합니다|XSV+EF', '.|SF']
+['햇빛|NNG', '이|JKS', '너무|MAG', '강해서|VA+EC', '손|NNG', '으로|JKB', '해|NNG', '를|JKO', '가리|VV', '고|EC', '걸|VV', '었|EP', '어요|EF', '.|SF']
+```
+
+```
+$ ./change-format.sh < ./eg.ko.pos.txt
+여름|NNG 이|JKS 되|VV 자|EC 못|NNG 의|JKG 물|NNG 이|JKS 다|MAG 말라|VV+EC 버렸|VX+EP 다|EF .|SF
+구급차|NNG 좀|MAG 빨리|MAG 보내|VV+EC 주|VX 시|EP 겠|EP 어요|EF ?|SF
+저|NP 는|JX 밥|NNG 을|JKO 먹|VV 었|EP 습니다|EF .|SF
+학생|NNG 시절|NNG 을|JKO 돌아보|VV 다|EF .|SF
+모든|MM 것|NNB 이|JKS 내|NP+JKG 잘못|NNG 이|VCP 지|EC 유구무언|NNG 이|VCP 다|EF .|SF
+그|MM 녀|NNG 는|JX 아직|MAG 사랑니|NNG 가|JKS 안|MAG 났|VV+EP 다|EF .|SF
+날|NNG 이|JKS 새|VV 니|EC 맑|VA 고|EC 고요|NNG 한|XSA+ETM 아침|NNG 이|VCP 었|EP 다|EF .|SF
+이야기|NNG 소리|NNG 가|JKS 가끔|MAG 창|NNG 밖|NNG 으로|JKB 새|VV 어|EC 나왔|VV+EP 다|EF .|SF
+미얀마|NNP 나라|NNG 부탁|NNG 합니다|XSV+EF .|SF
+햇빛|NNG 이|JKS 너무|MAG 강해서|VA+EC 손|NNG 으로|JKB 해|NNG 를|JKO 가리|VV 고|EC 걸|VV 었|EP 어요|EF .|SF
+```
