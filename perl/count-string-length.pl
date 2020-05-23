@@ -1,7 +1,7 @@
 #!/usr/bin/env perl
 
 # counting string length together with line number
-# Ye Kyaw Thu, AI Lab., OPU, Japan
+# Ye Kyaw Thu, LST Lab., NECTEC, Thailand
 # How to run: perl ./count-string-length.pl <input-file>
 # e.g. $ perl count-string-length.pl ui.my
 
