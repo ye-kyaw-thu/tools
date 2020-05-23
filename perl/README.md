@@ -99,5 +99,9 @@
 32. [chk-pos-tags.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-pos-tags.pl)  
     (POS tag corpus ကို manual ဆောက်တဲ့အခါမှာ သတ်မှတ်ထားတဲ့ POS tag-set မဟုတ်ပဲ မှားနေတဲ့ POS tag ပါနေတဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်)  
     
+33. [count-string-length.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/count-string-length.pl)  
+    (ဖိုင်ထဲမှာရှိတဲ့ စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ length သို့မဟုတ် character ဘယ်နှလုံးရှိတယ်ဆိုတာကို လိုင်းနံပါတ်၊ စာကြောင်းနဲ့တကွ ရိုက်ထုတ်ဖို့အတွက် ရေးခဲ့ပါတယ်)  
+    
+    
 
 
