@@ -204,5 +204,8 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 66. [change-format.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/change-format.sh)  
 (format တစ်ခုကနေ ကိုယ်လိုချင်တဲ့ format ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ one line shell script ပါ)  
 
+67. [format-mecab-pos.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/format-mecab-pos.sh)  
+(ဂျပန်စာ Part-of-Speech and Morphological Analyzer ကနေ ထွက်လာတဲ့ output ကနေ word/pos, word/pos_subpos ပုံစံကို ပြောင်းယူဖို့ ရေးခဲ့တယ်။)  
+
 
 
