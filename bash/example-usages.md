@@ -1939,9 +1939,10 @@ $ ./change-format.sh < ./eg.ko.pos.txt
 
 ## 67. [format-mecab-pos.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/format-mecab-pos.sh)  
 
-ဂျပန်စာ Part-of-Speech and Morphological Analyzer တစ်ခုဖြစ်တဲ့ Mecab ကနေ ထွက်လာတဲ့ output ကနေ word/pos, word/pos_subpos ပုံစံကို ပြောင်းယူဖို့ ရေးခဲ့ပါတယ်။  
-ဒီ shell script ကို မသုံးခင်မှာ ကိုယ့်စက်ထဲမှာ အရင်ဆုံး mecab ကို install လုပ်ထားရမှာဖြစ်ပါတယ်။  
+ဂျပန်စာ Part-of-Speech and Morphological Analyzer တစ်ခုဖြစ်တဲ့ Mecab ကနေ ထွက်လာတဲ့ output ကနေ word/pos, word/pos_subpos ပုံစံကို ပြောင်းယူဖို့ ရေးခဲ့ပါတယ်။ ဒီ shell script ကို မသုံးခင်မှာ ကိုယ့်စက်ထဲမှာ အရင်ဆုံး mecab ကို install လုပ်ထားရမှာဖြစ်ပါတယ်။  
 Link: [https://taku910.github.io/mecab/](https://taku910.github.io/mecab/)  
+
+အရင်ဆုံး ဂျပန်စာကြောင်း ခြောက်ကြောင်းကို ရိုက်ထည့်ထားတဲ့ example test file ကို cat command နဲ့ ရိုက်ထုတ်ကြည့်ရအောင်။ ဒီဖိုင်ထဲမှာ ရိုက်ထည့်ထားတဲ့ စာကြောင်း ခြောက်ကြောင်းက ဂျပန်-အင်္ဂလိပ်-တရုပ် [basic expression parallel corpus](http://nlp.ist.i.kyoto-u.ac.jp/index.php?%E6%97%A5%E8%8B%B1%E4%B8%AD%E5%9F%BA%E6%9C%AC%E6%96%87%E3%83%87%E3%83%BC%E3%82%BF) အသေးတစ်ခုကနေ ယူထားတာ ဖြစ်ပါတယ်။  
 
 ```
 $ cat ./jp.test.txt
@@ -1952,6 +1953,8 @@ $ cat ./jp.test.txt
 レベル１の機能に下記の機能をプラスする。
 １００名の方々が、夏の夜を思いっきり満喫しました。
 ```
+
+mecab program ကို jp.test.txt ဖိုင်ကို pass လုပ်ပြီးကြည့်ရင် default က အောက်ပါအတိုင်း ဂျပန်စာလုံး တစ်လုံးချင်းစီ အတွက် POS, Sub POS စတာတွေကို စာကြောင်း တစ်ကြောင်းစီ ရိုက်ထုတ်ပြပါလိမ့်မယ်။  
 
 ```
 $ mecab ./jp.test.txt
@@ -2038,8 +2041,10 @@ EOS
 EOS
 ```
 
+-pos option နဲ့ run မယ် ဆိုရင် mecab ကနေ ထွက်လာတဲ့ ကော်လံ format ကနေမှ general POS tag information ကိုပဲဆွဲထုတ်ယူပြီး word/pos ပုံံစံ (တနည်းအားဖြင့် ပြောရရင် left-to-right စာကြောင်းပုံစံ) နဲ့ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
+
 ```
-$ ./format-mecab-pos.sh pos ./jp.test.txt
+$ ./format-mecab-pos.sh -pos ./jp.test.txt
 1 それ/名詞 が/助詞 ある/動詞 よう/名詞 に/助詞 いつも/副詞 思い/動詞 ます/助動詞 。/記号 
 2 勝と/動詞 う/助動詞 など/助詞 と/助詞 誰/名詞 が/助詞 思う/動詞 か/助詞 。/記号 
 3 彼/名詞 が/助詞 その/連体詞 日/名詞 の/助詞 夜/名詞 の/助詞 話/名詞 を/助詞 する/動詞 。/記号 
@@ -2048,8 +2053,10 @@ $ ./format-mecab-pos.sh pos ./jp.test.txt
 6 １/名詞 ０/名詞 ０/名詞 名/名詞 の/助詞 方々/名詞 が/助詞 、/記号 夏/名詞 の/助詞 夜/名詞 を/助詞 思いっきり/副詞 満喫/名詞 し/動詞 まし/助動詞 た/助動詞 。/記号 
 ```
 
+-subpos option နဲ့ run ရင်တော့ အောက်ပါအတိုင်း word/pos_subpos ပုံစံနဲ့ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
+
 ```
-$ ./format-mecab-pos2.sh subpos ./jp.test.txt
+$ ./format-mecab-pos2.sh -subpos ./jp.test.txt
 1 それ/名詞_代名詞 が/助詞_格助詞 ある/動詞_自立 よう/名詞_非自立 に/助詞_副詞化 いつも/副詞_一般 思い/動詞_自立 ます/助動詞_* 。/記号_句点 
 2 勝と/動詞_自立 う/助動詞_* など/助詞_副助詞 と/助詞_格助詞 誰/名詞_代名詞 が/助詞_格助詞 思う/動詞_自立 か/助詞_副助詞／並立助詞／終助詞 。/記号_句点 
 3 彼/名詞_代名詞 が/助詞_格助詞 その/連体詞_* 日/名詞_非自立 の/助詞_連体化 夜/名詞_副詞可能 の/助詞_連体化 話/名詞_サ変接続 を/助詞_格助詞 する/動詞_自立 。/記号_句点 
