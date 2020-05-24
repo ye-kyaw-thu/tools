@@ -6,7 +6,7 @@
 # ./format-mecab-pos.sh subpos ./jp.test.txt
 # ./format-mecab-pos.sh pos ./jp.test.txt
 
-if [[ $1 == "subpos" ]]; then
+if [[ $1 == "-subpos" ]]; then
    cat $2 |\
    mecab |\
    cut -f1,2 -d"," |\
@@ -14,7 +14,7 @@ if [[ $1 == "subpos" ]]; then
    perl -pe 's/\n/ /g; s/EOS/\n/g;' |\
    awk '!/^\s*$/ {print NR, $0}' |\
    sed 's/ \+/ /g; s/^ $//;';
-elif [[ $1 == "pos" ]]; then
+elif [[ $1 == "-pos" ]]; then
    cat $2 |\
    mecab |\
    cut -f1 -d"," |\
