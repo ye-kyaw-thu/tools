@@ -2041,7 +2041,7 @@ EOS
 EOS
 ```
 
--pos option နဲ့ run မယ် ဆိုရင် mecab ကနေ ထွက်လာတဲ့ ကော်လံ format ကနေမှ general POS tag information ကိုပဲဆွဲထုတ်ယူပြီး word/pos ပုံံစံ (တနည်းအားဖြင့် ပြောရရင် left-to-right စာကြောင်းပုံစံ) နဲ့ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
+"-pos" option နဲ့ run မယ် ဆိုရင် mecab ကနေ ထွက်လာတဲ့ ကော်လံ format ကနေမှ general POS tag information ကိုပဲဆွဲထုတ်ယူပြီး word/pos ပုံံစံ (တနည်းအားဖြင့် ပြောရရင် left-to-right စာကြောင်းပုံစံ) နဲ့ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
 
 ```
 $ ./format-mecab-pos.sh -pos ./jp.test.txt
@@ -2053,7 +2053,7 @@ $ ./format-mecab-pos.sh -pos ./jp.test.txt
 6 １/名詞 ０/名詞 ０/名詞 名/名詞 の/助詞 方々/名詞 が/助詞 、/記号 夏/名詞 の/助詞 夜/名詞 を/助詞 思いっきり/副詞 満喫/名詞 し/動詞 まし/助動詞 た/助動詞 。/記号 
 ```
 
--subpos option နဲ့ run ရင်တော့ အောက်ပါအတိုင်း word/pos_subpos ပုံစံနဲ့ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
+"-subpos" option နဲ့ run ရင်တော့ အောက်ပါအတိုင်း word/pos_subpos ပုံစံနဲ့ ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
 
 ```
 $ ./format-mecab-pos2.sh -subpos ./jp.test.txt
