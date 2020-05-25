@@ -2,7 +2,7 @@
 # Written by Ye Kyaw Thu, LST Lab., NECTEC, Thailand
 # Written for changing output of mecab
 # Last updated: 25 May 2020
-# How to run: ./format-mecab-pos.sh <pos|subpos> <Japanese-text-filename>
+# How to run: ./format-mecab-pos.sh <-pos|-subpos> <Japanese-text-filename>
 # ./format-mecab-pos.sh subpos ./jp.test.txt
 # ./format-mecab-pos.sh pos ./jp.test.txt
 
