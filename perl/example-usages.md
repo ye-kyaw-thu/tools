@@ -1261,6 +1261,10 @@ $ perl ./print-diff-word.pl ./error.txt.word ./correct.txt.word
 သိဒယ်|သိတယ် သိဒယ်|သိတယ်
 ဂ|က ဘျင်|ဘုရင် ဒေ|တယ်
 ```
+ဒီနေရာမှာ "တာ" ဆိုတဲ့ စာလုံးရယ်၊ "ပြည်တော်ပြန်" စာလုံးနဲ့ "ကရင်ပြည်နယ်အစိုးရ" ဆိုတဲ့ စာလုံးသုံးလုံး က ဘာတွေက မှားနေတာလဲ ဆိုတာကို ကျွန်တော် အခုသုံးနေတဲ့ Chrome browser မှာတော့ မသိသာပါဘူး။ အဲဒါကြောင့် အဲဒီ စာလုံးတွေကို gedit text editor မှာ ကော်ပီကူးပြီးတော့ screen capture လုပ်ထားတဲ့ ပုံဖိုင်ကို အောက်ပါအတိုင်း တင်ပေးထားပါတယ်။ သေချာ ဂရုစိုက်ကြည့်ရင် မြင်ရပါလိမ့်မယ်။ "သုည ရေးချ ရေးချ" ကို "တာ" အဖြစ် ရိုက်ထားတာ နဲ့ အသတ်တွေကို ထပ်ပြီး ရိုက်ထားတာတွေကို။  
+
+![invisible-spelling-error-example](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/invisible-spelling-error1.png)  
+
 
 input လုပ်တဲ့ ဖိုင်တွေထဲမှာ တကယ်လို့ syllable segmentation ဖြတ်ထားရင် syllable level comparison အဖြစ် အလုပ်လုပ်သွားပါလိမ့်မယ်။ ./error.txt.word.syl.clean ဖိုင်ကတော့ ./error.txt.word ဖိုင်ကို syllable ဖြတ်ထားပြီးတော့ ပိုနေတဲ့ space တွေကို clean လုပ်ထားတဲ့ ဖိုင်ဖြစ်ပါတယ်။  
 
