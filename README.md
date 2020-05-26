@@ -114,6 +114,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 31. [replace-with-lineno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/replace-with-lineno.pl)  
 32. [chk-pos-tags.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-pos-tags.pl) 
 33. [count-string-length.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/count-string-length.pl)  
+34. [print-diff-word.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-diff-word.pl)  
 
 # python
 
