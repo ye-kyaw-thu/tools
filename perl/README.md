@@ -102,6 +102,7 @@
 33. [count-string-length.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/count-string-length.pl)  
     (ဖိုင်ထဲမှာရှိတဲ့ စာကြောင်းတစ်ကြောင်းချင်းစီရဲ့ length သို့မဟုတ် character ဘယ်နှလုံးရှိတယ်ဆိုတာကို လိုင်းနံပါတ်၊ စာကြောင်းနဲ့တကွ ရိုက်ထုတ်ဖို့အတွက် ရေးခဲ့ပါတယ်)  
     
-    
+34. [print-diff-word.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-diff-word.pl)  
+    (စာကြောင်းအရေအတွက် တူတဲ့ဖိုင်နှစ်ဖိုင်ထဲက စာကြောင်းတွေကို pair အလိုက်နှိုင်းယှဉ်ကြည့်ပြီးတော့ မတူတဲ့ စာလုံးတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်)
 
 
