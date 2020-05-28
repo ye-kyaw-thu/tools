@@ -106,6 +106,6 @@
     (စာကြောင်းအရေအတွက် တူတဲ့ဖိုင်နှစ်ဖိုင်ထဲက စာကြောင်းတွေကို pair အလိုက်နှိုင်းယှဉ်ကြည့်ပြီးတော့ မတူတဲ့ စာလုံးတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တယ်)   
     
 35. [print-union-isect-diff.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-union-isect-diff.pl)  
-    (list ထဲက element တွေကို သင်္ချာရဲ့ set operation အနေနဲ့ union, intersection, difference ကို hash ကို သုံးပြီး code လုပ်တဲ့ ပုံစံပါ)  
+    (array ထဲက element တွေကို သင်္ချာရဲ့ set operation အနေနဲ့ union, intersection, difference ကို hash ကို သုံးပြီး code လုပ်တဲ့ ပုံစံပါ)  
 
 
