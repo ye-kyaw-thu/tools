@@ -208,4 +208,5 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 (ဂျပန်စာ Part-of-Speech and Morphological Analyzer ကနေ ထွက်လာတဲ့ output ကနေ word/pos, word/pos_subpos ပုံစံကို ပြောင်းယူဖို့ ရေးခဲ့တယ်။)  
 
 
-
+68. [cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh)  
+( Stastical Machine Translation (SMT) experiment တွေကို အများကြီး လုပ်တဲ့ အခါမှာ configuration file တွေ perl script တွေရဲ့ တချို့ လိုင်းတွေကို ဝင်ပြင်ပြီး သက်ဆိုင်ရာ ဖိုလ်ဒါအောက်ကို ကော်ပီကူးဖို့အတွက်ပြင်ဆင်ရပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။ )  
