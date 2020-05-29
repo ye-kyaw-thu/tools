@@ -2064,3 +2064,131 @@ $ ./format-mecab-pos2.sh -subpos ./jp.test.txt
 5 レベル/名詞_一般 １/名詞_数 の/助詞_連体化 機能/名詞_サ変接続 に/助詞_格助詞 下記/名詞_一般 の/助詞_連体化 機能/名詞_サ変接続 を/助詞_格助詞 プラス/名詞_一般 する/動詞_自立 。/記号_句点 
 6 １/名詞_数 ０/名詞_数 ０/名詞_数 名/名詞_接尾 の/助詞_連体化 方々/名詞_一般 が/助詞_格助詞 、/記号_読点 夏/名詞_一般 の/助詞_連体化 夜/名詞_副詞可能 を/助詞_格助詞 思いっきり/副詞_一般 満喫/名詞_サ変接続 し/動詞_自立 まし/助動詞_* た/助動詞_* 。/記号_句点 
 ```
+
+## 68. [cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh)  
+
+SMT experiment တွေကို moses toolkit ကို သုံးပြီးတော့ experiment လုပ်တဲ့ အခါမှာ command line ကနေ shell script ရေးပြီး run တဲ့ ပုံစံမျိုးလည်း ရှိပေမဲ့ နောက်ပိုင်း version တွေမှာ ems system လို config ဖိုင်ပြင်ပြီးတော့ run တာက ပိုအဆင်ပြေပါတယ်။ သို့သော် အဲဒီ အတွက် configuration file တွေကို ကြိုတင်ပြင်ဆင်ရပါတယ်။ အကြမ်းမျဉ်းရှင်းပြရရင် configuration ဖိုင်ဆိုတာက machine translation လုပ်တဲ့အခါမှာ ပြင်ရတဲ့ setting ဖိုင်ပါပဲ။ machine translation မှာ လုပ်ရတဲ့ process တွေက အများကြီး၊ မော်ဒယ်ဆောက်ရတာကလည်း အဆင့်ဆင့်မို့လို့ အဲဒီ process တွေ၊ မော်ဒယ် ဆောက်တဲ့ အပိုင်းတစ်ခုချင်းစီနဲ့ ပတ်သတ်ပြီး ညွှန်ကြားပေးရတာပါ။ ဥပမာ parallel data ကို ဘယ် path အောက်မှာထားထားတယ်၊ moses toolkit ကို ဘယ် path အောက်မှာ install လုပ်ထားတယ်၊ language model ကို ဘယ် third party tool ကို သုံးမယ်၊ alignment ကို ဘယ် လို tool နဲ့ ဘယ်လို parmeter တွေနဲ့ run ခိုင်မယ် စသည်ဖြင့် setting တွေပါ။ မြင်သာအောင် config.baseline (Phrase Based SMT) အတွက် ပြင်ဆင်ထားတဲ့ config template ဖိုင်ရဲ့ ပထမဆုံး အကြောင်း ၅၀ ကို အောက်မှာ ပြထားပါတယ်။  
+
+```
+(base) ye@ykt-pro:~/exp/dw-bk-my/data$ cat -n config.baseline | head -n 50
+     1	
+     2	### directories that contain tools and data
+     3	# 
+     4	# moses
+     5	#moses-src-dir = /home/ros/mosesdecoder
+     6	#moses-src-dir = /home/lar/tool/moses/
+     7	moses-src-dir = /home/ye/tool/moses-bin/ubuntu-17.04/moses/
+     8	
+     9	# moses binaries
+    10	moses-bin-dir = $moses-src-dir/bin
+    11	
+    12	# moses scripts
+    13	moses-script-dir = $moses-src-dir/scripts
+    14	
+    15	# directory where GIZA++/MGIZA programs resides
+    16	# external-bin-dir = /home/lar/tool/giza-pp-master/mkcls-v2
+    17	#external-bin-dir = /home/lar/tool/giza-pp-master/GIZA++-v2
+    18	#external-bin-dir = /home/lar/tool/giza-pp-master/
+    19	#external-bin-dir = /home/ye/tool/mgiza/mgizapp/bin
+    20	external-bin-dir = /home/ye/tool/giza-pp/GIZA++-v2
+    21	
+    22	# srilm
+    23	#srilm-dir = /data/lttools/training/srilm/srilm-1.6.0/bin/i686-m64
+    24	#I haven't installed SRILM yet on Deep Learning Box computer
+    25	#srilm-dir = /home/ros/tool/srilm-1.7.1/bin/i686-m64
+    26	
+    27	# irstlm
+    28	#irstlm-dir = $moses-src-dir/irstlm/bin
+    29	
+    30	# randlm
+    31	#randlm-dir = $moses-src-dir/randlm/bin
+    32	
+    33	# kenlm
+    34	
+    35	lmplz = $moses-bin-dir/lmplz
+    36	
+    37	# data
+    38	#myrk-data = /home/lar/experiment/my-rk/smt1/t9
+    39	#mykc-data = /home/lar/experiment/kachin-myanmar/demo-mykc-smt/4demo/
+    40	#mykc-data = /home/lar/experiment/kachin-myanmar/demo-mykc-smt/4demo2/
+    41	# myrk-data = /media/lar/Transcend/student/lecture/mtrss/pbsmt-demo/pbsmt/data/
+    42	#myrk-data = /home/ye/exp/mlrss-smt/MTRSS/pbsmt/data
+    43	#myrk-data = /home/ye/data/corpus-ext/zar-zar-hlaing/data-yandex/data
+    44	#myrk-data = /home/ye/data/corpus-ext/zar-zar-hlaing/data-google-then
+    45	#myrk-data = /home/ye/data/corpus-ext/zar-zar-hlaing/data-systran-then
+    46	myrk-data = /home/ye/exp/dw-bk-my/data/dw-bk/10
+    47	
+    48	### basic tools
+    49	#
+    50	# moses decoder
+
+```
+
+[cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh) က အထက်မှာ ပြထားတဲ့ config.baseline ဖိုင်ထဲကနေ ဝင်ပြင်ချင်တဲ့ လိုင်းတွေကို ပြင်ပြီးတော့ သိမ်းစေချင်တဲ့ path ကို ဖန်တီးပြီး အဲဒီ path အောက်ကို အသစ်ပြင်ထားတဲ့ ဖိုင်ကို ကော်ပီကူးထည့်ပြထားတဲ့ shell script ဖြစ်ပါတယ်။ ပထမဆုံး machine translation သုတေသနကို စပြီးတော့ နားလည်အောင်လုပ်တဲ့ သူတွေအတွက်က experiment ကို တစ်ခေါက်တည်းပဲ run ကြည့်တာမျိုးဆိုရင်တော့ cp-config.sh က ပြင်ဖို့ မလိုပါဘူး။ သို့သော် တကယ်တမ်း သုတေသန စလုပ်ပြီဆိုရင်တော့ အကြိမ်ကြိမ်အခါခါ run ကြရမယ်၊ ပြီးတော့ language pair တွေကလည်း တစ်ခုထက် မက လုပ်ကြရတာမို့ cp-config.sh လို script မျိုးက ရေးတတ်ဖို့ လိုအပ်ပါတယ်။ code ကို ဝင်ဖတ်ပြီး နားလည်ရင်၊ ရေးတတ်သွားရင် researcher တစ်ယောက်အနေနဲ့ အကြိမ်ကြိမ်အခါခါ လုပ်ရမယ့် အလုပ်တွေအတွက် အသုံးဝင်လာပါလိမ့်မယ်။  
+
+
+
+```
+(base) ye@ykt-pro:~/exp/dw-bk-my/data$ tree -L 3 | head -60
+.
+├── config.baseline
+├── cp-config.sh
+├── DELETE-ALL.sh
+├── dw-bk
+│   ├── 1
+│   │   ├── baseline
+│   │   ├── config.baseline
+│   │   ├── dev.bk
+│   │   ├── dev.dw
+│   │   ├── generate_configs.pl
+│   │   ├── run1.log
+│   │   ├── run-baseline.pl
+│   │   ├── run-pbsmt.sh
+│   │   ├── steps
+│   │   ├── test.bk
+│   │   ├── test.dw
+│   │   ├── test-sgm
+│   │   ├── train.bk
+│   │   └── train.dw
+│   ├── 10
+│   │   ├── baseline
+│   │   ├── config.baseline
+│   │   ├── dev.bk
+│   │   ├── dev.dw
+│   │   ├── generate_configs.pl
+│   │   ├── run1.log
+│   │   ├── run-baseline.pl
+│   │   ├── run-pbsmt.sh
+│   │   ├── steps
+│   │   ├── test.bk
+│   │   ├── test.dw
+│   │   ├── test-sgm
+│   │   ├── train.bk
+│   │   └── train.dw
+│   ├── 2
+│   │   ├── baseline
+│   │   ├── config.baseline
+│   │   ├── dev.bk
+│   │   ├── dev.dw
+│   │   ├── generate_configs.pl
+│   │   ├── run1.log
+│   │   ├── run-baseline.pl
+│   │   ├── run-pbsmt.sh
+│   │   ├── steps
+│   │   ├── test.bk
+│   │   ├── test.dw
+│   │   ├── test-sgm
+│   │   ├── train.bk
+│   │   └── train.dw
+│   ├── 3
+│   │   ├── baseline
+│   │   ├── config.baseline
+│   │   ├── dev.bk
+│   │   ├── dev.dw
+│   │   ├── generate_configs.pl
+│   │   ├── run1.log
+│   │   ├── run-baseline.pl
+│   │   ├── run-pbsmt.sh
+│   │   ├── steps
+
+```
