@@ -2067,7 +2067,7 @@ $ ./format-mecab-pos2.sh -subpos ./jp.test.txt
 
 ## 68. [cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh)  
 
-SMT experiment တွေကို moses toolkit ကို သုံးပြီးတော့ experiment လုပ်တဲ့ အခါမှာ command line ကနေ shell script ရေးပြီး run တဲ့ ပုံစံမျိုးလည်း ရှိပေမဲ့ နောက်ပိုင်း version တွေမှာ ems system လို config ဖိုင်ပြင်ပြီးတော့ run တာက ပိုအဆင်ပြေပါတယ်။ သို့သော် အဲဒီ အတွက် configuration file တွေကို ကြိုတင်ပြင်ဆင်ရပါတယ်။ အကြမ်းမျဉ်းရှင်းပြရရင် configuration ဖိုင်ဆိုတာက machine translation လုပ်တဲ့အခါမှာ ပြင်ရတဲ့ setting ဖိုင်ပါပဲ။ machine translation မှာ လုပ်ရတဲ့ process တွေက အများကြီး၊ မော်ဒယ်ဆောက်ရတာကလည်း အဆင့်ဆင့်မို့လို့ အဲဒီ process တွေ၊ မော်ဒယ် ဆောက်တဲ့ အပိုင်းတစ်ခုချင်းစီနဲ့ ပတ်သတ်ပြီး ညွှန်ကြားပေးရတာပါ။ ဥပမာ parallel data ကို ဘယ် path အောက်မှာထားထားတယ်၊ moses toolkit ကို ဘယ် path အောက်မှာ install လုပ်ထားတယ်၊ language model ကို ဘယ် third party tool ကို သုံးမယ်၊ alignment ကို ဘယ် လို tool နဲ့ ဘယ်လို parmeter တွေနဲ့ run ခိုင်မယ် စသည်ဖြင့် setting တွေပါ။ မြင်သာအောင် config.baseline (Phrase Based SMT) အတွက် ပြင်ဆင်ထားတဲ့ config template ဖိုင်ရဲ့ ပထမဆုံး အကြောင်း ၅၀ ကို အောက်မှာ ပြထားပါတယ်။  
+SMT experiment တွေကို moses toolkit ကို သုံးပြီးတော့ experiment လုပ်တဲ့ အခါမှာ command line ကနေ shell script ရေးပြီး run တဲ့ ပုံစံမျိုးလည်း ရှိပေမဲ့ နောက်ပိုင်း version တွေမှာ ems system လို config ဖိုင်ပြင်ပြီးတော့ run တာက ပိုအဆင်ပြေပါတယ်။ သို့သော် အဲဒီ အတွက် configuration file တွေကို ကြိုတင်ပြင်ဆင်ရပါတယ်။ အကြမ်းမျဉ်းရှင်းပြရရင် configuration ဖိုင်ဆိုတာက machine translation လုပ်တဲ့အခါမှာ ပြင်ရတဲ့ setting ဖိုင်ပါပဲ။ machine translation မှာ လုပ်ရတဲ့ process တွေက အများကြီး၊ မော်ဒယ်ဆောက်ရတာကလည်း အဆင့်ဆင့်မို့လို့ အဲဒီ process တွေ၊ မော်ဒယ် ဆောက်တဲ့ အပိုင်းတစ်ခုချင်းစီနဲ့ ပတ်သတ်ပြီး ညွှန်ကြားပေးရတာပါ။ ဥပမာ parallel data ကို ဘယ် path အောက်မှာထားထားတယ်၊ moses toolkit ကို ဘယ် path အောက်မှာ install လုပ်ထားတယ်၊ language model ကို ဘယ် third party tool ကို သုံးမယ်၊ alignment ကို ဘယ် လို tool နဲ့ ဘယ်လို parmeter တွေနဲ့ run ခိုင်းမယ် စသည်ဖြင့် setting တွေပါ။ မြင်သာအောင် config.baseline (Phrase Based SMT) အတွက် ပြင်ဆင်ထားတဲ့ config template ဖိုင်ရဲ့ ပထမဆုံး အကြောင်း ၅၀ ကို အောက်မှာ ပြထားပါတယ်။  
 
 ```
 (base) ye@ykt-pro:~/exp/dw-bk-my/data$ cat -n config.baseline | head -n 50
@@ -2126,7 +2126,32 @@ SMT experiment တွေကို moses toolkit ကို သုံးပြီ�
 
 [cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh) က အထက်မှာ ပြထားတဲ့ config.baseline ဖိုင်ထဲကနေ ဝင်ပြင်ချင်တဲ့ လိုင်းတွေကို ပြင်ပြီးတော့ သိမ်းစေချင်တဲ့ path ကို ဖန်တီးပြီး အဲဒီ path အောက်ကို အသစ်ပြင်ထားတဲ့ ဖိုင်ကို ကော်ပီကူးထည့်ပြထားတဲ့ shell script ဖြစ်ပါတယ်။ ပထမဆုံး machine translation သုတေသနကို စပြီးတော့ နားလည်အောင်လုပ်တဲ့ သူတွေအတွက်က experiment ကို တစ်ခေါက်တည်းပဲ run ကြည့်တာမျိုးဆိုရင်တော့ cp-config.sh က ပြင်ဖို့ မလိုပါဘူး။ သို့သော် တကယ်တမ်း သုတေသန စလုပ်ပြီဆိုရင်တော့ အကြိမ်ကြိမ်အခါခါ run ကြရမယ်၊ ပြီးတော့ language pair တွေကလည်း တစ်ခုထက် မက လုပ်ကြရတာမို့ cp-config.sh လို script မျိုးက ရေးတတ်ဖို့ လိုအပ်ပါတယ်။ code ကို ဝင်ဖတ်ပြီး နားလည်ရင်၊ ရေးတတ်သွားရင် researcher တစ်ယောက်အနေနဲ့ အကြိမ်ကြိမ်အခါခါ လုပ်ရမယ့် အလုပ်တွေအတွက် အသုံးဝင်လာပါလိမ့်မယ်။  
 
+sed command ရဲ့ -i option ကို သုံးပြီး ဝင်ပြင်ပါတယ်။ ဥပမာ အောက်ပါ လိုင်းက ./config.baseline ဖိုင်ထဲက လိုင်းနံပါတ် 46 တစ်ကြောင်းလုံး (.\*) ကို ကိုယ်က အစားထိုးပေးစေချင်တဲ့ variable (${str}${i}) နဲ့ replace လုပ်လိုက်တာဖြစ်ပါတယ်။    
 
+```bash
+sed -i "46 s|.*|${str}${i}|" ./config.baseline;
+```
+
+အောက်ပါလိုင်းကတော့ အဲဒီ အထားထိုးထားတဲ့ လိုင်းကို screen မှာ ရိုက်ပြဖို့အတွက် ရေးထားတဲ့ statement ဖြစ်ပါတယ်။  
+
+```bash
+sed -n 46p ./config.baseline;
+```
+
+အဲဒီလို ဝင်ပြင်ပြီးသွားတဲ့ အခါမှာ ပြင်ပြီးသွားတဲ့ config.baseline ဖိုင်ကို ကိုယ်သိမ်းပေးစေချင်တဲ့ path အောက်မှာ၊ ကိုယ်က mkdir နဲ့ ဆောက်ထားတဲ့ path အောက်မှာ ဖိုင်အသစ်တစ်ဖိုင်အနေနဲ့ ဝင်ရေးမှာ ဖြစ်ပါတယ်။ အဲဒီ အလုပ်ကို bash script ရဲ့ for loop နဲ့ 1..10 ဆိုပြီးတော့ ၁၀ခါ လုပ်ခိုင်းထားတာ ဖြစ်ပါတယ်။ ၁၀ခါ ဆိုတာက ဒေတာတွေကို အပိုင်းပိုင်း training, development, test ခွဲပြီးတော့ 10-fold-cross validation experiment လုပ်မှာမို့ ၁၀ခါ ခွဲ ပြီး language-pair တစ်ခုကို run ခိုင်းမှာမို့ပါ။  
+
+```bash
+   for i in {1..10}
+   do
+      sed -i "46 s|.*|${str}${i}|" ./config.baseline;
+      echo "Added following line to line no. 45 of \"./config.baseline\" file ...";
+      sed -n 46p ./config.baseline;
+      echo
+      echo "Copying ./config.baseline to ./$f/$i/ ...";
+      cp ./config.baseline ./$f/$i/;
+```
+
+run လို ပြီးသွားတဲ့ အခါမှာ config.baseline ဖိုင်က ရှိနေမယ့် path ကို မြင်သာအောင် folder structure ကို tree command နဲ့ အောက်ပါအတိုင်း ပြထားပါတယ်။  
 
 ```
 (base) ye@ykt-pro:~/exp/dw-bk-my/data$ tree -L 3 | head -60
