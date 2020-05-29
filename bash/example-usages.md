@@ -2132,7 +2132,7 @@ sed command ရဲ့ -i option ကို သုံးပြီး ဝင်ပ�
 sed -i "46 s|.*|${str}${i}|" ./config.baseline;
 ```
 
-အောက်ပါလိုင်းကတော့ အဲဒီ အထားထိုးထားတဲ့ လိုင်းကို screen မှာ ရိုက်ပြဖို့အတွက် ရေးထားတဲ့ statement ဖြစ်ပါတယ်။  
+အောက်ပါလိုင်းကတော့ အဲဒီ အစားထိုးထားတဲ့ လိုင်းကို screen မှာ ရိုက်ပြဖို့အတွက် ရေးထားတဲ့ statement ဖြစ်ပါတယ်။  
 
 ```bash
 sed -n 46p ./config.baseline;
@@ -2151,7 +2151,7 @@ sed -n 46p ./config.baseline;
       cp ./config.baseline ./$f/$i/;
 ```
 
-run လို ပြီးသွားတဲ့ အခါမှာ config.baseline ဖိုင်က ရှိနေမယ့် path ကို မြင်သာအောင် folder structure ကို tree command နဲ့ အောက်ပါအတိုင်း ပြထားပါတယ်။  
+run လို ပြီးသွားတဲ့ အခါမှာ config.baseline ဖိုင်က ရှိနေမယ့် path ကို မြင်သာအောင် folder structure ကို tree command နဲ့ အောက်ပါအတိုင်း ပြထားပါတယ်။ ပထမဆုံး ထိပ်ဆုံးမှာ တွေ့ရတဲ့ config.baseline က cp.config.sh က ဝင်ပြင်တဲ့ configuration template ဖိုင်ဖြစ်ပါတယ်။ နောက်ထပ် တွေ့ကြရမယ့် 1/ ဖိုလ်ဒါအောက်က၊ 10/ ဖိုလ်ဒါအောက်က၊ 2/ ဖိုလ်ဒါအောက်က config.baseline ဖိုင်တွေကတော့ update လုပ်ထားပြီး ကော်ပီကူးထားတဲ့ config ဖိုင်တွေ ဖြစ်ပါတယ်။ အဲဒီ ဖိုင်တွေက တစ်ဖိုင်နဲ့ တစ်ဖိုင် တူမှာ မဟုတ်ပါဘူး။   
 
 ```
 (base) ye@ykt-pro:~/exp/dw-bk-my/data$ tree -L 3 | head -60
