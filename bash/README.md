@@ -209,4 +209,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 
 68. [cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh)  
-( Stastical Machine Translation (SMT) experiment တွေကို အများကြီး လုပ်တဲ့ အခါမှာ configuration file တွေ perl script တွေရဲ့ တချို့ လိုင်းတွေကို ဝင်ပြင်ပြီး သက်ဆိုင်ရာ ဖိုလ်ဒါအောက်ကို ကော်ပီကူးဖို့အတွက်ပြင်ဆင်ရပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။ )  
+(Stastical Machine Translation (SMT) experiment တွေကို အများကြီး လုပ်တဲ့ အခါမှာ configuration file တွေ perl script တွေရဲ့ တချို့ လိုင်းတွေကို ဝင်ပြင်ပြီး သက်ဆိုင်ရာ ဖိုလ်ဒါအောက်ကို ကော်ပီကူးဖို့အတွက်ပြင်ဆင်ရပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။ )  
+
+69. [DELETE-ALL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/DELETE-ALL.sh)  
+(SMT ကို moses toolkit သုံးပြီး လုပ်တဲ့အခါမှာ တခါတလေ အကြောင်းအမျိုးမျိုးကြောင့် run ထားတဲ့ ဖိုလ်ဒါတွေကို ဝင်ဖျက်ရတာမျိုး ရှိပါတယ်။ ဒီဥပမာကတော့ language pair သုံးခုအတွက် 10-fold cross validation လုပ်ထားတာမို့ စုစုပေါင်း baseline ဖိုလ်ဒါက ၆၀ ရှိပါတယ်။ အဲဒါကို တစ်ခေါက် တစ်ခေါက် rm command နဲ့ တစ်ခုချင်းဖျက်မနေရအောင် ရေးပြီးသုံးခဲ့တဲ့ bash script ဥပမာ တစ်ပုဒ်ဖြစ်ပါတယ်)  
