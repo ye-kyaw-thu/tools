@@ -213,3 +213,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 69. [DELETE-ALL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/DELETE-ALL.sh)  
 (SMT ကို moses toolkit သုံးပြီး လုပ်တဲ့အခါမှာ တခါတလေ အကြောင်းအမျိုးမျိုးကြောင့် run ထားတဲ့ ဖိုလ်ဒါတွေကို ဝင်ဖျက်ရတာမျိုး ရှိပါတယ်။ ဒီဥပမာကတော့ language pair သုံးခုအတွက် 10-fold cross validation လုပ်ထားတာမို့ စုစုပေါင်း baseline ဖိုလ်ဒါက ၆၀ ရှိပါတယ်။ အဲဒါကို တစ်ခေါက် တစ်ခေါက် rm command နဲ့ တစ်ခုချင်းဖျက်မနေရအောင် ရေးပြီးသုံးခဲ့တဲ့ bash script ဥပမာ တစ်ပုဒ်ဖြစ်ပါတယ်)  
+
+70. [trim-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/trim-silence.sh)  
+(အသံဖမ်းထားတဲ့ waveဖိုင်တွေရဲ့ အစပိုင်း၊ နောက်ဆုံးပိုင်းမှာရှိတဲ့ silence ဖြစ်နေတဲ့ အပိုင်းတွေကို ဖြတ်ထုတ်ပြထားတဲ့ shell script ပါ။ ဒီ script ကို သုံးပြီးတော့ ကိုယ့်ရဲ့ အသံဖိုင်တွေအတွက် အဆင်ပြေအောင် ဖြတ်မယ့် silence duration, volume တို့ကို ညှိပြီးတော့ အသုံးပြုပါ)  
+
