@@ -79,6 +79,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 67. [format-mecab-pos.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/format-mecab-pos.sh)  
 68. [cp-config.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/cp-config.sh)  
 69. [DELETE-ALL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/DELETE-ALL.sh)  
+70. [trim-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/trim-silence.sh)  
 
 
 # perl
