@@ -2,6 +2,7 @@
 
 # for trimming silence from beginning and end of wavefile
 # written by Ye Kyaw Thu, LST, NECTEC, Thailand
+# Last updated: 12 June 2020
 #
 # If you don't have "sox" command, install with "sudo apt-get install sox"
 #Reference: man page for the silence filter
