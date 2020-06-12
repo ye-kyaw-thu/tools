@@ -2367,5 +2367,56 @@ video:2kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing ove
 
 ```
 
-<img src="https://github.com/ye-kyaw-thu/sylbreak/blob/master/visualization-of-sylBreak-RE.png" alt="Visualization of sylbreak RE" width="812x180"/>
-<p align="center"> Fig. Visualization of sylbreak RE </p>  
+output တွေအနေနဲ့ argument ပေးလိုက်တဲ့ ဖိုလ်ဒါအောက်မှာပဲ .png extension နဲ့ ပုံဖိုင်တွေကို သိမ်းပေးပါလိမ့်မယ်။ အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/code4github/datapreparationsample$ tree ./wave4trim/
+./wave4trim/
+├── ကောင်းပြည့်စုံ.png
+├── ကောင်းပြည့်စုံ.trim.png
+├── ကောင်းပြည့်စုံ.trim.wav
+├── ကောင်းပြည့်စုံ.wav
+├── ကျော်စွာဟိဏ်း.png
+├── ကျော်စွာဟိဏ်း.trim.png
+├── ကျော်စွာဟိဏ်း.trim.wav
+├── ကျော်စွာဟိဏ်း.wav
+├── ကျော်ဇင်မိုး.png
+├── ကျော်ဇင်မိုး.trim.png
+├── ကျော်ဇင်မိုး.trim.wav
+├── ကျော်ဇင်မိုး.wav
+├── ကျော်လုဇော်.png
+├── ကျော်လုဇော်.trim.png
+├── ကျော်လုဇော်.trim.wav
+├── ကျော်လုဇော်.wav
+├── ကျော်ဝေယံလင်း.png
+├── ကျော်ဝေယံလင်း.trim.png
+├── ကျော်ဝေယံလင်း.trim.wav
+├── ကျော်ဝေယံလင်း.wav
+├── ခင်စောလင်း.png
+├── ခင်စောလင်း.trim.png
+├── ခင်စောလင်း.trim.wav
+├── ခင်စောလင်း.wav
+├── ခင်မာလာကြွယ်.png
+├── ခင်မာလာကြွယ်.trim.png
+├── ခင်မာလာကြွယ်.trim.wav
+├── ခင်မာလာကြွယ်.wav
+├── တင်နီနီကျော်.png
+├── တင်နီနီကျော်.trim.png
+├── တင်နီနီကျော်.trim.wav
+├── တင်နီနီကျော်.wav
+├── နန်းရွှေရည်.png
+├── နန်းရွှေရည်.trim.png
+├── နန်းရွှေရည်.trim.wav
+├── နန်းရွှေရည်.wav
+├── နှင်းနှင်းရည်.png
+├── နှင်းနှင်းရည်.trim.png
+├── နှင်းနှင်းရည်.trim.wav
+└── နှင်းနှင်းရည်.wav
+
+0 directories, 40 files
+```
+
+ဥပမာအနေနဲ့ ကောင်းပြည့်စုံ.png (trim မလုပ်ခင်) ဖိုင်နဲ့ ကောင်းပြည့်စုံ.trim.png (silence အပိုင်းကို trim လုပ်ပြီးသား) waveform တွေကို နှိုင်းယှဉ်ကြည့်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။   
+
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/compare-before-after-trim.png" alt="Comparison between before silence trim and after trim" width="812x180"/>
+<p align="center"> Fig. Comparison between before and after silence part trimmed </p>  
