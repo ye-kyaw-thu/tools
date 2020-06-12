@@ -2297,14 +2297,14 @@ trimmed filename: နှင်းနှင်းရည်.trim.wav
 
 ## 71. [wav2wavform.sh](https://github.com/ye-kyaw-thu/tools/edit/master/bash/wav2wavform.sh)  
 
-wave ဖိုင်ကနေ waveform ပုံစံအဖြစ် ffmpeg ပရိုဂရမ်ကို သုံးပြီးတော့ ပြောင်းပြထားတဲ့ shell script ဖြစ်ပါတယ်။ တစ်ခါတလေမှာ wave ဖိုင်တွေကို waveform ပုံစံအဖြစ်ပြောင်းပြီးတော့ မျက်လုံးနဲ့ သေချာအောင် စစ်ဆေးဖို့ လိုအပ်တဲ့အခါမျိုးမှာအသုံးဝင်ပါလိမ့်မယ်။ ဥပမာ အနေနဲ့ အထက်မှာ ရေးပြထားခဲ့တဲ့ shell script နံပါတ် ၇၀ ရဲ့ output ဖြစ်တဲ့ wave ဖိုင်ရဲ့ အစပိုင်း၊ နောက်ဆုံးပိုင်းတွေမှာ ရှိနေတဲ့ silence ဖြစ်နေတဲ့အပိုင်းတွေကို ဖြတ်ထုတ်ထားတဲ့ trim.wav ဖိုင်ရဲ့ waveform နဲ့ အော်ရဂျင်နယ် silence ပိုင်းတွေကို မဖြတ်ထုတ်ရသေးတဲ့ wav ဖိုင်တွေကို နှိုင်ယှဉ်ကြည့်ကြရအောင်။   
+wave ဖိုင်ကနေ waveform ပုံစံအဖြစ် ffmpeg ပရိုဂရမ်ကို သုံးပြီးတော့ ပြောင်းပြထားတဲ့ shell script ဖြစ်ပါတယ်။ တစ်ခါတလေမှာ wave ဖိုင်တွေကို waveform ပုံစံအဖြစ်ပြောင်းပြီးတော့ မျက်လုံးနဲ့ သေချာအောင် စစ်ဆေးဖို့ လိုအပ်တဲ့အခါမျိုးမှာအသုံးဝင်ပါလိမ့်မယ်။ ဥပမာ အနေနဲ့ အထက်မှာ ရေးပြထားခဲ့တဲ့ shell script နံပါတ် ၇၀ ရဲ့ output ဖြစ်တဲ့ wave ဖိုင်ရဲ့ အစပိုင်း၊ နောက်ဆုံးပိုင်းတွေမှာ ရှိနေတဲ့ silence ဖြစ်နေတဲ့အပိုင်းတွေကို ဖြတ်ထုတ်ထားတဲ့ trim.wav ဖိုင်ရဲ့ waveform နဲ့ အော်ရဂျင်နယ် silence ပိုင်းတွေကို မဖြတ်ထုတ်ရသေးတဲ့ wav ဖိုင်တွေကို နှိုင်းယှဉ်ကြည့်ကြရအောင်။   
 
-run မယ်ဆိုရင်တော့ ဖိုလ်ဒါနာမည်ကို command line argument အဖြစ်ပေးပြီးတော့ run ပါ။ run တဲ့အခါမှာ အောက်ပါကဲ့သို့ screen မှာ ရှိတဲ့ wave ဖိုင်တစ်ဖိုင်ချင်းစီအတွက် မြင်ရပါလိမ့်မယ်။ ဒီနေရာမှာတော့ နေရာသက်သာအောင် ထိပ်ဆုံးက တစ်ဖိုင်နဲ့ နောက်ဆုံး တစ်ဖိုင်စာကိုပဲ ပြထားပါတယ်။  
+run မယ်ဆိုရင်တော့ ဖိုလ်ဒါနာမည်ကို command line argument အဖြစ်ပေးပြီးတော့ run ပါ။ run တဲ့အခါမှာ အောက်ပါကဲ့သို့ မော်နီတာ screen မှာ wave ဖိုင်တစ်ဖိုင်ချင်းစီကို ပုံအဖြစ်ပြောင်းပေးသွားတဲ့ information တွေကိုမြင်တွေ့ရပါလိမ့်မယ်။ ဒီနေရာမှာတော့ နေရာသက်သာအောင် ဖိုလ်ဒါထဲက ထိပ်ဆုံးတစ်ဖိုင်နဲ့ နောက်ဆုံး တစ်ဖိုင်စာကိုပဲ ပြထားပါတယ်။  
 
 ```
 (base) ye@ykt-pro:/media/ye/project1/code4github/datapreparationsample$ bash ./wav2wavform.sh ./wave4trim/
 drawing waveform for ./wave4trim//ကောင်းပြည့်စုံ.trim.wav
-ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg developers
+ffmpeg version 3.4.6-0ubuntu0.18.04.1 Copyright (c) 2000-2019 the FFmpeg d evelopers
   built with gcc 7 (Ubuntu 7.3.0-16ubuntu3)
   configuration: --prefix=/usr --extra-version=0ubuntu0.18.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
   libavutil      55. 78.100 / 55. 78.100
@@ -2416,7 +2416,7 @@ output တွေအနေနဲ့ argument ပေးလိုက်တဲ့ �
 0 directories, 40 files
 ```
 
-ဥပမာအနေနဲ့ "ကောင်းပြည့်စုံ.png" (trim မလုပ်ခင်) ဖိုင်နဲ့ "ကောင်းပြည့်စုံ.trim.png" (silence အပိုင်းကို trim လုပ်ပြီးသား) waveform တွေကို နှိုင်းယှဉ်ကြည့်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။   
+ဥပမာအနေနဲ့ "ကောင်းပြည့်စုံ.png" (trim မလုပ်ခင်) ဖိုင်နဲ့ "ကောင်းပြည့်စုံ.trim.png" (silence အပိုင်းကို trim လုပ်ပြီးသား) waveform တွေကို နှိုင်းယှဉ်ကြည့်ရင် အောက်ပါအတိုင်း အစပိုင်း၊ နောက်ဆုံးအပိုင်းမှာ ရှိနေတဲ့ silence အပိုင်းတွေကို ဖြတ်ထုတ်သွားကြောင်းကို ရှင်းရှင်းလင်းလင်း မြင်ရပါလိမ့်မယ်။   
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/compare-before-after-trim.png" alt="Comparison between before silence trim and after trim" width="812x180"/>
 <p align="center"> Fig. Comparison between before and after silence part trimmed </p>  
