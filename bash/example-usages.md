@@ -2415,8 +2415,10 @@ output တွေအနေနဲ့ argument ပေးလိုက်တဲ့ �
 
 0 directories, 40 files
 ```
-
+  
+  
 ဥပမာအနေနဲ့ "ကောင်းပြည့်စုံ.png" (trim မလုပ်ခင်) ဖိုင်နဲ့ "ကောင်းပြည့်စုံ.trim.png" (silence အပိုင်းကို trim လုပ်ပြီးသား) waveform တွေကို နှိုင်းယှဉ်ကြည့်ရင် အောက်ပါအတိုင်း အစပိုင်း၊ နောက်ဆုံးအပိုင်းမှာ ရှိနေတဲ့ silence အပိုင်းတွေကို ဖြတ်ထုတ်သွားကြောင်းကို ရှင်းရှင်းလင်းလင်း မြင်ရပါလိမ့်မယ်။   
+
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/compare-before-after-trim.png" alt="Comparison between before silence trim and after trim" width="812x180"/>
 <p align="center"> Fig. Comparison between before and after silence part trimmed </p>  
