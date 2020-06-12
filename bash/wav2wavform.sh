@@ -4,7 +4,7 @@
 # written by Ye Kyaw Thu, LST, NECTEC, Thailand
 # Note: you need ffmpeg command to run this bash shell script
 # Last updated: 12 June 2020
-#Reference: https://trac.ffmpeg.org/wiki/Waveform
+# Reference: https://trac.ffmpeg.org/wiki/Waveform
 #
 # How to run: bash ./wav2wavform.sh <foldername>
 # e.g. bash ./wav2wavform.sh ./wave4trim/
