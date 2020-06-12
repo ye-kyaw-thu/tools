@@ -217,3 +217,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 70. [trim-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/trim-silence.sh)  
 (အသံဖမ်းထားတဲ့ waveဖိုင်တွေရဲ့ အစပိုင်း၊ နောက်ဆုံးပိုင်းမှာရှိတဲ့ silence ဖြစ်နေတဲ့ အပိုင်းတွေကို ဖြတ်ထုတ်ပြထားတဲ့ shell script ပါ။ ဒီ script ကို သုံးပြီးတော့ ကိုယ့်ရဲ့ အသံဖိုင်တွေအတွက် အဆင်ပြေအောင် ဖြတ်မယ့် silence duration, volume တို့ကို ညှိပြီးတော့ အသုံးပြုပါ)  
 
+71. [wav2wavform.sh](https://github.com/ye-kyaw-thu/tools/edit/master/bash/wav2wavform.sh)  
+(ဖိုလ်ဒါတစ်ခုအောက်ထဲမှာ သိမ်းထားတဲ့ wave ဖိုင်တွေကနေ waveform ပုံတွေအဖြစ် ပြောင်းပေးတဲ့ ပရိုဂရမ်ပါ။ အထက်က shell script နံပါတ် ၇၀ နဲ့လည်း ဆက်စပ်နေပါတယ်)  
+
