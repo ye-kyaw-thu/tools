@@ -2217,3 +2217,81 @@ run လို ပြီးသွားတဲ့ အခါမှာ config.baseli
 │   │   ├── steps
 
 ```
+
+## 70. [trim-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/trim-silence.sh)  
+
+ပုံမှန်အားဖြင့်က ASR, TTS စတဲ့ speech processing သုတေသနအလုပ်တွေအတွက် စာကြောင်းတစ်ကြောင်းစီကို wave ဖိုင်တစ်ဖိုင်စီအနေနဲ့ အသံဖမ်းထားပြီး အလုပ်လုပ်ကြတာက များပါတယ်။ ဖမ်းထားတဲ့ အသံဖိုင်တွေရဲ့ ရှေ့ပိုင်းမှာ၊ နောက်ပိုင်းမှာ ရှိနေတဲ့ silence အပိုင်းတွေကို ဖြတ်ထုတ်ပေးကြရတဲ့ အခါမျိုး ရှိပါတယ်။ တစ်ဖိုင်ချင်းစီကို လိုက်ဖြတ်နေဖို့ဆိုတာက လက်တွေ့မှာ မဖြစ်နိုင်ပါဘူး အဲဒါကြောင့် shell, perl, python script တွေရေးပြီး လုပ်ကြရပါတယ်။ ဒီ shell script ကတော့ ဥပမာအနေနဲ့ ဖိုလ်ဒါ တစ်ခုအောက်မှာ ရှိနေတဲ့ wave ဖိုင်တွေမှာရှိနေတဲ့ silence အပိုင်းတွေကို ဖြတ်ထုတ်ပြထားတဲ့ shell script ဖြစ်ပါတယ်။ အသုံးဝင်ပါလိမ့်မယ်။  
+
+ဥပမာ ။ ။ ./wave4trim/ ဖိုလ်ဒါထဲမှာ မြန်မာနာမည်တွေကို ဖတ်ပြီး အသံဖမ်းထားတဲ့ wave ဖိုင် ၁၀ဖိုင်ရှိပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/code4github/datapreparationsample$ tree ./wave4trim/
+./wave4trim/
+├── ကောင်းပြည့်စုံ.wav
+├── ကျော်စွာဟိဏ်း.wav
+├── ကျော်ဇင်မိုး.wav
+├── ကျော်လုဇော်.wav
+├── ကျော်ဝေယံလင်း.wav
+├── ခင်စောလင်း.wav
+├── ခင်မာလာကြွယ်.wav
+├── တင်နီနီကျော်.wav
+├── နန်းရွှေရည်.wav
+└── နှင်းနှင်းရည်.wav
+
+0 directories, 10 files
+```
+run မယ်ဆိုရင်တော့ အောက်ပါအတိုင်း wave file တွေသိမ်းထားတဲ့ ဖိုလ်ဒါကို command line argument အနေနဲ့ပေးပြီး run ပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/code4github/datapreparationsample$ bash ./trim-silence.sh ./wave4trim/
+trim silence for ./wave4trim//ကောင်းပြည့်စုံ.wav
+trimmed filename: ကောင်းပြည့်စုံ.trim.wav
+trim silence for ./wave4trim//ကျော်စွာဟိဏ်း.wav
+trimmed filename: ကျော်စွာဟိဏ်း.trim.wav
+trim silence for ./wave4trim//ကျော်ဇင်မိုး.wav
+trimmed filename: ကျော်ဇင်မိုး.trim.wav
+trim silence for ./wave4trim//ကျော်လုဇော်.wav
+trimmed filename: ကျော်လုဇော်.trim.wav
+trim silence for ./wave4trim//ကျော်ဝေယံလင်း.wav
+trimmed filename: ကျော်ဝေယံလင်း.trim.wav
+trim silence for ./wave4trim//ခင်စောလင်း.wav
+trimmed filename: ခင်စောလင်း.trim.wav
+trim silence for ./wave4trim//ခင်မာလာကြွယ်.wav
+trimmed filename: ခင်မာလာကြွယ်.trim.wav
+trim silence for ./wave4trim//တင်နီနီကျော်.wav
+trimmed filename: တင်နီနီကျော်.trim.wav
+trim silence for ./wave4trim//နန်းရွှေရည်.wav
+trimmed filename: နန်းရွှေရည်.trim.wav
+trim silence for ./wave4trim//နှင်းနှင်းရည်.wav
+trimmed filename: နှင်းနှင်းရည်.trim.wav
+```
+
+ဖြတ်ထားတဲ့ ဖိုင်တွေကိုတော့ အော်ရဂျင်နယ် wavefile ရဲ့ basename ရဲ့ နောက်မှာ ".trim.wav" ဆိုတဲ့ extension နဲ့ သိမ်းပေးပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/code4github/datapreparationsample$ tree ./wave4trim/
+./wave4trim/
+├── ကောင်းပြည့်စုံ.trim.wav
+├── ကောင်းပြည့်စုံ.wav
+├── ကျော်စွာဟိဏ်း.trim.wav
+├── ကျော်စွာဟိဏ်း.wav
+├── ကျော်ဇင်မိုး.trim.wav
+├── ကျော်ဇင်မိုး.wav
+├── ကျော်လုဇော်.trim.wav
+├── ကျော်လုဇော်.wav
+├── ကျော်ဝေယံလင်း.trim.wav
+├── ကျော်ဝေယံလင်း.wav
+├── ခင်စောလင်း.trim.wav
+├── ခင်စောလင်း.wav
+├── ခင်မာလာကြွယ်.trim.wav
+├── ခင်မာလာကြွယ်.wav
+├── တင်နီနီကျော်.trim.wav
+├── တင်နီနီကျော်.wav
+├── နန်းရွှေရည်.trim.wav
+├── နန်းရွှေရည်.wav
+├── နှင်းနှင်းရည်.trim.wav
+└── နှင်းနှင်းရည်.wav
+
+0 directories, 20 files
+```
+
