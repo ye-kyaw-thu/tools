@@ -1,0 +1,17 @@
+\ifdefined\mytext
+\else
+    \def\mytext{မြန်မာစာ}
+\fi
+
+\documentclass[border=2pt]{standalone}
+
+\usepackage{varwidth}
+\usepackage{fontspec}
+\newfontfamily {\myanmarsar}[Script=Myanmar]{Myanmar3}
+
+\begin{document}
+\begin{varwidth}{\linewidth}
+{\myanmarsar  {\mytext} }
+\end{varwidth}
+
+\end{document}
