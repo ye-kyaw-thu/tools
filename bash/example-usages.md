@@ -2456,7 +2456,7 @@ latex ကလည်း ကွန်ပျူတာသမားတွေအနေ�
 * "\newfontfamily" tag ကို သုံးဖို့အတွက်က "fontspec" package လိုအပ်ပါတယ်
 
 အထက်ပါ latex ဖိုင်ကိုလည်း github မှာတင်ပေးထားပါတယ်။  
-(https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytext.tex)[https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytext.tex]  
+[https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytext.tex](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytext.tex)  
 
 latex ဖိုင်အပြင် နောက်ထပ်လိုအပ်တဲ့ ဖိုင်ကတော့ ကိုယ်ပုံတွေအဖြစ်သိမ်းချင်တဲ့ မြန်မာစာကြောင်းတွေကို တစ်ကြောင်းချင်းစီရိုက်ထည့်ထားတဲ့ text ဖိုင်တစ်ဖိုင်ပါ။  
 ဥပမာအနေနဲ့ စာကြောင်း ၅ကြောင်း ရိုက်ထည့်ပြထားတဲ့ ဖိုင်ကိုလည်း github မှာ တင်ပေးထားပါတယ်။  
