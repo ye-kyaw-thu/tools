@@ -2472,6 +2472,24 @@ Link: [https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytxt4png.txt](http
 ၂၀၂၀ ပြည့်နှစ် ဇွန်လ ၇ ရက်နေ့မှာ ကမ္ဘာရဲ့ အနက်ရှိုင်းဆုံး သမုဒ္ဒရာ ကြမ်းပြင် ဖြစ်တယ်လို့ သတ်မှတ်ထားကြတဲ့ ချယ်လန်ဂျာ ဒိ(ပ်) ရှိရာ ပေ ၃၅,၈၁၀ ရေအနက်ကို ဆင်းခဲ့သူ ဒေါက်တာ ကက်သီ ဆူလီဗန်ဟာ အာကာသပေါ်နဲ့ ကမ္ဘာရဲ့ အနက်ရှိုင်းဆုံး နေရာနှစ်ခုစလုံးကို ပထမဆုံးရောက်သူ ဖြစ်လာခဲ့ပါတယ်။
 ```
 
+xelatex ကို သုံးပြီးတော့ tex ဖိုင်ကို compile လုပ်ဖို့ ရေးထားတာမို့ ကိုယ့်စက်ထဲမှာ xelatex ကိုတော့ install လုပ်ထားရပါလိမ့်မယ်။ xelatex မဟုတ်ရင်လည်း pdflatex စတဲ့ latex compiler တစ်ခုခုရှိနေရင်လည်း အိုကေပါတယ်။ shell script အထဲက "xelatex" နေရာမှာ "pdflatex" ဆိုတဲ့ စကားလုံးနဲ့ အစားထိုးပါ။ run ပုံ run နည်းကတော့ အောက်ပါအတိုင်း command ပေးပါ။  
 
+```
+$bash ./mytext2pic.sh ./mytxt4png.txt
+```
+
+အဆင်ပြေပြေနဲ့ run ပြီးသွားရင် စာကြောင်း တစ်ကြောင်းချင်းစီအတွက် png ဖိုင်တွေကို output အဖြစ် ရလာပါလာလိမ့်မယ်။  
+အောက်ပါအတိုင်းပါ။  
+
+Filename: line1.png  
+![line1.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line1.png)
+Filename: line2.png  
+![line2.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line2.png)
+Filename: line3.png  
+![line3.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line3.png)
+Filename: line4.png  
+![line4.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line4.png)
+Filename: line5.png  
+![line5.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line5.png)
 
 
