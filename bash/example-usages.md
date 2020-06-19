@@ -2500,15 +2500,31 @@ Filename: line5.png
 
 math formula တွေကို latex format နဲ့ရေးပြီး shell script ကို command line ကနေ pass လုပ်ပေးလိုက်ယုံနဲ့ png ဖိုင်၊ pdf ဖိုင်တွေအဖြစ် အလွယ်တကူဖန်တီးလို့ ရကြောင်းကို ဥပမာ အနေနဲ့ ရေးပြထားတာပါ။ run တဲ့ ပုံစံ ဥပမာ တွေကတော့ အောက်ပါအတိုင်းပါ။  
 
+latex math syntax နဲ့ ရေးထားတဲ့ Statistical Machine Translation (SMT) ဖော်မြူလာကို pass လုပ်ကြည့်ရအောင်။  
 
 ```
 bash ./formula-pic.sh "\tilde{e} = arg \max_{e} P(e|f) = arg \max_{e} P(f|e) P(e)"
 ```
 
+အောက်ပါ ပုံကို output ပုံအဖြစ် ထုတ်ပေးပါလိမ့်မယ်။  
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/stastical-mt.png" /></kbd>  
+
+Statistical Automatic Speech Recognition (Statistical ASR) ကို ကိုယ်စားပြုတဲ့ ဖော်မြူလာကို pass လုပ်ကြည့်ရအောင်။  
+
 ```
 bash ./formula-pic.sh "W^* = arg \max_{W} P(W/X) = arg \max_{W} P(X/W) P(W)"
 ```
 
+အောက်ပါ ပုံကို output ပုံအဖြစ် ထုတ်ပေးပါလိမ့်မယ်။  
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/statistical-asr.png" /></kbd>  
+
+Deep Learning ကို အခြေခံတဲ့ Text to Speech (TTS) ဖော်မြူလာကို ./formula-pic.sh shell script ကို argument ပေးပြီး run ကြည့်ကြရအောင်။  
+
 ```
 bash ./formula-pic.sh "X = arg \max P(X|Y, \theta)"
 ```
+
+အောက်ပါ ပုံကို output ပုံအဖြစ် ထုတ်ပေးပါလိမ့်မယ်။  
+
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/deeplearning-tts.png" /></kbd>  
+
