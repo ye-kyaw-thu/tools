@@ -2422,3 +2422,31 @@ output တွေအနေနဲ့ argument ပေးလိုက်တဲ့ �
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/compare-before-after-trim.png" alt="Comparison between before silence trim and after trim" width="812x180"/>
 <p align="center"> Fig. Comparison between before and after silence part trimmed </p>  
+
+## 72. [mytext2pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytext2pic.sh)  
+
+PDF ဖိုင်တွေကနေ ရေးထားတဲ့ မြန်မာစာတွေကို OCR လုပ်မယ့် experiment တွေအတွက် အသုံးဝင်ပါလိမ့်မယ်။ ဒီနေရာမှာတော့ latex ဖိုင်ထဲက "\def" tag ကို shell script ကနေ pass လုပ်တဲ့ ပုံစံကို သုံးပြထားပါတယ်။ ဒီ shell script ကို run ဖို့အတွက် ဖိုင် ၂ဖိုင် လိုအပ်ပါလိမ့်မယ်။ တစ်ဖိုင်ကတော့ အောက်ပါ latex ဖိုင်ပါ။  
+
+```
+\ifdefined\mytext
+\else
+    \def\mytext{မြန်မာစာ}
+\fi
+
+\documentclass[border=2pt]{standalone}
+
+\usepackage{varwidth}
+\usepackage{fontspec}
+\newfontfamily {\myanmarsar}[Script=Myanmar]{Myanmar3}
+
+\begin{document}
+\begin{varwidth}{\linewidth}
+{\myanmarsar  {\mytext} }
+\end{varwidth}
+
+\end{document}
+```
+
+latex ကလည်း ကွန်ပျူတာသမားတွေအနေနဲ့ သိထားသင့်ပါတယ်။ အထူးသဖြင့်တော့ စာတမ်းတွေကို format သေသေချာချာပြင်ဆင်ပြီးရေးဖို့အတွက်၊ သင်္ချာဖော်မြူလာတွေကို လှလှပပ ကိုယ့်စာတမ်းထဲမှာ ထည့်ဖို့အတွက် အလွန်အသုံးဝင်ပါတယ်။ အဲဒါကြောင့် research paper ကောင်းကောင်းရေးမယ်လို့ ရည်ရွယ်ထားသူတွေကတော့ ကောင်းကောင်းသုံးတတ်သင့်ပါတယ်။ ဒါ့အပြင့် ပြမယ့် ဥပမာလိုမျိုး PDF ဖိုင်ထုတ်ဖို့ကိစ္စတွေ၊ ပုံဖိုင်တွေ ထုတ်ဖို့ ကိစ္စတွေအတွက်လည်း အသုံးဝင်ပါတယ်။ ဒီနေရာမှာ latex နဲ့ ပတ်သက်ပြီးတော့ အရှည်မရှင်းပြတော့ပါဘူး။ တချို့ပွိုင့်တွေကိုပဲ ရှင်းပြပါမယ်။  
+
+
