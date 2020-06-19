@@ -2507,6 +2507,7 @@ bash ./formula-pic.sh "\tilde{e} = arg \max_{e} P(e|f) = arg \max_{e} P(f|e) P(e
 ```
 
 အောက်ပါ ပုံကို output ပုံအဖြစ် ထုတ်ပေးပါလိမ့်မယ်။  
+
 <kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/stastical-mt.png" /></kbd>  
 
 Statistical Automatic Speech Recognition (Statistical ASR) ကို ကိုယ်စားပြုတဲ့ ဖော်မြူလာကို pass လုပ်ကြည့်ရအောင်။  
@@ -2516,6 +2517,7 @@ bash ./formula-pic.sh "W^* = arg \max_{W} P(W/X) = arg \max_{W} P(X/W) P(W)"
 ```
 
 အောက်ပါ ပုံကို output ပုံအဖြစ် ထုတ်ပေးပါလိမ့်မယ်။  
+
 <kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/statistical-asr.png" /></kbd>  
 
 Deep Learning ကို အခြေခံတဲ့ Text to Speech (TTS) ဖော်မြူလာကို ./formula-pic.sh shell script ကို argument ပေးပြီး run ကြည့်ကြရအောင်။  
