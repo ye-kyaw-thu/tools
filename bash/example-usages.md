@@ -2482,7 +2482,7 @@ $bash ./mytext2pic.sh ./mytxt4png.txt
 အောက်ပါအတိုင်းပါ။  
 
 Filename: line1.png  
-![line1.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line1.png)  
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line1.png" /></kbd>
 
 Filename: line2.png  
 ![line2.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line2.png)  
