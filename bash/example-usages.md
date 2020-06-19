@@ -2496,4 +2496,19 @@ Filename: line4.png
 Filename: line5.png  
 <kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line5.png" /></kbd>  
 
+## 73. [formula-pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/formula-pic.sh)  
 
+math formula တွေကို latex format နဲ့ရေးပြီး shell script ကို command line ကနေ pass လုပ်ပေးလိုက်ယုံနဲ့ png ဖိုင်၊ pdf ဖိုင်တွေအဖြစ် အလွယ်တကူဖန်တီးလို့ ရကြောင်းကို ဥပမာ အနေနဲ့ ရေးပြထားတာပါ။ run တဲ့ ပုံစံ ဥပမာ တွေကတော့ အောက်ပါအတိုင်းပါ။  
+
+
+```
+bash ./formula-pic.sh "\tilde{e} = arg \max_{e} P(e|f) = arg \max_{e} P(f|e) P(e)"
+```
+
+```
+bash ./formula-pic.sh "W^* = arg \max_{W} P(W/X) = arg \max_{W} P(X/W) P(W)"
+```
+
+```
+bash ./formula-pic.sh "X = arg \max P(X|Y, \theta)"
+```
