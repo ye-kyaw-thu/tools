@@ -2485,16 +2485,15 @@ Filename: line1.png
 <kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line1.png" /></kbd>
 
 Filename: line2.png  
-![line2.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line2.png)  
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line2.png" /></kbd>  
 
 Filename: line3.png  
-![line3.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line3.png)  
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line3.png" /></kbd>  
 
 Filename: line4.png  
-![line4.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line4.png)  
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line4.png" /></kbd>  
 
 Filename: line5.png  
-![line5.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line5.png)
-
+<kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line5.png" /></kbd>  
 
 
