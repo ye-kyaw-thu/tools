@@ -2482,14 +2482,14 @@ $bash ./mytext2pic.sh ./mytxt4png.txt
 အောက်ပါအတိုင်းပါ။  
 
 Filename: line1.png  
-![line1.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line1.png)
+![line1.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line1.png)
 Filename: line2.png  
-![line2.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line2.png)
+![line2.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line2.png)
 Filename: line3.png  
-![line3.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line3.png)
+![line3.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line3.png)
 Filename: line4.png  
-![line4.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line4.png)
+![line4.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line4.png)
 Filename: line5.png  
-![line5.png](./pictures/https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line5.png)
+![line5.png](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/line5.png)
 
 
