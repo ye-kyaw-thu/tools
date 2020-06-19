@@ -220,3 +220,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 71. [wav2wavform.sh](https://github.com/ye-kyaw-thu/tools/edit/master/bash/wav2wavform.sh)  
 (ဖိုလ်ဒါတစ်ခုအောက်ထဲမှာ သိမ်းထားတဲ့ wave ဖိုင်တွေကနေ waveform ပုံတွေအဖြစ် ပြောင်းပေးတဲ့ ပရိုဂရမ်ပါ။ အထက်က shell script နံပါတ် ၇၀ နဲ့လည်း ဆက်စပ်နေပါတယ်)  
 
+72. [mytext2pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mytext2pic.sh)  
+(ဖိုင်ထဲမှာ သိမ်းထားတဲ့ မြန်မာစာကြောင်း တစ်ကြောင်းချင်းစီကို ပုံဖိုင်အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ ဖိုင်ပါ။ Language Understanding Lab., ရဲ့ internship ကျောင်းသားတွေအတွက် ပြင်ဆင်ခဲ့စဉ်က ရေးထားခဲ့ ...)  
+
