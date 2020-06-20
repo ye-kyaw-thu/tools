@@ -1362,7 +1362,7 @@ YÀ MÉ NØ̀ NVMPŪ TÌQ WVT ÍÈ .	Dai gaw nam pan pu langai re ai .
 while (my $line = <$FILE1>)
 {
     chomp($line); 
-    my ($left, $right) = split ("\t", $lowerLine);
+    my ($left, $right) = split ("\t", $line);
     # lc is the function for lower case conversion
     # ဒီဟာကို သုံးခဲ့တာက kc-rw ရဲ့ကချင်စာမှာ ထိပ်ဆုံး စာလုံးတွေကို capital လုပ်ထားလို့
     my $lowerRight = lc $right;
@@ -1372,23 +1372,24 @@ while (my $line = <$FILE1>)
 run မယ်ဆိုရင် parallel corpus နှစ်ဖိုင်ကိုတော့ command line argument အဖြစ်နဲ့ pass လုပ်ပေးရပါလိမ့်မယ်။  
 
 ```
-(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ ./print-common-kc.pl ./all.rwkc.clean ./all.mykc.clean > out
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ ./print-common-kachin.pl ./all.rwkc.clean ./all.mykc.clean > out
 ```
 
 run လိုက်ရင် ထွက်လာမယ့် output ကတော့ အောက်ပါအတိုင်းပါ။  
 
 ```
 (base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ head out
-grai katsi ai rai tim numri ayan gaw n hkrat ai .	gay zø-ngē , íwē tvwvn àngwà nø̀ mvja rà ē .	တော်တော် အေး တယ် ၊ ဒါပေမယ့် နှင်း အမြဲတမ်း တော့ လဲ မ ကျ ပါ ဘူး ။
-dai gaw li dwi si na makau kaw re .	kū mé nø̀ gø̀mzīq yà shvnvng yv́ng íè .	ထိုအရာ က လိမ္မော်သီး ရဲ့ ဘေးမှာ ဖြစ် ပါ တယ် ။
-mali	vbī	လေး
-ngai gaw mg kyaw yin re , dinghku n de shi ai .	ngà nø̀ mg-joyín wà nø̀ tø shī ē , vsvngchø̀m shī mvlo ngē .	ကျွန်တော် ဟာ မောင်ကျော်ရင် လို့ ခေါ် ပါ တယ် ၊ အိမ်ထောင်မကျ သေး ပါ ဘူး ။
-htaw ra hpa rai .	wē ong pà íè .	ဟို ဟာ ဘာ လဲ ။
-n dai gaw u kanu langai re nga ai .	yà mé nø̀ kāmā tìq gō íè .	ဒါ က ကြက်မ တစ် ကောင် ဖြစ် ပါ တယ် ။
-n hpye na makau kaw re .	yǿng yà shvnvng yv́ng íè .	လွယ်အိတ် ရဲ့ ဘေးမှာ ပါ ။
-bai na ngai ngapali de kalang bai sa byin hkra sa na .	wēdø̀ i kèní ngà ngàbvli tìq baq dī bøn dø̀ dī lv́m mē .	ဒါဖြင့်ရင် ကျွန်တော် ငပလီ တစ် ခေါက် သွား ဖြစ် အောင် သွား ပါ့ မယ် ။
-ngai na lau ban hpe ngai n chye na ai .	ngà lobvn kàq ngà àngjøng ní yvng mvnē shø̀ng .	ကျွန်တော့် သူဌေး ကို ကျွန်တော် တကယ် အမြင်မရှင်း ဘူး ။
-ngai mahkawn hkawn ngut sai , na aten .	ngà mvkon dvngbǿng-a , nà í bǿī .	ကျွန်တော် သီချင်းဆို ပြီး သွား ပြီ ၊ ခင်ဗျား အလှည့် ။
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ head out
+hkying jahku hta rung sa ai .	DVØ NÀ:RÍ YVNG RONG DØNG-Ē .	၉ နာရီ ရုံးတက် တယ် ။
+dai wan leng langai re ai .	WĒ MÉ JVKTVRÍ TÌQ CHVNG ÍÈ .	အဲဒါ ရထား တစ် စင်း ဖြစ် တယ် ။
+n dai mawdaw kaba dik ai i .	YÀ MŌDŌ GVZÀTĒ Ē ŌQ .	သည် မော်တော်ကား ကြီးမား တယ် နော် ။
+mg than gaw ganu gawa lahkawng hpe grai hkung ga ai .	MG-DAN NØ̀ VPĒVMĒ KÀQ GVZA VPØ OWĒ .	မောင်သန်း က မိဘ နှစ် ပါး ကို အလွန် ရိုသေ လေးစား တယ် ။
+shi gaw bus maw daw gau ai wa re ai .	ÀNG BŪSMŌDÒ KVNG PĒ TÌQ GØ̀ ÍÈ .	သူ သည် ဘတ်စ် ကား မောင်း သူ တစ် ယောက် ဖြစ် သည် ။
+langai jaw rit , maw gumhpraw .	TÌQ MĒ ZØNG NGÀ , NÀ GVMSŪNG .	တစ် ခု ပေး ပါ ၊ ရော့ ပိုက်ဆံ ။
+ngai n dai kumhpa jaw na matu mari wa ai .	NGÀ YÀMĒ KÀQ GØ̀MPÀQ ZÍ LV́M RVT WÀN DÀQ NGÀ .	ကျွန်တော် ဒါ ကို လက်ဆောင်ပေး ဖို့ ဝယ် တာ ပါ ။
+dai gaw nyau langai re nga ai .	YÀ MÉ NØ̀ MÍ TÌQ GŌ ÍÈ .	အဲဒါ က ကြောင် တစ် ကောင် ဖြစ် ပါ တယ် ။
+ta hkawn .	RVSHVN .	လက်ကောက် ။
+dai gaw a rai htaw mawdaw langai re nga ai .	WĒ MÉ NØ̀ DVRĒ ZÀQ MŌDŌ TÌQ CHVNG ÍÈ .	ထို အရာ သည် ကုန် တင် ကား တစ် စီး ဖြစ် ပါ သည် ။
 (base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ 
 ```
 
