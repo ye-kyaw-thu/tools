@@ -21,7 +21,7 @@ my %pair1;
 while (my $line = <$FILE1>)
 {
     chomp($line); 
-    my ($left, $right) = split ("\t", $lowerLine);
+    my ($left, $right) = split ("\t", $line);
     # lc is the function for lower case conversion
     # ဒီဟာကို သုံးခဲ့တာက kc-rw ရဲ့ကချင်စာမှာ ထိပ်ဆုံး စာလုံးတွေကို capital လုပ်ထားလို့
     my $lowerRight = lc $right;
@@ -41,7 +41,7 @@ my %pair2;
 while (my $line = <$FILE2>)
 {
     chomp($line);
-    my ($left, $right) = split ("\t", $lowerLine);
+    my ($left, $right) = split ("\t", $line);
     my $lowerRight = lc $right;
     $pair2{$lowerRight}=$left;
 }
