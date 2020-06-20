@@ -1318,3 +1318,76 @@ $ perl ./print-union-isect-diff.pl ./error.txt.word.syl.clean ./correct.txt.word
 သိ ဒယ် သိ ဒယ် အ ဘ 😁 😁|||သိ တယ် သိ တယ် အ ဘ 😁 😁|||တယ် အ ဘ ဒယ် 😁 သိ|||တယ် အ ဘ ဒယ်|||😁 သိ
 မင်း ဂ ဘျင် ကြီး လား ကွာ နည်း နည်း တော့ များ ဒေ|||မင်း က ဘု ရင် ကြီး လား ကွာ နည်း နည်း တော့ များ တယ်|||ကြီး ဒေ မင်း ဘု တော့ က ဘျင် ရင် နည်း လား ကွာ တယ် ဂ များ|||ကြီး မင်း တော့ လား ကွာ များ|||ဒေ ဘု က ဘျင် ရင် နည်း တယ် ဂ
 ```
+
+## 36. [print-common-kachin.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-common-kachin.pl)  
+
+ဘာသာစကားတစ်ခုက ဘုံပါဝင်နေတဲ့ parallel data corpus နှစ်ခုထဲကနေ ဘုံပါနေတဲ့ စာကြောင်းတွေကို တည်ပြီးတော့ နောက်ထပ် parallel corpus အသစ်ဆောက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script တစ်ပုဒ်ပါ။ ဒီ script ကို "ရဝမ်-ကချင်", "မြန်မာ-ကချင်" parallel corpus နှစ်ခုကနေ "ရဝမ်-မြန်မာ" corpus ဆောက်ဖို့အတွက် သုံးခဲ့ပါတယ်။  
+
+ရဝမ်-ကချင် corpus က အောက်ပါအတိုင်း tab ခြားပြီးသိမ်းထားပါတယ်။ tab ကီးတွေကမျက်လုံးနဲ့ မမြင်သာပေမဲ့...  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ head ./all.rwkc.clean 
+BØ KĒ DÀQ Ē NÀ YÁ SHÌ .	Lapu achye na sadi u .
+NØ̀ Í NØ̀ SHÍQSHVN TVRÀ SVNG GVYÀQ OĒ .	Tsa gaw hkamja lam hkra sha ngun ai .
+JANHWÀYI KÀQ SHA O MÁ ? 	Chyanhwayi hpe chye ai i .
+NGÀ YÀ LOBVN KÀQ NGÀ Í DVDAM MVSHA BǾNGÀ .	Ngai na lauban hpe ngai n chye na ai .
+YÀ MÉ NØ̀ ÀNG NĪ ÍÈ .	N dai gaw shi n gup re nga ai .
+NGÀ Í NÀ KÀQ SHØ̀NKÀ TÌQONG RØT DÀQ NØ̀NG .	Ngai nang hpe shi ga langai san mayu ai .
+TÌQKVTKVT TÌQCĒ-TÌQ NÀ:RÍ , TÌQKVTKVT TÌQCĒ-VNÍ NÀ:RÍ YVNG WÀ YUP MĒ .	Kalang lang 11yup ai , kalang lang gaw 12 kaw yup ai .
+PVNGWÀCĒ TÌQ	Manga shi langai
+LUNG DVZVR SHĪ AM-Í .	Bai gau katut sai .
+YÀ MÉ NØ̀ NVMPŪ TÌQ WVT ÍÈ .	Dai gaw nam pan pu langai re ai .
+```
+
+ထိုနည်းလည်းကောင်း မြန်မာ-ကချင် corpus မှာလည်း အောက်ပါအတိုင်း မြန်မာစာ စာကြောင်းနဲ့ ကချင်စာကြောင်းတွေကို tab ခြားပြီး သိမ်းထားပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ head ./all.mykc.clean
+မ ဟုတ် ပါ ဘူး ၊ ဈေးမကြီး ပါ ဘူး ။	n re n hpu ai .
+ဒါ က ကျွန်ုပ် ၏ မိန်းမ ဝတ် ဘလောက် အင်္ကျီ ဖြစ် ပါ တယ် ။	n dai gaw ngai na num hpun blouse palawng re nga ai .
+ဒါ က ကျုပ် ရဲ့ နှုတ်ခမ်း ဖြစ် တယ် ။	n dai gaw ngai na nten re ai .
+ကျွန်တော် တို့ ကို ခင်ဗျား တို့ ဘယ်လောက် လျှော့ ပေး မလဲ ။	anhte ni hpe nanhte ni kade ram shayawm ya na rai .
+ငါ့ ၏ ဦးခေါင်း	ngai na baw
+နည်း သည် ။	nlaw ai .
+သား က တော့ ပုစွန် ချိုချဉ် နဲ့ ဘဲ ကြွပ် ကြော် စား ချင် တယ် ။	ma gaw ka tsu chyo chyin hte hkai byek ka-ngau sha mayu ai .
+ခင်ဗျား အတွက် ဝယ် ပေး တာ ။	na matu mari ya ai .
+ကောင်လေး သည် မည်သည့်နေရာ၌ ရှိ သနည်း ။	la sha ni gara shara kaw nga ma ai rai ?
+လျှာ ကို ထုတ် လိုက် ပါ ။	shing let hpe shawng dat u .
+
+```
+
+အထက်ပါ ဖိုင်နှစ်ဖိုင်ကို ကြည့်ပြီးတော့ တစ်ခု သတိထားမိလားတော့ မသိဘူး။ ပထမဆုံး head command နဲ့ ဆွဲထုတ်ပြခဲ့တဲ့ all.rwkc.clean ဖိုင်ထဲက ကချင်စာကြောင်းတွေမှာ ပထမဆုံး စာလုံးတွေက capital letter ဖြစ်နေတာကို။ အဲဒါကြောင့် perl script ထဲမှာ hash ထဲကို ထည့်ပြီး မသိမ်းခင်မှာ အရင်ဆုံး lower case ပြောင်းခဲ့ပါတယ်။ နှစ်ဖက်စလုံးညီအောင် all.mykc.clean ဖိုင်ကို ဆွဲထုတ်တဲ့ အခါမှာလည်း lower case ပြောင်းပြီးမှ hash ထဲကို ထည့်ပါတယ်။ perl script မှာက lower case ပြောင်းတာကို Regular Expression နဲ့လည်း လုပ်လို့ ရပေမဲ့ ဒီတစ်ခါတော့ lc ဆိုတဲ့ perl function ကို သုံးပြီးပြောင်းခဲ့ပါတယ်။  
+
+```perl
+while (my $line = <$FILE1>)
+{
+    # lc is the function for lower case conversion
+    # ဒီဟာကို သုံးခဲ့တာက kc-rw ရဲ့ကချင်စာမှာ ထိပ်ဆုံး စာလုံးတွေကို capital လုပ်ထားလို့
+    chomp($line); my $lowerLine = lc $line;
+    my ($left, $right) = split ("\t", $lowerLine);
+    $pair1{$right}=$left;
+}
+```
+run မယ်ဆိုရင် parallel corpus နှစ်ဖိုင်ကိုတော့ command line argument အဖြစ်နဲ့ pass လုပ်ပေးရပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ ./print-common-kc.pl ./all.rwkc.clean ./all.mykc.clean > out
+```
+
+run လိုက်ရင် ထွက်လာမယ့် output ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ head out
+grai katsi ai rai tim numri ayan gaw n hkrat ai .	gay zø-ngē , íwē tvwvn àngwà nø̀ mvja rà ē .	တော်တော် အေး တယ် ၊ ဒါပေမယ့် နှင်း အမြဲတမ်း တော့ လဲ မ ကျ ပါ ဘူး ။
+dai gaw li dwi si na makau kaw re .	kū mé nø̀ gø̀mzīq yà shvnvng yv́ng íè .	ထိုအရာ က လိမ္မော်သီး ရဲ့ ဘေးမှာ ဖြစ် ပါ တယ် ။
+mali	vbī	လေး
+ngai gaw mg kyaw yin re , dinghku n de shi ai .	ngà nø̀ mg-joyín wà nø̀ tø shī ē , vsvngchø̀m shī mvlo ngē .	ကျွန်တော် ဟာ မောင်ကျော်ရင် လို့ ခေါ် ပါ တယ် ၊ အိမ်ထောင်မကျ သေး ပါ ဘူး ။
+htaw ra hpa rai .	wē ong pà íè .	ဟို ဟာ ဘာ လဲ ။
+n dai gaw u kanu langai re nga ai .	yà mé nø̀ kāmā tìq gō íè .	ဒါ က ကြက်မ တစ် ကောင် ဖြစ် ပါ တယ် ။
+n hpye na makau kaw re .	yǿng yà shvnvng yv́ng íè .	လွယ်အိတ် ရဲ့ ဘေးမှာ ပါ ။
+bai na ngai ngapali de kalang bai sa byin hkra sa na .	wēdø̀ i kèní ngà ngàbvli tìq baq dī bøn dø̀ dī lv́m mē .	ဒါဖြင့်ရင် ကျွန်တော် ငပလီ တစ် ခေါက် သွား ဖြစ် အောင် သွား ပါ့ မယ် ။
+ngai na lau ban hpe ngai n chye na ai .	ngà lobvn kàq ngà àngjøng ní yvng mvnē shø̀ng .	ကျွန်တော့် သူဌေး ကို ကျွန်တော် တကယ် အမြင်မရှင်း ဘူး ။
+ngai mahkawn hkawn ngut sai , na aten .	ngà mvkon dvngbǿng-a , nà í bǿī .	ကျွန်တော် သီချင်းဆို ပြီး သွား ပြီ ၊ ခင်ဗျား အလှည့် ။
+(base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ 
+```
+
