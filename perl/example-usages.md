@@ -1361,11 +1361,12 @@ YÀ MÉ NØ̀ NVMPŪ TÌQ WVT ÍÈ .	Dai gaw nam pan pu langai re ai .
 ```perl
 while (my $line = <$FILE1>)
 {
+    chomp($line); 
+    my ($left, $right) = split ("\t", $lowerLine);
     # lc is the function for lower case conversion
     # ဒီဟာကို သုံးခဲ့တာက kc-rw ရဲ့ကချင်စာမှာ ထိပ်ဆုံး စာလုံးတွေကို capital လုပ်ထားလို့
-    chomp($line); my $lowerLine = lc $line;
-    my ($left, $right) = split ("\t", $lowerLine);
-    $pair1{$right}=$left;
+    my $lowerRight = lc $right;
+    $pair1{$lowerRight}=$left;
 }
 ```
 run မယ်ဆိုရင် parallel corpus နှစ်ဖိုင်ကိုတော့ command line argument အဖြစ်နဲ့ pass လုပ်ပေးရပါလိမ့်မယ်။  
