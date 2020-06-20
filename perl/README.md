@@ -107,5 +107,9 @@
     
 35. [print-union-isect-diff.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-union-isect-diff.pl)  
     (array ထဲက element တွေကို သင်္ချာရဲ့ set operation အနေနဲ့ union, intersection, difference ကို hash ကို သုံးပြီး code လုပ်တဲ့ ပုံစံပါ)  
+    
+36. [print-common-kachin.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-common-kachin.pl)  
+    (ဘာသာစကားတစ်ခုက ဘုံပါဝင်နေတဲ့ parallel data corpus နှစ်ခုထဲကနေ ဘုံပါနေတဲ့ စာကြောင်းတွေကို တည်ပြီးတော့ နောက်ထပ် parallel corpus အသစ်ဆောက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script တစ်ပုဒ်ပါ။ ဒီ script ကို "ရဝမ်-ကချင်", "မြန်မာ-ကချင်" parallel corpus နှစ်ခုကနေ "ရဝမ်-မြန်မာ" corpus ဆောက်ဖို့အတွက် သုံးခဲ့)  
+    
 
 
