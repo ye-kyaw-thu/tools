@@ -853,7 +853,7 @@ $ cat ./align
 0-0 1-1 2-2 3-2 3-3 4-3 5-4 6-5 7-6 8-7 9-7
 ```
 
-အဲဒါကို တခြားအလုပ်တစ်ခုအတွက် ကျွန်တော်သုံးတဲ့ python program က alignment word နှစ်ခုကြားမှာ ကော်မှာနဲ့ခံရေးပြီး ကွင်းစကွင်းပိတ် ခတ်ရေးတဲ့ ပုံစံကိုလက်ခံလို့ format ပြောင်းဖို့အတွက် [x-x-to-x-comma-x-with-brackets.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/x-x-to-x-comma-x-with-brackets.pl) ပရိုဂရမ်ကို ရေးခဲ့ပါတယ်။ run တဲ့ပုံစံကတော့ အောက်ပါအတိုင်းပါ။  
+အဲဒါကို တခြားအလုပ်တစ်ခုအတွက် ကျွန်တော်သုံးတဲ့ python program က alignment word နှစ်ခုကြားမှာ ကော်မာာနဲ့ခံရေးပြီး ကွင်းစကွင်းပိတ် ခတ်ရေးတဲ့ ပုံစံကိုလက်ခံလို့ format ပြောင်းဖို့အတွက် [x-x-to-x-comma-x-with-brackets.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/x-x-to-x-comma-x-with-brackets.pl) ပရိုဂရမ်ကို ရေးခဲ့ပါတယ်။ run တဲ့ပုံစံကတော့ အောက်ပါအတိုင်းပါ။  
 
 ```
 $ ./x-x-to-x-comma-x-with-brackets.pl ./align 
