@@ -14,11 +14,10 @@ import argparse
 def main(code):
     epi = epitran.Epitran(code)
     for line in sys.stdin:  # pointless
-#        line = line.decode('utf-8') # commented out by Ye
+        #line = line.decode('utf-8') # commented out by Ye
         line = unicodedata.normalize('NFD', line.lower())
         line = epi.transliterate(line)
-        #line = line.encode('utf-8')
-        #sys.stdout.write(line.decode('utf-8'))
+        #line = line.encode('utf-8') # comented out by Ye
         sys.stdout.write(line)
 
 
