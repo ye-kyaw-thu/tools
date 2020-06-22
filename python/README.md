@@ -23,4 +23,7 @@
 7. [korean-breaks.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/korean-breaks.py)  
 (ကိုရီးယား စာကြောင်းတွေကို word segmentation, POS tagging လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ hangul-utils ကို သုံးထားပါတယ်။)  
 
+8. [epitranscribe.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/epitranscribe.py)  
+(မြန်မာနာမည်တွေကို IPA (International Phonetic Alphabet) လေဘယ်ထိုးဖို့ သုံးခဲ့တယ်။ original code က Python 2.7 မို့လို့ Python 3 နဲ့ run လို့ရဖို့ အနည်းငယ် ပြင်ဆင်ခဲ့တယ်။)
+
 
