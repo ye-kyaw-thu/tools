@@ -114,5 +114,7 @@
 37. [sylbreak.pm](https://github.com/ye-kyaw-thu/tools/blob/master/perl/sylbreak.pm)  
     (Unicode နဲ့သိမ်းထားတဲ့မြန်မာစာကြောင်းတွေကို regular expression တစ်ကြောင်းတည်းနဲ့ syllable breaking လုပ်လို့ ရတယ်ဆိုတာကို ရေးပြထားတဲ့ sylbreak (https://github.com/ye-kyaw-thu/sylbreak) perl program ကို perl module အဖြစ် ရေးပြထားတာ ဖြစ်ပါတယ်။ word boundary ကိုပါ မပျောက်သွားစေချင်တဲ့ အခါမျိုးလည်း ရှိတာမို့ အဲဒီအတွက်လည်း subroutine တစ်ခုအနေနဲ့ ရေးပြထားပါတယ်)  
     
+38. [test.sylbreak.pm.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test.sylbreak.pm.pl)  
+    (No. 37 မှာ ရေးပြထားတဲ့ sylbreak.pm ကို ဥပမာအနေနဲ့ ခေါ်သုံးပြထားတဲ့ perl script ပါ)  
 
 
