@@ -1393,3 +1393,6 @@ dai gaw a rai htaw mawdaw langai re nga ai .	WĒ MÉ NØ̀ DVRĒ ZÀQ MŌDŌ TÌ
 (base) ye@ykt-pro:/media/ye/project1/data/kc-my-rw/prepare$ 
 ```
 
+## 38. https://github.com/ye-kyaw-thu/tools/edit/master/perl/test.sylbreak.pm.pl  
+
+မြန်မာစာ NLP အလုပ်တွေကို မလုပ်ခင်မှာ မြန်မာစာကြောင်းတွေကို syllable unit တွေအနေနဲ့ segmentation အရင်ဖြတ်ကြရတဲ့ အခါမျိုးရှိပါတယ်။ အဲဒီအတွက် sylbreak tool ကို ကျွန်တော်ရဲ့ github မှာ repository တစ်ခုအနေနဲ့ တင်ပေးထားပါတယ်။ အဲဒီ sylbreak tool ကို perl module အနေနဲ့ နံပါတ် ၃၇ မှာ ရေးပြထားပါတယ်။ test.sylbreak.pm.pl ကတော့ 
