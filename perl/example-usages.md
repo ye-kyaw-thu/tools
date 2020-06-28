@@ -1422,8 +1422,9 @@ while (my $line = <STDIN>)
 sylbreak::syllable ဆိုတာက sylbreak perl module ရဲ့ syllable ဆိုတဲ့ function ကို သုံးမယ်လို့ပြောတာပါ။  
 Function argument နှစ်ခု ပေးရပြီး $line က input sentence ဖြစ်ပြီးတော့၊ "\_" ကတော့ syllable boundary delimiter ကို underscore ထားပေးပါလို့ ပြောတာ ဖြစ်ပါတယ်။  
 
-sylbreak::syllableWord ကတော့ အထက်မှာ ရှင်းပြခဲ့တဲ့ word boundary ကိုပါ keep လုပ်ပြီးတော့ syllable ဖြတ်ပေးမဲ့ function ကို ခေါ်သုံးပြထားတာ ဖြစ်ပါတယ်။ အထက်က bbc-article-27june2020.5sent.txt ဖိုင်ကို test.sylbreak.pm.pl ကို pass လုပ်ပြီး syllable ဖြတ်ပုံဖြတ်နည်း နှစ်မျိုးကို စမ်းကြည့်ရင် အောက်ပါအတိုင်း output ရပါလိမ့်မယ်။  
-သတိထားပြီးကြည့်ရင် မြင်ရပါလိမ့်မယ် "sylbreak::syllableWord" function ကို သုံးပြီး ဖြတ်ထားတဲ့ output တွေမှာတော့ နဂိုစာကြောင်းမှာ ပါနေတဲ့ space တွေကို မဖျက်ပဲထားထားပေးထားတာကို ...   
+sylbreak::syllableWord ကတော့ အထက်မှာ ရှင်းပြခဲ့တဲ့ word boundary ကိုပါ keep လုပ်ပြီးတော့ syllable ဖြတ်ပေးမဲ့ function ကို ခေါ်သုံးပြထားတာ ဖြစ်ပါတယ်။  
+
+အထက်က bbc-article-27june2020.5sent.txt ဖိုင်ကို test.sylbreak.pm.pl ကို pass လုပ်ပြီး syllable ဖြတ်ပုံဖြတ်နည်း နှစ်မျိုးကို စမ်းကြည့်ရင် အောက်ပါအတိုင်း output ရပါလိမ့်မယ်။ သတိထားပြီးကြည့်ရင် မြင်ရပါလိမ့်မယ် "sylbreak::syllableWord" function ကို သုံးပြီး ဖြတ်ထားတဲ့ output တွေမှာတော့ နဂိုစာကြောင်းမှာ ပါနေတဲ့ space တွေကို မဖျက်ပဲထားထားပေးထားတာကို ...   
 
 
 ```
