@@ -3,7 +3,7 @@
 ## syllable breaking perl module for Myanmar language Unicode Text
 ## Refer: https://github.com/ye-kyaw-thu/sylbreak
 ## last updated: 28 June 2020
-## Author: Ye Kyaw Thu, Visiting Researcher, LST, NECTEC, Thailand
+## Author: Ye Kyaw Thu, Visiting Professor, LST, NECTEC, Thailand
 ## Reference of Myanmar Unicode: http://unicode.org/charts/PDF/U1000.pdf
 
 # ဥပမာ အနေနဲ့ ဆောက်ပြထားတဲ့ sylbreak လို့ နာမည်ပေးထားတဲ့
