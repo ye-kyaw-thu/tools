@@ -111,5 +111,8 @@
 36. [print-common-kachin.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-common-kachin.pl)  
     (ဘာသာစကားတစ်ခုက ဘုံပါဝင်နေတဲ့ parallel data corpus နှစ်ခုထဲကနေ ဘုံပါနေတဲ့ စာကြောင်းတွေကို တည်ပြီးတော့ နောက်ထပ် parallel corpus အသစ်ဆောက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script တစ်ပုဒ်ပါ။ ဒီ script ကို "ရဝမ်-ကချင်", "မြန်မာ-ကချင်" parallel corpus နှစ်ခုကနေ "ရဝမ်-မြန်မာ" corpus ဆောက်ဖို့အတွက် သုံးခဲ့)  
     
+37. [sylbreak.pm](https://github.com/ye-kyaw-thu/tools/blob/master/perl/sylbreak.pm)  
+    (Unicode နဲ့သိမ်းထားတဲ့မြန်မာစာကြောင်းတွေကို regular expression တစ်ကြောင်းတည်းနဲ့ syllable breaking လုပ်လို့ ရတယ်ဆိုတာကို ရေးပြထားတဲ့ sylbreak (https://github.com/ye-kyaw-thu/sylbreak) perl program ကို perl module အဖြစ် ရေးပြထားတာ ဖြစ်ပါတယ်။ word boundary ကိုပါ မပျောက်သွားစေချင်တဲ့ အခါမျိုးလည်း ရှိတာမို့ အဲဒီအတွက်လည်း subroutine တစ်ခုအနေနဲ့ ရေးပြထားပါတယ်)  
+    
 
 
