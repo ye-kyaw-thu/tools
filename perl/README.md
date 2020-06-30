@@ -116,5 +116,8 @@
     
 38. [test.sylbreak.pm.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test.sylbreak.pm.pl)  
     (No. 37 မှာ ရေးပြထားတဲ့ sylbreak.pm ကို ဥပမာအနေနဲ့ ခေါ်သုံးပြထားတဲ့ perl script ပါ)  
+    
+39. [tag-BI.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tag-BI.pl)  
+    (BI tagging လုပ်ပေးတဲ့ perl script ပါ)  
 
 
