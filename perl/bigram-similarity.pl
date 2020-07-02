@@ -39,12 +39,6 @@ sub calc_similarity {
    my @str2 = bigram($inputStr2);
    #print("str2: @str2\n");
 
-#   my (%union,@union);
-#   foreach my $item ((@str1,@str2)) {
-#      $union{$item} = 1;
-#   }
-#   @union = keys %union;
-
    my (%isect, @isect);
    foreach my $item (@str1) {
       $isect{$item}++ if grep {  $item eq $_ } @str2;
