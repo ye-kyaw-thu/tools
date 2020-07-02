@@ -120,5 +120,5 @@
 39. [tag-BI.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tag-BI.pl)  
     (BI tagging လုပ်ပေးတဲ့ perl script ပါ)  
 
-44. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
+40. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
 
