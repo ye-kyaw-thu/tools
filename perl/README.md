@@ -121,4 +121,5 @@
     (BI tagging လုပ်ပေးတဲ့ perl script ပါ)  
 
 40. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
+    (bigram string similarity တွက်ဖို့အတွက် ရေးခဲ့)  
 
