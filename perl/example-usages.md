@@ -1497,3 +1497,9 @@ $ cat t | perl test.sylbreak.pm.pl
 ကို_ယ့်_ကိုယ်_ပိုင်_ကား
 ```
 
+## 40. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
+
+String similarity တိုင်းဖို့အတွက်က edit distance သို့မဟုတ် Levenshtein distance ကို အသုံးများပေမဲ့ နောက်ထပ် အသုံးဝင်တဲ့ dice coefficient ကို စမ်းကြည့်ထားတာ ဖြစ်ပါတယ်။ dice coefficient ကို ဖော်မြူလာ အနေနဲ့ ချရေးရင်တော့ အောက်ပါအတိုင်းပါ။  
+
+$ \frac{2 \times \vert X \cap Y \vert}{ \vert X + Y \vert} $
+
