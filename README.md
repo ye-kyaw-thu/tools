@@ -126,6 +126,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 37. [sylbreak.pm](https://github.com/ye-kyaw-thu/tools/blob/master/perl/sylbreak.pm)  
 38. [test.sylbreak.pm.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test.sylbreak.pm.pl)  
 39. [tag-BI.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tag-BI.pl)  
+40. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
 
 # python
 
