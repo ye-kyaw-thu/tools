@@ -1501,7 +1501,7 @@ $ cat t | perl test.sylbreak.pm.pl
 
 String similarity တိုင်းဖို့အတွက်က edit distance သို့မဟုတ် Levenshtein distance ကို အသုံးများပေမဲ့ နောက်ထပ် အသုံးဝင်တဲ့ dice coefficient ကို စမ်းကြည့်ထားတာ ဖြစ်ပါတယ်။ dice coefficient ကို ဖော်မြူလာ အနေနဲ့ ချရေးရင်တော့ အောက်ပါအတိုင်းပါ။  
 
-
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/perl/pic/formula.png" alt="dice coefficient formula" width="812x180"/>
 
 သုံးပုံသုံးနည်းကတော့ အောက်ပါအတိုင်းပါ။ similarity တိုင်းချင်တဲ့ string နှစ်ခုကို command line argument အနေနဲ့ ရိုက်ထည့်ပြီး စမ်းကြည့်ပါ။  
 
