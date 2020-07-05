@@ -37,7 +37,6 @@ if ($#ARGV + 1 != 2) {
 
 open (my $inputFILE,"<:encoding(utf8)", $ARGV[0]) or die "Couldn't open input file $ARGV[0]!, $!\n";
 my $opt = $ARGV[1];
-#all, diff, equal
 my $lineNo = 1;
 
 while (!eof($inputFILE)) {
