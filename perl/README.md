@@ -122,4 +122,8 @@
 
 40. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
     (bigram string similarity တွက်ဖို့အတွက် ရေးခဲ့)  
+    
+41. [chk-src-trg-words.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-src-trg-words.pl)  
+    (source စာကြောင်း၊ target စာကြောင်း တွေမှာ ရှိတဲ့ စာလုံးအရေအတွက်တွေက တူမတူကို စစ်ဖို့အတွက် သုံးခဲ့)   
+
 
