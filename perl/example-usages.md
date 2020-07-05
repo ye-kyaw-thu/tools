@@ -1551,6 +1551,9 @@ OPTION:
 -equal-sentence	display no of words comparison for equal no of words between source and target sentences together with the original sentence
 ```
 
+2nd argument သို့မဟုတ် option တစ်ခုချင်းစီရဲ့ အလုပ်လုပ်ပုံကို ဥပမာအနေနဲ့ အောက်ပါအတိုင်း run ပြထားပါတယ်။  
+"all" option နဲ့ run တဲ့အခါမှာတော့ input file ထဲမှာ ရှိတဲ့ စာကြောင်းအားလုံးအတွက် no. of word ကို တွက်ပေးပါလိမ့်မယ်။ ကော်လံ သုံးခုမှာ ပထမကော်လံက line no. ပါ။ ဒုတိယကော်လံက source sentence ဖြစ်တဲ့ မြန်မာစာ စာကြောင်းပါ။ တတိယ ကော်လံကတော့ target sentence ဖြစ်တဲ့ Romanized sentence ပါ။ ဒီ စာကြောင်းတွေကတော့ input file ရဲ့ အပေါ်ကို မူတည်ပြီး ပြောင်းလဲပါလိမ့်မယ်။ နံပါတ်တွေချည်းပဲ ဖြစ်နေတဲ့ ဒုတိယ စာကြောင်းကတော့ လိုင်းနံပါတ်၊ source sentence ရဲ့ စာလုံးအရေအတွက် နဲ့ target sentence ရဲ့ စာလုံးရေအရေအတွက် တွေကို print လုပ်ထားတာ ဖြစ်ပါတယ်။  
+
 ```
 $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -all | head
 1	အင်း ၊ ဆေးလိပ် ရဲ့ ဆိုးကျိုး တွေ ကို အန်တီ ပြော ပြ မှ ပဲ ဂဃနဏ သိ ရ တော့ တယ် ၊ အစ က ဒီလောက် ဆိုး မှန်း မ သိ ခဲ့ ဘူး ။	Inn , Saylate Yae SoeKyoe Dway Ko AnTe Pyaw Pya Mha Pae GaGaNaNa Thi Ya Dot Dal , Asa Ka Dilauk Soe Mhan Ma Thi Khae Buu .
@@ -1564,6 +1567,8 @@ $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -all | head
 5	ပါးစပ် ကျယ်ကျယ် ဖွင့် ပါ ။	Bazat KyalKyal Phwint Bar .
 5	5	5
 ```
+
+"-diff" option နဲ့ run တဲ့အခါမှာ အောက်ပါအတိုင်း မတူတဲ့ စာကြောင်းတွေရဲ့ လိုင်းနံပါတ်နဲ့ source sentence ရဲ့ စာလုံးစုစုပေါင်း၊ target sentence ရဲ့ စာလုံးစုစုပေါင်းတွေကို ပြသပေးပါလိမ့်မယ်။  
 
 ```
 $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -diff | head
@@ -1579,6 +1584,8 @@ $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -diff | head
 7638	7	6
 ```
 
+"-equal" option ကတော့ "-diff" option နဲ့ ဆန့်ကျင်ဘက်ပါ။ source sentence ရဲ့ no.of words နဲ့ target sentence ရဲ့ no. of words က တူတဲ့ လိုင်းနံပါတ်တွေအတွက်ပဲ print လုပ်ပါလိမ့်မယ်။  
+
 ```
 $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -equal | head
 1	28	28
@@ -1593,6 +1600,8 @@ $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -equal | head
 10	7	7
 ```
 
+"-diff-sentence" option ကတော့ no. of word မတူတဲ့ လိုင်းတွေအတွက် no. of words တွက်ပေးတာအပြင်၊ source, target sentence တွေကိုပါ တွဲပြီးတော့ ရိုက်ထုတ်ပြပေးပါလိမ့်မယ်။  
+
 ```
 $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -diff-sentence | head
 929	မိုးချုပ် နေ ပြီ ။ ခန်းစည်း ကို ပိတ် ပေး ရ မလား ။	moeChote nay pyi . khansee ko pate pay yaymalar .
@@ -1606,6 +1615,8 @@ $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -diff-sentence | head
 7251	၂၀၁၂ ခုနှစ် ဟာ အင်္ဂလန် နိုင်ငံ အတွက် ထူးခြားသော နှစ် တစ် နှစ် ပဲ ဖြစ် ပါ တယ် ။ ကမ္ဘာ မှ မျှော်လင့်စောင့်ကြည့်နေသော အိုလံပစ် အားကစား ကျင်းပ ရ မည့် အပြင် အင်္ဂလန် ဘုရင်မ အဲလီစဘက် ဒုတိယမြောက် ၏ နှစ်( ၆၀ ) ပြည့် ကျင်းပ ရမည့် နှစ် လည်း ဖြစ် ပါ တယ် ။	Hnahtaungsalnhit Khunhit Har Ingalan Naingngan Atwet Htoocharthaw Nhit Ta Nhit Pae Phit Bar Tal . Kabar Mha Myawlintsauntkyinaythaw Aoelanpit Arkasar Kyinpa Ya Myi Apyin Ingalan Bayinma Aeleesabat Dutayamyout Ei Nhit ( Choutsal ) Pyae Kyinpa Yamyi Nhit Lal Phit Bar Tal .
 7251	41	42
 ```
+
+"-equal-sentence" option ကတော့ no. of word တူတဲ့ စာကြောင်းတွေကိုပဲ source, target sentence တွေနဲ့ တွက်ချက်ထားတဲ့ no. of words တွေကို print လုပ်ပေးမှာ ဖြစ်ပါတယ်။   
 
 ```
 $ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -equal-sentence | head
