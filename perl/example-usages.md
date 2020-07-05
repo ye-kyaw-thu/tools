@@ -1534,7 +1534,7 @@ Similarity Value:	0.378378378378378
 
 ပုံမှန်အားဖြင့် machine translation experiment လုပ်ဖို့အတွက် corpus တွေကို ဆောက်တဲ့အခါမှာ source sentence တွေနဲ့ target sentence တွေရဲ့ စာလုံးအရေအတွက် (no. of words) က တူဖို့ မလိုပါဘူး။ သို့သော် Romanization corpus အတွက်ကျတော့ တူတဲ့ စာကြောင်းတွေက များမှ ဖြစ်မယ်။ အဲဒီအတွက် source sentence နဲ့ target sentence တွေရဲ့ စာလုံးရေအရေအတွက် မတူချင်တဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။  
 
-command line argument နှစ်ခု ပေးရပါတယ်။ ပထမ argument ကတော့ source<TAB>target format ပုံစံနဲ့ သိမ်းထားတဲ့ input file ရဲ့ filename ဖြစ်ပြီးတော့၊ ဒုတိယ argument ကတော့ option တစ်ခု ဖြစ်ပါတယ်။ ဘာ argument မှ မပေးရင် သို့မဟုတ် argument < 2 ဆိုရင် help screen ပြပေးပါလိမ့်မယ်။  
+command line argument နှစ်ခု ပေးရပါတယ်။ ပထမ argument ကတော့ source<TAB>target format ပုံစံနဲ့ သိမ်းထားတဲ့ input file ရဲ့ filename ဖြစ်ပြီးတော့၊ ဒုတိယ argument ကတော့ option တစ်ခု ဖြစ်ပါတယ်။ ဘာ argument မှ မပေးရင် သို့မဟုတ် no. of argument < 2 ဆိုရင် help screen ပြပေးပါလိမ့်မယ်။  
 
 ```
 $ perl ./chk-src-trg-words.pl
@@ -1551,5 +1551,73 @@ OPTION:
 -equal-sentence	display no of words comparison for equal no of words between source and target sentences together with the original sentence
 ```
 
+```
+$ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -all | head
+1	အင်း ၊ ဆေးလိပ် ရဲ့ ဆိုးကျိုး တွေ ကို အန်တီ ပြော ပြ မှ ပဲ ဂဃနဏ သိ ရ တော့ တယ် ၊ အစ က ဒီလောက် ဆိုး မှန်း မ သိ ခဲ့ ဘူး ။	Inn , Saylate Yae SoeKyoe Dway Ko AnTe Pyaw Pya Mha Pae GaGaNaNa Thi Ya Dot Dal , Asa Ka Dilauk Soe Mhan Ma Thi Khae Buu .
+1	28	28
+2	ရ ပါ တယ် ။ မိတ်ဆက် ပေး တာ ပေါ့ ။	Ya Bar Dal . MateSet Pay Dar Pop .
+2	9	9
+3	ရှူး ၊ တိုးတိုး ပြော ပါ ၊ အော်ကြီးဟစ်ကျယ် မ လုပ် ပါ နဲ့ ၊ တော်ကြာ ဆရာမ လာ ဆူ နေ ဦး မယ် ။	Shue , ToeToe Pyaw Bar , AwGyiHitKyal Ma Lote Par Nae , TawKyar SaYarMa Lar Su Nay Ohne Mal .
+3	20	20
+4	ပါးစပ် ကို ကျယ်ကျယ် ဟ ပါ ။	Bazat Ko KyalKyal Ha Bar .
+4	6	6
+5	ပါးစပ် ကျယ်ကျယ် ဖွင့် ပါ ။	Bazat KyalKyal Phwint Bar .
+5	5	5
+```
 
+```
+$ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -diff | head
+929	11	10
+3866	17	16
+5693	10	11
+6695	8	7
+7251	41	42
+7259	11	10
+7268	16	15
+7441	21	22
+7614	11	13
+7638	7	6
+```
+
+```
+$ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -equal | head
+1	28	28
+2	9	9
+3	20	20
+4	6	6
+5	5	5
+6	3	3
+7	8	8
+8	12	12
+9	20	20
+10	7	7
+```
+
+```
+$ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -diff-sentence | head
+929	မိုးချုပ် နေ ပြီ ။ ခန်းစည်း ကို ပိတ် ပေး ရ မလား ။	moeChote nay pyi . khansee ko pate pay yaymalar .
+929	11	10
+3866	၉ နာရီခွဲ မှာ ကျွန်တော် တို့ အားလုံး မိမိ တို့ ရဲ့ လုပ်ငန်းခွင် နေရာ မှာ အလုပ်လုပ် ကြ ပါ တယ် ။	Koe Naryikwal Hmar Kyanaw Doe Arrlone Mimi Doe Yae Lotengangwin Hmar Alotelote Kya Bar Dal .
+3866	17	16
+5693	ဒါ က ကျွန်မ ရဲ့ စိတ် ဆန္ဒ မ ဟုတ် ဘူး ။	Dar Ka kyama Yae Sate Sanda Ma Hote Bar Bu .
+5693	10	11
+6695	ဒါ ဆိုရင် တော့ အဖြူအမဲ ပဲ ဝယ် ပါ ။	Dar Soyin Tot Aphyuamae Wel Bar .
+6695	8	7
+7251	၂၀၁၂ ခုနှစ် ဟာ အင်္ဂလန် နိုင်ငံ အတွက် ထူးခြားသော နှစ် တစ် နှစ် ပဲ ဖြစ် ပါ တယ် ။ ကမ္ဘာ မှ မျှော်လင့်စောင့်ကြည့်နေသော အိုလံပစ် အားကစား ကျင်းပ ရ မည့် အပြင် အင်္ဂလန် ဘုရင်မ အဲလီစဘက် ဒုတိယမြောက် ၏ နှစ်( ၆၀ ) ပြည့် ကျင်းပ ရမည့် နှစ် လည်း ဖြစ် ပါ တယ် ။	Hnahtaungsalnhit Khunhit Har Ingalan Naingngan Atwet Htoocharthaw Nhit Ta Nhit Pae Phit Bar Tal . Kabar Mha Myawlintsauntkyinaythaw Aoelanpit Arkasar Kyinpa Ya Myi Apyin Ingalan Bayinma Aeleesabat Dutayamyout Ei Nhit ( Choutsal ) Pyae Kyinpa Yamyi Nhit Lal Phit Bar Tal .
+7251	41	42
+```
+
+```
+$ perl ./chk-src-trg-words.pl ./SL-finaldata-15000 -equal-sentence | head
+1	အင်း ၊ ဆေးလိပ် ရဲ့ ဆိုးကျိုး တွေ ကို အန်တီ ပြော ပြ မှ ပဲ ဂဃနဏ သိ ရ တော့ တယ် ၊ အစ က ဒီလောက် ဆိုး မှန်း မ သိ ခဲ့ ဘူး ။	Inn , Saylate Yae SoeKyoe Dway Ko AnTe Pyaw Pya Mha Pae GaGaNaNa Thi Ya Dot Dal , Asa Ka Dilauk Soe Mhan Ma Thi Khae Buu .
+1	28	28
+2	ရ ပါ တယ် ။ မိတ်ဆက် ပေး တာ ပေါ့ ။	Ya Bar Dal . MateSet Pay Dar Pop .
+2	9	9
+3	ရှူး ၊ တိုးတိုး ပြော ပါ ၊ အော်ကြီးဟစ်ကျယ် မ လုပ် ပါ နဲ့ ၊ တော်ကြာ ဆရာမ လာ ဆူ နေ ဦး မယ် ။	Shue , ToeToe Pyaw Bar , AwGyiHitKyal Ma Lote Par Nae , TawKyar SaYarMa Lar Su Nay Ohne Mal .
+3	20	20
+4	ပါးစပ် ကို ကျယ်ကျယ် ဟ ပါ ။	Bazat Ko KyalKyal Ha Bar .
+4	6	6
+5	ပါးစပ် ကျယ်ကျယ် ဖွင့် ပါ ။	Bazat KyalKyal Phwint Bar .
+5	5	5
+```
 
