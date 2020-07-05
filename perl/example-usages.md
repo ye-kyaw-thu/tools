@@ -1529,3 +1529,27 @@ Similarity Value:	0.5
 $ perl ./bigram-similarity.pl ငပလီ ချောင်းသာပင်လယ်ကမ်းခြေ
 Similarity Value:	0.378378378378378
 ```
+
+## 41. [chk-src-trg-words.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-src-trg-words.pl)  
+
+ပုံမှန်အားဖြင့် machine translation experiment လုပ်ဖို့အတွက် corpus တွေကို ဆောက်တဲ့အခါမှာ source sentence တွေနဲ့ target sentence တွေရဲ့ စာလုံးအရေအတွက် (no. of words) က တူဖို့ မလိုပါဘူး။ သို့သော် Romanization corpus အတွက်ကျတော့ တူတဲ့ စာကြောင်းတွေက များမှ ဖြစ်မယ်။ အဲဒီအတွက် source sentence နဲ့ target sentence တွေရဲ့ စာလုံးရေအရေအတွက် မတူချင်တဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။  
+
+command line argument နှစ်ခု ပေးရပါတယ်။ ပထမ argument ကတော့ source<TAB>target format ပုံစံနဲ့ သိမ်းထားတဲ့ input file ရဲ့ filename ဖြစ်ပြီးတော့၊ ဒုတိယ argument ကတော့ option တစ်ခု ဖြစ်ပါတယ်။ ဘာ argument မှ မပေးရင် သို့မဟုတ် argument < 2 ဆိုရင် help screen ပြပေးပါလိမ့်မယ်။  
+
+```
+$ perl ./chk-src-trg-words.pl
+Usage: perl ./chk-src-trg-words.pl [FILE] [OPTION]
+Counting no. of words between source and target sentences
+
+FILE: source<TAB>target input file
+
+OPTION:
+-all	display both source-target sentence and no of words comparison for the whole file
+-diff	display only no of words comparison for different no of words between source and target sentences
+-equal	display only no of words comparison for equal no of words between source and target sentences
+-diff-sentence	display no of words comparison for different no of words between source and target sentences together with the original sentence
+-equal-sentence	display no of words comparison for equal no of words between source and target sentences together with the original sentence
+```
+
+
+
