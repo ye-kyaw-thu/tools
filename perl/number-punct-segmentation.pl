@@ -24,7 +24,7 @@ while (!eof($inputFILE)) {
 
         # remove \n
         chomp($line);
-       # add <SPACE>number<SPACE>
+       # add <SPACE>number<SPACE> or <SPACE>punctuation_symbol<SPACE>
         $line =~ s/([၀-၉0-9[:punct:]])/ $1 /g;
         # clean heading and trailing spaces
         $line =~ s/^\s+|\s+$//g;
