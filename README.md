@@ -129,6 +129,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 40. [bigram-similarity.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bigram-similarity.pl)  
 41. [chk-src-trg-words.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-src-trg-words.pl)  
 42. [print-my-numeric-sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-my-numeric-sentence.pl)  
+43. [number-punct-segmentation.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/number-punct-segmentation.pl)  
 
 # python
 
