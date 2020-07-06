@@ -1654,3 +1654,8 @@ $ perl ./print-my-numeric-sentence.pl ./chkfile.txt
 5	၁၁ ရက်နေ့ လက်မှတ် ကုန် သွား ပြီ ။
 ```
 
+## 43. [number-punct-segmentation.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/number-punct-segmentation.pl)  
+
+မြန်မာ ဂဏန်းတွေ ဖြစ်တဲ့ "၀ ၁ ၂ ၃ ၄ ၅ ၆ ၇ ၈ ၉", အင်္ဂလိပ် ဂဏန်းတွေဖြစ်တဲ့ "0 1 2 3 4 5 6 7 8 9" တွေနဲ့ punctuation symbols တွေဖြစ်တဲ့ "!"\#$%&'()\*+,
+\-./:;\<=\>?@\[\\\]^_‘\{|}~" တိုကို spacing ခြားဖို့ (တနည်းအားဖြင့် segmentation လုပ်ဖို့) အတွက် ရေးခဲ့တဲ့ perl script ပါ။  
+
