@@ -129,5 +129,6 @@
 42. [print-my-numeric-sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-my-numeric-sentence.pl)  
     (ဖိုင်ထဲကနေ မြန်မာ ဂဏန်းတွေပဲ ပါတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်တပ်ပြီး ဆွဲထုတ်ဖို့ ရေးခဲ့)  
     
-
+43. [number-punct-segmentation.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/number-punct-segmentation.pl)  
+    (ဂဏန်းတွေ (0-9, ၀-၉) နဲ့ punctuation symbols (!?.;:" etc.) တွေကို spacing ခြားဖို့အတွက် ရေးခဲ့တယ်)  
 
