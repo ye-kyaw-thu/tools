@@ -125,5 +125,9 @@
     
 41. [chk-src-trg-words.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/chk-src-trg-words.pl)  
     (source စာကြောင်း၊ target စာကြောင်း တွေမှာ ရှိတဲ့ စာလုံးအရေအတွက်တွေက တူမတူကို စစ်ဖို့အတွက် သုံးခဲ့)   
+    
+42. [print-my-numeric-sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-my-numeric-sentence.pl)  
+    (ဖိုင်ထဲကနေ မြန်မာ ဂဏန်းတွေပဲ ပါတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်တပ်ပြီး ဆွဲထုတ်ဖို့ ရေးခဲ့)  
+    
 
 
