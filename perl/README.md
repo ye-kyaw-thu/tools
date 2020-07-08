@@ -132,3 +132,5 @@
 43. [number-punct-segmentation.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/number-punct-segmentation.pl)  
     (ဂဏန်းတွေ (0-9, ၀-၉) နဲ့ punctuation symbols (!?.;:" etc.) တွေကို spacing ခြားဖို့အတွက် ရေးခဲ့တယ်)  
 
+44. [tabpair-to-crfcol.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tabpair-to-crfcol.pl)  
+    (TAB key နဲ့ ခြားထားတဲ့ စာကြောင်းတွေကို CRF++, CRFSuite စတာတို့နဲ့ training လုပ်ဖို့အတွက် column pair တွေအဖြစ်တွဲပေးဖို့ ရေးထားတဲ့ perl script ပါ။)  
