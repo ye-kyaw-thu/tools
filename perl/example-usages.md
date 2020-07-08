@@ -1683,9 +1683,9 @@ Let ' s meet 1 0 : 3 0 .
 
 ## 44. [tabpair-to-crfcol.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tabpair-to-crfcol.pl)  
 
-TAB နဲ့ ကော်လံခြားရေးထားတဲ့ စာကြောင်းတွေ (e.g. source<TAB>target, text<TAB>POS_Tags, text<TAB>NER_Tags) ကို word by word အလိုက်တွဲပေးဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။ တစ်ခုရှိတာက ဒီနေရာမှာ ကော်လံနှစ်ခုလုံးမှာ ရှိတဲ့ စာလုံးအရေအတွက် တွေက တူညီမှ ရပါမယ်။ အဲဒါကြောင့် example အနေနဲ့ source<TAB>target လို့ ရေးထားပေမဲ့ ပုံမှန် machine translation အတွက် သုံးတယ်ဆိုတာထက် စာလုံးရေအလိုက် အတိအကျ mapping ဖြစ်နိုင်တဲ့ source, target မျိုးကိုပဲ ဆိုလိုတာပါ။ ဥပမာ Romanization လို ကိစ္စမျိုးပါ။  
+TAB နဲ့ ကော်လံခြားရေးထားတဲ့ စာကြောင်းတွေ (e.g. source\<TAB\>target, text\<TAB\>POS_Tags, text\<TAB\>NER_Tags) ကို word by word အလိုက်တွဲပေးဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။ တစ်ခုရှိတာက ဒီနေရာမှာ ကော်လံနှစ်ခုလုံးမှာ ရှိတဲ့ စာလုံးအရေအတွက် တွေက တူညီမှ ရပါမယ်။ အဲဒါကြောင့် example အနေနဲ့ source\<TAB\>target လို့ ရေးထားပေမဲ့ ပုံမှန် machine translation အတွက် သုံးတယ်ဆိုတာထက် စာလုံးရေအလိုက် အတိအကျ mapping ဖြစ်နိုင်တဲ့ source, target မျိုးကိုပဲ ဆိုလိုတာပါ။ ဥပမာ Romanization လို ကိစ္စမျိုးပါ။  
 	
-ဥပမာ train ဆိုတဲ့ ဖိုင်ထဲမှာ မြန်မာစာကြောင်းနဲ့ Romanization လုပ်ထားတဲ့ စာကြောင်းကို အောက်ပါအတိုင်း <TAB> ကီးနဲ့ခြားပြီး ရိုက်ထားတယ် ဆိုပါစို့  
+ဥပမာ train ဆိုတဲ့ ဖိုင်ထဲမှာ မြန်မာစာကြောင်းနဲ့ Romanization လုပ်ထားတဲ့ စာကြောင်းကို အောက်ပါအတိုင်း \<TAB\> ကီးနဲ့ခြားပြီး ရိုက်ထားတယ် ဆိုပါစို့  
 	
 ```
 $ head train
