@@ -1681,3 +1681,65 @@ $ perl ./number-punct-segmentation.pl ./number-punct.eg.txt
 Let ' s meet 1 0 : 3 0 .
 ```
 
+## 44. [tabpair-to-crfcol.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tabpair-to-crfcol.pl)  
+
+TAB နဲ့ ကော်လံခြားရေးထားတဲ့ စာကြောင်းတွေ (e.g. source<TAB>target, text<TAB>POS_Tags, text<TAB>NER_Tags) ကို word by word အလိုက်တွဲပေးဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။ တစ်ခုရှိတာက ဒီနေရာမှာ ကော်လံနှစ်ခုလုံးမှာ ရှိတဲ့ စာလုံးအရေအတွက် တွေက တူညီမှ ရပါမယ်။ အဲဒါကြောင့် example အနေနဲ့ source<TAB>target လို့ ရေးထားပေမဲ့ ပုံမှန် machine translation အတွက် သုံးတယ်ဆိုတာထက် စာလုံးရေအလိုက် အတိအကျ mapping ဖြစ်နိုင်တဲ့ source, target မျိုးကိုပဲ ဆိုလိုတာပါ။ ဥပမာ Romanization လို ကိစ္စမျိုးပါ။  
+	
+ဥပမာ train ဆိုတဲ့ ဖိုင်ထဲမှာ မြန်မာစာကြောင်းနဲ့ Romanization လုပ်ထားတဲ့ စာကြောင်းကို အောက်ပါအတိုင်း <TAB> ကီးနဲ့ခြားပြီး ရိုက်ထားတယ် ဆိုပါစို့  
+	
+```
+$ head train
+ဟုတ်ကဲ့ မမ ။	hotekae mama .
+ဟုတ်ကဲ့ ၊ မမ ။ ဟေ့ ။ နို့ ဝမ်း ၊ ဘလက် ဝမ်း ၊ တူး တီး ဆွဲ မယ် ။ မုန့် စား ဦး မလား မမ ။	hotekae , mama . haye . noet wan , balak wan , tue tea swal mal . mont sar Ohne malar mama .
+ကောင်း ပါ ပြီ ၊ မမ ၊ လှ မယ် ထင် ရင် ပုံစံ ကို သာ လုပ် ပေး ပါ ။	kaung Bar pyi , mama , Hla mal htin yin ponezan ko thar lote pay Bar .
+ဟုတ်ကဲ့ ကြီးကြီး ။	hotekae kyeekyee .
+အေး ပါ ကွာ ၊ ဒါနဲ့ နေ ပါ ဦး ၊ မင်း က သူ နဲ့ ဘယ်လို လုပ် သိ ကြ တာ လဲ ကွာ ။	aye Bar kwar , darnae nay Bar Ohne , min Ga thu nae Balo lote thi kya tar Lae kwar .
+ဟုတ်ကဲ့ ၊ ကိုယ့် အိမ် ပြန်ရောက် သလို ပဲ ဗျာ ။	hotekae , koh aein pyanyauk thalo Bae Byar .
+ဟုတ်ကဲ့ ပါ ၊ ဒါ ပဲ လား ရှင် ။	hotekae Bar , dar Bae lar shin .
+ကောင်း တယ် ၊ ဒီလို ပဲ ဆုံးဖြတ် တာ ပေါ့ ။	kaung Dal , dilo Bae sonephyat tar pot .
+ဟုတ်ကဲ့ ခင်ဗျာ ၊ ပြီး ပါ ပြီ ။	hotekae khamyar , pee Bar pyi .
+ဟုတ်ကဲ့ အာစရိ ဒါ ပဲ နော် ။	hotekae arrsari dar Bae naw .
+```
+
+အဲဒီဖိုင်ကို tabpair-to-crfcol.pl ပရိုဂရမ်နဲ့ စာလုံးတလုံးချင်းစီကို ကော်လံခွဲပြီး train.col အဖြစ် သိမ်းမယ်။  
+
+```
+perl ./tabpair-to-crfcol.pl train > train.col
+```
+
+run တာပြီးသွားတဲ့ အခါမှာ train.col ဖိုင်ရဲ့ ထိပ်ဆုံး စာကြောင်း ၃၀ ကို head command နဲ့ ရိုက်ကြည့်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  
+
+```
+$ head -n 30 train.col 
+ဟုတ်ကဲ့ hotekae
+မမ mama
+။ .
+ 
+ဟုတ်ကဲ့ hotekae
+၊ ,
+မမ mama
+။ .
+ဟေ့ haye
+။ .
+နို့ noet
+ဝမ်း wan
+၊ ,
+ဘလက် balak
+ဝမ်း wan
+၊ ,
+တူး tue
+တီး tea
+ဆွဲ swal
+မယ် mal
+။ .
+မုန့် mont
+စား sar
+ဦး Ohne
+မလား malar
+မမ mama
+။ .
+ 
+ကောင်း kaung
+ပါ Bar
+```
+
