@@ -1534,7 +1534,7 @@ Similarity Value:	0.378378378378378
 
 ပုံမှန်အားဖြင့် machine translation experiment လုပ်ဖို့အတွက် corpus တွေကို ဆောက်တဲ့အခါမှာ source sentence တွေနဲ့ target sentence တွေရဲ့ စာလုံးအရေအတွက် (no. of words) က တူဖို့ မလိုပါဘူး။ သို့သော် Romanization corpus အတွက်ကျတော့ တူတဲ့ စာကြောင်းတွေက များမှ ဖြစ်မယ်။ အဲဒီအတွက် source sentence နဲ့ target sentence တွေရဲ့ စာလုံးရေအရေအတွက် မတူချင်တဲ့ စာကြောင်းတွေကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။  
 
-command line argument နှစ်ခု ပေးရပါတယ်။ ပထမ argument ကတော့ source<TAB>target format ပုံစံနဲ့ သိမ်းထားတဲ့ input file ရဲ့ filename ဖြစ်ပြီးတော့၊ ဒုတိယ argument ကတော့ option တစ်ခု ဖြစ်ပါတယ်။ ဘာ argument မှ မပေးရင် သို့မဟုတ် no. of argument < 2 ဆိုရင် help screen ပြပေးပါလိမ့်မယ်။  
+command line argument နှစ်ခု ပေးရပါတယ်။ ပထမ argument ကတော့ source\<TAB\>target format ပုံစံနဲ့ သိမ်းထားတဲ့ input file ရဲ့ filename ဖြစ်ပြီးတော့၊ ဒုတိယ argument ကတော့ option တစ်ခု ဖြစ်ပါတယ်။ ဘာ argument မှ မပေးရင် သို့မဟုတ် no. of argument < 2 ဆိုရင် help screen ပြပေးပါလိမ့်မယ်။  
 
 ```
 $ perl ./chk-src-trg-words.pl
