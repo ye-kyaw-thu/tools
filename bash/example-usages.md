@@ -2530,3 +2530,40 @@ bash ./formula-pic.sh "X = arg \max P(X|Y, \theta)"
 
 <kbd><img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/deeplearning-tts.png" /></kbd>  
 
+## 74. [rm-heading-tab-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-heading-tab-lineno.sh)  
+
+line_no.txt ဖိုင်ထဲမှာ စာကြောင်းရဲ့ အစပိုင်းမှာ tab, space နဲ့ လိုင်းနံပါတ်တွေ တပ်ထားတယ်လို့ ဆိုကြပါစို့။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ cat ./line_no.txt 
+	Nak-tu-kah motor thar chu va en ka tum a.
+	Eng chungchang nge min hrilh i tum a?
+  Kei pawh kha-tiang kha ka rin dan chiah a ni.
+ 14998 Hei hian min tibuai .
+ 14999 Anni chu engti khawpin nge an rilru a that ?
+ 15000 Ani chu ka u alawm .
+ ```
+
+အဲဒီလို heading space, tab, လိုင်းနံပါတ်တွေကို ဖြုတ်မယ်ဆိုရင် အောက်ပါအတိုင်း filename ကို command line argument အနေနဲ့ pass ပေးပြီး run ရင် ဖြုတ်ပေးပါလိမ့်မယ်။  
+
+ ```
+(base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ bash ./rm-heading-tab-lineno.sh ./line_no.txt 
+Nak-tu-kah motor thar chu va en ka tum a.
+Eng chungchang nge min hrilh i tum a?
+Kei pawh kha-tiang kha ka rin dan chiah a ni.
+Hei hian min tibuai .
+Anni chu engti khawpin nge an rilru a that ?
+Ani chu ka u alawm .
+```
+
+ရှေဘက်မှာ sed command ကို သုံးပြီးရေးပြခဲ့တဲ့ ./rm-spaces-lineno.sh နဲ့ line_no.txt ဖိုင်ကို ဖြုတ်ကြည့်ရင် လိုင်းနံပါတ်တွေကို ဖြုတ်ပေးမှာ ဖြစ်ပေမဲ့ space နဲ့ tab တို့ကတော့ အောက်ပါအတိုင်း ကျန်နေမှာ ဖြစ်ပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ bash ./rm-spaces-lineno.sh ./line_no.txt 
+	Nak-tu-kah motor thar chu va en ka tum a.
+	Eng chungchang nge min hrilh i tum a?
+  Kei pawh kha-tiang kha ka rin dan chiah a ni.
+Hei hian min tibuai .
+Anni chu engti khawpin nge an rilru a that ?
+Ani chu ka u alawm .
+```
