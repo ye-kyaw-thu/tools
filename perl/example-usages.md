@@ -1743,3 +1743,13 @@ $ head -n 30 train.col
 ပါ Bar
 ```
 
+## 45. [print-blank-lines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-blank-lines.pl)  
+
+usage ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold/rm-blank$ perl ../print-blank-lines.pl ../ch
+826		
+4402		
+7552
+```
