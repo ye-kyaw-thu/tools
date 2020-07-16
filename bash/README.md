@@ -226,3 +226,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 73. [formula-pic.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/formula-pic.sh)  
 (shell script example နံပါတ် ၇၂ နဲ့ ဆက်စပ်ပါတယ်။ formula-pic.sh မှာတော့ သင်္ချာဖော်မြူလာကို latex ရေးတဲ့ ပုံစံနဲ့ ရေးပြီး အလွယ်တကူ ဖော်မြူလာပုံတွေ အဖြစ် ဖန်တီးတာကို လက်တွေ့ လုပ်ပြထားတာ ဖြစ်ပါတယ်။ နေရာ အမျိုးမျိုးမှာ အသုံးဝင်ပါလိမ့်မယ်။)  
 
+74. [rm-heading-tab-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-heading-tab-lineno.sh)  
+(စာကြောင်းရဲ့ ရှေ့ဆုံးမှာ ရှိနေတဲ့ Tab, space, line number တွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ perl one-liner ကို သုံးပြထားပါတယ်။)  
+
