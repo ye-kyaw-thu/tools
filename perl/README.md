@@ -134,3 +134,6 @@
 
 44. [tabpair-to-crfcol.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/tabpair-to-crfcol.pl)  
     (TAB key နဲ့ ခြားထားတဲ့ စာကြောင်းတွေကို CRF++, CRFSuite စတာတို့နဲ့ training လုပ်ဖို့အတွက် column pair တွေအဖြစ်တွဲပေးဖို့ ရေးထားတဲ့ perl script ပါ။)  
+
+45. [print-blank-lines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-blank-lines.pl)  
+    (ဖိုင်ထဲမှာ ရှိတဲ့ blank စာကြောင်းတွေ၊ space ပဲ ရှိတဲ့ စာကြောင်းတွေကို လိုင်းနံပါတ်နဲ့တကွ ရှာဖွေကြည့်ရှုဖို့အတွက် ရေးခဲ့)
