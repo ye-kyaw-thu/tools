@@ -2556,7 +2556,7 @@ Anni chu engti khawpin nge an rilru a that ?
 Ani chu ka u alawm .
 ```
 
-ရှေဘက်မှာ sed command ကို သုံးပြီးရေးပြခဲ့တဲ့ ./rm-spaces-lineno.sh နဲ့ line_no.txt ဖိုင်ကို ဖြုတ်ကြည့်ရင် လိုင်းနံပါတ်တွေကို ဖြုတ်ပေးမှာ ဖြစ်ပေမဲ့ space နဲ့ tab တို့ကတော့ အောက်ပါအတိုင်း ကျန်နေမှာ ဖြစ်ပါတယ်။  
+ရှေဘက်မှာ sed command ကို သုံးပြီးရေးပြခဲ့တဲ့ [21. rm-spaces-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-spaces-lineno.sh) နဲ့ line_no.txt ဖိုင်ကို ဖြုတ်ကြည့်ရင် လိုင်းနံပါတ်တွေကို ဖြုတ်ပေးမှာ ဖြစ်ပေမဲ့ space နဲ့ tab တို့ကတော့ အောက်ပါအတိုင်း ကျန်နေမှာ ဖြစ်ပါတယ်။  
 
 ```
 (base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ bash ./rm-spaces-lineno.sh ./line_no.txt 
