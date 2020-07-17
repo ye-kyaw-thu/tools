@@ -2567,3 +2567,87 @@ Hei hian min tibuai .
 Anni chu engti khawpin nge an rilru a that ?
 Ani chu ka u alawm .
 ```
+
+## 75. [mk-10cross-data.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-10cross-data.sh)  
+
+SMT, NMT experiment တွေလုပ်တဲ့အခါမှာ အထူးသဖြင့် ကျွန်တော်တို့လို့ မြန်မာစာ၊ ကရင်စာ၊ ရှမ်းစာ၊ ချင်းစာ၊ ရခိုင်စာ၊ ပအို့ဝ်စာ ဒေတာတွေကိုပြင်ဆင်ပြီး လုပ်ကြတဲ့အခါမှာ ဒေတာကနည်းတဲ့အတွက်ကြောင့် test set ကို တစ်ခုတည်းထားပြီး လုပ်တာထက် ၁၀ပိုင်း ပိုင်းပြီးတော့ corss-validation (၁၀ ခါ experiment လုပ်၊ test-data ၁၀မျိုးသုံးပြီး ၁၀ခါ testing လုပ်ပြီး၊ ၁၀ခါ evaluation လုပ်) လုပ်ကြရပါတယ်။ အဲဒီ အတွက် parallel data ကို ၁၀ပိုင်းပိုင်းဖို့အတွက် ရေးထားတဲ့ နောက်ထပ် shell script တစ်ပုဒ်ပါ။ အထက်မှာ လည်း တပုဒ်တင်ပေးထားတာ ရှိပါတယ်။ လိုအပ်တဲ့အခါမှာ အဆင်သင့်မရှိတဲ့အခါမှာ ကောက်ပြီး shell script ရေးတာမို့ ...
+
+သုံးပုံသုံးနည်းကတော့ အောက်ပါအတိုင်းပါ  
+
+ပထမဆုံး parallel corpus ရဲ့ format ကို ကြည့်ရအောင်။ source<TAB>target ပုံစံနဲ့ သိမ်းထားပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ head all.mych
+ကျွန်တော် မနက်ဖြန် ကား အသစ် တွေ သွား ကြည့် မလို့ ။	Nak-tu-kah motor thar chu va en ka tum a .
+မင်း ဘာ တွေ သတင်းပေး မှာလဲ ။	Eng chungchang nge min hrilh i tum a ?
+အကြံဉာဏ် ကောင်းတွေ လိုချင် လား ။	Thurawn tha i duh em ?
+မင်း ဘာ တွေ သယ် နေတာလဲ ။	Eng nge i put a ?
+မင်း ငါ့ကို မ မုန်း ခဲ့ဘူး နော် ၊ မုန်း ခဲ့သလား ။	Min hau lo a ni lawm ni, min hua em ?
+အပြင်မှာ မှောင်နေ သေးတယ် ။	Pawn lam chu a la thim .
+ကျွန်တော် ခင်ဗျားကို အိမ် လိုက်ပို့ပေးမယ် ။	In inah ka thlah ang che .
+မင်း ကတိမပျက် ပါဘူး ။	I thu tiam i bawh pelh lo ve .
+ဘယ်သူ အလုပ် လာလုပ် မှာလဲ ။	Tu hna nge i rawn thawh dawn a ?
+ကျွန်တော်လည်း အဲဒီလို ထင်တာပဲ ။	Kei pawh kha-tiang kha ka rin dan chiah a ni .
+
+```
+
+run မယ်။  
+၁၀ ပိုင်းပိုင်းတဲ့ အခါမှာ တစ်ပိုင်းချင်းစီမှာ ရှိတဲ့ training, development, testing ဒေတာတွေရဲ့ စာကြောင်းရေအရေအတွက်ကို output လုပ်ပြပေးပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ bash ./mk-10cross-data.sh all.mych my ch
+total lines: 14983
+
+hline: 12994
+
+  12994  207235 1980842 ./train
+  500  7966 75372 ./dev
+  1489  23792 228501 ./test
+hline: 12976
+
+  12976  207010 1980881 ./train
+  500  7966 75372 ./dev
+  1507  24017 228462 ./test
+hline: 13022
+
+  13022  207193 1980750 ./train
+  500  7966 75372 ./dev
+  1461  23834 228593 ./test
+hline: 12968
+
+  12968  207166 1980983 ./train
+  500  7966 75372 ./dev
+  1515  23861 228360 ./test
+hline: 12981
+
+  12981  207022 1980875 ./train
+  500  7966 75372 ./dev
+  1502  24005 228468 ./test
+hline: 12989
+
+  12989  207137 1980896 ./train
+  500  7966 75372 ./dev
+  1494  23890 228447 ./test
+hline: 12957
+
+  12957  207060 1980783 ./train
+  500  7966 75372 ./dev
+  1526  23967 228560 ./test
+hline: 12991
+
+  12991  207217 1980895 ./train
+  500  7966 75372 ./dev
+  1492  23810 228448 ./test
+hline: 12979
+
+  12979  207091 1980902 ./train
+  500  7966 75372 ./dev
+  1504  23936 228441 ./test
+hline: 12990
+
+  12990  207111 1980055 ./train
+  500  8001 76225 ./dev
+  1493  23881 228435 ./test
+
+```
+
