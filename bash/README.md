@@ -229,3 +229,5 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 74. [rm-heading-tab-lineno.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rm-heading-tab-lineno.sh)  
 (စာကြောင်းရဲ့ ရှေ့ဆုံးမှာ ရှိနေတဲ့ Tab, space, line number တွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ perl one-liner ကို သုံးပြထားပါတယ်။)  
 
+75. [mk-10cross-data.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-10cross-data.sh)  
+(10-fold cross validation machine translation လုပ်ဖို့အတွက် parallel corpus ကို ၁၀ပိုင်း ပိုင်းဖို့ ရေးခဲ့တဲ့ bash script နောက်တပုဒ်ပါ။ မြန်မာ-ချင်း MT experiment အတွက် သုံးခဲ့တယ်။)  
