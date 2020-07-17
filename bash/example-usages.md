@@ -2592,7 +2592,7 @@ SMT, NMT experiment တွေလုပ်တဲ့အခါမှာ အထူ�
 ```
 
 run မယ်။  
-၁၀ ပိုင်းပိုင်းတဲ့ အခါမှာ တစ်ပိုင်းချင်းစီမှာ ရှိတဲ့ training, development, testing ဒေတာတွေရဲ့ စာကြောင်းရေအရေအတွက်ကို output လုပ်ပြပေးပါလိမ့်မယ်။  
+၁၀ ပိုင်းပိုင်းတဲ့ အခါမှာ တစ်ပိုင်းချင်းစီမှာ ရှိတဲ့ training, development, testing ဒေတာတွေရဲ့ စာကြောင်းရေ အရေအတွက်ကို output ပြပေးပါလိမ့်မယ်။  
 
 ```
 (base) ye@ykt-pro:/media/ye/Transcend/exp/my-ch/data/data/chin/prepare/10-fold$ bash ./mk-10cross-data.sh all.mych my ch
