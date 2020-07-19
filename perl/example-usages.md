@@ -1752,4 +1752,45 @@ usage ကတော့ အောက်ပါအတိုင်းပါ။
 826		
 4402		
 7552
+```  
+
+
+46. [add-spu_id.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/add-spu_id.pl)  
+
+WER (Word Error Rate) ကို တွက်ဖို့အတွက် SCLITE tolkit ကို သုံးဖြစ်ပါတယ်။ အဲဒီ toolkit program ကို သုံးဖို့အတွက်က speaker id ကို tag လုပ်ပေးရပါတယ်။  
+example speaker id အနေနဲ့ ထည့်ဖို့အတွက် add-spu_id.pl ကို ရေးခဲ့တာပါ။  
+
+သုံးပုံသုံးနည်းကတော့ အောက်ပါအတိုင်းပါ  
+အရင်ဆုံး test.ch (ချင်း Machine Translation အတွက် သုံးခဲ့တဲ့ test ဖိုင်ပါ) ကို head command နဲ့ ရိုက်ကြည့်ရအောင်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/cocosda2020/hnin-ye-aye/wer-calc/hpbsmt/my-ch$ head test.ch
+Computer thiam tak i nih kha, a englai hi nge chhia a ?
+Ka piin keiniho chu thawnthu pakhat min hrilh .
+Hei hi eng vang nge i ven him loh ?
+Keini chuan hei hi chu motor park-na meter tiin kan ko .
+Duhsakna ka hlan a che .
+Saw tah chuan in hlim ngei ka beisei .
+Tlangvala chuan min hria .
+Amah ngei pawhin anni chu a tawiawm .
+Ka hnungtawlh dawn lo .
+Kan school chu dar 9-ah kan tan .
+```
+
+Speaker ID ကို တပ်တဲ့ အခါမှာ ဘယ်လို run ရတယ် ဆိုတာနဲ့ run ပြီးတဲ့အခါမှာ output ဖိုင်ဖြစ်တဲ့ test.ch.id ဖိုင် မှာ ဘယ်လိုပြောင်းသွားတယ်ဆိုတာကို လေ့လာကြည့်ပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/cocosda2020/hnin-ye-aye/wer-calc/hpbsmt/my-ch$perl ./add-spu_id.pl ./test.ch > test.ch.id
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/cocosda2020/hnin-ye-aye/wer-calc/hpbsmt/my-ch$ head test.ch.id 
+Computer thiam tak i nih kha, a englai hi nge chhia a ? (ye_1)
+Ka piin keiniho chu thawnthu pakhat min hrilh . (ye_2)
+Hei hi eng vang nge i ven him loh ? (ye_3)
+Keini chuan hei hi chu motor park-na meter tiin kan ko . (ye_4)
+Duhsakna ka hlan a che . (ye_5)
+Saw tah chuan in hlim ngei ka beisei . (ye_6)
+Tlangvala chuan min hria . (ye_7)
+Amah ngei pawhin anni chu a tawiawm . (ye_8)
+Ka hnungtawlh dawn lo . (ye_9)
+Kan school chu dar 9-ah kan tan . (ye_10)
+
 ```
