@@ -1755,7 +1755,7 @@ usage ကတော့ အောက်ပါအတိုင်းပါ။
 ```  
 
 
-46. [add-spu_id.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/add-spu_id.pl)  
+## 46. [add-spu_id.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/add-spu_id.pl)  
 
 WER (Word Error Rate) ကို တွက်ဖို့အတွက် SCLITE tolkit ကို သုံးဖြစ်ပါတယ်။ အဲဒီ toolkit program ကို သုံးဖို့အတွက်က speaker id ကို tag လုပ်ပေးရပါတယ်။  
 example speaker id အနေနဲ့ ထည့်ဖို့အတွက် add-spu_id.pl ကို ရေးခဲ့တာပါ။  
