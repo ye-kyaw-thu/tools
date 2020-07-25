@@ -1913,5 +1913,5 @@ evince ./human-eval-form.pdf
 ```
 
 အားလုံး အဆင်ပြေပြေနဲ့ run ပြီးသွားရင် ထွက်လာမယ့် output PDF ဖိုင်ကိုလည်း တင်ပေးထားပါတယ်။  
-ကို ကလစ်နှိပ်ပြီး ဖွင့်ကြည့်ပါ။  
+[human-eval-form.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/human-eval-form.pdf)ကို ကလစ်နှိပ်ပြီး ဖွင့်ကြည့်ပါ။  
 
