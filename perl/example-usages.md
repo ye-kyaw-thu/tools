@@ -1899,3 +1899,19 @@ sub wrap_string{
     }
 }
 ```
+
+perl script ကို run ဖို့အတွက်တော့ shell script တစ်ပုဒ်ရေးပြီး run ခဲ့ပါတယ်။ ဘာကြောင့်လည်း ဆိုတော့ ကြိုပြင်ထားတဲ့ 1st page ဖြစ်တဲ့ evaluation အတွက် ကူညီမယ့်သူရဲ့ information ကို မှတ်ဖို့ ပြင်ဆင်ထားတဲ့ template latex စာမျက်နှာဖိုင်ရဲ့ နောက်ဆက်တွဲအဖြစ် perl script ရဲ့ output ဖိုင်ကို append လုပ်ရတာကြောင့် အဲဒီ template latex ဖိုင်ကို ပျက်မသွားစေချင်လို့ ကော်ပီကူးရတဲ့ အလုပ်လုပ်ရလို့ပါ။ ပြီးတော့ append လုပ်ပြီးသွားတဲ့ latex ဖိုင်ကိုလည်း xelatex နဲ့ compile လုပ်ပေးရတဲ့ အဆင့်ရယ်၊ compile လုပ်ပြီးတော့ ထွက်လာတဲ့ PDF ဖိုင်ကိုလည်း evince နဲ့ ဖွင့်ကြည့်ဖို့ စတဲ့ အဆင့်တွေကို တစ်ခေါက်တစ်ခေါက် run တိုင်းမှာ command တွေ အများကြီးမရိုက်ချင်လို့ ဖြစ်ပါတယ်။ shell script ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+#!/bin/bash
+
+cp ./human-eval-form.bak ./human-eval-form.tex 
+perl ./human-mt-eval-form.pl ./ref.pbsmt.google.yandex.shuf.10 >> ./human-eval-form.tex 
+xelatex ./human-eval-form.tex
+evince ./human-eval-form.pdf
+
+```
+
+အားလုံး အဆင်ပြေပြေနဲ့ run ပြီးသွားရင် ထွက်လာမယ့် output PDF ဖိုင်ကိုလည်း တင်ပေးထားပါတယ်။  
+ကို ကလစ်နှိပ်ပြီး ဖွင့်ကြည့်ပါ။  
+
