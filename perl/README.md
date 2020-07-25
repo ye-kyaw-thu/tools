@@ -140,3 +140,7 @@
     
 46. [add-spu_id.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/add-spu_id.pl)  
     (SCLITE toolkit ကိုသုံးပြီးတော့ WER calculation မလုပ်ခင်မှာ reference, hypothesis စာကြောင်းတွေကို speaker id တပ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ)  
+    
+47. [human-mt-eval-form.pl](https://github.com/ye-kyaw-thu/tools/edit/master/perl/human-mt-eval-form.pl)  
+    (Machine translation experiment ရဲ့ hypothesis တွေကို human evaluation လုပ်ဖို့အတွက် ဖောင်ပြင်စဉ်မှာ ရေးခဲ့တဲ့ perl script ပါ။ ဒီ code ကို နားလည်ဖို့က latex ကိုလည်း အကျွမ်းတဝင် ရှိဖို့ လိုပါလိမ့်မယ်)  
+    
