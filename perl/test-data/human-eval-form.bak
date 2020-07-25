@@ -1,0 +1,68 @@
+\documentclass[a4paper,12pt]{article}
+
+\usepackage{hyperref} % this is the main package for form making
+\usepackage{xcolor}
+    \pagecolor{yellow!40} % for the user info form page
+%\usepackage{afterpage} % to change back pagecolor
+\usepackage[utf8]{inputenc}
+%\usepackage[utf8]
+\usepackage{fontspec} % this will work for xelatex
+\newfontfamily {\padauktext}[Script=Myanmar]{Padauk}
+
+\usepackage[margin=1.3in]{geometry}
+
+%\renewcommand*{\DefaultHeightofChoiceMenu}{20ex}
+\renewcommand*{\DefaultWidthofChoiceMenu}{1ex}
+\renewcommand*{\DefaultHeightofText}{15pt} %adjusting textbox height
+\renewcommand*{\DefaultWidthofText}{30pt} %adujusting textbox width
+
+\hypersetup{
+  pdfauthor   = {Ye Kyaw Thu},
+  pdfkeywords = {Human Evaluation, Machine Translation, Online Machine Translation Services, English-Myanmar, Adequacy, Fluency},
+  pdftitle    = {Human Evaluation Form}
+}
+
+% Global Styles
+\def\DefaultOptionsofText{
+% print, bordercolor=red,backgroundcolor=lightgray,borderstyle={U},
+ print, bordercolor=red,borderstyle={LRUD},
+ format = {var me = event.target.name;  
+          var f = this.getField(me); 
+          f.textFont = \padauktext; }}
+
+\begin{document}
+
+\title{\vspace{-4cm}Human Evaluation \\on Translated Myanmar Sentences}
+%\author{LST, NECTEC, Thailand}
+%\date{\today}
+\date{}
+\maketitle
+\begin{Form}[action=mailto:yktnlp@gmail.com,encoding=html,method=post]
+\section {Evaluator Information}
+\begin{tabbing}
+%xxxxxxxxxx: \= \kill  % This is needed for the right tab width
+xxxxx: \= \kill  % updated tab width
+%\TextField{Date}
+\textbf{Name:} \> \TextField[name=name,width=8cm,charsize=12pt]{\mbox{}}\\
+\noindent \textbf{Age:} \> \TextField[name=age,width=0.9cm,charsize=12pt]{\mbox{}} \\
+\noindent \textbf{Gender:} \ChoiceMenu[combo, default=f, name=gender]{\mbox{}}{Male=m,Female=f}\\
+%\textbf{Gender:} \ChoiceMenu[radio, radiosymbol=6, width=0.5cm, name=gender]{\mbox{}}{Male=m, Female=f, Others=o}\\
+\textbf{Native Language:} \TextField[name=name,width=5cm,charsize=12pt]{\mbox{}}\\
+\textbf{Second Language:} \TextField[name=name,width=5cm,charsize=12pt]{\mbox{}}\\
+
+\noindent \textbf{Phone No.:} \TextField[name=phone,width=4cm,charsize=12pt]{\mbox{}} \\
+\noindent \textbf{Mobile Phone No.:}  \TextField[name=mobilephone,width=4cm,charsize=12pt]{\mbox{}} \\
+\noindent \textbf{Email:} \TextField[name=email,width=10cm,charsize=12pt]{\mbox{}} \\\\
+\textbf{Note:}\\[0.75ex]
+\TextField[multiline, name=Notizen,width=1.0\textwidth,  height=8.25cm,borderstyle=D, bordercolor={red}, value={}, backgroundcolor={0.95 0.95 0.95}]{}
+
+\end{tabbing}
+\end{Form}
+
+\newpage
+\pagecolor{white}
+
+\section{Translated outputs}
+
+%\end{document}
+
