@@ -23,7 +23,7 @@ open (my $inputFILE,"<:encoding(utf8)", $ARGV[0]) or die "Couldn't open input fi
 
 sub wrap_string{
     my $longstr = shift;        
-    my @parts = $longstr =~ /(.{1,70})/g; # split string with length=30
+    my @parts = $longstr =~ /(.{1,70})/g; # split string with length=70
         foreach (@parts) {
             print("\\padauktext{\\textbf {$_}}");
     }
