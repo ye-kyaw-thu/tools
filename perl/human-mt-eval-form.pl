@@ -4,6 +4,7 @@
 # Ye Kyaw Thu, LST, NECTEC, Thailand
 #
 # Preparation for human evaluation on machine translation output
+# Last updated: 26 July 2020
 # How to run: $ perl human-mt-eval-form.pl <input-file> >> <output-file>
 # e.g. cp ./human-eval-form.bak ./human-eval-form.tex 
 #perl ./human-mt-eval-form.pl ./ref.pbsmt.google.yandex.shuf.100 >> ./human-eval-form.tex
