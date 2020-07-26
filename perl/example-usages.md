@@ -1913,5 +1913,8 @@ evince ./human-eval-form.pdf
 ```
 
 အားလုံး အဆင်ပြေပြေနဲ့ run ပြီးသွားရင် ထွက်လာမယ့် output PDF ဖိုင်ကိုလည်း တင်ပေးထားပါတယ်။  
-[human-eval-form.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/human-eval-form.pdf)ကို ကလစ်နှိပ်ပြီး ဖွင့်ကြည့်ပါ။  
+[human-eval-form.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/human-eval-form.pdf)ကို ကလစ်နှိပ်ပြီး ဖွင့်ကြည့်ပါ။ တစ်ခုရှိတာက browser ကနေ PDF ဖိုင်ကို ဖွင့်ကြည့်ရင် interactive combo-box ကို မြင်ရမှာ မဟုတ်ပါဘူး။ အမှန်တကယ်က ဒီ PDF ဖိုင်က machine translaiton evaluation မှာ သုံးကြတဲ့ adequacy နဲ့ fluency score တွေကို translated output စာကြောင်းတစ်ကြောင်းချင်းစီအတွက် combo-box ကနေ ရွေးပြီး evluation လုပ်ပေးလိုရမှာ ဖြစ်ပါတယ်။ ပြီးတော့ အဲဒီ score တွေပါတဲ့ updated PDF ဖိုင်ကိုလည်း save လုပ်ထားပြီး လိုချင်တဲ့ အချိန်မှာ ပြန်လည်ဖွင့်ကြည့်လို့ ရမှာဖြစ်ပါတယ်။ screenshot ကိုလည်း လေ့လာကြည့်ပါ။  
+
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/human-eval-eg-screenshot.png" alt="screenshot of Human Evaluation Form" width="812x180"/>
+<p align="center"> Fig. Screenshot of Human Evaluation Interactive PDF Form </p>  
 
