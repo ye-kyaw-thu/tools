@@ -1918,4 +1918,4 @@ evince ./human-eval-form.pdf
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/perl/test-data/human-eval-eg-screenshot.png" alt="screenshot of Human Evaluation Form" width="812x180"/>
 <p align="center"> Fig. Screenshot of Human Evaluation Interactive PDF Form </p>  
 
-လက်ရှိ tex ဖိုင်၊ PDF ဖိုင်မှာ Hyp1, Hyp2, Hyp3 စသည်ဖြင့် output MT system ပေါ်မူတည်ပြီး ခွဲထားတာကို မြင်အောင်ပြထားပေမဲ့ တကယ်လက်တွေ့ human evaluation လုပ်တဲ့ အခါမှာ ဘယ်စာကြောင်းက ဘယ် hypothesis ဖြစ်ကြောင်းကို မပြသာတာ၊ နောက်ကွယ်မှာ shuffle လုပ်ထားတာမျိုးတွေလည်း လုပ်လေ့ရှိပါတယ်။  
+လက်ရှိ tex ဖိုင်၊ PDF ဖိုင်မှာ Hyp1, Hyp2, Hyp3 စသည်ဖြင့် output MT system ပေါ်မူတည်ပြီး ခွဲထားတာကို မြင်အောင်ပြထားပေမဲ့ တကယ်လက်တွေ့ human evaluation လုပ်တဲ့ အခါမှာ ဘယ်စာကြောင်းက ဘယ် hypothesis ဖြစ်ကြောင်းကို မပြသတာ၊ နောက်ကွယ်မှာ shuffle လုပ်ထားတာမျိုးတွေလည်း လုပ်လေ့ရှိပါတယ်။  
