@@ -231,3 +231,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 75. [mk-10cross-data.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-10cross-data.sh)  
 (10-fold cross validation machine translation လုပ်ဖို့အတွက် parallel corpus ကို ၁၀ပိုင်း ပိုင်းဖို့ ရေးခဲ့တဲ့ bash script နောက်တပုဒ်ပါ။ မြန်မာ-ချင်း MT experiment အတွက် သုံးခဲ့တယ်။)  
+
+76. [align-GIZA++.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/align-GIZA%2B%2B.sh)  
+(GIZA++ alignment toolkit ကို သုံးပြီး alignment လုပ်ပေးမယ့် script ဖြစ်ပါတယ်။ ကိုယ့်စက်ထဲမှာ GIZA++ ကို အရင် install လုပ်ထားရပါမယ်)  
