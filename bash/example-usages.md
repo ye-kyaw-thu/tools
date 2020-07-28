@@ -2651,3 +2651,611 @@ hline: 12990
 
 ```
 
+## 76. [align-GIZA++.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/align-GIZA%2B%2B.sh)  
+
+[GIZA++](https://github.com/moses-smt/giza-pp) toolkit ကို သုံးပြီးတော့ source စာကြောင်းထဲမှာ ရှိတဲ့ စာလုံးတွေကို target ဘက်မှာ ရှိတဲ့ စကားလုံးတွေနဲ့ alignment လုပ်ဖို့အတွက် ရေးခဲ့တဲ့ shell script တစ်ပုဒ်ပါ။
+
+Let's run align-GIZA++.sh
+
+```bash
+(base) ye@ykt-pro:~/exp/alignment$ ./align-GIZA++.sh train.en train.th test-align
+making .vcb and .snt files
+/home/ye/tool/giza-pp/GIZA++-v2/plain2snt.out train.en train.th
+train.en -> train.en
+train.th -> train.th
+WARNING: filtered out empty sentence (source: train.en 2 target: train.th 0).
+WARNING: filtered out empty sentence (source: train.en 4 target: train.th 0).
+WARNING: filtered out empty sentence (source: train.en 2 target: train.th 0).
+WARNING: filtered out empty sentence (source: train.en 3 target: train.th 0).
+WARNING: filtered out empty sentence (source: train.en 5 target: train.th 0).
+WARNING: filtered out empty sentence (source: train.en 7 target: train.th 0).
+##########
+head train.en.vcb
+2 Yes, 205
+3 I 3998
+4 like 1401
+5 playing 27
+6 Thai 63
+7 chess. 6
+8 Can 781
+9 you 4344
+10 recommend 76
+11 something 153
+head train.th.vcb
+2 ใช่ 546
+3 , 2205
+4 ฉัน 6248
+5 ชอบ 276
+6 เล่น 167
+7 หมากรุก 12
+8 ไทย 109
+9 คุณ 4850
+10 มี 1928
+11 อะไร 869
+##########
+head train.en_train.th.snt
+1
+2 3 4 5 6 7 
+2 3 4 5 6 7 8 
+1
+8 9 10 11 12 13 
+9 10 11 12 13 14 15 16 
+1
+14 15 3 16 17 
+4 17 18 19 20 21 22 16 
+1
+##########
+head train.th_train.en.snt
+1
+2 3 4 5 6 7 8 
+2 3 4 5 6 7 
+1
+9 10 11 12 13 14 15 16 
+8 9 10 11 12 13 
+1
+4 17 18 19 20 21 22 16 
+14 15 3 16 17 
+1
+##########
+
+***** 10 runs. (algorithm:TA)*****
+;KategProblem:cats: 80   words: 12554
+
+start-costs: MEAN: 1.87267e+06 (1.86993e+06-1.87668e+06)  SIGMA:2012.12   
+  end-costs: MEAN: 1.65206e+06 (1.64965e+06-1.65409e+06)  SIGMA:1110.93   
+   start-pp: MEAN: 394.874 (388.193-404.815)  SIGMA:4.95869   
+     end-pp: MEAN: 100.361 (98.8681-101.632)  SIGMA:0.691322   
+ iterations: MEAN: 309924 (293840-329419)  SIGMA:10723.1   
+       time: MEAN: 7.39908 (6.59024-8.48116)  SIGMA:0.587319   
+##########
+ls *.classes
+train.en.classes  train.th.classes
+##########
+head train.en.classes
+"0"	21
+"24.7"?	13
+"ABC".	13
+"Chinese	45
+"Gone	56
+"Inception"	54
+"Li"	6
+"Magic	5
+"My	30
+"National	73
+##########
+
+***** 10 runs. (algorithm:TA)*****
+;KategProblem:cats: 80   words: 8711
+
+start-costs: MEAN: 1.83711e+06 (1.83263e+06-1.84489e+06)  SIGMA:3226.07   
+  end-costs: MEAN: 1.70076e+06 (1.69965e+06-1.70221e+06)  SIGMA:795.356   
+   start-pp: MEAN: 188.569 (183.314-197.958)  SIGMA:3.85446   
+     end-pp: MEAN: 80.2539 (79.6974-80.9825)  SIGMA:0.400113   
+ iterations: MEAN: 216902 (207531-225201)  SIGMA:5901.31   
+       time: MEAN: 5.85677 (5.20037-6.70613)  SIGMA:0.492989   
+head train.th.classes
+!	74
+"	57
+'ทั้งหมดคุณสามารถกิน'	46
+(	80
+(ตะวันตก)	52
+(รินไวน์)	46
+(หอย,กุ้ง	70
+(แขกกำลังทานอาหาร.	46
+(แซนด์วิชสองชั้น)	4
+(โปรตีนในแป้ง)	52
+##########
+ls *.cats
+##########
+diff train.en_train.th.snt train.th_train.en.snt
+diff: ../train.en_train.th.snt: No such file or directory
+##########
+making co-occurrence file ...
+line 1000
+line 2000
+line 3000
+line 4000
+line 5000
+line 6000
+line 7000
+line 8000
+line 9000
+line 10000
+line 11000
+line 12000
+line 13000
+line 14000
+line 15000
+line 16000
+line 17000
+line 18000
+line 19000
+END.
+##########
+making alignment ...
+Parameter 's' changed from '' to 'train.en.vcb'
+Parameter 't' changed from '' to 'train.th.vcb'
+Parameter 'c' changed from '' to 'train.en_train.th.snt'
+Parameter 'coocurrencefile' changed from '' to './train.en_train.th.char.cooc'
+Parameter 'o' changed from '2020-07-29.024749.ye' to 'Result'
+Parameter 'outputpath' changed from '' to 'test-align'
+general parameters:
+-------------------
+ml = 101  (maximum sentence length)
+
+No. of iterations:
+-------------------
+hmmiterations = 5  (mh)
+model1iterations = 5  (number of iterations for Model 1)
+model2iterations = 0  (number of iterations for Model 2)
+model3iterations = 5  (number of iterations for Model 3)
+model4iterations = 5  (number of iterations for Model 4)
+model5iterations = 0  (number of iterations for Model 5)
+model6iterations = 0  (number of iterations for Model 6)
+
+parameter for various heuristics in GIZA++ for efficient training:
+------------------------------------------------------------------
+countincreasecutoff = 1e-06  (Counts increment cutoff threshold)
+countincreasecutoffal = 1e-05  (Counts increment cutoff threshold for alignments in training of fertility models)
+mincountincrease = 1e-07  (minimal count increase)
+peggedcutoff = 0.03  (relative cutoff probability for alignment-centers in pegging)
+probcutoff = 1e-07  (Probability cutoff threshold for lexicon probabilities)
+probsmooth = 1e-07  (probability smoothing (floor) value )
+
+parameters for describing the type and amount of output:
+-----------------------------------------------------------
+compactalignmentformat = 0  (0: detailled alignment format, 1: compact alignment format )
+hmmdumpfrequency = 0  (dump frequency of HMM)
+l = test-align/2020-07-29.024749.ye.log  (log file name)
+log = 0  (0: no logfile; 1: logfile)
+model1dumpfrequency = 0  (dump frequency of Model 1)
+model2dumpfrequency = 0  (dump frequency of Model 2)
+model345dumpfrequency = 0  (dump frequency of Model 3/4/5)
+nbestalignments = 0  (for printing the n best alignments)
+nodumps = 0  (1: do not write any files)
+o = test-align/Result  (output file prefix)
+onlyaldumps = 0  (1: do not write any files)
+outputpath = test-align/  (output path)
+transferdumpfrequency = 0  (output: dump of transfer from Model 2 to 3)
+verbose = 0  (0: not verbose; 1: verbose)
+verbosesentence = -10  (number of sentence for which a lot of information should be printed (negative: no output))
+
+parameters describing input files:
+----------------------------------
+c = train.en_train.th.snt  (training corpus file name)
+d =   (dictionary file name)
+s = train.en.vcb  (source vocabulary file name)
+t = train.th.vcb  (target vocabulary file name)
+tc =   (test corpus file name)
+
+smoothing parameters:
+---------------------
+emalsmooth = 0.2  (f-b-trn: smoothing factor for HMM alignment model (can be ignored by -emSmoothHMM))
+model23smoothfactor = 0  (smoothing parameter for IBM-2/3 (interpolation with constant))
+model4smoothfactor = 0.2  (smooting parameter for alignment probabilities in Model 4)
+model5smoothfactor = 0.1  (smooting parameter for distortion probabilities in Model 5 (linear interpolation with constant))
+nsmooth = 64  (smoothing for fertility parameters (good value: 64): weight for wordlength-dependent fertility parameters)
+nsmoothgeneral = 0  (smoothing for fertility parameters (default: 0): weight for word-independent fertility parameters)
+
+parameters modifying the models:
+--------------------------------
+compactadtable = 1  (1: only 3-dimensional alignment table for IBM-2 and IBM-3)
+deficientdistortionforemptyword = 0  (0: IBM-3/IBM-4 as described in (Brown et al. 1993); 1: distortion model of empty word is deficient; 2: distoriton model of empty word is deficient (differently); setting this parameter also helps to avoid that during IBM-3 and IBM-4 training too many words are aligned with the empty word)
+depm4 = 76  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+depm5 = 68  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+emalignmentdependencies = 2  (lextrain: dependencies in the HMM alignment model.  &1: sentence length; &2: previous class; &4: previous position;  &8: French position; &16: French class)
+emprobforempty = 0.4  (f-b-trn: probability for empty word)
+
+parameters modifying the EM-algorithm:
+--------------------------------------
+m5p0 = -1  (fixed value for parameter p_0 in IBM-5 (if negative then it is determined in training))
+manlexfactor1 = 0  ()
+manlexfactor2 = 0  ()
+manlexmaxmultiplicity = 20  ()
+maxfertility = 10  (maximal fertility for fertility models)
+p0 = -1  (fixed value for parameter p_0 in IBM-3/4 (if negative then it is determined in training))
+pegging = 0  (0: no pegging; 1: do pegging)
+
+general parameters:
+-------------------
+ml = 101  (maximum sentence length)
+
+No. of iterations:
+-------------------
+hmmiterations = 5  (mh)
+model1iterations = 5  (number of iterations for Model 1)
+model2iterations = 0  (number of iterations for Model 2)
+model3iterations = 5  (number of iterations for Model 3)
+model4iterations = 5  (number of iterations for Model 4)
+model5iterations = 0  (number of iterations for Model 5)
+model6iterations = 0  (number of iterations for Model 6)
+
+parameter for various heuristics in GIZA++ for efficient training:
+------------------------------------------------------------------
+countincreasecutoff = 1e-06  (Counts increment cutoff threshold)
+countincreasecutoffal = 1e-05  (Counts increment cutoff threshold for alignments in training of fertility models)
+mincountincrease = 1e-07  (minimal count increase)
+peggedcutoff = 0.03  (relative cutoff probability for alignment-centers in pegging)
+probcutoff = 1e-07  (Probability cutoff threshold for lexicon probabilities)
+probsmooth = 1e-07  (probability smoothing (floor) value )
+
+parameters for describing the type and amount of output:
+-----------------------------------------------------------
+compactalignmentformat = 0  (0: detailled alignment format, 1: compact alignment format )
+hmmdumpfrequency = 0  (dump frequency of HMM)
+l = test-align/2020-07-29.024749.ye.log  (log file name)
+log = 0  (0: no logfile; 1: logfile)
+model1dumpfrequency = 0  (dump frequency of Model 1)
+model2dumpfrequency = 0  (dump frequency of Model 2)
+model345dumpfrequency = 0  (dump frequency of Model 3/4/5)
+nbestalignments = 0  (for printing the n best alignments)
+nodumps = 0  (1: do not write any files)
+o = test-align/Result  (output file prefix)
+onlyaldumps = 0  (1: do not write any files)
+outputpath = test-align/  (output path)
+transferdumpfrequency = 0  (output: dump of transfer from Model 2 to 3)
+verbose = 0  (0: not verbose; 1: verbose)
+verbosesentence = -10  (number of sentence for which a lot of information should be printed (negative: no output))
+
+parameters describing input files:
+----------------------------------
+c = train.en_train.th.snt  (training corpus file name)
+d =   (dictionary file name)
+s = train.en.vcb  (source vocabulary file name)
+t = train.th.vcb  (target vocabulary file name)
+tc =   (test corpus file name)
+
+smoothing parameters:
+---------------------
+emalsmooth = 0.2  (f-b-trn: smoothing factor for HMM alignment model (can be ignored by -emSmoothHMM))
+model23smoothfactor = 0  (smoothing parameter for IBM-2/3 (interpolation with constant))
+model4smoothfactor = 0.2  (smooting parameter for alignment probabilities in Model 4)
+model5smoothfactor = 0.1  (smooting parameter for distortion probabilities in Model 5 (linear interpolation with constant))
+nsmooth = 64  (smoothing for fertility parameters (good value: 64): weight for wordlength-dependent fertility parameters)
+nsmoothgeneral = 0  (smoothing for fertility parameters (default: 0): weight for word-independent fertility parameters)
+
+parameters modifying the models:
+--------------------------------
+compactadtable = 1  (1: only 3-dimensional alignment table for IBM-2 and IBM-3)
+deficientdistortionforemptyword = 0  (0: IBM-3/IBM-4 as described in (Brown et al. 1993); 1: distortion model of empty word is deficient; 2: distoriton model of empty word is deficient (differently); setting this parameter also helps to avoid that during IBM-3 and IBM-4 training too many words are aligned with the empty word)
+depm4 = 76  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+depm5 = 68  (d_{=1}: &1:l, &2:m, &4:F, &8:E, d_{>1}&16:l, &32:m, &64:F, &128:E)
+emalignmentdependencies = 2  (lextrain: dependencies in the HMM alignment model.  &1: sentence length; &2: previous class; &4: previous position;  &8: French position; &16: French class)
+emprobforempty = 0.4  (f-b-trn: probability for empty word)
+
+parameters modifying the EM-algorithm:
+--------------------------------------
+m5p0 = -1  (fixed value for parameter p_0 in IBM-5 (if negative then it is determined in training))
+manlexfactor1 = 0  ()
+manlexfactor2 = 0  ()
+manlexmaxmultiplicity = 20  ()
+maxfertility = 10  (maximal fertility for fertility models)
+p0 = -1  (fixed value for parameter p_0 in IBM-3/4 (if negative then it is determined in training))
+pegging = 0  (0: no pegging; 1: do pegging)
+Reading vocabulary file from:train.en.vcb
+
+reading vocabulary files 
+Reading vocabulary file from:train.th.vcb
+WARNING: The following sentence pair has source/target sentence length ration more than
+Source vocabulary list has 12555 unique tokens 
+Target vocabulary list has 8712 unique tokens 
+Calculating vocabulary frequencies from corpus train.en_train.th.snt
+Reading more sentence pairs into memory ... 
+the maximum allowed limit for a source word fertility
+ source length = 1 target length = 10 ratio 10 ferility limit : 9
+Shortening sentence 
+Sent No: 2729 , No. Occurrences: 1
+0 4037 
+178 95 1649 425 19 96 264 54 141 16 
+WARNING: The following sentence pair has source/target sentence length ration more than
+the maximum allowed limit for a source word fertility
+ source length = 1 target length = 11 ratio 11 ferility limit : 9
+Shortening sentence 
+Sent No: 6190 , No. Occurrences: 1
+0 6673 
+486 113 30 31 17 6 389 55 107 398 21 
+WARNING: The following sentence pair has source/target sentence length ration more than
+the maximum allowed limit for a source word fertility
+ source length = 1 target length = 11 ratio 11 ferility limit : 9
+Shortening sentence 
+Sent No: 15296 , No. Occurrences: 1
+0 10970 
+9 211 70 31 241 1300 3160 320 465 15 16 
+WARNING: The following sentence pair has source/target sentence length ration more than
+the maximum allowed limit for a source word fertility
+ source length = 1 target length = 10 ratio 10 ferility limit : 9
+Shortening sentence 
+Sent No: 18611 , No. Occurrences: 1
+0 598 
+88 362 250 72 451 1369 136 18 110 16 
+ERROR: can not read Corpus fits in memory, corpus has: 19994 sentence pairs.
+ Train total # sentence pairs (weighted): 19994
+Size of source portion of the training corpus: 141035 tokens
+Size of the target portion of the training corpus: 139604 tokens 
+In source portion of the training corpus, only 12553 unique tokens appeared
+In target portion of the training corpus, only 8710 unique tokens appeared
+lambda for PP calculation in IBM-1,IBM-2,HMM:= 139604/(161029-19994)== 0.989854
+There are 416386 416386 entries in table
+==========================================================
+Model1 Training Started at: Wed Jul 29 02:47:49 2020
+
+-----------
+Model1: Iteration 1
+Model1: (1) TRAIN CROSS-ENTROPY 13.6786 PERPLEXITY 13112.2
+Model1: (1) VITERBI TRAIN CROSS-ENTROPY 16.8349 PERPLEXITY 116896
+Model 1 Iteration: 1 took: 0 seconds
+-----------
+Model1: Iteration 2
+Model1: (2) TRAIN CROSS-ENTROPY 6.02651 PERPLEXITY 65.187
+Model1: (2) VITERBI TRAIN CROSS-ENTROPY 7.35602 PERPLEXITY 163.826
+Model 1 Iteration: 2 took: 0 seconds
+-----------
+Model1: Iteration 3
+Model1: (3) TRAIN CROSS-ENTROPY 5.33195 PERPLEXITY 40.2789
+Model1: (3) VITERBI TRAIN CROSS-ENTROPY 6.24842 PERPLEXITY 76.0261
+Model 1 Iteration: 3 took: 0 seconds
+-----------
+Model1: Iteration 4
+Model1: (4) TRAIN CROSS-ENTROPY 5.07667 PERPLEXITY 33.7467
+Model1: (4) VITERBI TRAIN CROSS-ENTROPY 5.77499 PERPLEXITY 54.7579
+Model 1 Iteration: 4 took: 0 seconds
+-----------
+Model1: Iteration 5
+Model1: (5) TRAIN CROSS-ENTROPY 4.98187 PERPLEXITY 31.6005
+Model1: (5) VITERBI TRAIN CROSS-ENTROPY 5.56481 PERPLEXITY 47.3343
+Model 1 Iteration: 5 took: 0 seconds
+Entire Model1 Training took: 0 seconds
+NOTE: I am doing iterations with the HMM model!
+train.en.vcb.classes
+ERROR: can not read train.th.vcb.classes
+
+==========================================================
+Hmm Training Started at: Wed Jul 29 02:47:49 2020
+
+-----------
+Hmm: Iteration 1
+A/D table contains 28197 parameters.
+Hmm: (1) TRAIN CROSS-ENTROPY 4.94027 PERPLEXITY 30.7022
+Hmm: (1) VITERBI TRAIN CROSS-ENTROPY 5.45375 PERPLEXITY 43.8271
+
+Hmm Iteration: 1 took: 1 seconds
+
+-----------
+Hmm: Iteration 2
+A/D table contains 28197 parameters.
+Hmm: (2) TRAIN CROSS-ENTROPY 4.6503 PERPLEXITY 25.1119
+Hmm: (2) VITERBI TRAIN CROSS-ENTROPY 4.9816 PERPLEXITY 31.5945
+
+Hmm Iteration: 2 took: 1 seconds
+
+-----------
+Hmm: Iteration 3
+A/D table contains 28197 parameters.
+Hmm: (3) TRAIN CROSS-ENTROPY 4.46308 PERPLEXITY 22.0557
+Hmm: (3) VITERBI TRAIN CROSS-ENTROPY 4.72979 PERPLEXITY 26.5344
+
+Hmm Iteration: 3 took: 0 seconds
+
+-----------
+Hmm: Iteration 4
+A/D table contains 28197 parameters.
+Hmm: (4) TRAIN CROSS-ENTROPY 4.34379 PERPLEXITY 20.3054
+Hmm: (4) VITERBI TRAIN CROSS-ENTROPY 4.57123 PERPLEXITY 23.7727
+
+Hmm Iteration: 4 took: 1 seconds
+
+-----------
+Hmm: Iteration 5
+A/D table contains 28197 parameters.
+Hmm: (5) TRAIN CROSS-ENTROPY 4.255 PERPLEXITY 19.0933
+Hmm: (5) VITERBI TRAIN CROSS-ENTROPY 4.45299 PERPLEXITY 21.9019
+
+Hmm Iteration: 5 took: 1 seconds
+
+ERROR: can not read train.en.vcb.classes
+ERROR: can not read train.th.vcb.classes
+Entire Hmm Training took: 4 seconds
+==========================================================
+ERROR: can not read classes from train.en.vcb.classes
+ERROR: can not read classes from train.th.vcb.classes
+10000
+==========================================================
+Starting H3333344444:  Viterbi Training
+ H3333344444 Training Started at: Wed Jul 29 02:47:53 2020
+
+
+---------------------
+THTo3: Iteration 1
+
+NTable contains #centers(pre/hillclimbed/real): 1 1 1  #al: 91.4825 #alsophisticatedcountcollection: 0 #hcsteps: 0
+#peggingImprovements: 0
+A/D table contains 28197 parameters.
+A/D table contains 32349 parameters.
+125550 parameter.
+10000p0_count is 124389 and p1 is 7607.42; p0 is 0.942366 p1: 0.0576335
+THTo3: TRAIN CROSS-ENTROPY 3.6576 PERPLEXITY 12.6197
+THTo3: (1) TRAIN VITERBI CROSS-ENTROPY 3.78055 PERPLEXITY 13.7423
+
+THTo3 Viterbi Iteration : 1 took: 0 seconds
+
+---------------------
+Model3: Iteration 2
+
+NTable contains #centers(pre/hillclimbed/real): 1 1 1  #al: 91.8619 #alsophisticatedcountcollection: 0 #hcsteps: 1.48765
+#peggingImprovements: 0
+A/D table contains 28197 parameters.
+A/D table contains 32349 parameters.
+125550 parameter.
+10000p0_count is 120621 and p1 is 9491.42; p0 is 0.927052 p1: 0.0729478
+Model3: TRAIN CROSS-ENTROPY 5.0119 PERPLEXITY 32.2652
+Model3: (2) TRAIN VITERBI CROSS-ENTROPY 5.12091 PERPLEXITY 34.7973
+
+Model3 Viterbi Iteration : 2 took: 1 seconds
+
+---------------------
+Model3: Iteration 3
+
+NTable contains #centers(pre/hillclimbed/real): 1 1 1  #al: 92.0153 #alsophisticatedcountcollection: 0 #hcsteps: 1.4922
+#peggingImprovements: 0
+A/D table contains 28197 parameters.
+A/D table contains 32124 parameters.
+125550 parameter.
+10000
+p0_count is 118357 and p1 is 10623.4; p0 is 0.917635 p1: 0.0823647
+Model3: TRAIN CROSS-ENTROPY 4.91495 PERPLEXITY 30.1681
+Model3: (3) TRAIN VITERBI CROSS-ENTROPY 5.00656 PERPLEXITY 32.1457
+
+Model3 Viterbi Iteration : 3 took: 1 seconds
+
+---------------------
+Model3: Iteration 4
+NTable contains 125550 parameter.
+#centers(pre/hillclimbed/real): 1 1 1  #al: 92.1068 #alsophisticatedcountcollection: 0 #hcsteps: 1.45849
+#peggingImprovements: 0
+A/D table contains 28197 parameters.
+A/D table contains 31990 parameters.
+10000p0_count is 116708 and p1 is 11448.1; p0 is 0.91067 p1: 0.0893299
+Model3: TRAIN CROSS-ENTROPY 4.8728 PERPLEXITY 29.2994
+Model3: (4) TRAIN VITERBI CROSS-ENTROPY 4.95697 PERPLEXITY 31.0596
+
+Model3 Viterbi Iteration : 4 took: 1 seconds
+
+---------------------
+Model3: Iteration 5
+
+NTable contains 125550#centers(pre/hillclimbed/real): 1 1 1  #al: 92.1822 #alsophisticatedcountcollection: 0 #hcsteps: 1.45524
+#peggingImprovements: 0
+A/D table contains 28197 parameters.
+A/D table contains 31990 parameters.
+ parameter.
+10000
+p0_count is 115398 and p1 is 12102.9; p0 is 0.905076 p1: 0.0949242
+Model3: TRAIN CROSS-ENTROPY 4.84786 PERPLEXITY 28.7972
+Model3: (5) TRAIN VITERBI CROSS-ENTROPY 4.92797 PERPLEXITY 30.4416
+
+Model3 Viterbi Iteration : 5 took: 0 seconds
+
+---------------------
+T3To4: Iteration 6
+NTable contains #centers(pre/hillclimbed/real): 1 1 1  #al: 92.2349 #alsophisticatedcountcollection: 8.46289 #hcsteps: 1.45229
+#peggingImprovements: 0
+D4 table contains 406 parameters.
+A/D table contains 28197 parameters.
+A/D table contains 31990 parameters.
+125550 parameter.
+10000
+p0_count is 114271 and p1 is 12666.5; p0 is 0.900214 p1: 0.0997855
+T3To4: TRAIN CROSS-ENTROPY 4.83086 PERPLEXITY 28.46
+T3To4: (6) TRAIN VITERBI CROSS-ENTROPY 4.90814 PERPLEXITY 30.026
+
+T3To4 Viterbi Iteration : 6 took: 1 seconds
+
+---------------------
+Model4: Iteration 7
+NTable contains 125550 parameter.
+#centers(pre/hillclimbed/real): 1 1 1  #al: 92.1613 #alsophisticatedcountcollection: 7.51746 #hcsteps: 1.36486
+#peggingImprovements: 0
+D4 table contains 406 parameters.
+A/D table contains 28197 parameters.
+A/D table contains 31093 parameters.
+10000
+p0_count is 112855 and p1 is 13374.6; p0 is 0.894045 p1: 0.105955
+Model4: TRAIN CROSS-ENTROPY 4.73013 PERPLEXITY 26.5406
+Model4: (7) TRAIN VITERBI CROSS-ENTROPY 4.80035 PERPLEXITY 27.8643
+
+Model4 Viterbi Iteration : 7 took: 2 seconds
+
+---------------------
+Model4: Iteration 8
+NTable contains #centers(pre/hillclimbed/real): 1 1 1  #al: 92.1865 #alsophisticatedcountcollection: 7.21797 #hcsteps: 1.47799
+#peggingImprovements: 0
+D4 table contains 406 parameters.
+A/D table contains 28197 parameters.
+A/D table contains 31068 parameters.
+125550 parameter.
+10000
+p0_count is 110508 and p1 is 14548; p0 is 0.883668 p1: 0.116332
+Model4: TRAIN CROSS-ENTROPY 4.581 PERPLEXITY 23.9341
+Model4: (8) TRAIN VITERBI CROSS-ENTROPY 4.64802 PERPLEXITY 25.0723
+
+Model4 Viterbi Iteration : 8 took: 1 seconds
+
+---------------------
+Model4: Iteration 9
+NTable contains 125550 parameter.
+#centers(pre/hillclimbed/real): 1 1 1  #al: 92.2154 #alsophisticatedcountcollection: 7.06962 #hcsteps: 1.55342
+#peggingImprovements: 0
+D4 table contains 406 parameters.
+A/D table contains 28197 parameters.
+A/D table contains 31252 parameters.
+10000
+p0_count is 109123 and p1 is 15240.5; p0 is 0.877452 p1: 0.122548
+Model4: TRAIN CROSS-ENTROPY 4.47746 PERPLEXITY 22.2767
+Model4: (9) TRAIN VITERBI CROSS-ENTROPY 4.53641 PERPLEXITY 23.2057
+
+Model4 Viterbi Iteration : 9 took: 2 seconds
+
+---------------------
+Model4: Iteration 10
+NTable contains 125550 parameter.
+#centers(pre/hillclimbed/real): 1 1 1  #al: 92.1867 #alsophisticatedcountcollection: 6.92768 #hcsteps: 1.56322
+#peggingImprovements: 0
+D4 table contains 406 parameters.
+A/D table contains 28197 parameters.
+A/D table contains 31102 parameters.
+Dumping nTable to: test-align/Result.n3.final
+p0_count is 108951 and p1 is 15326.7; p0 is 0.876673 p1: 0.123327
+Model4: TRAIN CROSS-ENTROPY 4.39995 PERPLEXITY 21.1113
+Model4: (10) TRAIN VITERBI CROSS-ENTROPY 4.45124 PERPLEXITY 21.8755
+Dumping alignment table (a) to file:test-align/Result.a3.final
+Dumping distortion table (d) to file:test-align/Result.d3.final
+writing Final tables to Disk 
+
+Model4 Viterbi Iteration : 10 took: 1 seconds
+H3333344444 Training Finished at: Wed Jul 29 02:48:03 2020
+
+
+Entire Viterbi H3333344444 Training took: 10 seconds
+==========================================================
+writing decoder configuration file to test-align/Result.Decoder.config
+Writing PERPLEXITY report to: test-align/Result.perp
+Writing source vocabulary list to : test-align/Result.trn.src.vcb
+Writing source vocabulary list to : test-align/Result.trn.trg.vcb
+Writing source vocabulary list to : test-align/Result.tst.src.vcb
+Writing source vocabulary list to : test-align/Result.tst.trg.vcb
+
+Entire Training took: 14 seconds
+Program Finished at: Wed Jul 29 02:48:03 2020
+
+==========================================================
+##########
+finished ...
+ls ./test-align/*.final
+./test-align/Result.a3.final  ./test-align/Result.d3.final  ./test-align/Result.D4.final  ./test-align/Result.p0_3.final
+./test-align/Result.A3.final  ./test-align/Result.d4.final  ./test-align/Result.n3.final  ./test-align/Result.t3.final
+##########
+Note by Ye ...
+output folder name: test-align
+GIZA++ learns the translation tables of IBM Model 4, but we are only interested in ".A3.final"
+```
+
