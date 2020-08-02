@@ -68,7 +68,7 @@ print(" \\hspace{5mm} \\textbf{Adequacy:} \\ChoiceMenu[combo,name=hyp1,charsize=
         } else {
             print("Hyp [2]: \\padauktext{$google}\\\\[1mm]"); 
         }
-        print("\\hspace{5mm} \\textbf{Adequacy:} \\ChoiceMenu[combo,name=hyp1,charsize=11pt]{\\mbox{}}
+        print("\\hspace{5mm} \\textbf{Adequacy:} \\ChoiceMenu[combo,name=hyp2,charsize=11pt]{\\mbox{}}
 {5 All,4 Most,3 Much,2 Little,1 None} \\hspace{3mm} \\textbf{Fluency:} \\ChoiceMenu[combo,name=hyp2,charsize=11pt]{\\mbox{}}
 {5 All,4 Most,3 Much,2 Little,1 None}\\\\[1mm]\n");
 #        print ("\\noindent Hyp [3]: \\padauktext{$yandex} \\\\[1mm]");
@@ -80,7 +80,7 @@ print(" \\hspace{5mm} \\textbf{Adequacy:} \\ChoiceMenu[combo,name=hyp1,charsize=
 #            print("\\textbf{Ref [$lineno]:} \\padauktext{\\textbf {$ref}} \\\\ \\\\ \n");
             print("Hyp [3]: \\padauktext{$yandex}\\\\[1mm]"); 
         }
-print("\\hspace{5mm} \\textbf{Adequacy:} \\ChoiceMenu[combo,name=hyp1,charsize=11pt]{\\mbox{}}
+print("\\hspace{5mm} \\textbf{Adequacy:} \\ChoiceMenu[combo,name=hyp3,charsize=11pt]{\\mbox{}}
 {5 All,4 Most,3 Much,2 Little,1 None} \\hspace{3mm} \\textbf{Fluency:} \\ChoiceMenu[combo,name=hyp3,charsize=11pt]{\\mbox{}}
 {5 All,4 Most,3 Much,2 Little,1 None}\\\\[1mm]\n\n");
     print("\\end{tabbing}\n");
