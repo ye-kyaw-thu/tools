@@ -144,3 +144,8 @@
 47. [human-mt-eval-form.pl](https://github.com/ye-kyaw-thu/tools/edit/master/perl/human-mt-eval-form.pl)  
     (Machine translation experiment ရဲ့ hypothesis တွေကို human evaluation လုပ်ဖို့အတွက် ဖောင်ပြင်စဉ်မှာ ရေးခဲ့တဲ့ perl script ပါ။ ဒီ code ကို နားလည်ဖို့က latex ကိုလည်း အကျွမ်းတဝင် ရှိဖို့ လိုပါလိမ့်မယ်)  
     
+48. [trainTuneScore_jamy.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/trainTuneScore_jamy.pl)  
+    (moses 0.91 version ကိုသုံးပြီးတော့ ပထမဆုံး ဂျပန်ဘာသာ ကနေ မြန်မာဘာသာကို statistical machine translation လုပ်ခဲ့တုန်းက ရေးခဲ့တဲ့ Perl script ပါ။ Training, tuning နဲ့ BLEU score evaluation အဆင့်အားလုံးကို perl script ထဲကနေ လှမ်းrun ထားတဲ့ ပုံစံပါ။ 2012 တုန်းက ရေးထားခဲ့ပြီး path တွေဘာတွေကို update လုပ်ပြီး run တဲ့ ပုံစံဖြစ်ပေမဲ့ SMT R&D ကို စလုပ်တဲ့ ကျောင်းသား၊ perl script တွေကိုလေ့လာတဲ့ သူတွေအတွက် အသုံးဝင်နိုင်လို့ တင်ပေးထားလိုက်ပါတယ်။ ကျွန်တော့်အတွက်လည်း NICT, Kyoto, Japan မှာ Researcher အဖြစ်လုပ်စဉ်က VoiceTra Myanmar Project အတွက် ပထမဆုံး စမ်းခဲ့တဲ့ Myanmar-to-Japan SMT experiment ရဲ့ အမှတ်တရမို့ ...)  
+    
+    
+    
