@@ -137,6 +137,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 45. [print-blank-lines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-blank-lines.pl)  
 46. [add-spu_id.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/add-spu_id.pl)  
 47. [human-mt-eval-form.pl](https://github.com/ye-kyaw-thu/tools/edit/master/perl/human-mt-eval-form.pl)  
+48. [trainTuneScore_jamy.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/trainTuneScore_jamy.pl)  
 
 # python
 
