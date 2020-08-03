@@ -6,8 +6,8 @@ use strict;
 # Last updated: 22 Dec 2012
 #
 # Command for running:
-#$perl trainTuneScore.pl > trainTuneScore-ar-en.log
-# note: 2>&1 | tee is not s
+# $perl trainTuneScore.pl > trainTuneScore-ar-en.log
+# you can also use: 2>&1 | tee
 
 
 ###############################################################
