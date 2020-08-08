@@ -234,3 +234,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 76. [align-GIZA++.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/align-GIZA%2B%2B.sh)  
 (GIZA++ alignment toolkit ကို သုံးပြီး alignment လုပ်ပေးမယ့် script ဖြစ်ပါတယ်။ ကိုယ့်စက်ထဲမှာ GIZA++ ကို အရင် install လုပ်ထားရပါမယ်)  
+
+77. [date-time-info.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/date-time-info.sh)  
+(Linux မှာက powerful ဖြစ်တဲ့ command တွေက ပြောလို့ မကုန်နိုင်လောက်အောင် အများကြီးပါပဲ။ အဲဒီအထဲက "date" command ကိုသုံးပြီးတော့ နေ့စွဲ၊ အချိန်တွေကို ကိုယ်လိုချင်တဲ့ format နဲ့ ဆွဲယူသုံးတာတွေကို ဒီမို ရေးပြထားတာဖြစ်ပါတယ်)  
+
