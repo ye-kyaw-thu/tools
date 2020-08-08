@@ -3259,3 +3259,27 @@ output folder name: test-align
 GIZA++ learns the translation tables of IBM Model 4, but we are only interested in ".A3.final"
 ```
 
+77. [date-time-info.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/date-time-info.sh)  
+
+နေ့စွဲ၊ ရက်စွဲ၊ အချိန်တွေနဲ့ ပတ်သက်ပြီး မြန်မာလို ရိုက်ထုတ်နိုင်အောင် date command အသုံးပြုပုံကို နမူနာအနေနဲ့ ရေးပြထားတဲ့ shell script ဖြစ်ပါတယ်။  
+run လိုက်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:~/4github/date-info$ ./date-time-info.sh 
+Output of the date command:
+နေ ဩ 8 09:02:35 +0630 2020
+==========
+Current local's date is: ၂၀၂၀ ဩ ၀၈ စနေ
+Current local's 12-hour clock time is: ၀၉:၀၂:၃၅ နံနက်
+Current local's 24-hour hour and minute is: ၀၉:၀၂:၃၅ နံနက်
+Current Date: 08 ရက် 08 လ 2020 ခုနှစ် (စနေနေ့)
+Current Time: 09 နာရီ 02 မိနစ် 35 စက္ကန့်
+Current local month: ဩဂုတ်
+Current local date and time: ၂၀၂၀ ဩ ၀၈ စနေ ၀၉:၀၂:၃၅ နံနက် +0630
+==========
+The date of the day before yesterday: တေး ဩ  6 09:02:35 +0630 2020
+The date of the day six months and 15 day: ဂါ ဖေ 23 09:02:35 +0630 2021
+The day of year of Christmas in the current year: 360
+Someone's Birthday in the current year: ၂၀၂၀ ဧပြီ ၂၅ စနေ
+```
+
