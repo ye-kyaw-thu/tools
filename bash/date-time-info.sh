@@ -60,7 +60,7 @@ echo "The date of the day six months and 15 day: $SixMonthFifteenDay";
 ChristmasDate=`date --date='25 Dec' +%j`;
 echo "The day of year of Christmas in the current year: $ChristmasDate";
 
-#Someone birthday
+#Someone's birthday
 yBirthday=`date --date='25 April' +%x`;
 echo "Someone's Birthday in the current year: $yBirthday";
 
