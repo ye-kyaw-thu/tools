@@ -3283,3 +3283,107 @@ The day of year of Christmas in the current year: 360
 Someone's Birthday in the current year: ၂၀၂၀ ဧပြီ ၂၅ စနေ
 ```
 
+78. [mp4-to-wav.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp4-to-wav.sh)  
+
+ကွန်ပျူတာတက္ကသိုလ် ဗန်းမော် က TTS လုပ်ဖို့ ပြင်ဆင်နေကြတဲ့ internship ကျောင်းသားများအတွက် Video ဖိုင် ဖြစ်တဲ့ ".mp4" ကနေ TTS မှာ သုံးကြတဲ့ format ဖြစ်တဲ့ wave ဖိုင် ".wav" ကို ပြောင်းတာကို ဥပမာအဖြစ် ရေးပြခဲ့တဲ့ shell script ပါ။  
+
+လက်ရှိ ဖိုလ်ဒါအောက်မှာ အောက်ပါအတိုင်း mp4 ဖိုင် ရှိတယ် ဆိုကြပါစို့ ...   
+```
+(base) ye@ykt-pro:/media/ye/Transcend/yLab/intern-2/tts/4github$ ls
+dawsu-election-1.mp4  mp4-to-wav.sh
+
+(base) ye@ykt-pro:/media/ye/Transcend/yLab/intern-2/tts/4github$ file ./dawsu-election-1.mp4 
+./dawsu-election-1.mp4: ISO Media, MP4 Base Media v1 [IS0 14496-12:2003]
+```
+
+mp4-to-wav.sh ကို သုံးပုံသုံးနည်းကတော့ အောက်ပါအတိုင်းပါ  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/yLab/intern-2/tts/4github$ time ./mp4-to-wav.sh ./dawsu-election-1.mp4 
+ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from './dawsu-election-1.mp4':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : 3199037790151295
+    encoder         : Lavf56.40.101
+  Duration: 00:07:16.21, start: -0.022109, bitrate: 112 kb/s
+    Stream #0:0(und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt470bg/smpte170m), 400x224, 59 kb/s, 30 fps, 30 tbr, 90k tbn, 60 tbc (default)
+    Metadata:
+      handler_name    : VideoHandler
+    Stream #0:1(eng): Audio: aac (HE-AAC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 47 kb/s (default)
+    Metadata:
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:1 -> #0:0 (aac (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to './dawsu-election-1.mp3':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    TIT2            : 3199037790151295
+    TSSE            : Lavf57.83.100
+    Stream #0:0(eng): Audio: mp3 (libmp3lame), 44100 Hz, stereo, fltp (default)
+    Metadata:
+      handler_name    : SoundHandler
+      encoder         : Lavc57.107.100 libmp3lame
+size=    7660kB time=00:07:16.02 bitrate= 143.9kbits/s speed=70.5x    
+video:0kB audio:7660kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.004896%
+ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mp3, from './dawsu-election-1.mp3':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    title           : 3199037790151295
+    encoder         : Lavf57.83.100
+  Duration: 00:07:15.96, start: 0.025057, bitrate: 143 kb/s
+    Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p, 143 kb/s
+    Metadata:
+      encoder         : Lavc57.10
+Stream mapping:
+  Stream #0:0 -> #0:0 (mp3 (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to './dawsu-election-1.wav':
+  Metadata:
+    major_brand     : isom
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    INAM            : 3199037790151295
+    ISFT            : Lavf57.83.100
+    Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc57.107.100 pcm_s16le
+size=   75096kB time=00:07:15.93 bitrate=1411.2kbits/s speed= 175x    
+video:0kB audio:75096kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000135%
+
+real	0m8.814s
+user	0m7.562s
+sys	0m0.141s
+
+```
+
