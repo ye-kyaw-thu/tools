@@ -238,3 +238,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 77. [date-time-info.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/date-time-info.sh)  
 (Linux မှာက powerful ဖြစ်တဲ့ command တွေက ပြောလို့ မကုန်နိုင်လောက်အောင် အများကြီးပါပဲ။ အဲဒီအထဲက "date" command ကိုသုံးပြီးတော့ နေ့စွဲ၊ အချိန်တွေကို ကိုယ်လိုချင်တဲ့ format နဲ့ ဆွဲယူသုံးတာတွေကို ဒီမို ရေးပြထားတာဖြစ်ပါတယ်)  
 
+78. [mp4-to-wav.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp4-to-wav.sh)  
+(mp4 ဖိုင်ကနေ audio အပိုင်းကိုပဲ ဆွဲထုတ်ယူပြီး wave file format အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
+
+
