@@ -1919,3 +1919,37 @@ evince ./human-eval-form.pdf
 <p align="center"> Fig. Screenshot of Human Evaluation Interactive PDF Form </p>  
 
 လက်ရှိ tex ဖိုင်၊ PDF ဖိုင်မှာ Hyp1, Hyp2, Hyp3 စသည်ဖြင့် output MT system ပေါ်မူတည်ပြီး ခွဲထားတာကို မြင်အောင်ပြထားပေမဲ့ တကယ်လက်တွေ့ human evaluation လုပ်တဲ့ အခါမှာ ဘယ်စာကြောင်းက ဘယ် hypothesis ဖြစ်ကြောင်းကို မပြသတာ၊ နောက်ကွယ်မှာ shuffle လုပ်ထားတာမျိုးတွေလည်း လုပ်လေ့ရှိပါတယ်။  
+
+49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
+
+plain text ဖိုင်ထဲမှာ ရှိနေတဲ့ blank စာကြောင်းတွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။  
+ဥပမာ အနေနဲ့ dawei-myanmar4print.txt.clean.head ဖိုင်ကို cat လုပ်ကြည့်ရင် blank လိုင်းတွေ ပါဝင်နေတာကို တွေ့ရပါလိမ့်မယ်။  
+
+```
+$ cat ./dawei-myanmar4print.txt.clean.head 
+1	တစ်နည်း နည်း နဲ့ ငွေ မ ရနိုင်ဘူး ဆိုရင်တော့ နောက်ဆုံး အဆင့် အနေနဲ့ ကားကို ရောင်းရမှာပဲ ။
+
+
+
+2	ဒီလို စဉ်းစားကြည့် ရင်တော့ ကျွန်တော်တို့ သိပ် ကံကောင်းတယ် ။
+
+
+
+3	ခင်ဗျား မေးမြန်းစုံစမ်းထား တဲ့ နေရာ အတွက် ပညာ အရည်အချင်း သတ်မှတ်ချက်တွေ ကို ဒီနေ့ထုတ် သတင်းစာ မှာ အသေးစိတ် ဖော်ပြထားတယ် ။
+```
+
+rm-blank-line.pl ကို run မယ်ဆိုရင်တော့ $1 argument အနေနဲ့ blank line ဖြုတ်ချင်တဲ့ ဖိုင်နာမည်ကို ပေးလိုက်ယုံပါပဲ။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/student/saisawhan/data/converter/mk-parallel/github$ perl ./rm-blank-line.pl ./dawei-myanmar4print.txt.clean.head > ./dawei-myanmar4print.txt.clean.head.noblank
+```
+
+blank line တွေကို ဖြုတ်ပြီးသား output ဖိုင်ကို ရိုက်ထုတ်ကြည့်ရင်တော့ အောက်မှာ ပြထားတဲ့အတိုင်း blank line တွေ မရှိတော့တာကို တွေ့ရပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/student/saisawhan/data/converter/mk-parallel/github$ head ./dawei-myanmar4print.txt.clean.head.noblank 
+1	တစ်နည်း နည်း နဲ့ ငွေ မ ရနိုင်ဘူး ဆိုရင်တော့ နောက်ဆုံး အဆင့် အနေနဲ့ ကားကို ရောင်းရမှာပဲ ။
+2	ဒီလို စဉ်းစားကြည့် ရင်တော့ ကျွန်တော်တို့ သိပ် ကံကောင်းတယ် ။
+3	ခင်ဗျား မေးမြန်းစုံစမ်းထား တဲ့ နေရာ အတွက် ပညာ အရည်အချင်း သတ်မှတ်ချက်တွေ ကို ဒီနေ့ထုတ် သတင်းစာ မှာ အသေးစိတ် ဖော်ပြထားတယ် ။
+
+```
