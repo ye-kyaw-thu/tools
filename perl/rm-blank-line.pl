@@ -3,7 +3,7 @@
 # removing blank lines, space only lines, tab only lines
 # Ye Kyaw Thu, LST, NECTEC, Thailand
 #
-# e.g. $ perl print-blank-lines.pl <input-file>
+# e.g. $ perl rm-blank-line.pl <input-file>
 
 use strict;
 use warnings;
