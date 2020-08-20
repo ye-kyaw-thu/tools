@@ -142,6 +142,8 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 48. [trainTuneScore_jamy.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/trainTuneScore_jamy.pl)  
 49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
 
+# Python
+
 1. [rm-blank-line.plchk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
 2. [numpy-array-element-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/numpy-array-element-compare.py)  
 3. [char-count-element-wise.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char-count-element-wise.py) 
