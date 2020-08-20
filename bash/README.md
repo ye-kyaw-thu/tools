@@ -241,4 +241,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 78. [mp4-to-wav.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp4-to-wav.sh)  
 (mp4 ဖိုင်ကနေ audio အပိုင်းကိုပဲ ဆွဲထုတ်ယူပြီး wave file format အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
 
+79. [my-font-chk.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/my-font-chk.sh)  
+(ကိုယ့် Linux စက်ထဲမှာ install လုပ်ထားတဲ့ မြန်မာစာဖောင့်ဖိုင်တွေကို list လုပ်ပြဖို့အတွက် ရေးခဲ့ပါတယ်)  
 
