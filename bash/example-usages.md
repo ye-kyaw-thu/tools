@@ -3387,3 +3387,20 @@ sys	0m0.141s
 
 ```
 
+79. [my-font-chk.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/my-font-chk.sh)  
+
+Linux စက်ထဲမှာ လက်ရှိ installed လုပ်ထားတဲ့ မြန်မာစာဖောင့်တွေရဲ့ ဖိုင်နာမည်တွေကို list လုပ်ပြဖို့အတွက် ရေးခဲ့တဲ့ bash shell script ပါ။  
+တကယ်ကတော့ "fc-list :lang=my" ဆိုပြီး run ရင်လည်း ရပါတယ်။ font filename နဲ့ path ကိုပဲ သီးသန့်ပြစေချင်လို့ "fc-list -f '%{file}\n' :lang=my" ဆိုတဲ့ command ကို သုံးထားခဲ့ပါတယ်။ ကျွန်တော့စက်မှာ run လိုက်လို့ မြင်ရတဲ့ ဖောင့် ဖိုင်နာမည်စာရင်းကို ဥပမာအဖြစ် ပြသထားပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/4github/my-font-chk$ ./my-font-chk.sh 
+/home/ye/.local/share/fonts/myanmar3.ttf
+/usr/share/fonts/truetype/padauk/PadaukBook-Regular.ttf
+/usr/share/fonts/truetype/padauk/Padauk-Bold.ttf
+/usr/share/fonts/truetype/padauk/PadaukBook-Bold.ttf
+/home/ye/.local/share/fonts/Pyidaungsu-1.8.3_Regular.ttf
+/home/ye/.local/share/fonts/Pyidaungsu-1.8.3_Bold.ttf
+/usr/share/fonts/truetype/padauk/Padauk-Regular.ttf
+/home/ye/.local/share/fonts/Pyidaungsu-1.8.3_Numbers.ttf
+```
+
