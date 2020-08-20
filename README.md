@@ -140,10 +140,9 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 46. [add-spu_id.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/add-spu_id.pl)  
 47. [human-mt-eval-form.pl](https://github.com/ye-kyaw-thu/tools/edit/master/perl/human-mt-eval-form.pl)  
 48. [trainTuneScore_jamy.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/trainTuneScore_jamy.pl)  
+49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
 
-# python
-
-1. [chk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
+1. [rm-blank-line.plchk-token.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-token.py)  
 2. [numpy-array-element-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/numpy-array-element-compare.py)  
 3. [char-count-element-wise.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char-count-element-wise.py) 
 4. [char-startswith-element-wise.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char-startswith-element-wise.py) 
