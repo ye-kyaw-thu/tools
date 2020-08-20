@@ -146,6 +146,8 @@
     
 48. [trainTuneScore_jamy.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/trainTuneScore_jamy.pl)  
     (moses 0.91 version ကိုသုံးပြီးတော့ ပထမဆုံး ဂျပန်ဘာသာ ကနေ မြန်မာဘာသာကို statistical machine translation လုပ်ခဲ့တုန်းက ရေးခဲ့တဲ့ Perl script ပါ။ Training, tuning နဲ့ BLEU score evaluation အဆင့်အားလုံးကို perl script ထဲကနေ လှမ်းrun ထားတဲ့ ပုံစံပါ။ 2012 တုန်းက ရေးထားခဲ့ပြီး path တွေဘာတွေကို update လုပ်ပြီး run တဲ့ ပုံစံဖြစ်ပေမဲ့ SMT R&D ကို စလုပ်တဲ့ ကျောင်းသား၊ perl script တွေကိုလေ့လာတဲ့ သူတွေအတွက် အသုံးဝင်နိုင်လို့ တင်ပေးထားလိုက်ပါတယ်။ ကျွန်တော့်အတွက်လည်း NICT, Kyoto, Japan မှာ Researcher အဖြစ်လုပ်စဉ်က VoiceTra Myanmar Project အတွက် ပထမဆုံး စမ်းခဲ့တဲ့ Japan-to-Myanmar SMT experiment ရဲ့ အမှတ်တရမို့ ...)  
-    
+
+49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
+    (blank line တွေ space တွေနဲ့ Tab တွေပဲပါတဲ့ စာကြောင်းတွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ)  
     
     
