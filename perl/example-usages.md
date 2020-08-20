@@ -1920,7 +1920,7 @@ evince ./human-eval-form.pdf
 
 လက်ရှိ tex ဖိုင်၊ PDF ဖိုင်မှာ Hyp1, Hyp2, Hyp3 စသည်ဖြင့် output MT system ပေါ်မူတည်ပြီး ခွဲထားတာကို မြင်အောင်ပြထားပေမဲ့ တကယ်လက်တွေ့ human evaluation လုပ်တဲ့ အခါမှာ ဘယ်စာကြောင်းက ဘယ် hypothesis ဖြစ်ကြောင်းကို မပြသတာ၊ နောက်ကွယ်မှာ shuffle လုပ်ထားတာမျိုးတွေလည်း လုပ်လေ့ရှိပါတယ်။  
 
-49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
+## 49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
 
 plain text ဖိုင်ထဲမှာ ရှိနေတဲ့ blank စာကြောင်းတွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။  
 ဥပမာ အနေနဲ့ dawei-myanmar4print.txt.clean.head ဖိုင်ကို cat လုပ်ကြည့်ရင် blank လိုင်းတွေ ပါဝင်နေတာကို တွေ့ရပါလိမ့်မယ်။  
