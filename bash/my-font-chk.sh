@@ -5,4 +5,5 @@
 # Reference: man fc-list
 # How to run: ./my-font-chk.sh
 
+# fc-list :lang=my
 fc-list -f '%{file}\n' :lang=my
