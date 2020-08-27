@@ -245,4 +245,4 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 (ကိုယ့် Linux စက်ထဲမှာ install လုပ်ထားတဲ့ မြန်မာစာဖောင့်ဖိုင်တွေကို list လုပ်ပြဖို့အတွက် ရေးခဲ့ပါတယ်)  
 
 80. [rec-recorder.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rec-recorder.sh)  
-(rec command ကို သုံးပြီးတော့ အသံဖမ်း၊ပြီး wave ဖိုင်တွေအဖြစ် နံပါတ်စဉ်အလိုက် သိမ်းပေးတဲ့ shell command ပါ)  
+(rec command ကို သုံးပြီးတော့ အသံဖမ်းပြီး wave ဖိုင်တွေအဖြစ် နံပါတ်စဉ်အလိုက် သိမ်းပေးတဲ့ shell command ပါ)  
