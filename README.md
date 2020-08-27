@@ -89,6 +89,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 77. [date-time-info.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/date-time-info.sh)  
 78. [mp4-to-wav.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp4-to-wav.sh)  
 79. [my-font-chk.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/my-font-chk.sh)  
+80. [rec-recorder.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rec-recorder.sh)    
 
 # perl
 
