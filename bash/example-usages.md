@@ -3405,3 +3405,54 @@ Linux စက်ထဲမှာ လက်ရှိ installed လုပ်ထာ�
 /home/ye/.local/share/fonts/Pyidaungsu-1.8.3_Numbers.ttf
 ```
 
+80. [rec-recorder.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rec-recorder.sh)  
+
+rec command ကို သုံးဖို့အတွက်က sox command ကို ကိုယ့်စက်ထဲမှာ install လုပ်ထားရပါမယ်။  
+rec-recorder.sh ကို run ပြီးတော့ အသံဖိုင် သုံးဖိုင် သွင်းကြည့်ပါမယ်။  
+ctrl+c ကို သုံးပြီး recording looping ကနေ ထွက်ပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/code4github/voice/rec-recorder$ ./rec-recorder.sh 
+Press enter when you're ready to record:
+rec WARN alsa: can't encode 0-bit Unknown or not applicable
+
+Input File     : 'default' (alsa)
+Channels       : 1
+Sample Rate    : 16000
+Precision      : 16-bit
+Sample Encoding: 16-bit Signed Integer PCM
+
+In:0.00% 00:00:01.02 [00:00:00.00] Out:8.19k [!=====|=====!]        Clip:0    ^C
+Aborted.
+Press enter when you're ready to record:
+rec WARN alsa: can't encode 0-bit Unknown or not applicable
+
+Input File     : 'default' (alsa)
+Channels       : 1
+Sample Rate    : 16000
+Precision      : 16-bit
+Sample Encoding: 16-bit Signed Integer PCM
+
+In:0.00% 00:00:01.54 [00:00:00.00] Out:16.4k [!=====|=====!]        Clip:0    ^C
+Aborted.
+Press enter when you're ready to record:
+rec WARN alsa: can't encode 0-bit Unknown or not applicable
+
+Input File     : 'default' (alsa)
+Channels       : 1
+Sample Rate    : 16000
+Precision      : 16-bit
+Sample Encoding: 16-bit Signed Integer PCM
+
+In:0.00% 00:00:02.56 [00:00:00.00] Out:32.8k [!=====|=====!] Hd:0.0 Clip:0    ^C
+Aborted.
+Press enter when you're ready to record:^C
+```
+
+လက်ရှိ path အောက်မှာ wave ဖိုင် သုံးဖိုင်ကို အောက်ပါအတိုင်း တွေ့ရမှာ ဖြစ်ပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/code4github/voice/rec-recorder$ ls
+audio1.wav  audio2.wav  audio3.wav  rec-recorder.sh
+
+```
