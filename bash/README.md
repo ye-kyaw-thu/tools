@@ -246,3 +246,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 80. [rec-recorder.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rec-recorder.sh)  
 (rec command ကို သုံးပြီးတော့ အသံဖမ်းပြီး wave ဖိုင်တွေအဖြစ် နံပါတ်စဉ်အလိုက် သိမ်းပေးတဲ့ shell command ပါ)  
+
+81. [mp42gif.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp42gif.sh)  
+(mp4 ဗီဒီယိုဖိုင်ကနေ animated GIF ပုံအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ bash shell script ပါ)  
+
