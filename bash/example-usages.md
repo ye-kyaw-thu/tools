@@ -3259,7 +3259,7 @@ output folder name: test-align
 GIZA++ learns the translation tables of IBM Model 4, but we are only interested in ".A3.final"
 ```
 
-77. [date-time-info.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/date-time-info.sh)  
+## 77. [date-time-info.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/date-time-info.sh)  
 
 နေ့စွဲ၊ ရက်စွဲ၊ အချိန်တွေနဲ့ ပတ်သက်ပြီး မြန်မာလို ရိုက်ထုတ်နိုင်အောင် date command အသုံးပြုပုံကို နမူနာအနေနဲ့ ရေးပြထားတဲ့ shell script ဖြစ်ပါတယ်။  
 run လိုက်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  
@@ -3283,7 +3283,7 @@ The day of year of Christmas in the current year: 360
 Someone's Birthday in the current year: ၂၀၂၀ ဧပြီ ၂၅ စနေ
 ```
 
-78. [mp4-to-wav.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp4-to-wav.sh)  
+## 78. [mp4-to-wav.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp4-to-wav.sh)  
 
 ကွန်ပျူတာတက္ကသိုလ် ဗန်းမော် က TTS လုပ်ဖို့ ပြင်ဆင်နေကြတဲ့ internship ကျောင်းသားများအတွက် Video ဖိုင် ဖြစ်တဲ့ ".mp4" ကနေ TTS မှာ သုံးကြတဲ့ format ဖြစ်တဲ့ wave ဖိုင် ".wav" ကို ပြောင်းတာကို ဥပမာအဖြစ် ရေးပြခဲ့တဲ့ shell script ပါ။  
 
@@ -3387,7 +3387,7 @@ sys	0m0.141s
 
 ```
 
-79. [my-font-chk.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/my-font-chk.sh)  
+## 79. [my-font-chk.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/my-font-chk.sh)  
 
 Linux စက်ထဲမှာ လက်ရှိ installed လုပ်ထားတဲ့ မြန်မာစာဖောင့်တွေရဲ့ ဖိုင်နာမည်တွေကို list လုပ်ပြဖို့အတွက် ရေးခဲ့တဲ့ bash shell script ပါ။  
 တကယ်ကတော့ "fc-list :lang=my" ဆိုပြီး run ရင်လည်း ရပါတယ်။ font filename နဲ့ path ကိုပဲ သီးသန့်ပြစေချင်လို့ "fc-list -f '%{file}\n' :lang=my" ဆိုတဲ့ command ကို သုံးထားခဲ့ပါတယ်။  
@@ -3405,7 +3405,7 @@ Linux စက်ထဲမှာ လက်ရှိ installed လုပ်ထာ�
 /home/ye/.local/share/fonts/Pyidaungsu-1.8.3_Numbers.ttf
 ```
 
-80. [rec-recorder.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rec-recorder.sh)  
+## 80. [rec-recorder.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/rec-recorder.sh)  
 
 rec command ကို သုံးဖို့အတွက်က sox command ကို ကိုယ့်စက်ထဲမှာ install လုပ်ထားရပါမယ်။  
 rec-recorder.sh ကို run ပြီးတော့ အသံဖိုင် သုံးဖိုင် သွင်းကြည့်ပါမယ်။  
