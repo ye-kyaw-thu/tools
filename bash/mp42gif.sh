@@ -35,3 +35,8 @@ convert -delay 10 -loop 0 *.jpg $filename.gif
 # viewing the output gif image with eog (Eye of Gnome) command
 eog $filename.gif
 
+# စိတ်ဝင်စားမယ့် သူများအတွက် bonus shell code ပါ
+# gif ကနေ original picture တွေ ကို ပြန်ဆွဲထုတ်ချင်တယ်ဆိုရင်လည်း လွယ်ပါတယ်
+# convert command ရဲ့ -coalesce option ကို သုံးပြီးတော့ အောက်ပါ ဥပမာအတိုင်း run ပါ။
+# convert -verbose -coalesce ./AlbertEinsteinInHisOfficeAtPrincetonUniversity.gif eg-out.png
+
