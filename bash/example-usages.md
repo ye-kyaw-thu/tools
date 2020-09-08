@@ -3543,3 +3543,41 @@ Enjoy Linux command and shell script writing !!! :)
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/AlbertEinsteinInHisOfficeAtPrincetonUniversity.gif" alt="output GIF file" />
 <p align="center"> Fig. Converted animated GIF file of Albert Einstein </p>  
+
+82. [extract-target-text.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract-target-text.sh)  
+
+Statistical Machine Translaiton ရဲ့ approach တစ်ခုဖြစ်တဲ့ OSM model ကနေ ထွက်လာတဲ့ output မှာက တခြား information တွေ အများကြီးရောပါနေပါတယ်။  
+အဲဒီဖိုင်ထဲကနေမှာ translated output စာကြောင်းကိုပဲ ဆွဲထုတ်ကြည့်ချင်တဲ့ အခါမျိုး ရှိပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ script ပါ။  
+
+ဥပမာ အဖြစ် စမ်းပြမယ့် ဖိုင်ထဲမှာက ဘယ်လိုရှိနေတယ်ဆိုတာကို မြင်ရအောင် cat command နဲ့ osm.output.1.best10 ဖိုင်ကို ရိုက်ထုတ်ကြည့်ကြရအောင်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/student/utycc-newR/seminar/3rdSeminar/Myint-Myint-Htay/8aug2020/smt-nbest/osmsecnbest/osm/fs-ps/evaluation$ cat ./osm.output.1.best10 
+56 ||| ပျော် စ ရာ လေး ပေါ့ |0-3|  ||| LexicalReordering0= -0.510826 0 0 0 0 0 OpSequenceModel0= -5.9671 0 0 0 0 Distortion0= 0 LM0= -8.68373 WordPenalty0= -5 PhrasePenalty0= 1 TranslationModel0= -2.26139 -13.3128 -1.56823 -12.2852 ||| -1.56055
+56 ||| ပျော် စ ရာ တော့ ကောင်း |0-1| တယ် |2-3|  ||| LexicalReordering0= -0.847297 0 0 -0.510826 0 0 OpSequenceModel0= -9.67931 0 0 0 0 Distortion0= 0 LM0= -10.3178 WordPenalty0= -6 PhrasePenalty0= 2 TranslationModel0= -6.53573 -10.4715 -3.10868 -11.5704 ||| -2.14498
+56 ||| ​ |0-0| ပျော် |1-1| တယ် |2-3|  ||| LexicalReordering0= -0.922915 0 0 -0.580419 0 0 OpSequenceModel0= -11.8972 0 0 0 0 Distortion0= 0 LM0= -10.7013 WordPenalty0= -3 PhrasePenalty0= 3 TranslationModel0= -7.82417 -6.98941 -4.43382 -3.77572 ||| -2.31397
+56 ||| ပျော် စ ရာ တော့ ကောင်း |0-1| တယ် |2-2| ကွာ |3-3|  ||| LexicalReordering0= -0.65553 0 0 -0.596148 0 0 OpSequenceModel0= -10.0593 0 0 0 0 Distortion0= 0 LM0= -14.7554 WordPenalty0= -7 PhrasePenalty0= 3 TranslationModel0= -4.1701 -8.76545 -4.21924 -13.6339 ||| -2.32136
+56 ||| ပျော် စ ရာ တော့ ကောင်း |0-1| ပါ တယ် |2-3|  ||| LexicalReordering0= -0.96281 0 0 -0.510826 0 0 OpSequenceModel0= -9.89117 0 0 0 0 Distortion0= 0 LM0= -11.5595 WordPenalty0= -7 PhrasePenalty0= 2 TranslationModel0= -6.84473 -11.0525 -4.37582 -13.9572 ||| -2.33079
+56 ||| ​ |0-0| ပျော် |1-1| တယ် |2-2| ကွာ |3-3|  ||| LexicalReordering0= -0.731147 0 0 -0.665742 0 0 OpSequenceModel0= -12.3566 0 0 0 0 Distortion0= 0 LM0= -10.3073 WordPenalty0= -4 PhrasePenalty0= 4 TranslationModel0= -5.45854 -5.28338 -5.54438 -5.8392 ||| -2.34255
+56 ||| ပျော် စ ရာ တော့ ကောင်း |0-1| တာ |2-3|  ||| LexicalReordering0= -0.76214 0 0 -0.510826 0 0 OpSequenceModel0= -9.51524 0 0 0 0 Distortion0= 0 LM0= -13.5896 WordPenalty0= -6 PhrasePenalty0= 2 TranslationModel0= -7.58513 -11.2946 -4.6635 -12.8674 ||| -2.37857
+56 ||| ပျော် စ ရာ တော့ ကောင်း |0-1| တယ် ကွာ |2-3|  ||| LexicalReordering0= -0.847297 0 0 -0.510826 0 0 OpSequenceModel0= -10.0593 0 0 0 0 Distortion0= 0 LM0= -14.7554 WordPenalty0= -7 PhrasePenalty0= 2 TranslationModel0= -4.87597 -8.76545 -5.28144 -13.6339 ||| -2.41629
+56 ||| ​ |0-0| ပျော် |1-1| တယ် ကွာ |2-3|  ||| LexicalReordering0= -0.922915 0 0 -0.580419 0 0 OpSequenceModel0= -12.3566 0 0 0 0 Distortion0= 0 LM0= -10.3073 WordPenalty0= -4 PhrasePenalty0= 3 TranslationModel0= -6.16441 -5.28338 -6.60658 -5.8392 ||| -2.43748
+56 ||| ပျော် စ ရာ တော့ ကောင်း |0-1| တယ် |2-2| နော် |3-3|  ||| LexicalReordering0= -0.715248 0 0 -0.596148 0 0 OpSequenceModel0= -10.8704 0 0 0 0 Distortion0= 0 LM0= -12.7345 WordPenalty0= -7 PhrasePenalty0= 3 TranslationModel0= -5.69178 -10.02 -5.05429 -14.4606 ||| -2.47206
+```
+
+Example အနေနဲ့ run ပြရရင်တော့ အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/student/utycc-newR/seminar/3rdSeminar/Myint-Myint-Htay/8aug2020/smt-nbest/osmsecnbest/osm/fs-ps/evaluation$ ./extract-target-text.sh ./osm.output.1.best10 
+ ပျော် စ ရာ လေး ပေါ့   
+ ပျော် စ ရာ တော့ ကောင်း  တယ်   
+ ​  ပျော်  တယ်   
+ ပျော် စ ရာ တော့ ကောင်း  တယ်  ကွာ   
+ ပျော် စ ရာ တော့ ကောင်း  ပါ တယ်   
+ ​  ပျော်  တယ်  ကွာ   
+ ပျော် စ ရာ တော့ ကောင်း  တာ   
+ ပျော် စ ရာ တော့ ကောင်း  တယ် ကွာ   
+ ​  ပျော်  တယ် ကွာ   
+ ပျော် စ ရာ တော့ ကောင်း  တယ်  နော် 
+```
+
