@@ -3538,3 +3538,8 @@ frame-012.jpg                                       frame-025.jpg  frame-038.jpg
 အထက်ပါအတိုင်း ဥပမာအဖြစ် run ပြတဲ့အခါမှာ သုံးခဲ့တဲ့ ဗီဒီယိုဖိုင်ကတော့ YouTube မှာ တင်ထားတဲ့ ရူပဗေဒ သိပ္ပံပညာရှင် "Albert Einstein in his office at Princeton University" ဆိုတဲ့ ဖိုင်ပါ။  
 (movie file link: [https://www.youtube.com/watch?v=XUXFCm2h2zk](https://www.youtube.com/watch?v=XUXFCm2h2zk))  
 
+ထွက်လာတဲ့ animated GIF ဖိုင်ကတော့ အောက်ပါအတိုင်းပါ။ Linux command တွေနဲ့က တကယ်အလုပ်တွေ အများကြီးလုပ်လို့ ရပါတယ်။   
+Enjoy Linux command and shell script writing !!! :)  
+
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/AlbertEinsteinInHisOfficeAtPrincetonUniversity.gif" alt="output GIF file" />
+<p align="center"> Fig. Converted animated GIF file of Albert Einstein </p>  
