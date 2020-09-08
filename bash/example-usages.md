@@ -3456,3 +3456,81 @@ Press enter when you're ready to record:^C
 audio1.wav  audio2.wav  audio3.wav  rec-recorder.sh
 
 ```
+
+## 81. [mp42gif.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp42gif.sh)  
+
+mp4 ဗီဒီယိုဖိုင်ကနေ animated GIF ပုံကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ bash script တစ်ပုဒ်ပါ။ အရင်ဆုံး ဗီဒီယိုဖိုင်ကနေ frame တွေအဖြစ် ဖြတ်ထုတ်တာကို ffmpeg command နဲ့ လုပ်ပါတယ်။ ပြီးတော့မှာ convert command နဲ့ animated GIF ပုံအဖြစ် ပြောင်းတဲ့ အလုပ်ကို လုပ်ပါတယ်။ ထွက်လာတဲ့ output GIF ဖိုင်ကိုတော့ eog (Eye of Gnome) command နဲ့ ဖွင့်ကြည့်ပါတယ်။  
+code ထဲမှာလည်း command တွေနဲ့ ပတ်သက်ပြီး comment သေချာရေးပေးထားလို့ နားလည်ရ လွယ်ပါလိမ့်မယ်။ run တာကိုလည်း ဥပမာအဖြစ် output screen တွေနဲ့တကွ ပြသထားပါတယ်။  
+
+run လုပ်လိုက်ရင် အော်ပါလိုမျိုး output screen ကို မြင်ရပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/4github/movie2gif$ ./mp42gif.sh ./AlbertEinsteinInHisOfficeAtPrincetonUniversity.mp4 
+ffmpeg version 3.4.8-0ubuntu0.2 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 7 (Ubuntu 7.5.0-3ubuntu1~18.04)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.2 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --enable-gpl --disable-stripping --enable-avresample --enable-avisynth --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librubberband --enable-librsvg --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvorbis --enable-libvpx --enable-libwavpack --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzmq --enable-libzvbi --enable-omx --enable-openal --enable-opengl --enable-sdl2 --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libopencv --enable-libx264 --enable-shared
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from './AlbertEinsteinInHisOfficeAtPrincetonUniversity.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    creation_time   : 2018-11-21T15:04:46.000000Z
+  Duration: 00:00:14.16, start: 0.000000, bitrate: 414 kb/s
+    Stream #0:0(und): Video: h264 (Constrained Baseline) (avc1 / 0x31637661), yuv420p, 480x360 [SAR 1:1 DAR 4:3], 317 kb/s, 23.98 fps, 23.98 tbr, 24k tbn, 47.95 tbc (default)
+    Metadata:
+      creation_time   : 2018-11-21T15:04:46.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 11/21/2018.
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 96 kb/s (default)
+    Metadata:
+      creation_time   : 2018-11-21T15:04:46.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 11/21/2018.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> mjpeg (native))
+Press [q] to stop, [?] for help
+[swscaler @ 0x55a8d178da80] deprecated pixel format used, make sure you did set range correctly
+Output #0, image2, to 'frames/frame-%03d.jpg':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 0
+    compatible_brands: isommp42
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: mjpeg, yuvj420p(pc), 480x360 [SAR 1:1 DAR 4:3], q=2-31, 200 kb/s, 5 fps, 5 tbn, 5 tbc (default)
+    Metadata:
+      creation_time   : 2018-11-21T15:04:46.000000Z
+      handler_name    : ISO Media file produced by Google Inc. Created on: 11/21/2018.
+      encoder         : Lavc57.107.100 mjpeg
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/200000 buffer size: 0 vbv_delay: -1
+frame=   72 fps=0.0 q=24.8 Lsize=N/A time=00:00:14.40 bitrate=N/A dup=0 drop=266 speed=31.7x    
+video:593kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+(base) ye@ykt-pro:/media/ye/project1/4github/movie2gif$ 
+```
+
+အဆင်ပြေပြေနဲ့ run တာကပြီးသွားရင် အောက်ပါလိုမျိုး frame jpg ပုံဖိုင်တွေနဲ့တကွ GIF image ဖိုင်ကိုလည်း frames/ ဖိုလ်ဒါထဲမှာ မြင်တွေ့ရပါလိမ့်မယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/4github/movie2gif$ cd frames/
+(base) ye@ykt-pro:/media/ye/project1/4github/movie2gif/frames$ ls
+AlbertEinsteinInHisOfficeAtPrincetonUniversity.gif  frame-013.jpg  frame-026.jpg  frame-039.jpg  frame-052.jpg  frame-065.jpg
+frame-001.jpg                                       frame-014.jpg  frame-027.jpg  frame-040.jpg  frame-053.jpg  frame-066.jpg
+frame-002.jpg                                       frame-015.jpg  frame-028.jpg  frame-041.jpg  frame-054.jpg  frame-067.jpg
+frame-003.jpg                                       frame-016.jpg  frame-029.jpg  frame-042.jpg  frame-055.jpg  frame-068.jpg
+frame-004.jpg                                       frame-017.jpg  frame-030.jpg  frame-043.jpg  frame-056.jpg  frame-069.jpg
+frame-005.jpg                                       frame-018.jpg  frame-031.jpg  frame-044.jpg  frame-057.jpg  frame-070.jpg
+frame-006.jpg                                       frame-019.jpg  frame-032.jpg  frame-045.jpg  frame-058.jpg  frame-071.jpg
+frame-007.jpg                                       frame-020.jpg  frame-033.jpg  frame-046.jpg  frame-059.jpg  frame-072.jpg
+frame-008.jpg                                       frame-021.jpg  frame-034.jpg  frame-047.jpg  frame-060.jpg
+frame-009.jpg                                       frame-022.jpg  frame-035.jpg  frame-048.jpg  frame-061.jpg
+frame-010.jpg                                       frame-023.jpg  frame-036.jpg  frame-049.jpg  frame-062.jpg
+frame-011.jpg                                       frame-024.jpg  frame-037.jpg  frame-050.jpg  frame-063.jpg
+frame-012.jpg                                       frame-025.jpg  frame-038.jpg  frame-051.jpg  frame-064.jpg
+```
