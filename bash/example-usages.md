@@ -3534,3 +3534,7 @@ frame-010.jpg                                       frame-023.jpg  frame-036.jpg
 frame-011.jpg                                       frame-024.jpg  frame-037.jpg  frame-050.jpg  frame-063.jpg
 frame-012.jpg                                       frame-025.jpg  frame-038.jpg  frame-051.jpg  frame-064.jpg
 ```
+
+အထက်ပါအတိုင်း ဥပမာအဖြစ် run ပြတဲ့အခါမှာ သုံးခဲ့တဲ့ ဗီဒီယိုဖိုင်ကတော့ YouTube မှာ တင်ထားတဲ့ ရူပဗေဒ သိပ္ပံပညာရှင် "Albert Einstein in his office at Princeton University" ဆိုတဲ့ ဖိုင်ပါ။  
+(movie file link: [https://www.youtube.com/watch?v=XUXFCm2h2zk](https://www.youtube.com/watch?v=XUXFCm2h2zk))  
+
