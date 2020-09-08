@@ -3,7 +3,7 @@
 # written by Ye, LST, NECTEC  Thailand
 # Date: 8 Sept 2020
 # How to run: ./extract-target-text.sh <filename>
-# e.g. 
+# e.g. ./extract-target-text.sh ./osm.output.1.best10
 
 # အရင်ဆုံး sed command နဲ့ "|||" တွေကို "/" နဲ့ အစားထိုးတယ်
 # field no. 2 ကို delimiter "/" ထားဆွဲထုတ်ယူ
