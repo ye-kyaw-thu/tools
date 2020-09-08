@@ -250,3 +250,5 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 81. [mp42gif.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp42gif.sh)  
 (mp4 ဗီဒီယိုဖိုင်ကနေ animated GIF ပုံအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ bash shell script ပါ)  
 
+82. [extract-target-text.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract-target-text.sh)  
+(moses MT engine ရဲ့ OSM model ကနေ ထွက်လာတဲ့ ouput ကနေ ပုံမှန် စာကြောင်းအဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ)  
