@@ -1866,7 +1866,7 @@ PDFCROP 1.38, 2012/11/02 - Copyright (c) 2002-2012 by Heiko Oberdiek.
 
 Original input PDF ဖိုင်ဖြစ်တဲ့ [example-crop.pdf](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/crop-pdf-example/example-crop.pdf) နဲ့ နှိုင်းယှဉ်ကြည့်ရင် margin တွေက စာတွေ၊ ပုံတွေရှိတဲ့ အပိုင်းတွေနဲ့ကပ်နေတာကို မြင်သာပါလိမ့်မယ်။  
 
-## [excel2csv-chk-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/from65/excel2csv-chk-fields.sh)  
+## 65.[excel2csv-chk-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/from65/excel2csv-chk-fields.sh)  
 
 လက်တွေ့ NLP အတွက် ဒေတာတွေကို ပြင်ဆင်ကြတဲ့ အခါမှာ အော်ရဂျင်နယ်ဒေတာတွေက Excel ကို သုံးပြီးတော့ ပြင်ဆင်ကြတာမျိုးလည်း ရှိတတ်ပါတယ်။ အဲဒါကြောင့် အဲဒီဒေတာတွေကို NLP အလုပ်တွေကို လုပ်ဖို့အတွက်က အရင်ဆုံး Excel က ကော်လံတွေ ခွဲပြီး ရိုက်ထားတဲ့ ဒေတာတွေကို csv (comma-separated values) ဖိုင်အဖြစ် ပြောင်းတာမျိုးကို လုပ်ဖို့ လိုအပ်ပါတယ်။ Excel ဖိုင်ကို Excel software သို့မဟုတ် Linux OS ပေါ်မှာဆိုရင် LibreOffice တို့ကို သုံးပြီးတော့ csv ဖိုင်အဖြစ်လည်း ပြောင်းလို့ရပေမဲ့ command line ကနေပဲ Excel ဖိုင် .xlsx ကို csv ဖိုင်အဖြစ် ပြောင်းတတ်ရင် အရမ်းအဆင်ပြေပါတယ်။ Excel ဖိုင်ထဲမှာပဲ xls နဲ့ xlsx က မတူဘူး ဆိုတာကိုတော့ သိထားသင့်ပါတယ်။ ဒီနေရာမှာတော့ မရှင်းပြတော့ပါဘူး။ xlsx ကနေ csv အဖြစ် ပြောင်းဖို့အတွက် က Github မှာရှိတဲ့ Python ပရိုဂရမ် [https://github.com/dilshod/xlsx2csv](https://github.com/dilshod/xlsx2csv) နဲ့ ပြောင်းလို့ ရပါတယ်။ ဒီနေရာမှာ ရေးထားတဲ့ "excel2csv-chk-fields.sh" shell script ကတော့ အဲဒီ xlsx2csv ကို ကိုယ့်စက်ထဲမှာ installed လုပ်ထားပြီးသားအခြေအနေမှာ၊ bash shell script ထဲကနေ ခေါ် run တဲ့ ပုံစံပါ။  
 
@@ -3544,7 +3544,7 @@ Enjoy Linux command and shell script writing !!! :)
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/AlbertEinsteinInHisOfficeAtPrincetonUniversity.gif" alt="output GIF file" />
 <p align="center"> Fig. Converted animated GIF file of Albert Einstein </p>  
 
-82. [extract-target-text.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract-target-text.sh)  
+## 82. [extract-target-text.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract-target-text.sh)  
 
 Statistical Machine Translaiton ရဲ့ approach တစ်ခုဖြစ်တဲ့ OSM model ကနေ ထွက်လာတဲ့ output မှာက တခြား information တွေ အများကြီးရောပါနေပါတယ်။  
 အဲဒီဖိုင်ထဲကနေမှာ translated output စာကြောင်းကိုပဲ ဆွဲထုတ်ကြည့်ချင်တဲ့ အခါမျိုး ရှိပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ script ပါ။  
