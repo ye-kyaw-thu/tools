@@ -3462,7 +3462,7 @@ audio1.wav  audio2.wav  audio3.wav  rec-recorder.sh
 mp4 ဗီဒီယိုဖိုင်ကနေ animated GIF ပုံကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ bash script တစ်ပုဒ်ပါ။ အရင်ဆုံး ဗီဒီယိုဖိုင်ကနေ frame တွေအဖြစ် ဖြတ်ထုတ်တာကို ffmpeg command နဲ့ လုပ်ပါတယ်။ ပြီးတော့မှာ convert command နဲ့ animated GIF ပုံအဖြစ် ပြောင်းတဲ့ အလုပ်ကို လုပ်ပါတယ်။ ထွက်လာတဲ့ output GIF ဖိုင်ကိုတော့ eog (Eye of Gnome) command နဲ့ ဖွင့်ကြည့်ပါတယ်။  
 code ထဲမှာလည်း command တွေနဲ့ ပတ်သက်ပြီး comment သေချာရေးပေးထားလို့ နားလည်ရ လွယ်ပါလိမ့်မယ်။ run တာကိုလည်း ဥပမာအဖြစ် output screen တွေနဲ့တကွ ပြသထားပါတယ်။  
 
-run လုပ်လိုက်ရင် အော်ပါလိုမျိုး output screen ကို မြင်ရပါလိမ့်မယ်။  
+run လုပ်လိုက်ရင် အောက်ပါလိုမျိုး output screen ကို မြင်ရပါလိမ့်မယ်။  
 
 ```
 (base) ye@ykt-pro:/media/ye/project1/4github/movie2gif$ ./mp42gif.sh ./AlbertEinsteinInHisOfficeAtPrincetonUniversity.mp4 
