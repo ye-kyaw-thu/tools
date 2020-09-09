@@ -93,6 +93,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 81. [mp42gif.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mp42gif.sh)  
 82. [extract-target-text.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract-target-text.sh)  
 83. [txt2png.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2png.sh)  
+84. [pic2histogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic2histogram.sh)  
 
 # perl
 
