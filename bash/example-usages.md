@@ -3617,3 +3617,27 @@ $./txt2png.sh ./input.txt Padauk
 </p>
 
 
+## 84. [pic2histogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic2histogram.sh)  
+
+picture ဖိုင်တစ်ဖိုင်ကို color histogram အဖြစ် ပြောင်းသိမ်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။  
+
+အရင်ဆုံး example picture ဖိုင်ကို ကြည့်ကြည့်ရအောင်။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/ucshinthada-present.jpg" alt="original picture file" />
+</p>
+<p align="center"> Fig. Original photo (a present from University of Computer Studies, Hinthada) </p>  
+
+command ကတော့ အောက်ပါအတိုင်းပေးပြီးတော့ run ပါတယ်။  
+./pic2histogram.sh <picture-filename> <output-histogram-filename>  
+	
+```
+./pic2histogram.sh ./ucshinthada-present.jpg ./col_hist.png
+```
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/col_hist.png" alt="converted histogram picture file" />
+</p>
+<p align="center"> Fig. Converted histogram file </p> 
+
+
