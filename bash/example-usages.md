@@ -3624,7 +3624,7 @@ picture ဖိုင်တစ်ဖိုင်ကို color histogram အဖ�
 အရင်ဆုံး example picture ဖိုင်ကို ကြည့်ကြည့်ရအောင်။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/ucshinthada-present.jpg" alt="original picture file" />
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/ucshinthada-present.jpg" alt="original picture file" width="400x225"/>
 </p>
 <p align="center"> Fig. Original photo (a present from University of Computer Studies, Hinthada) </p>  
 
