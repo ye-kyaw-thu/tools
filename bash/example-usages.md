@@ -3583,3 +3583,37 @@ Example အနေနဲ့ run ပြရရင်တော့ အောက်ပ
  ပျော် စ ရာ တော့ ကောင်း  တယ်  နော် 
 ```
 
+## 83. [txt2png.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2png.sh)  
+text ဖိုင်ထဲမှာ ရိုက်ထည့်ထားတဲ့ မြန်မာစာကြောင်းတွေကို ပုံဖိုင်အဖြစ်ပြောင်းပေးတဲ့ shell script ပါ။
+
+အရင်ဆုံး input.txt ဖိုင်ထဲမှာ ရိုက်ထားတဲ့ မြန်မာစာကြောင်းတွေကို cat command နဲ့ ရိုက်ထုတ်ကြည့်ရအောင်။  
+
+```
+$ cat input.txt 
+နေကောင်းလား
+ထမင်းစားပြီးပြီလား
+```
+
+run မယ်ဆိုရင်တော့ input file နာမည်နဲ့ font နာမည်ကို argument တွေအဖြစ် ပေးဖို့ လိုအပ်ပါတယ်။  
+
+```
+$./txt2png.sh ./input.txt Myanmar3
+```
+
+output.png အဖြစ်နဲ့ သိမ်းပေမှာဖြစ်လို့ display output.png ဆိုပြီးတော့ ရိုက်ကြည့်ရင် အောက်ပါအတိုင်း image ဖိုင်ကို မြင်ရမှာ ဖြစ်ပါတယ်။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/myanmar3-output.png" alt="converted PNG file" />
+</p>
+
+တကယ်လို့ font နာမည်ကို ပိတောက်ဖောင့်နာမည်ပေးပြီး run ရင်တော့ အောက်ပါအတိုင်း ထွက်လာတဲ့ PNG ဖိုင်မှာလည်း စာလုံးပုံစံပြောင်းလဲသွားတာကို မြင်တွေ့ရမှာ ဖြစ်ပါတယ်။  
+
+```
+$./txt2png.sh ./input.txt Padauk
+```
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/padauk-output.png" alt="converted PNG file" />
+</p>
+
+
