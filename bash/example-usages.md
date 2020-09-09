@@ -3600,7 +3600,7 @@ run မယ်ဆိုရင်တော့ input file နာမည်နဲ့ 
 $./txt2png.sh ./input.txt Myanmar3
 ```
 
-output.png အဖြစ်နဲ့ သိမ်းပေမှာဖြစ်လို့ display output.png ဆိုပြီးတော့ ရိုက်ကြည့်ရင် အောက်ပါအတိုင်း image ဖိုင်ကို မြင်ရမှာ ဖြစ်ပါတယ်။  
+output.png အဖြစ်နဲ့ သိမ်းပေးမှာဖြစ်လို့ display output.png ဆိုပြီးတော့ ရိုက်ကြည့်ရင် အောက်ပါအတိုင်း image ဖိုင်ကို မြင်ရမှာ ဖြစ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/myanmar3-output.png" alt="converted PNG file" />
