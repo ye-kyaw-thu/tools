@@ -256,7 +256,10 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 83. [txt2png.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2png.sh)  
 (text ဖိုင်ထဲမှာ ရိုက်ထားတဲ့ မြန်မာစာကြောင်းတွေကို PNG ပုံဖိုင်အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ bash shell script ပါ)  
 
-84. [tesseract-ocr.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/tesseract-ocr.sh)  
+84. [pic2histogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic2histogram.sh)  
+(ပုံဖိုင်ကနေ histogram ထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ)  
+
+85. [tesseract-ocr.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/tesseract-ocr.sh)  
 (Google ရဲ့ OCR engine ဖြစ်တဲ့ Tesseract ကို command line ကနေ အလွယ်တကူ စမ်းကြည့်စဉ်မှာ သုံးခဲ့တဲ့ bash shell script တစ်ပုဒ်ပါ)  
 
 
