@@ -3701,7 +3701,7 @@ Detected 34 diacritics
 နောက်ထပ် test လုပ်တဲ့ အနေနဲ့ English OCR ကို စမ်းကြည့်ကြရအောင်။ input PNG ဖိုင်က အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/eng-monospace.png" alt="input png file for English language" />
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/eng-monospace.png" alt="input png file for English language" width="1453x1530"/>
 </p>
 <p align="center"> Fig. Input PNG file for testing English language OCR </p>  
 
