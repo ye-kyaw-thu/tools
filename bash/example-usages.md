@@ -3618,7 +3618,6 @@ $./txt2png.sh ./input.txt Padauk
 
 
 ## 84. [pic2histogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic2histogram.sh)  
-
 picture ဖိုင်တစ်ဖိုင်ကို color histogram အဖြစ် ပြောင်းသိမ်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။  
 
 အရင်ဆုံး example picture ဖိုင်ကို ကြည့်ကြည့်ရအောင်။  
@@ -3635,9 +3634,181 @@ command ကတော့ အောက်ပါအတိုင်းပေးပ�
 ./pic2histogram.sh ./ucshinthada-present.jpg ./col_hist.png
 ```
 
-<p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/col_hist.png" alt="converted histogram picture file" />
+<p align="center"> ဆိုတဲ့ ခေါင်းစဉ်နဲ့ 
+<img src="https://github.com/ye-kyaw-thu/tools/blo, မန္တလေးb/master/bash/pic/col_hist.png" alt="converted histogram picture file" />
 </p>
 <p align="center"> Fig. Converted histogram file </p> 
 
+
+## 85. [tesseract-ocr.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/tesseract-ocr.sh)  
+လက်ရှိမှာ Google က develop လုပ်နေတဲ့ [Tesseract OCR](https://github.com/tesseract-ocr/tesseract) ကို 2015 လောက်မှာကတည်းက ကျွန်တော် မြန်မာစာနဲ့ ကမ္ဘောဒီယားစာဖြစ်တဲ့ ခမာစာအတွက် OCR မော်ဒယ် ဆောက်ကြည့်တာ၊ စမ်းခဲ့တာတွေကို အမျိုးမျိုးလုပ်ခဲ့ပါတယ်။ မြန်မာစာအတွက် စမ်းထားတာကို အဲဒီတုန်းက MIIT, မန္တလေး ရဲ့ opening ceremony မှာ UCSY က ဆရာမဝင်းပပရဲ့ အကူအညီနဲ့ "Myanmar Printed Character Recognition" ဆိုတဲ့ ခေါင်းစဉ်နဲ့ demo လုပ်ပြခဲ့ကြပါသေးတယ်။  
+
+ဒီနေရာမှာတော့ Google က ဆောက်ပေးထားတဲ့ OCR engine ကို လွယ်လွယ်ကူကူနဲ့ command line ကနေ ခေါ်သုံးတာကို လုပ်ကြည့်ထားတဲ့ bash shell script ပါ။ အရင်ဆုံး ကိုယ်စက်ထဲမှာ Tesseract OCR command ကို run လို့ရဖို့အတွက် installation လုပ်ထားမှသာ၊ အခု shell script က မှန်မှန်ကန်ကန် အလုပ်လုပ်ပေးမှာ ဖြစ်ပါတယ်။ Installation ကတော့ Ubuntu Linux OS စက်မှာ ဆိုရင်တော့ "sudo apt-get install tesseract-ocr" command နဲ့ install လုပ်လို့ရပါတယ်။  
+
+နောက်ပြီးတော့ OCR test လုပ်ဖို့အတွက်က စာရိုက်ထားတဲ့ text ဖိုင် သို့မဟုတ် PDF ဖိုင်ကို picture ဖိုင်အဖြစ် (e.g. PNG file) လည်း ပြောင်းပြီးတော့ ပြင်ဆင်ထားဖို့ လိုအပ်ပါတယ်။  
+အင်္ဂလိပ်စာ OCR လုပ်ဖို့အတွက်က အထက်မှာ ပြခဲ့တဲ့ apt-get install နဲ့ install လုပ်ခဲ့ယုံနဲ့ "/usr/share/tesseract-ocr/4.00/tessdata/" path အောက်မှာ eng.traineddata ဆိုတဲ့ model ဖိုင်ကိုပါ copy ကူးပေးသွားမှာဖြစ်ပေမဲ့ မြန်မာစာတို့လို တခြား ဘာသာစကားနဲ့ OCR ကို စမ်းကြည့်ဖို့ ဆိုရင်တော့ ကိုယ့်ဖာသာကိုယ် download လုပ်ယူထားရမှာ ဖြစ်ပါတယ်။ ဥပမာအနေနဲ့ မြန်မာစာ OCR ကို လုပ်ဖို့အတွက် လိုအပ်တဲ့ mya.traineddata ဖိုင်ကို အောက်ပါအတိုင်း wget command နဲ့ copy ကူယူလိုက်ပါ။  
+
+```
+(base) ye@ykt-pro:/usr/share/tesseract-ocr/4.00/tessdata$ sudo wget https://github.com/tesseract-ocr/tessdata/raw/master/mya.traineddata
+[sudo] password for ye: 
+--2020-09-10 19:26:45--  https://github.com/tesseract-ocr/tessdata/raw/master/mya.traineddata
+Resolving github.com (github.com)... 13.229.188.59
+Connecting to github.com (github.com)|13.229.188.59|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://raw.githubusercontent.com/tesseract-ocr/tessdata/master/mya.traineddata [following]
+--2020-09-10 19:26:45--  https://raw.githubusercontent.com/tesseract-ocr/tessdata/master/mya.traineddata
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.8.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.8.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4640591 (4.4M) [application/octet-stream]
+Saving to: ‘mya.traineddata’
+
+mya.traineddata                 100%[=====================================================>]   4.42M   517KB/s    in 8.7s    
+
+2020-09-10 19:26:54 (519 KB/s) - ‘mya.traineddata’ saved [4640591/4640591]
+```
+
+ဒီနေရာမှာတော့ အရင်ဆုံး မြန်မာစာ OCR ကို စမ်းကြည့်ကြရအောင်။  
+input လုပ်မဲ့ ပုံကတော့ အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။ တကယ်က သိချင်လို့ မြန်မာစာကြောင်း\<TAB\>ဘိတ်စာကြောင်း format နဲ့ ရိုက်ထည့်ထားခဲ့တာပါ။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/mya.png" alt="input png file for Myanmar language" width="1142x254"/>
+</p>
+<p align="center"> Fig. Input PNG file for testing Myanmar language OCR </p>  
+
+မြန်မာစာ အတွက် Tesseract OCR ကို run ပြီး output အဖြစ်ထွက်လာတဲ့ဖိုင်ကို လေ့လာကြည့်ကြရအောင်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/4github/tesseract-ocr$ ./tesseract-ocr.sh mya ./input.png myanmar-output
+Tesseract Open Source OCR Engine v4.0.0-beta.1 with Leptonica
+Warning. Invalid resolution 0 dpi. Using 70 instead.
+Estimating resolution as 305
+Detected 34 diacritics
+ဝု င္လ
+ရိုရင် စိတ် ပြန် ဖြး ငြ မှာဆို ငါ းဝေါး ငရယ ||
+ကျွန်တော်သာ သူ့ . နေရာ မှာ ရှ ရင စတ ဖောက်ပြန်သွားမှာ သေရျာတယလံ ငါ သူ နေရာ ငှ ဆု ရှး ဇု ရ ဝ
+န် တာ်သာ ရာ ဓှာ ရို င် စိတ် ဖောက်ပြန်သွား မှ ဓှာ သျ တယ | ငါ သူ နေရာ မှာဆု င ရူးဝေ ဓိ နုငရယ [|
+ကး စး ဖြ ၉ လ ဖီ င် ပိ င် ယ် ကော်ဖီ လက်ဖက်ရည် သောက်ဝို့လာ [|
+မင်း ညစာ နဲ့အတူ ဘာ လိုချင် ပဲ | ကောဲဖီ လား ! လက်ဖက်ရည် လား [| န ညာ ဘာ လွ ရျငရ က မြ် ဖကရည က် |
+ကာဖ လကဖက သော လာ
+မင်း ညာ နဲ့အတူ ဘာ လိုချင် လဲ | ကော်ဖီ လား | လက်ဖက်ရည် လား | နင ညစာ ဘာ လု မြး ေ က ရည ဝ့
+င္လ င်လို သိပ် င်း ဖြး ဒယ်ဇာ ဝိ င် ခေ ရိ ိုင်ရိ အား ကောငး ပေါမယ် [|
+ဒါဆို ခင်ဗျား နေလူ့ထုင ~) သပ ကောငးသွားဓမယ [| ဆု န နရထု ) |
+```
+
+အကြမ်းမျဉ်းအားဖြင့် ပြောရရင် အထက်မှာ မြင်ရတဲ့ အတိုင်းပဲ မြန်မာစာအတွက်ကတော့ ရလဒ်က မကောင်းပါဘူး။  
+
+နောက်ထပ် test လုပ်တဲ့ အနေနဲ့ English OCR ကို စမ်းကြည့်ကြရအောင်။ input PNG ဖိုင်က အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/eng-monospace.png" alt="input png file for English language" width="1142x254"/>
+</p>
+<p align="center"> Fig. Input PNG file for testing English language OCR </p>  
+
+```
+
+tesseract-ocr.sh ကို run ကြည့်ကြရအောင်။  
+```
+(base) ye@ykt-pro:/media/ye/project1/4github/tesseract-ocr$ ./tesseract-ocr.sh eng ./eng-monospace.png eng-monospace
+Tesseract Open Source OCR Engine v4.0.0-beta.1 with Leptonica
+Warning. Invalid resolution 0 dpi. Using 70 instead.
+Estimating resolution as 416
+Paper Title: Unsupervised Neural Machine Translation between Myanmar Sign Language and Myanmar Language
+Authors: Swe Zin Moe, Ye Kyaw Thu, Hnin Aye Thant, Nandar Win Min and Thepchai Supnithi
+
+Abstract:
+This paper investigate the utility of unsupervised Neural Machine translation (U-NMT) on low-resource Language pairs: Myanmar sign language (MSL) and Myanmar language.
+
+Since state-ofthe-art neural machine translation (NMT) require large amount of parallel sentences, which we do not have for pairs we consider.
+We focus primarily on incorporating two different types of monolingual data: translated Myanmar sentences of primary English and myPOS data, only into our Myanmar language side.
+
+We found that the incorporating monolingual data achieved higher performance than the baseline approach.
+We prepared four types of training data for U-NMT models and the results clearly show that using the myPOS corpus on incorporating the Myanmar Language monolingual data achieved the highest BLEU scores when compared to other training data.
+```
+
+အထက်မှာ မြင်ရတဲ့အတိုင်းပါပဲ။ အင်္ဂလိပ်စာအတွက် ကောင်းကောင်း အလုပ်လုပ်တာကို တွေ့ကြရပါလိမ့်မယ်။  
+
+ကောင်းပြီ ဂျပန်စာအတွက် စမ်းကြည့်ကြရအောင်။ input ထည့်ပေးထားတဲ့ ဖိုင်က ကျွန်တော်က ဂျပန်လို့ ရေးခဲ့တဲ့ essay တစ်ပုဒ်ပါ။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/jpn.png" alt="input png file for Japanese language" width="1142x254"/>
+</p>
+<p align="center"> Fig. Input PNG file for testing Japanese language OCR </p>  
+
+tesseract-ocr.sh ကို ဂျပန်စာ OCR အတွက် test လုပ်ကြည့်ကြရအောင်။ ထွက်လာတဲ့ output ဂျပန်စာကြောင်းတွေကို PNG ဖိုင်ထဲက ဂျပန်စာကြောင်းတွေနဲ့ တိုက်ကြည့်ကြရအောင်။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/4github/tesseract-ocr$ ./tesseract-ocr.sh jpn ./jpn.png japanese
+Tesseract Open Source OCR Engine v4.0.0-beta.1 with Leptonica
+Warning. Invalid resolution 0 dpi. Using 70 instead.
+Estimating resolution as 475
+エ ッ セ イ ② ④ ③ : イ エ チ ョ ウ ト ゥ ` テ レ ビ か ら 学 ぶ 日 本 」
+
+母 国 ミ ャ ン マ ー で は ニ ュ ー ス 番 組 を 除 い て テ レ ビ を ほ と ん ど 見 な か っ た 私 だ が 、
+
+来 日 後 は 時 間 を 見 つ け て は 見 る よ う に な っ た 。
+
+と い う の は 、 日 本 の テ レ ビ 番 組 に は 素 晴 ら し い も の が 多 く 、 学 び の 可 能 性 が 無 限 に 広 が っ て い る か ら だ c。
+
+来 日 当 初 は 、 主 に 日 本 語 の 学 習 の た め に テ レ ビ を 見 て い た
+
+NHK の 教 育 番 組 だ け で な く 、 ド ラ マ か ら 日 常 会 話 や 若 者 の 使 う 日 本 語 な ど を 学 ん だ 。
+
+字 幕 付 き の 番 組 も 多 く 、 漢 字 の 勉 強 に 役 立 っ た 。
+
+日 本 語 が だ ん だ ん 分 か る よ う に な る と 、 ス ポ ー ツ 、 旅 行 、 文 化 、 ド キ ュ メ ン タ リ ー な と ど 、
+
+さ ま ざ ま な 番 組 を 見 る よ う に な り 、 日 本 の 文 化 に 対 す る 理 解 が 少 し ず つ 深 ま っ て い っ た 。
+
+最 近 で は 、 お 笑 い や 政 治 番 組 も 理 解 で き る よ う に な り 、 く だ け た 日 本 語 や 逆 に 硬 い 日 本 語 を 学 ぶ の に 役 立 っ て い る 。
+
+こ の よ う に 日 本 の テ レ ビ 番 組 は 私 に と っ て 貴 重 な 学 び の 場 で あ る が 、
+
+中 で も ド キ ュ メ ン タ リ ー 番 組 か ら は 多 く の こ と を 学 ん だ 。
+
+た と え ば 、 戦 争 体 験 者 の 話 か ら 日 本 の 歴 史 的 事 実 を 初 め て 学 ん だ 。
+
+ミ ャ ン マ ー に い た 時 は 、 戦 争 を 体 験 し た 日 本 人 の 痛 み な ど 全 く 知 ら な か っ た が 、
+
+つ ら い 時 代 を 過 ご し た 日 本 人 の 語 る 内 容 に 強 い 衝 撃 を 受 け 、 戦 争 に つ い て 深 く 考 え る き っ か け と な っ た 。
+ま た 、 障 害 を も っ た 人 や 病 気 の 人 が 懸 命 に 生 き よ う と 頑 張 っ て い る 姿 を 描 い た 番 組 を 見 て 、
+
+心 を 揺 さ ぶ ら れ 、 命 の 重 さ に つ い て 考 え さ せ ら れ た 。
+
+歴 史 上 の 偉 人 、 研 究 者 、 政 治 家 な ど 、 日 本 を 変 え る た め に 人 生 を か け て い る 人 に つ い て の 番 組 も よ く 見 る 。
+こ の よ う な 立 派 な 人 々 の 努 力 が あ っ た か ら こ そ 、 日 本 は こ こ ま で 豊 か な 国 に な っ た の だ と 実 感 す る 。
+
+そ ん な 時 、 自 分 も で き る こ と を 精 一 杯 や ら ね ば と い う 思 い で 胸 が 熱 く な る 。
+
+も ち ろ ん テ レ ビ が 与 え る 影 響 に は 良 い も の も 悪 い も の も あ り 、 場 合 に よ っ て は 危 険 性 も あ る 。
+し か し 、 私 は 、 日 本 の テ レ ビ 番 組 は 素 晴 ら し い 教 育 手 段 の ひ と つ で あ る と 考 え る 。
+研 究 を 行 う 上 で 手 が か り と な る よ う な 幅 広 い 知 識 を 得 る こ と も で き 、 私 に と っ て は 知 識 の 宝 庫 と い え る 。
+
+学 会 な ど で 海 外 を 訪 れ た 際 は 、 短 時 間 で も テ レ ビ 番 組 を 見 る よ う に し て い る 。
+
+そ う す る こ と に よ り 、 文 化 、 流 行 、 教 育 な ど に 触 れ る こ と が で き 、 少 し そ の 国 に 近 づ け た よ う な 気 が す る の だ 。
+
+こ の よ う な 経 験 か ら 、 日 本 に 来 た ば か り の 人 へ ヘ ア ド バ イ ス を す る と す れ ば 、 テ レ ビ か ら 学 ぶ 日 本 を お 薦 め し た い 。
+
+わ ず か な 時 間 で も 、 何 か を 学 び 取 ろ う と い う 意 識 を も っ て テ レ ビ を 見 る こ と で 大 い に 勉 強 に な る と い う こ と を 伝 え た い 。
+
+寝 転 が っ て い な が ら リ モ コ ン ひ と つ で 勉 強 が で き る 日 本 で は 、 い く ら で も 知 識 を 増 や し て い く こ と が で き る 。
+今 夜 も テ レ ビ を つ け た ま ま 届 眠 り し て 朝 を 迎 え る こ と に な り そ う だ …。
+
+ベ イ エ チ ョ ウ ト ゥ 衣 Ye Kyaw Thu
+
+⑲⑦⑤ 年 、 ミ ャ ン マ ー ( ヤ ン ゴ ン ) 生 ま れ 。②000 年 、Dagon University ( ミ ャ ン マ ー) 物 理 学 部 卒 業 。
+⑳0⑥ 年 、 早 稲 田 大 学 大 学 院 国 際 情 報 通 信 研 究 科 修 士 課 程 修 了 。 現 在 、 同 大 学 助 手 。
+
+ヒ ュ ー マ ン ・ コ ン ピ ュ ー タ ・ イ ン タ ラ ク シ ョ ン 、 自 然 言 語 処 理 、
+
+子 供 お よ び 障 害 者 を 対 象 と し た 教 育 に 関 す る 研 究 を 行 い 、 博 士 号 取 得 を 目 指 し て い る 。
+
+趣 味 は 、 武 道 ( 合 気 道 、 テ コ ン ド ー、 カ ン フ ー) 、 読 書 、 旅 行 。
+
+⑳①0 年 ④ 月 ②① 日
+
+```
+
+အထက်မှာ တွေ့ရတဲ့အတိုင်းပါပဲ မြန်မာစာအတွက်သာ ကောင်းကောင်းအလုပ်မလုပ်ပေမဲ့ အင်္ဂလိပ်စာနဲ့ ဂျပန်စာအတွက်က သုံးလို့ရနိုင်လောက်အောင် အလုပ်လုပ်ပေးတာကို တွေ့ကြရပါလိမ့်မမယ်။ တစ်ခုတော့ ရှိပါတယ်။ ဒီမှာ သုံးထားတဲ့ မြန်မာစာအတွက် OCR engline က ဘယ်လို approach နဲ့ မော်ဒယ်ဆောက်ထားတာလဲ၊ ဘယ်လို ဒေတာကို သုံးထားတာလဲ၊ update ကော လုပ်ထားရဲ့လား စတဲ့ အချက်တွေပေါ်လည်း အများကြီး မူတည်ပါလိမ့်မယ်။  
 
