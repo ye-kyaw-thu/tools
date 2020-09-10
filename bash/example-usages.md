@@ -3697,7 +3697,14 @@ Detected 34 diacritics
 ```
 
 အကြမ်းမျဉ်းအားဖြင့် ပြောရရင် အထက်မှာ မြင်ရတဲ့ အတိုင်းပဲ မြန်မာစာအတွက်ကတော့ ရလဒ်က မကောင်းပါဘူး။  
-ဒီတစ်ခါတော့ ညာဘက်အခြမ်းက ဘိတ်စာကြောင်းတွေကို ဖျက်လိုက်ပြီး ထပ်စမ်းကြည့်ပါတယ်။  
+ဒီတစ်ခါတော့ ညာဘက်အခြမ်းက ဘိတ်စာကြောင်းတွေကို ဖျက်လိုက်ပြီး ထပ်စမ်းကြည့်ကြရအောင်။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output.png" alt="input png file for Myanmar language" width="1142x254"/>
+</p>
+<p align="center"> Fig. Input PNG file for testing Myanmar language OCR 2nd time</p> 
+
+shell script ကို run ကြည့်ပြီး OCR ရဲ့ output မြန်မာစာကြောင်းတွေကို ရိုက်ထုတ်ကြည့်တော့ အောက်ပါအတိုင်း ရလဒ်ရရှိပါတယ်။  
 
 ```
 (base) ye@ykt-pro:/media/ye/project1/4github/tesseract-ocr$ ./tesseract-ocr.sh mya ./output.png myanmar-output2
