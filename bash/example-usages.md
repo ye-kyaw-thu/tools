@@ -3701,13 +3701,12 @@ Detected 34 diacritics
 နောက်ထပ် test လုပ်တဲ့ အနေနဲ့ English OCR ကို စမ်းကြည့်ကြရအောင်။ input PNG ဖိုင်က အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/eng-monospace.png" alt="input png file for English language" width="1142x254"/>
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/eng-monospace.png" alt="input png file for English language" width="3453x330"/>
 </p>
 <p align="center"> Fig. Input PNG file for testing English language OCR </p>  
 
-```
-
 tesseract-ocr.sh ကို run ကြည့်ကြရအောင်။  
+
 ```
 (base) ye@ykt-pro:/media/ye/project1/4github/tesseract-ocr$ ./tesseract-ocr.sh eng ./eng-monospace.png eng-monospace
 Tesseract Open Source OCR Engine v4.0.0-beta.1 with Leptonica
@@ -3731,7 +3730,7 @@ We prepared four types of training data for U-NMT models and the results clearly
 ကောင်းပြီ ဂျပန်စာအတွက် စမ်းကြည့်ကြရအောင်။ input ထည့်ပေးထားတဲ့ ဖိုင်က ကျွန်တော်က ဂျပန်လို့ ရေးခဲ့တဲ့ essay တစ်ပုဒ်ပါ။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/jpn.png" alt="input png file for Japanese language" width="1142x254"/>
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/jpn.png" alt="input png file for Japanese language" width="1426x1906"/>
 </p>
 <p align="center"> Fig. Input PNG file for testing Japanese language OCR </p>  
 
