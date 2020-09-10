@@ -3698,7 +3698,7 @@ Detected 34 diacritics
 
 အကြမ်းမျဉ်းအားဖြင့် ပြောရရင် အထက်မှာ မြင်ရတဲ့ အတိုင်းပဲ မြန်မာစာအတွက်ကတော့ ရလဒ်က မကောင်းပါဘူး။  
 
-နောက်ထပ် test လုပ်တဲ့ အနေနဲ့ English OCR ကို စမ်းကြည့်ကြရအောင်။ input PNG ဖိုင်က အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။  
+နောက်ထပ် test လုပ်တဲ့ အနေနဲ့ English OCR ကို စမ်းကြည့်ကြရအောင်။ input PNG ဖိုင်က အောက်မှာ ပြထားတဲ့ အတိုင်းပါပဲ။ ပုံကို browser မှာကြည့်ရတာသေးနေရင် ပုံပေါ်မှာ click နှိပ်ပြီးလည်း ကြည့်လို့ ရပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/eng-monospace.png" alt="input png file for English language" width="1453x1530"/>
