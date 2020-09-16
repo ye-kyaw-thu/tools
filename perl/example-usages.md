@@ -1954,7 +1954,7 @@ blank line တွေကို ဖြုတ်ပြီးသား output ဖိ
 
 ```
 
-50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
+## 50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
 
 [GIZA++](https://github.com/moses-smt/giza-pp) နဲ့ source, target စာကြောင်းတွေကို alignment လုပ်ပြီး ရလာတဲ့ alignment table က အောက်ပါ ပုံစံမျိုး format နဲ့ ထွက်လာပါတယ်။  
 ဥပမာ အနေနဲ့ မြန်မာနဲ့ မီဇိုချင်း ဘာသာစကားနှစ်မျိုးအတွက် စာကြောင်း pair သုံးကြောင်းအတွက် ထွက်လာတဲ့ output က အောက်ပါအတိုင်း ရှိတယ်လို့ ဆိုကြပါစို့ ...  
