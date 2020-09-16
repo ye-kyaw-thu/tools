@@ -149,5 +149,7 @@
 
 49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
     (blank line တွေ space တွေနဲ့ Tab တွေပဲပါတဲ့ စာကြောင်းတွေကို ဖျက်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ)  
-    
-    
+ 
+50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
+    (GIZA++ နဲ့ source, target စာကြောင်းတွေကို alignment လုပ်ပြီးတဲ့အခါ ထွက်လာတဲ့ src-trg.A3.final.gz ဖိုင်ကို လူအနေနဲ့ ကြည့်ရလွယ်အောင် format ချဖို့ရေးခဲ့တဲ့ perl script ပါ)
+
