@@ -1953,3 +1953,30 @@ blank line တွေကို ဖြုတ်ပြီးသား output ဖိ
 3	ခင်ဗျား မေးမြန်းစုံစမ်းထား တဲ့ နေရာ အတွက် ပညာ အရည်အချင်း သတ်မှတ်ချက်တွေ ကို ဒီနေ့ထုတ် သတင်းစာ မှာ အသေးစိတ် ဖော်ပြထားတယ် ။
 
 ```
+
+50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
+
+[GIZA++](https://github.com/moses-smt/giza-pp) နဲ့ source, target စာကြောင်းတွေကို alignment လုပ်ပြီး ရလာတဲ့ alignment table က အောက်ပါ ပုံစံမျိုး format နဲ့ ထွက်လာပါတယ်။  
+ဥပမာ အနေနဲ့ မြန်မာနဲ့ မီဇိုချင်း ဘာသာစကားနှစ်မျိုးအတွက် စာကြောင်း pair သုံးကြောင်းအတွက် ထွက်လာတဲ့ output က အောက်ပါအတိုင်း ရှိတယ်လို့ ဆိုကြပါစို့ ...  
+
+```
+$ cat eg1.txt 
+# Sentence pair (12991) source length 8 target length 6 alignment score : 1.86174e-08
+အဲ့ဒါကို မင်း ဘယ်မှာ ရှင်းပြ ခဲ့တာလဲ ။ 
+NULL ({ }) Hei ({ 1 }) hi ({ }) khawiah ({ 3 }) nge ({ 5 }) i ({ 2 }) hrilhfiah ({ 4 }) a ({ }) ? ({ 6 }) 
+# Sentence pair (12992) source length 10 target length 7 alignment score : 5.23333e-09
+ငါတို့ အတွက် အဲဒီနေရာ ရောက် ဖို့ အရေးကြီးတယ် ။ 
+NULL ({ }) Keini ({ 1 }) tan ({ 2 }) chuan ({ }) hemi ({ 3 }) hmun ({ }) thlen ({ 4 }) hi ({ }) a ({ }) pawimawh ({ 5 6 }) . ({ 7 }) 
+# Sentence pair (12993) source length 10 target length 5 alignment score : 7.88846e-07
+အသားကင် အနံ့က သရေယိုစရာ ပဲ ။ 
+NULL ({ }) Saw ({ }) hem ({ }) rim ({ }) chu ({ }) chil ({ }) a ({ }) tiput ({ 1 2 3 4 }) mang ({ }) e ({ }) . ({ 5 }) 
+```
+
+အထက်ပါ format ကနေ အောက်ပါ format အဖြစ်ပြောင်းကြည့်ရအောင် ...  
+
+```
+$ perl ./gizaA3-4human.pl ./eg1.txt 
+NULL Hei(အဲ့ဒါကို)  hi khawiah(ဘယ်မှာ)  nge(ခဲ့တာလဲ)  i(မင်း)  hrilhfiah(ရှင်းပြ)  a ?(။)
+NULL Keini(ငါတို့)  tan(အတွက်)  chuan hemi(အဲဒီနေရာ)  hmun thlen(ရောက်)  hi a pawimawh(ဖို့,အရေးကြီးတယ်)  .(။)
+NULL Saw hem rim chu chil a tiput(အသားကင်,အနံ့က,သရေယိုစရာ,ပဲ)  mang e .(။)
+```
