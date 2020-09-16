@@ -147,6 +147,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 47. [human-mt-eval-form.pl](https://github.com/ye-kyaw-thu/tools/edit/master/perl/human-mt-eval-form.pl)  
 48. [trainTuneScore_jamy.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/trainTuneScore_jamy.pl)  
 49. [rm-blank-line.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/rm-blank-line.pl)  
+50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
 
 # Python
 
