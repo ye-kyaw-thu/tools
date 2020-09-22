@@ -95,6 +95,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 83. [txt2png.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2png.sh)  
 84. [pic2histogram.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic2histogram.sh)  
 85. [tesseract-ocr.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/tesseract-ocr.sh)  
+86. [sylbreak-10fold-smt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-10fold-smt.sh)  
 
 # perl
 
