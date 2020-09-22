@@ -2,8 +2,8 @@
 
 # syllable breaking for 10 fold-cross SMT with moses
 # written by Ye Kyaw Thu, LST, NECTEC, Thailand
-# How to run: ./sylbreak-10fold-smt.sh <source-language-extension> < target-language-extension>
-# e.g. for Dawei, Beik language pair: bash ./sylbreak-10fold-smt.sh dw bk
+# How to run: ./sylbreak-10fold-mt.sh <source-language-extension> < target-language-extension>
+# e.g. for Dawei, Beik language pair: bash ./sylbreak-10fold-mt.sh dw bk
 
 SRC=$1;
 TRG=$2;
