@@ -262,7 +262,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 85. [tesseract-ocr.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/tesseract-ocr.sh)  
 (Google ရဲ့ OCR engine ဖြစ်တဲ့ Tesseract ကို command line ကနေ အလွယ်တကူ စမ်းကြည့်စဉ်မှာ သုံးခဲ့တဲ့ bash shell script တစ်ပုဒ်ပါ)  
 
-86. [sylbreak-10fold-smt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-10fold-smt.sh)  
+86. [sylbreak-10fold-mt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-10fold-smt.sh)  
 (10 fold Statistical Machine Translation ကို syllable ဖြတ်ထားတဲ့ ဒေတာနဲ့ လုပ်ဖို့အတွက် ပြင်ဆင်စဉ်မှာ အသုံးပြုဖို့ ရေးခဲ့တဲ့ script တစ်ပုဒ်ပါ)  
 
 
