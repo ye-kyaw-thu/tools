@@ -1980,3 +1980,40 @@ NULL Hei(အဲ့ဒါကို)  hi khawiah(ဘယ်မှာ)  nge(ခဲ�
 NULL Keini(ငါတို့)  tan(အတွက်)  chuan hemi(အဲဒီနေရာ)  hmun thlen(ရောက်)  hi a pawimawh(ဖို့,အရေးကြီးတယ်)  .(။)
 NULL Saw hem rim chu chil a tiput(အသားကင်,အနံ့က,သရေယိုစရာ,ပဲ)  mang e .(။)
 ```
+
+51. [print-fngram-format.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-fngram-format.pl)  
+
+SRILM toolkit ကို သုံးပြီးတော့ factored language model ဆောက်လို့ ရပါတယ်။ အဲဒီလိုမဆောက်ခင်မှာ training data နဲ့ test data အတွက် သတ်မှတ်ထားတဲ့ format ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။   
+
+ပုံမှန်အားဖြင့်က language model ကို word တွေနဲ့ပဲ ဆောက်ကြပေမဲ့ factored language model မှာတော့ POS tag တို့ morphological information စတာတွေကိုပါ ဖြည့်ပြီးတော့မှ model ဆောက်တာမို့ စိတ်ဝင်စားဖို့ကောင်းပါတယ်။ ဘယ်လို format ပုံစံမျိုးနဲ့ လုပ်ကြတာလည်းဆိုတာကို မြင်သာအောင် ဥပမာ တစ်ခုအနေနဲ့ myPOS corpus အထဲက POS tag လုပ်ထားတဲ့မြန်မာစာကြောင်း တချို့ကိုသုံးပြီးတော့ ဥပမာအနေနဲ့ run ပြထားပါတယ်။   
+
+အရင်ဆုံး input လုပ်မယ့်ဖိုင်ကို cat command နဲ့ screen မှာကြည့်ကြရအောင်။   
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/factored-lm$ cat ./mypos-dver.1.0.txt.head 
+ယခု/n လ/n တွင်/ppm ပျားရည်/n နှင့်/conj ပျားဖယောင်း/n များ/part ကို/ppm စုဆောင်း/v ကြ/part သည်/ppm ဟု/part ခန့်မှန်း/v နိုင်/part သည်/ppm ။/punc
+အခန်းခ/n ထဲ/ppm မှာ/ppm ထည့်/v လိုက်/part ပါ/part ။/punc
+ဆရာကြီး/n ဦးစိန်/n ၏/ppm မြန်မာ/n အထက်တန်း/n ကျောင်း/n မှ/ppm ၉/num တန်း/n အောင်မြင်/v ခဲ့/part ပြီး/conj မင်းလှ/n မြို့/n နော်မံ/n ကျောင်း/n မှ/ppm အလယ်တန်း/n ဆရာ/n ဖြစ်/v အောင်မြင်/v ခဲ့/part ၏/ppm ။/punc
+ရှစ်လေးလုံး/n လှုပ်ရှား/v မှု/part တွင်/ppm တက်ကြွ/v စွာ/part ပါဝင်/v ခဲ့/part သလို/conj ၊/punc ဗမာ/n နိုင်ငံ/n လုံး/part ဆိုင်ရာ/n ကျောင်းသား/n သမဂ္ဂ/n များ/part အဖွဲ့ချုပ်/n မှာ/ppm လည်း/part တက်ကြွ/v စွာ/part ပါဝင်/v လှုပ်ရှား/v ခဲ့/part သည်/ppm ။/punc
+ဗြိတိသျှ/n တပ်/n များ/part သည်/ppm ဂျပန်/n များ/part ၏/ppm ငါး/n ဖမ်း/v အိမ်/n ၃၀၀၀၀၀/num ခန့်/part တွင်/ppm အလုပ်/n လုပ်ကိုင်/v နေ/part ကြ/part ရ/part သည်/ppm ။/punc
+ဗမာ/n မှာ/ppm လူ/n များစု/n ဗမာ/n မျိုးနွယ်စု/n ၏/ppm ခေါ်/v ရာတွင်/conj တရားဝင်/adv ခေါ်/v သော/part အသုံး/n ဖြစ်/v သည်/ppm ။/punc
+၂၀/num ရာစု/n ၏/ppm ပထမ/adj ပိုင်း/part ရာစုနှစ်/n တဝက်/n တွင်/ppm အိန္ဒိယ/n အမျိုးသား/n ကွန်ဂရက်/n နှင့်/conj အခြား/adj နိုင်ငံ/n ရေး/part အဖွဲ့အစည်း/n များ/part မှ/ppm တစ်/n နိုင်ငံ/n လုံး/part အတိုင်းအတာ/n ဖြင့်/ppm လွတ်လပ်/v ရေး/part ကြိုးပမ်း/v မှု/part ကို/ppm စတင်/v ခဲ့/part သည်/ppm ။/punc
+၎င်း/adj ဘာသာ/n အခွဲ/n ငယ်/adj များ/part သည်/ppm အများစု/pron မှ/ppm ခွဲထွက်/v လာ/part ကြ/part ပြီး/conj ၊/punc အစ္စလာမ်/n မှ/ppm ကွဲကွာ/v ထား/part သည့်/part ဗီဒါတ်/n မွန်းမံ/v ပြင်ဆင်/v ချက်/part များ/part နှင့်/conj အစွန်းရောက်/adj နိုင်ငံ/n ရေး/part အမြင်/n များ/part ကို/ppm သွတ်သွင်း/v လက်ခံ/v သုံးစွဲ/v လာ/part ကြ/part သည်/ppm ။/punc
+ပဉ္စမ/adj အကြိမ်/n ၁/num ၊/punc ဩဂုတ်/n ၊/punc ၂ဝဝ၂/num ၊/punc ရာပြည့်/n စာအုပ်တိုက်/n ထုတ်/v စာဆို/n တော်/part များ/part အတ္ထုပ္ပတ္တိ/n က/ppm ရွှေဥဒေါင်း/n ၁၂၅၁/num ၁၃၃၅/num အကြောင်း/n မောင်သုတ/n အမည်ခံ/v ဗိုလ်မှူးဘသောင်း/n မဟာ/adj ဝိဇ္ဇာ/n ၊/punc ရွှေ/n တံဆိပ်/n ရ/v ဖခင်/n ဦးဧရာ/n သည်/ppm သီပေါ/n မင်း/n လက်ထက်/n တွင်/ppm လွှတ်တော်/n စာရေး/n အဖြစ်/n အမှုထမ်း/v ခဲ့/part ဖူး/part သည်/ppm ။/punc
+အချို့/adj မွန်/n ကျောက်စာ/n တို့/part ၌/ppm မကုဋ/n မင်း/n ဟု/part လည်း/part ခေါ်/v သည်/ppm ။/punc
+```
+
+Format ပြောင်းကြည့်ရအောင် ...  
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/factored-lm$ perl ./print-fngram-format.pl ./mypos-dver.1.0.txt.head 
+W-ယခု:P-n W-လ:P-n W-တွင်:P-ppm W-ပျားရည်:P-n W-နှင့်:P-conj W-ပျားဖယောင်း:P-n W-များ:P-part W-ကို:P-ppm W-စုဆောင်း:P-v W-ကြ:P-part W-သည်:P-ppm W-ဟု:P-part W-ခန့်မှန်း:P-v W-နိုင်:P-part W-သည်:P-ppm W-။:P-punc
+W-အခန်းခ:P-n W-ထဲ:P-ppm W-မှာ:P-ppm W-ထည့်:P-v W-လိုက်:P-part W-ပါ:P-part W-။:P-punc
+W-ဆရာကြီး:P-n W-ဦးစိန်:P-n W-၏:P-ppm W-မြန်မာ:P-n W-အထက်တန်း:P-n W-ကျောင်း:P-n W-မှ:P-ppm W-၉:P-num W-တန်း:P-n W-အောင်မြင်:P-v W-ခဲ့:P-part W-ပြီး:P-conj W-မင်းလှ:P-n W-မြို့:P-n W-နော်မံ:P-n W-ကျောင်း:P-n W-မှ:P-ppm W-အလယ်တန်း:P-n W-ဆရာ:P-n W-ဖြစ်:P-v W-အောင်မြင်:P-v W-ခဲ့:P-part W-၏:P-ppm W-။:P-punc
+W-ရှစ်လေးလုံး:P-n W-လှုပ်ရှား:P-v W-မှု:P-part W-တွင်:P-ppm W-တက်ကြွ:P-v W-စွာ:P-part W-ပါဝင်:P-v W-ခဲ့:P-part W-သလို:P-conj W-၊:P-punc W-ဗမာ:P-n W-နိုင်ငံ:P-n W-လုံး:P-part W-ဆိုင်ရာ:P-n W-ကျောင်းသား:P-n W-သမဂ္ဂ:P-n W-များ:P-part W-အဖွဲ့ချုပ်:P-n W-မှာ:P-ppm W-လည်း:P-part W-တက်ကြွ:P-v W-စွာ:P-part W-ပါဝင်:P-v W-လှုပ်ရှား:P-v W-ခဲ့:P-part W-သည်:P-ppm W-။:P-punc
+W-ဗြိတိသျှ:P-n W-တပ်:P-n W-များ:P-part W-သည်:P-ppm W-ဂျပန်:P-n W-များ:P-part W-၏:P-ppm W-ငါး:P-n W-ဖမ်း:P-v W-အိမ်:P-n W-၃၀၀၀၀၀:P-num W-ခန့်:P-part W-တွင်:P-ppm W-အလုပ်:P-n W-လုပ်ကိုင်:P-v W-နေ:P-part W-ကြ:P-part W-ရ:P-part W-သည်:P-ppm W-။:P-punc
+W-ဗမာ:P-n W-မှာ:P-ppm W-လူ:P-n W-များစု:P-n W-ဗမာ:P-n W-မျိုးနွယ်စု:P-n W-၏:P-ppm W-ခေါ်:P-v W-ရာတွင်:P-conj W-တရားဝင်:P-adv W-ခေါ်:P-v W-သော:P-part W-အသုံး:P-n W-ဖြစ်:P-v W-သည်:P-ppm W-။:P-punc
+W-၂၀:P-num W-ရာစု:P-n W-၏:P-ppm W-ပထမ:P-adj W-ပိုင်း:P-part W-ရာစုနှစ်:P-n W-တဝက်:P-n W-တွင်:P-ppm W-အိန္ဒိယ:P-n W-အမျိုးသား:P-n W-ကွန်ဂရက်:P-n W-နှင့်:P-conj W-အခြား:P-adj W-နိုင်ငံ:P-n W-ရေး:P-part W-အဖွဲ့အစည်း:P-n W-များ:P-part W-မှ:P-ppm W-တစ်:P-n W-နိုင်ငံ:P-n W-လုံး:P-part W-အတိုင်းအတာ:P-n W-ဖြင့်:P-ppm W-လွတ်လပ်:P-v W-ရေး:P-part W-ကြိုးပမ်း:P-v W-မှု:P-part W-ကို:P-ppm W-စတင်:P-v W-ခဲ့:P-part W-သည်:P-ppm W-။:P-punc
+W-၎င်း:P-adj W-ဘာသာ:P-n W-အခွဲ:P-n W-ငယ်:P-adj W-များ:P-part W-သည်:P-ppm W-အများစု:P-pron W-မှ:P-ppm W-ခွဲထွက်:P-v W-လာ:P-part W-ကြ:P-part W-ပြီး:P-conj W-၊:P-punc W-အစ္စလာမ်:P-n W-မှ:P-ppm W-ကွဲကွာ:P-v W-ထား:P-part W-သည့်:P-part W-ဗီဒါတ်:P-n W-မွန်းမံ:P-v W-ပြင်ဆင်:P-v W-ချက်:P-part W-များ:P-part W-နှင့်:P-conj W-အစွန်းရောက်:P-adj W-နိုင်ငံ:P-n W-ရေး:P-part W-အမြင်:P-n W-များ:P-part W-ကို:P-ppm W-သွတ်သွင်း:P-v W-လက်ခံ:P-v W-သုံးစွဲ:P-v W-လာ:P-part W-ကြ:P-part W-သည်:P-ppm W-။:P-punc
+W-ပဉ္စမ:P-adj W-အကြိမ်:P-n W-၁:P-num W-၊:P-punc W-ဩဂုတ်:P-n W-၊:P-punc W-၂ဝဝ၂:P-num W-၊:P-punc W-ရာပြည့်:P-n W-စာအုပ်တိုက်:P-n W-ထုတ်:P-v W-စာဆို:P-n W-တော်:P-part W-များ:P-part W-အတ္ထုပ္ပတ္တိ:P-n W-က:P-ppm W-ရွှေဥဒေါင်း:P-n W-၁၂၅၁:P-num W-၁၃၃၅:P-num W-အကြောင်း:P-n W-မောင်သုတ:P-n W-အမည်ခံ:P-v W-ဗိုလ်မှူးဘသောင်း:P-n W-မဟာ:P-adj W-ဝိဇ္ဇာ:P-n W-၊:P-punc W-ရွှေ:P-n W-တံဆိပ်:P-n W-ရ:P-v W-ဖခင်:P-n W-ဦးဧရာ:P-n W-သည်:P-ppm W-သီပေါ:P-n W-မင်း:P-n W-လက်ထက်:P-n W-တွင်:P-ppm W-လွှတ်တော်:P-n W-စာရေး:P-n W-အဖြစ်:P-n W-အမှုထမ်း:P-v W-ခဲ့:P-part W-ဖူး:P-part W-သည်:P-ppm W-။:P-punc
+W-အချို့:P-adj W-မွန်:P-n W-ကျောက်စာ:P-n W-တို့:P-part W-၌:P-ppm W-မကုဋ:P-n W-မင်း:P-n W-ဟု:P-part W-လည်း:P-part W-ခေါ်:P-v W-သည်:P-ppm W-။:P-punc
+```
+
