@@ -3,9 +3,9 @@ use warnings;
 use strict;
 use utf8;
 
-#last updated: 10 June 2017
-#written by Ye Kyaw Thu, AI Lab.,
-#Okayama Prefectural University, Japan
+# last updated: 10 June 2017
+# written by Ye Kyaw Thu, AI Lab.,
+# Okayama Prefectural University, Japan
 # How to run:
 # e.g. perl ./print-fngram-format.pl ./mypos-dver.1.0.txt > mypos.fngram-format
 
