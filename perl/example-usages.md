@@ -1981,7 +1981,7 @@ NULL Keini(ငါတို့)  tan(အတွက်)  chuan hemi(အဲဒီန
 NULL Saw hem rim chu chil a tiput(အသားကင်,အနံ့က,သရေယိုစရာ,ပဲ)  mang e .(။)
 ```
 
-51. [print-fngram-format.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-fngram-format.pl)  
+## 51. [print-fngram-format.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-fngram-format.pl)  
 
 SRILM toolkit ကို သုံးပြီးတော့ factored language model ဆောက်လို့ ရပါတယ်။ အဲဒီလိုမဆောက်ခင်မှာ training data နဲ့ test data အတွက် သတ်မှတ်ထားတဲ့ format ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။   
 
