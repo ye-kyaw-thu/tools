@@ -153,3 +153,5 @@
 50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
     (GIZA++ နဲ့ source, target စာကြောင်းတွေကို alignment လုပ်ပြီးတဲ့အခါ ထွက်လာတဲ့ src-trg.A3.final.gz ဖိုင်ကို လူအနေနဲ့ ကြည့်ရလွယ်အောင် format ချဖို့ရေးခဲ့တဲ့ perl script ပါ)
 
+51. [print-fngram-format.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-fngram-format.pl)  
+    (Factored language model ဆောက်ဖို့အတွက် format ပြောင်းပေးတဲ့ perl script ပါ)  
