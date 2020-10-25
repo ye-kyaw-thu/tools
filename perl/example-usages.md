@@ -1989,7 +1989,7 @@ SRILM toolkit ကို သုံးပြီးတော့ factored language m
 
 အရင်ဆုံး input လုပ်မယ့်ဖိုင်ကို cat command နဲ့ screen မှာကြည့်ကြရအောင်။   
 ```
-(base) ye@ykt-pro:/media/ye/project1/exp/factored-lm$ cat ./mypos-dver.1.0.txt.head 
+$ cat ./mypos-dver.1.0.txt.head 
 ယခု/n လ/n တွင်/ppm ပျားရည်/n နှင့်/conj ပျားဖယောင်း/n များ/part ကို/ppm စုဆောင်း/v ကြ/part သည်/ppm ဟု/part ခန့်မှန်း/v နိုင်/part သည်/ppm ။/punc
 အခန်းခ/n ထဲ/ppm မှာ/ppm ထည့်/v လိုက်/part ပါ/part ။/punc
 ဆရာကြီး/n ဦးစိန်/n ၏/ppm မြန်မာ/n အထက်တန်း/n ကျောင်း/n မှ/ppm ၉/num တန်း/n အောင်မြင်/v ခဲ့/part ပြီး/conj မင်းလှ/n မြို့/n နော်မံ/n ကျောင်း/n မှ/ppm အလယ်တန်း/n ဆရာ/n ဖြစ်/v အောင်မြင်/v ခဲ့/part ၏/ppm ။/punc
@@ -2004,7 +2004,7 @@ SRILM toolkit ကို သုံးပြီးတော့ factored language m
 
 Format ပြောင်းကြည့်ရအောင် ...  
 ```
-(base) ye@ykt-pro:/media/ye/project1/exp/factored-lm$ perl ./print-fngram-format.pl ./mypos-dver.1.0.txt.head 
+$ perl ./print-fngram-format.pl ./mypos-dver.1.0.txt.head 
 W-ယခု:P-n W-လ:P-n W-တွင်:P-ppm W-ပျားရည်:P-n W-နှင့်:P-conj W-ပျားဖယောင်း:P-n W-များ:P-part W-ကို:P-ppm W-စုဆောင်း:P-v W-ကြ:P-part W-သည်:P-ppm W-ဟု:P-part W-ခန့်မှန်း:P-v W-နိုင်:P-part W-သည်:P-ppm W-။:P-punc
 W-အခန်းခ:P-n W-ထဲ:P-ppm W-မှာ:P-ppm W-ထည့်:P-v W-လိုက်:P-part W-ပါ:P-part W-။:P-punc
 W-ဆရာကြီး:P-n W-ဦးစိန်:P-n W-၏:P-ppm W-မြန်မာ:P-n W-အထက်တန်း:P-n W-ကျောင်း:P-n W-မှ:P-ppm W-၉:P-num W-တန်း:P-n W-အောင်မြင်:P-v W-ခဲ့:P-part W-ပြီး:P-conj W-မင်းလှ:P-n W-မြို့:P-n W-နော်မံ:P-n W-ကျောင်း:P-n W-မှ:P-ppm W-အလယ်တန်း:P-n W-ဆရာ:P-n W-ဖြစ်:P-v W-အောင်မြင်:P-v W-ခဲ့:P-part W-၏:P-ppm W-။:P-punc
