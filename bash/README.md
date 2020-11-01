@@ -265,4 +265,9 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 86. [sylbreak-10fold-mt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-10fold-smt.sh)  
 (10 fold Statistical Machine Translation ကို syllable ဖြတ်ထားတဲ့ ဒေတာနဲ့ လုပ်ဖို့အတွက် ပြင်ဆင်စဉ်မှာ အသုံးပြုဖို့ ရေးခဲ့တဲ့ script တစ်ပုဒ်ပါ)  
 
+87. [syllable-break-multi-files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/syllable-break-multi-files.sh)  
+(ဖိုင် တစ်ဖိုင်ထက်မက syllable ဖြတ်တာကို ဥပမာ run ပြထားတာပါ။ bash scripting ရဲ့ $* ကိုလည်း ကျောင်းသားတွေ သိစေချင်လို့ သုံးပြထားတာလည်း ပါပါတယ်။)  
+
+
+
 
