@@ -1,8 +1,8 @@
 #!/usr/bin/env perl
 
 # default: printing sentences that contain emoji character
-# with "-r" option for printing sentences that do not contain emoji character
-# with "-c" option for cleaning emoji character
+# with "r" option for printing sentences that do not contain emoji character
+# with "c" option for cleaning emoji character
 # 
 # Ye Kyaw Thu, NICT, Kyoto, Japan
 #
