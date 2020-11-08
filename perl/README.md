@@ -157,5 +157,5 @@
     (Factored language model ဆောက်ဖို့အတွက် format ပြောင်းပေးတဲ့ perl script ပါ)  
     
 52. [print-myWordOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-myWordOnly.pl)  
-    (ALT Myanmar corpus ထဲကနေ မြန်မာစာလုံးတွေချည်းပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့)  
+    ([ALT Myanmar Corpus](https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/) ထဲကနေ မြန်မာစာလုံးတွေချည်းပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့)  
     
