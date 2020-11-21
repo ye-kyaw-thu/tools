@@ -152,6 +152,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 50. [gizaA3-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/gizaA3-4human.pl)  
 51. [print-fngram-format.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-fngram-format.pl)  
 52. [print-myWordOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-myWordOnly.pl)  
+53. [fastalign-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fastalign-4human.pl)  
 
 # Python
 
