@@ -2019,7 +2019,7 @@ W-အချို့:P-adj W-မွန်:P-n W-ကျောက်စာ:P-n W-�
 
 ## 52. [print-myWordOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-myWordOnly.pl)  
 
-ဒီ perl script က ကျွန်တော်နဲ့ဒေါက်တာ Utiyama-san တို့ဦးဆောင်ပြီး UCSY ရဲ့ collaboration နဲ့အတူ develop လုပ်ခဲ့ကြတဲ့ NICT, Japan ရဲ့ [ALT Myanmar Corpus](https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/) ထဲက ကနေ မြန်မာစာ စာလုံးတွေကိုပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တာပါ။  
+ဒီ perl script က ကျွန်တော်နဲ့ဒေါက်တာUtiyama-san တို့ဦးဆောင်ပြီး UCSY ရဲ့ collaboration နဲ့အတူ develop လုပ်ခဲ့ကြတဲ့ NICT, Japan ရဲ့ [ALT Myanmar Corpus](https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/) ထဲကနေ မြန်မာစာ စာလုံးတွေကိုပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တာပါ။  
 
 ပထမဆုံး ALT Myanmar corpus ရဲ့ ထိပ်ဆုံး စာကြောင်း ၁၀ကြောင်းကိုပဲ print ထုတ်ကြည့်ကြရအောင်။  
 ```
@@ -2059,6 +2059,11 @@ $ head ./data.myword
 
 ## 53. [fastalign-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fastalign-4human.pl)  
 
+fast_align နဲ့ alignment လုပ်မယ်ဆိုရင် input ဖိုင် format က အောက်ပါအတိုင်းပါ။  
+source sentence<space>|||<space>target sentence  
+
+ဥပမာပြဖို့ ပြင်ထားတဲ့ train.myrk.5 ဖိုင်လိုမျိုးပါ။  
+
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/syl/alignment/rk-my-fastalign/script4human$ cat ./train.myrk.5
 မင်း အဲ့ ဒါ ကို အ ခြား တစ် ခု နဲ့ မ ချိတ် ဘူး လား ။ ||| မင်း ယင်း ချင့် ကို အ ခြား တစ် ခု နန့် မ ချိတ် ပါ လား ။
@@ -2073,6 +2078,9 @@ $ head ./data.myword
 နာ ဆာ မှ ဒုံး ပျံ စ တက် တာ နဲ့ သူ မှတ် တမ်း ရေး ခဲ့ တယ် ။ ||| နာ ဆာ မှ ဒုံး ပျံ စ တက် စွာ နန့် သူ မှတ် တမ်း ရွီး ခ ရေ ။
 ```
 
+fast_align tool နဲ့ forward align, reverse align လုပ်ပြီးတဲ့နောက်ဆုံး ထွက်လာတဲ့ grow-diag-final-and ကိုပဲ ဥပမာပြဖို့သုံးထားပါတယ်။  
+output format က အောက်ပါအတိုင်းပါ။ အဲဒီ format ကနေ source-target စာလုံးတွေနဲ့ အစားထိုးပြီးကြည့်တာက ငါတို့အတွက် အဆင်ပြေလို့ .... fastalign-4human.pl ကို ရေးခဲ့တယ်။  
+
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/syl/alignment/rk-my-fastalign/script4human$ cat ./train.myrk.fast_align.5 
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 10-10 11-11 12-12 13-13
@@ -2086,6 +2094,9 @@ $ head ./data.myword
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 10-10 11-11 12-12 13-13 14-14 15-15 16-16 18-17 19-18
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9 10-10 11-11 12-12 13-13 14-14 15-15
 ```
+
+run မယ်ဆိုရင် fast_align ကနေထွက်လာတဲ့ alignment output ဖိုင်နဲ့ source-target တွဲထားတဲ့ဖိုင်ကို command line argument အဖြစ်ပေးပါ။  
+အောက်ပါ ဥပမာအနေနဲ့ run ပြထားသလို word-word format, syllable-syllable format စသည်ဖြင့် ကိုယ်ကဖြတ်ထားတဲ့ word segmentation unit ကို အခြေခံထားတဲ့ alignment unit pair တွေအနေနဲ့ output လုပ်ပေးပါလိမ့်မယ်။  
 
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/syl/alignment/rk-my-fastalign/script4human$ perl ./fastalign-4human.pl ./train.myrk.fast_align.5 ./train.myrk.5
