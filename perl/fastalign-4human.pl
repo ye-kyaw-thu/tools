@@ -4,8 +4,6 @@
 # Ye Kyaw Thu, LST, NECTEC, Thailand
 # Date: 20 Nov 2020
 #
-# e.g. $ perl fastalign-4human.pl <aligned-fastaling-output-filename> <input-source-target-parallel-filename>
-#
 # Example input file formats for your reference:
 # 1) <aligned-fastaling-output-filename>
 # $ head -3 train.myrk.fast_align 
@@ -18,6 +16,10 @@
 # မင်း အဲ့ ဒါ ကို အ ခြား တစ် ခု နဲ့ မ ချိတ် ဘူး လား ။ ||| မင်း ယင်း ချင့် ကို အ ခြား တစ် ခု နန့် မ ချိတ် ပါ လား ။
 # သူ မ ဘယ် သူ့ ကို မှ မ မှတ် မိ တော့ ဘူး ။ ||| ထို မ ချေ တစ် ယောက် လေ့ မ မှတ် မိ ပါ ယာ ။
 # အဲ့ ဒါ ကျွန် တော် တို့ အ တွက် ခက် ခဲ တယ် ။ ||| ယင်း ချင့် ကျွန် တော် ရို့ အ တွက် ခက် ခ ရေ ။
+#
+# How to run:
+# $ perl fastalign-4human.pl <aligned-fastaling-output-filename> <input-source-target-parallel-filename>
+# e.g. $ perl ./fastalign-4human.pl ./train.myrk.fast_align ./train.myrk
 
 use strict;
 use warnings;
