@@ -159,3 +159,7 @@
 52. [print-myWordOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-myWordOnly.pl)  
     ([ALT Myanmar Corpus](https://www2.nict.go.jp/astrec-att/member/mutiyama/ALT/) ထဲကနေ မြန်မာစာလုံးတွေချည်းပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့)  
     
+53. [fastalign-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fastalign-4human.pl)  
+    ([fast_align](https://github.com/clab/fast_align) နဲ့ alignment လုပ်ပြီးထွက်လာတဲ့ ဂဏန်းတွေနဲ့ ပြပေးတဲ့ output ဖိုင်ကို လူကဖတ်ဖို့ စာလုံးတွေနဲ့အစားထိုး      ပေးမယ့် perl script ပါ)  
+    
+    
