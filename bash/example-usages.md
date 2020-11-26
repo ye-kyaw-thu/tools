@@ -4251,11 +4251,13 @@ head newg3.syl.clean
 
 Machine translation လုပ်ကြတဲ့အခါမှာ ဘာသာစကားတစ်ခုကနေ တခြားဘာသာစကားတစ်ခုကို ဘာသာပြန်ပေးတဲ့ရလဒ်တွေ ကောင်းဖို့အတွက်က နည်းမျိုးစုံနဲ့ experiment အမျိုးမျိုးလုပ်ကြရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ alignment ကိုပိုကောင်းအောင် alignment technique အမျိုးမျိုးနဲ့ ပြောင်းလုပ်ကြည့်ကြတာပါ။ [fast_align](https://github.com/clab/fast_align) ဆိုတဲ့ alignment toolkit ကလည်း နာမည်ကြီးတဲ့ toolkit တစ်ခုပါ။ အခု မိတ်ဆက်ပေးမယ့် build-fastalign-pt.sh က fast_align tool ကို သုံးပြီးတော့ ထွက်လာတဲ့ word-to-word aligned output ဖိုင်ကနေ machine translation မှာသုံးတဲ့ phrase table (phrase level အဘိဓာန်လို့ အကြမ်းမျဉ်း နားလည်ပါ) တစ်ခုအဖြစ်ဆောက်ဖို့အတွက် ရေးထားတဲ့ shell script တစ်ပုဒ်ပါ။  
 
+ဒီမို phrase table ဆောက်ပြမယ့် ဖိုလ်ဒါအောက်မှာတော့ အောက်ပါဖိုင်တွေကို ပြင်ထားပါတယ်။  
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ ls
 train.my  train.myrk.pipe.forward.align  train.myrk.pipe.reverse.align  train.rk
 ```
 
+train.my ဖိုင်ကတော့ ဗမာစာကြောင်းတွေကို တစ်ကြောင်းချင်း သိမ်းထားတဲ့ဖိုင်ပါ။  
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.my
 မင်း အဲ့ဒါ ကို အခြား တစ်ခုနဲ့ မ ချိတ် ဘူးလား ။
@@ -4270,6 +4272,7 @@ train.my  train.myrk.pipe.forward.align  train.myrk.pipe.reverse.align  train.rk
 နာဆာ မှ ဒုံးပျံ စတက်တာ နဲ့ သူ မှတ်တမ်း ရေး ခဲ့တယ် ။
 ```
 
+train.rk ဖိုင်ကတော့ စောစောက ဗမာစာကြောင်းတွေကို ဘာသာပြန်ထားတဲ့ ရခိုင်စာကြောင်းတွေပါ။  
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.rk
 မင်း ယင်းချင့် ကို အခြား တစ်ခုနန့်  မ ချိတ် ပါလား ။
@@ -4284,6 +4287,7 @@ train.my  train.myrk.pipe.forward.align  train.myrk.pipe.reverse.align  train.rk
 နာဆာ မှ ဒုံးပျံ စတက်စွာ နန့် သူ မှတ်တမ်း ရွီး ခရေ ။
 ```
 
+train.myrk.pipe.forward.align ကတော့ forward alignment လုပ်ထားတဲ့ ဖိုင်ပါ။  
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.myrk.pipe.forward.align 
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8
@@ -4298,6 +4302,7 @@ train.my  train.myrk.pipe.forward.align  train.myrk.pipe.reverse.align  train.rk
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9
 ```
 
+train.myrk.pipe.reverse.align ဖိုင်ကတော့ reverse alignment လုပ်ထားတဲ့ ဖိုင်ပါ။  
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.myrk.pipe.reverse.align 
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8
@@ -4312,6 +4317,7 @@ train.my  train.myrk.pipe.forward.align  train.myrk.pipe.reverse.align  train.rk
 0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9
 ```
 
+/build-fastalign-pt.sh ကို run မယ်ဆိုရင်တော့ source, target ဘာသာစကားတွေရဲ့ extension နှစ်ခုကို command line argument အနေနဲ့ပေးရပါတယ်။ run လို့ ဘာ error မှမရှိရင်တော့ အောက်ပါလိုမျိုး screen output လုပ်ပေးပါလိမ့်မယ်။  
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ time ./build-fastalign-pt.sh my rk
 symal: computing grow alignment: diagonal (1) final (1)both-uncovered (1)
@@ -4422,5 +4428,4 @@ real	0m25.865s
 user	0m31.767s
 sys	0m1.282s
 ```
-
 
