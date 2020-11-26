@@ -1,6 +1,9 @@
 #!/bin/bash
 
 # for building phrase table by using fast_align aligned output
+# Note: For running this script, you need moses toolkit
+# Update moses path before you run this script
+#
 # Date: 25 Nov 2020
 # ./build-fastalign-pt.sh my bk
 # ./build-fastalign-pt.sh my rk
