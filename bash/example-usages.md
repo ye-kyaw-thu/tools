@@ -4249,5 +4249,178 @@ head newg3.syl.clean
 
 ## 88. [build-fastalign-pt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/build-fastalign-pt.sh)  
 
-Machine translation လုပ်ကြတဲ့အခါမှာ ဘာသာစကားတစ်ခုကနေ ဘာသာစကားတစ်ခုကို ဘာသာပြန်ပေးတဲ့ရလဒ်တွေ ကောင်းဖို့အတွက်က နည်းမျိုးစုံနဲ့ experiment အမျိုးမျိုးလုပ်ကြရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ alignment ကိုပိုကောင်းအောင် alignment technique အမျိုးမျိုးနဲ့ ပြောင်းလုပ်ကြည့်ကြတာပါ။ [fast_align](https://github.com/clab/fast_align) ဆိုတဲ့ alignment toolkit ကလည်း နားမည်ကြီးတဲ့ toolkit တစ်ခုပါ။ အခု မိတ်ဆက်ပေးမယ့် build-fastalign-pt.sh က fast_align tool ကို သုံးပြီးတော့ ထွက်လာတဲ့ word-to-word aligned output ဖိုင်ကနေ machine translation မှာသုံးတဲ့ phrase table (phrase level အဘိဓာန်လို့ အကြမ်းမျဉ်း နားလည်ပါ) တစ်ခုအဖြစ်ဆောက်ဖို့အတွက် ရေးထားတဲ့ shell script တစ်ပုဒ်ပါ။  
+Machine translation လုပ်ကြတဲ့အခါမှာ ဘာသာစကားတစ်ခုကနေ တခြားဘာသာစကားတစ်ခုကို ဘာသာပြန်ပေးတဲ့ရလဒ်တွေ ကောင်းဖို့အတွက်က နည်းမျိုးစုံနဲ့ experiment အမျိုးမျိုးလုပ်ကြရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ alignment ကိုပိုကောင်းအောင် alignment technique အမျိုးမျိုးနဲ့ ပြောင်းလုပ်ကြည့်ကြတာပါ။ [fast_align](https://github.com/clab/fast_align) ဆိုတဲ့ alignment toolkit ကလည်း နာမည်ကြီးတဲ့ toolkit တစ်ခုပါ။ အခု မိတ်ဆက်ပေးမယ့် build-fastalign-pt.sh က fast_align tool ကို သုံးပြီးတော့ ထွက်လာတဲ့ word-to-word aligned output ဖိုင်ကနေ machine translation မှာသုံးတဲ့ phrase table (phrase level အဘိဓာန်လို့ အကြမ်းမျဉ်း နားလည်ပါ) တစ်ခုအဖြစ်ဆောက်ဖို့အတွက် ရေးထားတဲ့ shell script တစ်ပုဒ်ပါ။  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ ls
+train.my  train.myrk.pipe.forward.align  train.myrk.pipe.reverse.align  train.rk
+```
+
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.my
+မင်း အဲ့ဒါ ကို အခြား တစ်ခုနဲ့ မ ချိတ် ဘူးလား ။
+သူမ ဘယ်သူ့ကိုမှ မ မှတ်မိတော့ဘူး ။
+အဲ့ဒါ ကျွန်တော် တို့ အတွက် ခက်ခဲ တယ် ။
+ခင်ဗျား ပြောခဲ့ သလို ကျွန်တော် ရှင်းပြ ခဲ့တယ် ။
+သူ့ကို ထိန်းဖို့ မင်း ပဲ တတ်နိုင်တယ် ။
+အဲ့ဒါ ကို ကိုယ် တက်နင်း မိသွား လား ။
+ငါ စဉ်းစား သလို စဉ်းစားပါ ။
+အတင်းပြော ရတာ မုန်း တယ် ။
+နောက်ဆုံး တစ် ကြိမ် သူ့ကို ချစ်ပါတယ် လို့ ပြောခွင့်တောင် မ ရ တော့ဘူး ။
+နာဆာ မှ ဒုံးပျံ စတက်တာ နဲ့ သူ မှတ်တမ်း ရေး ခဲ့တယ် ။
+```
+
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.rk
+မင်း ယင်းချင့် ကို အခြား တစ်ခုနန့်  မ ချိတ် ပါလား ။
+ထိုမချေ   တစ်ယောက်လေ့  မ မှတ်မိပါယာ ။
+ယင်းချင့် ကျွန်တော်  ရို့ အတွက် ခက်ခ ရေ ။
+မင်း ပြောခ ရေပိုင် ကျွန်တော် ယှင်းပြ ခရေ ။
+သူ့ကို ထိန်းဖို့ မင်း ရာ တတ်နိုင်ရေ ။
+ယင်းချင့် ကို ငါ တက်နင်း မိလား လာ ။
+ငါ စဉ်းစား ရေပိုင် စဉ်းစားပါ ။
+အတင်းပြော ရစွာ မုန်း ရေ ။
+နောက်ဆုံး တစ် ကြိမ် သူ့ကို ချစ်ပါရေ လို့ ပြောခွင့် တောင် မ ရ ပါ။
+နာဆာ မှ ဒုံးပျံ စတက်စွာ နန့် သူ မှတ်တမ်း ရွီး ခရေ ။
+```
+
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.myrk.pipe.forward.align 
+0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8
+0-0 1-1 2-2 3-3 4-4
+0-0 1-1 2-2 3-3 4-4 5-5 6-6
+0-0 1-1 2-2 3-3 4-4 5-5 6-6
+0-0 1-1 2-2 3-3 4-4 5-5
+0-0 1-1 2-2 3-3 4-4 5-5 6-6
+0-0 1-1 2-2 3-3 4-4
+0-0 1-1 2-2 3-3 4-4
+0-0 1-1 2-2 3-3 4-4 5-5 6-6 6-7 7-8 8-9 10-10
+0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9
+```
+
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ head train.myrk.pipe.reverse.align 
+0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8
+0-0 1-1 2-2 3-3 4-4
+0-0 1-1 2-2 3-3 4-4 5-5 6-6
+0-0 1-1 2-2 3-3 4-4 5-5 6-6
+0-0 1-1 2-2 3-3 4-4 5-5
+0-0 1-1 2-2 3-3 4-4 5-5 6-6
+0-0 1-1 2-2 3-3 4-4
+0-0 1-1 2-2 3-3 4-4
+0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-8 8-9 10-10
+0-0 1-1 2-2 3-3 4-4 5-5 6-6 7-7 8-8 9-9
+```
+
+```
+(base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo$ time ./build-fastalign-pt.sh my rk
+symal: computing grow alignment: diagonal (1) final (1)both-uncovered (1)
+Using SCRIPTS_ROOTDIR: /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts
+Use of uninitialized value $_EXTERNAL_BINDIR in concatenation (.) or string at /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/training/train-model.perl line 369.
+Use of uninitialized value $_EXTERNAL_BINDIR in concatenation (.) or string at /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/training/train-model.perl line 370.
+using gzip 
+(4) generate lexical translation table 0-0 @ Thu Nov 26 16:04:29 +0630 2020
+(/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.my,/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.rk,/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex)
+FILE: /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.rk
+FILE: /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.my
+FILE: /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/aligned.grow-diag-final-and
+!!!!!!!!!!!!!!!!!
+Saved: /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.f2e and /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.e2f
+(5) extract phrases @ Thu Nov 26 16:04:30 +0630 2020
+MAX 7 0 0
+/home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/generic/extract-parallel.perl 4 split "sort    " /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/extract /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.rk /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.my /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/aligned.grow-diag-final-and ./model/extract 7 --GZOutput 
+Executing: /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/generic/extract-parallel.perl 4 split "sort    " /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/extract /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.rk /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.my /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/aligned.grow-diag-final-and ./model/extract 7 --GZOutput 
+Started Thu Nov 26 16:04:30 2020
+using gzip 
+isBSDSplit=0 
+Executing: mkdir -p ./model/tmp.26441; ls -l ./model/tmp.26441 
+total=16561 line-per-split=4141 
+split -d -l 4141 -a 7 /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.my ./model/tmp.26441/source.split -d -l 4141 -a 7 /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/train.rk ./model/tmp.26441/target.split -d -l 4141 -a 7 /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/aligned.grow-diag-final-and ./model/tmp.26441/align.PhraseExtract v1.5, written by Philipp Koehn et al.PhraseExtract v1.5, written by Philipp Koehn et al.PhraseExtract v1.5, written by Philipp Koehn et al.
+
+phrase extraction from an aligned parallel corpusphrase extraction from an aligned parallel corpus
+
+
+phrase extraction from an aligned parallel corpus
+PhraseExtract v1.5, written by Philipp Koehn et al.
+phrase extraction from an aligned parallel corpus
+.
+
+
+
+merging extract / extract.inv
+gunzip -c ./model/tmp.26441/extract.0000000.gz ./model/tmp.26441/extract.0000001.gz ./model/tmp.26441/extract.0000002.gz ./model/tmp.26441/extract.0000003.gz  | LC_ALL=C sort     -T ./model/tmp.26441 2>> /dev/stderr | gzip -c > ./model/extract.sorted.gz 2>> /dev/stderr 
+gunzip -c ./model/tmp.26441/extract.0000000.inv.gz ./model/tmp.26441/extract.0000001.inv.gz ./model/tmp.26441/extract.0000002.inv.gz ./model/tmp.26441/extract.0000003.inv.gz  | LC_ALL=C sort     -T ./model/tmp.26441 2>> /dev/stderr | gzip -c > ./model/extract.inv.sorted.gz 2>> /dev/stderr 
+Finished Thu Nov 26 16:04:35 2020
+(6) score phrases @ Thu Nov 26 16:04:35 +0630 2020
+(6.1)  creating table half ./model/phrase-table.half.f2e @ Thu Nov 26 16:04:35 +0630 2020
+/home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/generic/score-parallel.perl 4 "sort    " /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/score ./model/extract.sorted.gz /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.f2e ./model/phrase-table.half.f2e.gz  --GoodTuring  0 
+Executing: /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/generic/score-parallel.perl 4 "sort    " /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/score ./model/extract.sorted.gz /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.f2e ./model/phrase-table.half.f2e.gz  --GoodTuring  0 
+using gzip 
+Started Thu Nov 26 16:04:35 2020
+/home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/score ./model/tmp.26485/extract.0.gz /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.f2e ./model/tmp.26485/phrase-table.half.0000000.gz --GoodTuring  2>> /dev/stderr 
+./model/tmp.26485/run.0.sh./model/tmp.26485/run.1.sh./model/tmp.26485/run.3.sh./model/tmp.26485/run.2.shScore v2.1 -- scoring methods for extracted rules
+adjusting phrase translation probabilities with Good Turing discounting
+Loading lexical translation table from /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.f2e
+....
+mv ./model/tmp.26485/phrase-table.half.0000000.gz ./model/phrase-table.half.f2e.gzrm -rf ./model/tmp.26485 
+Finished Thu Nov 26 16:04:42 2020
+(6.3)  creating table half ./model/phrase-table.half.e2f @ Thu Nov 26 16:04:42 +0630 2020
+/home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/generic/score-parallel.perl 4 "sort    " /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/score ./model/extract.inv.sorted.gz /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.e2f ./model/phrase-table.half.e2f.gz --Inverse  1 
+Executing: /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/generic/score-parallel.perl 4 "sort    " /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/score ./model/extract.inv.sorted.gz /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.e2f ./model/phrase-table.half.e2f.gz --Inverse  1 
+using gzip 
+Started Thu Nov 26 16:04:42 2020
+/home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/score ./model/tmp.26512/extract.0.gz /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.e2f ./model/tmp.26512/phrase-table.half.0000000.gz --Inverse  2>> /dev/stderr 
+./model/tmp.26512/run.0.sh./model/tmp.26512/run.1.sh./model/tmp.26512/run.2.sh./model/tmp.26512/run.3.shScore v2.1 -- scoring methods for extracted rules
+using inverse mode
+Loading lexical translation table from /media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-fastalign/demo/lex.e2f
+....
+gunzip -c ./model/tmp.26512/phrase-table.half.*.gz 2>> /dev/stderr| LC_ALL=C sort     -T ./model/tmp.26512  | gzip -c > ./model/phrase-table.half.e2f.gz  2>> /dev/stderr rm -rf ./model/tmp.26512 
+Finished Thu Nov 26 16:04:50 2020
+(6.6) consolidating the two halves @ Thu Nov 26 16:04:50 +0630 2020
+Executing: /home/ye/tool/moses-bin/ubuntu-17.04/moses/scripts/../bin/consolidate ./model/phrase-table.half.f2e.gz ./model/phrase-table.half.e2f.gz /dev/stdout --GoodTuring ./model/phrase-table.half.f2e.gz.coc | gzip -c > ./model/phrase-table.gz
+Consolidate v2.0 written by Philipp Koehn
+consolidating direct and indirect rule tables
+adjusting phrase translation probabilities with Good Turing discounting
+..
+Executing: rm -f ./model/phrase-table.half.*
+head ./model/extract.inv.sorted...
+" ||| " ||| 0-0
+" ||| " ||| 0-0
+" ||| " ||| 0-0
+" ||| " ||| 0-0
+" ငါ ||| " ငါ ||| 0-0 1-1
+" ငါ မ ||| " ငါ မ ||| 0-0 1-1 2-2
+" ငါ မ သိ ||| " ငါ မ သိ ||| 0-0 1-1 2-2 3-3
+" ငါ မ သိ ပါ " ||| " ငါ မ သိ ဘူး " ||| 0-0 1-1 2-2 3-3 4-4 5-5
+" ငါ မ သိ ပါ " လို့ ||| " ငါ မ သိ ဘူး " လို့ ||| 0-0 1-1 2-2 3-3 4-4 5-5 6-6
+" ငါ မ သိ ပါ ||| " ငါ မ သိ ဘူး ||| 0-0 1-1 2-2 3-3 4-4
+head ./model/extract.sorted...
+" ||| " ||| 0-0
+" ||| " ||| 0-0
+" ||| " ||| 0-0
+" ||| " ||| 0-0
+" ငါ ||| " ငါ ||| 0-0 1-1
+" ငါ မ ||| " ငါ မ ||| 0-0 1-1 2-2
+" ငါ မ သိ ||| " ငါ မ သိ ||| 0-0 1-1 2-2 3-3
+" ငါ မ သိ ဘူး " ||| " ငါ မ သိ ပါ " ||| 0-0 1-1 2-2 3-3 4-4 5-5
+" ငါ မ သိ ဘူး " လို့ ||| " ငါ မ သိ ပါ " လို့ ||| 0-0 1-1 2-2 3-3 4-4 5-5 6-6
+" ငါ မ သိ ဘူး ||| " ငါ မ သိ ပါ ||| 0-0 1-1 2-2 3-3 4-4
+head ./model/phrase-table...
+" ||| " ||| 0.680589 1 0.680589 1 ||| 0-0 ||| 4 4 4 ||| |||
+" ငါ ||| " ငါ ||| 0.136996 0.767717 0.136996 0.987342 ||| 0-0 1-1 ||| 1 1 1 ||| |||
+" ငါ မ ||| " ငါ မ ||| 0.136996 0.762754 0.136996 0.982454 ||| 0-0 1-1 2-2 ||| 1 1 1 ||| |||
+" ငါ မ သိ ||| " ငါ မ သိ ||| 0.136996 0.661168 0.136996 0.974838 ||| 0-0 1-1 2-2 3-3 ||| 1 1 1 ||| |||
+" ငါ မ သိ ဘူး " ||| " ငါ မ သိ ပါ " ||| 0.136996 0.304067 0.136996 0.909614 ||| 0-0 1-1 2-2 3-3 4-4 5-5 ||| 1 1 1 ||| |||
+" ငါ မ သိ ဘူး " လို့ ||| " ငါ မ သိ ပါ " လို့ ||| 0.136996 0.287631 0.136996 0.869484 ||| 0-0 1-1 2-2 3-3 4-4 5-5 6-6 ||| 1 1 1 ||| |||
+" ငါ မ သိ ဘူး ||| " ငါ မ သိ ပါ ||| 0.136996 0.304067 0.136996 0.909614 ||| 0-0 1-1 2-2 3-3 4-4 ||| 1 1 1 ||| |||
+" လို့ ||| " လို့ ||| 0.136996 0.945946 0.136996 0.955882 ||| 0-0 1-1 ||| 1 1 1 ||| |||
+" လို့ ပြန်ဖြေပါ ||| " လို့ ပြန်ဖြေပါ ||| 0.136996 0.945946 0.136996 0.955882 ||| 0-0 1-1 2-2 ||| 1 1 1 ||| |||
+" လို့ ပြန်ဖြေပါ ။ ||| " လို့ ပြန်ဖြေပါ ။ ||| 0.136996 0.942099 0.136996 0.93852 ||| 0-0 1-1 2-2 3-3 ||| 1 1 1 ||| |||
+./build-fastalign-pt.sh: line 35: ./split-srctrg.sh: No such file or directory
+
+real	0m25.865s
+user	0m31.767s
+sys	0m1.282s
+```
+
 
