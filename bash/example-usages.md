@@ -4246,3 +4246,8 @@ head newg3.syl.clean
 ကျွန်ုပ် ၏ အိမ် နှင့် အိမ် မွေး တိ ရစ္ဆာန် များ
 =====
 ```
+
+## 88. [build-fastalign-pt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/build-fastalign-pt.sh)  
+
+Machine translation လုပ်ကြတဲ့အခါမှာ ဘာသာစကားတစ်ခုကနေ ဘာသာစကားတစ်ခုကို ဘာသာပြန်ပေးတဲ့ရလဒ်တွေ ကောင်းဖို့အတွက်က နည်းမျိုးစုံနဲ့ experiment အမျိုးမျိုးလုပ်ကြရပါတယ်။ အဲဒီအထဲက တစ်ခုကတော့ alignment ကိုပိုကောင်းအောင် alignment technique အမျိုးမျိုးနဲ့ ပြောင်းလုပ်ကြည့်ကြတာပါ။ [fast_align](https://github.com/clab/fast_align) ဆိုတဲ့ alignment toolkit ကလည်း နားမည်ကြီးတဲ့ toolkit တစ်ခုပါ။ အခု မိတ်ဆက်ပေးမယ့် build-fastalign-pt.sh က fast_align tool ကို သုံးပြီးတော့ ထွက်လာတဲ့ word-to-word aligned output ဖိုင်ကနေ machine translation မှာသုံးတဲ့ phrase table (phrase level အဘိဓာန်လို့ အကြမ်းမျဉ်း နားလည်ပါ) တစ်ခုအဖြစ်ဆောက်ဖို့အတွက် ရေးထားတဲ့ shell script တစ်ပုဒ်ပါ။  
+
