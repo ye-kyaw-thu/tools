@@ -8,6 +8,8 @@
 # ref: https://github.com/bitextor/bicleaner/issues/17
 # ref: https://moses-support.mit.narkive.com/x2BdfPvc/reusing-alignments-for-10-9-fr-en-and-using-fast-align
 # ref: https://gist.github.com/noisychannel/302c2f58f57b92290f2f
+# ref: http://www.statmt.org/moses/
+# ref: https://github.com/clab/fast_align
 #
 # How to run: ./build-fastalign-pt.sh <source-extension> <target-extension>
 # for Myanmar-Rakhine
