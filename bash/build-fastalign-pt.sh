@@ -4,10 +4,16 @@
 # Note: For running this script, you need moses toolkit
 # Update moses path before you run this script
 # Written by Ye Kyaw Thu, LST, NECTEC, Thailand
-#
 # Date: 25 Nov 2020
-# ./build-fastalign-pt.sh my bk
+# ref: https://github.com/bitextor/bicleaner/issues/17
+# ref: https://moses-support.mit.narkive.com/x2BdfPvc/reusing-alignments-for-10-9-fr-en-and-using-fast-align
+# ref: https://gist.github.com/noisychannel/302c2f58f57b92290f2f
+#
+# How to run: ./build-fastalign-pt.sh <source-extension> <target-extension>
+# for Myanmar-Rakhine
 # ./build-fastalign-pt.sh my rk
+# for Rakhine-Myanmar
+# ./build-fastalign-pt.sh rk my
 
 SRC=$1
 TRG=$2
@@ -34,8 +40,4 @@ head ./model/extract.sorted;
 
 echo "head ./model/phrase-table...";
 head ./model/phrase-table;
-
-# splitting source and target for running WFST MT
-./split-srctrg.sh ./model/phrase-table $SRC $TRG
-
 
