@@ -268,6 +268,9 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 87. [syllable-break-multi-files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/syllable-break-multi-files.sh)  
 (ဖိုင် တစ်ဖိုင်ထက်မက syllable ဖြတ်တာကို ဥပမာ run ပြထားတာပါ။ bash scripting ရဲ့ $* ကိုလည်း ကျောင်းသားတွေ သိစေချင်လို့ သုံးပြထားတာလည်း ပါပါတယ်။)  
 
+88. [build-fastalign-pt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/build-fastalign-pt.sh)  
+([fast_align](https://github.com/clab/fast_align) နဲ့ parallel data ကို alignment လုပ်ပြီးထွက်လာတဲ့ alignment output ကနေ phrase-table ဆောက်ဖို့အတွက် သုံးခဲ့တဲ့ shell script ပါ။ ဒီ script ကို သုံးမယ်ဆိုရင် [moses](http://www.statmt.org/moses/) ရဲ့ running script တွေက ကိုယ့်စက်ထဲမှာ ရှိနေမှ ရပါမယ်)  
+
 
 
 
