@@ -3635,7 +3635,7 @@ command ကတော့ အောက်ပါအတိုင်းပေးပ�
 ```
 
 <p align="center"> ဆိုတဲ့ ခေါင်းစဉ်နဲ့ 
-<img src="https://github.com/ye-kyaw-thu/tools/blo, မန္တလေးb/master/bash/pic/col_hist.png" alt="converted histogram picture file" />
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/col_hist.png" alt="converted histogram picture file" />
 </p>
 <p align="center"> Fig. Converted histogram file </p> 
 
