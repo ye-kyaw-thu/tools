@@ -4470,3 +4470,10 @@ fingernail-asl.png  fist-bsl.png   knuckles-asl.png  middle-bsl.png   palm-bsl.p
 fingernail-bsl.png  index-asl.png  knuckles-bsl.png  montage_asl.png  pinky-asl.png  ring-bsl.png   wrist-asl.png
 fist-asl.png        index-bsl.png  middle-asl.png    palm-asl.png     pinky-bsl.png  thumb-asl.png  wrist-bsl.png
 ```
+ပုတွေကိုတော့ တစ်ပုံချင်းစီ မပြတော့ပဲ ASL, BSL fingerspelling မတူတာကိုလည်း နှိုင်းယှဉ်ကြည့်လို့ ရအောင် montage command နဲ့ ဘေးချင်းကပ် နှစ်ပုံချင်းစီ စီပြီးသိမ်းထားတဲ့ ပုံအကြီးတစ်ပုံကိုပဲ လေ့လာနိုင်အောင် တင်ပေးထားလိုက်ပါတယ်။ ပုံတစ်ပုံချင်းစီရဲ့ အောက်မှာလည်း ဖိုင်နာမည်နဲ့ ပုံရဲ့ အရွယ်အစား width နဲ့ height တွေကိုလည်း လေဘယ်ထိုးပေးထားပါတယ်။ အောက်ပါအတိုင်းပါ ...   
+	
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/montage_asl.png" alt="input png file for English language" />
+</p>
+<p align="center"> Fig. ASL vs BSL fingerspelling output png files for English words </p>  
+
