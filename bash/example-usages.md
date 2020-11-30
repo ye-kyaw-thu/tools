@@ -4429,3 +4429,33 @@ user	0m31.767s
 sys	0m1.282s
 ```
 
+## 89. [txt2ASL-BSL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2ASL-BSL.sh)  
+
+ကျွန်တော့်ရဲ့ ဒေါက်တာတန်းကျောင်းသူ တစ်ဦးဖြစ်တဲ့ မနီထွေးအောင် (YTU) ရဲ့ experiment တစ်ခုအတွက် ရှေ့မှာရေးခဲ့တဲ့ shell script နံပါတ် 83. [txt2png.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2png.sh) ကို fingerspelling font နှစ်မျိုးနဲ့ ပြောင်းပြီး update လုပ်ထားတဲ့ ပရိုဂရမ်ပါ။ ASL (American Sign Language) နဲ့ BSL (British Sign Language) တို့ရဲ့ fingerspelling တွေက မတူကြပါဘူး။ ASL က A, B, C, D အစရှိတဲ့ အင်္ဂလိပ်စာ စာလုံးတွေကို လက်တဖက်တည်းပြပြီးတော့၊ BSL ကတော့ လက်နှစ်ဖက်နဲ့ ပြတာဖြစ်ပါတယ်။ အဲဒါကြောင့်မို့လို့ ဖောင့်နှစ်မျိုးကိုသုံးထားတာဖြစ်ပါတယ်။  
+
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/txt2img$ cat ./head.out 
+thumb
+index
+middle
+ring
+pinky
+fingernail
+knuckles
+wrist
+palm
+fist
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/txt2img$ ./txt2ASL-BSL.sh ./head.out 
+txt2ASL-BSL conversion for line no. 1 : thumb
+txt2ASL-BSL conversion for line no. 2 : index
+txt2ASL-BSL conversion for line no. 3 : middle
+txt2ASL-BSL conversion for line no. 4 : ring
+txt2ASL-BSL conversion for line no. 5 : pinky
+txt2ASL-BSL conversion for line no. 6 : fingernail
+txt2ASL-BSL conversion for line no. 7 : knuckles
+txt2ASL-BSL conversion for line no. 8 : wrist
+txt2ASL-BSL conversion for line no. 9 : palm
+txt2ASL-BSL conversion for line no. 10 : fist
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/txt2img$ ls *.png
+fingernail-asl.png  fist-bsl.png   knuckles-asl.png  middle-bsl.png   palm-bsl.png   ring-asl.png   thumb-bsl.png
+fingernail-bsl.png  index-asl.png  knuckles-bsl.png  montage_asl.png  pinky-asl.png  ring-bsl.png   wrist-asl.png
+fist-asl.png        index-bsl.png  middle-asl.png    palm-asl.png     pinky-bsl.png  thumb-asl.png  wrist-bsl.png
