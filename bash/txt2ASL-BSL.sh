@@ -23,7 +23,7 @@ while read line; do
 
 done < $filename
 
-# tiling images with labels
+# tiling output images with labels
 montage thumb-asl.png thumb-bsl.png index-asl.png index-bsl.png middle-asl.png middle-bsl.png \
 ring-asl.png ring-bsl.png pinky-asl.png pinky-bsl.png fingernail-asl.png  fingernail-bsl.png \
 knuckles-asl.png knuckles-bsl.png wrist-asl.png wrist-bsl.png palm-asl.png palm-bsl.png  \
