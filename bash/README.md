@@ -271,6 +271,8 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 88. [build-fastalign-pt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/build-fastalign-pt.sh)  
 ([fast_align](https://github.com/clab/fast_align) နဲ့ parallel data ကို alignment လုပ်ပြီးထွက်လာတဲ့ alignment output ကနေ phrase-table ဆောက်ဖို့အတွက် သုံးခဲ့တဲ့ shell script ပါ။ ဒီ script ကို သုံးမယ်ဆိုရင် [moses](http://www.statmt.org/moses/) ရဲ့ running script တွေက ကိုယ့်စက်ထဲမှာ ရှိနေမှ ရပါမယ်)  
 
+89. [txt2ASL-BSL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2ASL-BSL.sh)  
+(အင်္ဂလိပ်စာလုံး၊ စာကြောင်းတွေကနေ American Sign Language နဲ့ British Sign Language ရဲ့ fingerspelling ပုံတွေအဖြစ် ပြောင်းဖို့အတွက်ရေးခဲ့တဲ့ shell script တစ်ပုဒ်ပါ။ ရှေ့က 83. txt2png.sh နဲ့ အတူတူပါပဲ font ပြောင်းသုံးတာပါပဲ)  
 
 
 
