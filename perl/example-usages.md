@@ -2114,8 +2114,10 @@ run မယ်ဆိုရင် fast_align ကနေထွက်လာတဲ့ 
 
 ## I will uplad a new program soon
 
+
+ဆိုကြပါစို့ .... ကျွန်တော်တို့မှာ အဘိဓာန်တစ်ခုရှိတယ်။ format က အောက်ပါအတိုင်း။  
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ head mcfdict.f24.txt 
+$ head mcfdict.f24.txt 
 word,def
 A,ပထမအင်္ဂလိပ်အက္ခရာ
 A,မေဂျာ သံစဉ်တွင် ၆ ခုမြောက်အသံ
@@ -2128,8 +2130,15 @@ from A to B,တစ်နေရာမှ တစ်နေရာ
 from A to B,အစအဆုံး
 ```
 
+တစ်ခုရှိတာက အဲဒီထဲမှာ စာလုံး အရေအတွက်က တစ်သိန်းကျော်တောင် ရှိတာမို့ experiment တစ်ခုလုပ်ဖို့ အတွက် အဆင်ပြေမပြေကို ပထမဆုံး ဒေတာနည်းနည်းနဲ့ confirmation လုပ်ချင်တယ် test-run လုပ်ချင်တယ်ဆိုပါစို့ .... 
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ head wordlist.10000 
+$ wc ./mcfdict.f24.txt 
+ 109640  274583 7373759 ./mcfdict.f24.txt
+```
+
+Github မှာ တင်ထားတဲ့ အသုံးများတဲ့ အင်္ဂလိပ်စာ စာလုံး တစ်သောင်းဆိုတဲ့ဖိုင်က ရှိလို့ အဲဒီစာလုံးတွေကိုပဲ အထက်က အဘိဓာန်အကြီးဖြစ်တဲ့ mcfdict.f24.txt ထဲကနေ ဆွဲထုတ်တာကို လုပ်ကြည့်ကြရအောင်။   
+```
+$ head wordlist.10000 
 a
 aa
 aaa
@@ -2142,17 +2151,20 @@ abilities
 ability
 ```
 
+run ပုံ run နည်းကတော့ အောက်ပါအတိုင်းပါ။ search လုပ်မယ့်စာလုံးစာရင်းကို သိမ်းထားတဲ့ ဖိုင်နာမည်ကို 1st command line argument အနေနဲ့ ပေးပါ။ ပြီးတော့ ဝင်ရှာမယ့် အဘိဓာန်အကြီးရဲ့ ဖိုင်နာမည်ကိုတော့ 2nd command line argument အနေနဲ့ ပေးပြီး run ပါ။   
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ perl ./find-one-file-words-in-another.pl ./wordlist.10000 ./mcfdict.f24.txt > ./out
+$ perl ./find-one-file-words-in-another.pl ./wordlist.10000 ./mcfdict.f24.txt > ./out
 ```
 
+ဆွဲထုတ်ပြီး ထွက်လာတဲ့ စာလုံးတွေကို သိမ်းထားတဲ့ဖိုင်ဖြစ်တဲ့ out ဆိုတဲ့ ဖိုင်ကို wc command နဲ့ word counting လုပ်ကြည့်တော့ အောက်ပါအတိုင်း 4955 လုံး ရတာကို တွေ့ရတယ်။  
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ wc ./out
+$ wc ./out
   4955  13602 325362 ./out
 ```
 
+out ဖိုင်ထဲက စာကြောင်း ၁၀ကြောင်းလောက်ကို နမူနာအဖြစ် ကြည့်ကြရအောင်...   
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ head out
+$ head out
 a, ကပ္ပလီ
 abandoned, လွတ်[သော]
 ability, အရည်အချင်း
@@ -2165,8 +2177,9 @@ absent, စိတ်မပါသော
 absolute, ပရမတ်
 ```
 
+out ဖိုင်ရဲ့ နောက်ဆုံး အပိုင်းကိုလည်း တချက်ကြည့်ကြည့် ရအောင် ...  
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ tail out
+$ tail out
 yourself, မင်း (ကိုယ်တိုင်)
 youth, လူငယ်(ထု)
 z, နောက်ဆုံး အင်္ဂလိပ်အက္ခရာ
