@@ -161,5 +161,10 @@
     
 53. [fastalign-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fastalign-4human.pl)  
     ([fast_align](https://github.com/clab/fast_align) နဲ့ alignment လုပ်ပြီးထွက်လာတဲ့ ဂဏန်းတွေနဲ့ ပြပေးတဲ့ output ဖိုင်ကို လူကဖတ်ဖို့ စာလုံးတွေနဲ့အစားထိုး      ပေးမယ့် perl script ပါ)  
+
+54. [find-one-file-words-in-another.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/find-one-file-words-in-another.pl)  
+    (ရှာဖွေချင်တဲ့ စာလုံးတွေကို ဖိုင်တစ်ဖိုင်ထဲမှာ ထည့်ထားပြီးတော့ တခြားဖိုင်တစ်ဖိုင်ရဲ့စာကြောင်းတွေထဲက field-1 နဲ့ တိုက်စစ်ပြီး exact match ဖြစ်တဲ့စာကြောင်းတွေကိုပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။ လက်တွေ့မှာတော့ အဘိဓာန်အကြီးရဲ့စာလုံးတွေကို တခြားအဘိဓာန်အသေးတစ်ခုသုံးပြီး world filter လုပ်ဖို့အတွက် သုံးခဲ့တာ ဖြစ်ပါတယ်)  
+    
+    
     
     
