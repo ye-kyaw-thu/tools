@@ -155,6 +155,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 51. [print-fngram-format.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-fngram-format.pl)  
 52. [print-myWordOnly.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/print-myWordOnly.pl)  
 53. [fastalign-4human.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/fastalign-4human.pl)  
+54. [find-one-file-words-in-another.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/find-one-file-words-in-another.pl)  
 
 # Python
 
