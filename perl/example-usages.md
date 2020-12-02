@@ -2111,3 +2111,70 @@ run မယ်ဆိုရင် fast_align ကနေထွက်လာတဲ့ 
 -​ နောက်-နောက် ဆုံး-ဆုံး တစ်-တစ် ကြိမ်-ကြိမ် သူ့-သူ့ ကို-ကို ချစ်-ချစ် ပါ-ပါ တယ်-ရေ လို့-လို့ ပြော-ပြော ခွ-ခွ င့်-င့် တောင်-တောင် မ-မ ရ-ရ ဘူး-ပါ ။-။
 နာ-နာ ဆာ-ဆာ မှ-မှ ဒုံး-ဒုံး ပျံ-ပျံ စ-စ တက်-တက် တာ-စွာ နဲ့-နန့် သူ-သူ မှတ်-မှတ် တမ်း-တမ်း ရေး-ရွီး ခဲ့-ခ တယ်-ရေ ။-။
 ```
+
+## I will uplad a new program soon
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ head mcfdict.f24.txt 
+word,def
+A,ပထမအင်္ဂလိပ်အက္ခရာ
+A,မေဂျာ သံစဉ်တွင် ၆ ခုမြောက်အသံ
+A,ယင်း၏ သံပုံ
+A,သုံးပေါက်သံ
+A,ပညာရပ်တစ်ခုခု သင်ယူရာ၌ အမြင့်ဆုံးရနိုင်သော အဆင့် သတ်မှတ်ချက်
+A,ရွေးချယ်နိုင်သော လမ်းနှစ်သွယ်အနက် ပထမနည်းလမ်း
+A,အမည် မဖော်လိုသောသူ (သို့) စိတ်ကူးယဉ် အဖြစ်အပျက်ထဲကသူအား ရည်ညွှန်းချက်
+from A to B,တစ်နေရာမှ တစ်နေရာ
+from A to B,အစအဆုံး
+```
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ head wordlist.10000 
+a
+aa
+aaa
+aaron
+ab
+abandoned
+abc
+aberdeen
+abilities
+ability
+```
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ perl ./find-one-file-words-in-another.pl ./wordlist.10000 ./mcfdict.f24.txt > ./out
+```
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ wc ./out
+  4955  13602 325362 ./out
+```
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ head out
+a, ကပ္ပလီ
+abandoned, လွတ်[သော]
+ability, အရည်အချင်း
+aboriginal, (သြစတြေးလျ) ရှေးလူမျိုး
+abortion, ကိုယ်ဝန်ဖျက်ချ [ခြင်း]
+about, နေခိုက်တွင်
+above, အထက်ပါ
+abroad, အိမ်ပြင်
+absent, စိတ်မပါသော
+absolute, ပရမတ်
+```
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/paper/next-paper/IRCSE-2021/nie/dict-preparation/demo-code-y$ tail out
+yourself, မင်း (ကိုယ်တိုင်)
+youth, လူငယ်(ထု)
+z, နောက်ဆုံး အင်္ဂလိပ်အက္ခရာ
+zero, n
+zinc, သွပ်
+zip, အစွမ်း
+zone, နယ်မြေပိုင်းခြား သတ်မှတ်သည်
+zoning, (အသုံးပြုမည့် ကိစ္စကို တညဉ်) နယ်မြေ သတ်မှတ်ပေးသည်
+zoo, တိရစ္ဆာနဉ်ယျာဉ်
+zoom, ဝေါခနဲမြညဉ် ဖြတ်သွားသံ
+```
