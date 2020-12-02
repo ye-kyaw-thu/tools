@@ -2115,7 +2115,7 @@ run မယ်ဆိုရင် fast_align ကနေထွက်လာတဲ့ 
 ## I will uplad a new program soon
 
 
-ဆိုကြပါစို့ .... ကျွန်တော်တို့မှာ အဘိဓာန်တစ်ခုရှိတယ်။ format က အောက်ပါအတိုင်း။  
+ဆိုကြပါစို့ .... ကျွန်တော်တို့မှာ [အဘိဓာန်တစ်ခု](https://github.com/mcfnlp/Dictionary) ရှိတယ်။ format က အောက်ပါအတိုင်း။  
 ```
 $ head mcfdict.f24.txt 
 word,def
