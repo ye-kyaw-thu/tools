@@ -3,6 +3,7 @@
 # alignment training with mgiza
 # written by Ye, LST, NECTEC, Thailand
 # Date: 7 Dec 2020
+# Reference: https://hovinh.github.io/blog/2016-04-29-install-mgiza-ubuntu/
 # Note: You have to install mgiza before you use this shell script
 # Note: You also have to prepare parallel data and configuration file
 #
