@@ -274,5 +274,5 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 89. [txt2ASL-BSL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2ASL-BSL.sh)  
 (အင်္ဂလိပ်စာလုံး၊ စာကြောင်းတွေကနေ American Sign Language နဲ့ British Sign Language ရဲ့ fingerspelling ပုံတွေအဖြစ် ပြောင်းဖို့အတွက်ရေးခဲ့တဲ့ shell script တစ်ပုဒ်ပါ။ ရှေ့က 83. txt2png.sh နဲ့ အတူတူပါပဲ font ပြောင်းသုံးတာပါပဲ)  
 
-
-
+90. [mgiza-align.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mgiza-align.sh)  
+([mgiza](https://github.com/moses-smt/mgiza) ကလည်း နာမည်ကြီးတဲ့ word alignment tool တစ်ခုဖြစ်ပါတယ်။ သုံးပုံသုံးနည်းကို script ရေးပြထားတာ ဖြစ်ပါတယ်)  
