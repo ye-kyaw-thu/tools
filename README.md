@@ -99,6 +99,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 87. [syllable-break-multi-files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/syllable-break-multi-files.sh)  
 88. [build-fastalign-pt.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/build-fastalign-pt.sh)  
 89. [txt2ASL-BSL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2ASL-BSL.sh)  
+90. [mgiza-align.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mgiza-align.sh)  
 
 # perl
 
