@@ -4521,7 +4521,7 @@ $ head train.rk
 နာဆာ မှ ဒုံးပျံ စတက်စွာ နန့် သူ မှတ်တမ်း ရွီး ခရေ ။
 ```
 
-config.template ကတော့ အောက်ပါအတိုင်းပါ။  
+[config.template](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/config.template) ကတော့ အောက်ပါအတိုင်းပါ။  
 
 ```
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-giza$ cat config.template 
@@ -4627,6 +4627,111 @@ verbose 0
 verbosesentence -10
 ```
 
+mgiza နဲ့ alignment လုပ်ဖို့ command ပေးတဲ့အခါမှာ configuration ဖိုင်ရဲ့ နာမည်ကို command line argument အနေနဲ့ပေးပြီး run တဲ့ပုံစံနဲ့ run ပါတယ်။ အဲဒါကြောင့် mgiza-align.sh ကို run တဲ့အခါမှာ ပထမဆုံး config.template ကို source, target ဖိုင်နာမည်တွေနဲ့ ဝင်ပြင်ပြီး [config.update](https://github.com/ye-kyaw-thu/tools/blob/master/bash/test-data/config.update) ဆိုတဲ့ ဖိုင်နာမည်အသစ်နဲ့ သိမ်းပါတယ်။ ဘယ်နေရာတွေကို ဝင်ပြင်သွားတာလည်း ဆိုတာကို မြင်ရအောင်လည်း cat နဲ့ ရိုက်ပြပေးလိုက်ပါတယ်။   
+
+```
+$ cat config.update
+adbackoff 0
+compactadtable 1
+compactalignmentformat 0
+coocurrencefile train.my_train.rk.cooc
+corpusfile train.my_train.rk.snt
+countcutoff 1e-06
+countcutoffal 1e-05
+countincreasecutoff 1e-06
+countincreasecutoffal 1e-05
+countoutputprefix 
+d 
+deficientdistortionforemptyword 0
+depm4 76
+depm5 68
+dictionary 
+dopeggingyn 0
+dumpcount 0
+dumpcountusingwordstring 0
+emalignmentdependencies 2
+emalsmooth 0.2
+emprobforempty 0.4
+emsmoothhmm 2
+hmmdumpfrequency 0
+hmmiterations 5
+log 0
+logfile train.my_train.rk_mgiza.log
+m1 5
+m2 0
+m3 3
+m4 3
+m5 0
+m5p0 -1template
+m6 0
+manlexfactor1 0
+manlexfactor2 0
+manlexmaxmultiplicity 20
+maxfertility 10
+maxsentencelength 101
+mh 5
+mincountincrease 1e-07
+ml 101
+model1dumpfrequency 1
+model1iterations 5
+model23smoothfactor 0
+model2dumpfrequency 0
+model2iterations 0
+model345dumpfrequency 0
+model3dumpfrequency 0
+model3iterations 3
+model4iterations 3
+model4smoothfactor 0.4
+model5iterations 0
+model5smoothfactor 0.1
+model6iterations 0
+nbestalignments 0
+ncpus 4
+nodumps 1
+nofiledumpsyn 1
+noiterationsmodel1 5
+noiterationsmodel2 0
+noiterationsmodel3 3
+noiterationsmodel4 3
+noiterationsmodel5 0
+noiterationsmodel6 0
+nsmooth 4
+nsmoothgeneral 0
+numberofiterationsforhmmalignmentmodel 5
+onlyaldumps 1
+outputfileprefix train.my_train.rk.dict
+outputpath 
+p 0
+p0 0.999
+peggedcutoff 0.03
+pegging 0
+previousa 
+previousd 
+previousd4 
+previousd42 
+previoushmm 
+previousn 
+previousp0 
+previoust 
+probcutoff 1e-07
+probsmooth 1e-07
+readtableprefix 
+restart 0
+sourcevocabularyfile train.my.vcb
+t1 1
+t2 0
+t2to3 0
+t3 0
+t345 0
+targetvocabularyfile train.rk.vcb
+tc 
+testcorpusfile 
+th 0
+transferdumpfrequency 0
+v 0
+verbose 0
+verbosesentence -10
+```
 mgiza-align.sh ကိုသုံးပြီး မြန်မာစာနဲ့ ရခိုင် parallel data အကြား alignment လုပ်တာကို ဥပမာ လုပ်ပြထားပါတယ်။  
 
 ```
