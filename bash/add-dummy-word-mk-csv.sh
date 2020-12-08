@@ -7,8 +7,8 @@
 # Date: 8 Dec 2020
 # You need a cleaning script such as  skip-tag-err-lines.pl
 # That  "skip-tag-err-lines.pl" is similar to "chk-pos-tags.pl", I just modify skipping possible tagging error lines
-# How to run: ./add-dummy-word-mk-csv.sh <tagged corpus file-name>
-# $ ./add-dummy-word-mk-csv.sh raw.txt
+# How to run:
+# e.g. (base) ye@ykt-pro:/media/ye/Transcend/tool/minisom/examples/cho-zin-oo-data$ ./add-dummy-word-mk-csv.sh raw.txt
 
 CORPUS=$1;
 
@@ -39,6 +39,16 @@ echo "head $CORPUS.rmquote.dummy.clean":
 head $CORPUS.rmquote.dummy.clean
 echo
 
+# Make word/tag CSV file for building classification models
+echo "Make CSV file for building classification models";
+sed "s/^/\"/;s/ dummy\//\",/" $CORPUS.rmquote.dummy.clean > $CORPUS.rmquote.dummy.clean.csv;
+echo "head $CORPUS.rmquote.dummy.clean.tag.mcol.csv";
+head $CORPUS.rmquote.dummy.clean.csv;
+echo
+echo "wc $CORPUS.rmquote.dummy.clean.csv;";
+wc $CORPUS.rmquote.dummy.clean.csv;
+echo
+
 # Preparing tag only file
 echo "Preparing tag only file...";
 perl ./mk-wordtag.pl $CORPUS.rmquote.dummy.clean "\/" t > $CORPUS.rmquote.dummy.clean.tag;
@@ -46,7 +56,7 @@ echo "head $CORPUS.rmquote.dummy.clean.tag";
 head $CORPUS.rmquote.dummy.clean.tag
 echo
 
-# Make CSV file for building classification models
+# Make tag only CSV file for building classification models
 echo "Make CSV file for building classification models";
 sed "s/ /,/g" $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.mcol.csv;
 echo "head $CORPUS.rmquote.dummy.clean.tag.mcol.csv";
@@ -58,7 +68,7 @@ echo
 
 # Make another type of CSV file for building classification models
 
-echo "Make another CSV file for building classification models";
+echo "Make another tag only CSV file for building classification models";
 sed "s/^/\"/;s/ _/\",_/"  $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.csv;
 echo "head $CORPUS.rmquote.dummy.clean.tag.csv";
 head $CORPUS.rmquote.dummy.clean.tag.csv;
@@ -66,4 +76,3 @@ echo
 echo "wc $CORPUS.rmquote.dummy.clean.tag.csv;";
 wc $CORPUS.rmquote.dummy.clean.tag.csv;
 echo
-
