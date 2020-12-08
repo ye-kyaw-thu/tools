@@ -48,12 +48,22 @@ echo
 
 # Make CSV file for building classification models
 echo "Make CSV file for building classification models";
-sed "s/ /,/g" $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.csv;
+sed "s/ /,/g" $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.mcol.csv;
+echo "head $CORPUS.rmquote.dummy.clean.tag.mcol.csv";
+head $CORPUS.rmquote.dummy.clean.tag.mcol.csv;
+echo
+echo "wc $CORPUS.rmquote.dummy.clean.tag.mcol.csv;";
+wc $CORPUS.rmquote.dummy.clean.tag.mcol.csv;
+echo
+
+# Make another type of CSV file for building classification models
+
+echo "Make another CSV file for building classification models";
+sed "s/^/\"/;s/ _/\",/"  $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.csv;
 echo "head $CORPUS.rmquote.dummy.clean.tag.csv";
 head $CORPUS.rmquote.dummy.clean.tag.csv;
 echo
 echo "wc $CORPUS.rmquote.dummy.clean.tag.csv;";
 wc $CORPUS.rmquote.dummy.clean.tag.csv;
 echo
-
 
