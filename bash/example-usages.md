@@ -5557,3 +5557,95 @@ NULL ({ }) အဲ့ဒါ ({ 1 }) ကို ({ 2 }) ကိုယ် ({ 3 }) တ
 # Sentence pair (8) source length 5 target length 5 alignment score : 0.0609318
 အတင်းပြော ရစွာ မုန်း ရေ ။ 
 ```
+
+## 91. [add-dummy-word-mk-csv.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-dummy-word-mk-csv.sh)  
+
+Corpus တစ်ခုကို classificaiton model တွေ ဆောက်ဖို့အတွက် format တစ်ခုကနေ တခြား format တစ်ခုအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ အောက်ပါ run ထားတဲ့ ဥပမာကနေ လုပ်တဲ့အလုပ်ကို နားလည်လိမ့်မယ်လို့ ထင်ပါတယ်။ နားလည်လွယ်အောင် output တွေကိုလည်း အဆင့်ဆင့် print ထုတ်ပေးထားတာမို့ ...  
+
+run မယ်ဆိုရင် ./add-dummy-word-mk-csv.sh \<corpus filename\> ဆိုတဲ့ပုံစံနဲ့ run ယုံပါပဲ။  
+အောက်ပါဥပမာက raw.txt ဆိုတဲ့ corpus တစ်ခုကိုသုံးပြီး run လိုက်တဲ့အခါမှာ screen မှာ မြင်ရမယ့် output ဖြစ်ပါတယ်။  
+
+```
+(base) ye@ykt-pro:/media/ye/Transcend/tool/minisom/examples/cho-zin-oo-data$ ./add-dummy-word-mk-csv.sh raw.txt
+Information of raw.txt:
+wc raw.txt
+   7002   64418 1847864 raw.txt
+head raw.txt
+"သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel",__AgrK__
+"ကညွတ်/Veg ကို/nolabel ဘယ်လိုစိုက်/Gro ရင်/nolabel အထွက်တိုး/nolabel မလဲ/nolabel",__Gro__
+"ရော်ဘာ/IndRC ကိုင်းကူးနည်း/AgrK ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel လား/nolabel",__AgrK__
+နှင်းဆီ/Flo စိုက်နည်း/Gro လေး/nolabel ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel ဦး/nolabel",__Gro__
+"နီမတုတ်/BacD တွေ/nolabel ကြောင့်/nolabel ပဲတီစိမ်းပင်/Bea ရဲ့/nolabel အမြစ်/nolabel တွေ/nolabel ထိခိုက်/nolabel နိုင်/nolabel ပါ/nolabel သလား/nolabel",__BacD__
+"ကွမ်းသီး/Other စိုက်နည်း/Gro သိချင်/nolabel လို့/nolabel ပါ/nolabel",__Gro__
+"သရက်ပင်/Fru က/nolabel အရွက်အဖျားတွေကခြောက်နေ/BacD တယ်/nolabel ဘယ်လိုလုပ်/nolabel ရ/nolabel မလဲ့/nolabel ဆိုတာ/nolabel ကူညီပေး/nolabel ပါ/nolabel အုံး/nolabel",__BacD__
+"ငရုတ်ပင်/Veg အသီးကြွေပြီးအပင်ညှိုးနေ/BacD လို့/nolabel ဘာဆေး/nolabel ပက်/nolabel ရ/nolabel လဲ/nolabel",__BacD__
+"ကြက်မောက်/Fru မမှည့်ခင်/nolabel အလုံးကျွေ/BacD ကြနေ/nolabel တာ/nolabel ဘာကြောင့်လဲ/nolabel ဘာဆေး/nolabel  သုံး/nolabel ရ/nolabel မလဲ/nolabel",__PlaN__
+"စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel",__PlaN__
+
+Remove double quotes...
+head raw.txt.rmquote
+သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel,__AgrK__
+ကညွတ်/Veg ကို/nolabel ဘယ်လိုစိုက်/Gro ရင်/nolabel အထွက်တိုး/nolabel မလဲ/nolabel,__Gro__
+ရော်ဘာ/IndRC ကိုင်းကူးနည်း/AgrK ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel လား/nolabel,__AgrK__
+နှင်းဆီ/Flo စိုက်နည်း/Gro လေး/nolabel ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel ဦး/nolabel,__Gro__
+နီမတုတ်/BacD တွေ/nolabel ကြောင့်/nolabel ပဲတီစိမ်းပင်/Bea ရဲ့/nolabel အမြစ်/nolabel တွေ/nolabel ထိခိုက်/nolabel နိုင်/nolabel ပါ/nolabel သလား/nolabel,__BacD__
+ကွမ်းသီး/Other စိုက်နည်း/Gro သိချင်/nolabel လို့/nolabel ပါ/nolabel,__Gro__
+သရက်ပင်/Fru က/nolabel အရွက်အဖျားတွေကခြောက်နေ/BacD တယ်/nolabel ဘယ်လိုလုပ်/nolabel ရ/nolabel မလဲ့/nolabel ဆိုတာ/nolabel ကူညီပေး/nolabel ပါ/nolabel အုံး/nolabel,__BacD__
+ငရုတ်ပင်/Veg အသီးကြွေပြီးအပင်ညှိုးနေ/BacD လို့/nolabel ဘာဆေး/nolabel ပက်/nolabel ရ/nolabel လဲ/nolabel,__BacD__
+ကြက်မောက်/Fru မမှည့်ခင်/nolabel အလုံးကျွေ/BacD ကြနေ/nolabel တာ/nolabel ဘာကြောင့်လဲ/nolabel ဘာဆေး/nolabel  သုံး/nolabel ရ/nolabel မလဲ/nolabel,__PlaN__
+စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel,__PlaN__
+
+Add dummy word for the last labels...
+သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel dummy/__AgrK__
+ကညွတ်/Veg ကို/nolabel ဘယ်လိုစိုက်/Gro ရင်/nolabel အထွက်တိုး/nolabel မလဲ/nolabel dummy/__Gro__
+ရော်ဘာ/IndRC ကိုင်းကူးနည်း/AgrK ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel လား/nolabel dummy/__AgrK__
+နှင်းဆီ/Flo စိုက်နည်း/Gro လေး/nolabel ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel ဦး/nolabel dummy/__Gro__
+နီမတုတ်/BacD တွေ/nolabel ကြောင့်/nolabel ပဲတီစိမ်းပင်/Bea ရဲ့/nolabel အမြစ်/nolabel တွေ/nolabel ထိခိုက်/nolabel နိုင်/nolabel ပါ/nolabel သလား/nolabel dummy/__BacD__
+ကွမ်းသီး/Other စိုက်နည်း/Gro သိချင်/nolabel လို့/nolabel ပါ/nolabel dummy/__Gro__
+သရက်ပင်/Fru က/nolabel အရွက်အဖျားတွေကခြောက်နေ/BacD တယ်/nolabel ဘယ်လိုလုပ်/nolabel ရ/nolabel မလဲ့/nolabel ဆိုတာ/nolabel ကူညီပေး/nolabel ပါ/nolabel အုံး/nolabel dummy/__BacD__
+ငရုတ်ပင်/Veg အသီးကြွေပြီးအပင်ညှိုးနေ/BacD လို့/nolabel ဘာဆေး/nolabel ပက်/nolabel ရ/nolabel လဲ/nolabel dummy/__BacD__
+ကြက်မောက်/Fru မမှည့်ခင်/nolabel အလုံးကျွေ/BacD ကြနေ/nolabel တာ/nolabel ဘာကြောင့်လဲ/nolabel ဘာဆေး/nolabel  သုံး/nolabel ရ/nolabel မလဲ/nolabel dummy/__PlaN__
+စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel dummy/__PlaN__
+
+Remove manual tagging errors:
+head raw.txt.rmquote.dummy.clean:
+သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel dummy/__AgrK__
+ကညွတ်/Veg ကို/nolabel ဘယ်လိုစိုက်/Gro ရင်/nolabel အထွက်တိုး/nolabel မလဲ/nolabel dummy/__Gro__
+ရော်ဘာ/IndRC ကိုင်းကူးနည်း/AgrK ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel လား/nolabel dummy/__AgrK__
+နှင်းဆီ/Flo စိုက်နည်း/Gro လေး/nolabel ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel ဦး/nolabel dummy/__Gro__
+နီမတုတ်/BacD တွေ/nolabel ကြောင့်/nolabel ပဲတီစိမ်းပင်/Bea ရဲ့/nolabel အမြစ်/nolabel တွေ/nolabel ထိခိုက်/nolabel နိုင်/nolabel ပါ/nolabel သလား/nolabel dummy/__BacD__
+ကွမ်းသီး/Other စိုက်နည်း/Gro သိချင်/nolabel လို့/nolabel ပါ/nolabel dummy/__Gro__
+သရက်ပင်/Fru က/nolabel အရွက်အဖျားတွေကခြောက်နေ/BacD တယ်/nolabel ဘယ်လိုလုပ်/nolabel ရ/nolabel မလဲ့/nolabel ဆိုတာ/nolabel ကူညီပေး/nolabel ပါ/nolabel အုံး/nolabel dummy/__BacD__
+ငရုတ်ပင်/Veg အသီးကြွေပြီးအပင်ညှိုးနေ/BacD လို့/nolabel ဘာဆေး/nolabel ပက်/nolabel ရ/nolabel လဲ/nolabel dummy/__BacD__
+ကြက်မောက်/Fru မမှည့်ခင်/nolabel အလုံးကျွေ/BacD ကြနေ/nolabel တာ/nolabel ဘာကြောင့်လဲ/nolabel ဘာဆေး/nolabel သုံး/nolabel ရ/nolabel မလဲ/nolabel dummy/__PlaN__
+စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel dummy/__PlaN__
+
+Preparing tag only file...
+head raw.txt.rmquote.dummy.clean.tag
+Fru AgrK nolabel nolabel nolabel nolabel nolabel __AgrK__
+Veg nolabel Gro nolabel nolabel nolabel __Gro__
+IndRC AgrK nolabel nolabel nolabel nolabel __AgrK__
+Flo Gro nolabel nolabel nolabel nolabel nolabel __Gro__
+BacD nolabel nolabel Bea nolabel nolabel nolabel nolabel nolabel nolabel nolabel __BacD__
+Other Gro nolabel nolabel nolabel __Gro__
+Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel nolabel __BacD__
+Veg BacD nolabel nolabel nolabel nolabel nolabel __BacD__
+Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel __PlaN__
+Fru nolabel nolabel nolabel PlaN nolabel nolabel __PlaN__
+
+Make CSV file for building classification models
+head raw.txt.rmquote.dummy.clean.tag.csv
+Fru,AgrK,nolabel,nolabel,nolabel,nolabel,nolabel,__AgrK__
+Veg,nolabel,Gro,nolabel,nolabel,nolabel,__Gro__
+IndRC,AgrK,nolabel,nolabel,nolabel,nolabel,__AgrK__
+Flo,Gro,nolabel,nolabel,nolabel,nolabel,nolabel,__Gro__
+BacD,nolabel,nolabel,Bea,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,__BacD__
+Other,Gro,nolabel,nolabel,nolabel,__Gro__
+Fru,nolabel,BacD,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,__BacD__
+Veg,BacD,nolabel,nolabel,nolabel,nolabel,nolabel,__BacD__
+Fru,nolabel,BacD,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,__PlaN__
+Fru,nolabel,nolabel,nolabel,PlaN,nolabel,nolabel,__PlaN__
+
+wc raw.txt.rmquote.dummy.clean.tag.csv;
+  6781   6781 510443 raw.txt.rmquote.dummy.clean.tag.csv
+```
