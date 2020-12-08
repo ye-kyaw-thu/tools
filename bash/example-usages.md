@@ -5560,7 +5560,7 @@ NULL ({ }) အဲ့ဒါ ({ 1 }) ကို ({ 2 }) ကိုယ် ({ 3 }) တ
 
 ## 91. [add-dummy-word-mk-csv.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-dummy-word-mk-csv.sh)  
 
-Corpus တစ်ခုကို classificaiton model တွေ ဆောက်ဖို့အတွက် format တစ်ခုကနေ တခြား format တစ်ခုအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ အောက်ပါ run ထားတဲ့ ဥပမာကနေ လုပ်တဲ့အလုပ်ကို နားလည်လိမ့်မယ်လို့ ထင်ပါတယ်။ နားလည်လွယ်အောင် output တွေကိုလည်း အဆင့်ဆင့် print ထုတ်ပေးထားတာမို့ ...  
+Corpus တစ်ခုကို classificaiton model တွေ ဆောက်ဖို့အတွက် format တစ်ခုကနေ တခြား format တစ်ခုအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ အောက်ပါ run ထားတဲ့ ဥပမာကနေ လုပ်တဲ့အလုပ်ကို နားလည်လိမ့်မယ်လို့ ထင်ပါတယ်။ နားလည်လွယ်အောင် output တွေကိုလည်း အဆင့်ဆင့် print ထုတ်ပေးထားတာမို့ ... ရေးထားတဲ့ shell script ကို ဖတ်ရင်းနဲ့ output လုပ်သွားတာတွေကိုကြည့်ရင်း လေ့လာသွားပါ။  
 
 run မယ်ဆိုရင် ./add-dummy-word-mk-csv.sh \<corpus filename\> ဆိုတဲ့ပုံစံနဲ့ run ယုံပါပဲ။  
 အောက်ပါဥပမာက raw.txt ဆိုတဲ့ corpus တစ်ခုကိုသုံးပြီး run လိုက်တဲ့အခါမှာ screen မှာ မြင်ရမယ့် output ဖြစ်ပါတယ်။  
