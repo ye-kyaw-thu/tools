@@ -42,7 +42,7 @@ echo
 # Make word/tag CSV file for building classification models
 echo "Make CSV file for building classification models";
 sed "s/^/\"/;s/ dummy\//\",/" $CORPUS.rmquote.dummy.clean > $CORPUS.rmquote.dummy.clean.csv;
-echo "head $CORPUS.rmquote.dummy.clean.tag.mcol.csv";
+echo "head $CORPUS.rmquote.dummy.clean.csv";
 head $CORPUS.rmquote.dummy.clean.csv;
 echo
 echo "wc $CORPUS.rmquote.dummy.clean.csv;";
