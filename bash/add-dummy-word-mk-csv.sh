@@ -59,7 +59,7 @@ echo
 # Make another type of CSV file for building classification models
 
 echo "Make another CSV file for building classification models";
-sed "s/^/\"/;s/ _/\",/"  $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.csv;
+sed "s/^/\"/;s/ _/\",_/"  $CORPUS.rmquote.dummy.clean.tag > $CORPUS.rmquote.dummy.clean.tag.csv;
 echo "head $CORPUS.rmquote.dummy.clean.tag.csv";
 head $CORPUS.rmquote.dummy.clean.tag.csv;
 echo
