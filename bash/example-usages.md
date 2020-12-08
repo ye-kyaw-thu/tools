@@ -5567,6 +5567,7 @@ run မယ်ဆိုရင် ./add-dummy-word-mk-csv.sh \<corpus filename\> �
 
 ```
 $ ./add-dummy-word-mk-csv.sh raw.txt
+$ ./add-dummy-word-mk-csv.sh raw.txt
 Information of raw.txt:
 wc raw.txt
    7002   64418 1847864 raw.txt
@@ -5620,6 +5621,22 @@ head raw.txt.rmquote.dummy.clean:
 ကြက်မောက်/Fru မမှည့်ခင်/nolabel အလုံးကျွေ/BacD ကြနေ/nolabel တာ/nolabel ဘာကြောင့်လဲ/nolabel ဘာဆေး/nolabel သုံး/nolabel ရ/nolabel မလဲ/nolabel dummy/__PlaN__
 စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel dummy/__PlaN__
 
+Make CSV file for building classification models
+head raw.txt.rmquote.dummy.clean.tag.mcol.csv
+"သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel",__AgrK__
+"ကညွတ်/Veg ကို/nolabel ဘယ်လိုစိုက်/Gro ရင်/nolabel အထွက်တိုး/nolabel မလဲ/nolabel",__Gro__
+"ရော်ဘာ/IndRC ကိုင်းကူးနည်း/AgrK ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel လား/nolabel",__AgrK__
+"နှင်းဆီ/Flo စိုက်နည်း/Gro လေး/nolabel ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel ဦး/nolabel",__Gro__
+"နီမတုတ်/BacD တွေ/nolabel ကြောင့်/nolabel ပဲတီစိမ်းပင်/Bea ရဲ့/nolabel အမြစ်/nolabel တွေ/nolabel ထိခိုက်/nolabel နိုင်/nolabel ပါ/nolabel သလား/nolabel",__BacD__
+"ကွမ်းသီး/Other စိုက်နည်း/Gro သိချင်/nolabel လို့/nolabel ပါ/nolabel",__Gro__
+"သရက်ပင်/Fru က/nolabel အရွက်အဖျားတွေကခြောက်နေ/BacD တယ်/nolabel ဘယ်လိုလုပ်/nolabel ရ/nolabel မလဲ့/nolabel ဆိုတာ/nolabel ကူညီပေး/nolabel ပါ/nolabel အုံး/nolabel",__BacD__
+"ငရုတ်ပင်/Veg အသီးကြွေပြီးအပင်ညှိုးနေ/BacD လို့/nolabel ဘာဆေး/nolabel ပက်/nolabel ရ/nolabel လဲ/nolabel",__BacD__
+"ကြက်မောက်/Fru မမှည့်ခင်/nolabel အလုံးကျွေ/BacD ကြနေ/nolabel တာ/nolabel ဘာကြောင့်လဲ/nolabel ဘာဆေး/nolabel သုံး/nolabel ရ/nolabel မလဲ/nolabel",__PlaN__
+"စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel",__PlaN__
+
+wc raw.txt.rmquote.dummy.clean.csv;
+   6781   62205 1784484 raw.txt.rmquote.dummy.clean.csv
+
 Preparing tag only file...
 head raw.txt.rmquote.dummy.clean.tag
 Fru AgrK nolabel nolabel nolabel nolabel nolabel __AgrK__
@@ -5649,7 +5666,7 @@ Fru,nolabel,nolabel,nolabel,PlaN,nolabel,nolabel,__PlaN__
 wc raw.txt.rmquote.dummy.clean.tag.mcol.csv;
   6781   6781 510443 raw.txt.rmquote.dummy.clean.tag.mcol.csv
 
-Make another CSV file for building classification models
+Make another tag only CSV file for building classification models
 head raw.txt.rmquote.dummy.clean.tag.csv
 "Fru AgrK nolabel nolabel nolabel nolabel nolabel",__AgrK__
 "Veg nolabel Gro nolabel nolabel nolabel",__Gro__
