@@ -5566,7 +5566,7 @@ run မယ်ဆိုရင် ./add-dummy-word-mk-csv.sh \<corpus filename\> �
 အောက်ပါဥပမာက raw.txt ဆိုတဲ့ corpus တစ်ခုကိုသုံးပြီး run လိုက်တဲ့အခါမှာ screen မှာ မြင်ရမယ့် output ဖြစ်ပါတယ်။  
 
 ```
-(base) ye@ykt-pro:/media/ye/Transcend/tool/minisom/examples/cho-zin-oo-data$ ./add-dummy-word-mk-csv.sh raw.txt
+$ ./add-dummy-word-mk-csv.sh raw.txt
 Information of raw.txt:
 wc raw.txt
    7002   64418 1847864 raw.txt
