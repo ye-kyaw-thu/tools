@@ -276,3 +276,6 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 90. [mgiza-align.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mgiza-align.sh)  
 ([mgiza](https://github.com/moses-smt/mgiza) ကလည်း နာမည်ကြီးတဲ့ word alignment tool တစ်ခုဖြစ်ပါတယ်။ သုံးပုံသုံးနည်းကို script ရေးပြထားတာ ဖြစ်ပါတယ်)  
+
+91. [add-dummy-word-mk-csv.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-dummy-word-mk-csv.sh)  
+(ပြင်ထားတဲ့ corpus ကို ရဲ့ format ""သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel",\_\_AgrK\_\_" ကနေ "Fru,AgrK,nolabel,nolabel,nolabel,nolabel,nolabel,\_\_AgrK\_\_" ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။)  
