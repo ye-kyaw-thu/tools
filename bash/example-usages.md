@@ -5567,7 +5567,6 @@ run မယ်ဆိုရင် ./add-dummy-word-mk-csv.sh \<corpus filename\> �
 
 ```
 $ ./add-dummy-word-mk-csv.sh raw.txt
-$ ./add-dummy-word-mk-csv.sh raw.txt
 Information of raw.txt:
 wc raw.txt
    7002   64418 1847864 raw.txt
