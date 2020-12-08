@@ -7,7 +7,7 @@
 # Date: 8 Dec 2020
 # You need a cleaning script such as  skip-tag-err-lines.pl
 # That  "skip-tag-err-lines.pl" is similar to "chk-pos-tags.pl", I just modify skipping possible tagging error lines
-# How to run:
+# How to run: ./add-dummy-word-mk-csv.sh <tagged corpus file-name>
 # $ ./add-dummy-word-mk-csv.sh raw.txt
 
 CORPUS=$1;
