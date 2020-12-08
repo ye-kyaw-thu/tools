@@ -5533,7 +5533,7 @@ NULL ({ }) ဘယ် ({ 1 }) နှစ်နာရီ ({ }) ငါတို့ (
 ကောင်းစွာ က ထိုမချေ ကန်ကျောက် အော်ဟစ်နီရေ အတွက် လုံခြုံရေး အထိန်းတိ ပွင့်ကုန် ရေ ။ 
 ```
 
-train.my_train.rk.dict.A3.final.part001 ဖိုင်ရဲ့ထိပ်ဆုံးစာကြောင်း အကြောင်းနှစ်ဆယ်ကို head command နဲ့ ရိုက်ထုတ်ကြည့်ရအောင်။ "-n 20" ဆိုတာက number of sentence ကြောင်း ၂၀ လို့ argument ပေးတာပါ။    
+train.my_train.rk.dict.A3.final.part001 ဖိုင်ရဲ့ထိပ်ဆုံးစာကြောင်း အကြောင်းနှစ်ဆယ်ကို head command နဲ့ ရိုက်ထုတ်ကြည့်ရအောင်။ "-n 20" ဆိုတာက number of sentence အကြောင်း ၂၀ လို့ argument ပေးတာပါ။    
 ```
 $ head -n 20 train.my_train.rk.dict.A3.final.part001
 # Sentence pair (1) source length 9 target length 9 alignment score : 0.00801001
