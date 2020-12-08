@@ -5648,4 +5648,21 @@ Fru,nolabel,nolabel,nolabel,PlaN,nolabel,nolabel,__PlaN__
 
 wc raw.txt.rmquote.dummy.clean.tag.csv;
   6781   6781 510443 raw.txt.rmquote.dummy.clean.tag.csv
+  
+Make another CSV file for building classification models
+head raw.txt.rmquote.dummy.clean.tag.csv
+"Fru AgrK nolabel nolabel nolabel nolabel nolabel",_AgrK__
+"Veg nolabel Gro nolabel nolabel nolabel",_Gro__
+"IndRC AgrK nolabel nolabel nolabel nolabel",_AgrK__
+"Flo Gro nolabel nolabel nolabel nolabel nolabel",_Gro__
+"BacD nolabel nolabel Bea nolabel nolabel nolabel nolabel nolabel nolabel nolabel",_BacD__
+"Other Gro nolabel nolabel nolabel",_Gro__
+"Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel nolabel",_BacD__
+"Veg BacD nolabel nolabel nolabel nolabel nolabel",_BacD__
+"Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel",_PlaN__
+"Fru nolabel nolabel nolabel PlaN nolabel nolabel",_PlaN__
+
+wc raw.txt.rmquote.dummy.clean.tag.csv;
+  6781  62206 517224 raw.txt.rmquote.dummy.clean.tag.csv
+
 ```
