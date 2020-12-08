@@ -5505,3 +5505,55 @@ wc *.A3.final.part*
   49683  855752 6257269 total
 (base) ye@ykt-pro:/media/ye/project1/exp/wfst-mt/exp/word/alignment/my-rk-giza$
 ```
+
+အထက်မှာမြင်ရတဲ့ screen output ကနေလည်း GIZA++ or mgiza ရဲ့အလုပ်လုပ်ပုံကို အကြမ်းမျဉ်းတော့ လေ့လာနိုင်ပါလိမ့်မယ်။ screen output ရဲ့ နောက်ဆုံးပိုင်းမှာ မြင်ရတဲ့ \*A3.final.part\* ဆိုတဲ့ နာမည်တွေနဲ့ဖိုင်တွေက မြန်မာ-ရခိုင် စာကြောင်းတွေအကြား alignment လုပ်ပြီးထွက်လာတဲ့ ဖိုင်တွေပါ။   
+
+train.my_train.rk.dict.A3.final.part000 ဖိုင်ရဲ့ ထိပ်ဆုံးကနေ စာကြောင်းရေ အကြောင်း နှစ်ဆယ်ကို ရိုက်ထုတ်ကြည့်ရင်အောက်ပါအတိုင်း မြင်ရပါတယ်။  
+```
+$ head -n 20 train.my_train.rk.dict.A3.final.part000
+# Sentence pair (7) source length 5 target length 5 alignment score : 0.084755
+ငါ စဉ်းစား ရေပိုင် စဉ်းစားပါ ။ 
+NULL ({ }) ငါ ({ 1 }) စဉ်းစား ({ 2 }) သလို ({ 3 }) စဉ်းစားပါ ({ 4 }) ။ ({ 5 }) 
+# Sentence pair (9) source length 11 target length 11 alignment score : 1.13641e-08
+နောက်ဆုံး တစ် ကြိမ် သူ့ကို ချစ်ပါရေ လို့ ပြောခွင့် တောင် မ ရ ပါ။ 
+NULL ({ }) ​နောက်ဆုံး ({ 1 }) တစ် ({ 2 }) ကြိမ် ({ 3 }) သူ့ကို ({ 4 }) ချစ်ပါတယ် ({ 5 }) လို့ ({ 6 }) ပြောခွင့်တောင် ({ 7 8 }) မ ({ 9 }) ရ ({ 10 }) တော့ဘူး ({ }) ။ ({ 11 }) 
+# Sentence pair (13) source length 6 target length 6 alignment score : 0.00203375
+ဒေချင့် ကို မင်း မှတ်ပုံတင် ဖို့သိလား ။ 
+NULL ({ }) ဒါ ({ 1 }) ကို ({ 2 }) ခင်ဗျား ({ 3 }) မှတ်ပုံတင် ({ 4 }) ဦးမလား ({ 5 }) ။ ({ 6 }) 
+# Sentence pair (14) source length 6 target length 6 alignment score : 0.0168503
+မင်း အဂု ဇာ လုပ် လေး ။ 
+NULL ({ }) ခင်ဗျား ({ 1 }) ခု ({ 2 }) ဘာ ({ 3 }) လုပ် ({ 4 }) သလဲ ({ 5 }) ။ ({ 6 }) 
+# Sentence pair (16) source length 5 target length 5 alignment score : 0.0194717
+ငါ့ လက် ကို တွဲထားနန့် ။ 
+NULL ({ }) ကိုယ့် ({ 1 }) လက် ({ 2 }) ကို ({ 3 }) တွဲထားနော် ({ 4 }) ။ ({ 5 }) 
+# Sentence pair (18) source length 6 target length 6 alignment score : 3.01904e-08
+ဇာချိန် ငါရို့ တွိ ကတ်ဖို့ လေး ။ 
+NULL ({ }) ဘယ် ({ 1 }) နှစ်နာရီ ({ }) ငါတို့ ({ 2 }) တွေ့ကြ ({ 3 4 }) မလဲ ({ 5 }) ။ ({ 6 }) 
+# Sentence pair (19) source length 11 target length 11 alignment score : 0.00329918
+ကောင်းစွာ က ထိုမချေ ကန်ကျောက် အော်ဟစ်နီရေ အတွက် လုံခြုံရေး အထိန်းတိ ပွင့်ကုန် ရေ ။ 
+```
+
+train.my_train.rk.dict.A3.final.part001 ဖိုင်ရဲ့ထိပ်ဆုံးစာကြောင်း အကြောင်းနှစ်ဆယ်ကို head command နဲ့ ရိုက်ထုတ်ကြည့်ရအောင်။ "-n 20" ဆိုတာက number of sentence ကြောင်း ၂၀ လို့ argument ပေးတာပါ။    
+```
+$ head -n 20 train.my_train.rk.dict.A3.final.part001
+# Sentence pair (1) source length 9 target length 9 alignment score : 0.00801001
+မင်း ယင်းချင့် ကို အခြား တစ်ခုနန့် မ ချိတ် ပါလား ။ 
+NULL ({ }) မင်း ({ 1 }) အဲ့ဒါ ({ 2 }) ကို ({ 3 }) အခြား ({ 4 }) တစ်ခုနဲ့ ({ 5 }) မ ({ 6 }) ချိတ် ({ 7 }) ဘူးလား ({ 8 }) ။ ({ 9 }) 
+# Sentence pair (2) source length 5 target length 5 alignment score : 0.00533346
+ထိုမချေ တစ်ယောက်လေ့ မ မှတ်မိပါယာ ။ 
+NULL ({ }) သူမ ({ 1 }) ဘယ်သူ့ကိုမှ ({ 2 }) မ ({ 3 }) မှတ်မိတော့ဘူး ({ 4 }) ။ ({ 5 }) 
+# Sentence pair (3) source length 7 target length 7 alignment score : 0.00808222
+ယင်းချင့် ကျွန်တော် ရို့ အတွက် ခက်ခ ရေ ။ 
+NULL ({ }) အဲ့ဒါ ({ 1 }) ကျွန်တော် ({ 2 }) တို့ ({ 3 }) အတွက် ({ 4 }) ခက်ခဲ ({ 5 }) တယ် ({ 6 }) ။ ({ 7 }) 
+# Sentence pair (4) source length 7 target length 7 alignment score : 0.0261447
+မင်း ပြောခ ရေပိုင် ကျွန်တော် ယှင်းပြ ခရေ ။ 
+NULL ({ }) ခင်ဗျား ({ 1 }) ပြောခဲ့ ({ 2 }) သလို ({ 3 }) ကျွန်တော် ({ 4 }) ရှင်းပြ ({ 5 }) ခဲ့တယ် ({ 6 }) ။ ({ 7 }) 
+# Sentence pair (5) source length 6 target length 6 alignment score : 0.0154195
+သူ့ကို ထိန်းဖို့ မင်း ရာ တတ်နိုင်ရေ ။ 
+NULL ({ }) သူ့ကို ({ 1 }) ထိန်းဖို့ ({ 2 }) မင်း ({ 3 }) ပဲ ({ 4 }) တတ်နိုင်တယ် ({ 5 }) ။ ({ 6 }) 
+# Sentence pair (6) source length 7 target length 7 alignment score : 0.000694828
+ယင်းချင့် ကို ငါ တက်နင်း မိလား လာ ။ 
+NULL ({ }) အဲ့ဒါ ({ 1 }) ကို ({ 2 }) ကိုယ် ({ 3 }) တက်နင်း ({ 4 }) မိသွား ({ 5 }) လား ({ 6 }) ။ ({ 7 }) 
+# Sentence pair (8) source length 5 target length 5 alignment score : 0.0609318
+အတင်းပြော ရစွာ မုန်း ရေ ။ 
+```
