@@ -5560,7 +5560,7 @@ NULL ({ }) အဲ့ဒါ ({ 1 }) ကို ({ 2 }) ကိုယ် ({ 3 }) တ
 
 ## 91. [add-dummy-word-mk-csv.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-dummy-word-mk-csv.sh)  
 
-Corpus တစ်ခုကို classificaiton model တွေ ဆောက်ဖို့အတွက် format တစ်ခုကနေ တခြား format တစ်ခုအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ အောက်ပါ run ထားတဲ့ ဥပမာကနေ လုပ်တဲ့အလုပ်ကို နားလည်လိမ့်မယ်လို့ ထင်ပါတယ်။ နားလည်လွယ်အောင် output တွေကိုလည်း အဆင့်ဆင့် print ထုတ်ပေးထားတာမို့ ... ရေးထားတဲ့ shell script ကို ဖတ်ရင်းနဲ့ output လုပ်သွားတာတွေကိုကြည့်ရင်း လေ့လာသွားပါ။  
+Corpus တစ်ခုကို classificaiton model တွေ ဆောက်ဖို့အတွက် format တစ်ခုကနေ တခြား CSV ဖိုင် format နှစ်ခုအဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။ အောက်ပါ run ထားတဲ့ ဥပမာကနေ လုပ်တဲ့အလုပ်ကို နားလည်လိမ့်မယ်လို့ ထင်ပါတယ်။ နားလည်လွယ်အောင် output တွေကိုလည်း အဆင့်ဆင့် print ထုတ်ပေးထားတာမို့ ... ရေးထားတဲ့ shell script ကို ဖတ်ရင်းနဲ့ output လုပ်သွားတာတွေကိုကြည့်ရင်း လေ့လာသွားပါ။  
 
 run မယ်ဆိုရင် ./add-dummy-word-mk-csv.sh \<corpus filename\> ဆိုတဲ့ပုံစံနဲ့ run ယုံပါပဲ။  
 အောက်ပါဥပမာက raw.txt ဆိုတဲ့ corpus တစ်ခုကိုသုံးပြီး run လိုက်တဲ့အခါမှာ screen မှာ မြင်ရမယ့် output ဖြစ်ပါတယ်။  
@@ -5634,7 +5634,7 @@ Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel __PlaN_
 Fru nolabel nolabel nolabel PlaN nolabel nolabel __PlaN__
 
 Make CSV file for building classification models
-head raw.txt.rmquote.dummy.clean.tag.csv
+head raw.txt.rmquote.dummy.clean.tag.mcol.csv
 Fru,AgrK,nolabel,nolabel,nolabel,nolabel,nolabel,__AgrK__
 Veg,nolabel,Gro,nolabel,nolabel,nolabel,__Gro__
 IndRC,AgrK,nolabel,nolabel,nolabel,nolabel,__AgrK__
@@ -5646,23 +5646,23 @@ Veg,BacD,nolabel,nolabel,nolabel,nolabel,nolabel,__BacD__
 Fru,nolabel,BacD,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,nolabel,__PlaN__
 Fru,nolabel,nolabel,nolabel,PlaN,nolabel,nolabel,__PlaN__
 
-wc raw.txt.rmquote.dummy.clean.tag.csv;
-  6781   6781 510443 raw.txt.rmquote.dummy.clean.tag.csv
-  
+wc raw.txt.rmquote.dummy.clean.tag.mcol.csv;
+  6781   6781 510443 raw.txt.rmquote.dummy.clean.tag.mcol.csv
+
 Make another CSV file for building classification models
 head raw.txt.rmquote.dummy.clean.tag.csv
-"Fru AgrK nolabel nolabel nolabel nolabel nolabel",_AgrK__
-"Veg nolabel Gro nolabel nolabel nolabel",_Gro__
-"IndRC AgrK nolabel nolabel nolabel nolabel",_AgrK__
-"Flo Gro nolabel nolabel nolabel nolabel nolabel",_Gro__
-"BacD nolabel nolabel Bea nolabel nolabel nolabel nolabel nolabel nolabel nolabel",_BacD__
-"Other Gro nolabel nolabel nolabel",_Gro__
-"Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel nolabel",_BacD__
-"Veg BacD nolabel nolabel nolabel nolabel nolabel",_BacD__
-"Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel",_PlaN__
-"Fru nolabel nolabel nolabel PlaN nolabel nolabel",_PlaN__
+"Fru AgrK nolabel nolabel nolabel nolabel nolabel",__AgrK__
+"Veg nolabel Gro nolabel nolabel nolabel",__Gro__
+"IndRC AgrK nolabel nolabel nolabel nolabel",__AgrK__
+"Flo Gro nolabel nolabel nolabel nolabel nolabel",__Gro__
+"BacD nolabel nolabel Bea nolabel nolabel nolabel nolabel nolabel nolabel nolabel",__BacD__
+"Other Gro nolabel nolabel nolabel",__Gro__
+"Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel nolabel",__BacD__
+"Veg BacD nolabel nolabel nolabel nolabel nolabel",__BacD__
+"Fru nolabel BacD nolabel nolabel nolabel nolabel nolabel nolabel nolabel",__PlaN__
+"Fru nolabel nolabel nolabel PlaN nolabel nolabel",__PlaN__
 
 wc raw.txt.rmquote.dummy.clean.tag.csv;
-  6781  62206 517224 raw.txt.rmquote.dummy.clean.tag.csv
+  6781  62206 523952 raw.txt.rmquote.dummy.clean.tag.csv
 
 ```
