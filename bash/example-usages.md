@@ -5621,7 +5621,7 @@ head raw.txt.rmquote.dummy.clean:
 စိန်တလုံးသရက်ပင်/Fru ၁/nolabel နှစ်/nolabel သား/nolabel ဘာမြေဆီ/PlaN ကြွေးရင်/nolabel အဆင်ပြေမလဲ/nolabel dummy/__PlaN__
 
 Make CSV file for building classification models
-head raw.txt.rmquote.dummy.clean.tag.mcol.csv
+head raw.txt.rmquote.dummy.clean.csv
 "သရက်/Fru ကိုင်းကူးနည်း/AgrK လေး/nolabel လည်း/nolabel သိချင်/nolabel ပါ/nolabel တယ်/nolabel",__AgrK__
 "ကညွတ်/Veg ကို/nolabel ဘယ်လိုစိုက်/Gro ရင်/nolabel အထွက်တိုး/nolabel မလဲ/nolabel",__Gro__
 "ရော်ဘာ/IndRC ကိုင်းကူးနည်း/AgrK ပြောပြ/nolabel ပေး/nolabel ပါ/nolabel လား/nolabel",__AgrK__
