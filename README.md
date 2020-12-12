@@ -101,6 +101,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 89. [txt2ASL-BSL.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/txt2ASL-BSL.sh)  
 90. [mgiza-align.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mgiza-align.sh)  
 91. [add-dummy-word-mk-csv.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-dummy-word-mk-csv.sh)  
+92. [kidbright-burmese-transcription.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/kidbright-burmese-transcription.sh)  
 
 # perl
 
