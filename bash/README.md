@@ -282,3 +282,7 @@ demo running အတွက် သုံးထားတဲ့ ဖိုင်တ�
 
 92. [kidbright-burmese-transcription.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/kidbright-burmese-transcription.sh)  
 KidBright board သုံးပုံသုံးနည်း tutorial video တွေကို ဗမာလို caption ထိုးဖို့အတွက် သုံးခဲ့တဲ့ script ပါ။  
+
+93. [count-csv-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-csv-fields.sh)  
+CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်နှစ်ခု ရှိသလဲ ဆိုတာကို ရေတွက်ဖို့ ရေးခဲ့တဲ့ shell script ပါ။  
+
