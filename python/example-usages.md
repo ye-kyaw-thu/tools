@@ -282,3 +282,17 @@ kʰɪɴ d͡ʑeɪɴ saɴ
 kaʔ zə tʰaɴ
 kʰɪɴ za t͡ɕʰi wɪɴ
 ```
+
+## 9. [plot-unicode-char.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/plot-unicode-char.py)  
+
+run ပြီးသွားတဲ့အခါမှာ python script ရှိတဲ့ path အောက်မှာ plot-unicode-char.png ဆိုတဲ့ ပုံထွက်လာပါလိမ့်မယ်။  
+```
+$ python ./plot-unicode-char.py 
+$ ls
+plot-unicode-char.png  plot-unicode-char.py
+```
+
+ပုံကတော့ အောက်ပါအတိုင်းပါ  
+
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/python/test-data/plot-unicode-char.png" alt="output graph" width="812x180"/>
+<p align="center"> Fig. plot-unicode-char.png </p>  
