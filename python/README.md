@@ -26,4 +26,6 @@
 8. [epitranscribe.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/epitranscribe.py)  
 (မြန်မာနာမည်တွေကို IPA (International Phonetic Alphabet) လေဘယ်ထိုးဖို့ သုံးခဲ့တယ်။ original code [https://github.com/dmort27/epitran](https://github.com/dmort27/epitran) က Python 2.7 မို့လို့ Python 3 နဲ့ run လို့ရဖို့ အနည်းငယ် ပြင်ဆင်ခဲ့တယ်။)
 
+9. [plot-unicode-char.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/plot-unicode-char.py)  
+(matplotlib နဲ့ graph ပေါ်မှာ ဗမာစာလုံးတွေချဖို့အတွက် စမ်းရေးခဲ့တဲ့ python script ပါ)  
 
