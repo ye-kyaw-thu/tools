@@ -294,5 +294,5 @@ plot-unicode-char.png  plot-unicode-char.py
 
 ပုံကတော့ အောက်ပါအတိုင်းပါ  
 
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/python/test-data/plot-unicode-char.png" alt="output graph" width="812x180"/>
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/python/test-data/plot-unicode-char.png" alt="output graph" width="640x480"/>
 <p align="center"> Fig. plot-unicode-char.png </p>  
