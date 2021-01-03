@@ -7,6 +7,7 @@ use utf8;
 # Written by Ye Kyaw Thu, LST, NECTEC, Thailand
 # How to run:
 # e.g. perl ./mypos2json.pl <input-file>
+# e.g. perl ./mypos2json.pl ./mypos-dver.1.0.txt.clean > ./mypos.json
 
 binmode STDIN,  ":utf8";
 binmode STDOUT, ":utf8";
