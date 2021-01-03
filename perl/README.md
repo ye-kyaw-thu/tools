@@ -165,6 +165,10 @@
 54. [find-one-file-words-in-another.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/find-one-file-words-in-another.pl)  
     (ရှာဖွေချင်တဲ့ စာလုံးတွေကို ဖိုင်တစ်ဖိုင်ထဲမှာ ထည့်ထားပြီးတော့ တခြားဖိုင်တစ်ဖိုင်ရဲ့စာကြောင်းတွေထဲက field-1 နဲ့ တိုက်စစ်ပြီး exact match ဖြစ်တဲ့စာကြောင်းတွေကိုပဲ ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ perl script ပါ။ လက်တွေ့မှာတော့ အဘိဓာန်အကြီးရဲ့စာလုံးတွေကို တခြားအဘိဓာန်အသေးတစ်ခုသုံးပြီး world filter လုပ်ဖို့အတွက် သုံးခဲ့တာ ဖြစ်ပါတယ်)  
     
+55. [mypos2json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mypos2json.pl)  
+    (POS tagged corpus ဖြစ်တဲ့ [myPOS](https://github.com/ye-kyaw-thu/myPOS) ဖိုင်ကနေ json format အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ perl scriptပါ။)  
+    
+    
     
     
     
