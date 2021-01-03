@@ -2208,3 +2208,152 @@ zoning, (အသုံးပြုမည့် ကိစ္စကို တညဉ
 zoo, တိရစ္ဆာနဉ်ယျာဉ်
 zoom, ဝေါခနဲမြညဉ် ဖြတ်သွားသံ
 ```
+## 55. [mypos2json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mypos2json.pl)  
+
+POS tagged corpus ဖြစ်တဲ့ [myPOS](https://github.com/ye-kyaw-thu/myPOS) ဖိုင်ကနေ တခြား NLP task အလုပ်တစ်ခုအတွက် json format အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ perl scriptပါ။  
+
+အရင်ဆုံး myPOS corpus version 1.0 ကို wget command နဲ့ ကိုယ့်စက်ထဲကို download လုပ်မယ်။  
+
+```
+$ wget https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-draft-ver-1.0/mypos-dver.1.0.txt
+--2021-01-04 04:16:54--  https://raw.githubusercontent.com/ye-kyaw-thu/myPOS/master/corpus-draft-ver-1.0/mypos-dver.1.0.txt
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.8.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.8.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4304994 (4.1M) [text/plain]
+Saving to: ‘mypos-dver.1.0.txt’
+
+mypos-dver.1.0.txt                                 100%[===============================================================================================================>]   4.11M   506KB/s    in 8.0s    
+
+2021-01-04 04:17:03 (526 KB/s) - ‘mypos-dver.1.0.txt’ saved [4304994/4304994]
+```
+
+head command နဲ့ ထိပ်ဆုံး ၃ကြောင်းကို ရိုက်ကြည့်ရအောင်...
+
+```
+$ head -n 5 ./mypos-dver.1.0.txt 
+ယခု/n လ/n တွင်/ppm ပျားရည်/n နှင့်/conj ပျားဖယောင်း/n များ/part ကို/ppm စုဆောင်း/v ကြ/part သည်/ppm ဟု/part ခန့်မှန်း/v နိုင်/part သည်/ppm ။/punc
+အခန်းခ/n ထဲ/ppm မှာ/ppm ထည့်/v လိုက်/part ပါ/part ။/punc
+ဆရာကြီး/n|ဦးစိန်/n ၏/ppm မြန်မာ/n|အထက်တန်း/n|ကျောင်း/n မှ/ppm ၉/num တန်း/n အောင်မြင်/v ခဲ့/part ပြီး/conj မင်းလှ/n|မြို့/n နော်မံ/n|ကျောင်း/n မှ/ppm အလယ်တန်း/n ဆရာ/n ဖြစ်/v အောင်မြင်/v ခဲ့/part ၏/ppm ။/punc
+ရှစ်လေးလုံး/n|လှုပ်ရှား/v|မှု/part တွင်/ppm တက်ကြွ/v စွာ/part ပါဝင်/v ခဲ့/part သလို/conj ၊/punc ဗမာ/n|နိုင်ငံ/n|လုံး/part|ဆိုင်ရာ/n|ကျောင်းသား/n|သမဂ္ဂ/n များ/part အဖွဲ့ချုပ်/n မှာ/ppm လည်း/part တက်ကြွ/v စွာ/part ပါဝင်/v လှုပ်ရှား/v ခဲ့/part သည်/ppm ။/punc
+ဗြိတိသျှ/n|တပ်/n များ/part သည်/ppm ဂျပန်/n များ/part ၏/ppm ငါး/n|ဖမ်း/v|အိမ်/n ၃၀၀၀၀၀/num ခန့်/part တွင်/ppm အလုပ်/n လုပ်ကိုင်/v နေ/part ကြ/part ရ/part သည်/ppm ။/punc
+```
+
+mypos data ကနေ json format ပြောင်းကို ဥပမာအနေနဲ့ ပြချင်လို့ ဖိုင်သေးသေးလေး တစ်ဖိုင်ကို အောက်ပါအတိုင်း ဆောက်ခဲ့...
+
+```
+$ head -n 5 ./mypos-dver.1.0.txt > ./5lines
+```
+
+word/tag word/tag ဆိုတဲ့ format ကနေ json format ကို perl script နဲ့ parsing လုပ်ကြည့်ရအောင်...
+
+```
+$ perl ./mypos2json.pl ./5lines 
+[
+  [
+    ["ယခု","n"],
+    ["လ","n"],
+    ["တွင်","ppm"],
+    ["ပျားရည်","n"],
+    ["နှင့်","conj"],
+    ["ပျားဖယောင်း","n"],
+    ["များ","part"],
+    ["ကို","ppm"],
+    ["စုဆောင်း","v"],
+    ["ကြ","part"],
+    ["သည်","ppm"],
+    ["ဟု","part"],
+    ["ခန့်မှန်း","v"],
+    ["နိုင်","part"],
+    ["သည်","ppm"],
+    ["။","punc"]
+  ]
+  [
+    ["အခန်းခ","n"],
+    ["ထဲ","ppm"],
+    ["မှာ","ppm"],
+    ["ထည့်","v"],
+    ["လိုက်","part"],
+    ["ပါ","part"],
+    ["။","punc"]
+  ]
+  [
+    ["ဆရာကြီး","n"],
+    ["ဦးစိန်","n"],
+    ["၏","ppm"],
+    ["မြန်မာ","n"],
+    ["အထက်တန်း","n"],
+    ["ကျောင်း","n"],
+    ["မှ","ppm"],
+    ["၉","num"],
+    ["တန်း","n"],
+    ["အောင်မြင်","v"],
+    ["ခဲ့","part"],
+    ["ပြီး","conj"],
+    ["မင်းလှ","n"],
+    ["မြို့","n"],
+    ["နော်မံ","n"],
+    ["ကျောင်း","n"],
+    ["မှ","ppm"],
+    ["အလယ်တန်း","n"],
+    ["ဆရာ","n"],
+    ["ဖြစ်","v"],
+    ["အောင်မြင်","v"],
+    ["ခဲ့","part"],
+    ["၏","ppm"],
+    ["။","punc"]
+  ]
+  [
+    ["ရှစ်လေးလုံး","n"],
+    ["လှုပ်ရှား","v"],
+    ["မှု","part"],
+    ["တွင်","ppm"],
+    ["တက်ကြွ","v"],
+    ["စွာ","part"],
+    ["ပါဝင်","v"],
+    ["ခဲ့","part"],
+    ["သလို","conj"],
+    ["၊","punc"],
+    ["ဗမာ","n"],
+    ["နိုင်ငံ","n"],
+    ["လုံး","part"],
+    ["ဆိုင်ရာ","n"],
+    ["ကျောင်းသား","n"],
+    ["သမဂ္ဂ","n"],
+    ["များ","part"],
+    ["အဖွဲ့ချုပ်","n"],
+    ["မှာ","ppm"],
+    ["လည်း","part"],
+    ["တက်ကြွ","v"],
+    ["စွာ","part"],
+    ["ပါဝင်","v"],
+    ["လှုပ်ရှား","v"],
+    ["ခဲ့","part"],
+    ["သည်","ppm"],
+    ["။","punc"]
+  ]
+  [
+    ["ဗြိတိသျှ","n"],
+    ["တပ်","n"],
+    ["များ","part"],
+    ["သည်","ppm"],
+    ["ဂျပန်","n"],
+    ["များ","part"],
+    ["၏","ppm"],
+    ["ငါး","n"],
+    ["ဖမ်း","v"],
+    ["အိမ်","n"],
+    ["၃၀၀၀၀၀","num"],
+    ["ခန့်","part"],
+    ["တွင်","ppm"],
+    ["အလုပ်","n"],
+    ["လုပ်ကိုင်","v"],
+    ["နေ","part"],
+    ["ကြ","part"],
+    ["ရ","part"],
+    ["သည်","ppm"],
+    ["။","punc"]
+  ]
+]
+```
+
