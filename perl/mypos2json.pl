@@ -21,6 +21,7 @@ print("[\n");
       {
          chomp ($line);
          $line =~ s/\|/ /g; # if your data not using pipe "|" comment out this line
+         $line =~ s/\"/\\\"/g; # escaping double quote
          my @token = split('\s', $line);
          print("  [\n"); my $tmpStr="";
          foreach my $one_token(@token)
