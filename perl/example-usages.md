@@ -2358,3 +2358,48 @@ $ perl ./mypos2json.pl ./5lines
 
 ```
 
+## 56. [roman2myno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/roman2myno.pl)  
+
+Roman နံပါတ်တွေကို ဗမာလိုပြောင်းဖို့အတွက် အသုံးဝင်ပါလိမ့်မယ်။  
+code ထဲမှာ သုံးထားတဲ့ Regular Expression နဲ့ ပတ်သက်ပြီး ဗမာလို comment ရေးပေးထားပါတယ်။ စိတ်ဝင်စားတဲ့သူတွေက လေ့လာကြည့်ပါ။  
+ဆိုကြပါစို့ roman.txt ဖိုင်ထဲမှာ အောက်မှာ မြင်ရတဲ့အတိုင်း ရိုမန်နံပါတ်တွေကို စာကြောင်း တစ်ကြောင်းချင်းစီ ရိုက်ထည့်ထားတယ်...
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/antlr4/ref/roman$ cat roman.txt
+I
+X
+C
+M
+IIII
+IV
+CMXCIV
+XIII
+XI
+MMX
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/antlr4/ref/roman$
+```
+
+အဲဒီဖိုင်ကို roman2myno.pl ကို argument အနေနဲ့ pass လုပ်ပြီး run ရင် အောက်ပါအတိုင်း ရိုမန်နံပါတ်တွေနဲ့ ညီမျှတဲ့ ဗမာနံပါတ်တွေကို ရိုက်ထုတ်ပေးပါလိမ့်မယ်။  
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/antlr4/ref/roman$ perl ./roman2myno.pl < roman.txt 
+I = ၁
+X = ၁၀
+C = ၁၀၀
+M = ၁၀၀၀
+IIII = ၄
+IV = ၄
+CMXCIV = ၉၉၄
+XIII = ၁၃
+XI = ၁၁
+MMX = ၂၀၁၀
+```
+
+ဖိုင်ကနေ ပဲ မဟုတ်ပဲ STDIN ကနေလည်း input ပေးလို့ရအောင် ရေးထားပါတယ်။  
+အောက်ပါအတိုင်း ရိုမန်နံပါတ် ရက်စွဲ တစ်ခုကို pass လုပ်ကြည့်ရအောင်...  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/antlr4/ref/roman$ echo -e "I\nII\nMMXXI" | perl ./roman2myno.pl
+I = ၁
+II = ၂
+MMXXI = ၂၀၂၁
+```
