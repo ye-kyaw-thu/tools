@@ -25,6 +25,7 @@ my @roman = ("M:1000", "CM:900",
    "X:10", "IX:9",
    "V:5", "IV:4", "I:1");
    	           
+# <STDIN> ကို သုံးထားတာမို့ input data ကို ဖိုင်ကနေလည်း ဖတ်ခိုင်းလို့ ရသလို standard input အနေနဲ့လည်း (ဥပမာ pipe နဲ့ လက်ဆင့်ကမ်းတာမျိုး) pass လုပ်ပေးလို့ ရပါတယ်။  
 foreach my $line ( <STDIN> ) {
    chomp($line); my $inputRo = $line;
    my $bamarNo=0;
