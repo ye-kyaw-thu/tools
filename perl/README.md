@@ -168,6 +168,9 @@
 55. [mypos2json.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mypos2json.pl)  
     (POS tagged corpus ဖြစ်တဲ့ [myPOS](https://github.com/ye-kyaw-thu/myPOS) ဖိုင်ကနေ json format အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ perl scriptပါ။)  
     
+56. [roman2myno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/roman2myno.pl)  
+    (ရိုမန်နံပါတ်တွေကနေ ဗမာနံပါတ်တွေ အဖြစ် ပြောင်းဖို့အတွက်အသုံးဝင်ပါလိမ့်မယ်။ ဥပမာ MMX = ၂၀၁၀ )  
+    
     
     
     
