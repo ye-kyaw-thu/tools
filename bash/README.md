@@ -286,3 +286,7 @@ KidBright board သုံးပုံသုံးနည်း tutorial video တ
 93. [count-csv-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-csv-fields.sh)  
 CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်နှစ်ခု ရှိသလဲ ဆိုတာကို ရေတွက်ဖို့ ရေးခဲ့တဲ့ shell script ပါ။  
 
+94. [sylbreak-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-gui.sh)  
+(zenity ကို သုံးပြီးတော့ shell script မှာ GUI ကိုလွယ်လွယ်ကူကူနဲ့ လုပ်နိုင်ကြောင်း ရေးပြထားတာပါ။ ဥပမာ အနေနဲ့ ဗမာစာလုံးတွေကို syllable breaking လုပ်ဖို့အတွက် GUI သုံးတာကို လုပ်ပြထားပါတယ်။)  
+
+
