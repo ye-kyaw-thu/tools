@@ -28,9 +28,10 @@ aThat="်"
 inputStr=$(zenity --entry \
    --title="Add new profile" \
    --text="Enter name of new profile:" \
+   --width=700 --height=30 \
    --entry-text "NewProfile");
 if [ ! -z "$inputStr" ]
 then
-   echo $inputStr | sed "s/ //g;" | perl -CSDA -Mutf8 -e ' while(<STDIN>){$_ =~ s/($ARGV[0])/$ARGV[1]$1/g; print $_;}' "((?<!$ssSymbol)[$myConsonant](?![$aThat$ssSymbol])|[$enChar$otherChar])" $sepOption
+   echo $inputStr | sed "s/ //g;" | perl -CSDA -Mutf8 -e ' while(<STDIN>){$_ =~ s/($ARGV[0])/$ARGV[1]$1/g; print $_;}' "((?<!$ssSymbol)[$myConsonant](?![$aThat$ssSymbol])|[$enChar$otherChar])" $sepOption | xargs -L1 -I %  zenity --info --text=% --width=700 --height=300
    else echo "No text entered"
 fi
