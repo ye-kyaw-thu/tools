@@ -103,6 +103,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 91. [add-dummy-word-mk-csv.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/add-dummy-word-mk-csv.sh)  
 92. [kidbright-burmese-transcription.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/kidbright-burmese-transcription.sh)  
 93. [count-csv-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-csv-fields.sh)  
+94. [sylbreak-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-gui.sh)  
 
 # perl
 
