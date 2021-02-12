@@ -5748,7 +5748,7 @@ fi
 အရင်ဆုံး $inputStr ထဲမှာ ရှိတဲ့ ဗမာစာကြောင်းကို pipe ခံပြီး sed command ကို pass လုပ်ပါတယ်။  
 sed command က အဲဒီဗမာစာကြောင်းထဲမှာ ရှိတဲ့ space တွေကို အကုန်ဖျက်ပစ်ပါတယ်။ မဖျက်ရင်လည်း syllable breaking က အလုပ်လုပ်ပေးပေမဲ့ output မှာ space တွေပါ ရောပါနေလို့ပါ။  
 ပြီးတော့မှာ perl one liner command ဆီကို လက်ဆင့်ကမ်းပါတယ်။  
-$ARGV[0] နေရာမှာ ဝင်လာမှာက ((?<!$ssSymbol)[$myConsonant](?![$aThat$ssSymbol])|[$enChar$otherChar])" ဆိုတဲ့ Regular Expression ပါ။ ဒီ RE ကတော့ Unicode encoding နဲ့ သိမ်းထားတဲ့ ဗမာစာကြောင်းတွေကို syllable detection လုပ်မယ့် RE grammar ပါပဲ။ အသေးစိတ်က [sylbreak](https://github.com/ye-kyaw-thu/sylbreak) မှာ ဝင်ရောက်လေ့လာပါ။ ယူဇာက ရိုက်ထည့်လိုက်တဲ့ ဗမာစာကြောင်းထဲကမှ အဲဒီ sylbreak RE condition နဲ့ ညီရင်တော့ $ARGV[1] နေရာမှာ $sepOption variable ဖြစ်တဲ့ "|" (pipe character) ခံပေးပြီး matched ဖြစ်တဲ့ စာလုံးတွဲ $1 နဲ့အတူ အစားထိုးမှာ ဖြစ်ပါတယ်။ ဒီရှင်းပြထားတာကတော့ RE အခြေခံ knowledge ရှိမှပဲ နားလည်လွယ်ပါလိမ့်မယ်။  
+$ARGV[0] နေရာမှာ ဝင်လာမှာက ```((?<!$ssSymbol)[$myConsonant](?![$aThat$ssSymbol])|[$enChar$otherChar])``` ဆိုတဲ့ Regular Expression ပါ။ ဒီ RE ကတော့ Unicode encoding နဲ့ သိမ်းထားတဲ့ ဗမာစာကြောင်းတွေကို syllable detection လုပ်မယ့် RE grammar ပါပဲ။ အသေးစိတ်က [sylbreak](https://github.com/ye-kyaw-thu/sylbreak) မှာ ဝင်ရောက်လေ့လာပါ။ ယူဇာက ရိုက်ထည့်လိုက်တဲ့ ဗမာစာကြောင်းထဲကမှ အဲဒီ sylbreak RE condition နဲ့ ညီရင်တော့ ```$ARGV[1]``` နေရာမှာ ```$sepOption``` variable ဖြစ်တဲ့ "|" (pipe character) ခံပေးပြီး matched ဖြစ်တဲ့ စာလုံးတွဲ $1 နဲ့အတူ အစားထိုးမှာ ဖြစ်ပါတယ်။ ဒီရှင်းပြထားတာကတော့ RE အခြေခံ knowledge ရှိမှပဲ နားလည်လွယ်ပါလိမ့်မယ်။  
 
 run တာကတော့ command prompt မှာ အောက်ပါအတိုင်း ရိုက်ထည့်ပြီး enter ခေါက်ရုံပါပဲ။  
 ```
