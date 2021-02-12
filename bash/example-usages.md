@@ -5762,7 +5762,7 @@ bash ./sylbreak-gui.sh
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180" /></p>  
 <p align="center">Fig.Text entry dialogue of zenity</p>
 
-ကိုယ် syllable ဖြတ်ချင်တဲ့ စာကြောင်း တစ်ကြောင်းကို ရိုက်ထည့်တာဖြစ်ဖြစ်၊ တနေရာရာက ကောပီကူးပြီးတော့ paste လုပ်တာဖြစ်ဖြစ်လုပ်ပါ။  
+ကိုယ် syllable ဖြတ်ချင်တဲ့ စာကြောင်း တစ်ကြောင်းကို ရိုက်ထည့်တာဖြစ်ဖြစ်၊ တနေရာရာက ကော်ပီကူးပြီးတော့ paste လုပ်တာဖြစ်ဖြစ်လုပ်ပါ။  
 (လက်ရှိ စာကြောင်းကတော့ BBC Burmese site ရဲ့ သတင်းဆောင်းပါး တစ်ခုကနေ ယူလာတာ ဖြစ်ပါတယ်။)  
 
 <p align="center">
