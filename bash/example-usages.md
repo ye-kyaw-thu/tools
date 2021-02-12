@@ -5714,10 +5714,10 @@ $ ./count-csv-fields.sh ./train.csv
 
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180"/>
-<p align="center"> Fig.  </p>  
+<p align="center"> Fig. Text entry dialogue of zenity </p>  
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/paste-bamar-text-sylbeak-gui.png" alt="Visualization of sylbreak RE" width="720x180"/>
-<p align="center"> Fig. Visualization of sylbreak RE </p>  
+<p align="center"> Fig. Type some Burmese text </p>  
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output-of-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="804x355"/>
-<p align="center"> Fig. Visualization of sylbreak RE </p>  
+<p align="center"> Fig. Syllable breaked input Burmese text </p>  
