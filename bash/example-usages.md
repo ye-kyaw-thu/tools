@@ -5713,16 +5713,16 @@ $ ./count-csv-fields.sh ./train.csv
 အခုအချိန်ထိ command line မှာပဲ bash shell script တွေ သုံးပုံသုံးနည်းကို ပြသခဲ့တာဖြစ်ပေမဲ့ GUI နဲ့ ပတ်သက်ပြီး မရေးပြခဲ့ဘူးလို့ ထင်ပါတယ်။ အဲဒါကြောင့် ဒီ ပရိုဂရမ်နံပါတ် ၉၄ မှာတော့ zenity ကို သုံးပြီး bash script ထဲကနေ GUI ထည့်သုံးတာကို ရေးပြထားပါတယ်။ [sylbreak.sh](https://github.com/ye-kyaw-thu/sylbreak/blob/master/shell/sylbreak.sh) ရဲ့ code ကို ဝင်ပြင်ထားပြီး GUI နဲ့ user text input ကို လက်ခံပြီး ဗမာစာကြောင်းတွေကို syllable လုပ်တဲ့ task အနေနဲ့ လုပ်ပြထားပါတယ်။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180" />
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180" />  
 Fig.Text entry dialogue of zenity  
 </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/paste-bamar-text-sylbeak-gui.png" alt="Visualization of sylbreak RE" width="720x180" />
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/paste-bamar-text-sylbeak-gui.png" alt="Visualization of sylbreak RE" width="720x180" />  
 Fig.Type some Burmese text  
 </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output-of-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="804x355" />
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output-of-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="804x355" />  
 Fig.Syllable breaked input Burmese text  
 </p>
