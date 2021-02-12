@@ -5712,15 +5712,69 @@ $ ./count-csv-fields.sh ./train.csv
 
 အခုအချိန်ထိ command line မှာပဲ bash shell script တွေ သုံးပုံသုံးနည်းကို ပြသခဲ့တာဖြစ်ပေမဲ့ GUI နဲ့ ပတ်သက်ပြီး မရေးပြခဲ့ဘူးလို့ ထင်ပါတယ်။ အဲဒါကြောင့် ဒီ ပရိုဂရမ်နံပါတ် ၉၄ မှာတော့ zenity ကို သုံးပြီး bash script ထဲကနေ GUI ထည့်သုံးတာကို ရေးပြထားပါတယ်။ [sylbreak.sh](https://github.com/ye-kyaw-thu/sylbreak/blob/master/shell/sylbreak.sh) ရဲ့ code ကို ဝင်ပြင်ထားပြီး GUI နဲ့ user text input ကို လက်ခံပြီး ဗမာစာကြောင်းတွေကို syllable လုပ်တဲ့ task အနေနဲ့ လုပ်ပြထားပါတယ်။  
 
+ကိုယ့်စက်ထဲမှာ zenity ကို ထည့်ထားမှဖြစ်ပါမယ်။ တကယ်လို့ မရှိသေးရင်တော့ Ubuntu Linux OS မှာဆိုရင် "sudo apt install zenity" နဲ့ installation အရင်လုပ်ရပါမယ်။  
+
+တကယ်တမ်း user က ရိုက်ထည့်ပေးမယ့် text entry GUI ပေါ်ဖို့အတွက်က zenity မှာက အောက်ပါအတိုင်း ရေးပါတယ်။   
+
+```
+zenity --entry \
+   --title="Syllable Breaking GUI ဒီမို" \
+   --text="ဗမာ စာကြောင်းရိုက်ထည့်ပါ။ " \
+   --width=700 --height=30 \
+   --entry-text "ဒီနေရာမှာ ဗမာစာကြောင်း တစ်ကြောင်း ရိုက်ထည့်ကြည့်ပါ"
+```
+
+အဲဒါကိုမှ၊ user က ရိုက်ထည့်ပြီး ဝင်လာတဲ့ စာကြောင်းကို inputStr ဆိုတဲ့ bash variable အနေနဲ့ လက်ခံဖို့အတွက် အောက်ပါအတိုင်း variable=$(command) ဆိုတဲ့ bash syntax ကိုသုံးပြီး ရေးထားပါတယ်။  
+
+```
+inputStr=$(zenity --entry \
+   --title="Syllable Breaking GUI ဒီမို" \
+   --text="ဗမာ စာကြောင်းရိုက်ထည့်ပါ။ " \
+   --width=700 --height=30 \
+   --entry-text "ဒီနေရာမှာ ဗမာစာကြောင်း တစ်ကြောင်း ရိုက်ထည့်ကြည့်ပါ");
+```
+
+ရိုက်ထဲ့ပြီးဝင်လာတဲ့ $inputStr variable ကိုမှ empty string လုပ်မဟုတ် if နဲ့ စစ်ပြီး condition ပြေလည်ရင် အောက်မှာ မြင်ရတဲ့အတိုင်း commnad တွဲကြီးကို run ပေးပါတယ်။  
+
+```
+if [ ! -z "$inputStr" ]
+then
+   echo $inputStr | sed "s/ //g;" | perl -CSDA -Mutf8 -e ' while(<STDIN>){$_ =~ s/($ARGV[0])/$ARGV[1]$1/g; print $_;}' "((?<!$ssSymbol)[$myConsonant](?![$aThat$ssSymbol])|[$enChar$otherChar])" $sepOption | xargs -L1 -I %  zenity --info --title="Sylbreak Output" --text=% --width=700 --height=300
+   else echo "No text entered"
+fi
+```
+
+အလုပ်လုပ်ပုံ အဆင့်ဆင့်ကတော့  
+အရင်ဆုံး $inputStr ထဲမှာ ရှိတဲ့ ဗမာစာကြောင်းကို pipe ခံပြီး sed command ကို pass လုပ်ပါတယ်။  
+sed command က အဲဒီဗမာစာကြောင်းထဲမှာ ရှိတဲ့ space တွေကို အကုန်ဖျက်ပစ်ပါတယ်။ မဖျက်ရင်လည်း syllable breaking က အလုပ်လုပ်ပေးပေမဲ့ output မှာ space တွေပါ ရောပါနေလို့ပါ။  
+ပြီးတော့မှာ perl one liner command ဆီကို လက်ဆင့်ကမ်းပါတယ်။  
+$ARGV[0] နေရာမှာ ဝင်လာမှာက ((?<!$ssSymbol)[$myConsonant](?![$aThat$ssSymbol])|[$enChar$otherChar])" ဆိုတဲ့ Regular Expression ပါ။ ဒီ RE ကတော့ Unicode encoding နဲ့ သိမ်းထားတဲ့ ဗမာစာကြောင်းတွေကို syllable detection လုပ်မယ့် RE grammar ပါပဲ။ အသေးစိတ်က [sylbreak](https://github.com/ye-kyaw-thu/sylbreak) မှာ ဝင်ရောက်လေ့လာပါ။ ယူဇာက ရိုက်ထည့်လိုက်တဲ့ ဗမာစာကြောင်းထဲကမှ အဲဒီ sylbreak RE condition နဲ့ ညီရင်တော့ $ARGV[1] နေရာမှာ $sepOption variable ဖြစ်တဲ့ "|" (pipe character) ခံပေးပြီး matched ဖြစ်တဲ့ စာလုံးတွဲ $1 နဲ့အတူ အစားထိုးမှာ ဖြစ်ပါတယ်။ ဒီရှင်းပြထားတာကတော့ RE အခြေခံ knowledge ရှိမှပဲ နားလည်လွယ်ပါလိမ့်မယ်။  
+
+run တာကတော့ command prompt မှာ အောက်ပါအတိုင်း ရိုက်ထည့်ပြီး enter ခေါက်ရုံပါပဲ။  
+```
+bash ./sylbreak-gui.sh
+```
+
+အဲဒါဆိုရင် အောက်ပါအတိုင်း text entry dialogue box ကို မြင်ရပါလိမ့်မယ်။  
+လက်ရှိ text entry box မှာ မြင်နေရတဲ့ စာကြောင်းက default အနေနဲ့ ပေါ်အောင် zenity command မှာ --text="ဗမာ စာကြောင်းရိုက်ထည့်ပါ။ " ဆိုပြီး --text option ကို assign လုပ်ထားတာကြောင့်ပါ။  
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180" /></p>  
 <p align="center">Fig.Text entry dialogue of zenity</p>
+
+ကိုယ် syllable ဖြတ်ချင်တဲ့ စာကြောင်း တစ်ကြောင်းကို ရိုက်ထည့်တာဖြစ်ဖြစ်၊ တနေရာရာက ကောပီကူးပြီးတော့ paste လုပ်တာဖြစ်ဖြစ်လုပ်ပါ။  
+(လက်ရှိ စာကြောင်းကတော့ BBC Burmese site ရဲ့ သတင်းဆောင်းပါး တစ်ခုကနေ ယူလာတာ ဖြစ်ပါတယ်။)  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/paste-bamar-text-sylbeak-gui.png" alt="Visualization of sylbreak RE" width="720x180" /></p>
   
 <p align="center">Fig.Type some Burmese text</p>
 
+OK Button ကို နှိပ်လိုက်ရင်တော့ အောက်ပါအတိုင်း syllable ဖြတ်ပြီးသား စာကြောင်း output ကို dialouge box အနေနဲ့ ပြပေးပါလိမ့်မယ်။  
+Text box အနေနဲ့ ပြပေးစေချင်ရင်လည်း text box အနေနဲ့ ပြခိုင်းလို့ ရပါတယ်။ ဒီနေရာမှာ တမင်တကာ information box လိုမျိုး သုံးပြထားတာ ဖြစ်ပါတယ်။  
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output-of-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="804x355" /></p>  
 <p align="center">Fig.Syllable breaked input Burmese text</p>
+
+
