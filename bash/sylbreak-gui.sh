@@ -5,6 +5,7 @@
 ## Usage: bash ./sylbreak-gui.sh
 ## Written by Ye Kyaw Thu, LST, NECTEC, Thailand
 ## Reference for the syllable breaking Regular Expression: https://github.com/ye-kyaw-thu/sylbreak
+## Date: 12 Feb 2021
 ##
 ## Reference for the zenity GUI:
 ## https://www.howtogeek.com/107537/how-to-make-simple-graphical-shell-scripts-with-zenity-on-linux/
