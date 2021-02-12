@@ -5711,6 +5711,13 @@ $ ./count-csv-fields.sh ./train.csv
 ## 94. [sylbreak-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-gui.sh)  
 
 အခုအချိန်ထိ command line မှာပဲ bash shell script တွေ သုံးပုံသုံးနည်းကို ပြသခဲ့တာဖြစ်ပေမဲ့ GUI နဲ့ ပတ်သက်ပြီး မရေးပြခဲ့ဘူးလို့ ထင်ပါတယ်။ အဲဒါကြောင့် ဒီ ပရိုဂရမ်နံပါတ် ၉၄ မှာတော့ zenity ကို သုံးပြီး bash script ထဲကနေ GUI ထည့်သုံးတာကို ရေးပြထားပါတယ်။ [sylbreak.sh](https://github.com/ye-kyaw-thu/sylbreak/blob/master/shell/sylbreak.sh) ရဲ့ code ကို ဝင်ပြင်ထားပြီး GUI နဲ့ user text input ကို လက်ခံပြီး ဗမာစာကြောင်းတွေကို syllable လုပ်တဲ့ task အနေနဲ့ လုပ်ပြထားပါတယ်။  
+<style type="text/css">
+.centerImage
+{
+ text-align:center;
+ display:block;
+}
+</style>
 
 <p style="text-align:center;">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180" />
