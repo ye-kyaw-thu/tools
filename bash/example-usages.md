@@ -5827,7 +5827,7 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 ပထမဆုံးအနေနဲ့ textbox က popup ဖြစ်လာပြီး၊ အဲဒီ textbox မှာ espeak က အသံထွက်ပေးစေချင်တဲ့ အင်္ဂလိပ် စာကြောင်းကို အောက်မှာ ဥပမာ ပြထားသလိုမျိုး ရိုက်ထည့်ပါ။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui-1.png" alt="espeak GUI" width="804x355" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui-1.png" alt="espeak GUI" width="520x163" /></p>  
 <p align="center">Fig. Zenity textbox for espeak</p>
 
 အဲဒါဆိုရင် espeak က "bash script is the best" ဆိုပြီး အသံထွက်ပေးပါလိမ့်မယ်။  
@@ -5835,6 +5835,6 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 "espeak" ဆိုတဲ့ button ကို ကလစ်နှိပ်လိုက်ရင်တော့ ဆက် run မှာ ဖြစ်ပြီး တကယ်လို့ "Quit" ဆိုတဲ့ button ကို နှိပ်လိုက်မှသာ looping ကနေ ထွက်ပြီး ပရိုဂရမ်ကရပ်သွားမှာ ဖြစ်ပါတယ်။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui-2.png" alt="espeak GUI" width="804x355" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui2.png" alt="espeak GUI" width="218x175" /></p>  
 <p align="center">Fig. Zenity information dialogue</p>
 
