@@ -5778,3 +5778,7 @@ Text box အနေနဲ့ ပြပေးစေချင်ရင်လည်�
 <p align="center">Fig.Syllable breaked input Burmese text</p>
 
 
+## 95. [espeak-and-zenity.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/espeak-and-zenity.sh)  
+
+[espeak](http://espeak.sourceforge.net/) လိုခေါ်တဲ့ formant synthesis နည်းပညာကို သုံးထားတဲ့ text to speak ပရိုဂရမ် အသေးလေး တစ်ခု ရှိပါတယ်။ quality ကတော့ သဘာဝအသံလိုမျိုး မဟုတ်ပဲ ဟိုးအရင်က ရုပ်ရှင်တွေထဲမှာ စက်ရုပ်က စကားပြောတဲ့ အသံလိုပဲ ထွက်ပေးနိုင်ပါတယ်။ ဘာသာပေါင်း တော်တော်များများကို support လုပ်ပါတယ်။ သို့သော် လက်ရှိ ဗမာစာအတွက် မရှိသေးလို့ ကျွန်တော် experiment တစ်ခုအနေနဲ့ လုပ်ဖြစ်ခဲ့ပေမဲ့ အများသုံးလို့ ရအောင် share တော့ မလုပ်ဖြစ်သေးပါဘူး။ ဒီနေရာမှာတော့ အဲဒီ espeak နဲ့ zenity GUI ကို တွဲပြီး သုံးပြထားတဲ့ bash script ဖြစ်ပါတယ်။  
+
