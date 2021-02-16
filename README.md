@@ -104,6 +104,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 92. [kidbright-burmese-transcription.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/kidbright-burmese-transcription.sh)  
 93. [count-csv-fields.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/count-csv-fields.sh)  
 94. [sylbreak-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-gui.sh)  
+95. [espeak-and-zenity.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/espeak-and-zenity.sh)  
 
 # perl
 
