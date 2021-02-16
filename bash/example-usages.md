@@ -5759,14 +5759,14 @@ bash ./sylbreak-gui.sh
 လက်ရှိ text entry box မှာ မြင်နေရတဲ့ စာကြောင်းက default အနေနဲ့ ပေါ်အောင် zenity command မှာ --text="ဗမာ စာကြောင်းရိုက်ထည့်ပါ။ " ဆိုပြီး --text option ကို assign လုပ်ထားတာကြောင့်ပါ။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="720x180" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/popup-entry-dialogue-sylbreak-gui.png" alt="sylbreak-gui" width="720x180" /></p>  
 <p align="center">Fig.Text entry dialogue of zenity</p>
 
 ကိုယ် syllable ဖြတ်ချင်တဲ့ စာကြောင်း တစ်ကြောင်းကို ရိုက်ထည့်တာဖြစ်ဖြစ်၊ တနေရာရာက ကော်ပီကူးပြီးတော့ paste လုပ်တာဖြစ်ဖြစ်လုပ်ပါ။  
 (လက်ရှိ စာကြောင်းကတော့ BBC Burmese site ရဲ့ သတင်းဆောင်းပါး တစ်ခုကနေ ယူလာတာ ဖြစ်ပါတယ်။)  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/paste-bamar-text-sylbeak-gui.png" alt="Visualization of sylbreak RE" width="720x180" /></p>
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/paste-bamar-text-sylbeak-gui.png" alt="sylbreak-gui" width="720x180" /></p>
   
 <p align="center">Fig.Type some Burmese text</p>
 
@@ -5774,11 +5774,67 @@ OK Button ကို နှိပ်လိုက်ရင်တော့ အေ�
 Text box အနေနဲ့ ပြပေးစေချင်ရင်လည်း text box အနေနဲ့ ပြခိုင်းလို့ ရပါတယ်။ ဒီနေရာမှာ တမင်တကာ information box လိုမျိုး သုံးပြထားတာ ဖြစ်ပါတယ်။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output-of-sylbreak-gui.png" alt="Visualization of sylbreak RE" width="804x355" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/output-of-sylbreak-gui.png" alt="sylbreak-gui" width="804x355" /></p>  
 <p align="center">Fig.Syllable breaked input Burmese text</p>
 
 
 ## 95. [espeak-and-zenity.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/espeak-and-zenity.sh)  
 
 [espeak](http://espeak.sourceforge.net/) လိုခေါ်တဲ့ formant synthesis နည်းပညာကို သုံးထားတဲ့ text to speak ပရိုဂရမ် အသေးလေး တစ်ခု ရှိပါတယ်။ quality ကတော့ သဘာဝအသံလိုမျိုး မဟုတ်ပဲ ဟိုးအရင်က ရုပ်ရှင်တွေထဲမှာ စက်ရုပ်က စကားပြောတဲ့ အသံလိုပဲ ထွက်ပေးနိုင်ပါတယ်။ ဘာသာပေါင်း တော်တော်များများကို support လုပ်ပါတယ်။ သို့သော် လက်ရှိ ဗမာစာအတွက် မရှိသေးလို့ ကျွန်တော် experiment တစ်ခုအနေနဲ့ လုပ်ဖြစ်ခဲ့ပေမဲ့ အများသုံးလို့ ရအောင် share တော့ မလုပ်ဖြစ်သေးပါဘူး။ ဒီနေရာမှာတော့ အဲဒီ espeak နဲ့ zenity GUI ကို တွဲပြီး သုံးပြထားတဲ့ bash script ဖြစ်ပါတယ်။  
+
+espeak က တကယ်လို့ ကိုယ့်စက်ထဲမှာ မရှိသေးရင်တော့ installation ကို လုပ်ရပါလိမ့်မယ်။ Ubuntu OS မှာဆိုရင်တော့ အောက်ပါလိုမျိုး apt-get ဆိုတဲ့ command နဲ့ လွယ်လွယ်ကူကူ install လုပ်လို့ ရပါတယ်။   
+
+```
+$ sudo apt-get install espeak
+[sudo] password for ye: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  espeak-data libespeak1 libportaudio2
+The following NEW packages will be installed:
+  espeak espeak-data libespeak1 libportaudio2
+0 upgraded, 4 newly installed, 0 to remove and 1 not upgraded.
+Need to get 1,207 kB of archives.
+After this operation, 3,017 kB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://mm.archive.ubuntu.com/ubuntu groovy/universe amd64 libportaudio2 amd64 19.6.0-1.1 [65.3 kB]
+Get:2 http://mm.archive.ubuntu.com/ubuntu groovy/universe amd64 espeak-data amd64 1.48.04+dfsg-8build1 [932 kB]
+Get:3 http://mm.archive.ubuntu.com/ubuntu groovy/universe amd64 libespeak1 amd64 1.48.04+dfsg-8build1 [147 kB]
+Get:4 http://mm.archive.ubuntu.com/ubuntu groovy/universe amd64 espeak amd64 1.48.04+dfsg-8build1 [61.8 kB]
+Fetched 1,207 kB in 4s (278 kB/s) 
+Selecting previously unselected package libportaudio2:amd64.
+(Reading database ... 324620 files and directories currently installed.)
+Preparing to unpack .../libportaudio2_19.6.0-1.1_amd64.deb ...
+Unpacking libportaudio2:amd64 (19.6.0-1.1) ...
+Selecting previously unselected package espeak-data:amd64.
+Preparing to unpack .../espeak-data_1.48.04+dfsg-8build1_amd64.deb ...
+Unpacking espeak-data:amd64 (1.48.04+dfsg-8build1) ...
+Selecting previously unselected package libespeak1:amd64.
+Preparing to unpack .../libespeak1_1.48.04+dfsg-8build1_amd64.deb ...
+Unpacking libespeak1:amd64 (1.48.04+dfsg-8build1) ...
+Selecting previously unselected package espeak.
+Preparing to unpack .../espeak_1.48.04+dfsg-8build1_amd64.deb ...
+Unpacking espeak (1.48.04+dfsg-8build1) ...
+Setting up libportaudio2:amd64 (19.6.0-1.1) ...
+Setting up espeak-data:amd64 (1.48.04+dfsg-8build1) ...
+Setting up libespeak1:amd64 (1.48.04+dfsg-8build1) ...
+Setting up espeak (1.48.04+dfsg-8build1) ...
+Processing triggers for man-db (2.9.3-2) ...
+Processing triggers for libc-bin (2.32-0ubuntu3) ...
+```
+script ကို run တာကတော့ ထုံးစံအတိုင်း ``` bash ./espeak-and-zenity.sh ``` ဆိုပြီး ရိုက် enter ခေါက်ယုံပါပဲ။  
+ပထမဆုံးအနေနဲ့ textbox က popup ဖြစ်လာပြီး၊ အဲဒီ textbox မှာ espeak က အသံထွက်ပေးစေချင်တဲ့ အင်္ဂလိပ် စာကြောင်းကို အောက်မှာ ဥပမာ ပြထားသလိုမျိုး ရိုက်ထည့်ပါ။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui-1.png" alt="espeak GUI" width="804x355" /></p>  
+<p align="center">Fig. Zenity textbox for espeak</p>
+
+အဲဒါဆိုရင် espeak က "bash script is the best" ဆိုပြီး အသံထွက်ပေးပါလိမ့်မယ်။  
+လက်ရှိ ပရိုဂရမ်ကနေထွက်တော့မလား espeak ကို ဆက်သုံးနေမလာ ဆိုတာကို confirmation လုပ်ပေးရပါလိမ့်မယ်။  
+"espeak" ဆိုတဲ့ button ကို ကလစ်နှိပ်လိုက်ရင်တော့ ဆက် run မှာ ဖြစ်ပြီး တကယ်လို့ "Quit" ဆိုတဲ့ button ကို နှိပ်လိုက်မှသာ looping ကနေ ထွက်ပြီး ပရိုဂရမ်ကရပ်သွားမှာ ဖြစ်ပါတယ်။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui-2.png" alt="espeak GUI" width="804x355" /></p>  
+<p align="center">Fig. Zenity information dialogue</p>
 
