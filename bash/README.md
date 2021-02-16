@@ -289,4 +289,9 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 94. [sylbreak-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sylbreak-gui.sh)  
 (zenity ကို သုံးပြီးတော့ shell script မှာ GUI ကိုလွယ်လွယ်ကူကူနဲ့ လုပ်နိုင်ကြောင်း ရေးပြထားတာပါ။ ဥပမာ အနေနဲ့ ဗမာစာလုံးတွေကို syllable breaking လုပ်ဖို့အတွက် GUI သုံးတာကို လုပ်ပြထားပါတယ်။)  
 
+95. [espeak-and-zenity.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/espeak-and-zenity.sh)  
+(espeak ဆိုတာက linux platform မှာ အလွယ်တကူ install လုပ်ပြီး သုံးနိုင်တဲ့ speech synthesizer တစ်ခုပါ။ အဲဒီ espeak ပရိုဂရမ်ဆီကို အသံထွက်ဖတ်ပေးချင်တဲ့ စာကြောင်းကို zenity နဲ့ လက်ခံတာကို ဒီမိုလုပ်ပြထားတာပါ။)  
+
+
+
 
