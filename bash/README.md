@@ -292,6 +292,8 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 95. [espeak-and-zenity.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/espeak-and-zenity.sh)  
 (espeak ဆိုတာက linux platform မှာ အလွယ်တကူ install လုပ်ပြီး သုံးနိုင်တဲ့ speech synthesizer တစ်ခုပါ။ အဲဒီ espeak ပရိုဂရမ်ဆီကို အသံထွက်ဖတ်ပေးချင်တဲ့ စာကြောင်းကို zenity နဲ့ လက်ခံတာကို ဒီမိုလုပ်ပြထားတာပါ။)  
 
+96. [find-edit-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-edit-gui.sh)  
+(ဖိုင်တွေကို find command နဲ့ ရှာပြီး တွေ့တဲ့ ဖိုင်တွေကို zenity GUI ရဲ့ listbox မှာထည့်ပြပြီ၊ ဖိုင်တွေကို တစ်ဖိုင်ချင်ဖွင့်ကြည့်တာ editing လုပ်တာကို နမူနာရေးပြထားပါတယ်။)
 
 
 
