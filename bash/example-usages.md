@@ -5840,6 +5840,21 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 
 ## 96. [find-edit-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-edit-gui.sh)
 
-ဒီ shell script ကတော့ zenity ကို သုံးပြီး list box, file editing, save as dialogue box တွေကို ဘယ်လိုတည်ဆောက်လို့ ရတယ်ဆိုတာကို လက်တွေ့ရေးပြထားတာ ဖြစ်ပါတယ်။  
-shell script ထဲမှာလည်း ဗမာလို comment တွေ သေချာရေးထည့်ပေးထားပါတယ်။ ဒီနေရာမှာတော့ run လိုက်ရင် မြင်ရမယ့် dialogue box တွေကိုပါ ပုံအနေနဲ့ ပြထားတာမို့ shell script နဲ့ zenity တွဲသုံးပြီး အလုပ်လုပ်တဲ့ ပုံစံကို follow လိုက်လို့ လွယ်မယ်လို့ ထင်ပါတယ်။  
+ဒီ shell script ကတော့ zenity ကို သုံးပြီး list box, file editing, save as dialogue box တွေကို ဘယ်လိုတည်ဆောက်လို့ ရတယ်ဆိုတာကို လက်တွေ့ရေးပြထားတာ ဖြစ်ပါတယ်။ shell script ထဲမှာလည်း ဗမာလို comment တွေ သေချာရေးထည့်ပေးထားပါတယ်။ ဒီနေရာမှာတော့ run လိုက်ရင် မြင်ရမယ့် dialogue box တွေကိုပါ ပုံအနေနဲ့ ပြထားတာမို့ shell script နဲ့ zenity တွဲသုံးပြီး အလုပ်လုပ်တဲ့ ပုံစံကို follow လိုက်လို့ လွယ်မယ်လို့ ထင်ပါတယ်။  
 
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/find-output-to-zenity-list.png" alt="listbox GUI" width="520x163" /></p>  
+<p align="center">Fig. Zenity listbox for selecting a file</p>
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/when-you-open-a-file.png" alt="text editor GUI" width="520x163" /></p>  
+<p align="center">Fig. Simple text editor with Zenity </p>
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="520x163" /></p>  
+<p align="center">Fig. Zenity Save As dialogue box</p>
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="520x163" /></p>  
+<p align="center">Fig. Zenity Save As dialogue box</p>
