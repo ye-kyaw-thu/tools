@@ -5842,19 +5842,25 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 
 ဒီ shell script ကတော့ zenity ကို သုံးပြီး list box, file editing, save as dialogue box တွေကို ဘယ်လိုတည်ဆောက်လို့ ရတယ်ဆိုတာကို လက်တွေ့ရေးပြထားတာ ဖြစ်ပါတယ်။ shell script ထဲမှာလည်း ဗမာလို comment တွေ သေချာရေးထည့်ပေးထားပါတယ်။ ဒီနေရာမှာတော့ run လိုက်ရင် မြင်ရမယ့် dialogue box တွေကိုပါ ပုံအနေနဲ့ ပြထားတာမို့ shell script နဲ့ zenity တွဲသုံးပြီး အလုပ်လုပ်တဲ့ ပုံစံကို follow လိုက်လို့ လွယ်မယ်လို့ ထင်ပါတယ်။  
 
+run လိုက်တဲ့အခါမှာ ကိုယ့် shell script ပရိုဂရမ်က လက်ရှိရောက်နေတဲ့ path အောက်မှာရှိတဲ့ .txt နဲ့ ဆုံးတဲ့ ဖိုင်တွေကို listbox ထဲမှာ အောက်ပါအတိုင်း တန်းစီပြီးမြင်ရမှာ ဖြစ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/find-output-to-zenity-list.png" alt="listbox GUI" width="320x251" /></p>  
 <p align="center">Fig. Zenity listbox for selecting a file</p>
 
+ဖိုင်တစ်ဖိုင်ကို ရွေးပြီး ဖွင့်လိုက်ရင် အောက်ပါအတိုင်း text editor screen ကို မြင်ရမှာ ဖြစ်ပြီး၊ ဝင်ပြင်ချင်တာတွေကို ပြင်တာ၊ copy/paste လုပ်တာ၊ စာကြောင်းအသစ် ထပ်ရိုက်တာ စတာတွေကို လုပ်နိုင်မှာ ဖြစ်ပါတယ်။  
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/when-you-open-a-file.png" alt="text editor GUI" width="670x455" /></p>  
 <p align="center">Fig. Simple text editor with Zenity </p>
+
+ပြီးရင် ဖိုင်ကို save လုပ်တာ၊ save as အဖြစ်နဲ့ ဖိုင်နာမည်အသစ်နဲ့ သိမ်းတာမျိုးကိုလည်း လုပ်နိုင်မှာ ဖြစ်ပါတယ်။ အောက်မှာ ပြထားတာက zenity ရဲ့ save as dialogue box ကို ပြသထားတာ ဖြစ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="774x504" /></p>  
 <p align="center">Fig. Zenity Save As dialogue box</p>
 
+တခြားဖိုင်တွေကို ဝင်ပြင်အုံးမှာလား သို့မဟုတ် ဒီ shell script ကို ရပ်တော့မှာလား 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/confirmation-dialogue.png" alt="Using Information Dialogue Box for Confirmation" width="208x175" /></p>  
 <p align="center">Fig. Confirmation dialogue box</p>
