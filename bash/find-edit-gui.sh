@@ -4,6 +4,7 @@
 # written by Ye Kyaw Thu, LST, NECTEC, Thailand
 # last updated: 19 Feb 2021
 # how to run: bash ./find-edit-gui.sh
+# reference link: https://www.barkdull.org/blog/advanced-application-shortcuts-with-zenity
 
 reply=1;
 
@@ -22,7 +23,7 @@ while [ $reply -eq 1 ]; do
       data=$(cat "$filePath");
       # user ကိုတော့ အဲဒီဖိုင်ကို zenity --text-info နဲ့ ဖွင့်ပြပါတယ်။ ပြီးတော့ ပြင်ဆင်မှုတွေလုပ်နိုင်အောင်လို့ --editable ဆိုတဲ့ option ကိုပေးထားပါတယ်။
       newData=$(echo -n "$data" | zenity --text-info --editable --width 650 --height 400)
-      # 
+      # ပြင်ထားတာတွေကို save လုပ်နိုင်အောင် (သို့) တခြား ဖိုင်နာမည် တစ်ခုခုနဲ့ သိမ်းဆည်းနိုင်အောင်လို့ zenity --file-selection ကို သုံးပြထားပါတယ်။
       savePath=$(echo -n "$(zenity --file-selection --filename="$filePath" --save --confirm-overwrite)")
       echo -n "$newData" > $savePath;
    fi
