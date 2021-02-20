@@ -5838,3 +5838,8 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/espeak-gui2.png" alt="espeak GUI" width="218x175" /></p>  
 <p align="center">Fig. Zenity information dialogue</p>
 
+## 96. [find-edit-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-edit-gui.sh)
+
+ဒီ shell script ကတော့ zenity ကို သုံးပြီး list box, file editing, save as dialogue box တွေကို ဘယ်လိုတည်ဆောက်လို့ ရတယ်ဆိုတာကို လက်တွေ့ရေးပြထားတာ ဖြစ်ပါတယ်။  
+shell script ထဲမှာလည်း ဗမာလို comment တွေ သေချာရေးထည့်ပေးထားပါတယ်။ ဒီနေရာမှာတော့ run လိုက်ရင် မြင်ရမယ့် dialogue box တွေကိုပါ ပုံအနေနဲ့ ပြထားတာမို့ shell script နဲ့ zenity တွဲသုံးပြီး အလုပ်လုပ်တဲ့ ပုံစံကို follow လိုက်လို့ လွယ်မယ်လို့ ထင်ပါတယ်။  
+
