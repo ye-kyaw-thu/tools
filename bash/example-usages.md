@@ -5844,17 +5844,17 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/find-output-to-zenity-list.png" alt="listbox GUI" width="520x163" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/find-output-to-zenity-list.png" alt="listbox GUI" width="320x251" /></p>  
 <p align="center">Fig. Zenity listbox for selecting a file</p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/when-you-open-a-file.png" alt="text editor GUI" width="520x163" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/when-you-open-a-file.png" alt="text editor GUI" width="670x455" /></p>  
 <p align="center">Fig. Simple text editor with Zenity </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="520x163" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="774x504" /></p>  
 <p align="center">Fig. Zenity Save As dialogue box</p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/confirmation-dialogue.png" alt="Using Information Dialogue Box for Confirmation" width="520x163" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/confirmation-dialogue.png" alt="Using Information Dialogue Box for Confirmation" width="208x175" /></p>  
 <p align="center">Fig. Confirmation dialogue box</p>
