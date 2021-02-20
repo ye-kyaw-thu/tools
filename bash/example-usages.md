@@ -5856,5 +5856,5 @@ script ကို run တာကတော့ ထုံးစံအတိုင်�
 <p align="center">Fig. Zenity Save As dialogue box</p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="520x163" /></p>  
-<p align="center">Fig. Zenity Save As dialogue box</p>
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/confirmation-dialogue.png" alt="Using Information Dialogue Box for Confirmation" width="520x163" /></p>  
+<p align="center">Fig. Confirmation dialogue box</p>
