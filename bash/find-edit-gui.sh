@@ -26,6 +26,7 @@ while [ $reply -eq 1 ]; do
       # ပုံမှန်အားဖြင့် info dialogue box မှာက OK button တစ်ခုပဲ ပါတာပါ။ ဒီနေရာမှာတော့ အဲဒီ button ကို "Quit" ဆိုပြီး ပေါ်အောင် ပြောင်းထားပါတယ်။
       # ပြီးတော့ --extra-button ဆိုတဲ့ option နဲ့ button အသစ် တစ်ခုကို တိုးယူထားပြီးတော့ "Editor" ဆိုတဲ့ label ကို ထိုးထားတာကို တွေ့ရပါလိမ့်မယ်။
       # Info box မှာ OK button ကို နှိပ်ရင် "0" ဆိုပြီး reply ပြန်မှာ ဖြစ်ပါတယ်။
+      # ထပ်တိုးထားတဲ့ button ကို နှိပ်ရင်တော့ reply variable မှာက "1" ဆိုပြီး ဝင်မှာ ဖြစ်ပါတယ်။
       answer=$(zenity --info --title 'User Confirmation' \
          --text 'Continue or not?' \
          --ok-label 'Quit' \
