@@ -17,8 +17,12 @@ while [ $reply -eq 1 ]; do
 
    if [ "$filePath" != "" ]
    then
+      # ဒီအောက်က လေးကြောင်းကတော့ zenity နဲ့ simple text editor လိုမျိုး သုံးလို့ ရအောင် ရေးထားတဲ့အပိုင်းဖြစ်ပါတယ်။
+      # $filePath ထဲမှာ ရှိနေတဲ့ ဖိုင် ကို cat နဲ့ တစ်ကြောင်းခြင်းစီ ရိုက်ထုတ်ပြီးတော့ data variable ထဲကို ထည့်သိမ်းထားပါတယ်။
       data=$(cat "$filePath");
+      # user ကိုတော့ အဲဒီဖိုင်ကို zenity --text-info နဲ့ ဖွင့်ပြပါတယ်။ ပြီးတော့ ပြင်ဆင်မှုတွေလုပ်နိုင်အောင်လို့ --editable ဆိုတဲ့ option ကိုပေးထားပါတယ်။
       newData=$(echo -n "$data" | zenity --text-info --editable --width 650 --height 400)
+      # 
       savePath=$(echo -n "$(zenity --file-selection --filename="$filePath" --save --confirm-overwrite)")
       echo -n "$newData" > $savePath;
    fi
