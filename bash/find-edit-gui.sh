@@ -6,6 +6,8 @@
 # how to run: bash ./find-edit-gui.sh
 
 reply=1;
+
+# $reply variable က 1 ဖြစ်နေသ၍ ဒီ while loop ထဲကို ဝင်နေမှာ ဖြစ်တယ်
 while [ $reply -eq 1 ]; do
 
    # find command နဲ့ *.txt ဖိုင်တွေကို ရှာပြီး tr command ကို လက်ဆက်ကမ်းမယ်  
@@ -20,6 +22,10 @@ while [ $reply -eq 1 ]; do
       savePath=$(echo -n "$(zenity --file-selection --filename="$filePath" --save --confirm-overwrite)")
       echo -n "$newData" > $savePath;
    fi
+      # confirmation box ကို info dialogue အနေနဲ့ပဲ အလွယ်လုပ်ထားပါတယ်။ တခြား Yes/No box ဘာညာနဲ့ ပြောင်းရေးကြည့်လို့ ရပါတယ်။
+      # ပုံမှန်အားဖြင့် info dialogue box မှာက OK button တစ်ခုပဲ ပါတာပါ။ ဒီနေရာမှာတော့ အဲဒီ button ကို "Quit" ဆိုပြီး ပေါ်အောင် ပြောင်းထားပါတယ်။
+      # ပြီးတော့ --extra-button ဆိုတဲ့ option နဲ့ button အသစ် တစ်ခုကို တိုးယူထားပြီးတော့ "Editor" ဆိုတဲ့ label ကို ထိုးထားတာကို တွေ့ရပါလိမ့်မယ်။
+      # Info box မှာ OK button ကို နှိပ်ရင် "0" ဆိုပြီး reply ပြန်မှာ ဖြစ်ပါတယ်။
       answer=$(zenity --info --title 'User Confirmation' \
          --text 'Continue or not?' \
          --ok-label 'Quit' \
