@@ -5860,7 +5860,8 @@ run လိုက်တဲ့အခါမှာ ကိုယ့် shell script �
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/sav-as-dialogue-of-zenity.png" alt="Save As Dialogue Box" width="774x504" /></p>  
 <p align="center">Fig. Zenity Save As dialogue box</p>
 
-တခြားဖိုင်တွေကို ဝင်ပြင်အုံးမှာလား သို့မဟုတ် ဒီ shell script ကို ရပ်တော့မှာလား 
+တခြားဖိုင်တွေကို ဝင်ပြင်အုံးမှာလား သို့မဟုတ် ဒီ shell script ကို ရပ်တော့မှာလား ဆိုတာကို confirmation လုပ်ဖို့အတွက် info dialogue ကို သုံးထားပြထားတာ ဖြစ်ပါတယ်။  
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/confirmation-dialogue.png" alt="Using Information Dialogue Box for Confirmation" width="208x175" /></p>  
 <p align="center">Fig. Confirmation dialogue box</p>
