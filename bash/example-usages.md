@@ -5870,42 +5870,42 @@ run လိုက်တဲ့အခါမှာ ကိုယ့် shell script �
 SQL database အင်ဂျင်တစ်ခု ဖြစ်တဲ့ sqlite3 ကို zenity GUI နဲ့တွဲပြီး bash script တစ်ပုဒ်အဖြစ် ရေးပြထားတာ ဖြစ်ပါတယ်။ sqlite3 က Linux OS မှာ တွဲပါလာပြီး သီးသန့် database ဆာဗာ ပြင်ဆင်စရာ မလိုတာ၊ ရှုပ်ထွေးတဲ့ configuration setting တွေကိုလည်းလုပ်စရာမလိုလို့ database တစ်ခုကို ချက်ခြင်း လွယ်လွယ်ကူကူနဲ့ တည်ဆောက်ပြီး သုံးနိုင်လို့ (serverless, zero-configuration) ဆိုပြီး နာမည်ကြီးပါတယ်။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash1.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash1.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash2.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash2.png" alt="" width="520x336" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash3.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash3.png" alt="" width="520x336" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash4.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash4.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash5.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash5.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash6.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash6.png" alt="" width="214x174" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash7.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash7.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash8.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash8.png" alt="" width="670x455" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash9.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash9.png" alt="" width="670x455" /></p>  
 <p align="center">Fig. </p>
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash10.png" alt="" width="208x175" /></p>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash10.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. </p>
 
