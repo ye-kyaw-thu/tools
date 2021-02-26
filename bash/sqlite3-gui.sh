@@ -28,9 +28,7 @@ reply=1;
 
 # OK button က zero, ကျန်တဲ့ button တွေအားလုံးက 1 ပဲ return ပြန်တယ်။ အဲဒါကြောင့် 1 ဖြစ်နေသ၍ looping ပတ်ခိုင်းထားတာ...
 while [ $reply -eq 1 ];  do
-#   sqlite3 student.db "SELECT * FROM candidate;" | sed  's/\n/ /g;' | sed 's/|/\n/g;' | zenity --list --title "Language Understanding Lab." --text "Student Database" --column "ID" --column "Name" --column "Age" --column "Research Field" --column "University" --column "Class" --width 800 --height 300 --cancel-label 'Add' --ok-label 'Quit'
 
-#   recno=$(sqlite3 student.db "SELECT * FROM candidate;" | sed  's/\n/ /g;' | sed 's/|/\n/g;' | zenity --list --title "Language Understanding Lab." --text "Student Database" --column "ID" --column "Name" --column "Age" --column "Research Field" --column "University" --column "Class" --width 800 --height 300 --cancel-label 'Add' --ok-label 'Quit' );
    ans=$(sqlite3 student.db "SELECT * FROM candidate;" | sed  's/\n/ /g;' | sed 's/|/\n/g;' | zenity --list --editable --title "Language Understanding Lab." --text "Student Database" --column "ID" --column "Name" --column "Age" --column "Research Field" --column "University" --column "Class" --width 800 --height 400 --ok-label 'Quit' --cancel-label 'Add' --extra-button 'Delete' --extra-button 'Edit' );
    reply=$?; check="${reply}-${ans}"; echo $check;
    
