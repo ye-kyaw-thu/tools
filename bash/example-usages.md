@@ -5873,21 +5873,25 @@ sqlite3-gui.sh ကို run လိုက်တဲ့အခါမှာတော
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash1.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. the main screen of "sqlite3-gui.sh"</p>
 
-အဲဒီ database ထဲကို ကျောင်းသား အသစ်တိုးတာ လုပ်ဖို့အတွက် Add Button, ရှိနေတဲ့ ကျောင်းသားက ကျောင်းပြီးသွားတဲ့အခါမှာ လက်ရှိကျောင်းသားစာရင်းကနေ ဖယ်ဖို့အတွက် Delete Button နဲ့ ရှိပြီးသား ကျောင်းသား/ကျောင်းသူ တွေရဲ့ information ကို အပြောင်းအလဲ လုပ်ဖို့အတွက် Edit Button တွေကို ထည့်ပေးထားပါတယ်။ တစ်ခုရှိတာက Zenity က bash script မှာ GUI ကို အလွယ်အသုံးပြုဖို့အတွက်၊ အခြေခံအလုပ်တွေအတွက်ပဲ ရည်ရွယ်ထားတာမို့ UI ကိစ္စတွေ၊ Button တွေရဲ့ layout တွေကို စိတ်ကြိုက် နေရာချဖို့အတွက် အဆင်သိပ်အပြေကြီးမဟုတ်ပါဘူး။ အဲဒါကြောင့် Quit Button က အမှန်ဆိုရင် ညာဘက်ထောင့်ဆုံးမှာဖြစ်ဖြစ် တခြား button တွေနဲ့ ခွဲထားတာမျိုး လုပ်ချင်ပေမဲ့ လုပ်လို့မရလို့ တခြား operation Button တွေရဲ့ ကြားထဲမှာ ရောက်နေတာကို တွေ့ရပါလိမ့်မယ်။ ဆိုကြပါစို့ ကျောင်းသား အသစ်တစ်ယောက်ရဲ့ record တစ်ခုကို ထည့်ဖို့အတွက် Add Button ကို နှိပ်လိုက်တဲ့အခါမှာတော့ အောက်ပါ Dialogue Box ကို မြင်ရမှာ ဖြစ်ပါတယ်။ bash script ထဲမှာ ရေးထားတဲ့ code ကတော့ ```record=$(zenity --forms --title "New Student Form" --add-entry="Name" --add-entry="Age" --add-entry="Research Field" --add-entry="University" --add-entry="Class" --width 500 -- height 300);``` ဆိုတဲ့ ပုံစံနဲ့ သွားထားတာပါ။   
+အဲဒီ database ထဲကို ကျောင်းသား အသစ်တိုးတာ လုပ်ဖို့အတွက် Add Button, ရှိနေတဲ့ ကျောင်းသားက ကျောင်းပြီးသွားတဲ့အခါမှာ လက်ရှိကျောင်းသားစာရင်းကနေ ဖယ်ဖို့အတွက် Delete Button နဲ့ ရှိပြီးသား ကျောင်းသား/ကျောင်းသူ တွေရဲ့ information ကို အပြောင်းအလဲ လုပ်ဖို့အတွက် Edit Button တွေကို ထည့်ပေးထားပါတယ်။ တစ်ခုရှိတာက Zenity က bash script မှာ GUI ကို အလွယ်အသုံးပြုဖို့အတွက်၊ အခြေခံအလုပ်တွေအတွက်ပဲ ရည်ရွယ်ထားတာမို့ UI ကိစ္စတွေ၊ Button တွေရဲ့ layout တွေကို စိတ်ကြိုက် နေရာချဖို့အတွက် အဆင်သိပ်အပြေကြီးမဟုတ်ပါဘူး။ အဲဒါကြောင့် Quit Button က အမှန်ဆိုရင် ညာဘက်ထောင့်ဆုံးမှာဖြစ်ဖြစ် တခြား button တွေနဲ့ ခွဲထားတာမျိုး လုပ်ချင်ပေမဲ့ လုပ်လို့မရလို့ တခြား operation Button တွေရဲ့ ကြားထဲမှာ ရောက်နေတာကို တွေ့ရပါလိမ့်မယ်။ ဆိုကြပါစို့ ကျောင်းသား အသစ်တစ်ယောက်ရဲ့ record တစ်ခုကို ထည့်ဖို့အတွက် Add Button ကို နှိပ်လိုက်တဲ့အခါမှာတော့ အောက်ပါ Dialogue Box ကို မြင်ရမှာ ဖြစ်ပါတယ်။ bash script ထဲမှာ ရေးထားတဲ့ code ကတော့ ```record=$(zenity --forms --title "New Student Form" --add-entry="Name" --add-entry="Age" --add-entry="Research Field" --add-entry="University" --add-entry="Class" --width 500 -- height 300);``` ဆိုတဲ့ ပုံစံနဲ့ သွားထားတာပါ။    
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash2.png" alt="" width="520x336" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. Zenity form for adding a new student record</p>
+
+ကျောင်းသားအသစ်ရဲ့ သက်ဆိုင်ရာ အချက်အလက်တွေကို ရိုက်ထည့်ပြီးလို့ zenity GUI ရဲ့ OK Button ကို နှိပ်လိုက်ရင်တော့ record variable ထဲကို ရိုက်ထားတဲ့ အချက်အလက်တစ်ခုချင်းစီက ```Ye Kyaw|36|NLP/AI|NECTEC, Thailand|PostDoc``` pipe character နဲ့ ခြားထားတဲ့ ပုံစံအနေနဲ့ ဝင်လာမှာဖြစ်ပါတယ်။ SQLite database ထဲကို မထည့်ခင်မှာတော့ field separator ကို comma စာလုံးနဲ့ အစားထိုးဖို့အတွက် bash script ထဲမှာတော့ ```formattedRecord=$(echo $record | sed "s/|/\',\'/g;" | sed "s/^/\'/" | sed "s/$/\'/");``` ဆိုပြီး sed command ကို သုံးခဲ့ပါတယ်။ အဲဒါကြောင့် တကယ်တမ်း SQLite ထဲကို pass လုပ်တဲ့ record အသစ်ရဲ့ data တွေကတော့ ```'Ye Kyaw','36','NLP/AI','NECTEC, Thailand','PostDoc'``` ဆိုတဲ့ ပုံစံနဲ့ ဖြစ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash3.png" alt="" width="520x336" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. Zenity form after typing information of a new student</p>
+
+OK Button ကို နှိပ်လိုက်ရင်တော့ main GUI ကို ပြန်ရောက်သွားမှာ ဖြစ်ပြီး၊ အသစ်ရိုက်ထည့်လိုက်တဲ့ ကျောင်းသားရဲ့ record လည်း database ထဲကို ရောက်သွားတာကို တွေ့ရပါလိမ့်မယ်။ ကျောင်းသားအသစ်အတွက် ID ကိုလည်း လက်ရှိ ရှိနေတဲ့ database ထဲက ID no. တွေကို အခြေခံပြီး SQLite က အလိုအလျောက် ID no. ကို သတ်မှတ်ပေးသွားမှာ ဖြစ်ပါတယ်။ ဆိုလိုတာက user အနေနဲ့က ID နံပါတ်ကို ပြောင်းတာ သို့မဟုတ် ပြင်ဆင်တာကို လုပ်လို့မရပါဘူး။ အဲဒါကြောင့် ID no. တွေရဲ့ အစီအစဉ်ကလည်း record တွေကို ဖျက်တဲ့၊ တိုးတဲ့အပေါ်ကိုမူတည်ပြီး database ရဲ့အတွင်းမှာ အစီအစဉ်အလိုက် ရှိချင်မှရှိပါလိမ့်မယ်။ အဲဒါတွေကတော့ database မှာ အလုပ်လုပ်ရတာအဆင်ပြေစေရန်အတွက် ID ကို သတ်မှတ်တဲ့ ပုံစံတစ်ခု ဖြစ်တာမို့ SQL, database နဲ့ သက်ဆိုင်တာတွေမို့ ဒီနေရာမှာတော့ အကျယ်မရှင်းပြတော့ပါဘူး။   
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash4.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. the main screen after adding a new student record </p>
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash5.png" alt="" width="820x455" /></p>  
