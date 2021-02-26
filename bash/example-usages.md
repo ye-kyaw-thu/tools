@@ -5865,3 +5865,6 @@ run လိုက်တဲ့အခါမှာ ကိုယ့် shell script �
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/confirmation-dialogue.png" alt="Using Information Dialogue Box for Confirmation" width="208x175" /></p>  
 <p align="center">Fig. Confirmation dialogue box</p>
+
+## 97. [sqlite3-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sqlite3-gui.sh)  
+SQL database အင်ဂျင်တစ်ခု ဖြစ်တဲ့ sqlite3 ကို zenity GUI နဲ့တွဲပြီး bash script တစ်ပုဒ်အဖြစ် ရေးပြထားတာ ဖြစ်ပါတယ်။ sqlite3 က Linux OS မှာ တွဲပါလာပြီး သီးသန့် database ဆာဗာ ပြင်ဆင်စရာ မလိုတာ၊ ရှုပ်ထွေးတဲ့ configuration setting တွေကိုလည်းလုပ်စရာမလိုလို့ database တစ်ခုကို ချက်ခြင်း လွယ်လွယ်ကူကူနဲ့ တည်ဆောက်ပြီး သုံးနိုင်လို့ (serverless, zero-configuration) ဆိုပြီး နာမည်ကြီးပါတယ်။  
