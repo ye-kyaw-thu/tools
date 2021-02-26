@@ -5893,13 +5893,11 @@ OK Button ကို နှိပ်လိုက်ရင်တော့ main GUI
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash4.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. the main screen after adding a new student record </p>
 
-<p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash5.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. </p>
+Delete Button ကို နှိပ်လိုက်ရင်တော့ အောက်မှာပြထားတဲ့ ID Entry form ကို မြင်ရမှာ ဖြစ်ပြီးတော့ ဖျက်ချင်တဲ့ ID နံပါတ်ကို ရိုက်ထည့်ပေးရမှာ ဖြစ်ပါတယ်။ ဥပမာ သဇင် ဆိုတဲ့ ကျောင်းသူက ဒေါက်တာကျမ်းပြုစုတာ ပြီးစီးသွားပြီး၊ ဒေါက်တာဘွဲ့ရရှိပြီးသွားလို့ လက်ရှိ Lab ကျောင်းသားစာရင်းကနေ ဖျက်မယ်ဆိုရင်၊ အဲဒီကျောင်းသူရဲ့ ID no. ဖြစ်တဲ့ 5 ကို ရိုက်ထည့်ပေးရမှာ ဖြစ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash6.png" alt="" width="214x174" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. Form for a record delection</p>
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash7.png" alt="" width="820x455" /></p>  
