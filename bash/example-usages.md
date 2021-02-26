@@ -5899,11 +5899,13 @@ Delete Button ကို နှိပ်လိုက်ရင်တော့ အ�
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash6.png" alt="" width="214x174" /></p>  
 <p align="center">Fig. Form for a record delection</p>
 
-database မှာ record delection operation command ```sqlite3 student.db "DELETE FROM CANDIDATE WHERE ID = $id;"``` က အဆင်ပြေပြေနဲ့ လုပ်ဆောင်နိုင်ခဲ့ရင်တော့ အောက်ပါ screenshot အတိုင်း main GUI ရဲ့ list မှာ ID no. 5 ရဲ့ record က ပျက်သွားတာကို မြင်တွေ့ကြရမှာ ဖြစ်ပါတယ်။ ဒီနေရာမှာ $id ဆိုတဲ့ variable ထဲကိုရောက်လာမှာက user က ရိုက်ထည့်လိုက်တဲ့ ID no. ဖြစ်ပါတယ်။ SQLite command တွေက အင်္ဂလိပ်စာလုံး အကြီးနဲ့ဖြစ်ဖြစ် အသေးနဲ့ ဖြစ်ဖြစ် ရေးလို့ ရပေမဲ့ database မှာ ရေးကြတဲ့ ပုံစံက စာလုံးအကြီးကို သုံးကြတာများလို့ တမင်တကာ စာလုံးအကြီးတွေနဲ့ပဲ သုံးပြထားပါတယ်။   
+database မှာ record delete operation command ```sqlite3 student.db "DELETE FROM CANDIDATE WHERE ID = $id;"``` က အဆင်ပြေပြေနဲ့ လုပ်ဆောင်နိုင်ခဲ့ရင်တော့ အောက်ပါ screenshot အတိုင်း main GUI ရဲ့ list မှာ ID no. 5 ရဲ့ record က ပျက်သွားတာကို မြင်တွေ့ကြရမှာ ဖြစ်ပါတယ်။ ဒီနေရာမှာ $id ဆိုတဲ့ variable ထဲကိုရောက်လာမှာက user က ရိုက်ထည့်လိုက်တဲ့ ID no. ဖြစ်ပါတယ်။ SQLite command တွေက အင်္ဂလိပ်စာလုံး အကြီးနဲ့ဖြစ်ဖြစ် အသေးနဲ့ ဖြစ်ဖြစ် ရေးလို့ ရပေမဲ့ database မှာ ရေးကြတဲ့ ပုံစံက စာလုံးအကြီးကို သုံးကြတာများလို့ တမင်တကာ စာလုံးအကြီးတွေနဲ့ပဲ သုံးပြထားပါတယ်။   
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash7.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. the main screen after delete operation was done</p>
+
+main screen မှာ ရှိတဲ့ Edit button ကို နှိပ်လိုက်ရင်တော့ လက်ရှိ database (ဖိုင်နာမည် student.db) ထဲမှာရှိတဲ့ ကျောင်းသား/ကျောင်းသူ တွေရဲ့ record တွေအားလုံးကို text editor မှာ ပုံမှန် text ဖိုင်လိုမျိုးပြသပေးမှာ ဖြစ်ပါတယ်။ အကြမ်းမျဉ်းအားဖြင့် field တစ်ခုချင်းစီကိုတော့ pipe နဲ့ ခြားပြီး ပြပေးထားတာဖြစ်ပါတယ်။ သို့သော် field တစ်ခုအတွင်းထဲမှာ ရှိနေတဲ့ comma တွေကိုလည်း pipe နဲ့ အစားထိုးပြီး ပြတာမို့ အဲဒီအပိုင်းကိုတော့ ဒေတာတွေကို ဝင်ပြင်တဲ့အခါမှာ ဂရုစိုက်ရမှာ ဖြစ်ပါတယ်။ သို့သော် zenity GUI ကို သုံးပြီး ရေးတဲ့အခါမှာ အခု လိုမျိုး interface က အဆင်အပြေဆုံးလို့ ခန့်မှန်းပြီး ရေးပြထားတာပါ။ ဘာကြောင့်လဲ ဆိုတော့ traditional GUI ပုံစံအတိုင်း record တစ်ခုချင်းစီကိုပဲ Entry form တစ်ခုအနေနဲ့ ပြဖို့ ကြိုးစားကြည့်တဲ့အခါမှာ entry field တွေထဲကို လက်ရှိ ရိုက်ထားတဲ့ ဒေတာတွေကို ဖြည့်ဖို့က facility အနေနဲ့ လုပ်ဖို့ အဆင်မပြေတာကြောင့်ပါ။ တကယ်က Back button, Next button နဲ့လည်း လုပ်ကြည့်ခဲ့ပါသေးတယ်။ အဲဒီလို လုပ်တဲ့အခါမှာ bash ပရိုဂရမ်က စာကြောင်းရေလည်း တော်တော်များသွားပြီး လက်တွေ့ update/debug လုပ်ဖို့အတွက်က သိပ်အဆင်မပြေနိုင်ဘူးလို့ ယူဆတာကြောင့်လည်း ပါပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash8.png" alt="" width="670x455" /></p>  
