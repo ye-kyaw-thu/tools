@@ -5873,7 +5873,7 @@ sqlite3-gui.sh ကို run လိုက်တဲ့အခါမှာတော
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash1.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. the main screen of "sqlite3-gui.sh"</p>
+<p align="center">Fig. The main screen of "sqlite3-gui.sh"</p>
 
 အဲဒီ database ထဲကို ကျောင်းသား အသစ်တိုးတာ လုပ်ဖို့အတွက် Add Button, ရှိနေတဲ့ ကျောင်းသားက ကျောင်းပြီးသွားတဲ့အခါမှာ လက်ရှိကျောင်းသားစာရင်းကနေ ဖယ်ဖို့အတွက် Delete Button နဲ့ ရှိပြီးသား ကျောင်းသား/ကျောင်းသူ တွေရဲ့ information ကို အပြောင်းအလဲ လုပ်ဖို့အတွက် Edit Button တွေကို ထည့်ပေးထားပါတယ်။ တစ်ခုရှိတာက Zenity က bash script မှာ GUI ကို အလွယ်အသုံးပြုဖို့အတွက်၊ အခြေခံအလုပ်တွေအတွက်ပဲ ရည်ရွယ်ထားတာမို့ UI ကိစ္စတွေ၊ Button တွေရဲ့ layout တွေကို စိတ်ကြိုက် နေရာချဖို့အတွက် အဆင်သိပ်အပြေကြီးမဟုတ်ပါဘူး။ အဲဒါကြောင့် Quit Button က အမှန်ဆိုရင် ညာဘက်ထောင့်ဆုံးမှာဖြစ်ဖြစ် တခြား button တွေနဲ့ ခွဲထားတာမျိုး လုပ်ချင်ပေမဲ့ လုပ်လို့မရလို့ တခြား operation Button တွေရဲ့ ကြားထဲမှာ ရောက်နေတာကို တွေ့ရပါလိမ့်မယ်။ ဆိုကြပါစို့ ကျောင်းသား အသစ်တစ်ယောက်ရဲ့ record တစ်ခုကို ထည့်ဖို့အတွက် Add Button ကို နှိပ်လိုက်တဲ့အခါမှာတော့ အောက်ပါ Dialogue Box ကို မြင်ရမှာ ဖြစ်ပါတယ်။ bash script ထဲမှာ ရေးထားတဲ့ code ကတော့ ```record=$(zenity --forms --title "New Student Form" --add-entry="Name" --add-entry="Age" --add-entry="Research Field" --add-entry="University" --add-entry="Class" --width 500 -- height 300);``` ဆိုတဲ့ ပုံစံနဲ့ သွားထားတာပါ။    
 
@@ -5891,7 +5891,7 @@ OK Button ကို နှိပ်လိုက်ရင်တော့ main GUI
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash4.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. the main screen after adding a new student record </p>
+<p align="center">Fig. The main screen after adding a new student record </p>
 
 Delete Button ကို နှိပ်လိုက်ရင်တော့ အောက်မှာပြထားတဲ့ ID Entry form ကို မြင်ရမှာ ဖြစ်ပြီးတော့ ဖျက်ချင်တဲ့ ID နံပါတ်ကို ရိုက်ထည့်ပေးရမှာ ဖြစ်ပါတယ်။ ဥပမာ သဇင် ဆိုတဲ့ ကျောင်းသူက ဒေါက်တာကျမ်းပြုစုတာ ပြီးစီးသွားပြီး၊ ဒေါက်တာဘွဲ့ရရှိပြီးသွားလို့ လက်ရှိ Lab ကျောင်းသားစာရင်းကနေ ဖျက်မယ်ဆိုရင်၊ အဲဒီကျောင်းသူရဲ့ ID no. ဖြစ်တဲ့ 5 ကို ရိုက်ထည့်ပေးရမှာ ဖြစ်ပါတယ်။  
 
@@ -5903,19 +5903,48 @@ database မှာ record delete operation command ```sqlite3 student.db "DELETE
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash7.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. the main screen after delete operation was done</p>
+<p align="center">Fig. The main screen after delete operation was done</p>
 
 main screen မှာ ရှိတဲ့ Edit button ကို နှိပ်လိုက်ရင်တော့ လက်ရှိ database (ဖိုင်နာမည် student.db) ထဲမှာရှိတဲ့ ကျောင်းသား/ကျောင်းသူ တွေရဲ့ record တွေအားလုံးကို text editor မှာ ပုံမှန် text ဖိုင်လိုမျိုးပြသပေးမှာ ဖြစ်ပါတယ်။ အကြမ်းမျဉ်းအားဖြင့် field တစ်ခုချင်းစီကိုတော့ pipe နဲ့ ခြားပြီး ပြပေးထားတာဖြစ်ပါတယ်။ သို့သော် field တစ်ခုအတွင်းထဲမှာ ရှိနေတဲ့ comma တွေကိုလည်း pipe နဲ့ အစားထိုးပြီး ပြတာမို့ အဲဒီအပိုင်းကိုတော့ ဒေတာတွေကို ဝင်ပြင်တဲ့အခါမှာ ဂရုစိုက်ရမှာ ဖြစ်ပါတယ်။ သို့သော် zenity GUI ကို သုံးပြီး ရေးတဲ့အခါမှာ အခု လိုမျိုး interface က အဆင်အပြေဆုံးလို့ ခန့်မှန်းပြီး ရေးပြထားတာပါ။ ဘာကြောင့်လဲ ဆိုတော့ traditional GUI ပုံစံအတိုင်း record တစ်ခုချင်းစီကိုပဲ Entry form တစ်ခုချင်းစီအနေနဲ့ ပြဖို့ ကြိုးစားကြည့်တဲ့အခါမှာ entry field တွေထဲကို လက်ရှိ ရိုက်ထားတဲ့ ဒေတာတွေကို ဖြည့်ဖို့က facility မပေးထားတာနဲ့ လုပ်ဖို့ အဆင်မပြေတာကြောင့်ပါ။ တကယ်က "Back" button, "Next" button ထားပြီး record တစ်ခုချင်းစီကို ပြတဲ့ ပုံစံနဲ့လည်း လုပ်ကြည့်ခဲ့ပါသေးတယ်။ အဲဒီလို လုပ်တဲ့အခါမှာ bash ပရိုဂရမ်က စာကြောင်းရေလည်း တော်တော်များသွားပြီး၊ လက်တွေ့ update/debug လုပ်ဖို့အတွက်က သိပ်အဆင်မပြေနိုင်ဘူးလို့ ယူဆတာကြောင့်လည်း ပါပါတယ်။ အဲဒါကြောင့် တကယ်တမ်း database ကို ဝင်ပြင်ဆင်ကြတဲ့အခါမှာ double quote တွေကိုလည်း အာရုံစိုက်ကြည့်ဖို့ လိုအပ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash8.png" alt="" width="670x455" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. GUI for editing the whole student database</p>
+
+ဥပမာ အနေနဲ့ စောစောက အသစ်တိုးခဲ့တဲ့ ကျောင်းသားရဲ့ research area ကို "NLP/AI" ကနေ "Sign Language Processing" အဖြစ် ရိုက်ပြောင်းကြည့်ကြရအောင်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash9.png" alt="" width="670x455" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. An example of changing the research area "NLP/AI" to "Sign Language Processing"</p>
+
+တကယ်လို့ Editing form မှာ တစ်ခုခုရိုက်ထည့်ပြီး ပြင်ဆင်တာမျိုး လုပ်ထားသည့်တိုင်အောင် "Cancel" Button ကို နှိပ်ရင်တော့ database မှာ ဘာမှအပြောင်းအလဲ ဖြစ်မှာ မဟုတ်ပေမဲ့၊ "OK" Button ကို နှိပ်လိုက်ရင်တော့ Editing Form GUI ကနေ main screen ကို ပြန်ပြောင်းပြတဲ့အခါမှာတော့ အောက်ပါအတိုင်း record ID. 11 ကျောင်းသားရဲ့ research area က update ဖြစ်သွားတာကို တွေ့ရမှာဖြစ်ပါတယ်။  
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash10.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. the main screen after updating/editing ID no. 11</p>
+
+တကယ်က Editing Form မှာက field တစ်ခုချင်းစီကို အပြောင်းအလဲ လုပ်တာတင်သာမကပဲ၊ record တစ်ခုလုံးကိုလည်း ဖျက်ပစ်တာမျိုးလည်း လုပ်လို့ ရပါတယ်။ ဒီနေရာမှာ coding လုပ်တဲ့ ပုံစံက zenity GUI နဲ့ bash နဲ့ sqlite3 တွဲသုံးတာကို အဓိက သင်ပေးချင်တာ ဖြစ်လို့ အရမ်း detail အနုစိတ်ရေးထားတာတော့ မဟုတ်ပါဘူး။ အမှန်ကတော့ SQLite database ထဲက အပြောင်းအလဲ ဖြစ်တဲ့ record ကိုပဲ ဝင်ပြင်တာ၊ ပျောက်သွားတဲ့ record ကိုပဲ delete လုပ်ပေးတာမျိုးကို ပိုကြိုက်ပါတယ်။ အထူးသဖြင့် database ထဲမှာ record တွေက ထောင်နဲ့သောင်းနဲ့ ချီပြီး ရှိနေတဲ့ အခါမျိုးမှာပါ။ လောလောဆယ် ရေးထားတဲ့တော့ bash script ကတော့ Lab တစ်ခုအတွက်ပဲ အကြမ်းစဉ်းစားထားတာမို့ အဆင်ပြေပါလိမ့်မယ်။ ရေးထားတဲ့ ပုံစံက အောက်ပါအတိုင်း ရှိနေတဲ့ database ကို ဖျက်ပစ်ပြီး လုံးဝ အသစ် တစ်ခုအဖြစ် ပြန်ဆောက်လိုက်တဲ့ ပုံစံနဲ့ ရေးထားတာ ဖြစ်ပါတယ်။  
+
+```bash
+      '1-Edit' ) # for editing records
+      # dumping database as CSV format
+      sqlite3 -header -csv ./student.db "select * from candidate;" | tr "," "|" > student.csv
+      # backup the original database
+      # ဒီနေရာမှာ တကယ်လို့ cp မလုပ်ပဲ mv လုပ်ခဲ့ရင် ပြဿနာတစ်ခုဖြစ်လာပါလိမ့်မယ်။ ဘယ်အချိန်မှာလဲ ဆိုရင် user က Cancel button ကို နှိပ်တဲ့အခါမှာပါ။
+      cp ./student.db ./student.backup;
+      data=$(cat ./student.csv);
+      # allow user to edit the whole database as a CSV text file, တစ်ခု သတိထားရမှာက "," ပါတဲ့ field တွေကို double quote အတွင်းမှာ ရေးပေးရပါမယ်
+      # ဘာကြောင့်လည်း ဆိုတော့ database ကိုယ်တိုင်ကလည်း comma နဲ့ field တွေကို ခွဲခြားတာမို့ပါ။
+      newData=$(echo -n "$data" | zenity --text-info --title "Database Editing Form" --editable --width 650 --height 400)
+      rc=$?;
+      if [ $rc -eq 0 ]
+      then
+         echo "$newData" | tr "|" "," > student.csv; # ဒီနေရာမှာ bash script ရဲ့ trick လို့ ပြောရမလား $newData နဲ့ "$newData" နဲ့က မတူပါဘူး
+         #cat student.csv; # just for debugging...
+         # deleting the original student.db database
+         rm student.db;
+         # creating a new database with the updated data
+         sqlite3 -separator ',' student.db ".import student.csv candidate";
+      fi
+```
 
