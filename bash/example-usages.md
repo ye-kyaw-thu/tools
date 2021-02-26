@@ -5867,11 +5867,15 @@ run လိုက်တဲ့အခါမှာ ကိုယ့် shell script �
 <p align="center">Fig. Confirmation dialogue box</p>
 
 ## 97. [sqlite3-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sqlite3-gui.sh)  
-SQL database အင်ဂျင်တစ်ခု ဖြစ်တဲ့ sqlite3 ကို zenity GUI နဲ့တွဲပြီး bash script တစ်ပုဒ်အဖြစ် ရေးပြထားတာ ဖြစ်ပါတယ်။ sqlite3 က Linux OS မှာ တွဲပါလာပြီး သီးသန့် database ဆာဗာ ပြင်ဆင်စရာ မလိုတာ၊ ရှုပ်ထွေးတဲ့ configuration setting တွေကိုလည်းလုပ်စရာမလိုလို့ database တစ်ခုကို ချက်ခြင်း လွယ်လွယ်ကူကူနဲ့ တည်ဆောက်ပြီး သုံးနိုင်လို့ (serverless, zero-configuration) ဆိုပြီး နာမည်ကြီးပါတယ်။  
+SQL database အင်ဂျင်တစ်ခု ဖြစ်တဲ့ sqlite3 ကို zenity GUI နဲ့တွဲပြီး bash script တစ်ပုဒ်အဖြစ် ရေးပြထားတာ ဖြစ်ပါတယ်။ sqlite3 က Linux OS မှာ တွဲပါလာပြီး သီးသန့် database ဆာဗာ ပြင်ဆင်စရာ မလိုတာ၊ ရှုပ်ထွေးတဲ့ configuration setting တွေကိုလည်းလုပ်စရာမလိုလို့ database တစ်ခုကို ချက်ခြင်း လွယ်လွယ်ကူကူနဲ့ တည်ဆောက်ပြီး သုံးနိုင်လို့ (serverless, zero-configuration) ဆိုပြီး နာမည်ကြီးပါတယ်။ ဒီပရိုဂရမ်လိုမျိုးကို ရေးဖို့က SQL database နဲ့ ပတ်သက်တဲ့ အခြေခံ knowledge တော့ရှိရပါလိမ့်မယ်။ sqlite3 ကို အခုမှ စလေ့လာမဲ့သူတွေအတွက်တော့ TutorialsPoint ရဲ့ [SQLite Tutorial](https://www.tutorialspoint.com/sqlite/index.htm) ကို ဖတ်ကြပါလို့ အကြံပေးချင်ပါတယ်။  
+
+sqlite3-gui.sh ကို run လိုက်တဲ့အခါမှာတော့ အောက်ပါ main screen ကို မြင်ရမှာဖြစ်ပါတယ်။ ဥပမာအနေနဲ့ Lab တစ်ခုမှာ သုတေသနပြုလုပ်နေကြတဲ့ ကျောင်းသားစာရင်း database ကိုဆောက်ထားပါတယ်။ Table ကိုတော့ ```CREATE TABLE candidate (id INTEGER PRIMARY KEY, name TEXT NOT NULL, age INTEGER NOT NULL, field CHAR(50), univ CHAR(80), class CHAR(30));``` ဆိုတဲ့ SQL command နဲ့ ဆောက်ထားတာမို့ field ၆ခုပါဝင်ပြီး။ PRIMARY KEY ကတော့ ID ကို ထားထားပါတယ်။ လောလောဆယ်တော့ Lab မှာက ကျောင်းသားက ၁၀ယောက်ရှိတာမို့လို့ အဲဒီ ကျောင်းသား ၁၀ယောက်ရဲ့ နာမည်နဲ့ သက်ဆိုင်ရင် information တွေကို zenity GUI ရဲ့ list box ထဲကို ထည့်ပြထားပါတယ်။   
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash1.png" alt="" width="820x455" /></p>  
 <p align="center">Fig. </p>
+
+အဲဒီ database ထဲကို ကျောင်းသား အသစ်တိုးတာ လုပ်ဖို့အတွက် Add Button, ရှိနေတဲ့ ကျောင်းသားက ကျောင်းပြီးသွားတဲ့အခါမှာ လက်ရှိကျောင်းသားစာရင်းကနေ ဖယ်ဖို့အတွက် Delete Button နဲ့ ရှိပြီးသား ကျောင်းသား/ကျောင်းသူ တွေရဲ့ information ကို အပြောင်းအလဲ လုပ်ဖို့အတွက် Edit Button တွေကို ထည့်ပေးထားပါတယ်။ တစ်ခုရှိတာက Zenity က bash script မှာ GUI ကို အလွယ်အသုံးပြုဖို့အတွက်၊ အခြေခံအလုပ်တွေအတွက်ပဲ ရည်ရွယ်ထားတာမို့ UI ကိစ္စတွေ၊ Button တွေရဲ့ layout တွေကို စိတ်ကြိုက် နေရာချဖို့အတွက် အဆင်သိပ်အပြေကြီးမဟုတ်ပါဘူး။ အဲဒါကြောင့် Quit Button က အမှန်ဆိုရင် ညာဘက်ထောင့်ဆုံးမှာဖြစ်ဖြစ် တခြား button တွေနဲ့ ခွဲထားတာမျိုး လုပ်ချင်ပေမဲ့ လုပ်လို့မရလို့ တခြား operation Button တွေရဲ့ ကြားထဲမှာ ရောက်နေတာကို တွေ့ရပါလိမ့်မယ်။ ဆိုကြပါစို့ ကျောင်းသား အသစ်တစ်ယောက်ရဲ့ record တစ်ခုကို ထည့်ဖို့အတွက် Add Button ကို နှိပ်လိုက်တဲ့အခါမှာတော့ အောက်ပါ Dialogue Box ကို မြင်ရမှာ ဖြစ်ပါတယ်။ bash script ထဲမှာ ရေးထားတဲ့ code ကတော့ ```record=$(zenity --forms --title "New Student Form" --add-entry="Name" --add-entry="Age" --add-entry="Research Field" --add-entry="University" --add-entry="Class" --width 500 -- height 300);``` ဆိုတဲ့ ပုံစံနဲ့ သွားထားတာပါ။   
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash2.png" alt="" width="520x336" /></p>  
