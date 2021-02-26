@@ -5899,9 +5899,11 @@ Delete Button ကို နှိပ်လိုက်ရင်တော့ အ�
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash6.png" alt="" width="214x174" /></p>  
 <p align="center">Fig. Form for a record delection</p>
 
+database မှာ record delection operation command ```sqlite3 student.db "DELETE FROM CANDIDATE WHERE ID = $id;"``` က အဆင်ပြေပြေနဲ့ လုပ်ဆောင်နိုင်ခဲ့ရင်တော့ အောက်ပါ screenshot အတိုင်း main GUI ရဲ့ list မှာ ID no. 5 ရဲ့ record က ပျက်သွားတာကို မြင်တွေ့ကြရမှာ ဖြစ်ပါတယ်။ ဒီနေရာမှာ $id ဆိုတဲ့ variable ထဲကိုရောက်လာမှာက user က ရိုက်ထည့်လိုက်တဲ့ ID no. ဖြစ်ပါတယ်။ SQLite command တွေက အင်္ဂလိပ်စာလုံး အကြီးနဲ့ဖြစ်ဖြစ် အသေးနဲ့ ဖြစ်ဖြစ် ရေးလို့ ရပေမဲ့ database မှာ ရေးကြတဲ့ ပုံစံက စာလုံးအကြီးကို သုံးကြတာများလို့ တမင်တကာ စာလုံးအကြီးတွေနဲ့ပဲ သုံးပြထားပါတယ်။   
+
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash7.png" alt="" width="820x455" /></p>  
-<p align="center">Fig. </p>
+<p align="center">Fig. the main screen after delete operation was done</p>
 
 <p align="center">
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/zenity-sqlite3-bash8.png" alt="" width="670x455" /></p>  
