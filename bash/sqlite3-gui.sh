@@ -28,13 +28,15 @@ reply=1;
 
 # OK button က zero, ကျန်တဲ့ button တွေအားလုံးက 1 ပဲ return ပြန်တယ်။ အဲဒါကြောင့် 1 ဖြစ်နေသ၍ looping ပတ်ခိုင်းထားတာ...
 while [ $reply -eq 1 ];  do
+#   sqlite3 student.db "SELECT * FROM candidate;" | sed  's/\n/ /g;' | sed 's/|/\n/g;' | zenity --list --title "Language Understanding Lab." --text "Student Database" --column "ID" --column "Name" --column "Age" --column "Research Field" --column "University" --column "Class" --width 800 --height 300 --cancel-label 'Add' --ok-label 'Quit'
 
+#   recno=$(sqlite3 student.db "SELECT * FROM candidate;" | sed  's/\n/ /g;' | sed 's/|/\n/g;' | zenity --list --title "Language Understanding Lab." --text "Student Database" --column "ID" --column "Name" --column "Age" --column "Research Field" --column "University" --column "Class" --width 800 --height 300 --cancel-label 'Add' --ok-label 'Quit' );
    ans=$(sqlite3 student.db "SELECT * FROM candidate;" | sed  's/\n/ /g;' | sed 's/|/\n/g;' | zenity --list --editable --title "Language Understanding Lab." --text "Student Database" --column "ID" --column "Name" --column "Age" --column "Research Field" --column "University" --column "Class" --width 800 --height 400 --ok-label 'Quit' --cancel-label 'Add' --extra-button 'Delete' --extra-button 'Edit' );
    reply=$?; check="${reply}-${ans}"; echo $check;
    
    case $check in
       '1-' ) # for adding a new record
-      record=$(zenity --forms --add-entry="Name" --add-entry="Age" --add-entry="Research Field" --add-entry="University" --add-entry="Class" --width 500 -- height 300);
+      record=$(zenity --forms --title "New Student Form" --add-entry="Name" --add-entry="Age" --add-entry="Research Field" --add-entry="University" --add-entry="Class" --width 500 -- height 300);
       formattedRecord=$(echo $record | sed "s/|/\',\'/g;" | sed "s/^/\'/" | sed "s/$/\'/"); 
       echo $formattedRecord;
       sqlite3 student.db "INSERT INTO candidate (name, age, field, univ, class) VALUES ($formattedRecord);"
@@ -52,7 +54,7 @@ while [ $reply -eq 1 ];  do
       data=$(cat ./student.csv);
       # allow user to edit the whole database as a CSV text file, တစ်ခု သတိထားရမှာက "," ပါတဲ့ field တွေကို double quote အတွင်းမှာ ရေးပေးရပါမယ်
       # ဘာကြောင့်လည်း ဆိုတော့ database ကိုယ်တိုင်ကလည်း comma နဲ့ field တွေကို ခွဲခြားတာမို့ပါ။
-      newData=$(echo -n "$data" | zenity --text-info --editable --width 650 --height 400)
+      newData=$(echo -n "$data" | zenity --text-info --title "Database Editing Form" --editable --width 650 --height 400)
       rc=$?;
       if [ $rc -eq 0 ]
       then
@@ -89,4 +91,3 @@ else
    sqlite3 student.db  "INSERT INTO candidate (name, age, field, univ, class) VALUES ('Shwe Sin', 26, 'Text to Speech (TTS)', 'YTU, Myanmar', 'MSc Student');"   
    dumpDB;   
 fi
-
