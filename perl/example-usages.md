@@ -2403,3 +2403,37 @@ I = ၁
 II = ၂
 MMXXI = ၂၀၂၁
 ```
+
+## 57. [bracket-tree2sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bracket-tree2sentence.pl)
+
+Bracket format syntax tree ကနေ ပုံမှန် စာကြောင်းအဖြစ် ပြောင်းဖို့ နမူနာ ရေးပြထားတာပါ။ သုံးပုံသုံးနည်းက အောက်ပါအတိုင်းပါ...  
+input ဖိုင်ထဲမှာက syntax tree အနေနဲ့ ရှိပါတယ်။  
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/paper/wat2021/Thai-Team/report/zar2/5Apr2021/output/script$ cat ./input
+(S We/PRP (VP (V want/VBP)) to/TO (VP (V express/VB)) our/PRP$ thanks/NNS (PP (P on/IN) (NP the/DT good/NN)) ,/, (NP the/DT party/NN) 's/POS (NP fair/NN) ./.)
+(S (NP The/DT contribution/NN) (VP (V is/VBZ)) (VP (V made/VBN)) to/TO (VP (V be/VB)) (VP (V revisioned/VBN)) and/CC (VP (V restrived/VBN)) ./.)
+(S We/PRP will/MD (VP (V work/VB) (PP (P for/IN) (NP the/DT present/NN)) (PP (P of/IN) (NP a/DT hazard/NN)) (PP (P of/IN) (NP the/DT mattery/NN)) (NP fair/NN) ./.)
+(S The/DT first/JJ keepresentations/NNS must/MD (VP (V be/VB)) (VP (V included/VBN)) (P by/IN) minders/NNS ./.)
+(S The/DT four/CD main/JJ instigations/NNS (VP (V were/VBD)) not/RB to/TO (VP (V present/VB)) the/DT investors/NNS (PP (P of/IN) (NP the/DT investment/NN)) ./.)
+(S She/PRP (VP (V is/VBZ)) also/RB (VP (V stailling/VBG) (NP the/DT community/NN)) (P of/IN) the/DT greetings/NNS ./.)
+(S We/PRP (VP (V have/VBP)) (VP (V been/VBN)) (VP (V doing/VBG)) our/PRP$ (NP factively/RB (VP (V prescribed/VBN) (PP (P in/IN) (NP the/DT evillage/NN))) ./.)
+(S And/CC (VP (V was/VBD) (NP a/DT dignity/NN) (PP (P that/IN) (NP the/DT success/NN)) (PP (P of/IN) (NP the/DT endition/NN))) (P of/IN) Myanmar/NNP (NP development/NN) ./.)
+(S It/PRP (VP (V is/VBZ)) also/RB (NP a/DT state/NN) which/WDT (VP (V is/VBZ)) (VP (V inhabited/VBN)) (P by/IN) Kayah/NNP (NP state/NN) which/WDT (VP (V is/VBZ)) (VP (V including/VBG)) (P in/IN) Bafter/RB (PP (P with/IN) (NP a/DT village/NN)) ./.)
+(S (NP The/DT four/CD (NP pression/NN) (VP (V is/VBZ)) (VP (V want/VBN)) to/TO (VP (V read/VB)) their/PRP$ (NP village/NN) (PP (P in/IN) (NP the/DT newster/NN)) ./.)
+```
+bracket-tree2sentence.pl က output အဖြစ် ထုတ်ပေးမှာက word tokenization လုပ်ထားတဲ့ အင်္ဂလိပ်စာကြောင်းပုံစံပါ။  
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/paper/wat2021/Thai-Team/report/zar2/5Apr2021/output/script$ perl ./bracket-tree2sentence.pl ./input
+We want to express our thanks on the good , the party 's fair .
+The contribution is made to be revisioned and restrived .
+We will work for the present of a hazard of the mattery fair .
+The first keepresentations must be included by minders .
+The four main instigations were not to present the investors of the investment .
+She is also stailling the community of the greetings .
+We have been doing our factively prescribed in the evillage .
+And was a dignity that the success of the endition of Myanmar development .
+It is also a state which is inhabited by Kayah state which is including in Bafter with a village .
+The four pression is want to read their village in the newster .
+```
