@@ -28,11 +28,11 @@ while (!eof($inputFILE)) {
         chomp($line);
         my $sentence="";
         
-        # ဝင်လာတဲ့ စာကြောင်းကို space နဲ့ ဖြတ်ချပြီး word ဆိုတဲ့ array ထဲကို ထည့်သိမ်းတယ်
+        # ဝင်လာတဲ့ စာကြောင်းကို space နဲ့ segmentation ဖြတ်ချပြီး word ဆိုတဲ့ array ထဲကို ထည့်သိမ်းတယ်
         my @word = split(" ", $line);
         #print("@word\n");
         
-        # word array တစ်ခုလုံးကို looping ပတ်ပြီး၊ array element တစ်ခုချင်းစီကို token ဆိုတဲ့ variable ထဲကို ထည့်သိမ်းတယ်
+        # word array တစ်ခုလုံးကို looping ပတ်ပြီး၊ array element တစ်ခုချင်းစီကို token ဆိုတဲ့ variable ထဲကို ထည့်သိမ်းပြီး အဲဒီ စာလုံး တစ်လုံးချင်းစီကို ကိုယ်လိုချင်တဲ့ ပုံစံပြောင်းမှာ...
         foreach my $token (@word) {
             # token variable ရဲ့ string မှာ / (slash) ပါတဲ့ စာလုံးတွေဖြစ်မှပဲ if condition အထဲကို ဝင်လိမ့်မယ်၊ ဆက် အလုပ်လုပ်မယ်...
             if ($token =~ /\//) {
