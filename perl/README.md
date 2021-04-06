@@ -171,6 +171,9 @@
 56. [roman2myno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/roman2myno.pl)  
     (ရိုမန်နံပါတ်တွေကနေ ဗမာနံပါတ်တွေ အဖြစ် ပြောင်းဖို့အတွက်အသုံးဝင်ပါလိမ့်မယ်။ ဥပမာ MMX = ၂၀၁၀ )  
     
+57. [bracket-tree2sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bracket-tree2sentence.pl)  
+    (NMT model က နေ ထွက်လာတဲ့ bracket format syntax tree စာကြောင်းတွေကနေ ပုံမှန် စာကြောင်းအဖြစ် conversion လုပ်ဖို့အတွက် ကျောင်းသူကို နမူနာရေးပြခဲ့တဲ့ perl script ပါ)  
+    
     
     
     
