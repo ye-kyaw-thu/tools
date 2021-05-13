@@ -298,3 +298,5 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 97. [sqlite3-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sqlite3-gui.sh)  
 (SQL database အင်ဂျင်တစ်ခု ဖြစ်တဲ့ sqlite3 ကို zenity GUI နဲ့တွဲသုံးတာကို နမူနာရေးပြထားတာပါ။)  
 
+98. [mk-background-transparent.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-background-transparent.sh)  
+(ImageMagick ကို သုံးပြီးတော့ ပုံဖိုင်ရဲ့ background ကို transparent အဖြစ်ပြောင်းပြထားပါတယ်။)  
