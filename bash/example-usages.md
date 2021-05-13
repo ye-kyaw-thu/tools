@@ -5948,3 +5948,13 @@ main screen မှာ ရှိတဲ့ Edit button ကို နှိပ်�
       fi
 ```
 
+## 98. [mk-background-transparent.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-background-transparent.sh)  
+ImageMagick ကို သုံးပြီးတော့ ပုံဖိုင်ရဲ့ background ကို transparent အဖြစ်ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ shell script ပါ။  
+တကယ်တမ်း သုံးဖြစ်ခဲ့တာက ကျောင်းသား တစ်ယောက်အတွက် recommendation letter ကို ရေးပြီး scan ဖတ်ထားတဲ့ လက်မှတ်ကို Winword ဖိုင်မှာထည့်ဖို့အတွက် ပုံဖိုင်ရဲ့ background ကို transparent လုပ်ဖို့အတွက်ပါ။ လက်တွေ့မှာက image ဖိုင်ကို handle လုပ်ရတာက ထင်သလောက်မလွယ်ပါဘူး။ အရေးတကြီးလိုအပ်နေတဲ့အချိန်မှာ ကိုယ်လိုချင်တဲ့အတိုင်း ရဖို့အတွက်က အချိန် တစ်နှစ်ရီလောက် ပေးပြီး convert လုပ်ရတာမျိုးလည်း ရှိတတ်လို့ အသုံးဝင်ပါလိမ့်မယ်။  
+
+ဒီမိုပြဖို့အတွက်က ကိုမင်းကိုနိုင်ရဲ့ လက်မှတ်ပါတဲ့ပုံတစ်ပုံကို အသုံးပြုခဲ့ပါတယ်။ အော်ရဂျင်နယ်ပုံက အောက်ပါအတိုင်းပါ။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/MinKoNaing-Phrase-Original.png" alt="" width="960x493" /></p>  
+<p align="center">Fig. the original image that contained a Burmese phrase of Myanmar student leader Ko Min Ko Naing</p>
+
