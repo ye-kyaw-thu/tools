@@ -5958,3 +5958,15 @@ ImageMagick ကို သုံးပြီးတော့ ပုံဖိုင
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/MinKoNaing-Phrase-Original.png" alt="" width="960x493" /></p>  
 <p align="center">Fig. the original image that contained a Burmese phrase of Myanmar student leader Ko Min Ko Naing</p>
 
+ဒီ script ကို run မယ်ဆိုရင် အောက်ပါအတိုင်း command prompt မှာ ရိုက်ထည့်ပါ။  
+
+```
+$ bash ./mk-background-transparent.sh ./MinKoNaing-Phrase-Original.png
+```
+
+output အနေနဲ့ အောက်ပါ ပုံကို ရရှိပါလိမ့်မယ်။  
+
+<p align="center">
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/bg-transparent.png" alt="" width="960x493" /></p>  
+<p align="center">Fig. the converted image with background transparent</p>
+
