@@ -107,6 +107,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 95. [espeak-and-zenity.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/espeak-and-zenity.sh)  
 96. [find-edit-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find-edit-gui.sh)  
 97. [sqlite3-gui.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sqlite3-gui.sh)  
+98. [mk-background-transparent.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-background-transparent.sh)  
 
 # perl
 
