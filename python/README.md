@@ -34,3 +34,7 @@
 
 11. [en-word-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-word-tokenizer.py)  
 (NLTK library ကို သုံးပြီးတော့ အင်္ဂလိပ်စာ စာကြောင်းတွေကို word tokenization လုပ်တာကို ဥပမာအနေနဲ့ ရေးပြထားတာပါ)  
+
+12. [en-tokenization-on-punctuation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-tokenization-on-punctuation.py)  
+(NLTK library ကို သုံးပြီး အင်္ဂလိပ်စာကြောင်းတွေကို word tokenization လုပ်တဲ့အခါမှာ punctuation symbol တွေကို ဘယ်လို ပုံစံနဲ့ ဖြတ်မလဲ ဆိုတာနဲ့ ပတ်သက်ပြီး ရွေးချယ်လို့ ရကြောင်း ဒီမိုရေးပြထားတာပါ)  
+
