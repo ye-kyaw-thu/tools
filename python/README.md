@@ -32,3 +32,5 @@
 10. [en-sentence-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-sentence-tokenizer.py)  
 (အင်္ဂလိပ်စာ အတွက် NLTK library ကို သုံးပြီး ရေးထားတဲ့ sentence segmenter ပါ)  
 
+11. [en-word-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-word-tokenizer.py)  
+(NLTK library ကို သုံးပြီးတော့ အင်္ဂလိပ်စာ စာကြောင်းတွေကို word tokenization လုပ်တာကို ဥပမာအနေနဲ့ ရေးပြထားတာပါ)  
