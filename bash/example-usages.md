@@ -5970,3 +5970,59 @@ output အနေနဲ့ အောက်ပါ ပုံကို ရရှိ�
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/bash/pic/bg-transparent.png" alt="" width="960x493" /></p>  
 <p align="center">Fig. the converted image with background transparent</p>
 
+## 99. [spelling-checker-with-dict.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/spelling-checker-with-dict.sh)
+Dictionary (i.e. sorted word list) ရှိရင် shell script ရေးပြီး spelling checking အလွယ် လုပ်လို့ ရကြောင်းကို ဒီမိုပြထားတာပါ။  
+အင်္ဂလိပ်စာ အတွက် ဆိုရင်တော့ အောက်ပါ လိုင်းကို comment ဖြုတ်ပြီးသုံးပါ။  
+
+```
+#cat $1 | tr A-Z a-z | tr -c a-z '\n' | sort | uniq | comm -13 dictionary.txt -	
+```
+
+အောက်ပါလိုင်းကတော့ မြန်မာစာအတွက် စမ်းကြည့်ဖို့အတွက် သုံးပါ
+```
+cat $1 | tr A-Z a-z | tr ' ' '\n' | sort | uniq | comm -13 my.dictionary.txt -	
+```
+
+အောက်ပါ English text file ထဲမှာ စာလုံးပေါင်း မှားနေတာတွေ ပါနေပါတယ်။  
+```
+$ cat ./testfile.txt 
+ You have no knowlebge of our countrry.
+ Chicago bleus is a form of blues music developed in Chicago, Illinois.
+ Burma or Myanmmar?
+```
+
+spelling checking လုပ်ကြည့်ရင် အောက်ပါအတိုင်း စာလုံးပေါင်းမှားနေတဲ့ စာလုံးတွေကို ရိုက်ထုတ်ပြပေးပါလိမ့်မယ်။  
+```
+$ ./spelling-checker-with-dict.sh ./testfile.txt 
+
+bleus
+countrry
+knowlebge
+myanmmar
+
+```
+	
+ဒီတစ်ခါတော့ အောက်ပါ မြန်မာစာ text file ကို spelling checking လုပ်ကြည့်ရအောင်။  
+```
+$ cat ./my.testfile 
+ရူပဗေဒ သိပ္ပံ ပညာရှင် နယူတန်
+အင်ဂလိပ် စကား ဖြေးဖြေး ပြော
+မြန်မာ စကား မြန်မြန် ပြော
+အညာသား နဲ့ ကျွန်တော် က သူငယ်ချင်း အရင်းခေါက်ခေါက်
+စာအုပ် စာပေ မြတ်နိုး သူ
+
+```
+
+input လုပ်မယ့် မြန်မာစာ ဖိုင်က word segmentation လုပ်ထားရပါလိမ့်မယ်။
+အလွယ်တကူရနိုင်တဲ့ myG2P dictionary ကိုပဲ သုံးပြီးတော့ spelling checking လုပ်ကြည့်ရင် အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  
+```
+$ ./spelling-checker-with-dict.sh ./my.testfile 
+က
+နယူတန်
+နဲ့
+ပြော
+ဖြေးဖြေး
+မြန်မြန်
+သူ
+အင်ဂလိပ်
+```
