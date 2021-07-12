@@ -369,3 +369,15 @@ $ python ./en-word-tokenizer.py < ./en.sentence.txt
 ['Please', 'keep', 'in', 'touch', '!'] 
 ```
 
+## 12. [en-tokenization-on-punctuation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-tokenization-on-punctuation.py)  
+
+အထက်က ပရိုဂရမ်မှာ သုံးပြခဲ့တဲ့ word_tokenize library က တကယ်က TreebankWordTokenizer class ကို wrapper function အနေနဲ့ ခေါ်သုံးထားတာပါ။ အဲဒီလို မလုပ်ပဲ TreebankWordTokenizer ကိုပဲ တန်းခေါ်ပြီး သုံးလို့လည်း ရပါတယ်။ word tokenized လုပ်ပြီး ထွက်လာတဲ့ output ကတော့ အတူတူပဲ ဖြစ်ပါလိမ့်မယ်။ ဒီ နံပါတ် 12 ပရိုဂရမ်မှာ အဓိက ရေးပြထားတာက အင်္ဂလိပ်ဘာသာရဲ့ punctuation သင်္ကေတတွေကို tokenization လုပ်တဲ့အခါမှာ ပုံစံနှစ်မျိုးနဲ့ tokenize လုပ်လို့ ရကြောင်း၊ output နှစ်မျိုး ဖြစ်နိုင်ကြောင်း ကို ဖြစ်ပါတယ်။   
+
+အောက်ပါ running example မှာ "Don't" နဲ့ "can't" တို့ကို tokenize လုပ်တဲ့အခါမှာ မတူတဲ့ ပုံစံနှစ်မျိုးနဲ့ ဖြတ်ပေးကြောင်းကို မြင်ရမှာ ဖြစ်ပါတယ်။ ကိုယ် လုပ်မယ့် NLP task အပေါ်ကို မူတည်ပြီးတော့ အဆင်ပြေတဲ့ tokenizer ကို ယူသုံးပါ။  
+
+```
+$ echo "Don't do it! I can't stand it!" | python ./en-tokenization-on-punctuation.py 
+Treebank:  ['Do', "n't", 'do', 'it', '!', 'I', 'ca', "n't", 'stand', 'it', '!']
+WordPunct ['Don', "'", 't', 'do', 'it', '!', 'I', 'can', "'", 't', 'stand', 'it', '!']
+```
+
