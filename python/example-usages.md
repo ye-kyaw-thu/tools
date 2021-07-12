@@ -319,7 +319,7 @@ $ python ./en-sentence-tokenizer.py ./en.text.txt
 
 ```
 
-11. [en-word-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-word-tokenizer.py)  
+## 11. [en-word-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-word-tokenizer.py)  
 
 အင်္ဂလိပ်စာ က မြန်မာစာနဲ့ မတူပဲ ရေးကတည်းက စာလုံး တစ်လုံးချင်းစီကို space ခြားပြီး ရေးကြပေမဲ့ NLP အလုပ်တွေကို လုပ်ကြတဲ့အခါမှာ အင်္ဂလိပ်စာကိုလည်း word tokenization လုပ်ဖို့ လိုအပ်ပါတယ်။ NLTK library ကတော့ ကိုယ့်စက်ထဲမှာ installation လုပ်ထားမှ အခု python script က error မပေးပဲ အလုပ်လုပ်သွားပါလိမ့်မယ်။ အောက်ပါ example running လုပ်ထားတာတွေကို လေ့လာပြီး ကိုယ်လိုသလို ပြင်ဆင်ပြီး သုံးသွားကြပါ။  
 
