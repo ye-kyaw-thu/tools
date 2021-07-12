@@ -38,3 +38,5 @@
 12. [en-tokenization-on-punctuation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-tokenization-on-punctuation.py)  
 (NLTK library ကို သုံးပြီး အင်္ဂလိပ်စာကြောင်းတွေကို word tokenization လုပ်တဲ့အခါမှာ punctuation symbol တွေကို ဘယ်လို ပုံစံနဲ့ ဖြတ်မလဲ ဆိုတာနဲ့ ပတ်သက်ပြီး ရွေးချယ်လို့ ရကြောင်း ဒီမိုရေးပြထားတာပါ)  
 
+13. [filter-en-stopwords.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/filter-en-stopwords.py)  
+(အင်္ဂလိပ်စာကြောင်းတွေထဲက stopword တွေကို ဖြုတ်တာကို NLTK library သုံးပြီး လုပ်ပြထားတာပါ)  
