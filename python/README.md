@@ -29,3 +29,6 @@
 9. [plot-unicode-char.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/plot-unicode-char.py)  
 (matplotlib နဲ့ graph ပေါ်မှာ ဗမာစာလုံးတွေချဖို့အတွက် စမ်းရေးခဲ့တဲ့ python script ပါ)  
 
+10. [en-sentence-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-sentence-tokenizer.py)  
+(အင်္ဂလိပ်စာ အတွက် NLTK library ကို သုံးပြီး ရေးထားတဲ့ sentence segmenter ပါ)  
+
