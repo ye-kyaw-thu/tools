@@ -381,3 +381,48 @@ Treebank:  ['Do', "n't", 'do', 'it', '!', 'I', 'ca', "n't", 'stand', 'it', '!']
 WordPunct ['Don', "'", 't', 'do', 'it', '!', 'I', 'can', "'", 't', 'stand', 'it', '!']
 ```
 
+## 13. [filter-en-stopwords.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/filter-en-stopwords.py)  
+
+NLTK library ကို သုံးပြီးတော့ အင်္ဂလိပ်စာကြောင်းတွေထဲက stopword တွေကို filter လုပ်တာကို ဒီမိုရေးပြထားတာပါ။ stopword တွေက တချို့ NLP အလုပ်တွေအတွက် အနှောက်အယှက်ဖြစ်ပါတယ်။ ဥပမာ စာကြောင်း တစ်ကြောင်းချင်းစီရဲ့ အဓိပ္ပါယ်ကို နားလည်အောင် ကြိုးစားဖို့အတွက် ဆောက်တဲ့ မော်ဒယ်တွေအတွက် ဆိုရင် စာကြောင်းတိုင်းလိုလိုမှာ ကြိမ်ဖန်များစွာ ပါဝင်နေတဲ့ stopword တွေကို preprocessing အပိုင်းမှာ အရင်ဆုံး ဖြုတ်လိုက်တာမျိုး လုပ်ကြရပါတယ်။ NLP R&D လုပ်မယ့် ကျောင်းသားတွေက ဒီ stopword ကိစ္စကိုလည်း သိထားသင့်ပါတယ်။  
+
+en.sentence.txt ဆိုတဲ့ ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို အရင်ဆုံး cat command နဲ့ ရိုက်ထုတ်ကြည့်ရအောင်...  
+```
+$ cat ./en.sentence.txt 
+Hello!
+This is Ye.
+I hope you remember me.
+We met at InterSpeech 2019.
+I attended your paper presentation.
+We also discussed about zeroshot ASR.
+Please keep in touch!
+Can't work!
+```
+
+stopword တွေကို filter လုပ်ခိုင်းပြီး ထွက်လာတဲ့ output စာကြောင်းတွေကို လေ့လာကြည့်ရအောင်...  
+```
+$ python ./filter-en-stopwords.py ./en.sentence.txt 
+['Hello', '!']
+['This', 'Ye', '.']
+['I', 'hope', 'remember', '.']
+['We', 'met', 'InterSpeech', '2019', '.']
+['I', 'attended', 'paper', 'presentation', '.']
+['We', 'also', 'discussed', 'zeroshot', 'ASR', '.']
+['Please', 'keep', 'touch', '!']
+['Ca', "n't", 'work', '!']
+```
+
+NLTK library ကို install လုပ်ထားပေမဲ့ ကိုယ့်ရဲ့ စက်ထဲမှာ stopword resource ဖိုင်က download မလုပ်ထားရသေးရင် run တဲ့အခါမှာ error ပေးပါလိမ့်မယ်။ အဲဒီလိုမျိုးဆိုရင် အောက်မှာ လုပ်ပြထားတဲ့အတိုင်း stopword ကို အရင်ဆုံး ကိုယ့်စက်ထဲကို download လုပ်ပြီးမှ run ပါ။  
+
+```
+$ python
+Python 3.7.6 (default, Jan  8 2020, 19:59:22) 
+[GCC 7.3.0] :: Anaconda, Inc. on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import nltk
+>>> nltk.download('stopwords')
+[nltk_data] Downloading package stopwords to /home/ye/nltk_data...
+[nltk_data]   Unzipping corpora/stopwords.zip.
+True
+>>> exit()
+```
+
