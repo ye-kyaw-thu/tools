@@ -296,3 +296,26 @@ plot-unicode-char.png  plot-unicode-char.py
 
 <img src="https://github.com/ye-kyaw-thu/tools/blob/master/python/test-data/plot-unicode-char.png" alt="output graph" width="640x480"/>
 <p align="center"> Fig. plot-unicode-char.png </p>  
+
+## 10. [en-sentence-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-sentence-tokenizer.py)  
+
+NLTK library ကို သုံးပြီး ရေးထားတဲ့ sentence tokenizer ပါ။  
+input ပေးတာကတော့ stdin ကနေရော file ကို argument parsing လုပ်ပြီးတော့ရော နှစ်မျိုးစလုံး ပေးလို့ ရပါတယ်။  
+
+stdin ကနေ ပေးပြီး run တဲ့ ဥပမာ...  
+```
+$ echo "Hello! This is Ye. I hope you remember me. We met at InterSpeech 2019. I attended your paper presentation. We also discussed about zeroshot ASR. Please keep in touch!" | python ./en-sentence-tokenizer.py 
+['Hello!', 'This is Ye.', 'I hope you remember me.', 'We met at InterSpeech 2019.', 'I attended your paper presentation.', 'We also discussed about zeroshot ASR.', 'Please keep in touch!']
+
+```
+
+file ကို command line ကနေ argument အနေနဲ့ ပေးပြီး run တဲ့ ဥပမာ...  
+
+```
+$ cat ./en.text.txt 
+Hello! This is Ye. I hope you remember me. We met at InterSpeech 2019. I attended your paper presentation. We also discussed about zeroshot ASR. Please keep in touch!
+$ python ./en-sentence-tokenizer.py ./en.text.txt 
+['Hello!', 'This is Ye.', 'I hope you remember me.', 'We met at InterSpeech 2019.', 'I attended your paper presentation.', 'We also discussed about zeroshot ASR.', 'Please keep in touch!']
+
+```
+
