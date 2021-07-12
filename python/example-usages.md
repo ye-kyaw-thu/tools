@@ -319,3 +319,53 @@ $ python ./en-sentence-tokenizer.py ./en.text.txt
 
 ```
 
+11. [en-word-tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/en-word-tokenizer.py)  
+
+အင်္ဂလိပ်စာ က မြန်မာစာနဲ့ မတူပဲ ရေးကတည်းက စာလုံး တစ်လုံးချင်းစီကို space ခြားပြီး ရေးကြပေမဲ့ NLP အလုပ်တွေကို လုပ်ကြတဲ့အခါမှာ အင်္ဂလိပ်စာကိုလည်း word tokenization လုပ်ဖို့ လိုအပ်ပါတယ်။ NLTK library ကတော့ ကိုယ့်စက်ထဲမှာ installation လုပ်ထားမှ အခု python script က error မပေးပဲ အလုပ်လုပ်သွားပါလိမ့်မယ်။ အောက်ပါ example running လုပ်ထားတာတွေကို လေ့လာပြီး ကိုယ်လိုသလို ပြင်ဆင်ပြီး သုံးသွားကြပါ။  
+
+input ဖိုင်က အောက်ပါအတိုင်း စာကြောင်း ခုနစ်ကြောင်း ပါဝင်ပါတယ်။  
+```
+$ cat ./en.sentence.txt 
+Hello!
+This is Ye.
+I hope you remember me.
+We met at InterSpeech 2019.
+I attended your paper presentation.
+We also discussed about zeroshot ASR.
+Please keep in touch!
+```
+
+input ဖိုင်ကို အောက်ပါအတိုင်း အမျိုးမျိုး command line parsing လုပ်ပြီး word tokenization လုပ်ခိုင်းလို့ ရပါတယ်။  
+```
+$ python ./en-word-tokenizer.py ./en.sentence.txt 
+['Hello', '!']
+['This', 'is', 'Ye', '.']
+['I', 'hope', 'you', 'remember', 'me', '.']
+['We', 'met', 'at', 'InterSpeech', '2019', '.']
+['I', 'attended', 'your', 'paper', 'presentation', '.']
+['We', 'also', 'discussed', 'about', 'zeroshot', 'ASR', '.']
+['Please', 'keep', 'in', 'touch', '!']
+```
+
+```
+$ cat en.sentence.txt | python ./en-word-tokenizer.py 
+['Hello', '!']
+['This', 'is', 'Ye', '.']
+['I', 'hope', 'you', 'remember', 'me', '.']
+['We', 'met', 'at', 'InterSpeech', '2019', '.']
+['I', 'attended', 'your', 'paper', 'presentation', '.']
+['We', 'also', 'discussed', 'about', 'zeroshot', 'ASR', '.']
+['Please', 'keep', 'in', 'touch', '!']
+```
+
+```
+$ python ./en-word-tokenizer.py < ./en.sentence.txt 
+['Hello', '!']
+['This', 'is', 'Ye', '.']
+['I', 'hope', 'you', 'remember', 'me', '.']
+['We', 'met', 'at', 'InterSpeech', '2019', '.']
+['I', 'attended', 'your', 'paper', 'presentation', '.']
+['We', 'also', 'discussed', 'about', 'zeroshot', 'ASR', '.']
+['Please', 'keep', 'in', 'touch', '!'] 
+```
+
