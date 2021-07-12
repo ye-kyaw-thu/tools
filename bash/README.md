@@ -300,3 +300,7 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 
 98. [mk-background-transparent.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-background-transparent.sh)  
 (ImageMagick ကို သုံးပြီးတော့ ပုံဖိုင်ရဲ့ background ကို transparent အဖြစ်ပြောင်းပြထားပါတယ်။)  
+
+99. [spelling-checker-with-dict.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/spelling-checker-with-dict.sh)  
+(Dictionary ကို သုံးပြီးတော့ spelling checking လုပ်ပုံကို အလွယ်ရေးပြထားတဲ့ shell script ပါ။ မြန်မာစာအတွက် သုံးရင်တော့ word segmentation ဖြတ်ထားတဲ့ မြန်မာစာဖိုင်ကို input လုပ်ရပါမယ်။)  
+
