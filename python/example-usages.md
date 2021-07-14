@@ -428,7 +428,7 @@ True
 
 ## 14. [mk-QR-code.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-QR-code.py)  
 
-QR Code ကို ပုံစံအမျိုးမျိုးနဲ့ application အမျိုးမျိုးမှာ အသုံးပြုနေကြတာကို သတိပြုမိပါလိမ့်မယ်။ ဒီ mk-QR-code.py ကတော့ qrcode ဆိုတဲ့ python library တစ်ခုကို သုံးပြီးတော့ QR code တွေကို ဘယ်လို အလွယ်တကူ ဖန်တီးယူလို့ ရသလဲဆိုတာကို ရေးပြထားတဲ့ python code ပါ။ သုံးပုံ သုံးနည်းကတော့ အောက်ပါအတိုင်းပါ။  
+QR Code ကို ပုံစံအမျိုးမျိုးနဲ့ application အမျိုးမျိုးမှာ အသုံးပြုနေကြတာကို သတိပြုမိပါလိမ့်မယ်။ ဒီ mk-QR-code.py ကတော့ qrcode ဆိုတဲ့ python library တစ်ခုကို သုံးပြီးတော့ QR code တွေကို ဘယ်လို အလွယ်တကူ ဖန်တီးယူလို့ ရသလဲဆိုတာကို ရေးပြထားတဲ့ python code ပါ။ qrcode library က ကိုယ့်စက်ထဲမှာ မရှိသေးရင်တော့ ```pip install qrcode``` ဆိုတဲ့ command ရိုက်ပြီး အရင်ဆုံး install လုပ်ဖို့ မမေ့ပါနဲ့။  သုံးပုံ သုံးနည်းကတော့ အောက်ပါအတိုင်းပါ။  
 
 QR code လုပ်စေချင်တဲ့ web link တစ်ခုကို echo command နဲ့ပဲ ဖြစ်ဖြစ် parse လုပ်ပြီး run တဲ့ပုံစံက အောက်ပါအတိုင်းပါ...
 ```
@@ -499,4 +499,7 @@ QRdetector = cv2.QRCodeDetector()
 val, points, straight_qrcode = QRdetector.detectAndDecode(cv2.imread("qrcode-2.jpg"))
 print(val)
 ```
+
+တကယ်လို့ ကိုယ့်စက်ထဲမှာ OpenCV က installation မလုပ်ထားရသေးဘူး ဆိုရင်တော့ ```pip install opencv-python``` နဲ့ install လုပ်ယူပါ။  
+
 
