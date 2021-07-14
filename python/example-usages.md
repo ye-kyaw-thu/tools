@@ -430,12 +430,18 @@ True
 
 QR Code ကို ပုံစံအမျိုးမျိုးနဲ့ application အမျိုးမျိုးမှာ အသုံးပြုနေကြတာကို သတိပြုမိပါလိမ့်မယ်။ ဒီ mk-QR-code.py ကတော့ qrcode ဆိုတဲ့ python library တစ်ခုကို သုံးပြီးတော့ QR code တွေကို ဘယ်လို အလွယ်တကူ ဖန်တီးယူလို့ ရသလဲဆိုတာကို ရေးပြထားတဲ့ python code ပါ။ သုံးပုံ သုံးနည်းကတော့ အောက်ပါအတိုင်းပါ။  
 
+QR code လုပ်စေချင်တဲ့ web link တစ်ခုကို echo command နဲ့ပဲ ဖြစ်ဖြစ် parse လုပ်ပြီး run တဲ့ပုံစံက အောက်ပါအတိုင်းပါ...
 ```
 $ echo "https://github.com/ye-kyaw-thu" | python ./mk-QR-code.py 
+```
+
+အဆင်ပြေပြေနဲ့ run လို့ ပြီးသွားတယ်ဆိုရင် mk-QR-code.py ရှိတဲ့ path မှာပဲ qrcode-1.jpg ဆိုတဲ့ ဖိုင်အသစ် ကိုတွေ့ရပါလိမ့်မယ်။  
+```
 $ ls
 mk-QR-code.py  qrcode-1.jpg
 ```
 
+link တွေ အများကြီးကို QR Code လုပ်ချင်တယ်ဆိုရင် အောက်ပါ links4QRcode.txt ဖိုင်ထဲမှာ ရိုက်ပြထားသလို link address တွေကို တစ်ကြောင်းချင်းစီ တန်းစီ ရိုက်ထားရင် အိုကေပါတယ်။  
 ```
 $ cat ./links4QRcode.txt 
 https://github.com/ye-kyaw-thu
@@ -443,8 +449,13 @@ https://sites.google.com/site/yekyawthunlp/
 https://twitter.com/ye_edu/
 ```
 
+အထက်မှာ ဥပမာအနေနဲ့ ဖန်တီးခဲ့တဲ့ links4QRcode.txt ကို mk-QR-code.py ပရိုဂရမ်ကို argument parsing အနေနဲ့ input လုပ်ပြီး run ကြည့်ကြရအောင်...
 ```
 $ python ./mk-QR-code.py < ./links4QRcode.txt 
+```
+
+run ပြီးသွားတဲ့အခါမှာ အောက်ပါအတိုင်း qrcode-{1,2,3}.jpg ဆိုပြီး ပုံသုံးပုံ ရလာပါလိမ့်မယ်။  
+```
 $ ls
 links4QRcode.txt  mk-QR-code.py  qrcode-1.jpg  qrcode-2.jpg  qrcode-3.jpg
 ```
