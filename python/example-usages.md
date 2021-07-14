@@ -426,3 +426,25 @@ True
 >>> exit()
 ```
 
+## 14. [mk-QR-code.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-QR-code.py)  
+
+QR Code ကို ပုံစံအမျိုးမျိုးနဲ့ application အမျိုးမျိုးမှာ အသုံးပြုနေကြတာကို သတိပြုမိပါလိမ့်မယ်။ ဒီ mk-QR-code.py ကတော့ qrcode ဆိုတဲ့ python library တစ်ခုကို သုံးပြီးတော့ QR code တွေကို ဘယ်လို အလွယ်တကူ ဖန်တီးယူလို့ ရသလဲဆိုတာကို ရေးပြထားတဲ့ python code ပါ။ သုံးပုံ သုံးနည်းကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+$ echo "https://github.com/ye-kyaw-thu" | python ./mk-QR-code.py 
+$ ls
+mk-QR-code.py  qrcode-1.jpg
+```
+
+```
+$ cat ./links4QRcode.txt 
+https://github.com/ye-kyaw-thu
+https://sites.google.com/site/yekyawthunlp/
+https://twitter.com/ye_edu/
+```
+
+```
+$ python ./mk-QR-code.py < ./links4QRcode.txt 
+$ ls
+links4QRcode.txt  mk-QR-code.py  qrcode-1.jpg  qrcode-2.jpg  qrcode-3.jpg
+```
