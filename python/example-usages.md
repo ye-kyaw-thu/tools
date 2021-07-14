@@ -459,7 +459,7 @@ run ပြီးသွားတဲ့အခါမှာ အောက်ပါအ
 $ ls
 links4QRcode.txt  mk-QR-code.py  qrcode-1.jpg  qrcode-2.jpg  qrcode-3.jpg
 ```
-$~$
+&nbsp;
 qrcode-1.jpg ဖိုင်ကို မိုဘိုင်းဖုန်းရဲ့ ကင်မရာနဲ့ပဲ ဖြစ်ဖြစ် scan ဖတ်ပြီး GitHub ကို ဝင်ကြည့်လို့ ရပါလိမ့်မယ်။  
 
 <p align="center">
@@ -469,7 +469,7 @@ qrcode-1.jpg ဖိုင်ကို မိုဘိုင်းဖုန်း
   Fig. QR code for my GitHub link: https://github.com/ye-kyaw-thu  
 </div>   
 
-$~$
+&nbsp;
 qrcode-2.jpg ဖိုင်ကတော့ homepage ရဲ့ link ဖြစ်ပါတယ်။  
 
 <p align="center">
@@ -479,7 +479,7 @@ qrcode-2.jpg ဖိုင်ကတော့ homepage ရဲ့ link ဖြစ်
   Fig. QR code for my Homepage Link: https://sites.google.com/site/yekyawthunlp/  
 </div>   
 
-$~$
+&nbsp;
 qrcode-1.jpg ဖိုင်ကို မိုဘိုင်းဖုန်းရဲ့ ကင်မရာနဲ့ပဲ ဖြစ်ဖြစ် scan ဖတ်ပြီး twitter account link ကို ဝင်ကြည့်လို့ ရပါလိမ့်မယ်။  
 
 <p align="center">
