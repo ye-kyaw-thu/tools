@@ -503,4 +503,47 @@ print(val)
 
 တကယ်လို့ ကိုယ့်စက်ထဲမှာ OpenCV က installation မလုပ်ထားရသေးဘူး ဆိုရင်တော့ ```pip install opencv-python``` နဲ့ install လုပ်ယူပါ။  
 
+## 15. [wu-palmer-similarity.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wu-palmer-similarity.py)  
 
+```
+$ echo "Burma Myanmar" | python ./wu-palmer-similarity.py 
+Burma, Myanmar:  1.0
+```
+
+```
+$ cat ./word-pair.txt 
+Burma Myanmar
+Hello hi
+happy sad
+flower gun
+Aikido Judo
+Taekwondo Karate
+Karate Boxing
+Karate Swimming
+Karate Football
+Karate Basketball
+Swimming Diving
+Python Pascal
+Yangon Tokyo
+Yangon Bangkok
+Tokyo Kyoto
+```
+
+```
+$ python ./wu-palmer-similarity.py < ./word-pair.txt 
+Burma, Myanmar:  1.0
+Hello, hi:  1.0
+happy, sad:  None
+flower, gun:  0.38095238095238093
+Aikido, Judo:  0.9
+Taekwondo, Karate:  0.9
+Karate, Boxing:  0.6
+Karate, Swimming:  0.6
+Karate, Football:  0.6
+Karate, Basketball:  0.6
+Swimming, Diving:  0.4444444444444444
+Python, Pascal:  0.09090909090909091
+Yangon, Tokyo:  0.9090909090909091
+Yangon, Bangkok:  0.9090909090909091
+Tokyo, Kyoto:  0.8571428571428571
+```
