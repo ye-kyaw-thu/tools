@@ -2,14 +2,13 @@ import sys
 import argparse
 import qrcode
 
-# word tokenizing for English with NLTK library
+# making QR-code image(s)
 # Written by Ye Kyaw Thu, LST, NECTEC, Thailand
-# Reference: Python 3 Text Processing with NLTK 3 Cookbook
+# Reference: https://www.youtube.com/watch?v=-GmJLI122ZM
 
 # How to run:
-# python ./en-word-tokenizer.py ./en.sentence.txt
-# cat en.sentence.txt | python ./en-word-tokenizer.py
-# python ./en-word-tokenizer.py < ./en.sentence.txt
+# echo "https://github.com/ye-kyaw-thu" | python ./mk-QR-code.py
+# python ./mk-QR-code.py < ./links4QRcode.txt
 
 parser=argparse.ArgumentParser()
 parser.add_argument('inputFile', default=sys.stdin, type=argparse.FileType('r'), nargs='?')
