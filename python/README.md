@@ -44,4 +44,7 @@
 14. [mk-QR-code.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-QR-code.py)  
 (QR-code ပုံဖိုင်တွေကို python programming နဲ့ ဘယ်လို လုပ်ယူလို့ ရသလဲဆိုတာကို ဥပမာ run ပြထားတာပါ)  
 
+15. [wu-palmer-similarity.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wu-palmer-similarity.py)  
+(အင်္ဂလိပ်စာလုံးတွေကို Wu and Palmer Similarity တိုင်းကြည့်ထားတဲ့ ပရိုဂရမ်ပါ)  
+
 
