@@ -505,6 +505,26 @@ print(val)
 
 ## 15. [wu-palmer-similarity.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wu-palmer-similarity.py)  
 
+အင်္ဂလိပ်စာလုံး နှစ်လုံးကို Wu and Palmer Similarity တိုင်းတာကြည့်ထားတဲ့ ပရိုဂရမ်ပါ။  
+ဘာသာဗေဒ မှာ [Word senses](https://en.wikipedia.org/wiki/Word_sense) လို့ခေါ်တဲ့ technical term တစ်ခု ရှိပါတယ်။ စကားလုံးရဲ့ တိုက်ရိုက် အဓိပ္ပါယ် သာမကပဲ စာကြောင်းတွေထဲမှာ သုံးပုံသုံးနည်းအမျိုးမျိုး နဲ့အတူတွဲပါနေတဲ့ အဓိပ္ပါယ် အားလုံးကို ခြုံငုံမိတဲ့ အဓိပ္ပါယ်ကို ဆိုလိုပါတယ်။ ဥပမာ အင်္ဂလိပ်စာလုံး "bank" မှာ ဆိုရင် သုံးတဲ့ စာကြောင်းပေါ်မူတည်ပြီးတော့ sense နှစ်မျိုးရှိပါတယ်။ တစ်မျိုးက "ဘဏ်" ဆိုတဲ့ အဓိပ္ပါယ်ရပြီးတော့ နောက်တစ်မျိုးကတော့ "ကမ်းပါး" ဆိုတဲ့ အဓိပ္ပါယ်ပါ။ ဒီ python program မှာတော့ Wordnet မှာ သတ်မှတ်ထားတဲ့ စကားလုံးတစ်လုံးချင်းစီရဲ့ ဒေတာအပေါ်အများကြီး မူတည်ပါလိမ့်မယ်။ Wu and Palmer ရဲ့ score ကတော့ သုည အထက်ကနေ ၁ အထိ ကြားထဲမှာ ရှိတဲ့ တန်ဖိုး တစ်ခုခု ဖြစ်ပါလိမ့်မယ်။ ပိုမြင်သာအောင် ရေးရရင် ```0 < score <=1``` ပါ။  
+
+
+```
+@inproceedings{wu-palmer-1994-verb,
+    title = "Verb Semantics and Lexical Selection",
+    author = "Wu, Zhibiao  and
+      Palmer, Martha",
+    booktitle = "32nd Annual Meeting of the Association for Computational Linguistics",
+    month = jun,
+    year = "1994",
+    address = "Las Cruces, New Mexico, USA",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/P94-1019",
+    doi = "10.3115/981732.981751",
+    pages = "133--138",
+}
+```
+
 ```
 $ echo "Burma Myanmar" | python ./wu-palmer-similarity.py 
 Burma, Myanmar:  1.0
