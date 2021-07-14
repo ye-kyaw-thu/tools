@@ -488,3 +488,15 @@ qrcode-1.jpg ဖိုင်ကို မိုဘိုင်းဖုန်း
 <div align="center">
   Fig. QR code for my Twitter Link: https://twitter.com/ye_edu/  
 </div>   
+
+QR Code တွေကို python ပရိုဂရမ်ထဲကနေ ဖတ်ပြီး နဂို link တွေကို ပြန်ရိုက်ထုတ်ပေးချင်ရင်တော့ cv2 library ကို သုံးပြီး လုပ်လို့ ရပါတယ်။
+Reference: https://pypi.org/project/qrcode/  
+အောက်ပါ ဥပမာကိုလေ့လာပါ။  
+
+```
+import cv2
+QRdetector = cv2.QRCodeDetector()
+val, points, straight_qrcode = QRdetector.detectAndDecode(cv2.imread("qrcode-2.jpg"))
+print(val)
+```
+
