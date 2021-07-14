@@ -40,3 +40,8 @@
 
 13. [filter-en-stopwords.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/filter-en-stopwords.py)  
 (အင်္ဂလိပ်စာကြောင်းတွေထဲက stopword တွေကို ဖြုတ်တာကို NLTK library သုံးပြီး လုပ်ပြထားတာပါ)  
+
+14. [mk-QR-code.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-QR-code.py)  
+(QR-code ပုံဖိုင်တွေကို python programming နဲ့ ဘယ်လို လုပ်ယူလို့ ရသလဲဆိုတာကို ဥပမာ run ပြထားတာပါ)  
+
+
