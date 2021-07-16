@@ -47,4 +47,5 @@
 15. [wu-palmer-similarity.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wu-palmer-similarity.py)  
 (အင်္ဂလိပ်စာလုံးတွေကို Wu and Palmer Similarity တိုင်းကြည့်ထားတဲ့ ပရိုဂရမ်ပါ)  
 
-
+16. [nltk-en-pos-tagger.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-en-pos-tagger.py)  
+(NLTK library ကို သုံးပြီးတော့ အင်္ဂလိပ်စာအတွက် POS tagger ကို ရေးပြထားတာပါ)  
