@@ -10,7 +10,9 @@ from nltk.tokenize import word_tokenize
 # Reference for quotes: https://quotabulary.com/quotes-by-famous-scientists
 
 # How to run:
-# 
+# $ echo "Who am I?" | python ./nltk-en-pos-tagger.py
+# $ python ./nltk-en-pos-tagger.py < ./Quotes-By-Famous-Scientists.txt
+# $ cat ./Quotes-By-Famous-Scientists.txt | python ./nltk-en-pos-tagger.py
 
 parser=argparse.ArgumentParser()
 parser.add_argument('inputFile', default=sys.stdin, type=argparse.FileType('r'), nargs='?')
