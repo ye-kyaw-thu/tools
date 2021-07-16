@@ -573,3 +573,119 @@ Yangon, Tokyo:  0.9090909090909091
 Yangon, Bangkok:  0.9090909090909091
 Tokyo, Kyoto:  0.8571428571428571
 ```
+
+## 16. [nltk-en-pos-tagger.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-en-pos-tagger.py)  
+
+NLTK library ကိုသုံးပြီး အင်္ဂလိပ်စာ စာကြောင်းတွေကို POS tagging လုပ်ကြည့်ရအောင်...  
+အရင်ဆုံး echo command ကို သုံးပြီးတော့ "Who am I?" လို့ ရေးထားတဲ့ စာကြောင်းကို command line argument အနေနဲ့ ပေးကြည့်ရအောင်။  
+
+```
+$ echo "Who am I?" | python ./nltk-en-pos-tagger.py 
+Who/WP am/VBP I/PRP ?/.
+```
+
+ဖိုင်တစ်ဖိုင်ကို POS tagging လုပ်ခိုင်းဖို့အတွက် အရင်ဆုံး ပြင်ဆင်ထားတဲ့ ဖိုင်ထဲမှာ ဘယ်လို စာကြောင်းတွေရှိသလဲ ဆိုတာကို cat command နဲ့ ရိုက်ထုတ်ခိုင်းကြည့်ရအောင်။  
+
+```
+$ cat ./Quotes-By-Famous-Scientists.txt 
+Somewhere, something incredible is waiting to be known.
+― Carl Sagan
+
+Common Sense is that which judges the things given to it by other senses.
+― Leonardo da Vinci
+
+There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.
+― Albert Einstein
+
+Physics isn’t the most important thing. Love is.
+― Richard Feynman
+
+The greatest enemy of knowledge is not ignorance, it is the illusion of knowledge.
+― Stephen Hawking
+
+The first principle is that you must not fool yourself – and you are the easiest person to fool.
+― Richard Feynman
+
+Tact is the knack of making a point without making an enemy.
+― Sir Isaac Newton
+
+A man who dares to waste one hour of time has not discovered the value of life.
+― Charles Darwin
+
+Dreams are often most profound when they seem the most crazy.
+― Sigmund Freud
+
+The sun, with all the planets revolving around it, and depending on it, can still ripen a bunch of grapes as though it had nothing else in the universe to do.
+― Galileo Galilei
+
+Until man duplicates a blade of grass, nature can laugh at his so-called scientific knowledge.
+― Thomas Edison
+
+The love for all living creatures is the most noble attribute of man.
+― Charles Darwin
+
+Although I cannot move and I have to speak through a computer, in my mind I am free.
+― Stephen Hawking
+
+Blushing is the most peculiar and most human of all expressions.
+― Charles Darwin
+
+Flowers are restful to look at. They have neither emotions nor conflicts.
+― Sigmund Freud
+```
+
+နာမည်ကြီး သိပ္ပံပညာရှင်တွေရဲ့ အယူအဆတွေကို ထင်ဟပ်တဲ့ အဆိုအမိန့်တွေပါ။  
+ဟုတ်ပြီ။ အဲဒီဖိုင်ကို POS tagging လုပ်ခိုင်းကြည့်ရအောင်...   
+
+```
+$ python ./nltk-en-pos-tagger.py < ./Quotes-By-Famous-Scientists.txt 
+Somewhere/RB ,/, something/NN incredible/JJ is/VBZ waiting/VBG to/TO be/VB known/VBN ./.
+―/JJ Carl/NNP Sagan/NNP
+
+Common/JJ Sense/NNP is/VBZ that/IN which/WDT judges/NNS the/DT things/NNS given/VBN to/TO it/PRP by/IN other/JJ senses/NNS ./.
+―/JJ Leonardo/NNP da/NN Vinci/NN
+
+There/EX are/VBP only/RB two/CD ways/NNS to/TO live/VB your/PRP$ life/NN ./. One/CD is/VBZ as/IN though/IN nothing/NN is/VBZ a/DT miracle/NN ./. The/DT other/JJ is/VBZ as/IN though/IN everything/NN is/VBZ a/DT miracle/NN ./.
+―/NN Albert/NNP Einstein/NNP
+
+Physics/NNS isn/VBP ’/JJ t/VBP the/DT most/RBS important/JJ thing/NN ./. Love/NNP is/VBZ ./.
+―/JJ Richard/NNP Feynman/NNP
+
+The/DT greatest/JJS enemy/NN of/IN knowledge/NN is/VBZ not/RB ignorance/NN ,/, it/PRP is/VBZ the/DT illusion/NN of/IN knowledge/NN ./.
+―/NN Stephen/NNP Hawking/NNP
+
+The/DT first/JJ principle/NN is/VBZ that/IN you/PRP must/MD not/RB fool/VB yourself/PRP –/JJ and/CC you/PRP are/VBP the/DT easiest/JJS person/NN to/TO fool/NN ./.
+―/JJ Richard/NNP Feynman/NNP
+
+Tact/NN is/VBZ the/DT knack/NN of/IN making/VBG a/DT point/NN without/IN making/VBG an/DT enemy/NN ./.
+―/NN Sir/NNP Isaac/NNP Newton/NNP
+
+A/DT man/NN who/WP dares/VBZ to/TO waste/VB one/CD hour/NN of/IN time/NN has/VBZ not/RB discovered/VBN the/DT value/NN of/IN life/NN ./.
+―/NN Charles/NNP Darwin/NNP
+
+Dreams/NNS are/VBP often/RB most/JJS profound/JJ when/WRB they/PRP seem/VBP the/DT most/RBS crazy/JJ ./.
+―/NN Sigmund/NNP Freud/NNP
+
+The/DT sun/NN ,/, with/IN all/PDT the/DT planets/NNS revolving/VBG around/IN it/PRP ,/, and/CC depending/VBG on/IN it/PRP ,/, can/MD still/RB ripen/VB a/DT bunch/NN of/IN grapes/NNS as/IN though/IN it/PRP had/VBD nothing/NN else/RB in/IN the/DT universe/NN to/TO do/VB ./.
+―/JJ Galileo/NNP Galilei/NNP
+
+Until/IN man/NN duplicates/VBZ a/DT blade/NN of/IN grass/NN ,/, nature/NN can/MD laugh/VB at/IN his/PRP$ so-called/JJ scientific/JJ knowledge/NN ./.
+―/NN Thomas/NNP Edison/NNP
+
+The/DT love/NN for/IN all/DT living/NN creatures/NNS is/VBZ the/DT most/RBS noble/JJ attribute/NN of/IN man/NN ./.
+―/NN Charles/NNP Darwin/NNP
+
+Although/IN I/PRP can/MD not/RB move/VB and/CC I/PRP have/VBP to/TO speak/VB through/IN a/DT computer/NN ,/, in/IN my/PRP$ mind/NN I/PRP am/VBP free/JJ ./.
+―/NN Stephen/NNP Hawking/NNP
+
+Blushing/NNP is/VBZ the/DT most/RBS peculiar/JJ and/CC most/JJS human/JJ of/IN all/DT expressions/NNS ./.
+―/NN Charles/NNP Darwin/NNP
+
+Flowers/NNS are/VBP restful/JJ to/TO look/VB at/IN ./. They/PRP have/VBP neither/DT emotions/NNS nor/CC conflicts/NNS ./.
+―/NN Sigmund/NNP Freud/NNP
+
+```
+
+**သိစေချင်တာက 100% မှန်ကန်တဲ့ POS tagger ဆိုတာက ဘယ်ဘာသာစကားအတွက်မှ မရှိပါဘူး**  
+
+
