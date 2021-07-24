@@ -1,9 +1,12 @@
 import glob
 import os
 
-
-## How to run:
-## e.g. $ python ./folder-file-dict.py
+# Read full path recursively and build a dictionary
+# with folder path key and filenname list as value
+# Written by Ye Kyaw Thu, LST, NECTEC, Thailand
+# Date: 22 July 2021
+# How to run:
+# e.g. $ python ./folder-file-dict.py
 
 def get_dir_filename():
     #files = glob.glob('dataset2/**/*.wav', recursive=True)
