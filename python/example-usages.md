@@ -837,7 +837,7 @@ dataset2/ot-data/
 Browser မှာ အောက်ပါလိုမျိုး wave ဖိုင်တွေကို waveplot အဖြစ်၊ spectrogram ပုံ အဖြစ်၊ MFCC ပုံတွေအဖြစ် အမျိုးမျိုး graph ထုတ်ကြည့်ပြီး လေ့လာလို့ ရပါတယ်။  
 
 <p align="center">
-<img src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/audio-exploration-combined.png" alt="drawing" width="1200"/>  
+<img src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/audio-exploration-combined.png" alt="drawing" width="1600"/>  
 </p>  
 <div align="center">
   Fig. Exploring audio datasets with Streamlit and audio_exploration github code  
