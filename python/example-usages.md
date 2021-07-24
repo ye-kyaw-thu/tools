@@ -695,7 +695,7 @@ Flowers/NNS are/VBP restful/JJ to/TO look/VB at/IN ./. They/PRP have/VBP neither
 ဥပမာ အောက်ပါ tt/ ဆိုတဲ့ဖိုလ်ဒါထဲမှာ subfolder 1/, 2/, abc/ ဖိုလ်ဒါသုံးခုရှိပြီးတော့ အဲဒီ ဖိုလ်ဒါတွေအောက်မှာလည်း text ဖိုင် အသီးသီး ရှိကြတယ် ဆိုပါစို့။  
 
 ```
-(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/audio_exploration$ tree ./tt/
+$ tree ./tt/
 ./tt/
 ├── 1
 │   ├── file1.txt
@@ -714,7 +714,7 @@ Flowers/NNS are/VBP restful/JJ to/TO look/VB at/IN ./. They/PRP have/VBP neither
 folder-file-dict.py ပရိုဂရမ်ကို run ရင် အောက်ပါ print ထုတ်ပေးတဲ့အတိုင်း Python dictionary ဆောက်ပေးသွားမှာ ဖြစ်ပါတယ်။  
 
 ```
-(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/audio_exploration$ python ./folder-file-dict.py 
+$ python ./folder-file-dict.py 
 {'tt/abc': ['fileA.txt', 'fileB.txt'], 'tt/2': ['file1.txt', 'file3.txt', 'file2.txt'], 'tt/1': ['file1.txt', 'file2.txt']}
 ```
 
