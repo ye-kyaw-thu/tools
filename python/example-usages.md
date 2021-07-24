@@ -718,4 +718,121 @@ $ python ./folder-file-dict.py
 {'tt/abc': ['fileA.txt', 'fileB.txt'], 'tt/2': ['file1.txt', 'file3.txt', 'file2.txt'], 'tt/1': ['file1.txt', 'file2.txt']}
 ```
 
+တကယ်တမ်း ဒီ ပရိုဂရမ်နဲ့ စမ်းရေးထားတဲ့ function ကို audio_exploration library အတွက် စမ်းခဲ့တာက wave ဖိုင်တွေပါ။   
+ကွန်ပျူတာတက္ကသိုလ် ဗန်းမော်မှာ စာသွားသင်ရင်းနဲ့ recording လုပ်ထားတဲ့ ဗမာစာ ဗျည်း၊ သရသံ wave ဖိုင်တွေထဲက open test ဖိုလ်ဒါနဲ့ run တာကို ဥပမာအနေနဲ့ ပြပါမယ်။  
+
+```
+$ tree -L 2 dataset2/ot-data/ 
+dataset2/ot-data/
+├── consonant
+│   ├── 1
+│   ├── 10
+│   ├── 11
+│   ├── 12
+│   ├── 13
+│   ├── 14
+│   ├── 15
+│   ├── 16
+│   ├── 17
+│   ├── 18
+│   ├── 19
+│   ├── 2
+│   ├── 20
+│   ├── 21
+│   ├── 22
+│   ├── 3
+│   ├── 4
+│   ├── 5
+│   ├── 6
+│   ├── 7
+│   ├── 8
+│   └── 9
+└── vowel
+    ├── 1
+    ├── 10
+    ├── 11
+    ├── 12
+    ├── 2
+    ├── 3
+    ├── 4
+    ├── 5
+    ├── 6
+    ├── 7
+    ├── 8
+    └── 9
+
+36 directories, 0 files
+```
+
+ဥပမာ consonant/1/ ဖိုလ်ဒါအောက်က ဖိုင်တွေက ဗမာစာ ဗျည်း "ကကြီး" ရဲ့အသံပါ။ တစ်ဖိုင်ချင်းစီက တစ်ယောက်ချင်းစီ အသံတွေပါ။  
+အသေးစိတ်က ဒီ Github link (https://github.com/ye-kyaw-thu/Spectrograms-of-Myanmar-Speech) မှာ လေ့လာပါ။  
+
+```
+$ tree -L 3 dataset2/ot-data/ | head -n 50
+dataset2/ot-data/
+├── consonant
+│   ├── 1
+│   │   ├── 2018-11-12-13:34:35.16khz.mono.wav
+│   │   ├── 2018-11-12-13:39:11.16khz.mono.wav
+│   │   ├── 2018-11-12-13:39:21.16khz.mono.wav
+│   │   ├── 2018-11-12-13:44:16.16khz.mono.wav
+│   │   ├── 2018-11-12-13:51:05.16khz.mono.wav
+│   │   ├── 2018-11-12-13:52:28.16khz.mono.wav
+│   │   ├── 2018-11-12-13:52:40.16khz.mono.wav
+│   │   ├── 2018-11-12-13:55:26.16khz.mono.wav
+│   │   ├── 2018-11-12-13:57:02.16khz.mono.wav
+│   │   ├── 2018-11-12-13:57:10.16khz.mono.wav
+│   │   ├── 2018-11-12-14:00:24.16khz.mono.wav
+│   │   ├── 2018-11-12-14:04:42.16khz.mono.wav
+│   │   ├── 2018-11-12-14:04:53.16khz.mono.wav
+│   │   ├── 2018-11-12-14:05:48.16khz.mono.wav
+│   │   ├── 2018-11-12-14:07:01.16khz.mono.wav
+│   │   ├── 2018-11-12-14:07:15.16khz.mono.wav
+│   │   ├── 2018-11-12-14:10:44.16khz.mono.wav
+│   │   ├── 2018-11-12-14:13:15.16khz.mono.wav
+│   │   ├── 2018-11-12-14:13:34.16khz.mono.wav
+│   │   └── 2018-11-12-14:14:28.16khz.mono.wav
+│   ├── 10
+│   │   ├── 2018-11-12-16:25:18.16khz.mono.wav
+│   │   ├── 2018-11-12-16:25:25.16khz.mono.wav
+│   │   ├── 2018-11-12-16:25:40.16khz.mono.wav
+│   │   ├── 2018-11-12-16:26:44.16khz.mono.wav
+│   │   ├── 2018-11-12-16:28:05.16khz.mono.wav
+│   │   ├── 2018-11-12-16:28:12.16khz.mono.wav
+│   │   ├── 2018-11-12-16:28:48.16khz.mono.wav
+│   │   ├── 2018-11-12-16:28:58.16khz.mono.wav
+│   │   ├── 2018-11-12-16:29:05.16khz.mono.wav
+│   │   ├── 2018-11-12-16:29:22.16khz.mono.wav
+│   │   ├── 2018-11-12-16:29:23.16khz.mono.wav
+│   │   ├── 2018-11-12-16:29:26.16khz.mono.wav
+│   │   ├── 2018-11-12-16:30:16.16khz.mono.wav
+│   │   ├── 2018-11-12-16:30:28.16khz.mono.wav
+│   │   ├── 2018-11-12-16:30:53.16khz.mono.wav
+│   │   ├── 2018-11-12-16:31:40.16khz.mono.wav
+│   │   ├── 2018-11-12-16:31:47.16khz.mono.wav
+│   │   ├── 2018-11-12-16:32:17.16khz.mono.wav
+│   │   ├── 2018-11-12-16:34:00.16khz.mono.wav
+│   │   └── 2018-11-12-16:35:03.16khz.mono.wav
+│   ├── 11
+│   │   ├── 2018-11-12-18:45:10.16khz.mono.wav
+│   │   ├── 2018-11-12-18:45:58.16khz.mono.wav
+│   │   ├── 2018-11-12-18:46:10.16khz.mono.wav
+│   │   ├── 2018-11-12-18:46:27.16khz.mono.wav
+│   │   ├── 2018-11-12-18:47:27.16khz.mono.wav
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/audio_exploration$
+```
+
+တကယ်တမ်း audio_exploration library ကို ကိုယ့်စက်ထဲမှာ install လုပ်ပြီး run တဲ့အခါမှာ အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/audio_exploration$ streamlit run ./dataset_overview.py
+
+  You can now view your Streamlit app in your browser.
+
+  Local URL: http://localhost:8501
+  Network URL: http://10.222.40.142:8501
+
+```
+
+Browser မှာ အောက်ပါလိုမျိုး wave ဖိုင်တွေကို waveplot အဖြစ်၊ spectrogram ပုံ အဖြစ်၊ MFCC ပုံတွေအဖြစ် အမျိုးမျိုး graph ထုတ်ကြည့်ပြီး လေ့လာလို့ ရပါတယ်။  
 
