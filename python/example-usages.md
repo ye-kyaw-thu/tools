@@ -845,6 +845,11 @@ Browser မှာ အောက်ပါလိုမျိုး wave ဖို�
 
 ## 18. [csv-str2mapping123.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/csv-str2mapping123.py)   
 
+ကော်လံ ၆ခု ရှိတဲ့ CSV (Comma-Separated Values) ဖိုင်ထဲက ကော်လံနံပါတ် ၄ နဲ့ ကော်လံနံပါတ် ၅ တို့မှာ ရှိနေတဲ့ ဗမာစာ စာကြောင်းတွေကို proposed mapping 1, 2, 3 အဖြစ် ပြောင်းပေးတဲ့ Python ပရိုဂရမ်ပါ။  
+Mapping 1, 2, 3 ဆိုတာက ဗမာစာ စာကြောင်းတွေကို similarity တိုင်းတဲ့အခါမှာ အသံထွက်ဆင်တူတာတွေနဲ့ ဗမာစာရဲ့သဘာဝအရ similar ဖြစ်တဲ့ စာကြောင်းတွေကို distance တွက်ပေးနိုင်ဖို့အတွက် ခိုင်ဆုဝေနဲ့ ကျွန်တော် proposed လုပ်ခဲ့တဲ့ mapping သုံးမျိုးပါ။ အသေးစိတ်ကိုတော့ [NSURL 2019 Paper](https://aclanthology.org/2019.nsurl-1.14/)) စာတမ်းနဲ့ [JIIST 2020 Journal Paper](https://github.com/ye-kyaw-thu/papers/blob/master/JIIST-April-2020/no.4.my-string-similarity.pdf) ဂျာနယ်စာတမ်းတွေမှာ ဖော်ပြထားပါတယ်။  
+
+ဥပမာအနေနဲ့ input လုပ်မယ့် CSV ဖိုင်က အောက်ပါအတိုင်း format အတိုင်း ရှိပါတယ်။   
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ cat ./head.train.csv 
 id,senid1,senid2,sentence1,sentence2,is_duplicate
@@ -858,6 +863,8 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 7,15,16,လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,0
 8,17,18,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,1
 ```
+
+Mapping 1 အဖြစ် ပြောင်းမယ် ဆိုရင် --map option ကို 1 ထားထားပေးပါ။  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --csvFile head.train.csv --map 1
@@ -873,6 +880,8 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 8,17,18,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,1
 ```
 
+Mapping 2 အဖြစ် ပြောင်းမယ် ဆိုရင် --map option မှာ 2 ထားထားပေးပါ။  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --csvFile head.train.csv --map 2
 id,senid1,senid2,sentence1,sentence2,is_duplicate
@@ -886,6 +895,8 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 7,15,16,လaစr တe ကr လi ကy ပi တe,ပလaပစr ပ လud တe ကတuရu ပr,0
 8,17,18,ကလa ပyr သi ကeကe ကတiက ပiပ i ပunရid ကiu ပunတuကu တr တd ကy သi s,ကလa ပyr သi ကeကe ကတiက ပiပ i ပunရid ကiu ကiuကy တr တd ကy သi s,1
 ```
+
+Mapping 3 အဖြစ် convert လုပ်ချင်တယ်ဆိုရင်တော့ --map option နေရာကို 3 ထားပြီး run ရမှာဖြစ်ပါတယ်။  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --csvFile head.train.csv --map 3
@@ -901,6 +912,8 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 8,17,18,cclr cyrr cck cckcck ccckrc cuc I cducuck cud cducdcdr crr cck cy cck s,cclr cyrr cck cckcck ccckrc cuc I cducuck cud cudrcy crr cck cy cck s,1
 ```
 
+input ဖိုင်ကို cat နဲ့ ရိုက်ထုတ်ပြီး pipe နဲ့ parse လုပ်တာမျိုးလည်း လုပ်လို့ ရပါတယ်။  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ cat ./head.train.csv | python ./csv-str2mapping123.py --map 1
 id,senid1,senid2,sentence1,sentence2,is_duplicate
@@ -914,3 +927,17 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 7,15,16,လaစr တe အr လi ကy မi တe,မလaမစr မ လud နe အတuရu ပr,0
 8,17,18,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,1
 ```
+
+Command usage help screen က -h or --help နဲ့ ကြည့်လို့ ရပါတယ်။   
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --help
+usage: csv-str2mapping123.py [-h] [-i [CSVFILE]] [-m MAP]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i [CSVFILE], --csvFile [CSVFILE]
+  -m MAP, --map MAP     assign mapping type, 1 for Phonetic, 2 for Sound and 3
+                        for Vowel Position
+```
+
