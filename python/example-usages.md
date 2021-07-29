@@ -843,3 +843,74 @@ Browser မှာ အောက်ပါလိုမျိုး wave ဖို�
   Fig. Exploring audio datasets with Streamlit and audio_exploration github code  
 </div>   
 
+18. [csv-str2mapping123.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/csv-str2mapping123.py)   
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ cat ./head.train.csv 
+id,senid1,senid2,sentence1,sentence2,is_duplicate
+0,1,2,ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,0
+1,3,4,ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,1
+2,5,6,သီချင်း အားလုံး ကြိုက် တယ်,အရမ်း ကြိုက် တဲ့ သီချင်း လေး,1
+3,7,8,လေးစား ဂုဏ်ယူ ရ ပါ သည်,အားကျ အတုယူ ရ ပါ သည်,0
+4,9,10,သူ့ ကို တွေ့ ဖို့ ငါ အရမ်း စိတ်ဝင်စား နေ ပြီ ။,သူ့ ကို တွေ့ ဖို့ ငါ အရမ်း ရင်ခုန် နေ ပြီ ။,0
+5,11,12,ငါ တို့ ပဲခူး က အမျိုး တွေ ဆီ ကို မကြာခဏ အလည်အပတ် သွား ခဲ့ တယ် ။,ငါ တို့ ပဲခူး က အမျိုး တွေ ဆီ ကို မကြာခဏ အလည် သွား ခဲ့ တယ် ။,1
+6,13,14,ဒါ ကို ဝယ် မယ် လို့ စဉ်းစား နေ တာ အတော်ပဲ ဖြစ် နေ တယ် ။,ဒါ ကို ဝယ် ခဲ့ လိုက် တာ မှန် တယ် လို့ ကျွန်တော် ထင် တယ် ။,0
+7,15,16,လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,0
+8,17,18,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,1
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --csvFile head.train.csv --map 1
+id,senid1,senid2,sentence1,sentence2,is_duplicate
+0,1,2,ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,0
+1,3,4,စd ကyiuစr ကy ပr,စd ပyi ကyiuစr ပa ပr,1
+2,5,6,သiကyin အrလun ကyiud တe,အရn ကyiud တe သiကyin လa,1
+3,7,8,လaစr ဂunရu ရ ပr သi,အrကy အတuရu ရ ပr သi,0
+4,9,10,သu ကiu တa ပiu inr အရn စidဝinစr နa ပyi s,သu ကiu တa ပiu inr အရn ရinကun နa ပyi s,0
+5,11,12,inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd သr ကe တe s,inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလi သr ကe တe s,1
+6,13,14,ဒr ကiu ဝe မe လiu စinစr နa တr အတar်ပe ပyစ် နa တe s,ဒr ကiu ဝe ကe လiud တr မn တe လiu ကynတar် ထin တe s,0
+7,15,16,လaစr တe အr လi ကy မi တe,မလaမစr မ လud နe အတuရu ပr,0
+8,17,18,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,1
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --csvFile head.train.csv --map 2
+id,senid1,senid2,sentence1,sentence2,is_duplicate
+0,1,2,ကydတar် သတdကyr ရd ကdပyr ကiu ကydတar် ပyar ပr ပe s,ကdပyr ရe သတd ကiu သu ပyar ပ ပe ကydတar် ကyr ရ တar တe s,0
+1,3,4,စd ကyiuစr ကy ပr,စd ပyi ကyiuစr ပa ပr,1
+2,5,6,သiကyd ကrလun ကyiud တe,ကရd ကyiud တe သiကyd လa,1
+3,7,8,လaစr ကudရu ရ ပr သi,ကrကy ကတuရu ရ ပr သi,0
+4,9,10,သu ကiu တa ပiu ကr ကရd စidဝdစr တa ပyi s,သu ကiu တa ပiu ကr ကရd ရdကud တa ပyi s,0
+5,11,12,ကr တiu ပeကu က ကပyiu တa စi ကiu ပကyrကတ ကလiကပd သr ကe တe s,ကr တiu ပeကu က ကပyiu တa စi ကiu ပကyrကတ ကလi သr ကe တe s,1
+6,13,14,တr ကiu ဝe ပe လiu စiစr တa တr ကတar်ပe ပyစ် တa တe s,တr ကiu ဝe ကe လiud တr ပd တe လiu ကydတar် တd တe s,0
+7,15,16,လaစr တe ကr လi ကy ပi တe,ပလaပစr ပ လud တe ကတuရu ပr,0
+8,17,18,ကလa ပyr သi ကeကe ကတiက ပiပ i ပunရid ကiu ပunတuကu တr တd ကy သi s,ကလa ပyr သi ကeကe ကတiက ပiပ i ပunရid ကiu ကiuကy တr တd ကy သi s,1
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ python ./csv-str2mapping123.py --csvFile head.train.csv --map 3
+id,senid1,senid2,sentence1,sentence2,is_duplicate
+0,1,2,cydckclrk ccckrcyrr cck cckcyrr cud cydckclrk cylr crr cck s,cckcyrr cur ccckr cud cd cylr cd cu cydckclrk cyrr c clrr cck s,0
+1,3,4,cck cyudrcrr cy cr,cck cyur cyudrcrr clr cr,1
+2,5,6,cucyckr crrcdur cyudck cck,ccckr cyudck cur cucyckr clr,1
+3,7,8,clrcrr cdckcd c cr cck,crrcy ccdcd c cr cck,0
+4,9,10,cdr cud cdlr cudr cr ccckr cuckcckcrr cl cyu s,cdr cud cdlr cudr cr ccckr cckcdck cl cyu s,0
+5,11,12,cr cudr cucdr c ccyudr cdl cu cud ccyrcc ccckccck cdrr cur cck s,cr cudr cucdr c ccyudr cdl cu cud ccyrcc ccck cdrr cur cck s,1
+6,13,14,cr cud cck cck cudr cckrcrr cl cr cclrkcu cyck cl cck s,cr cud cck cur cudck cr cdck cck cudr cydckclrk cck cck s,0
+7,15,16,clrcrr cck crr cckr cy cu cck,cclrccrr c cdck cur ccdcd cr,0
+8,17,18,cclr cyrr cck cckcck ccckrc cuc I cducuck cud cducdcdr crr cck cy cck s,cclr cyrr cck cckcck ccckrc cuc I cducuck cud cudrcy crr cck cy cck s,1
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/exp/chk-myint2htay-program/LSTMcoding_28july2021/data-map1$ cat ./head.train.csv | python ./csv-str2mapping123.py --map 1
+id,senid1,senid2,sentence1,sentence2,is_duplicate
+0,1,2,ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,0
+1,3,4,စd ကyiuစr ကy ပr,စd ပyi ကyiuစr ပa ပr,1
+2,5,6,သiကyin အrလun ကyiud တe,အရn ကyiud တe သiကyin လa,1
+3,7,8,လaစr ဂunရu ရ ပr သi,အrကy အတuရu ရ ပr သi,0
+4,9,10,သu ကiu တa ပiu inr အရn စidဝinစr နa ပyi s,သu ကiu တa ပiu inr အရn ရinကun နa ပyi s,0
+5,11,12,inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd သr ကe တe s,inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလi သr ကe တe s,1
+6,13,14,ဒr ကiu ဝe မe လiu စinစr နa တr အတar်ပe ပyစ် နa တe s,ဒr ကiu ဝe ကe လiud တr မn တe လiu ကynတar် ထin တe s,0
+7,15,16,လaစr တe အr လi ကy မi တe,မလaမစr မ လud နe အတuရu ပr,0
+8,17,18,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,1
+```
