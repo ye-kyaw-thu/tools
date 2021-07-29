@@ -5,6 +5,14 @@ import argparse
 # Converting input CSV Myanmar sentences into Map-1 (Phonetic Mapping), Map-2 (Sound Mapping) and Map-3 (Vowel Position Mapping)
 # Written by Ye Kyaw Thu, Visiting Professor, LST, NECTEC, Thailand
 # Released Date: 28 July 2021
+#
+# Note: input file format က ပုံမှန် text ဖိုင် မဟုတ်ပဲ Siamese Semantic Similarity ကို တိုင်းတာဖို့အတွက် ပြင်ဆင်ထားတဲ့ CSV ဖိုင်ကို သုံးပြထားပါတယ်။
+# ကော်လံတွေက id,senid1,senid2,sentence1,sentence2,is_duplicate ဆိုတဲ့ ပုံစံပါ။
+# အဲဒါကြောင့် input ဖိုင်ထဲမှာ ရှိမယ့် ပုံစံက အောက်ပါ ပုံစံမျိုးဖြစ်ရပါမယ်။  
+# 0,1,2,ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,0
+# 1,3,4,ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,1
+# 2,5,6,သီချင်း အားလုံး ကြိုက် တယ်,အရမ်း ကြိုက် တဲ့ သီချင်း လေး,1
+#
 # How to run:
 # e.g. $ python ./csv-str2mapping123.py --help
 # e.g. $ python ./csv-str2mapping123.py --csvFile head.train.csv --map 1
