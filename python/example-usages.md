@@ -941,3 +941,48 @@ optional arguments:
                         for Vowel Position
 ```
 
+## 19. [str2mapping123.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2mapping123.py)  
+
+အထက်က နံပါတ် ၁၈ ပရိုဂရမ်နဲ့ အခြေခံအားဖြင့်က အတူတူပါပဲ။ input ဖိုင်ကို CSV ဖိုင် မဟုတ်ပဲ text file နဲ့ သုံးလို့ရဖို့အတွက် ရေးပြထားတာပါ။  
+သုံးပုံသုံးနည်းက အောက်ပါအတိုင်းပါ...  
+
+ဥပမာ input ဖိုင်က...  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ cat input.txt 
+စိန်မျောက်မျောက် ကာတွန်း ဖန်တီးသူ ကာတွန်းဦးမြေဇာ
+လှိုင်းဘွဲ့နဲ့ ကော့ကရိတ်မြို့နယ်ကြားမှာ ရေကြီးပြီး လမ်းပြတ်သွား
+```
+
+Mapping 1 အဖြစ် ပြောင်းမယ်ဆိုရင်...  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2mapping123.py --inputFile ./input.txt --map 1
+စinမyardမyard ကrတn ပnတiသu ကrတnuiမyaဇr
+လiuinဘeနe ကarကရidမyiuနeကyrမr ရaကyiပyi လnပydသr
+```
+
+Mapping 2 အဖြစ် ပြောင်းမယ်ဆိုရင်...  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2mapping123.py --inputFile ./input.txt --map 2
+စidပyardပyard ကrတd ပdတiသu ကrတduiပyaစr
+လiudပeတe ကarကရidပyiuတeကyrပr ရaကyiပyi လdပydသr
+```
+
+Mapping 3 အဖြစ် ပြောင်းမယ်ဆိုရင်...  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2mapping123.py --inputFile ./input.txt --map 3
+cuckcylrckcylrck crcdckr cckcurcd crcdckrIurcylcr
+cdudckrcdurcur clrrccuckcyudrcckcyrrcdr clcyurcyur cckrcyckcdrr
+```
+
+help screen ကတော့ ပုံမှန် command line တွေရဲ့ help ကို ခေါ်ကြည့်သလိုပဲ "-h" or "--help" နဲ့ ကြည့်လို့ ရပါတယ်။  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2mapping123.py -h
+usage: str2mapping123.py [-h] [-i [INPUTFILE]] [-m MAP]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i [INPUTFILE], --inputFile [INPUTFILE]
+  -m MAP, --map MAP     assign mapping type, 1 for Phonetic, 2 for Sound and 3
+                        for Vowel Position
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ 
+```
