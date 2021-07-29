@@ -3,6 +3,7 @@ import re
 import argparse
 
 # Converting input CSV Myanmar sentences into Map-1 (Phonetic Mapping), Map-2 (Sound Mapping) and Map-3 (Vowel Position Mapping)
+# (This code was written for Myint Myint Htay's Paraphrase Siamese Neural Network experiment.)
 # Written by Ye Kyaw Thu, Visiting Professor, LST, NECTEC, Thailand
 # Released Date: 28 July 2021
 #
