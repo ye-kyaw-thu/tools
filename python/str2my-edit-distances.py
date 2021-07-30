@@ -15,6 +15,7 @@ import epitran
 # $ python ./str2my-edit-distances.py --field_delimiter $'\t' --skip_header 1 --map 1 --distance 'jaccard' ./f4-5.tab.txt 1 2
 # $ python ./str2my-edit-distances.py --field_delimiter ',' --skip_header 1 --map 1 --distance 'jaccard' ./head.train.csv 4 5
 # $ python ./str2my-edit-distances.py --field_delimiter ',' --skip_header 1 --map 3 --distance 'jaccard' ./head.train.csv 4 5
+# $ python ./str2my-edit-distances.py --help
 #
 # If you used this tool, please cite following papers:
 # Khaing Hsu Wai, Ye Kyaw Thu, Swe Zin Moe, Hnin Aye Thant, Thepchai Supnithi, "Myanmar (Burmese) String Similarity Measures based on Phoneme Similarity", Journal of Intelligent Informatics and Smart Technology, April 1st Issue, 2020, pp. 27-34. (submitted December 21, 2019; accepted March 6, 2020; revised March 16, 2020; published online April 30, 2020) JIIST 2020 Journal Paper
