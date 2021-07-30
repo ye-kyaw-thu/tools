@@ -986,3 +986,50 @@ optional arguments:
                         for Vowel Position
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ 
 ```
+
+## 20. [str2my-edit-distances.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2my-edit-distances.py)  
+
+
+Help Screen ကိုခေါ်ပြီး အရင်ဆုံး ပေးရမယ့် option တွေကို နားလည်အောင် လေ့လာစေချင်ပါတယ်။  
+
+```
+$ python ./str2my-edit-distances.py --help
+usage: str2my-edit-distances.py [-h] [-m MAP] [-d DISTANCE]
+                                [-f FIELD_DELIMITER] [-s SKIP_HEADER]
+                                [inputFile] string1_field string2_field
+
+positional arguments:
+  inputFile             input filename of the CSV file
+  string1_field         field number of String1 in the CSV file
+  string2_field         field number of String2 in the CSV file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MAP, --map MAP     assign mapping type, 1 for Phonetic, 2 for Sound and 3
+                        for Vowel Position
+  -d DISTANCE, --distance DISTANCE
+                        assign distance measures: levenshtein,
+                        damerau_levenshtein, hamming_distance, jaro_winkler,
+                        cosine, jaccard
+  -f FIELD_DELIMITER, --field_delimiter FIELD_DELIMITER
+                        assign field delimiter such as $'\t', ','
+  -s SKIP_HEADER, --skip_header SKIP_HEADER
+                        skip CSV header line or no distance calculation for
+                        the first line. "1" for true and "0" for false
+
+```
+
+```
+$ cat ./head.train.csv 
+id,senid1,senid2,sentence1,sentence2,is_duplicate
+0,1,2,ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,0
+1,3,4,ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,1
+2,5,6,သီချင်း အားလုံး ကြိုက် တယ်,အရမ်း ကြိုက် တဲ့ သီချင်း လေး,1
+3,7,8,လေးစား ဂုဏ်ယူ ရ ပါ သည်,အားကျ အတုယူ ရ ပါ သည်,0
+4,9,10,သူ့ ကို တွေ့ ဖို့ ငါ အရမ်း စိတ်ဝင်စား နေ ပြီ ။,သူ့ ကို တွေ့ ဖို့ ငါ အရမ်း ရင်ခုန် နေ ပြီ ။,0
+5,11,12,ငါ တို့ ပဲခူး က အမျိုး တွေ ဆီ ကို မကြာခဏ အလည်အပတ် သွား ခဲ့ တယ် ။,ငါ တို့ ပဲခူး က အမျိုး တွေ ဆီ ကို မကြာခဏ အလည် သွား ခဲ့ တယ် ။,1
+6,13,14,ဒါ ကို ဝယ် မယ် လို့ စဉ်းစား နေ တာ အတော်ပဲ ဖြစ် နေ တယ် ။,ဒါ ကို ဝယ် ခဲ့ လိုက် တာ မှန် တယ် လို့ ကျွန်တော် ထင် တယ် ။,0
+7,15,16,လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,0
+8,17,18,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,1
+```
+
