@@ -996,6 +996,7 @@ Help Screen ကိုခေါ်ပြီး အရင်ဆုံး ပေး
 $ python ./str2my-edit-distances.py --help
 usage: str2my-edit-distances.py [-h] [-m MAP] [-d DISTANCE]
                                 [-f FIELD_DELIMITER] [-s SKIP_HEADER]
+                                [-o ORIGINAL_STRINGS]
                                 [inputFile] string1_field string2_field
 
 positional arguments:
@@ -1016,6 +1017,10 @@ optional arguments:
   -s SKIP_HEADER, --skip_header SKIP_HEADER
                         skip CSV header line or no distance calculation for
                         the first line. "1" for true and "0" for false
+  -o ORIGINAL_STRINGS, --original_strings ORIGINAL_STRINGS
+                        printing original input string1 and string2, "1" for
+                        true and "0" for false
+
 
 ```
 
