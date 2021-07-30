@@ -57,3 +57,6 @@
 (ဗမာစာကြောင်းတွေကို string similarity တိုင်းတဲ့အခါမှာ အသံထွက်တူတဲ့စာကြောင်းတွေကိုလည်း ဆွဲထုတ်နိုင်အောင် စဉ်းစားထားတဲ့ mapping သုံးမျိုးကို proposal တင်ထားတာ ရှိပါတယ်။ အခု code က ပုံမှန်ဗမာ စာကြောင်းကနေ mapping 1, 2, 3 တစ်မျိုးမျိုးကို convert လုပ်ပေးတဲ့ ပရိုဂရမ်ပါ။ စိတ်ဝင်စားသူတွေ လေ့လာနိုင်အောင်လို့ published လုပ်ခဲ့တဲ့ စာတမ်းနဲ့ပတ်သက်တဲ့ information ကိုလည်း Python code ထဲမှာ ဖော်ပြထားပါတယ်။)  
 19. [str2mapping123.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2mapping123.py)  
 (အထက်က Python code နံပါတ် 19 နဲ့ အခြေခံအားဖြင့် အတူတူပါပဲ။ ဒီပရိုဂရမ်ကတော့ ပုံမှန် text file ကို input လုပ်ပြီး သုံးဖို့အတွက် ရည်ရွယ်ပါတယ်။ အများသောအားဖြင့်က text file ကနေပဲ ပြောင်းကြမှာမို့...)  
+
+20. [str2my-edit-distances.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2my-edit-distances.py)  
+(အထက်က Python program နံပါတ် ၁၈၊ ၁၉ တို့နဲ့ ဆက်စပ်နေပါတယ်။ ဒီ ပရိုဂရမ်ကတော့ mapping ပြောင်းပြီး distance measure ခြောက်မျိုးကိုပါ တွက်ထုတ်ပေးဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
