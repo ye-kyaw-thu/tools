@@ -201,12 +201,14 @@ def calc_distance(string1, string2, method):
 
 parser=argparse.ArgumentParser()
 parser.add_argument('inputFile', default=sys.stdin, type=argparse.FileType('r'), nargs='?', help="input filename of the CSV file")
-parser.add_argument('-m', '--map', type=int, default=1, help="assign mapping type, 1 for Phonetic, 2 for Sound and 3 for Vowel Position")
+parser.add_argument('string1_field', type=int, default='1', help="field number of String1 in the CSV file, default=1") 
+parser.add_argument('string2_field', type=int, default='2', help="field number of String2 in the CSV file, default=2") 
+
+parser.add_argument('-m', '--map', type=int, default=1, help="""assign mapping type, "1" for Phonetic, "2" for Sound and "3" for Vowel Position, "0" for skip mapping process (e.g. when you calculate baseline edit distance with raw Myanmar sentences, you can also use --map 0 for English sentences)""")
 parser.add_argument('-d', '--distance', type=str, default='levenshtein', help="assign distance measures: levenshtein, damerau_levenshtein, hamming_distance, jaro_winkler, cosine, jaccard")
-parser.add_argument('-f', '--field_delimiter', type=str, default=',', help="assign field delimiter such as $'\\t', ',' ")
-parser.add_argument('-s', '--skip_header', type=int, default=0, help="""skip CSV header line or no distance calculation for the first line. "1" for true and "0" for false""")
-parser.add_argument('string1_field', type=int, default='1', help="field number of String1 in the CSV file") 
-parser.add_argument('string2_field', type=int, default='2', help="field number of String2 in the CSV file") 
+parser.add_argument('-f', '--field_delimiter', type=str, default=',', help="""assign field delimiter such as $'\\t' for <TAB>, ',' for comma, default="," """)
+parser.add_argument('-s', '--skip_header', type=int, default=1, help="""skip CSV header line or no distance calculation for the first line. "1" for true and "0" for false, default=1""")
+parser.add_argument('-o', '--original_strings', type=int, default=1, help="""printing original input string1 and string2, "1" for true and "0" for false, default=1""")
 
 args=parser.parse_args()
 textLines=args.inputFile.readlines()
@@ -214,7 +216,7 @@ textLines=args.inputFile.readlines()
 # check for skipping 1st line
 if args.skip_header == 1:
     csvHeaderLine = textLines.pop(0) #pop only the first line
-    print(csvHeaderLine, end = '')
+    # print(csvHeaderLine, end = '') # if you want you can print out the header of CSV file
 
 # assign field delimiter
 delimiter=args.field_delimiter
@@ -233,21 +235,39 @@ def main (command_line=None):
             string1map1 = map1(string1.rstrip("\n"))
             string2map1 = map1(string2.rstrip("\n"))        
             result=calc_distance(string1map1, string2map1, args.distance)
-            fields = [string1map1, string2map1, str(result)]
+            if args.original_strings == 0:
+                fields = [string1map1, string2map1, str(result)]
+            elif args.original_strings == 1:
+                fields = [string1, string2, str(result)]
+                            
             print(','.join(fields))
+            
         elif args.map == 2:
             string1map2 = map2(string1.rstrip("\n"))
             string2map2 = map2(string2.rstrip("\n"))        
             result=calc_distance(string1map2, string2map2, args.distance)
-            fields = [string1map2, string2map2, str(result)]
+            if args.original_strings == 0:
+                fields = [string1map2, string2map2, str(result)]
+            elif args.original_strings == 1:
+                fields = [string1, string2, str(result)]
+                
             print(','.join(fields))            
+            
         elif args.map ==3:
             string1map3 = map3(string1.rstrip("\n"))
             string2map3 = map3(string2.rstrip("\n"))        
             result=calc_distance(string1map3, string2map3, args.distance)
-            fields = [string1map3, string2map3, str(result)]
+            if args.original_strings == 0:
+                fields = [string1map3, string2map3, str(result)]
+            elif args.original_strings == 1:
+                fields = [string1, string2, str(result)]
+                
             print(','.join(fields))            
+        elif args.map ==0:
+            result=calc_distance(string1.rstrip("\n"), string2.rstrip("\n"), args.distance)
+            fields = [string1, string2, str(result)]            
+            
+            print(','.join(fields))                    
      
 if __name__ == "__main__":
     main ()
-
