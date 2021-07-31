@@ -992,6 +992,7 @@ optional arguments:
 
 Help Screen ကိုခေါ်ပြီး အရင်ဆုံး ပေးရမယ့် option တွေကို နားလည်အောင် လေ့လာစေချင်ပါတယ်။  
 
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --help
 usage: str2my-edit-distances.py [-h] [-m MAP] [-d DISTANCE]
                                 [-f FIELD_DELIMITER] [-s SKIP_HEADER]
@@ -1026,6 +1027,13 @@ optional arguments:
                         true and "0" for false, default=1
         
 ```
+
+ဒီ ပရိုဂရမ်မှာ ကို လက်တွေ့ စမ်း run ပြဖို့အတွက် ဥပမာအဖြစ် သုံးမယ့် CSV ဖိုင်က အောက်ပါအတိုင်းပါ။  
+ကော်လံ သို့မဟုတ် field စုစုပေါင်း ခြောက်ခု ရှိပါတယ်။  
+CSV ဖိုင်ရဲ့ feature တစ်ခုဖြစ်တဲ့ header line လည်း ပါပါတယ်။  
+အဲဒီ ကော်လံ ခြောက်ခုထဲကနေမှ string similarity measure လုပ်ဖို့အတွက်က ဗမာစာ စာကြောင်းတွေ ပါတဲ့ field no. 4 နဲ့ no. 5 ကို သုံးမှာ ဖြစ်ပါတယ်။  
+
+```
 $ cat ./head.train.csv 
 id,senid1,senid2,sentence1,sentence2,is_duplicate
 0,1,2,ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,0
@@ -1039,6 +1047,7 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 8,17,18,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,1
 ```
         
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 1 --distance 'levenshtein' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,27
 ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,6
@@ -1049,6 +1058,9 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 ဒါ ကို ဝယ် မယ် လို့ စဉ်းစား နေ တာ အတော်ပဲ ဖြစ် နေ တယ် ။,ဒါ ကို ဝယ် ခဲ့ လိုက် တာ မှန် တယ် လို့ ကျွန်တော် ထင် တယ် ။,23
 လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,16
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,5
+```
+
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 2 --distance 'levenshtein' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,25
 ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,6
@@ -1059,6 +1071,9 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 ဒါ ကို ဝယ် မယ် လို့ စဉ်းစား နေ တာ အတော်ပဲ ဖြစ် နေ တယ် ။,ဒါ ကို ဝယ် ခဲ့ လိုက် တာ မှန် တယ် လို့ ကျွန်တော် ထင် တယ် ။,20
 လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,15
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,5
+```
+
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 3 --distance 'levenshtein' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,23
 ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,7
@@ -1069,6 +1084,9 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 ဒါ ကို ဝယ် မယ် လို့ စဉ်းစား နေ တာ အတော်ပဲ ဖြစ် နေ တယ် ။,ဒါ ကို ဝယ် ခဲ့ လိုက် တာ မှန် တယ် လို့ ကျွန်တော် ထင် တယ် ။,22
 လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,14
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,5
+```
+
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 3 --distance 'cosine' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,0.5345224838248488
 ဆက် ကြိုးစား ကြ ပါ,ဆက် ပြီး ကြိုးစား ပေး ပါ,0.6708203932499369
@@ -1080,7 +1098,9 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,0.0
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,0.9523809523809523
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$
+```
 
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --field_delimiter ',' --skip_header 1 --map 1 --distance 'levenshtein' --original_strings 0 ./head.train.csv 4 5
 ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,27
 စd ကyiuစr ကy ပr,စd ပyi ကyiuစr ပa ပr,6
@@ -1092,7 +1112,9 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 လaစr တe အr လi ကy မi တe,မလaမစr မ လud နe အတuရu ပr,16
 ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,5
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ 
-        
+```
+
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --field_delimiter ',' --skip_header 0 --map 1 --distance 'levenshtein' --original_strings 0 ./head.train.csv 4 5
 LLLLLLLL1,LLLLLLLL2,1
 ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,27
@@ -1104,7 +1126,9 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 ဒr ကiu ဝe မe လiu စinစr နa တr အတar်ပe ပyစ် နa တe s,ဒr ကiu ဝe ကe လiud တr မn တe လiu ကynတar် ထin တe s,23
 လaစr တe အr လi ကy မi တe,မလaမစr မ လud နe အတuရu ပr,16
 ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,5
+```
 
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ cat f4-5.tab.txt 
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။	ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။
 ဆက် ကြိုးစား ကြ ပါ	ဆက် ပြီး ကြိုးစား ပေး ပါ
@@ -1115,7 +1139,9 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 ဒါ ကို ဝယ် မယ် လို့ စဉ်းစား နေ တာ အတော်ပဲ ဖြစ် နေ တယ် ။	ဒါ ကို ဝယ် ခဲ့ လိုက် တာ မှန် တယ် လို့ ကျွန်တော် ထင် တယ် ။
 လေးစား တယ် အား လည်း ကျ မိ တယ်	မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။	ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။
+```
 
+```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --field_delimiter $'\t' --skip_header 0 --map 1 --distance 'levenshtein' --original_strings 0 ./f4-5.tab.txt 1 2
 ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,27
 စd ကyiuစr ကy ပr,စd ပyi ကyiuစr ပa ပr,6
@@ -1126,6 +1152,6 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 ဒr ကiu ဝe မe လiu စinစr နa တr အတar်ပe ပyစ် နa တe s,ဒr ကiu ဝe ကe လiud တr မn တe လiu ကynတar် ထin တe s,23
 လaစr တe အr လi ကy မi တe,မလaမစr မ လud နe အတuရu ပr,16
 ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,5
-
+```
         
 
