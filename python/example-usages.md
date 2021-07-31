@@ -1071,6 +1071,11 @@ Running usage ကို ဥပမာအနေနဲ့ အလွယ်ဆုံ�
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,5
 ```
 
+Mapping 1, 2, 3 က help screen မှာ ရှင်းပြထားတဲ့အတိုင်းပါပဲ။ Mapping 1 က Phonetic နဲ့ ဆိုင်ပါတယ်။ Mapping 2 ကတော့ Sound (ဗမာသံတွေကို ထွက်ရတဲ့အပိုင်း) နဲ့ ဆိုင်ပါတယ်။ Mapping 3 ကတော့ Vowel Position (ဗမာဗျည်း နဲ့ သရတွေကို တွဲပေးရတဲ့ ပုံစံ) ကို အခြေခံထားတာ ဖြစ်ပါတယ်။ အသေးစိတ်ကတော့ published လုပ်ထားတဲ့ စာတမ်းနှစ်စောင်ကို ဝင်ဖတ်ပါလို့ အကြံပေးချင်ပါတယ်။  
+
+ဒီတစ်ခါတော့ Mapping 2 နဲ့ ပြောင်းပြီးမှ edit distance ကို တွက်ချင်တာမို့ --map 2 ဆိုတဲ့ option ပေးပြီး run ပြထားတာ ဖြစ်ပါတယ်။   
+အထက်မှာ တွက်ပြထားတဲ့ --map 1 ရဲ့ levenshtein distance value တွေနဲ့ မတူတဲ့ စာကြောင်းတွေပါလာတာကို တွေ့ရပါလိမ့်မယ်။   
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 2 --distance 'levenshtein' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,25
@@ -1084,6 +1089,8 @@ Running usage ကို ဥပမာအနေနဲ့ အလွယ်ဆုံ�
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,5
 ```
 
+ဒီတစ်ခါတော့ --map 3 ဆိုတဲ့ option နဲ့ run ကြည့်ပြီး ထွက်လာတဲ့ levenshtein distance value တွေကို လေ့လာကြည့်ရအောင်...  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 3 --distance 'levenshtein' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,23
@@ -1096,6 +1103,8 @@ Running usage ကို ဥပမာအနေနဲ့ အလွယ်ဆုံ�
 လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,14
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,5
 ```
+
+ဒီတစ်ခေါက်မှာတော့ --distance 'cosine' ဆိုတဲ့ option ပေးပြီးတော့ Mapping 3 နဲ့ ပြောင်းထားတဲ့ string နှစ်ကြောင်းကို Cosine distance တွက်ခိုင်းကြည့်ရအောင်...  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 3 --distance 'cosine' ./head.train.csv 4 5
