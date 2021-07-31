@@ -1001,8 +1001,8 @@ usage: str2my-edit-distances.py [-h] [-m MAP] [-d DISTANCE]
 
 positional arguments:
   inputFile             input filename of the CSV file
-  string1_field         field number of String1 in the CSV file
-  string2_field         field number of String2 in the CSV file
+  string1_field         field number of String1 in the CSV file, default=1
+  string2_field         field number of String2 in the CSV file, default=2
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -1013,14 +1013,15 @@ optional arguments:
                         damerau_levenshtein, hamming_distance, jaro_winkler,
                         cosine, jaccard
   -f FIELD_DELIMITER, --field_delimiter FIELD_DELIMITER
-                        assign field delimiter such as $'\t', ','
+                        assign field delimiter such as $'\t' for <TAB>, ','
+                        for comma, default=","
   -s SKIP_HEADER, --skip_header SKIP_HEADER
                         skip CSV header line or no distance calculation for
-                        the first line. "1" for true and "0" for false
+                        the first line. "1" for true and "0" for false,
+                        default=1
   -o ORIGINAL_STRINGS, --original_strings ORIGINAL_STRINGS
                         printing original input string1 and string2, "1" for
-                        true and "0" for false
-
+                        true and "0" for false, default=1
 
 ```
 
