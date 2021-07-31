@@ -1120,6 +1120,10 @@ Mapping 1, 2, 3 က help screen မှာ ရှင်းပြထားတဲ�
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$
 ```
 
+အထက်ပါ run ပြခဲ့တာတွေက --field_delimiter (field သို့မဟုတ် column တွေကို ဘာ စာလုံးနဲ့ ခြားထားတာလဲ ဆိုတာကို သတ်မှတ်ပေးတာ) နဲ့ --skip_header (input file ထဲက ပထမဆုံးစာကြောင်း ကို skip လုပ်သွားမှာလား သို့မဟုတ် edit distance တွက်ခိုင်းမှာလား ဆိုတာကို သတ်မှတ်ပေးတာ) option တွေကို မပေးပဲ ထားခဲ့ပါတယ်။ အဲဒီ option နှစ်ခုကို မပေးပဲ ထားရင် ပရိုဂရမ်က default value တွေနဲ့ပဲထားပြီး run ပေးသွားမှာ ဖြစ်ပါတယ်။ Help screen မှာလည်း မြင်ရတဲ့ အတိုင်းပါပဲ။ သူတို့ရဲ့ default option တွေက --field_delimiter အတွက်က ',' ဖြစ်ပြီးတော့ --skip_header အတွက်ကတော့ 1 ဖြစ်ပါတယ်။ အဲဒါကြောင့် Python code ကို run တဲ့အခါမှာ field တွေကို ဖြတ်ထုတ်ယူတဲ့အချိန်မှာ ကော်မာနဲ့ပဲ ဖြတ်ယူပြီး၊ ပထမဆုံး header line ကို edit distance မတွက်ပဲနဲ့ skip လုပ်သွားပေးမှာ ဖြစ်ပါတယ်။  
+
+တကယ်က အဲဒီ option နှစ်ခုကို default setting အနေနဲ့ပဲ ထည့်သုံးပြီး run ပြရရင် အောက်ပါအတိုင်း command ပေးသွားရမှာ ဖြစ်ပါတယ်။  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --field_delimiter ',' --skip_header 1 --map 1 --distance 'levenshtein' --original_strings 0 ./head.train.csv 4 5
 ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,27
