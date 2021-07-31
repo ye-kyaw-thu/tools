@@ -989,7 +989,7 @@ optional arguments:
 
 ## 20. [str2my-edit-distances.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2my-edit-distances.py)  
 
-
+ဒီ Python code မှာက အသုံးပြုရတဲ့ option တွေက များပါတယ်။  
 Help Screen ကိုခေါ်ပြီး အရင်ဆုံး ပေးရမယ့် option တွေကို နားလည်အောင် လေ့လာစေချင်ပါတယ်။  
 
 ```
