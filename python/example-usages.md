@@ -989,6 +989,8 @@ optional arguments:
 
 ## 20. [str2my-edit-distances.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2my-edit-distances.py)  
 
+str2my-edit-distance.py မှာတော့ mapping ပြောင်းပေးယုံသာမကပဲ အဲဒီပြောင်းထားတဲ့ mapping တွေနဲ့ edit distance အမျိုးမျိုးတွက်ကြည့်ဖို့အတွက် ရေးထားတာ ဖြစ်ပါတယ်။  
+
 ဒီ Python code မှာက အသုံးပြုရတဲ့ option တွေက များပါတယ်။  
 Help Screen ကိုခေါ်ပြီး အရင်ဆုံး ပေးရမယ့် option တွေကို နားလည်အောင် လေ့လာစေချင်ပါတယ်။  
 
@@ -1046,7 +1048,16 @@ id,senid1,senid2,sentence1,sentence2,is_duplicate
 7,15,16,လေးစား တယ် အား လည်း ကျ မိ တယ်,မလေးမစား မ လုပ် နဲ့ အတုယူ ပါ,0
 8,17,18,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။,ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။,1
 ```
-        
+   
+Running usage ကို ဥပမာအနေနဲ့ အလွယ်ဆုံး ပြရရင် အောက်ပါအတိုင်းပါ။ ဒီနေရာမှာတော့  
+- --map 1 ဆိုတာက mapping 1 အဖြစ် ပြောင်းဖို့ argument ပေးထားတာပါ။  
+- --distance 'levenshtein' ကတော့ Levenshtein edit-distance ကို တွက်ပေးပါလို့ argument ပေးထားတာပါ။  
+- ./head.train.csv ကတော့ input filename ကို argument ပေးထားတာပါ။  
+- 4 ဆိုတာကတော့ ပထမဆုံး string ကို CSV ဖိုင်ထဲကနေ ကော်လံနံပါတ် ၄ နေရာကနေ ယူပါလို့ argument ပေးထားတာပါ။  
+- 5 ဆိုတာကတော့ string similarity တွက်ဖို့အတွက် နှိုင်းယှဉ်ဖို့ စာကြောင်း နှစ်ကြောင်းလိုတာမို့ ဒုတိယ စာကြောင်းကိုတော့ ကော်လံနံပါတ် ၅ နေရာကနေ ယူပါလို့ option ပေးထားတာ ဖြစ်ပါတယ်။  
+
+အဲဒီ option တွေကို သုံးပြီး run ရင် အောက်ပါအတိုင်း output ပေးပါလိမ့်မယ်။  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --map 1 --distance 'levenshtein' ./head.train.csv 4 5
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။,ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။,27
