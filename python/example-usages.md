@@ -1172,6 +1172,9 @@ NLP field မှာ အသုံးများတဲ့ ```\<TAB\>``` နဲ့
 ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ပုံတူကူး ထား တတ် ကြ သည် ။	ကလေး များ သည် ငယ်ငယ် ကတည်းက မိဘ ၏ ပုံရိပ် ကို ခိုးချ ထား တတ် ကြ သည် ။
 ```
 
+အထက်ပါ input ဖိုင်နဲ့ --map 1 ပြောင်းပြီးတော့ Levenshtein distance တွက်ကြည့်ရင် အောက်ပါအတိုင်း output ရလာပါလိမ့်မယ်။  
+တစ်ခု သတိထားစေချင်တာက Python ပရိုဂရမ်တွေကို ```\<TAB\>``` ကီးကို command line argument ပေးတဲ့အခါမှာ ပုံမှန် string ပေးတဲ့ ပုံစံမျိုးဖြစ်တဲ့ single quote, double quote ပိတ်ထားတဲ့ ပုံစံအထဲမှာ \t ကို ရိုက်ထည့်ရုံတင်နဲ့ မရပဲ $ sign ကို ရှေ့မှာ ခံပေးရပါတယ်။ အဲဒါကြောင့် --field_delimiter $'\t' သို့မဟုတ် --field_delimiter $"\t" ဆိုတဲ့ ပုံစံမျိုးနဲ့ အသုံးပြုရပါလိမ့်မယ်။  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ python ./str2my-edit-distances.py --field_delimiter $'\t' --skip_header 0 --map 1 --distance 'levenshtein' --original_strings 0 ./f4-5.tab.txt 1 2
 ကynတar် သတinကyr ရin ကinဘyr ကiu ကynတar် ပyar ပr မe s,ကinဘyr ရe သတin ကiu သu ပyar မ ပe ကynတar် ကyr ရ တar တe s,27
