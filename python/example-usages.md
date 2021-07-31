@@ -1154,6 +1154,11 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,5
 ```
 
+ဒီ str2my-edit-distance ပရိုဂရမ်က comma နဲ့ ခြားထားတဲ့ CSV ဖိုင်နဲ့ပဲ run လို့ ရတာမဟုတ်ပါဘူး။  
+NLP field မှာ အသုံးများတဲ့ ```\<TAB\>``` နဲ့ ခြားထားတာတို့ တခြား character တွေနဲ့ ခြားထားတဲ့ input file တွေနဲ့လည်း အသုံးပြုလို့ ရအောင် ရည်ရွယ်ပြီး ရေးထားပါတယ်။   
+ပြီးတော့ field ကလည်း ဘယ်နှစ်ခု ပါရမယ် ဆိုတာမျိုး သတ်မှတ်ထားတာ မဟုတ်ပါဘူး။ အနည်းဆုံးတော့ string similarity တွက်ဖို့အတွက် ကော်လံနှစ်ခုကတော့ လိုအပ်ပေမဲ့ ကော်လံနှစ်ခုနဲ့ အထက် variation အမျိုးမျိုး ဖြစ်တာကို လက်ခံပေးနိုင်ပါတယ်။  
+ဥပမာ practical running အနေနဲ့ ဒီတစ်ခေါက် သုံးမယ့် input file က အောက်ပါအတိုင်း field နှစ်ခုပဲ ပါဝင်ပြီးတော့ အဲဒီ field or column နှစ်ခုကိုလည်း ```\<TAB\>``` ကီးရိုက်ပြီး ခြားထားတယ်လို့ ဆိုကြပါစို့...  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:/media/ye/Transcend/paper/next-paper/ksw/exp/paper/chk4myint2htay/str2map$ cat f4-5.tab.txt 
 ကျွန်တော် သတင်းကြား ရင် ခင်ဗျား ကို ကျွန်တော် ပြော ပါ့ မယ် ။	ခင်ဗျား ရဲ့ သတင်း ကို သူ ပြော မှ ပဲ ကျွန်တော် ကြား ရ တော့ တယ် ။
