@@ -9,6 +9,7 @@ import jellyfish
 import epitran
 
 # Edit distance calculation with Map-1 (Phonetic Mapping), Map-2 (Sound Mapping) and Map-3 (Vowel Position Mapping)
+# Input file should be CSV file  
 # Written by Ye Kyaw Thu, Visiting Professor, LST, NECTEC, Thailand
 # Released Date: 30 July 2021
 # How to run:
