@@ -1199,6 +1199,8 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 
 ## Head of myPOS corpus (version 3.0)
 
+test conversion အတွက် ပြင်ထားတဲ့ ဖိုင်ပါ။ myPOS (version 3.0) ကနေ ထိပ်ဆုံးစာကြောင်း ၁၀ကြောင်းကို head လုပ်ထားတဲ့ ဖိုင်ပါ။  
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./head.mypos.txt 
 ဒီ/adj ဆေး/n က/ppm ၁၀၀/num ရာခိုင်နှုန်း/n ဆေးဘက်ဝင်/adj အပင်/n များ/part မှ/ppm ဖော်စပ်/v ထား/part တာ/part ဖြစ်/v တယ်/ppm ။/punc
@@ -1215,6 +1217,8 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 
 ## Converting myPOS (version 3) to Universal POS
 
+ပထမဆုံး myPOS corpus တစ်ခုလုံး မဟုတ်ပဲနဲ့ ၁၀ကြောင်းလောက်ကိုပဲ စမ်းပြောင်း ကြည့်ရအောင်ပါ...   
+
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ python ./mypos2upos.py ./head.mypos.txt 
 ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NOUNum ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
@@ -1230,6 +1234,8 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 ```
 
 ## Through Piping
+
+input file ကို cat နဲ့ ရိုက်ထုတ်ပြီး pipe ကတဆင့်လည်း parse လုပ်လို့ ရပါတယ်။  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./head.mypos.txt | python ./mypos2upos.py 
@@ -1248,13 +1254,19 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 
 ## Converting the Whole myPOS Corpus
 
+myPOS (version 3.0) corpus တစ်ခုလုံးကို conversion လုပ်ကြည့်ပြီး wc command သုံးပြီး word count လုပ်ကြည့်တာပါ။  
+Error ဘာညာ ရှိနိုင်သလားလို့...  
+
 ```
-(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./mypos-ver.3.0.txt | python ./convert2upos.py > ./mypos-ver.3.0.upos.txt 
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./mypos-ver.3.0.txt | python ./mypos2upos.py > ./mypos-ver.3.0.upos.txt 
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ wc ./mypos-ver.3.0.txt 
   43196  537232 9581543 ./mypos-ver.3.0.txt
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ wc ./mypos-ver.3.0.upos.txt 
   43196  537232 9924985 ./mypos-ver.3.0.upos.txt
 ```
+
+Conversion လုပ်ပြီး ထွက်လာတဲ့ output ဖိုင်ကို shuffle လုပ်လိုက်ပြီး မျက်လုံးနဲ့ စစ်ဆေးကြည့်ထားတာပါ။  
+Shuffle လုပ်ပြီးတော့ ထိပ်ဆုံးက ၁၀ကြောင်းကို print ထုတ်ကြည့်ရအောင်...  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | head
@@ -1270,6 +1282,7 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 ၂ဝ/NOUNum ရာစု/NOUN နှစ်ဦး/NOUN တွင်/ADP ဂျာမန်/NOUN|လူမျိုး/NOUN ဇီဝဗေဒ/NOUN|ပညာရှင်/NOUN ဗိုက်စမန်း/NOUN သည်/ADP သတ္တဝါ/NOUN တို့/PRT ၏/ADP ဗီဇ/NOUN|ဆဲလ်/NOUN များ/PRT ကို/ADP အခြား/ADJ ဆဲလ်/NOUN များ/PRT မှ/ADP ခွဲခြား/VERB ၍/CONJ ပြဆို/VERB ခဲ့/PRT လေ/PRT သည်/ADP ။/.
 ```
 
+shuffle လုပ်ပြီး နောက်ဆုံးမှာ ရှိတဲ့စာကြောင်း ၁၀ကြောင်းကို ကြည့်ကြည့်ရအောင်...  
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | tail
 ဗိုက်/NOUN ကွဲထွက်/VERB အောင်/PRT အများကြီး/ADV စား/VERB ခဲ့/PRT တယ်/ADP ။/.
@@ -1283,6 +1296,8 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 သို့သော်/CONJ ၁၉၆၅/NOUNum ခုနှစ်/NOUN ဇန်နဝါရီ/NOUN|လ/NOUN ၂၆/NOUNum ရက်နေ့/NOUN မှ/ADP အစပြု/VERB ၍/CONJ ဟင်ဒီ/NOUN|ဘာသာ/NOUN ကို/ADP ရုံးသုံး/ADJ ပြုလုပ်/VERB ထား/PRT ခဲ့/PRT လေ/PRT သည်/ADP ။/.
 ကျားထိုး/VERB တာ/PRT လက်ရည်တူ/VERB ဘဲ/PRT ။/.
 ```
+
+head, tail command နှစ်ခု သုံးပြီး random ဆွဲထုတ်ကြည့်တဲ့ ပုံစံတမျိုးပါပဲ...  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | head -n 10000 | tail
@@ -1298,6 +1313,13 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 နောက်ဆုံး/NOUN ၌/ADP ၁၉၄၇/NOUNum ခုနှစ်/NOUN ဩဂုတ်/NOUN|လ/NOUN ၁၅/NOUNum ရက်/NOUN တွင်/ADP အိန္ဒိယ/NOUN သည်/ADP ဗြိတိသျှ/NOUN တို့/PRT ၏/ADP အုပ်ချုပ်/VERB|မှု/PRT အောက်/NOUN မှ/ADP လွတ်လပ်/VERB|ရေး/PRT ရ/VERB ခဲ့/PRT သည်/ADP ။/.
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$
 ```
+
+အကြမ်းမျဉ်းအားဖြင့် အဆင်ပြေပုံတော့ ရပါတယ်။  
+
+## To Do
+
+- check RDR parsing accuracy with U-POS
+- Rethink Mapping between myPOS and U-POS  
 
 ## Reference
 
