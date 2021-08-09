@@ -60,3 +60,6 @@
 
 20. [str2my-edit-distances.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2my-edit-distances.py)  
 (အထက်က Python program နံပါတ် ၁၈၊ ၁၉ တို့နဲ့ ဆက်စပ်နေပါတယ်။ ဒီ ပရိုဂရမ်ကတော့ mapping ပြောင်းပြီး distance measure ခြောက်မျိုးကိုပါ တွက်ထုတ်ပေးဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
+
+21. [mypos2upos.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mypos2upos.py)  
+([myPOS](https://github.com/ye-kyaw-thu/myPOS) မှာ သုံးထားတဲ့ tag set ကို [Universal POS tag set](http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf) အဖြစ် ပြောင်းတဲ့အလုပ်ကို စမ်းထားတဲ့ ပရိုဂရမ်ပါ)  
