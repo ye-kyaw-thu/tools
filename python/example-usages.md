@@ -1221,11 +1221,11 @@ test conversion အတွက် ပြင်ထားတဲ့ ဖိုင်�
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ python ./mypos2upos.py ./head.mypos.txt 
-ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NOUNum ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
+ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NUM ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
 အသစ်/NOUN ဝယ်/VERB ထား/PRT တဲ့/PRT ဆွယ်တာ/NOUN က/ADP အသီး/NOUN ထ/VERB နေ/PRT ပါ/PRT ပေါ့/PRT ။/.
 မ/PRT ကျန်းမာ/VERB လျှင်/CONJ နတ်/NOUN|ဆရာ/NOUN ထံ/ADP မေးမြန်း/VERB ၍/CONJ သက်ဆိုင်ရာ/NOUN နတ်/NOUN တို့/PRT အား/ADP ပူဇော်ပသ/VERB ရ/PRT သည်/ADP ။/.
 ပေဟိုင်/NOUN|ဥယျာဉ်/NOUN ။/.
-နဝမ/ADJ အိပ်မက်/NOUN ကောသလ/NOUN|မင်း/NOUN|အိပ်မက်/NOUN ၉/NOUNum နက်ရှိုင်း/ADJ ကျယ်ဝန်း/ADJ သော/PRT ရေကန်/NOUN ကြီး/ADJ တစ်/NUM ခု/PRT တွင်/ADP သတ္တဝါ/NOUN တို့/PRT ဆင်း/VERB ၍/CONJ ရေသောက်/VERB ကြ/PRT ၏/ADP ။/.
+နဝမ/ADJ အိပ်မက်/NOUN ကောသလ/NOUN|မင်း/NOUN|အိပ်မက်/NOUN ၉/NUM နက်ရှိုင်း/ADJ ကျယ်ဝန်း/ADJ သော/PRT ရေကန်/NOUN ကြီး/ADJ တစ်/NUM ခု/PRT တွင်/ADP သတ္တဝါ/NOUN တို့/PRT ဆင်း/VERB ၍/CONJ ရေသောက်/VERB ကြ/PRT ၏/ADP ။/.
 အပြင်ပန်း/NOUN ကြည့်/VERB ရင်/CONJ ခက်/ADJ သလို/PRT ထင်/VERB ရ/PRT ပေမယ့်/CONJ တကယ့်/ADJ လက်တွေ့/NOUN အခြေအနေ/NOUN က/ADP တော့/PRT အဲဒီ/PRON လို/ADP မ/PRT ဟုတ်/VERB ပါ/PRT ဘူး/PRT ။/.
 8/X bit/X ပုံရိပ်/NOUN တစ်/NUM ခု/PRT သည်/ADP 256/X color/X သို့မဟုတ်/CONJ gray/X scale/X များ/PRT ကို/ADP အထောက်အကူ/NOUN ပြု/VERB သည်/ADP ။/.
 ကိုရီးယား/NOUN ဝတ်စုံ/NOUN မှာ/ADP ပန်း/NOUN ဒီဇိုင်း/NOUN နဲ့/CONJ အဝါရောင်/NOUN က/ADP လိုက်ဖက်/VERB လိမ့်/PRT မယ်/PRT ထင်/VERB တယ်/ADP ။/.
@@ -1239,11 +1239,11 @@ input file ကို cat နဲ့ ရိုက်ထုတ်ပြီး pipe 
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./head.mypos.txt | python ./mypos2upos.py 
-ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NOUNum ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
+ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NUM ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
 အသစ်/NOUN ဝယ်/VERB ထား/PRT တဲ့/PRT ဆွယ်တာ/NOUN က/ADP အသီး/NOUN ထ/VERB နေ/PRT ပါ/PRT ပေါ့/PRT ။/.
 မ/PRT ကျန်းမာ/VERB လျှင်/CONJ နတ်/NOUN|ဆရာ/NOUN ထံ/ADP မေးမြန်း/VERB ၍/CONJ သက်ဆိုင်ရာ/NOUN နတ်/NOUN တို့/PRT အား/ADP ပူဇော်ပသ/VERB ရ/PRT သည်/ADP ။/.
 ပေဟိုင်/NOUN|ဥယျာဉ်/NOUN ။/.
-နဝမ/ADJ အိပ်မက်/NOUN ကောသလ/NOUN|မင်း/NOUN|အိပ်မက်/NOUN ၉/NOUNum နက်ရှိုင်း/ADJ ကျယ်ဝန်း/ADJ သော/PRT ရေကန်/NOUN ကြီး/ADJ တစ်/NUM ခု/PRT တွင်/ADP သတ္တဝါ/NOUN တို့/PRT ဆင်း/VERB ၍/CONJ ရေသောက်/VERB ကြ/PRT ၏/ADP ။/.
+နဝမ/ADJ အိပ်မက်/NOUN ကောသလ/NOUN|မင်း/NOUN|အိပ်မက်/NOUN ၉/NUM နက်ရှိုင်း/ADJ ကျယ်ဝန်း/ADJ သော/PRT ရေကန်/NOUN ကြီး/ADJ တစ်/NUM ခု/PRT တွင်/ADP သတ္တဝါ/NOUN တို့/PRT ဆင်း/VERB ၍/CONJ ရေသောက်/VERB ကြ/PRT ၏/ADP ။/.
 အပြင်ပန်း/NOUN ကြည့်/VERB ရင်/CONJ ခက်/ADJ သလို/PRT ထင်/VERB ရ/PRT ပေမယ့်/CONJ တကယ့်/ADJ လက်တွေ့/NOUN အခြေအနေ/NOUN က/ADP တော့/PRT အဲဒီ/PRON လို/ADP မ/PRT ဟုတ်/VERB ပါ/PRT ဘူး/PRT ။/.
 8/X bit/X ပုံရိပ်/NOUN တစ်/NUM ခု/PRT သည်/ADP 256/X color/X သို့မဟုတ်/CONJ gray/X scale/X များ/PRT ကို/ADP အထောက်အကူ/NOUN ပြု/VERB သည်/ADP ။/.
 ကိုရီးယား/NOUN ဝတ်စုံ/NOUN မှာ/ADP ပန်း/NOUN ဒီဇိုင်း/NOUN နဲ့/CONJ အဝါရောင်/NOUN က/ADP လိုက်ဖက်/VERB လိမ့်/PRT မယ်/PRT ထင်/VERB တယ်/ADP ။/.
@@ -1262,7 +1262,7 @@ Error ဘာညာ ရှိနိုင်သလားလို့...
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ wc ./mypos-ver.3.0.txt 
   43196  537232 9581543 ./mypos-ver.3.0.txt
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ wc ./mypos-ver.3.0.upos.txt 
-  43196  537232 9924985 ./mypos-ver.3.0.upos.txt
+  43196  537232 9907159 ./mypos-ver.3.0.upos.txt
 ```
 
 Conversion လုပ်ပြီး ထွက်လာတဲ့ output ဖိုင်ကို shuffle လုပ်လိုက်ပြီး မျက်လုံးနဲ့ စစ်ဆေးကြည့်ထားတာပါ။  
@@ -1270,47 +1270,47 @@ Shuffle လုပ်ပြီးတော့ ထိပ်ဆုံးက ၁၀�
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | head
-အခန်း/NOUN ရှိ/VERB ဦး/PRT မှာ/ADP အငှား/NOUN မ/PRT ဝင်/VERB သေး/PRT ဘူး/PRT နဲ့/ADP တူ/VERB တယ်/ADP ။/.
-မနက်ဖြန်/NOUN ရုပ်ရှင်/NOUN ကြည့်/VERB ဖို့/PRT သွား/VERB ပါ/PRT မယ်/ADP ။/.
-ဒါကြောင့်/CONJ လူထု/NOUN တွေ/PRT ကို/ADP ဆက်/ADV တောင့်/VERB ထား/PRT ကြ/PRT ပါ/PRT ဦး/PRT လို့/PRT ဆို/VERB တာ/PRT ထပ်/ADV ပြော/VERB ခဲ့/PRT ချင်/PRT တယ်/ADP ။/.
-အရှေ့/NOUN|တရုတ်/NOUN|ပင်လယ်/NOUN ၊/. တောင်/NOUN|တရုတ်/NOUN|ပင်လယ်/NOUN တို့/PRT ရှိ/VERB သည်/ADP ။/.
-အတန်း/NOUN ချိန်/NOUN မှာ/ADP တော့/PRT မ/PRT သိ/VERB တဲ့/PRT အဓိပ္ပါယ်/NOUN ရှိ/VERB လဲ/PRT အဘိဓါန်/NOUN မ/PRT ရှာ/VERB ပါ/PRT နဲ့/PRT ။/.
-အဆင်ပြေ/VERB လား/PRT ။/.
-အိမ်/NOUN က/ADP မိန်းမ/NOUN က/ADP တော့/PRT အသုံးစရိတ်/NOUN မ/PRT လောက်/VERB လို့/PRT ဆို/VERB ပြီး/CONJ ညည်း/VERB နေ/PRT လေ/PRT ရဲ့/PRT ။/.
-ခေတ်/NOUN|လူငယ်/NOUN စိတ်/NOUN|ပိုင်း/PRT|ဆိုင်ရာ/NOUN အသိတရား/NOUN ခေါင်းပါး/VERB နေ/PRT သည်/ADP ကို/ADP စိုးရိမ်/VERB|မိ/PRT|ကြောင်း/PRT ၊/. လောကဓံ/NOUN|လှိုင်း/NOUN များ/PRT ကို/ADP ကြံ့ကြံ့ခိုင်/ADJ ရင်ဆိုင်/VERB တွန်းလှန်/VERB နိုင်စွမ်း/PRT မ/PRT ရှိ/VERB ပါ/PRT က/ADP ထို/ADJ အသိတရား/NOUN များ/PRT လုံးဝ/ADV ကွယ်ပျောက်/VERB ပြီး/CONJ စိတ်ဓာတ်/NOUN ဗလာ/NOUN မွဲပြာကျ/VERB သော/PRT အဖြစ်/NOUN သို့/ADP ရောက်/VERB ရှိ/PRT သွား/PRT မည်/ADP ကို/ADP စိုးရိမ်/VERB|ပူပန်/VERB|မိ/PRT|ကြောင်း/PRT စသဖြင့်/PRT လည်း/PRT ရေးသား/VERB ထား/PRT ပါ/PRT သည်/ADP ။/.
-နည်းနည်း/ADV နောက်ကျ/VERB တယ်/ADP နော်/PRT ။/.
-၂ဝ/NOUNum ရာစု/NOUN နှစ်ဦး/NOUN တွင်/ADP ဂျာမန်/NOUN|လူမျိုး/NOUN ဇီဝဗေဒ/NOUN|ပညာရှင်/NOUN ဗိုက်စမန်း/NOUN သည်/ADP သတ္တဝါ/NOUN တို့/PRT ၏/ADP ဗီဇ/NOUN|ဆဲလ်/NOUN များ/PRT ကို/ADP အခြား/ADJ ဆဲလ်/NOUN များ/PRT မှ/ADP ခွဲခြား/VERB ၍/CONJ ပြဆို/VERB ခဲ့/PRT လေ/PRT သည်/ADP ။/.
+ရှေး/ADJ ခေတ်/NOUN နိုင်ငံ/NOUN များ/PRT ဖြစ်/VERB သော/PRT ဗက်ဗီလုံးနီးယား/NOUN ၊/. ပယ်လက်စတိုင်/NOUN နှင့်/CONJ ဂရိ/NOUN တို့/PRT တွင်/ADP တွေ့/VERB ရှိ/PRT ရ/PRT သော/PRT မြင်း/NOUN များ/PRT မှာ/ADP အမြင်/NOUN အားဖြင့်/ADP ထွားကျိုင်း/ADJ ၍/CONJ အာရပ်/NOUN|မြင်း/NOUN ကဲ့သို့/PRT ကြော့ကြော့ရှင်းရှင်း/ADJ မ/PRT ရှိ/VERB ကြ/PRT ချေ/PRT ။/.
+အကြောင်းရင်း/NOUN မှာ/ADP အခြား/ADJ သော/PRT Hardware/X ရောင်းချ/VERB|သူ/NOUN များ/PRT မှ/ADP IBM/X ၏/ADP System/X ကို/ADP အတု/NOUN ပြုလုပ်/VERB ကြ/PRT မည်/ADP ကို/ADP စိုးရိမ်/VERB ၍/CONJ ဖြစ်/VERB သည်/ADP ။/.
+အဲဒီ/PRON အိမ်သာ/NOUN က/ADP ပျက်/VERB နေ/PRT လား/PRT မ/PRT သိ/VERB ဘူး/PRT ။/.
+အကြောင်းမဲ့/ADV လူ/NOUN ကို/ADP မုန်းတီး/VERB နေ/PRT တယ်/ADP ။/.
+မ/PRT ဟုတ်/VERB ဘူး/PRT ၊/. ကျွန်တော့်/PRON အိမ်/NOUN က/ADP တခြား/NOUN မြို့/NOUN မှာ/ADP ။/.
+ဒီ/ADJ နေရာ/NOUN ကို/ADP စိတ်ဝင်စား/VERB ရ/PRT တဲ့/PRT အကြောင်း/NOUN က/ADP ဘာ/PRON လဲ/PRT ။/.
+ဖန်သားပြင်/NOUN Screen/X ပေါ်/NOUN တွင်/ADP ပုံရိပ်/NOUN များ/PRT ကို/ADP ရေးခြယ်/VERB ရန်/CONJ အသုံးပြု/VERB သည့်/PRT Program/X များ/PRT တွင်/ADP Pixel/X များ/PRT ကို/ADP အဖွင့်/NOUN အပိတ်/NOUN လုပ်/VERB ပေး/PRT ရ/PRT သည်/ADP ။/.
+ဂရုမစိုက်/VERB လို့/PRT မ/PRT ဖြစ်/VERB ဘူး/PRT လေ/PRT ။/. ကျန်းမာရေး/NOUN က/ADP အရေးကြီး/VERB တယ်/ADP ။/. ကျန်းမာ/VERB တယ်/ADP ဆို/VERB ရင်/CONJ စည်းစိမ်/NOUN ချမ်းသာ/VERB ရ/PRT တာ/PRT နဲ့/ADP အတူတူ/ADV ပဲ/PRT ပေါ့/PRT ။/. နေမကောင်း/VERB လို့/PRT ဆရာဝန်/NOUN ကို/ADP ပေး/VERB ရ/PRT မယ့်/ADP ဆေးကုခ/NOUN|ငွေ/NOUN မ/PRT ကုန်/VERB တာ/PRT ပေါ့/PRT ။/.
+ဟင့်အင်း/PRT ။/. အဲဒါ/PRON က/ADP တိုက်ရိုက်/ADJ ရထား/NOUN ။/.
+ဟင်းသီးဟင်းရွက်/NOUN တွေ/PRT ကို/ADP ဆေးကြော/VERB ပြီး/CONJ တော့/PRT ရေခဲသေတ္တာ/NOUN ထဲ/ADP ထည့်/VERB ထား/PRT ပါ/PRT ။/.
 ```
 
 shuffle လုပ်ပြီး နောက်ဆုံးမှာ ရှိတဲ့စာကြောင်း ၁၀ကြောင်းကို ကြည့်ကြည့်ရအောင်...  
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | tail
-ဗိုက်/NOUN ကွဲထွက်/VERB အောင်/PRT အများကြီး/ADV စား/VERB ခဲ့/PRT တယ်/ADP ။/.
-မနေ့/PRON က/ADP စ/VERB ပြီး/CONJ အပူချိန်/NOUN က/ADP ငါး/NUM ဒီဂရီ/NOUN တောင်/ADP ကျ/VERB သွား/PRT လို့/PRT အေး/ADJ တယ်/ADP ။/.
-သူမ/PRON ကို/ADP ကြိုက်/VERB တဲ့/PRT စိတ်/VERB ကို/ADP ခဏ/NOUN မေ့ဖျောက်/VERB ပြီး/CONJ အရင်ဆုံး/NOUN စာ/NOUN ကို/ADP ကြိုးကြိုးစားစား/ADV လေ့လာ/VERB ရ/PRT မယ်/ADP ။/.
-တစ်ကိုယ်ရေ/NOUN သုံး/VERB ကွန်ပျူတာ/NOUN|လောက/NOUN တွင်/ADP iMac/X ဖြင့်/ADP ထင်ပေါ်/VERB ခဲ့/PRT သလို/CONJ အလွယ်တကူ/ADV သယ်/VERB သွား/PRT လို့/PRT ရ/PRT သော/PRT တေးဂီတ/NOUN|ဖွင့်/VERB|စက်/NOUN လို/ADP consumer/X electronic/X များ/PRT အလယ်/NOUN တွင်/ADP လည်း/PRT iPod/X ဖြင့်/ADP ဂုဏ်တင့်/VERB ခဲ့/PRT သည်/ADP ။/.
-သူ့/PRON ရဲ့/ADP စကား/NOUN ကို/ADP ကျွန်တော့်/PRON ရဲ့/ADP မှတ်ဉာဏ်/NOUN မှာ/ADP သေချာစွာ/ADV မှတ်/VERB ထား/PRT သည်/ADP ။/.
-သူ/PRON ဟာ/ADP ကုမ္ပဏီ/NOUN မှာ/ADP နေရာကောင်း/NOUN ရ/VERB တာ/PRT ဖခင်/NOUN ရဲ့/ADP ကျေးဇူး/NOUN ကြောင့်/ADP ဖြစ်/VERB တယ်/ADP ။/.
-ယွမ်/NOUN ကို/ADP ဘတ်ငွေ/NOUN လဲ/VERB ချင်/PRT လို့/PRT ပါ/PRT ။/.
-ဟုတ်/VERB ၊/. ဒါပေမယ့်/CONJ နောက်ဆုံး/NOUN အပိုင်း/NOUN မှာ/ADP အချက်/NOUN တစ်/NUM ချက်/NOUN လောက်/PRT ထပ်/ADJ ထည့်/VERB ရ/PRT မယ်/ADP ။/.
-သို့သော်/CONJ ၁၉၆၅/NOUNum ခုနှစ်/NOUN ဇန်နဝါရီ/NOUN|လ/NOUN ၂၆/NOUNum ရက်နေ့/NOUN မှ/ADP အစပြု/VERB ၍/CONJ ဟင်ဒီ/NOUN|ဘာသာ/NOUN ကို/ADP ရုံးသုံး/ADJ ပြုလုပ်/VERB ထား/PRT ခဲ့/PRT လေ/PRT သည်/ADP ။/.
-ကျားထိုး/VERB တာ/PRT လက်ရည်တူ/VERB ဘဲ/PRT ။/.
+အနီးဆုံး/ADJ စာတိုက်/NOUN ဘယ်/PRON မှာ/ADP ရှိ/VERB ပါ/PRT သလဲ/PRT ။/.
+ခင်ဗျား/PRON လမ်း/NOUN ၃၀/NUM မှာ/ADP ဆင်း/VERB ပါ/PRT ။/.
+ကျွန်တော့်/PRON ကိုယ်စား/ADV သူ့/PRON ကို/ADP နှုတ်ဆက်/VERB ပါ/PRT တယ်/ADP ။/.
+နံနက်စာ/NOUN အပြင်/CONJ တခြား/ADJ ဘာ/PRON လို/VERB သေး/PRT လဲ/PRT ။/.
+ကြက်ဥ/NOUN ခေါက်ဆွဲ/NOUN
+မူလတန်း/NOUN နှင့်/CONJ အလယ်တန်း/NOUN|ကျောင်း/NOUN များ/PRT လည်း/PRT ရှိ/VERB ၏/ADP ။/.
+ခရီးဆောင်/ADJ လက်ဆွဲသေတ္တာ/NOUN အကြီး/NOUN နဲ့/CONJ အရောင်/NOUN က/ADP အစိမ်း/NOUN|ရောင်/NOUN ဖြစ်/VERB ပါ/PRT တယ်/ADP ။/.
+MS/X DOS/X ၏/ADP ရောင်းအား/NOUN သည်/ADP မိုက်ခရိုဆော့ဖ်/NOUN ကို/ADP ဆော့ဖ်ဝဲ/NOUN ထုတ်လုပ်/VERB|မှု/PRT များ/PRT ၏/ADP အဓိက/NOUN ကစားသမား/NOUN နေရာ/NOUN ရောက်/VERB အောင်/CONJ ပို့ဆောင်/VERB ပေး/PRT နိုင်/PRT ခဲ့/PRT သည်/ADP ။/.
+တစ်/NUM ယောက်/PRT ယောက်/PRT က/ADP မီးသတ်ဗူး/NOUN ကို/ADP ဘယ်လို/ADV သုံး/VERB ရ/PRT တယ်/ADP ဆို/VERB တာ/PRT သိ/VERB လား/PRT ။/.
+ဤ/ADJ တစ်/NUM ကြိမ်/PRT တွင်/ADP အင်္ဂလိပ်/NOUN တို့/PRT သည်/ADP ကျန်/VERB ရှိ/PRT နေ/PRT သေး/PRT သည့်/PRT ကမ်းရိုးတန်း/NOUN|ဒေသ/NOUN များ/PRT ဖြစ်/VERB သည့်/PRT ဧရာဝတီ/NOUN ၊/. ရန်ကုန်/NOUN နှင့်/CONJ ပဲခူး/NOUN တို့/PRT အား/ADP သိမ်းပိုက်/VERB ခဲ့/PRT သည်/ADP ။/.
 ```
 
 head, tail command နှစ်ခု သုံးပြီး random ဆွဲထုတ်ကြည့်တဲ့ ပုံစံတမျိုးပါပဲ...  
 
 ```
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | head -n 10000 | tail
-ရုပ်ကြွင်းကျောက်/NOUN များ/PRT သည်/ADP ကျောက်လွှာ/NOUN များ/PRT ၏/ADP သက်တမ်း/NOUN ကို/ADP စူးစမ်း/VERB ရာတွင်/CONJ လည်း/PRT အထူး/ADV အသုံးဝင်/VERB သည်/ADP ။/.
-အဲဒီ/PRON အထဲ/NOUN မှာ/ADP ဘယ်/ADJ ထီး/NOUN ကို/ADP အကြိုက်ဆုံး/ADJ လဲ/PRT ။/.
-ခြင်/NOUN ကိုက်/VERB ရင်/CONJ အရမ်း/ADV ယား/VERB တယ်/ADP ။/.
-ခင်ဗျား/PRON ဒီ/ADJ ရောဂါ/NOUN အခြေအနေ/NOUN မျိုး/NOUN ကို/ADP ဘယ်/ADJ အချိန်/NOUN က/ADP စ/VERB ပြီး/CONJ ခံစား/VERB ရ/PRT တာ/PRT လဲ/PRT ။/.
-ကျွန်တော့်/PRON ဗိုက်/NOUN က/ADP စူး/VERB ပြီး/CONJ အောင့်/VERB နေ/PRT တယ်/ADP ဆရာ/NOUN ။/.
-ကြီးမား/ADJ သည့်/PRT အခန်း/NOUN|တွဲ/NOUN|တိုက်/NOUN များ/ADJ စွာ/PRT သည်/ADP ခေါင်မိုး/NOUN အနီ/NOUN|ရောင်/NOUN ၊/. အစိမ်း/NOUN|ရောင်/NOUN သို့မဟုတ်/CONJ အပြာ/NOUN|ရောင်/NOUN များ/PRT ဖြင့်/ADP ရှိ/VERB နေ/PRT ကြ/PRT သည်/ADP ။/.
-အချိုပွဲ/NOUN အတွက်/ADP ဘာ/PRON စား/VERB ချင်/PRT ပါ/PRT သလဲ/PRT ဆရာ/NOUN ။/.
-ဒီ/ADJ ကင်မရာ/NOUN|ဖလင်/NOUN လို/VERB ချင်/PRT ပါ/PRT တယ်/ADP ။/.
-ဖားကန့်/NOUN နား/NOUN က/ADP လုံးခင်း/NOUN မှာ/ADP တော့/PRT လေယာဉ်/NOUN|ကွင်း/NOUN ရှိ/VERB တယ်/ADP ။/.
-နောက်ဆုံး/NOUN ၌/ADP ၁၉၄၇/NOUNum ခုနှစ်/NOUN ဩဂုတ်/NOUN|လ/NOUN ၁၅/NOUNum ရက်/NOUN တွင်/ADP အိန္ဒိယ/NOUN သည်/ADP ဗြိတိသျှ/NOUN တို့/PRT ၏/ADP အုပ်ချုပ်/VERB|မှု/PRT အောက်/NOUN မှ/ADP လွတ်လပ်/VERB|ရေး/PRT ရ/VERB ခဲ့/PRT သည်/ADP ။/.
+ည/NOUN ၁၂/NUM နာရီ/NOUN မှာ/ADP ကြိုတင်/ADV မှာယူ/VERB|မှု/PRT ကတ်ပြား/NOUN များ/PRT ကို/ADP တံခါး/NOUN မှာ/ADP ချိတ်ဆွဲ/VERB ထား/PRT ရ/PRT ပါ/PRT မယ်/ADP ။/.
+အတွင်းပိုင်း/NOUN မြင်ကွင်း/NOUN နဲ့/CONJ အခန်း/NOUN တစ်/NUM ခန်း/NOUN ။/.
+အများကြီး/ADJ ကျေးဇူးတင်/VERB ပါ/PRT တယ်/ADP ။/.
+ဒီလို/PRON နဲ့/ADP ကျွန်မ/PRON ဟာ/PRT မြွေ/NOUN နဲ့/ADP ပတ်သက်/VERB တဲ့/PRT စာအုပ်စာတမ်း/NOUN တွေ/PRT ၊/. နိုင်ငံခြား/NOUN|ဝတ္ထု/NOUN တွေ/PRT ကို/ADP လေ့လာ/VERB ဖတ်/VERB ကြည့်/PRT ပါ/PRT တယ်/ADP ။/.
+တရုတ်/NOUN|ပြည်/NOUN လာရောက်/VERB လည်ပတ်/VERB တဲ့/PRT ကမ္ဘာလှည့်ခရီးသည်/NOUN တိုင်း/ADP လိုလို/PRT ရှေးဟောင်း/ADJ နန်းတော်/NOUN ကို/ADP လာရောက်/VERB လည်ပတ်/VERB ကြည့်ရှု/VERB ခဲ့/PRT ပါ/PRT တယ်/ADP ။/.
+အရမ်း/ADV ကို/ADP ကြိုးကြိုးစားစား/ADV အားကစား/NOUN လုပ်/VERB လိုက်/PRT တာ/PRT ရေဆာ/VERB လိုက်/PRT တာ/PRT ။/.
+ကျွန်တော်/PRON ကား/NOUN|လတ်/ADJ တစ်/NUM စီး/PRT ငှား/VERB ချင်/PRT တယ်/ADP ။/.
+ဒီ/ADJ နေ့/NOUN ကျွန်တော်/PRON အလုပ်ရှုပ်/VERB နေ/PRT လို့/PRT မနက်ဖြန်/NOUN မှာ/ADP တွေ့/VERB ပါရစေ/ADP ။/.
+လက်ဖက်ရည်/NOUN တစ်/NUM ခွက်/NOUN လို/VERB ချင်/PRT ပါ/PRT တယ်/ADP ။/.
+အကြွေး/NOUN ကို/ADP ပေးဆပ်/VERB တယ်/ADP ဆို/VERB တာ/PRT သဘာဝကျ/VERB ပါ/PRT တယ်/ADP ။/.
 (base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$
 ```
 
