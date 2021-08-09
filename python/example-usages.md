@@ -1188,4 +1188,9 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ပunတuကu ထr တd ကy သi s,ကလa မyr သi ineine ကတiက မiဘ i ပunရid ကiu ကiuကy ထr တd ကy သi s,5
 ```
         
+## 21. [mypos2upos.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mypos2upos.py)  
+
+[myPOS](https://github.com/ye-kyaw-thu/myPOS) မှာ သုံးထားတဲ့ tag set ကို [Universal POS tag set](http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf) အဖြစ် ပြောင်းဖို့အတွက် စမ်းရေးထားခဲ့တဲ့ ပရိုဂရမ်ပါ။ နောက်ပိုင်းမှာ လက်ရှိ Mapping ကို အပြောင်းအလဲ လုပ်တာမျိုးလည်း ဖြစ်ကောင်းဖြစ်နိုင်ပါတယ်။  
+
+
 
