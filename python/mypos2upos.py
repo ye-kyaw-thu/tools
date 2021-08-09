@@ -3,7 +3,12 @@ import re
 import argparse
 
 # The following paragraph is taken from: http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf
-# Our universal POS tagset unifies this previous work and extends it to 22 languages, defining the following twelve POS tags: NOUN (nouns), VERB (verbs), ADJ (adjectives), ADV (adverbs), PRON (pronouns), DET (determiners and articles), ADP (prepositions and postpositions), NUM (numerals), CONJ (conjunctions), PRT (particles), ‘.’ (punctuation marks) and X (a catch-all for other categories such as abbreviations or foreign words).
+#
+# Our universal POS tagset unifies this previous work and extends it to 22 languages, 
+# defining the following twelve POS tags: NOUN (nouns), VERB (verbs), ADJ (adjectives), ADV (adverbs), 
+# PRON (pronouns), DET (determiners and articles), ADP (prepositions and postpositions), NUM (numerals), 
+# CONJ (conjunctions), PRT (particles), ‘.’ (punctuation marks) and X (a catch-all for other categories such as abbreviations or foreign words).
+#
 # https://github.com/slavpetrov/universal-pos-tags
 
 # Test conversion of myPOS to Universal POS
