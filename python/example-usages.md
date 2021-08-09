@@ -1192,5 +1192,116 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 
 [myPOS](https://github.com/ye-kyaw-thu/myPOS) မှာ သုံးထားတဲ့ tag set ကို [Universal POS tag set](http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf) အဖြစ် ပြောင်းဖို့အတွက် စမ်းရေးထားခဲ့တဲ့ ပရိုဂရမ်ပါ။ နောက်ပိုင်းမှာ လက်ရှိ Mapping ကို အပြောင်းအလဲ လုပ်တာမျိုးလည်း ဖြစ်ကောင်းဖြစ်နိုင်ပါတယ်။  
 
+# Convertion of myPOS to Universal POS
+
+Testing Note ...  
+Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်။ စမ်းပြီး conversion လုပ်ကြည့်ထားတာကို မှတ်သားထားခဲ့တဲ့ note ပါ။  
+
+## Head of myPOS corpus (version 3.0)
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./head.mypos.txt 
+ဒီ/adj ဆေး/n က/ppm ၁၀၀/num ရာခိုင်နှုန်း/n ဆေးဘက်ဝင်/adj အပင်/n များ/part မှ/ppm ဖော်စပ်/v ထား/part တာ/part ဖြစ်/v တယ်/ppm ။/punc
+အသစ်/n ဝယ်/v ထား/part တဲ့/part ဆွယ်တာ/n က/ppm အသီး/n ထ/v နေ/part ပါ/part ပေါ့/part ။/punc
+မ/part ကျန်းမာ/v လျှင်/conj နတ်/n|ဆရာ/n ထံ/ppm မေးမြန်း/v ၍/conj သက်ဆိုင်ရာ/n နတ်/n တို့/part အား/ppm ပူဇော်ပသ/v ရ/part သည်/ppm ။/punc
+ပေဟိုင်/n|ဥယျာဉ်/n ။/punc
+နဝမ/adj အိပ်မက်/n ကောသလ/n|မင်း/n|အိပ်မက်/n ၉/num နက်ရှိုင်း/adj ကျယ်ဝန်း/adj သော/part ရေကန်/n ကြီး/adj တစ်/tn ခု/part တွင်/ppm သတ္တဝါ/n တို့/part ဆင်း/v ၍/conj ရေသောက်/v ကြ/part ၏/ppm ။/punc
+အပြင်ပန်း/n ကြည့်/v ရင်/conj ခက်/adj သလို/part ထင်/v ရ/part ပေမယ့်/conj တကယ့်/adj လက်တွေ့/n အခြေအနေ/n က/ppm တော့/part အဲဒီ/pron လို/ppm မ/part ဟုတ်/v ပါ/part ဘူး/part ။/punc
+8/fw bit/fw ပုံရိပ်/n တစ်/tn ခု/part သည်/ppm 256/fw color/fw သို့မဟုတ်/conj gray/fw scale/fw များ/part ကို/ppm အထောက်အကူ/n ပြု/v သည်/ppm ။/punc
+ကိုရီးယား/n ဝတ်စုံ/n မှာ/ppm ပန်း/n ဒီဇိုင်း/n နဲ့/conj အဝါရောင်/n က/ppm လိုက်ဖက်/v လိမ့်/part မယ်/part ထင်/v တယ်/ppm ။/punc
+သို့နှင့်/conj မဂ္ဂဇင်း/n မှ/ppm တစ်ဆင့်/adv သတင်းစာ/n ကို/ppm ပါ/part တိုးချဲ့/v လိုက်/part သောအခါ/conj တွင်/ppm ဘက်ပတစ်/n|ကျောင်း/n သို့/ppm မ/part ပြန်/v တော့/part ဘဲ/part ထို/adj မဂ္ဂဇင်း/n ၊/punc သတင်းစာ/n နှစ်/tn ခု/part စလုံး/part တွင်/ppm ပင်/part တည်းဖြတ်/v သည့်/part ဘက်/n မှ/ppm ဆက်လက်/adv လုပ်ကိုင်/v လေ/part တော့/part သည်/ppm ။/punc
+တစ်/tn ကျပ်သား/n ။/punc
+```
+
+## Converting myPOS (version 3) to Universal POS
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ python ./mypos2upos.py ./head.mypos.txt 
+ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NOUNum ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
+အသစ်/NOUN ဝယ်/VERB ထား/PRT တဲ့/PRT ဆွယ်တာ/NOUN က/ADP အသီး/NOUN ထ/VERB နေ/PRT ပါ/PRT ပေါ့/PRT ။/.
+မ/PRT ကျန်းမာ/VERB လျှင်/CONJ နတ်/NOUN|ဆရာ/NOUN ထံ/ADP မေးမြန်း/VERB ၍/CONJ သက်ဆိုင်ရာ/NOUN နတ်/NOUN တို့/PRT အား/ADP ပူဇော်ပသ/VERB ရ/PRT သည်/ADP ။/.
+ပေဟိုင်/NOUN|ဥယျာဉ်/NOUN ။/.
+နဝမ/ADJ အိပ်မက်/NOUN ကောသလ/NOUN|မင်း/NOUN|အိပ်မက်/NOUN ၉/NOUNum နက်ရှိုင်း/ADJ ကျယ်ဝန်း/ADJ သော/PRT ရေကန်/NOUN ကြီး/ADJ တစ်/NUM ခု/PRT တွင်/ADP သတ္တဝါ/NOUN တို့/PRT ဆင်း/VERB ၍/CONJ ရေသောက်/VERB ကြ/PRT ၏/ADP ။/.
+အပြင်ပန်း/NOUN ကြည့်/VERB ရင်/CONJ ခက်/ADJ သလို/PRT ထင်/VERB ရ/PRT ပေမယ့်/CONJ တကယ့်/ADJ လက်တွေ့/NOUN အခြေအနေ/NOUN က/ADP တော့/PRT အဲဒီ/PRON လို/ADP မ/PRT ဟုတ်/VERB ပါ/PRT ဘူး/PRT ။/.
+8/X bit/X ပုံရိပ်/NOUN တစ်/NUM ခု/PRT သည်/ADP 256/X color/X သို့မဟုတ်/CONJ gray/X scale/X များ/PRT ကို/ADP အထောက်အကူ/NOUN ပြု/VERB သည်/ADP ။/.
+ကိုရီးယား/NOUN ဝတ်စုံ/NOUN မှာ/ADP ပန်း/NOUN ဒီဇိုင်း/NOUN နဲ့/CONJ အဝါရောင်/NOUN က/ADP လိုက်ဖက်/VERB လိမ့်/PRT မယ်/PRT ထင်/VERB တယ်/ADP ။/.
+သို့နှင့်/CONJ မဂ္ဂဇင်း/NOUN မှ/ADP တစ်ဆင့်/ADV သတင်းစာ/NOUN ကို/ADP ပါ/PRT တိုးချဲ့/VERB လိုက်/PRT သောအခါ/CONJ တွင်/ADP ဘက်ပတစ်/NOUN|ကျောင်း/NOUN သို့/ADP မ/PRT ပြန်/VERB တော့/PRT ဘဲ/PRT ထို/ADJ မဂ္ဂဇင်း/NOUN ၊/. သတင်းစာ/NOUN နှစ်/NUM ခု/PRT စလုံး/PRT တွင်/ADP ပင်/PRT တည်းဖြတ်/VERB သည့်/PRT ဘက်/NOUN မှ/ADP ဆက်လက်/ADV လုပ်ကိုင်/VERB လေ/PRT တော့/PRT သည်/ADP ။/.
+တစ်/NUM ကျပ်သား/NOUN ။/.
+```
+
+## Through Piping
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./head.mypos.txt | python ./mypos2upos.py 
+ဒီ/ADJ ဆေး/NOUN က/ADP ၁၀၀/NOUNum ရာခိုင်နှုန်း/NOUN ဆေးဘက်ဝင်/ADJ အပင်/NOUN များ/PRT မှ/ADP ဖော်စပ်/VERB ထား/PRT တာ/PRT ဖြစ်/VERB တယ်/ADP ။/.
+အသစ်/NOUN ဝယ်/VERB ထား/PRT တဲ့/PRT ဆွယ်တာ/NOUN က/ADP အသီး/NOUN ထ/VERB နေ/PRT ပါ/PRT ပေါ့/PRT ။/.
+မ/PRT ကျန်းမာ/VERB လျှင်/CONJ နတ်/NOUN|ဆရာ/NOUN ထံ/ADP မေးမြန်း/VERB ၍/CONJ သက်ဆိုင်ရာ/NOUN နတ်/NOUN တို့/PRT အား/ADP ပူဇော်ပသ/VERB ရ/PRT သည်/ADP ။/.
+ပေဟိုင်/NOUN|ဥယျာဉ်/NOUN ။/.
+နဝမ/ADJ အိပ်မက်/NOUN ကောသလ/NOUN|မင်း/NOUN|အိပ်မက်/NOUN ၉/NOUNum နက်ရှိုင်း/ADJ ကျယ်ဝန်း/ADJ သော/PRT ရေကန်/NOUN ကြီး/ADJ တစ်/NUM ခု/PRT တွင်/ADP သတ္တဝါ/NOUN တို့/PRT ဆင်း/VERB ၍/CONJ ရေသောက်/VERB ကြ/PRT ၏/ADP ။/.
+အပြင်ပန်း/NOUN ကြည့်/VERB ရင်/CONJ ခက်/ADJ သလို/PRT ထင်/VERB ရ/PRT ပေမယ့်/CONJ တကယ့်/ADJ လက်တွေ့/NOUN အခြေအနေ/NOUN က/ADP တော့/PRT အဲဒီ/PRON လို/ADP မ/PRT ဟုတ်/VERB ပါ/PRT ဘူး/PRT ။/.
+8/X bit/X ပုံရိပ်/NOUN တစ်/NUM ခု/PRT သည်/ADP 256/X color/X သို့မဟုတ်/CONJ gray/X scale/X များ/PRT ကို/ADP အထောက်အကူ/NOUN ပြု/VERB သည်/ADP ။/.
+ကိုရီးယား/NOUN ဝတ်စုံ/NOUN မှာ/ADP ပန်း/NOUN ဒီဇိုင်း/NOUN နဲ့/CONJ အဝါရောင်/NOUN က/ADP လိုက်ဖက်/VERB လိမ့်/PRT မယ်/PRT ထင်/VERB တယ်/ADP ။/.
+သို့နှင့်/CONJ မဂ္ဂဇင်း/NOUN မှ/ADP တစ်ဆင့်/ADV သတင်းစာ/NOUN ကို/ADP ပါ/PRT တိုးချဲ့/VERB လိုက်/PRT သောအခါ/CONJ တွင်/ADP ဘက်ပတစ်/NOUN|ကျောင်း/NOUN သို့/ADP မ/PRT ပြန်/VERB တော့/PRT ဘဲ/PRT ထို/ADJ မဂ္ဂဇင်း/NOUN ၊/. သတင်းစာ/NOUN နှစ်/NUM ခု/PRT စလုံး/PRT တွင်/ADP ပင်/PRT တည်းဖြတ်/VERB သည့်/PRT ဘက်/NOUN မှ/ADP ဆက်လက်/ADV လုပ်ကိုင်/VERB လေ/PRT တော့/PRT သည်/ADP ။/.
+တစ်/NUM ကျပ်သား/NOUN ။/.
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$
+```
+
+## Converting the Whole myPOS Corpus
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ cat ./mypos-ver.3.0.txt | python ./convert2upos.py > ./mypos-ver.3.0.upos.txt 
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ wc ./mypos-ver.3.0.txt 
+  43196  537232 9581543 ./mypos-ver.3.0.txt
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ wc ./mypos-ver.3.0.upos.txt 
+  43196  537232 9924985 ./mypos-ver.3.0.upos.txt
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | head
+အခန်း/NOUN ရှိ/VERB ဦး/PRT မှာ/ADP အငှား/NOUN မ/PRT ဝင်/VERB သေး/PRT ဘူး/PRT နဲ့/ADP တူ/VERB တယ်/ADP ။/.
+မနက်ဖြန်/NOUN ရုပ်ရှင်/NOUN ကြည့်/VERB ဖို့/PRT သွား/VERB ပါ/PRT မယ်/ADP ။/.
+ဒါကြောင့်/CONJ လူထု/NOUN တွေ/PRT ကို/ADP ဆက်/ADV တောင့်/VERB ထား/PRT ကြ/PRT ပါ/PRT ဦး/PRT လို့/PRT ဆို/VERB တာ/PRT ထပ်/ADV ပြော/VERB ခဲ့/PRT ချင်/PRT တယ်/ADP ။/.
+အရှေ့/NOUN|တရုတ်/NOUN|ပင်လယ်/NOUN ၊/. တောင်/NOUN|တရုတ်/NOUN|ပင်လယ်/NOUN တို့/PRT ရှိ/VERB သည်/ADP ။/.
+အတန်း/NOUN ချိန်/NOUN မှာ/ADP တော့/PRT မ/PRT သိ/VERB တဲ့/PRT အဓိပ္ပါယ်/NOUN ရှိ/VERB လဲ/PRT အဘိဓါန်/NOUN မ/PRT ရှာ/VERB ပါ/PRT နဲ့/PRT ။/.
+အဆင်ပြေ/VERB လား/PRT ။/.
+အိမ်/NOUN က/ADP မိန်းမ/NOUN က/ADP တော့/PRT အသုံးစရိတ်/NOUN မ/PRT လောက်/VERB လို့/PRT ဆို/VERB ပြီး/CONJ ညည်း/VERB နေ/PRT လေ/PRT ရဲ့/PRT ။/.
+ခေတ်/NOUN|လူငယ်/NOUN စိတ်/NOUN|ပိုင်း/PRT|ဆိုင်ရာ/NOUN အသိတရား/NOUN ခေါင်းပါး/VERB နေ/PRT သည်/ADP ကို/ADP စိုးရိမ်/VERB|မိ/PRT|ကြောင်း/PRT ၊/. လောကဓံ/NOUN|လှိုင်း/NOUN များ/PRT ကို/ADP ကြံ့ကြံ့ခိုင်/ADJ ရင်ဆိုင်/VERB တွန်းလှန်/VERB နိုင်စွမ်း/PRT မ/PRT ရှိ/VERB ပါ/PRT က/ADP ထို/ADJ အသိတရား/NOUN များ/PRT လုံးဝ/ADV ကွယ်ပျောက်/VERB ပြီး/CONJ စိတ်ဓာတ်/NOUN ဗလာ/NOUN မွဲပြာကျ/VERB သော/PRT အဖြစ်/NOUN သို့/ADP ရောက်/VERB ရှိ/PRT သွား/PRT မည်/ADP ကို/ADP စိုးရိမ်/VERB|ပူပန်/VERB|မိ/PRT|ကြောင်း/PRT စသဖြင့်/PRT လည်း/PRT ရေးသား/VERB ထား/PRT ပါ/PRT သည်/ADP ။/.
+နည်းနည်း/ADV နောက်ကျ/VERB တယ်/ADP နော်/PRT ။/.
+၂ဝ/NOUNum ရာစု/NOUN နှစ်ဦး/NOUN တွင်/ADP ဂျာမန်/NOUN|လူမျိုး/NOUN ဇီဝဗေဒ/NOUN|ပညာရှင်/NOUN ဗိုက်စမန်း/NOUN သည်/ADP သတ္တဝါ/NOUN တို့/PRT ၏/ADP ဗီဇ/NOUN|ဆဲလ်/NOUN များ/PRT ကို/ADP အခြား/ADJ ဆဲလ်/NOUN များ/PRT မှ/ADP ခွဲခြား/VERB ၍/CONJ ပြဆို/VERB ခဲ့/PRT လေ/PRT သည်/ADP ။/.
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | tail
+ဗိုက်/NOUN ကွဲထွက်/VERB အောင်/PRT အများကြီး/ADV စား/VERB ခဲ့/PRT တယ်/ADP ။/.
+မနေ့/PRON က/ADP စ/VERB ပြီး/CONJ အပူချိန်/NOUN က/ADP ငါး/NUM ဒီဂရီ/NOUN တောင်/ADP ကျ/VERB သွား/PRT လို့/PRT အေး/ADJ တယ်/ADP ။/.
+သူမ/PRON ကို/ADP ကြိုက်/VERB တဲ့/PRT စိတ်/VERB ကို/ADP ခဏ/NOUN မေ့ဖျောက်/VERB ပြီး/CONJ အရင်ဆုံး/NOUN စာ/NOUN ကို/ADP ကြိုးကြိုးစားစား/ADV လေ့လာ/VERB ရ/PRT မယ်/ADP ။/.
+တစ်ကိုယ်ရေ/NOUN သုံး/VERB ကွန်ပျူတာ/NOUN|လောက/NOUN တွင်/ADP iMac/X ဖြင့်/ADP ထင်ပေါ်/VERB ခဲ့/PRT သလို/CONJ အလွယ်တကူ/ADV သယ်/VERB သွား/PRT လို့/PRT ရ/PRT သော/PRT တေးဂီတ/NOUN|ဖွင့်/VERB|စက်/NOUN လို/ADP consumer/X electronic/X များ/PRT အလယ်/NOUN တွင်/ADP လည်း/PRT iPod/X ဖြင့်/ADP ဂုဏ်တင့်/VERB ခဲ့/PRT သည်/ADP ။/.
+သူ့/PRON ရဲ့/ADP စကား/NOUN ကို/ADP ကျွန်တော့်/PRON ရဲ့/ADP မှတ်ဉာဏ်/NOUN မှာ/ADP သေချာစွာ/ADV မှတ်/VERB ထား/PRT သည်/ADP ။/.
+သူ/PRON ဟာ/ADP ကုမ္ပဏီ/NOUN မှာ/ADP နေရာကောင်း/NOUN ရ/VERB တာ/PRT ဖခင်/NOUN ရဲ့/ADP ကျေးဇူး/NOUN ကြောင့်/ADP ဖြစ်/VERB တယ်/ADP ။/.
+ယွမ်/NOUN ကို/ADP ဘတ်ငွေ/NOUN လဲ/VERB ချင်/PRT လို့/PRT ပါ/PRT ။/.
+ဟုတ်/VERB ၊/. ဒါပေမယ့်/CONJ နောက်ဆုံး/NOUN အပိုင်း/NOUN မှာ/ADP အချက်/NOUN တစ်/NUM ချက်/NOUN လောက်/PRT ထပ်/ADJ ထည့်/VERB ရ/PRT မယ်/ADP ။/.
+သို့သော်/CONJ ၁၉၆၅/NOUNum ခုနှစ်/NOUN ဇန်နဝါရီ/NOUN|လ/NOUN ၂၆/NOUNum ရက်နေ့/NOUN မှ/ADP အစပြု/VERB ၍/CONJ ဟင်ဒီ/NOUN|ဘာသာ/NOUN ကို/ADP ရုံးသုံး/ADJ ပြုလုပ်/VERB ထား/PRT ခဲ့/PRT လေ/PRT သည်/ADP ။/.
+ကျားထိုး/VERB တာ/PRT လက်ရည်တူ/VERB ဘဲ/PRT ။/.
+```
+
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$ shuf ./mypos-ver.3.0.upos.txt | head -n 10000 | tail
+ရုပ်ကြွင်းကျောက်/NOUN များ/PRT သည်/ADP ကျောက်လွှာ/NOUN များ/PRT ၏/ADP သက်တမ်း/NOUN ကို/ADP စူးစမ်း/VERB ရာတွင်/CONJ လည်း/PRT အထူး/ADV အသုံးဝင်/VERB သည်/ADP ။/.
+အဲဒီ/PRON အထဲ/NOUN မှာ/ADP ဘယ်/ADJ ထီး/NOUN ကို/ADP အကြိုက်ဆုံး/ADJ လဲ/PRT ။/.
+ခြင်/NOUN ကိုက်/VERB ရင်/CONJ အရမ်း/ADV ယား/VERB တယ်/ADP ။/.
+ခင်ဗျား/PRON ဒီ/ADJ ရောဂါ/NOUN အခြေအနေ/NOUN မျိုး/NOUN ကို/ADP ဘယ်/ADJ အချိန်/NOUN က/ADP စ/VERB ပြီး/CONJ ခံစား/VERB ရ/PRT တာ/PRT လဲ/PRT ။/.
+ကျွန်တော့်/PRON ဗိုက်/NOUN က/ADP စူး/VERB ပြီး/CONJ အောင့်/VERB နေ/PRT တယ်/ADP ဆရာ/NOUN ။/.
+ကြီးမား/ADJ သည့်/PRT အခန်း/NOUN|တွဲ/NOUN|တိုက်/NOUN များ/ADJ စွာ/PRT သည်/ADP ခေါင်မိုး/NOUN အနီ/NOUN|ရောင်/NOUN ၊/. အစိမ်း/NOUN|ရောင်/NOUN သို့မဟုတ်/CONJ အပြာ/NOUN|ရောင်/NOUN များ/PRT ဖြင့်/ADP ရှိ/VERB နေ/PRT ကြ/PRT သည်/ADP ။/.
+အချိုပွဲ/NOUN အတွက်/ADP ဘာ/PRON စား/VERB ချင်/PRT ပါ/PRT သလဲ/PRT ဆရာ/NOUN ။/.
+ဒီ/ADJ ကင်မရာ/NOUN|ဖလင်/NOUN လို/VERB ချင်/PRT ပါ/PRT တယ်/ADP ။/.
+ဖားကန့်/NOUN နား/NOUN က/ADP လုံးခင်း/NOUN မှာ/ADP တော့/PRT လေယာဉ်/NOUN|ကွင်း/NOUN ရှိ/VERB တယ်/ADP ။/.
+နောက်ဆုံး/NOUN ၌/ADP ၁၉၄၇/NOUNum ခုနှစ်/NOUN ဩဂုတ်/NOUN|လ/NOUN ၁၅/NOUNum ရက်/NOUN တွင်/ADP အိန္ဒိယ/NOUN သည်/ADP ဗြိတိသျှ/NOUN တို့/PRT ၏/ADP အုပ်ချုပ်/VERB|မှု/PRT အောက်/NOUN မှ/ADP လွတ်လပ်/VERB|ရေး/PRT ရ/VERB ခဲ့/PRT သည်/ADP ။/.
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/4github/mypos2upos$
+```
+
+## Reference
+
+1. http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf  
+2. https://github.com/slavpetrov/universal-pos-tags  
 
 
