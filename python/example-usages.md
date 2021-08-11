@@ -1216,6 +1216,8 @@ Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်�
 #v	VERB
 ```
 
+Note: # တကယ်တမ်းက #int INTJ ကို #int X အဖြစ် ပြောင်းသင့်တယ်။   
+
 ## Head of myPOS corpus (version 3.0)
 
 test conversion အတွက် ပြင်ထားတဲ့ ဖိုင်ပါ။ myPOS (version 3.0) ကနေ ထိပ်ဆုံးစာကြောင်း ၁၀ကြောင်းကို head လုပ်ထားတဲ့ ဖိုင်ပါ။  
