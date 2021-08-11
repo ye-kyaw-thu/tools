@@ -36,6 +36,8 @@ import argparse
 #tn	NUM
 #v	VERB
 
+# တကယ်တမ်းက #int INTJ ကို #int X အဖြစ် ပြောင်းသင့်တယ်။
+
 map1_dict  = [
     ('/abb', '/x'),
      ('/adj', '/ADJ'),
