@@ -1196,6 +1196,25 @@ inr တiu ပeကu က အမyiu တa စi ကiu မကyrကန အလiအပd �
 
 Testing Note ...  
 Mapping က အပြောင်းအလဲ ရှိနိုင်တယ်။ စမ်းပြီး conversion လုပ်ကြည့်ထားတာကို မှတ်သားထားခဲ့တဲ့ note ပါ။  
+လက်ရှိ mypos2upos.py ပရိုဂရမ်ထဲမှာ သုံးထားတဲ့ mypos to universal POS က အောက်ပါအတိုင်းပါ။  
+
+```
+#abb	X
+#adj	ADJ
+#adv	ADV
+#conj	CONJ
+#fw	X
+#int	INTJ
+#n	NOUN
+#num	NUM
+#part	PRT
+#ppm	ADP
+#pron	PRON
+#punc	.
+#sb	.
+#tn	NUM
+#v	VERB
+```
 
 ## Head of myPOS corpus (version 3.0)
 
