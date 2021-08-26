@@ -12,6 +12,8 @@
 # https://stackoverflow.com/questions/28136471/image-enhancement-solution
 # https://en.wikipedia.org/wiki/SRGB
 
+# if you want to keep foreground colour, following one command is OK
+# convert ./akm-sign.png -transparent white bg-transparent-fg-color.png
 
 imageFILE=$1;
 
