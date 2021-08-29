@@ -6032,3 +6032,52 @@ $ ./spelling-checker-with-dict.sh ./my.testfile
 တစ်ခု ရှိတာက "က" "နဲ့" "ပြော" "ဖြေးဖြေး" "မြန်မြန်" နဲ့ "သူ" တို့ကလည်း ပုံမှန် အဘိဓာန်ထဲမှာက စာလုံးအနေနဲ့ မရှိလို အမှားအဖြစ် ပြပေးတာ ဖြစ်ပါတယ်။  
 တကယ်တမ်း မြန်မာစာအတွက် spelling checking လုပ်ဖို့အတွက် ဆိုရင်တော့ word segmentation ကိစ္စရောကို ထည့်သွင်းစဉ်းစားရမှာ ဖြစ်ပြီး၊ အဘိဓာန်ထဲမှာလည်း နေ့စဉ်သုံးတဲ့ စကားလုံးတွေကို ကြိုပြီး ရိုက်ထည့်ထားရမှာ ဖြစ်ပါတယ်။  
 
+## 100.[chop-by-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chop-by-silence.sh)  
+Recording လုပ်ထားတဲ့ audio ဖိုင် ကို silence ရှိနေတဲ့ အနေအထားပေါ်မူတည်ပြီးတော့ တစ်ဖိုင်ချင်းစီ ခွဲသိမ်းတာကို sox command ကိုသုံးပြီးတော့ လုပ်ပြထားတာပါ။  
+
+The Guest-mono.wav ဆိုတဲ့ ဖိုင်က ကဗျာဆရာ ဦးတင်မိုး (၁၀တန်း ကျူရှင်ဝိုင်းမှာ ဆရာ့တပည့်ဖြစ်ခဲ့ပါတယ်) ရဲ့ "ဧည့်သည်" ဆိုတဲ့ ကဗျာကို ကိုယ်တိုင် ရွတ်ဆိုပြီး အသံသွင်းထားတဲ့ ဖိုင်ဖြစ်ပါတယ်။ ကွန်ပျူတာမှာပဲ ပုံမှန် တီလီဖုန်းရဲ့ headset နဲ့ Praat ပရိုဂရမ်ကိုသုံးပြီးတော့ သွင်းထားတာပါ။  
+	
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/praat6151/annotation/audio/chop-with-silence$ ls
+chop-by-silence.sh  TheGuest-mono.wav
+```
+
+run တဲ့ပုံစံက silence နဲ့ ဖိုင်ဖြတ်ပေးစေချင်တဲ့ audio ဖိုင်ကို command line argument တစ်ခုအနေနဲ့ ပေးပြီး run တဲ့ ပုံစံပါပဲ...  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/praat6151/annotation/audio/chop-with-silence$ bash ./chop-by-silence.sh ./TheGuest-mono.wav 
+```
+	
+run တာက မြန်ပါတယ်။ အသံဖိုင်ကလည်း တိုတော့... command ရိုက်ပြီးတာနဲ့ ပြီးနေပါလိမ့်မယ်။ အောက်ပါအတိုင်း split_num ဆိုတဲ့ ဖိုင်နာမည်နဲ့ စပြီး သူ့နောက်ကနေ နံပါတ်အစဉ်လိုက် တပ်ပေးသွားပါလိမ့်မယ်။ တကယ်လို့ ဖိုင်နာမည်ရဲ့ prefix ကိုပြောင်းချင်ရင်တော့ shell sript ထဲမှာ ဝင်ပြင်ပါ။ အခု running example အတွက်က output ဖိုင် လေးဖိုင် ရလာပါလိမ့်မယ်။  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/praat6151/annotation/audio/chop-with-silence$ ls
+chop-by-silence.sh  split_num001.wav  split_num002.wav  split_num003.wav  split_num004.wav  split_num005.wav  TheGuest-mono.wav
+```
+	
+ဖြတ်ထားပေးတဲ့ ဖိုင်တစ်ဖိုင်ချင်းစီကို command line မှာပဲ နားထောင်ချင်တယ် ဆိုရင်တော့ play ဆိုတဲ့ command နဲ့ အောက်ပါအတိုင်း run ပြီး နားထောင်ကြည့်နိုင်ပါတယ်။  
+```
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/praat6151/annotation/audio/chop-with-silence$ play ./split_num001.wav 
+play WARN alsa: can't encode 0-bit Unknown or not applicable
+
+./split_num001.wav:
+
+ File Size: 75.1k     Bit Rate: 706k
+  Encoding: Signed PCM    
+  Channels: 1 @ 16-bit   
+Samplerate: 44100Hz      
+Replaygain: off         
+  Duration: 00:00:00.85  
+
+In:100%  00:00:00.85 [00:00:00.00] Out:37.5k [      |      ]        Clip:0    
+Done.
+(base) ye@administrator-HP-Z2-Tower-G4-Workstation:~/tool/praat6151/annotation/audio/chop-with-silence$
+```
+	
+"ဧည့်သည်" ကဗျာမှာက စာကြောင်း သုံးကြောင်း ပါဝင်ပါတယ်။ အောက်ပါအတိုင်းပါ  
+	
+ဆေးလိပ်လည်းတို  
+နေလည်းညိုပြီ  
+ငါ့ကို ပြန်ပို့ကြပါလေ  
+	
+ဒါပေမဲ့ ဖိုင် လေးဖိုင် အဖြစ် ဖြတ်သွားရတာက "ငါ့ကို" နဲ့ "ပြန်ပို့ကြပါလေ" ဆိုတဲ့အကြားမှာ ကဗျာရွတ်ဆိုတုန်းက အသံခဏဖြတ်ထားခဲ့တာကြောင့် ဖြစ်ပါတယ်။  
+အခု ဥပမာအဖြစ် စမ်းပြထားတဲ့ ဖိုင်တွေကိုလည်း လေ့လာလို့ ရအောင် [https://github.com/ye-kyaw-thu/tools/tree/master/bash/chop-by-silence](https://github.com/ye-kyaw-thu/tools/tree/master/bash/chop-by-silence) path မှာ upload လုပ်ပေးထားပါတယ်။  
+	
