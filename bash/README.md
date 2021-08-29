@@ -304,6 +304,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 99. [spelling-checker-with-dict.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/spelling-checker-with-dict.sh)  
 (Dictionary ကို သုံးပြီးတော့ spelling checking လုပ်ပုံကို အလွယ်ရေးပြထားတဲ့ shell script ပါ။ မြန်မာစာအတွက် သုံးရင်တော့ word segmentation ဖြတ်ထားတဲ့ မြန်မာစာဖိုင်ကို input လုပ်ရပါမယ်။)  
 
-100.[chop-by-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chop-by-silence.sh)  
+100. [chop-by-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chop-by-silence.sh)  
 (Audio file ကို silence ရှိတဲ့အပေါ်မူတည်ပြီး တစ်ဖိုင်ချင်းစီ ခွဲပေးခိုင်းတဲ့ shell script ပါ)  
 
