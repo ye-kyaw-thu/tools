@@ -12,7 +12,4 @@ min=$1;
 max=$2;
 iter=$3;
 
-for ((i=1; i<=$iter; i++))
-do
-   expr $min + $RANDOM % $max
-done
+shuf -i $min-$max -n $iter
