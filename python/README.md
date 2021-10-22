@@ -63,3 +63,7 @@
 
 21. [mypos2upos.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mypos2upos.py)  
 ([myPOS](https://github.com/ye-kyaw-thu/myPOS) မှာ သုံးထားတဲ့ tag set ကို [Universal POS tag set](http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf) အဖြစ် ပြောင်းတဲ့အလုပ်ကို စမ်းထားတဲ့ ပရိုဂရမ်ပါ)  
+
+22. [isolation-forest.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/isolation-forest.py)  
+(ပုံမှန် မဟုတ်တဲ့ ဒေတာတွေကို Isolation Forest ML algorithm နဲ့ ဆွဲထုတ်ဖို့အတွက် စမ်းကြည့်ခဲ့တဲ့ python code)  
+
