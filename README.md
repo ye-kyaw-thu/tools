@@ -110,6 +110,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 98. [mk-background-transparent.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/mk-background-transparent.sh)  
 99. [spelling-checker-with-dict.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/spelling-checker-with-dict.sh)
 100. [chop-by-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chop-by-silence.sh)  
+101. [random-no.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/random-no.sh)  
 
 # perl
 
