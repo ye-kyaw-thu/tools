@@ -12,4 +12,8 @@ min=$1;
 max=$2;
 iter=$3;
 
-shuf -i $min-$max -n $iter
+for ((i=0; i<=$iter; i++))
+do
+   shuf -i $min-$max -n 1
+done
+
