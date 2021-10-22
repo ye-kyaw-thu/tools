@@ -1337,6 +1337,267 @@ head, tail command နှစ်ခု သုံးပြီး random ဆွဲ�
 
 အကြမ်းမျဉ်းအားဖြင့် အဆင်ပြေပုံတော့ ရပါတယ်။  
 
+## 22. [isolation-forest.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/isolation-forest.py)  
+
+## Prepare CSV File
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ ./random-no.sh 80 100 90 > eng1
+(base) ye@:/media/ye/project2/4github/isolation-forest$ ./random-no.sh 5 40 10 > eng2
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc eng1
+ 90  90 273 eng1
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc eng2
+10 10 30 eng2
+(base) ye@:/media/ye/project2/4github/isolation-forest$ shuf ./eng1 > eng1.shuf
+(base) ye@:/media/ye/project2/4github/isolation-forest$ shuf ./eng2 > eng2.shuf
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc id
+100 100 292 id
+(base) ye@:/media/ye/project2/4github/isolation-forest$ ./random-no.sh 60 100 85 > maths1
+(base) ye@:/media/ye/project2/4github/isolation-forest$ ./random-no.sh 50 55 15 > maths2
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc maths1
+ 85  85 257 maths1
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc maths2
+15 15 45 maths2
+(base) ye@:/media/ye/project2/4github/isolation-forest$ shuf ./maths1 > maths1.shuf
+(base) ye@:/media/ye/project2/4github/isolation-forest$ shuf ./maths2 > maths2.shuf
+(base) ye@:/media/ye/project2/4github/isolation-forest$ cat eng1.shuf eng2.shuf > english
+(base) ye@:/media/ye/project2/4github/isolation-forest$ cat maths1.shuf maths2.shuf > mathematics
+(base) ye@:/media/ye/project2/4github/isolation-forest$ paste id english mathematics -d"," > mark-list.csv
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc ./mark-list.csv 
+100 100 897 ./mark-list.csv
+(base) ye@:/media/ye/project2/4github/isolation-forest$ head ./mark-list.csv 
+1,96,82
+2,82,94
+3,96,83
+4,81,93
+5,91,87
+6,93,94
+7,99,76
+8,87,99
+9,97,98
+10,82,76
+(base) ye@:/media/ye/project2/4github/isolation-forest$ tail ./mark-list.csv 
+91,38,55
+92,36,51
+93,15,51
+94,25,50
+95,12,50
+96,17,51
+97,23,53
+98,21,54
+99,33,54
+100,39,55
+```
+
+## Add CSV Header
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ sed -i '1s/^/ID,English,Mathematics\n/' ./mark-list.csv 
+(base) ye@:/media/ye/project2/4github/isolation-forest$ head ./mark-list.csv 
+ID,English,Mathematics
+1,96,82
+2,82,94
+3,96,83
+4,81,93
+5,91,87
+6,93,94
+7,99,76
+8,87,99
+9,97,98
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc ./mark-list.csv 
+101 101 920 ./mark-list.csv
+(base) ye@:/media/ye/project2/4github/isolation-forest$
+```
+
+## Python Code for Isolation-Forest
+
+coding က အောက်ပါအတိုင်း...  
+
+```
+import numpy as np
+import pandas as pd
+from sklearn.ensemble import IsolationForest
+
+# Reading CSV
+marks=pd.read_csv('mark-list.csv')
+pd.set_option("display.max_rows", None, "display.max_columns", None)
+
+#print(marks)
+
+## for only English ## 
+
+# Training
+# n_estimators=100 means 100 trees
+# "contamination" means % of randomness present in our dataset
+# max_features means how many featues you need to include while training the isolation-forest algorithm, here 1.0 means it draw single feature from the dataset
+model=IsolationForest(n_estimators=100, max_samples='auto', contamination=float(0.2), max_features=1.0)
+model.fit(marks[['English']])
+
+# Prediction
+marks['anomailes_scores_eng']=model.decision_function(marks[['English']])
+marks['anomaly_eng']=model.predict(marks[['English']])
+
+# here, 1 for good data and -1 for bad data
+#print(marks.head(10))
+print(marks)
+```
+
+## Error
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ python ./isolation-forest.py 
+Traceback (most recent call last):
+  File "./isolation-forest.py", line 3, in <module>
+    from sklearn.ensemble import isolationForest
+ImportError: cannot import name 'isolationForest' from 'sklearn.ensemble' (/home/ye/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/__init__.py)
+(base) ye@:/media/ye/project2/4github/isolation-forest$ pip install -U sklearn
+Requirement already satisfied: sklearn in /home/ye/anaconda3/lib/python3.7/site-packages/sklearn-0.0-py3.7.egg (0.0)
+Requirement already satisfied: scikit-learn in /home/ye/anaconda3/lib/python3.7/site-packages (from sklearn) (0.24.2)
+Requirement already satisfied: numpy>=1.13.3 in /home/ye/anaconda3/lib/python3.7/site-packages (from scikit-learn->sklearn) (1.20.3)
+Requirement already satisfied: threadpoolctl>=2.0.0 in /home/ye/anaconda3/lib/python3.7/site-packages (from scikit-learn->sklearn) (3.0.0)
+Requirement already satisfied: joblib>=0.11 in /home/ye/anaconda3/lib/python3.7/site-packages (from scikit-learn->sklearn) (0.17.0)
+Requirement already satisfied: scipy>=0.19.1 in /home/ye/anaconda3/lib/python3.7/site-packages (from scikit-learn->sklearn) (1.4.1)
+WARNING: You are using pip version 21.2.4; however, version 21.3 is available.
+You should consider upgrading via the '/home/ye/anaconda3/bin/python -m pip install --upgrade pip' command.
+(base) ye@:/media/ye/project2/4github/isolation-forest$ python ./isolation-forest.py 
+Traceback (most recent call last):
+  File "./isolation-forest.py", line 3, in <module>
+    from sklearn.ensemble import isolationForest
+ImportError: cannot import name 'isolationForest' from 'sklearn.ensemble' (/home/ye/anaconda3/lib/python3.7/site-packages/sklearn/ensemble/__init__.py)
+(base) ye@:/media/ye/project2/4github/isolation-forest$
+```
+
+တကယ်မှန်တာက "I" အကြီးဖြစ်ရမယ်...  
+
+```python
+from sklearn.ensemble import IsolationForest
+```
+
+## Results
+
+comment နဲ့ အဖွင့်အပိတ်လုပ်ပြီးတော့ setting နှစ်ခုနဲ့ run  ခဲ့တယ်  
+
+- Math အတွက်ပဲ anomaly ဖြစ်တာကိုပဲ ဆွဲထုတ်ကြည့်ခဲ့တယ်
+- English အတွက်ပဲ anomaly ဖြစ်တာကိုပဲ ဆွဲထုတ်ကြည့်ခဲ့တယ်
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ python ./isolation-forest.py > result-maths
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc result-maths 
+ 101  605 6767 result-maths
+(base) ye@:/media/ye/project2/4github/isolation-forest$ python ./isolation-forest.py > result-eng
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc result-eng 
+ 101  605 6565 result-eng
+```
+
+## Extract Only Column6=-1
+
+column နံပါတ် 4 က သင်္ချာအမှတ်တွေ...  
+တမင် အမှတ်စာရင်းမှာ အမှတ်အများနဲ့ အနည်း ကွာအောင် simulation လုပ်ခဲ့တာက အောက်ပါအတိုင်း...  
+$ ./random-no.sh 60 100 85 > maths1
+./random-no.sh 50 55 15 > maths2  
+
+ပုံမှန် မဟုတ်ဘူးလို့ isolation forest algorithm နဲ့ ဆွဲထုတ်ပြီး ရလာတဲ့ Result က အောက်ပါအတိုင်း...  
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ awk '$6 == "-1" {print}' ./result-maths 
+7     8       87           99              -0.016155            -1
+19   20       91           99              -0.016155            -1
+22   23       87           97              -0.019141            -1
+41   42       87          100              -0.067182            -1
+79   80       81           61              -0.017755            -1
+80   81       84          100              -0.067182            -1
+85   86       88           50              -0.005495            -1
+86   87       93           50              -0.005495            -1
+87   88       93           55              -0.007067            -1
+88   89       82           50              -0.005495            -1
+89   90       88           52              -0.057606            -1
+90   91       38           55              -0.007067            -1
+91   92       36           51              -0.015743            -1
+92   93       15           51              -0.015743            -1
+93   94       25           50              -0.005495            -1
+94   95       12           50              -0.005495            -1
+95   96       17           51              -0.015743            -1
+96   97       23           53              -0.042398            -1
+99  100       39           55              -0.007067            -1
+```
+
+column နံပါတ် 3 က အင်္ဂလိပ်စာ အမှတ်တွေ...  
+တမင် အမှတ်စာရင်းမှာ အမှတ်နည်းအောင် လုပ်ခဲ့တာက အောက်ပါအတိုင်း...  
+$ ./random-no.sh 80 100 90 > eng1
+$ ./random-no.sh 5 40 10 > eng2  
+
+ပုံမှန် မဟုတ်ဘူးလို့ isolation forest algorithm နဲ့ ဆွဲထုတ်ပြီး ရလာတဲ့ Result က အောက်ပါအတိုင်း...  
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ awk '$6 == "-1" {print}' ./result-eng 
+10   11      100           88             -0.071508           -1
+16   17       98           67             -0.005852           -1
+30   31      100           78             -0.071508           -1
+40   41       80           75             -0.044913           -1
+53   54       80           96             -0.044913           -1
+66   67       80           84             -0.044913           -1
+83   84      100           66             -0.071508           -1
+84   85       98           72             -0.005852           -1
+90   91       38           55             -0.096913           -1
+91   92       36           51             -0.101730           -1
+92   93       15           51             -0.129156           -1
+93   94       25           50             -0.109295           -1
+94   95       12           50             -0.195488           -1
+95   96       17           51             -0.118600           -1
+96   97       23           53             -0.093191           -1
+97   98       21           54             -0.107667           -1
+98   99       33           54             -0.123024           -1
+99  100       39           55             -0.124135           -1
+(base) ye@:/media/ye/project2/4github/isolation-forest$
+```
+
+## Running for Both Fields
+
+python code ကို အောက်ပါအတိုင်း ပြင်ဆင်ပြီး run ခဲ့...  
+```python
+## for both Eng and Maths ## 
+
+model=IsolationForest(n_estimators=100, max_samples='auto', contamination=float(0.2), max_features=1.0)
+model.fit(marks[['English', 'Mathematics']])
+
+# Prediction
+marks['anomailes_scores_both']=model.decision_function(marks[['English', 'Mathematics']])
+marks['anomaly_for_both']=model.predict(marks[['English', 'Mathematics']])
+
+# here, 1 for good data and -1 for bad data
+print(marks)
+```
+
+ရလဒ်က အောက်ပါအတိုင်း...  
+
+```
+(base) ye@:/media/ye/project2/4github/isolation-forest$ python ./isolation-forest.py > result-both
+(base) ye@:/media/ye/project2/4github/isolation-forest$ wc result-both 
+ 101  605 7171 result-both
+(base) ye@:/media/ye/project2/4github/isolation-forest$ awk '$6 == "-1" {print}' ./result-both 
+8     9       97           98              -0.052318                -1
+10   11      100           88              -0.018649                -1
+19   20       91           99              -0.011254                -1
+53   54       80           96              -0.019112                -1
+80   81       84          100              -0.031858                -1
+85   86       88           50              -0.003485                -1
+86   87       93           50              -0.030615                -1
+87   88       93           55              -0.000100                -1
+88   89       82           50              -0.048489                -1
+89   90       88           52              -0.003559                -1
+90   91       38           55              -0.060058                -1
+91   92       36           51              -0.088425                -1
+92   93       15           51              -0.070496                -1
+93   94       25           50              -0.087898                -1
+94   95       12           50              -0.140936                -1
+95   96       17           51              -0.058938                -1
+96   97       23           53              -0.068335                -1
+97   98       21           54              -0.077298                -1
+98   99       33           54              -0.068356                -1
+99  100       39           55              -0.066577                -1
+(base) ye@:/media/ye/project2/4github/isolation-forest$ 
+```
+
 ## To Do
 
 - check RDR parsing accuracy with U-POS
