@@ -1337,6 +1337,16 @@ head, tail command နှစ်ခု သုံးပြီး random ဆွဲ�
 
 အကြမ်းမျဉ်းအားဖြင့် အဆင်ပြေပုံတော့ ရပါတယ်။  
 
+## To Do
+
+- check RDR parsing accuracy with U-POS
+- Rethink Mapping between myPOS and U-POS  
+
+## Reference
+
+1. http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf  
+2. https://github.com/slavpetrov/universal-pos-tags  
+
 ## 22. [isolation-forest.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/isolation-forest.py)  
 
 ## Prepare CSV File
@@ -1598,14 +1608,9 @@ print(marks)
 (base) ye@:/media/ye/project2/4github/isolation-forest$ 
 ```
 
-## To Do
-
-- check RDR parsing accuracy with U-POS
-- Rethink Mapping between myPOS and U-POS  
-
 ## Reference
 
-1. http://www.lrec-conf.org/proceedings/lrec2012/pdf/274_Paper.pdf  
-2. https://github.com/slavpetrov/universal-pos-tags  
+- https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
+- https://morioh.com/p/a6ef01110316?f=5c21fb01c16e2556b555ab32&fbclid=IwAR1z5bVfqVf2kZYTZksqM3lkMV6HRKQwRyzkGrFkeAdyA1UUP0mcTay8A3M
 
 
