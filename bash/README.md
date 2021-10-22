@@ -307,3 +307,7 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 100. [chop-by-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chop-by-silence.sh)  
 (Audio file ကို silence ရှိတဲ့အပေါ်မူတည်ပြီး တစ်ဖိုင်ချင်းစီ ခွဲပေးခိုင်းတဲ့ shell script ပါ)  
 
+101. [random-no.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/random-no.sh)  
+(Random number ကို နံပါတ် ဘယ်လောက် ကနေ ဘယ်လောက် အထိ ကို ဘယ်နှစ်ခါ ရိုက်ထုတ်ပေးပါ ဆိုပြီး ခိုင်းဖို့ ရေးခဲ့တဲ့ shell script ပါ)  
+
+
