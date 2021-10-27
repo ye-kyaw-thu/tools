@@ -67,3 +67,6 @@
 22. [isolation-forest.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/isolation-forest.py)  
 (ပုံမှန် မဟုတ်တဲ့ ဒေတာတွေကို Isolation Forest ML algorithm နဲ့ ဆွဲထုတ်ဖို့အတွက် စမ်းကြည့်ခဲ့တဲ့ python code)  
 
+23. [accuracy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/accuracy.py)  
+(ကျောင်းသားတွေကို accuracy အကြောင်းကို ရှင်းပြဖို့ ရည်ရွယ်ပြီး ရေးခဲ့တဲ့ python code)  
+
