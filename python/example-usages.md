@@ -1617,8 +1617,18 @@ Python code ရေးတဲ့အခါမှာ C, C++ တို့နဲ့ �
 
 တကယ်လို့ command line ကနေ ```python /how-name-eq-main-work.py``` လိုမျိုး ခေါ်ပြီး run တဲ့အခါမှာတော့ ```__name__``` ကို ```__main__``` ဆိုပြီး assign လုပ်ပေးပါလိမ့်မယ်။ အဲဒီလို မဟုတ်ပဲနဲ့ module တစ်ခုအနေနဲ့ import နဲ့ ခေါ်သုံးတဲ့ အခါမှာတော့ ```__name__``` special variable ကို ခေါ်သုံးတဲ့ module name ကို assign လုပ်ပေးသွားပါလိမ့်မယ်။ ဥပမာ ```__main__=eg_module```  
 
+### main method ရဲ့ အလုပ်လုပ်ပုံ
 
+```__name__``` ကို ```__main__``` ဆိုပြီး assign လုပ်လိုက်ပြီ ဆိုရင်တော့ program ထဲမှာ ရေးထားတဲ့ run ပေးလို့ရတဲ့ statement တွေအားလုံးကို run အပေါ်ကနေအောက်ဖက်ကို လိုင်းတစ်ခုခြင်းစီ ဆင်းလာတဲ့ ပုံစံနဲ့ run ပေးသွားမှာ ဖြစ်ပါတယ်။ ဒါ့အပြင့် main method ထဲမှာ ရေးထားတဲ့ statement တွေကိုလည်း run ပေးမှာ ဖြစ်ပါတယ်။  
 
+```__name__``` ကို module name တစ်ခုခု assign လုပ်ထားတဲ့ အခါမှာတော့ အဲဒီ module ထဲက run ပေးလို့ ရတဲ့ statement တွေကို အပေါ်ကနေ အောက်ဖက်ကို အဆင့်ဆင့် run ပေးသွားမှာ ဖြစ်ပေမဲ့ အဲဒီ module ထဲမှာ ရှိတဲ့ main method အောက်က statement တွေကိုတော့ run ပေးမှာ မဟုတ်ပါဘူး။ အဲဒါကြောင့် how-name-eq-main-work.py ကို run ကြည့်ရင် အောက်ပါအတိုင်း output လုပ်ပေးတာကို တွေ့ရမှာ ဖြစ်ပါတယ်။  
+
+```
+$ python ./how-name-eq-main-work.py 
+eg-module.py ထဲကနေ print လုပ်လိုက်တာပါ!
+main method ရဲ့ အပြင်မှာပါ ...
+main method ရဲ့ အထဲမှာပါ ...
+```
 
 ## Reference
 
