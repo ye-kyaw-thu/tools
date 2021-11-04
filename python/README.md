@@ -70,3 +70,6 @@
 23. [accuracy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/accuracy.py)  
 (ကျောင်းသားတွေကို accuracy အကြောင်းကို ရှင်းပြဖို့ ရည်ရွယ်ပြီး ရေးခဲ့တဲ့ python code)  
 
+24. [how-name-eq-main-work.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/how-name-eq-main-work.py)  
+(if __name__ == '__main__': ရဲ့ အလုပ်လုပ်ပုံကို နားလည်စေဖို့ ဥပမာ ရေးပြထားတဲ့ python code ပါ။ eg_module.py ကို module အနေနဲ့ ခေါ်သုံးမှာမို့ အဲဒီဖိုင်ကိုလည်း ကြည့်ပါ)  
+
