@@ -1608,6 +1608,16 @@ print(marks)
 (base) ye@:/media/ye/project2/4github/isolation-forest$ 
 ```
 
+## 24. [how-name-eq-main-work.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/how-name-eq-main-work.py)    
+```if __name__ == '__main__':``` ရဲ့ အလုပ်လုပ်ပုံကို နားလည်စေဖို့ ဥပမာ ရေးပြထားတဲ့ python code ပါ။
+
+Python code ရေးတဲ့အခါမှာ C, C++ တို့နဲ့ မတူပဲ main method မရှိလည်း run ပေးတာကို သိကြပါလိမ့်မယ်။ ပြီးတော့ ```if __name__ == '__main__':``` ဆိုတဲ့ ပုံစံမျိုးနဲ့ main method ကို Python code ထဲမှာ သတ်မှတ်ပြီး သုံးတာမျိုးကိုလည်း တွေ့ဖူးကြပါလိမ့်မယ်။ အဲဒါကြောင့် main method က Python programming language မှာ ဘယ်လို ပုံစံမျိုးနဲ့ အလုပ်လုပ်နေသလဲ ဆိုတာကို ရှင်းပြချင်ပါတယ်။  
+
+တကယ်က Python interpreter က python script တစ်ခုကို running မလုပ်ခင်မှာ ```__name__``` ဆိုတဲ့ special variable တစ်ခုကို အရင်ဆုံး assign လုပ်ပေးပါတယ်။ အဲဒီလို လုပ်တဲ့အခါမှာ Python script ကို command line ကနေ ခေါ် run တာလား သို့မဟုတ် module တစ်ခုအနေနဲ့ import နဲ့ လှမ်းခေါ်သုံးထားတာလား ဆိုတဲ့ အပေါ်ကို မူတည်ပြီးတော့ ```__name__``` special variable ကို assign လုပ်တဲ့ပုံစံက ကွဲပြားသွားပါလိမ့်မယ်။  
+
+
+
+
 ## Reference
 
 - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
