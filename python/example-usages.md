@@ -1615,6 +1615,8 @@ Python code ရေးတဲ့အခါမှာ C, C++ တို့နဲ့ �
 
 တကယ်က Python interpreter က python script တစ်ခုကို running မလုပ်ခင်မှာ ```__name__``` ဆိုတဲ့ special variable တစ်ခုကို အရင်ဆုံး assign လုပ်ပေးပါတယ်။ အဲဒီလို လုပ်တဲ့အခါမှာ Python script ကို command line ကနေ ခေါ် run တာလား သို့မဟုတ် module တစ်ခုအနေနဲ့ import နဲ့ လှမ်းခေါ်သုံးထားတာလား ဆိုတဲ့ အပေါ်ကို မူတည်ပြီးတော့ ```__name__``` special variable ကို assign လုပ်တဲ့ပုံစံက ကွဲပြားသွားပါလိမ့်မယ်။  
 
+တကယ်လို့ command line ကနေ ```python /how-name-eq-main-work.py``` လိုမျိုး ခေါ်ပြီး run တဲ့အခါမှာတော့ ```__name__``` ကို ```__main__``` ဆိုပြီး assign လုပ်ပေးပါလိမ့်မယ်။ အဲဒီလို မဟုတ်ပဲနဲ့ module တစ်ခုအနေနဲ့ import နဲ့ ခေါ်သုံးတဲ့ အခါမှာတော့ ```__name__``` special variable ကို ခေါ်သုံးတဲ့ module name ကို assign လုပ်ပေးသွားပါလိမ့်မယ်။ ဥပမာ ```__main__=eg_module```  
+
 
 
 
