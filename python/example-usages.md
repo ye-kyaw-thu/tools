@@ -1758,6 +1758,48 @@ F1-score for player2:  [0.16216216 0.12903226 0.17777778 0.0625     0.         0
 (base) ye@:/media/ye/project2/4github/4students/f1-score$
 ```
 
+## 27. [language-detect.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/language-detect.py)  
+
+googletrans library ရဲ့ Translator ကို အောက်ပါအတိုင်း input လုပ်တယ်။  
+
+```from googletrans import Translator```python 
+```
+
+ပြီးတော့မှ translate.detect() function ကနေ return ပြန်လာတဲ့ value ကို print ထုတ်ပေးလိုက်တာပါ။  
+
+```
+$ python ./language-detect.py 
+input: နေကောင်းတယ်။ နေ့တိုင်း အလုပ်လုပ်တယ်။
+language:  my
+
+input: 元気です。毎日働いています。
+language:  ja
+
+input: My name is Ye Kyaw Thu.
+language:  en
+
+input: กระดาษสีถ่ายเอกสาร 1 A4 80 แกรม ฟ้า 500 แผ่น
+language:  th
+
+input: နေကောင်းတယ်။ နေ့တိုင်း အလုပ်လုပ်တယ်။ 元気です。毎日働いています。
+language:  my
+
+input: 元気です。毎日働いています。နေကောင်းတယ်။ နေ့တိုင်း အလုပ်လုပ်တယ်။
+language:  my
+
+input: N dai tsi n tsin hpe tsi gawk kaw sa shaw la u.
+language:  ha
+
+input: NÀ HPÀRVT LĒGA TÌQCVNG SĒ GØ̀ MĒRØ DAQ Ó .
+language:  sm
+
+input: အဲဝယ်ဟှား ခံဗျား ဟှို အဲဇာ ပေး ဟှို့ မှုဝ ။
+language:  my
+```
+
+အထက်မှာ ဥပမာ အနေနဲ့ run ပြထားတဲ့ အတိုင်းပါပဲ။  
+ဘာသာစကား နှစ်ခု ရောလိုက်ရင် detection က မှားနိုင်ပါတယ်။ ထိုနည်းလည်းကောင်း မြန်မာ Unicode ဇယားထဲမှာပါတဲ့ မြန်မာစာလုံးတွေကို သုံးထားရင် dialect language တွေဖြစ်တဲ့ ရခိုင်၊ ထားဝယ်၊ ဘိတ် တို့ကိုလည်း မြန်မာဘာသာ (i.e. my) အနေနဲ့လည်း return ပြန်ပေးပါလိမ့်မယ်။ alphabet ကို သုံးတဲ့ မြန်မာတိုင်းရင်းသား ဘာသာစကား string တွေကို input လုပ်ရင်လည်း မှန်မှန်ကန်ကန် detect လုပ်မပေးနိုင်တာကို တွေ့ရပါလိမ့်မယ်။  
+
 ## Reference
 
 - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
