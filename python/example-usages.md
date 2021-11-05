@@ -1630,6 +1630,114 @@ main method ရဲ့ အပြင်မှာပါ ...
 main method ရဲ့ အထဲမှာပါ ...
 ```
 
+## 25. [f1-score-calc.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/f1-score-calc.py)   
+
+True/False ဆိုတဲ့ class နှစ်ခုရှိတဲ့ classification ရဲ့ output နဲ့ မှန်ကန်တဲ့ အဖြေဖြစ်တဲ့ Reference ကို F1-score တွက်ကြည့်ရအောင်။  
+တကယ်က F1-score မှာ average micro နဲ့ average macro ဆိုပြီးတွက်တဲ့ ပုံစံနှစ်မျိုးရှိတယ်။ အသေးစိတ်ကို coding ထဲမှာလည်း comment တွေ ရေးပေးထားပါတယ်။  
+
+```python
+"""
+ F1-score calculation example for single 
+written by Ye Kyaw Thu, LST, NECTEC, Thailand
+Date: 26 Oct 2021
+
+# Reference:
+https://datascience.stackexchange.com/questions/15989/micro-average-vs-macro-average-performance-in-a-multiclass-classification-settin
+http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html
+"""
+
+# micro-average နဲ့ macro-average က တွက်ပုံက အနည်းငယ်ကွဲပြားတယ်။ အဲဒါကြောင့် အဖြေကလည်း တထပ်တည်း တူမှာမဟုတ်ဘူး။
+# micro-average ကတော့ class အမျိုးအစားကွဲ ရှိသလောက် ကိုအားလုံးစုပေါင်းပြီးမှ average တွက်တဲ့ ပုံစံပါ။
+# အသေးစိတ်ပြောရရင် true-positive တွေ အားလုံးပေါင်း၊ false-positive တွေ အားလုံးပေါင်း၊ false-negative တွေ အားလုံးကိုလည်း ပေါင်းပြီးမှ
+# တွက်သွားတဲ့ ပုံစံပါ။ အောက်ပါအတိုင်းပါ...  
+# P = TP/(TP+FP), R = TP/TP+FN
+# အဲဒါကြောင့် micro-average က multi-class classification အတွက် ပိုသင့်တော်ပါတယ်။
+# အထူးသဖြင့် ဒေတာထဲမှာ class အမျိုးအစား ပါဝင်မှု အရေအတွက်က မညီမျှနိုင်တဲ့မျိုးအခြေအနေမျိုးမှာပါ။
+# ဥပမာ class အမျိုးအစား တစ်ခုမှာ အရေအတွက်က အရမ်းကြီးများနေတဲ့ case မျိုးမှာ...  
+
+# macro-average က class တစ်ခုချင်းစီအတွက် သပ်သပ်စီ တွက်ပြီးမှ average ယူတယ်။ class အားလုံးကို ညီတူညီမျှပဲ ထားပြီး စဉ်းစားတယ်။
+# macro-average တွက်တဲ့ ပုံစံက 
+# macro-average-precision = P1+P2/2 (true, false class နှစ်မျိုးပဲ ရှိလို့)
+# macro-average-recall = R1 + R2/2
+# system တစ်ခု အနေနဲ့ သို့မဟုတ် model တစ်ခုရဲ့ dataset ပေါ်မှာ ရလာတဲ့ performance ကို ကြည့်ဖို့အတွက် အသုံးဝင်တယ်
+# NLP သမားတွေ၊ ML သမားတွေ ပြောနေကြတဲ့ precision, recall, F1-socre တွေက default က macro ပါ
+
+# module, package loading
+from sklearn.metrics import confusion_matrix, classification_report, precision_score, recall_score, f1_score
+import random
+
+
+# prepare reference data
+# ture, false တွေကို အကြိမ် ၁၀၀ ကျပန်း ယူလိုက်ပြီး reference အနေနဲ့ ထားလိုက်တာ
+reference = [random.choice([True, False])  for x in range(100)]
+print("Reference: ", reference)
+
+# simulation of model prediction
+# model တစ်ခုခုက ခန့်မှန်းပြီး ထွက်လာတဲ့ အဖြေကိုလည်း အထက်ကလိုပါပဲ အကြိမ် ၁၀၀ ကျပန်း ယူလိုက်ပြီး list တစ်ခု ဆောက်လိုက်တာပါ
+prediction = [random.choice([True, False])  for x in range(100)]
+print("\nModel Output: ", prediction)
+
+# confusion matrix
+print("\nConfusion matrix:")
+print(confusion_matrix(reference, prediction, labels=[True, False]))
+
+#calculate F1 score
+precision=precision_score(reference, prediction)
+print("\nParameter: average=micro")
+print("Precision: ", precision)
+recall=recall_score(reference, prediction)
+print("Recall: ", recall)
+score=f1_score(reference, prediction)
+print("F1 Score: ", score)
+
+precision=precision_score(reference, prediction, average='macro')
+print("\nParameter: average=macro")
+print("Precision: ", precision)
+recall=recall_score(reference, prediction, average='macro')
+print("Recall: ", recall)
+score=f1_score(reference, prediction, average='macro')
+print("F1 Score: ", score)
+
+# using classification_report()
+print("\nClassification_report():")
+print(classification_report(reference, prediction, labels=[True, False]))
+```
+
+Run ကြည့်ရင် output အနေနဲ့ အောက်ပါအတိုင်း မြင်ရပါလိမ့်မယ်။  
+
+```
+(base) ye@:/media/ye/project2/4github/4students/f1-score$ python ./f1-score-calc.py 
+Reference:  [True, False, True, False, True, False, True, True, True, True, False, True, True, False, True, True, False, True, False, False, False, True, True, False, True, False, False, True, False, False, False, True, True, True, False, False, True, False, True, False, False, False, False, True, False, True, True, False, True, True, True, False, False, True, False, False, False, True, True, True, False, True, False, True, True, False, True, False, True, True, False, False, True, True, False, True, False, False, True, False, True, False, True, True, True, False, False, True, False, True, True, False, False, True, False, False, True, False, False, False]
+
+Model Output:  [False, True, True, False, False, False, True, True, True, True, True, True, True, True, True, True, True, True, True, True, False, False, True, False, False, False, True, True, True, True, False, True, True, True, False, False, False, False, False, True, True, False, False, False, True, True, True, True, False, True, True, False, False, False, False, False, False, True, False, False, True, False, False, True, False, True, False, False, False, True, False, False, False, True, True, False, True, True, True, False, False, True, True, True, False, True, False, True, False, True, True, False, True, False, False, True, True, False, True, False]
+
+Confusion matrix:
+[[30 20]
+ [23 27]]
+
+Parameter: average=micro
+Precision:  0.5660377358490566
+Recall:  0.6
+F1 Score:  0.5825242718446602
+
+Parameter: average=macro
+Precision:  0.5702529104777199
+Recall:  0.5700000000000001
+F1 Score:  0.5696126513862476
+
+Classification_report():
+              precision    recall  f1-score   support
+
+        True       0.57      0.60      0.58        50
+       False       0.57      0.54      0.56        50
+
+    accuracy                           0.57       100
+   macro avg       0.57      0.57      0.57       100
+weighted avg       0.57      0.57      0.57       100
+
+(base) ye@:/media/ye/project2/4github/4students/f1-score$ 
+```
+
 ## Reference
 
 - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
