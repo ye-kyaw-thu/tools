@@ -76,3 +76,5 @@
 25. [f1-score-calc.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/f1-score-calc.py)  
 (F1-Score ကို micro-average နဲ့တွက်တဲ့ ပုံစံ၊ macro-average နဲ့ တွက်တဲ့ ပုံစံကို ဥပမာအနေနဲ့ ရေးပြထားတာပါ။)  
 
+26. [multi-class-f1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/multi-class-f1.py)  
+(F1-score တွက်တာကိုပဲ multi-class classification အတွက် တွက်ပြထားတာပါ...)  
