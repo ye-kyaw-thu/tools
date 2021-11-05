@@ -199,5 +199,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 23. [accuracy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/accuracy.py)  
 24. [how-name-eq-main-work.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/how-name-eq-main-work.py)  
 25. [f1-score-calc.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/f1-score-calc.py)  
-
+26. [multi-class-f1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/multi-class-f1.py)  
 
