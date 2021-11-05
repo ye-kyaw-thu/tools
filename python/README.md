@@ -73,3 +73,6 @@
 24. [how-name-eq-main-work.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/how-name-eq-main-work.py)  
 (```if __name__ == '__main__':``` ရဲ့ အလုပ်လုပ်ပုံကို နားလည်စေဖို့ ဥပမာ ရေးပြထားတဲ့ python code ပါ။ eg_module.py ကို module အနေနဲ့ ခေါ်သုံးမှာမို့ အဲဒီဖိုင်ကိုလည်း ကြည့်ပါ)  
 
+25. [f1-score-calc.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/f1-score-calc.py)  
+(F1-Score ကို micro-average နဲ့တွက်တဲ့ ပုံစံ၊ macro-average နဲ့ တွက်တဲ့ ပုံစံကို ဥပမာအနေနဲ့ ရေးပြထားတာပါ။)  
+
