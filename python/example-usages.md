@@ -1763,7 +1763,6 @@ F1-score for player2:  [0.16216216 0.12903226 0.17777778 0.0625     0.         0
 googletrans library ရဲ့ Translator ကို အောက်ပါအတိုင်း input လုပ်တယ်။  
 
 ```from googletrans import Translator```python 
-```
 
 ပြီးတော့မှ translate.detect() function ကနေ return ပြန်လာတဲ့ value ကို print ထုတ်ပေးလိုက်တာပါ။  
 
