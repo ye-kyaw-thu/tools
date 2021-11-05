@@ -1743,7 +1743,10 @@ weighted avg       0.57      0.57      0.57       100
 F1-score တွက်တာကိုပဲ ဒီတစ်ခါတော့ multi-class classification problem အတွက် evaluation လုပ်တဲ့ အနေနဲ့ တွက်ပြထားတာဖြစ်ပါတယ်။ ဥပမာကတော့ လူတိုင်းနားလည်ရလွယ်တဲ့ အံစာတုံးခေါက်ကစားနည်းကိုပဲ အခြေခံထားပါတယ်။ ပထမဆုံး ကွန်ပျူတာကနေ ကျပန်း အံစာတုံးအခါ ၁၀၀ ခေါက်လိုက်ပြီးတော့ အဲဒီရလဒ်ကို ကစားသမားနှစ်ယောက် (simulated player နှစ်ယောက်) ရဲ့ အံစာတုန်းခေါက်ထားတဲ့ ရလဒ်တွေနဲ့ နှိုင်းယှဉ်ပြီး F1-score တွက်တာကို ဥပမာအနေနဲ့ ရေးပြထားတာပါ။ ဒီနေရာမှာ အံစာတုံးခေါက်လိုက်ရင် ဖြစ်နိုင်ချရှိတဲ့ နံပါတ်(၁) ကနေ နံပါတ်(၆) ကို class တစ်ခုချင်းစီအနေနဲ့ထားပြီးတော့ F1-score တွက်သွားတာ ဖြစ်ပါတယ်။  
 
 တွက်ပေးတဲ့ function ကတော့ sklearn module ကနေ အောက်ပါအတိုင်း ခေါ်သုံးထားပါတယ်။  
-```from sklearn.metrics import f1_score```python 
+
+```python
+from sklearn.metrics import f1_score
+```
 
 multi-class-f1.py ကို command line မှာ run လိုက်ရင် မြင်ရမယ့် output တွေကတော့ အောက်ပါအတိုင်းဖြစ်ပါတယ်။  
 ခင်ဗျားတို့ စက်ထဲမှာ run တဲ့အခါမှာအခုပြထားတဲ့ ရလဒ်နဲ့ကတူမှာ မဟုတ်ဘူးနော်။ တစ်ခေါက် run တိုင်းမှာ ကျပန်း (random) ခေါက်ခေါက်သွားမှာမို့ပါ။  
@@ -1762,7 +1765,9 @@ F1-score for player2:  [0.16216216 0.12903226 0.17777778 0.0625     0.         0
 
 googletrans library ရဲ့ Translator ကို အောက်ပါအတိုင်း input လုပ်တယ်။  
 
-```from googletrans import Translator```python 
+```python
+from googletrans import Translator
+```
 
 ပြီးတော့မှ translate.detect() function ကနေ return ပြန်လာတဲ့ value ကို print ထုတ်ပေးလိုက်တာပါ။  
 
