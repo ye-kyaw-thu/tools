@@ -1,11 +1,12 @@
-# F1-score calculation example for single 
-# written by Ye Kyaw Thu, LST, NECTEC, Thailand
-# Date: 26 Oct 2021
+"""
+ F1-score calculation example for single 
+written by Ye Kyaw Thu, LST, NECTEC, Thailand
+Date: 26 Oct 2021
+
 # Reference:
-# https://datascience.stackexchange.com/questions/15989/micro-average-vs-macro-average-performance-in-a-multiclass-classification-settin
-# http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html
-
-
+https://datascience.stackexchange.com/questions/15989/micro-average-vs-macro-average-performance-in-a-multiclass-classification-settin
+http://rushdishams.blogspot.com/2011/08/micro-and-macro-average-of-precision.html
+"""
 
 # micro-average နဲ့ macro-average က တွက်ပုံက အနည်းငယ်ကွဲပြားတယ်။ အဲဒါကြောင့် အဖြေကလည်း တထပ်တည်း တူမှာမဟုတ်ဘူး။
 # micro-average ကတော့ class အမျိုးအစားကွဲ ရှိသလောက် ကိုအားလုံးစုပေါင်းပြီးမှ average တွက်တဲ့ ပုံစံပါ။
