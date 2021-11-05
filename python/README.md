@@ -78,3 +78,6 @@
 
 26. [multi-class-f1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/multi-class-f1.py)  
 (F1-score တွက်တာကိုပဲ multi-class classification အတွက် တွက်ပြထားတာပါ...)  
+
+27. [language-detect.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/language-detect.py)  
+(googletrans library ကို သုံးပြီး language detection လုပ်တာကို ရေးပြထားတာပါ။ ထားဝယ်၊ ကချင်၊ ရဝမ် တို့နဲ့လည်း စမ်းပြထားပါတယ်။)  
