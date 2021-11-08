@@ -1804,6 +1804,28 @@ language:  my
 အထက်မှာ ဥပမာ အနေနဲ့ run ပြထားတဲ့ အတိုင်းပါပဲ။  
 ဘာသာစကား နှစ်ခု ရောလိုက်ရင် detection က မှားနိုင်ပါတယ်။ ထိုနည်းလည်းကောင်း မြန်မာ Unicode ဇယားထဲမှာပါတဲ့ မြန်မာစာလုံးတွေကို သုံးထားရင် dialect language တွေဖြစ်တဲ့ ရခိုင်၊ ထားဝယ်၊ ဘိတ် တို့ကိုလည်း မြန်မာဘာသာ (i.e. my) အနေနဲ့လည်း return ပြန်ပေးပါလိမ့်မယ်။ alphabet ကို သုံးတဲ့ မြန်မာတိုင်းရင်းသား ဘာသာစကား string တွေကို input လုပ်ရင်လည်း မှန်မှန်ကန်ကန် detect လုပ်မပေးနိုင်တာကို တွေ့ရပါလိမ့်မယ်။  
 
+## 28. [python-list-eg.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/python-list-eg.py)  
+
+Python ရဲ့ list ကို အသုံးဝင်တဲ့ ပုံစံ ခြောက်မျိုးအနေနဲ့ သုံးပြထားတာပါ။  
+သိထားခြင်းအားဖြင့် NLP/AI အလုပ်တွေရဲ့ preprocessing/post-editing ကိစ္စတွေအတွက် အသုံးဝင်ပါလိမ့်မယ်။  
+Run ကြည့်ရင် အောက်ပါလိုမျိုး output ကို မြင်ရပါလိမ့်မယ်။  
+
+```
+(base) ye@:/media/ye/project2/4github/4students/python-list$ python ./python-list-eg.py 
+list1:  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+after slicing with slice(4, 10, 1):  [5, 6, 7, 8, 9, 10]
+apply "10*x" to every element of the list1 with "map":  [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]
+original string:  ဒီညတော့ ဂျူးပဲပုပ်ကြော နဲ့ ညစာ စားမယ်
+after reversing a list:  ်ယမးာစ ာစည ့ဲန ာေြက်ပုပဲပးူျဂ ့ာေတညီဒ
+မူလတန်း, In English "primary school", 5 years course.
+အလယ်တန်း, In English "middle school", 3 years course.
+အထက်တန်း, In English "high school", 2 years course.
+even_odd_dict:  {'odd': [1, 3, 5, 7, 9], 'even': [2, 4, 6, 8, 10]}
+After joining all list values:  [1, 3, 5, 7, 9, 2, 4, 6, 8, 10]
+after merging two lists:  {'Cafe Latte': 60, 'American Coffee': 45, 'Matcha Latte': 70, 'Cappuccino': 60, 'Lemon Tea': 55}
+(base) ye@:/media/ye/project2/4github/4students/python-list$
+```
+
 ## Reference
 
 - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
