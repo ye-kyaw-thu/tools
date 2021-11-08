@@ -81,3 +81,6 @@
 
 27. [language-detect.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/language-detect.py)  
 (googletrans library ကို သုံးပြီး language detection လုပ်တာကို ရေးပြထားတာပါ။ ထားဝယ်၊ ကချင်၊ ရဝမ် တို့နဲ့လည်း စမ်းပြထားပါတယ်။)  
+
+28. [python-list-eg.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/python-list-eg.py)  
+(Python programming ရဲ့ list အသုံးပြုပုံကို ဒီမိုရေးပြထားတာ...)  
