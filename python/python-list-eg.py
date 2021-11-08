@@ -25,7 +25,7 @@ def multi(x):
 print('apply "10*x" to every element of the list1 with "map": ', list(map(multi, list1)))
 
 # reversing a list
-str="ဒီညတော့ ဂျူးပဲပုပ်ကြော နဲ့ ညစာ စားမယ်"
+str="ဒီညတော့ ဂျူးပဲပုပ်ကြော် နဲ့ ညစာ စားမယ်"
 print('original string: ', str)
 print('after reversing a list: ', str[::-1])
 
