@@ -6081,3 +6081,72 @@ Done.
 ဒါပေမဲ့ ဖိုင် လေးဖိုင် အဖြစ် ဖြတ်သွားရတာက "ငါ့ကို" နဲ့ "ပြန်ပို့ကြပါလေ" ဆိုတဲ့အကြားမှာ ကဗျာရွတ်ဆိုတုန်းက အသံခဏဖြတ်ထားခဲ့တာကြောင့် ဖြစ်ပါတယ်။  
 အခု ဥပမာအဖြစ် စမ်းပြထားတဲ့ ဖိုင်တွေကိုလည်း လေ့လာလို့ ရအောင် [https://github.com/ye-kyaw-thu/tools/tree/master/bash/chop-by-silence](https://github.com/ye-kyaw-thu/tools/tree/master/bash/chop-by-silence) path မှာ upload လုပ်ပေးထားပါတယ်။  
 	
+## 102. [sort-capitalized-letter-first.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sort-capitalized-letter-first.sh)  
+	
+ပုံမှန် sort command နဲ့ sorting စီတဲ့အခါမှာ အောက်ပါလိုမျိုး output အနေနဲ့ ထုတ်ပေးပါလိမ့်မယ်။  
+	
+```
+$ cat ./normal-sorted-output.txt
+ASR & Automatic Speech Recognition \\
+bk & Beik \\
+BLEU & BiLingual Evaluation Understudy \\
+chrP & Character $n$-gram precision \\
+chrR & Recall arithmetically averaged over all $n$-grams \\
+crfF & Character $n$-gram F-score \\
+hyp & Hypothesis \\
+MERT & Minimum Error Rate Training \\
+METEOR & Automatic Machine Translation Evaluation System \\
+MT & Machine Translation \\
+my & Myanmar \\
+NMT & Neural Machine Translation\\
+NP-Complete & Nondeterministic Polynomial-time Complete \\
+OOV & Out Of Vocabulary \\
+PBMT & Phrase Based Machine Translation \\
+PBSMT & Phrase-Based Statistical Machine Translation \\
+R\&D & Research and Development \\
+ref & Reference \\
+rk & Rakhine \\
+SCTK & Speech Recognition Scoring Toolkit \\
+sentBLEU & Sentence-level BLEU score \\
+SMT & Statistical Machine Translation\\
+SOV & Subject-Object-Verb \\
+src & Source language \\
+TER & Tanslation Edit Rate \\
+trg & Target language \\
+WER & Word Error Rate 	
+```
+
+လိုချင်တာက capital letter တွေကို အရင်သပ်သပ်စီပြီးမှ small letter အုပ်စုကို သူ့နောက်က လိုက်စေချင်တာပါ။  
+ဒီ shell script က အဲဒီအလုပ်ကို လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။  
+run ပုံ run နည်းက အောက်ပါအတိုင်းပါ။  
+	
+```
+$ ./sort-capitalized-letter-first.sh ./normal-sorted-output.txt 
+ASR & Automatic Speech Recognition \\
+BLEU & BiLingual Evaluation Understudy \\
+MERT & Minimum Error Rate Training \\
+METEOR & Automatic Machine Translation Evaluation System \\
+MT & Machine Translation \\
+NMT & Neural Machine Translation\\
+NP-Complete & Nondeterministic Polynomial-time Complete \\
+OOV & Out Of Vocabulary \\
+PBMT & Phrase Based Machine Translation \\
+PBSMT & Phrase-Based Statistical Machine Translation \\
+R\&D & Research and Development \\
+SCTK & Speech Recognition Scoring Toolkit \\
+SMT & Statistical Machine Translation\\
+SOV & Subject-Object-Verb \\
+TER & Tanslation Edit Rate \\
+WER & Word Error Rate 
+bk & Beik \\
+chrP & Character $n$-gram precision \\
+chrR & Recall arithmetically averaged over all $n$-grams \\
+crfF & Character $n$-gram F-score \\
+hyp & Hypothesis \\
+my & Myanmar \\
+ref & Reference \\
+rk & Rakhine \\
+sentBLEU & Sentence-level BLEU score \\
+src & Source language \\
+trg & Target language \\	
+```
