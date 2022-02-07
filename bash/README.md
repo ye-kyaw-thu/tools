@@ -310,4 +310,7 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 101. [random-no.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/random-no.sh)  
 (Random number ကို နံပါတ် ဘယ်လောက် ကနေ ဘယ်လောက် အထိ ကို ဘယ်နှစ်ခါ ရိုက်ထုတ်ပေးပါ ဆိုပြီး ခိုင်းဖို့ ရေးခဲ့တဲ့ shell script ပါ)  
 
+102. [sort-capitalized-letter-first.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sort-capitalized-letter-first.sh)  
+(အင်္ဂလိပ်စာလုံးတွေကို sorting စီတဲ့အခါမှာ စာလုံးအကြီးတွေကို အရင်စီ ပြီးမှ စာလုံးအသေးတွေကို စီတဲ့ ပုံစံနဲ့ output လိုချင်လို့ ရေးလိုက်တဲ့ shell script အသေးလေးပါ)
+
 
