@@ -6150,3 +6150,94 @@ sentBLEU & Sentence-level BLEU score \\
 src & Source language \\
 trg & Target language \\	
 ```
+	
+## 103. [chk-wavefile-duration-for-unicode-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-wavefile-duration-for-unicode-filename.sh)  
+
+ရှေ့မှာ ရေးခဲ့တဲ့ [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh) ကိုပဲ အခြေခံပြီးတော့ update လုပ်ထားတာပါ။  
+	
+ASR, TTS လုပ်ဖို့အတွက် voice data တွေကို ပြင်ဆင်တာနဲ့ ပတ်သက်ပါတယ်။ preprocessing အလုပ်တစ်ခု အနေနဲ့ လူတစ်ယောက်က စကားပြောထားတဲ့ အသံဖိုင်တစ်ဖိုင်ကို စာကြောင်းအလိုက်ဖြစ်ဖြစ် segmentation လုပ်ပြီးတော့ ဘာတွေပြောထားတယ်ဆိုတာကို လေဘယ်ထိုးကြရပါတယ်။ အဲဒီ အလုပ်ကို transcription လုပ်တယ်လို့ ခေါ်ပါတယ်။ transcription လုပ်ထားတဲ့ ဖိုင်တွေကို ပုံမှန်အားဖြင့်က ပြောထားတဲ့ စာကြောင်းကိုပဲ ဖိုင်နာမည်အဖြစ် သိမ်းထားတာမျိုး လုပ်လေ့ရှိပါတယ်။  
+	
+ဥပမာ အောက်ပါအတိုင်းပါ။  
+	
+```
+.
+├── Coronavirus-Disease-2019_COVID-19
+│   ├── Coronavirus-Disease-2019_COVID-19__wav_16khz_mono.TextGrid
+│   ├── Coronavirus-Disease-2019_COVID-19__wav_16khz_mono.wav
+│   ├── info.txt
+│   └── wav
+│       ├── ကျန်းမာ ရေး ပိုင်း ဆိုင်ရာ ပညာရှင် များ က နေ ပြီးတော့ သတ်မှတ် ပါ တယ်.wav
+│       ├── ကျန်းမာ ရေး ဝန်ကြီး ဌာန က သတ်မှတ် ထား တဲ့ စည်းမျဉ်း စည်းကမ်း တွေ အရ.wav
+│       ├── ကျန်းမာ ရေး ဝန်ထမ်း တွေ အတွက် လည်း ပိုပြီး တော့ အလုပ်အကိုင် ကို ပိုင်ပိုင်နိုင်နိုင် လုပ် နိုင် မယ့် အခြေအနေ ဖြစ် ပါ တယ်.wav
+│       ├── ကျွန်မ တို့ နားလည် သလောက် က တော့ ပေါ့ နော် ပညာရှင် များ ရဲ့ အမြင် မှာ တော့.wav
+│       ├── ကျွန်မ တို့ နိုင်ငံ က နေ ပြီးတော့ ကြိုးပမ်း နေ သလို ပြည်သူ ပြည်သား တွေ က လည်း ဝိုင်း ပြီး တော့ ကြိုးပမ်း တဲ့ အနေ နဲ့.wav
+│       ├── ကျွန်မ တို့ ပတ်ဝန်းကျင် အတွက် စဉ်းစား ဖို့ အရေးကြီး တယ် လို့ ပြော လိုက် တဲ့ နေရာ မှာ.wav
+│       ├── ကျွန်မ တို့ ပြည်သူ ပြည်သား တွေ အားလုံး.wav
+│       ├── ကျွန်မ တို့ ရဲ့ ကိုဗစ် ရောဂါ ကို အောင်အောင်မြင်မြင် ကျော်လွှားနိုင် ရေး  ပဲ ဖြစ် ပါ တယ်.wav
+│       ├── ကျွန်မ တို့ ဟာ အထွေထွေ ရွေးကောက်ပွဲ က လည်း ဒီအချိန် မှာ ကျွန်မ တို့ အတွက် စိန်ခေါ် မှု ကြီး တစ် ခု ဖြစ် ပါ တယ်.wav
+│       ├── ကျွန်မ တို့ ဟို အဝေးပြေး ယာဉ် တွေ မောင်း တဲ့ ယာဉ်မောင်း တွေ ကို.wav
+│       ├── ကျွန်မ တို့ အနေ နဲ့ ရောဂါ ရ ပြီး တဲ့ ပြည်သူ တွေ ကို စောင့်ရှောက် ကုသ စောင့်ရှောက် မှု များများ မ ပေး ချင် လို့ မ ဟုတ် ပါ ဘူး.wav
+│       ├── ကျွန်မ တို့ အနေ နဲ့ အကောင်းဆုံး ဆေး တွေ ရ အောင် လို့ ပြည်သူ တွေ အတွက် ကျွန်မ တို့ စီစဉ် ပါ တယ်.wav
+│       ├── ကျွန်မ အရင် တစ်ခါ ပြော တုန်း က ပြော ဖူး ပါ ပြော လိုက် ပါ တယ်.wav
+│       ├── ကြာကြာ ရပ် သွား ရ တယ် ဆိုလို့ရှိရင် ဒီ ရင်းနှီးမြုပ်နှံ မှု တွေ က ဆက်ပြီး ရချင် မှ ရ မှာ ပါ.wav
+│       ├── ကြိုတင် မဲ တွေ နဲ့ ပတ်သက် လို့ ဆိုလို့ရှိရင် ကျွန်မ တို့ အဲ ဆေးရုံ တွေ မှာ.wav
+```
+
+လက်တွေ့မှာက ဖိုင်တွေက ထောင်နဲ့ချီ ရှိတာမို့ စုစုပေါင်း အချိန်ဘယ်လောက်စာ (total duration) စုထားပြီးပြီလဲ ဆိုတာကို တွက်ဖို့အတွက် သုံးတဲ့အခါမှာ အထက်ပါလိုမျိုး ဖိုင်နာမည်က မြန်မာလိုတွေသိမ်းထားပြီး space တွေလည်း ပါတာမို့ ပထမဗားရှင်း ပရိုဂရမ်နဲ့က အဆင်မပြေပါဘူး။ အဲဒါကြောင့် ရှေ့က ပရိုဂရမ်ကို အခြေခံပြီး အနည်းငယ် ပြင်ရေးထားတဲ့ shell script ပါ။  
+
+ပထမ ဗားရှင်းမှာက အောက်ပါအတိုင်း ရေးထားခဲ့ပါတယ်။  
+	
+```bash
+# find all wave files under current folders
+find . -name "*.wav" > wavefiles.txt
+
+# read wave filenames and pass them to "soxi" command
+# for calculating the duration (in seconds) for each file
+cat ./wavefiles.txt | while read -r filename
+#head ./wavefiles.txt | while read -r filename # for checking quickly ...
+do
+   soxi -D $filename
+
+done > secondsfile # duration seconds of each wavefile will be save
+```
+	
+ပြင်ထားတာက အောက်ပါ အပိုင်းပါပဲ။  
+	
+```bash
+# removing existing wavefiles.txt
+rm wavefiles.txt;
+
+# internal field separator
+IFS=$'\n';
+
+#for FILE in `find . -name *.wav`; do
+
+# get only filenames with Myanmar name
+for FILE in `find . -name *.wav | perl -ne 'print if /[^[:ascii:]]/'`; do
+    echo $FILE >> wavefiles.txt
+    soxi -D $FILE 
+done > secondsfile
+```
+	
+Run တာက total duration တွက်ချင်တဲ့ ဖိုလ်ဒါရှိတဲ့ အထက် path မှာ ထားပြီး run ယုံပါပဲ။  
+ဥပမာ အနေနဲ့ run ပြရရင်...  
+	
+```
+(base) ye@:/media/ye/project2/NECTEC/myTTS-proj/data/eduTTSProject/DS$ ./wav-duration.sh 
+rm: cannot remove 'wavefiles.txt': No such file or directory
+03:31:35.78
+```
+အထက်ပါအတိုင်း total duration က သုံးနာရီခွဲကျော် ရှိကြောင်းကို ရိုက်ထုတ်ပြပါလိမ့်မယ်။  
+	
+utterance ဖိုင် စုစုပေါင်း ဘယ်လောက် ရှိသလဲ ဆိုတာကို ရှာကြည့်ချင်ရင်တော့ output အဖြစ်ထုတ်ထားတဲ့ wavefiles.txt ကို wc command သုံးပြီး ရိုက်ထုတ်ကြည့်ယုံပါပဲ။  
+	
+```
+(base) ye@:/media/ye/project2/NECTEC/myTTS-proj/data/eduTTSProject/DS$ wc wavefiles.txt 
+  3374  42277 716190 wavefiles.txt
+```
+
+အထက်ပါအတိုင်း utterance က သုံးထောင့်သုံးရာကျော် ရှိတာကို သိရပါလိမ့်မယ်။  
+	
+Note: တကယ်က မြန်မာစာဖိုင်နာမည်တွေကိုပဲ ဆွဲယူရတာက မဖြတ်ထုတ်ခင်က ရှိခဲ့တဲ့ အော်ရဂျင်နယ် အသံဖိုင် အကြီးကိုလည်း total duration တွက်တဲ့အခါမှာ မပါစေချင်လို့ပါ။  
+	
+	
