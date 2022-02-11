@@ -111,6 +111,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 99. [spelling-checker-with-dict.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/spelling-checker-with-dict.sh)
 100. [chop-by-silence.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chop-by-silence.sh)  
 101. [random-no.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/random-no.sh)  
+102. [sort-capitalized-letter-first.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sort-capitalized-letter-first.sh)  
 103. [chk-wavefile-duration-for-unicode-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-wavefile-duration-for-unicode-filename.sh)  
 
 # perl
