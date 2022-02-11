@@ -4,6 +4,8 @@
 
 # check total duration of the recorded wave files
 # written by Ye Kyaw Thu, NECTEC, Thailand
+# Based on the previous program 
+# Last updated: 11 Feb 2022
 # how to run: ./chk-wavefile-duration-for-unicode-filename.sh
 
 # Reference
