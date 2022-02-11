@@ -314,6 +314,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 (အင်္ဂလိပ်စာလုံးတွေကို sorting စီတဲ့အခါမှာ စာလုံးအကြီးတွေကို အရင်စီ ပြီးမှ စာလုံးအသေးတွေကို စီတဲ့ ပုံစံနဲ့ output လိုချင်လို့ ရေးလိုက်တဲ့ shell script အသေးလေးပါ)
 
 103. [chk-wavefile-duration-for-unicode-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-wavefile-duration-for-unicode-filename.sh)
-(transcript လုပ်ထားတဲ့ မြန်မာစာကြောင်းတွေကို ဖိုင်နာမည်အဖြစ် သိမ်းထားတဲ့ wave တွေရဲ့ total duration ကို တွက်ဖို့ ရေးခဲ့တယ်။ အထက်က ပရိုဂရမ်နံပါတ် )
+(transcript လုပ်ထားတဲ့ မြန်မာစာကြောင်းတွေကို ဖိုင်နာမည်အဖြစ် သိမ်းထားတဲ့ wave တွေရဲ့ total duration ကို တွက်ဖို့ ရေးခဲ့တယ်။ အထက်က ပရိုဂရမ်နံပါတ် 32 ဖြစ်တဲ့ [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh) ကိုပဲ update လုပ်ထားတာ)  
 
 
