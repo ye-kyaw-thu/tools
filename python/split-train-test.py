@@ -33,12 +33,15 @@ dataframe = pd.read_csv(data_path, sep='\t')
 # shuffle=True ဆိုတာက train, test အနေနဲ့ မခွဲခင်မှာ အရင်ဆုံး shuffle လုပ်ပေးပါ ကျပန်းမွှေပေးပါလို့ ခိုင်းထားတာပါ။ မလိုအပ်ရင် False လုပ်ပါ။  
 train, test = train_test_split(dataframe, test_size=0.2, random_state=42, shuffle=True)
 
-# determine the path where to save the train and test file
+# train.tsv ဖိုင်နဲ့ test.tsv ဖိုင်တွေကို သိမ်းဖို့ path တွေကို သတ်မှတ်တာပါ။
+# string နှစ်ခုကို ဆက်တာမို့လို့ + ကို သုံးထားပါတယ်။
+# data_dir က အထက်မှာ './train-test_data' ဆိုပြီး သတ်မှတ်ထားတာမို့ train_path = './train-test_data/train.tsv' ဖြစ်ပြီးတော့၊ 
+# test_path ကတော့ './train-test_data/test.tsv' ဆိုတဲ့ string တွေ ဖြစ်သွားမှာပါ။  
 train_path = data_dir + '/train.tsv'
 test_path = data_dir + '/test.tsv'
 
-# save the train and test file
-# again using the '\t' separator to create tab-separated-values files
+# ဖိုင်တွေကို save လုပ်တဲ့ အပိုင်းပါ။  
+# index=False ဆိုတာက ရေးပေးမဲ့ ဖိုင်အသစ်တွေ (i.e. output files) မှာ index ကော်လံ တစ်ခုအပို ပါလာမှာကို မလိုချင်လို့ပါ။  
 train.to_csv(train_path, sep='\t', index=False)
 test.to_csv(test_path, sep='\t', index=False)
 
