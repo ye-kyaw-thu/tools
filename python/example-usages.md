@@ -1935,7 +1935,7 @@ split လုပ်ပြီး ထွက်လာတဲ့ training ဖိုင
 (base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$
 ```
 
-## 31. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)   
+## 30. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)   
 
 ဒီတစ်ခါတော့ ပုံမှန် Statistical Machine Translation, Neural Machine Translation မှာ သုံးတဲ့ပုံစံဖြစ်တဲ့ training, validation, test ဒေတာခွဲတာကို လုပ်ဖို့အတွက် ရည်ရွယ်ပြီး ရေးပြထားတာပါ။  
 အထက်က Python script နံပါတ် 30 နဲ့ အခြေခံအားဖြင့်က တူပါတယ်။ အဓိက မတူတာက validation set ပါ ပါလာလို့ train_test_split() function ကို နှစ်ခါ ခေါ်သုံးထားတာပါပဲ။  
