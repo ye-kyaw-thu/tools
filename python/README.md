@@ -88,4 +88,7 @@
 30. [split-train-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py)  
 (parallel data ကို Python programming နဲ့ training ဒေတာ၊ test ဒေတာ အဖြစ် ခွဲတာကို ဥပမာ အနေနဲ့ ရေးပြထားတာပါ)  
 
+31. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)  
+(ပရိုဂရမ် 30 နဲ့ အခြေခံအားဖြင့်က တူပါတယ်။ validation ဒေတာကိုပါခွဲချင်တာမို့ train_test_split() ကို နှစ်ခါခေါ်သုံးပြီး training, validation, test ဒေတာတွေကို ခွဲပေးတဲ့ python script ပါ)  
+
 
