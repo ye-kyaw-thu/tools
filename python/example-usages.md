@@ -1826,6 +1826,58 @@ after merging two lists:  {'Cafe Latte': 60, 'American Coffee': 45, 'Matcha Latt
 (base) ye@:/media/ye/project2/4github/4students/python-list$
 ```
 
+## 29. https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py
+
+Machine Translation မှာ သုံးတဲ့ parallel corpus ကို training data, test data အဖြစ် ခွဲတာကို လက်တွေ့ လုပ်ကြည့်ကြရအောင်။  
+
+ဥပမာ အနေနဲ့ ကိုယ့်ဆီမှာက အင်္ဂလိပ်စာ၊ မြန်မာစာ၊ ထိုင်းစာ အတွက်က ဖိုင်သုံးဖိုင်အနေနဲ့ခွဲပြီး ရှိနေတယ် ဆိုကြပါစို့...  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ wc data.{en,my,th}
+  14577  200464 1004773 data.en
+  14577  229186 3544131 data.my
+  14577   33224 2301540 data.th
+  43731  462874 6850444 total
+```
+
+parallel data ဖြစ်ရမယ်။ လိုင်းအရေအတွက်တွေက တူရမယ်။ side-by-side တွဲကြည့်ရင် အဓိပ္ပါယ်တူတဲ့ စာကြောင်းတွေ ဖြစ်ရမယ်။  
+နောက်ထပ် အရေးကြီးတာက blank line တွေ မပါပါစေနဲ့။ မျက်လုံးနဲ့ ဖိုင်တစ်ဖိုင်ချင်းစီကို ဖွင့်စစ်တာ၊ ဒေတာတွေကို လေ့လာတာ၊ cleaning လုပ်တာတွေက အရင်ဆုံး လုပ်သင့်ပါတယ်။  
+ထိပ်ဆုံး သုံးကြောင်းကိုပဲ ရိုက်ထုတ်ခိုင်းကြည့်ရင် အောက်ပါလိုမျိုး ဖိုင်ပါ။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ head -3 data.en
+Hello
+Are you Mr.Tun Tun ?
+Nice to meet you .
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ head -3 data.my
+မင်္ဂလာပါ ။
+ခင်ဗျား က မစ္စတာ ထွန်းထွန်း ဖြစ် ပါ သလား ။
+ခင်ဗျား ကို တွေ့ ရတာ ဝမ်းသာ ပါ တယ် ။
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ head -3 data.th
+สวัสดี
+คุณคือนายตุน ตุน?
+ยินดีที่ได้พบคุณ.
+```
+
+train_split ခွဲပေးတဲ့ function က အခြေခံအားဖြင့် data-frame အနေနဲ့ input ကို လက်ခံတာပါ။ ဆိုလိုတာက CSV ဖိုင်လိုမျိုးဖြစ်ရပါမယ်။ TAB နဲ့ field တစ်ခုချင်းစီကို ခြားထားတဲ့ ဖိုင်ပုံစံ ဖြစ်ရပါမယ်။  
+အဲဒါကြောင့် Linux OS ရဲ့ paste ဆိုတဲ့ command ကို သုံးပြီး အထက်ပါ ဖိုင်သုံးဖိုင်ကို TAB နဲ့ ခြားပြီး တစ်ဖိုင်တည်းဖြစ်အောင် ပေါင်းပေးဖို့အတဝက် အောက်ပါအတိုင်း command ပေးရအောင်။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ paste ./data.en ./data.my ./data.th > ./data.tsv
+```
+
+အဲဒါဆိုရင်တော့ လိုချင်တဲ့ CSV ဖိုင် ဖြစ်သွားတာကို အောက်ပါအတိုင်း တွေ့ရပါလိမ့်မယ်။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ head -3 data.tsv
+Hello	မင်္ဂလာပါ ။	สวัสดี
+Are you Mr.Tun Tun ?	ခင်ဗျား က မစ္စတာ ထွန်းထွန်း ဖြစ် ပါ သလား ။	คุณคือนายตุน ตุน?
+Nice to meet you .	ခင်ဗျား ကို တွေ့ ရတာ ဝမ်းသာ ပါ တယ် ။	ยินดีที่ได้พบคุณ.
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$
+```
+
+
+
 ## Reference
 
 - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
