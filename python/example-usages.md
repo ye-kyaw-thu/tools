@@ -1877,6 +1877,66 @@ Nice to meet you .	ခင်ဗျား ကို တွေ့ ရတာ ဝမ
 ```
 
 
+split-train-test.py ဖိုင်ကို လက်ရှိ path အောက်ကို download လုပ်ရအောင်...  
+အဲဒါကိုလည်း GitHub ရဲ့ path (raw တော့ ဖြစ်ရမယ်) ကိုသိရင် အောက်ပါအတိုင်း Linux command တစ်ခုဖြစ်တဲ့ wget နဲ့ အလွယ်တကူ download လုပ်ယူလို့ ရပါလိမ့်မယ်။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ wget https://raw.githubusercontent.com/ye-kyaw-thu/tools/master/python/split-train-test.py
+--2022-02-13 13:32:06--  https://raw.githubusercontent.com/ye-kyaw-thu/tools/master/python/split-train-test.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 4905 (4.8K) [text/plain]
+Saving to: ‘split-train-test.py’
+
+split-train-test.py                   100%[=========================================================================>]   4.79K  --.-KB/s    in 0s      
+
+2022-02-13 13:32:07 (30.9 MB/s) - ‘split-train-test.py’ saved [4905/4905]
+
+```
+
+split မလုပ်ခင်မှာက လက်ရှိ path မှာ ရှိနေတဲ့ ဖိုင်တွေက အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ ls
+data.en  data.my  data.th  data.tsv  split-train-test.py
+```
+
+split လုပ်ကြည့်ချင်ရင် အောက်ပါအတိုင်း command ပေးပါ။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ python ./split-train-test.py
+```
+
+split လုပ်ပြီးသွားတဲ့ အခါမှာတော့ "train-test_data/" ဆိုတဲ့ folder ကိုလည်း မြင်ရပါလိမ့်မယ်။  
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ ls -F
+data.en*  data.my*  data.th*  data.tsv*  split-train-test.py*  train-test_data/
+```
+
+အဲဒီ ဖိုလ်ဒါထဲမှာ ဘာဖိုင်တွေ ရှိသလဲ ဆိုတာကို tree command နဲ့ ခေါ်ကြည့်ရအောင်...  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ tree ./train-test_data/
+./train-test_data/
+├── test.tsv
+└── train.tsv
+
+0 directories, 2 files
+```
+
+split လုပ်ပြီး ထွက်လာတဲ့ training ဖိုင်နဲ့ test ဖိုင်တွေရဲ့ file size တွေကိုလည်း လေ့လာကြည့်ရအောင်...  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ wc ./train-test_data/{train,test}.tsv
+  11795  374694 5553973 ./train-test_data/train.tsv
+   2783   88174 1297096 ./train-test_data/test.tsv
+  14578  462868 6851069 total
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$
+```
+
+
+
 
 ## Reference
 
