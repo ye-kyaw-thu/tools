@@ -84,3 +84,8 @@
 
 28. [python-list-eg.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/python-list-eg.py)  
 (Python programming ရဲ့ list အသုံးပြုပုံကို ဒီမိုရေးပြထားတာ...)  
+
+30. [split-train-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py)  
+(parallel data ကို Python programming နဲ့ training ဒေတာ၊ test ဒေတာ အဖြစ် ခွဲတာကို ဥပမာ အနေနဲ့ ရေးပြထားတာပါ)  
+
+
