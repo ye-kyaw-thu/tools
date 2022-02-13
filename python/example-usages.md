@@ -1935,7 +1935,69 @@ split လုပ်ပြီး ထွက်လာတဲ့ training ဖိုင
 (base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$
 ```
 
+## 31. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)   
 
+ဒီတစ်ခါတော့ ပုံမှန် Statistical Machine Translation, Neural Machine Translation မှာ သုံးတဲ့ပုံစံဖြစ်တဲ့ training, validation, test ဒေတာခွဲတာကို လုပ်ဖို့အတွက် ရည်ရွယ်ပြီး ရေးပြထားတာပါ။  
+အထက်က Python script နံပါတ် 30 နဲ့ အခြေခံအားဖြင့်က တူပါတယ်။ အဓိက မတူတာက validation set ပါ ပါလာလို့ train_test_split() function ကို နှစ်ခါ ခေါ်သုံးထားတာပါပဲ။  
+
+parallel corpus က အောက်ပါအတိုင်း English-Myanmar-Thai ရှိတယ်လို့ ဆိုကြပါစို့...  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ head -5 ./data.tsv
+Hello	မင်္ဂလာပါ ။	สวัสดี
+Are you Mr.Tun Tun ?	ခင်ဗျား က မစ္စတာ ထွန်းထွန်း ဖြစ် ပါ သလား ။	คุณคือนายตุน ตุน?
+Nice to meet you .	ခင်ဗျား ကို တွေ့ ရတာ ဝမ်းသာ ပါ တယ် ။	ยินดีที่ได้พบคุณ.
+My name is Dr.Aung .	ကျွန်တော့် နာမည် ဒေါက်တာ အောင် ဖြစ် ပါ တယ် ။	ฉันชื่อ หมออ๋อง
+I am one of the junior doctors in the department .	ကျွန်တော် ဒီ ဌာန က ဆရာဝန် အငယ် တစ်ယောက် ဖြစ် ပါ တယ် ။	ฉันเป็นหนึ่งในแพทย์รุ่นน้องในแผนก
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$
+```
+
+Python script က ကိုယ်အလုပ်လုပ်မယ့် path မှာ မရှိသေးရင် Github link ကို wget command ကို pass လုပ်ပြီး download လုပ်ယူလို့ ရပါတယ်။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ wget https://raw.githubusercontent.com/ye-kyaw-thu/tools/master/python/split-train-valid-test.py
+--2022-02-13 14:13:45--  https://raw.githubusercontent.com/ye-kyaw-thu/tools/master/python/split-train-valid-test.py
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 185.199.109.133, 185.199.108.133, 185.199.110.133, ...
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|185.199.109.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 7138 (7.0K) [text/plain]
+Saving to: ‘split-train-valid-test.py’
+
+split-train-valid-test.py             100%[=========================================================================>]   6.97K  --.-KB/s    in 0s      
+
+2022-02-13 14:13:45 (35.8 MB/s) - ‘split-train-valid-test.py’ saved [7138/7138]
+```
+
+run မယ်။  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ python ./split-train-valid-test.py 
+```
+
+output အနေနဲ့ ထွက်လာတဲ့ train-valid-test_data/ ဆိုတဲ့ folder ထဲမှာ ရလာမယ့် ဖိုင်တွေကို ကြည့်ကြည့်ရအောင်...  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ tree ./train-valid-test_data/
+./train-valid-test_data/
+├── test.tsv
+├── train.tsv
+└── valid.tsv
+
+0 directories, 3 files
+```
+
+file size တွေကိုလည်း စစ်ဆေးကြည့် ရအောင်...  
+
+```
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$ wc ./train-valid-test_data/{train,valid,test}.tsv
+  11795  374694 5553973 ./train-valid-test_data/train.tsv
+   1392   44442  652079 ./train-valid-test_data/valid.tsv
+   1392   43736  645074 ./train-valid-test_data/test.tsv
+  14579  462872 6851126 total
+(base) ye@:/media/ye/project2/students/mya-ei-san/exercise/12Feb2022/corpus/split-eg/4github$
+```
+
+ဒီပရိုဂရမ်က အသုံးဝင်ပါလိမ့်မယ်။ ကိုယ်တိုင်လည်း ရေးနိုင်အောင် ကြိုးစားကြပါလို့...  
 
 
 ## Reference
