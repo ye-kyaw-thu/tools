@@ -27,26 +27,32 @@ dataframe = pd.read_csv(data_path, sep='\t')
 
 # train_test_split() က training နဲ့ testing ဆိုပြီး နှစ်ပိုင်းပဲ ခွဲပေးတာပါ။  
 # လိုချင်တာက validation လည်း ပါလို့ ပထမဆုံး training data ကို ခွဲလိုက်ပြီး ကျန်တဲ့ အပိုင်းကို valid_test ဆိုပြီး သိမ်းကြရအောင်။  
+#
 # test_size=0.2 ဆိုတာက 20% ကို valid_test set အဖြစ် ထားမယ်လို့ သတ်မှတ်တာ။ train_size တည်ပြီး ပြောရင်လည်း ရတယ်။  
 # random_state=42 ဆိုတာက random generator ရဲ့ seed ကို 42 ဆိုပြီး သတ်မှတ်ထားတာပါ။ ကြိုက်တဲ့ ဂဏန်းပေးလို့ ရပါတယ်။ 
 # အဲဒီလို seed ကို သတ်မှတ်ထားတော့ နောက်ပိုင်း shuffle ထပ်လုပ်ပြီး တူတဲ့ ဒေတာကို ပြန်လုပ်ယူလို့တာပေါ့။ မဟုတ်ရင် shuffle တစ်ခါလုပ်ရင် တစ်ခါ ပြောင်းနေမှာလေ။ 
-# shuffle=True ဆိုတာက train, test အနေနဲ့ မခွဲခင်မှာ အရင်ဆုံး shuffle လုပ်ပေးပါ ကျပန်းမွှေပေးပါလို့ ခိုင်းထားတာပါ။ မလိုအပ်ရင် False လုပ်ပါ။ 
-# train_test_split ဆိုတဲ့ function ကို သုံးပြီး ရလာတဲ့ training data က train ဆိုတဲ့ variable ထဲမှာ သိမ်းမယ်။  
-# validation နဲ့ test data ခွဲဖို့အတွက် ကျန်တဲ့ အပိုင်းကိုတော့ valid_test ဆိုတဲ့ variable မှာ သိမ်းမယ်။ 
+# shuffle=True ဆိုတာက train, valid_test အနေနဲ့ မခွဲခင်မှာ အရင်ဆုံး shuffle လုပ်ပေးပါ ကျပန်းမွှေပေးပါလို့ ခိုင်းထားတာပါ။ မလိုအပ်ရင် False လုပ်ပါ။ 
+# train_test_split ဆိုတဲ့ function ကို သုံးပြီး ရလာတဲ့ training data က "train" ဆိုတဲ့ variable ထဲမှာ သိမ်းမယ်။  
+# validation နဲ့ test data ခွဲဖို့အတွက် ကျန်တဲ့ အပိုင်းကိုတော့ "valid_test" ဆိုတဲ့ variable မှာ သိမ်းမယ်။ 
 train, valid_test = train_test_split(dataframe, test_size=0.2, random_state=42, shuffle=True)
 
-
-
-
+# လက်ရှိမှာ training data က အထက်က instruction မှာ ရခဲ့ပြီ။ ဒါပေမဲ့ validation နဲ့ test ဒေတာဆိုပြီး ခွဲဖို့ ကျန်နေသေးတယ်။  
+# အဲဒါကြောင့် အထက်မှာ 20% ကို ခွဲပြီး သိမ်းခဲ့တဲ့ valid_test ဆိုတဲ့ variable ကို တည်ပြီး ဒီတစ်ခါတော့ validation နဲ့ testing ဒေတာအဖြစ်ခွဲကြရအောင်...  
+# ဒီ statement က အဆင်ပြေပြေနဲ့ လုပ်ပေးခဲ့ရင်တော့ valid ဆိုတဲ့ variable ထဲမှာ validation ဒေတာ ရလာပြီးတော့ test ဆိုတဲ့ variable ထဲမှာ testing data ရောက်လာပါလိမ့်မယ်။  
+# test_size=0.5 ထားထားတာမို့ valid_test ထဲမှာ ရှိတဲ့ ပမာဏကို အညီအမျှ တဝက်စီ ဝက်ပေးပါလိမ့်မယ်။ ဒီဂဏန်းတန်ဖိုးတွေက လိုအပ်သလို အပြောင်းအလဲ လုပ်ပါ။ အိုကေတယ်။  
 valid, test = train_test_split(valid_test, test_size=0.5, random_state=42, shuffle=True)
 
-# determine the path where to save the train and test file
+# train.tsv, valid.tsv ဖိုင်နဲ့ test.tsv ဖိုင်တွေကို သိမ်းဖို့ path တွေကို သတ်မှတ်တာပါ။
+# string နှစ်ခုကို ဆက်တာမို့လို့ + ကို သုံးထားပါတယ်။
+# data_dir က အထက်မှာ './train-valid-test_data' ဆိုပြီး သတ်မှတ်ထားတာမို့ train_path = './train-valid-test_data/train.tsv' ဖြစ်ပြီးတော့၊ 
+# valid_path က './train-valid-test_data/valid.tsv' ပြီးတော့...  
+# test_path ကတော့ './train-valid-test_data/test.tsv' ဆိုတဲ့ string တွေ ဖြစ်သွားမှာပါ။  
 train_path = data_dir + '/train.tsv'
 valid_path = data_dir + '/valid.tsv'
 test_path = data_dir + '/test.tsv'
 
-# save the train and test file
-# again using the '\t' separator to create tab-separated-values files
+# ဖိုင်တွေကို save လုပ်တဲ့ အပိုင်းပါ။  
+# index=False ဆိုတာက ရေးပေးမဲ့ ဖိုင်အသစ်တွေ (i.e. output files) မှာ index ကော်လံ တစ်ခုအပို ပါလာမှာကို မလိုချင်လို့ပါ။  
 train.to_csv(train_path, sep='\t', index=False)
 valid.to_csv(valid_path, sep='\t', index=False)
 test.to_csv(test_path, sep='\t', index=False)
