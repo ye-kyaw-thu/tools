@@ -173,6 +173,8 @@
     
 57. [bracket-tree2sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bracket-tree2sentence.pl)  
     (NMT model က နေ ထွက်လာတဲ့ bracket format syntax tree စာကြောင်းတွေကနေ ပုံမှန် စာကြောင်းအဖြစ် conversion လုပ်ဖို့အတွက် ကျောင်းသူကို နမူနာရေးပြခဲ့တဲ့ perl script ပါ)  
+
+58. [clean-punctuation.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-punctuation.pl)  (ဗမာစာနဲ့ တိုင်းရင်းသား ဘာသာစကားတွေရဲ့ ဒေတာဖိုင်ထဲက အသုံးများတဲ့ punctuation သင်္ကေတာတွေကို clean လုပ်ဖို့အတွက်)  
     
     
     
