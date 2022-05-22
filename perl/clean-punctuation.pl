@@ -1,6 +1,6 @@
 #!/usr/bin/env perl
 
-# cleaning punctuation characters for Burmese and other languages of Myanmar
+# cleaning punctuation characters for Burmese and other languages of Myanmar with their own characters
 # Ye Kyaw Thu, Affiliated Professor, IDRI, CADT, Cambodia
 # Note: We are removing frequently used punctuation symbols and not including ၏, ၍
 # Note: Consider for using normalize-punctuation.perl (from moses scripts) before running this perl script.
@@ -24,6 +24,8 @@ while (!eof($inputFILE)) {
     if (($line ne '') & ($line !~ /^ *$/)) {
         chomp($line);
         $line =~ s/၊|။|-|\(|\)|\[|\]|\/|\\|\!|\?|,|\"//g;
+        $line =~ s/^\s+|\s+$//g;
+        $line =~ s/ +/ /g;        
         print "$line\n";
     }
 }
