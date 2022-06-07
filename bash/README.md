@@ -316,4 +316,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 103. [chk-wavefile-duration-for-unicode-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-wavefile-duration-for-unicode-filename.sh)  
 (transcript လုပ်ထားတဲ့ မြန်မာစာကြောင်းတွေကို ဖိုင်နာမည်အဖြစ် သိမ်းထားတဲ့ wave တွေရဲ့ total duration ကို တွက်ဖို့ ရေးခဲ့တယ်။ အထက်က ပရိုဂရမ်နံပါတ် 32 ဖြစ်တဲ့ [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh) ကိုပဲ update လုပ်ထားတာ)  
 
+104. [calc-chrF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-chrF.sh)  
+
 
