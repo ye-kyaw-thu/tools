@@ -6241,3 +6241,21 @@ utterance ဖိုင် စုစုပေါင်း ဘယ်လောက�
 Note: တကယ်က မြန်မာစာဖိုင်နာမည်တွေကိုပဲ ဆွဲယူရတာက မဖြတ်ထုတ်ခင်က ရှိခဲ့တဲ့ အော်ရဂျင်နယ် အသံဖိုင် အကြီးကိုလည်း total duration တွက်တဲ့အခါမှာ မပါစေချင်လို့ပါ။  
 	
 	
+## 104. [calc-chrF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-chrF.sh)  
+	
+chrF++ score က machine translation performance ကို တိုင်းတာတဲ့ evaluation metric တစ်ခုပါ။ BLEU score ထက်တောင် ပိုပြီး reliable ဖြစ်ပါတယ်။ ဒီ shell script က NMT (Neural Machine Translation) experiment တစ်ခုလုပ်စဉ်မှာ ထွက်လာတဲ့ မော်ဒယ်တွေ အားလုံးကို looping ပတ်ပြီး chrF++ score နဲ့ evaluation လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ tricky ဖြစ်တဲ့ အပိုင်းကတော့ အောက်ပါအတိုင်းပါ။  
+	
+```bash
+   for hypfile in $(find . -name "hyp.iter*.*" | sort -V);
+   do
+      # parallel data folder names are dw-bk and rk-bk and thus we need to check with if condition
+      if [[ "$src" == "dw" || "$tgt" == "dw" ]]; 
+      then 
+         data_folder="dw-bk";
+      else 
+         data_folder="rk-bk";
+      fi
+...
+...
+...
+```
