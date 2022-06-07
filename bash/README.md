@@ -317,5 +317,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 (transcript လုပ်ထားတဲ့ မြန်မာစာကြောင်းတွေကို ဖိုင်နာမည်အဖြစ် သိမ်းထားတဲ့ wave တွေရဲ့ total duration ကို တွက်ဖို့ ရေးခဲ့တယ်။ အထက်က ပရိုဂရမ်နံပါတ် 32 ဖြစ်တဲ့ [chk_total_duration.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk_total_duration.sh) ကိုပဲ update လုပ်ထားတာ)  
 
 104. [calc-chrF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-chrF.sh)  
+(Neural Machine Translation ရဲ့ အဓိကကျတဲ့ architecture နှစ်ခုဖြစ်တဲ့ seq2seq နဲ့ transformer အတွက် testing လုပ်ပြီးထွက်လာတဲ့ hypothesis ဖိုင်တွေနဲ့ reference ဖိုင်ကို နှိုင်းယှဉ်ပြီး chrF score တွက်ဖို့အတွက် ရေးခဲ့တဲ့ ဖိုင်ပါ။)  
 
 
