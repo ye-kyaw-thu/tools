@@ -6246,6 +6246,21 @@ Note: တကယ်က မြန်မာစာဖိုင်နာမည်တ�
 chrF++ score က machine translation performance ကို တိုင်းတာတဲ့ evaluation metric တစ်ခုပါ။ BLEU score ထက်တောင် ပိုပြီး reliable ဖြစ်ပါတယ်။ ဒီ shell script က NMT (Neural Machine Translation) experiment တစ်ခုလုပ်စဉ်မှာ ထွက်လာတဲ့ မော်ဒယ်တွေ အားလုံးကို looping ပတ်ပြီး chrF++ score နဲ့ evaluation လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ tricky ဖြစ်တဲ့ အပိုင်းကတော့ အောက်ပါအတိုင်းပါ။  
 	
 ```bash
+   cd $model_folder;
+   src_tgt=$(echo $model_folder | cut -d '.' -f4);
+   #echo "source_target: $src_tgt";
+   src=${src_tgt:0:-2};
+   tgt=${src_tgt:2};
+   echo "source: $src";
+   echo "target: $tgt";	
+```
+
+source (input language) နဲ့ target (output or translated language) တွေကို အထက်ပါအသိုင်း မော်ဒယ်ရဲ့ output folder ကနေ ဆွဲထုတ်လို့ ရပေမဲ့ parallel data တွေကို သိမ်းထားတာက folder တစ်ခုအောက်မှာပဲမို့ $src-$tgt, $tgt-$src ဆိုပြီး path မှာ ဝင်ပေါင်းလို့ မရတာပါ။ ဘာကြောင့်လဲ ဆိုတော့ dw-bk အတွက်ရော bk-dw အတွက်ရောက data path: dw-bk အောက်မှာပဲ ရှိတဲ့ reference ဖိုင်ကိုပဲ ယူရမှာ ဖြစ်ပြီးတော့ ထိုနည်းလည်းကောင်းပဲ rk-bk အတွက်ရော bk-rk အတွက်ရောက data path: rk-bk အောက်မှာပဲ ရှိတဲ့ reference ဖိုင်ကိုပဲ ယူရမှာမို့ပါ။  
+	
+အဲဒါကြောင့် အောက်ပါလိုမျိုး ရေးထားတဲ့အတိုင်း if statemate ကို ထည့်ပြီး data folder အတွက် variable တစ်ခုဆောက်ရတဲ့ အပိုင်းပါ ...  
+
+
+```bash
    for hypfile in $(find . -name "hyp.iter*.*" | sort -V);
    do
       # parallel data folder names are dw-bk and rk-bk and thus we need to check with if condition
@@ -6259,3 +6274,10 @@ chrF++ score က machine translation performance ကို တိုင်းတ
 ...
 ...
 ```
+
+./calc-chrF.sh ကို run လိုက်ရင်တော့ testing လုပ်ပြီး ဘာသာပြန်ထားတဲ့ hypothesis ဖိုင်တွေကို တစ်ဖိုင်ချင်းစီ looping ပတ်ပြီး data path အောက်က reference ဖိုင်နဲ့ နှိုင်းယှဉ်ပြီး chrF score တွေကို တွက်ပေးသွားမှာ ဖြစ်ပါတယ်။  
+	
+```
+	
+```
+	
