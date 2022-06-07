@@ -6278,6 +6278,94 @@ source (input language) နဲ့ target (output or translated language) တွ�
 ./calc-chrF.sh ကို run လိုက်ရင်တော့ testing လုပ်ပြီး ဘာသာပြန်ထားတဲ့ hypothesis ဖိုင်တွေကို တစ်ဖိုင်ချင်းစီ looping ပတ်ပြီး data path အောက်က reference ဖိုင်နဲ့ နှိုင်းယှဉ်ပြီး chrF score တွေကို တွက်ပေးသွားမှာ ဖြစ်ပါတယ်။  
 	
 ```
-	
+entering to ./model.seq2seq.bkdw.1
+source: bk
+target: dw
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter5000.dw
+start_time:	1654572825
+c6+w2-F2	29.3355
+c6+w2-avgF2	29.7847
+end_time:	1654572825
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter10000.dw
+start_time:	1654572825
+c6+w2-F2	31.5311
+c6+w2-avgF2	32.0255
+end_time:	1654572825
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter15000.dw
+start_time:	1654572825
+c6+w2-F2	32.1674
+c6+w2-avgF2	32.4822
+end_time:	1654572825
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter20000.dw
+start_time:	1654572825
+c6+w2-F2	32.4381
+c6+w2-avgF2	32.7369
+end_time:	1654572825
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter25000.dw
+start_time:	1654572825
+c6+w2-F2	32.1992
+c6+w2-avgF2	32.6497
+end_time:	1654572825
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter30000.dw
+start_time:	1654572825
+c6+w2-F2	32.1687
+c6+w2-avgF2	32.4961
+end_time:	1654572826
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter35000.dw
+start_time:	1654572826
+c6+w2-F2	32.3249
+c6+w2-avgF2	32.6573
+end_time:	1654572826
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter40000.dw
+start_time:	1654572826
+c6+w2-F2	32.1260
+c6+w2-avgF2	32.4371
+end_time:	1654572826
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter45000.dw
+start_time:	1654572826
+c6+w2-F2	32.5008
+c6+w2-avgF2	32.8371
+end_time:	1654572826
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter50000.dw
+start_time:	1654572826
+c6+w2-F2	32.5377
+c6+w2-avgF2	32.8197
+end_time:	1654572826
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter55000.dw
+start_time:	1654572826
+c6+w2-F2	32.5354
+c6+w2-avgF2	32.8942
+end_time:	1654572826
+==========
+
+entering to ./model.seq2seq.bkdw.1-2hl
+source: bk
+target: dw
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter5000.dw
+start_time:	1654572826
+c6+w2-F2	28.7943
+c6+w2-avgF2	29.0652
+end_time:	1654572827
+ref: /home/ye/exp/pivot-nmt-baseline/data/word/dw-bk/1/test.dw
+hyp: ./hyp.iter10000.dw
+start_time:	1654572827
+c6+w2-F2	31.4096
+c6+w2-avgF2	32.2823
+end_time:	1654572827
+...
+...
+...
 ```
 	
