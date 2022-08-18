@@ -91,4 +91,7 @@
 31. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)  
 (ပရိုဂရမ် 30 နဲ့ အခြေခံအားဖြင့်က တူပါတယ်။ validation ဒေတာကိုပါခွဲချင်တာမို့ train_test_split() ကို နှစ်ခါခေါ်သုံးပြီး training, validation, test ဒေတာတွေကို ခွဲပေးတဲ့ python script ပါ)  
 
+32. [add-sign.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign.py)
+(PDF ထဲက စာမျက်နှာတွေ အားလုံးရဲ့ ဘယ်ဘက်ထောင့် နေရာမှာ ကိုယ့်လက်မှတ်ပုံကို ဝင်ဖြည့်ဖို့အတွက် ရေးခဲ့။ pyMuPDF library တော့ လိုအပ်တယ်။)  
+
 
