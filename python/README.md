@@ -103,6 +103,9 @@
 35. [print-pixel-value.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-pixel-value.py)  
 (ပေးလိုက်တဲ့ ပုံရဲ့ pixel တန်ဖိုးအားလုံးကို ရိုက်ထုတ်ခိုင်းတဲ့ ဥပမာ python code ပါ)  
 
+36. [RGB2grey.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/RGB2grey.py)
+(RGB ကနေ grey ပုံအဖြစ် ပြောင်းတာကို skimage library သုံးပြီး လုပ်ကြည့်ထားတာပါ)  
+
 
 
 
