@@ -97,5 +97,10 @@
 33. [add-sign-onepage-pdf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign-onepage-pdf.py)  
 (အထက်က နံပါတ် 31 ရဲ့ program ကိုပဲ update လုပ်ထားတာပါ။ ဒီတစ်ခါတော့ စာမျက်နှာ တစ်မျက်နှာတည်းရှိတဲ့ PDF ဖိုင်မှာ လက်မှတ်ဝင်ထိုးတဲ့ case ပါ။)  
 
+34. [print-img-resolution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-img-resolution.py)  
+(ပုံတစ်ပုံရဲ့ resolution နဲ့ channel information ကို print ထုတ်ပေးဖို့ ရေးခဲ့တယ်)  
+
+
+
 
 
