@@ -2,7 +2,6 @@ import sys
 from skimage import io
 from skimage import color
 from skimage import data
-from pylab import *
 
 # Written by Ye Kyaw Thu, Affiliate Professor, IDRI, CADT, Cambodia
 # Convert RGB to Greyscale
