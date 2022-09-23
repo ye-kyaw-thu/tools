@@ -100,6 +100,9 @@
 34. [print-img-resolution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-img-resolution.py)  
 (ပုံတစ်ပုံရဲ့ resolution နဲ့ channel information ကို print ထုတ်ပေးဖို့ ရေးခဲ့တယ်)  
 
+35. [print-pixel-value.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-pixel-value.py)  
+(ပေးလိုက်တဲ့ ပုံရဲ့ pixel တန်ဖိုးအားလုံးကို ရိုက်ထုတ်ခိုင်းတဲ့ ဥပမာ python code ပါ)  
+
 
 
 
