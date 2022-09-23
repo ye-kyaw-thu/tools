@@ -212,5 +212,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 32. [add-sign-onepage-pdf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign-onepage-pdf.py)  
 33. [print-img-resolution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-img-resolution.py)  
 34. [print-pixel-value.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-pixel-value.py)  
-
+35. [RGB2grey.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/RGB2grey.py)  
 
