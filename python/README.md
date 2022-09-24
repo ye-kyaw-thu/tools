@@ -106,6 +106,9 @@
 36. [RGB2grey.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/RGB2grey.py)  
 (RGB ကနေ grey ပုံအဖြစ် ပြောင်းတာကို skimage library သုံးပြီး လုပ်ကြည့်ထားတာပါ)  
 
+37. [image2npy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/image2npy.py)  
+(class folder တစ်ခုချင်းစီအောက်မှာ ရှိနေတဲ့ image ဖိုင်တွေအားလုံးကို numpy array format နဲ့ သိမ်းထားတဲ့ feature ဖိုင်အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)
+
 
 
 
