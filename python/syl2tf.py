@@ -39,6 +39,6 @@ my_stop_words = ['၊', '။', '၏', '၍', '၌']
 tf_vectorizer = TfidfVectorizer(tokenizer=sylbreak_my, stop_words=my_stop_words, use_idf=False, norm='l1')
 #tf_vectorizer = TfidfVectorizer(stop_words=my_stop_words, tokenizer=sylbreak, use_idf=False, norm='l2') # l2 normalizer is the default normalizer
 matrix = tf_vectorizer.fit_transform(corpus)
-df = pd.DataFrame(matrix.toarray(), columns=tf_vectorizer.get_feature_names_out())
-print(df)
+syllable_tf = pd.DataFrame(matrix.toarray(), columns=tf_vectorizer.get_feature_names_out())
+print(syllable_tf)
 
