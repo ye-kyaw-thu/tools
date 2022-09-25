@@ -2066,4 +2066,81 @@ tf-idf ရဲ့ tf အပိုင်းကို တွက်ပြထား�
 11        အောင်     1.916291
 ```
 
+## [syl2tf-idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf-idf.py) 
+
+input ဖိုင်ထဲက မြန်မာစာ စာကြောင်းတွေကို syllable ဖြတ်ပြီးတော့ tf-idf တွက်တာကို ဥပမာအနေနဲ့ ရေးပြထားတာပါ။  
+input ဖိုင်က အောက်ပါအတိုင်း  
+
+```
+(py3.8.10) ye@ykt-pro:/media/ye/project1/cadt/student/internship/demo/text$ cat eg-corpus.txt 
+နေကောင်း တယ် နော်
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း အောင် နေ ပါ နော်
+အခု အလုပ် လုပ် နေ တယ်
+```
+
+run ကြည့်ရင် အောက်ပါအတိုင်း output ပြပေးလိမ့်မယ်။  
+
+```
+(py3.8.10) ye@ykt-pro:/media/ye/project1/cadt/student/internship/demo/text$ python ./syl2tf-idf.py ./eg-corpus.txt 
+     ကောင်း        ခု       တယ်        နေ      နော်        ပါ        ဘာ      လုပ်        လဲ         သ         အ     အောင်
+0  0.539313  0.000000  0.539313  0.356966  0.539313  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000  0.000000
+1  0.000000  0.347852  0.000000  0.230239  0.000000  0.000000  0.441206  0.347852  0.441206  0.441206  0.347852  0.000000
+2  0.378779  0.000000  0.000000  0.501420  0.378779  0.480433  0.000000  0.000000  0.000000  0.000000  0.000000  0.480433
+3  0.000000  0.309520  0.309520  0.204868  0.000000  0.000000  0.000000  0.619041  0.000000  0.000000  0.619041  0.000000
+```
+
+တကယ်က အခု တင်ပေးထားတဲ့ python code လို TfidfVectorizer တစ်ခုတည်းကို import လုပ်ယူသုံးပြီး ရေးတဲ့ ပုံစံမျိုး မဟုတ်ပဲနဲ့ [syl2idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2idf.py)  ကိုပဲ ဝင် update လုပ်ပြီးတော့ CountVectorizer နဲ့ TfidfTransformer နှစ်ခုကိုတွဲပြီး tf-idf တွက်ခိုင်းတာလည်း လုပ်လို့ ရပါတယ်။ အဲဒီလို ရေးမယ် ဆိုရင်တော့ python code က အောက်ပါအတိုင်း ဖြစ်လိမ့်မယ်။  
+
+```python
+from sklearn.feature_extraction.text import TfidfTransformer
+from sklearn.feature_extraction.text import CountVectorizer
+import sys
+import pandas as pd
+import re
+
+# Written by Ye Kyaw Thu, Affiliate Professor, IDRI, CADT, Cambodia
+# Calculating syllable tf-idf by using CountVectorizer and TfidfTransformer
+# Last updated: 25 Sept 2022
+# How to run:
+# $ python ./syl2tf-idf2.py ./eg-corpus.txt
+
+# References
+# https://github.com/gearmonkey/tfidf-python/blob/master/tfidf.py
+# https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfTransformer.html#:~:text=The%20formula%20that%20is%20used,document%20frequency%20of%20t%3B%20the
+# https://medium.com/analytics-vidhya/demonstrating-calculation-of-tf-idf-from-sklearn-4f9526e7e78b
+
+def sylbreak_my(line):
+   myConsonant = "က-အ"
+   enChar = "a-zA-Z0-9"
+   otherChar = "ဣဤဥဦဧဩဪဿ၌၍၏၀-၉၊။!-/:-@[-`{-~\s"
+   ssSymbol = '္'
+   aThat = '်'
+
+   #Regular expression pattern for Myanmar syllable breaking
+   #*** a consonant not after a subscript symbol AND a consonant is not followed by a-That character or a subscript symbol
+
+   BreakPattern = re.compile(r"((?<!" + ssSymbol + r")["+ myConsonant + r"](?![" + aThat + ssSymbol + r"])" + r"|[" + enChar + otherChar + r"])")
+   line = line.replace(" ",'')
+   line = BreakPattern.sub(" " + r"\1", line)
+   line = line.strip()
+   #print(line.split())
+   return line.split()
+
+with open(sys.argv[1]) as f:
+    corpus = f.read().splitlines()
+
+#Note: just dummy stop words for Myanmar, you should replaced it
+my_stop_words = ['၊', '။', '၏', '၍', '၌'] 
+
+vectorizer = CountVectorizer(tokenizer=sylbreak_my, stop_words=my_stop_words)
+matrix = vectorizer.fit_transform(corpus) # this is word count vector
+
+tfidf_transformer = TfidfTransformer()
+X = tfidf_transformer.fit_transform(matrix)
+#syllable_idf = pd.DataFrame({'feature_name':vectorizer.get_feature_names_out(), 'idf_weights':tfidf_transformer.idf_})
+syllable_tf_idf = pd.DataFrame(X.toarray(), columns=vectorizer.get_feature_names_out())
+print(syllable_tf_idf)
+
+```
 
