@@ -33,7 +33,7 @@ def sylbreak_my(line):
 with open(sys.argv[1]) as f:
     corpus = f.read().splitlines()
 
-# Add a custom list of stopwords for punctuation
+# Dummy stop word example, you have to replace it
 my_stop_words = ['၊', '။', '၏', '၍', '၌']
 
 tf_vectorizer = TfidfVectorizer(tokenizer=sylbreak_my, stop_words=my_stop_words, use_idf=False, norm='l1')
