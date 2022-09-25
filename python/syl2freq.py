@@ -44,7 +44,7 @@ my_stop_words = ['၊', '။', '၏', '၍', '၌'] # Dummy stop word example, y
 vectorizer = CountVectorizer(tokenizer=sylbreak_my, stop_words=my_stop_words)
 matrix = vectorizer.fit_transform(corpus)
 
-words_df = pd.DataFrame(matrix.toarray(),
+syllable_df = pd.DataFrame(matrix.toarray(),
                         columns=vectorizer.get_feature_names_out())
-print(words_df)
+print(syllable_df)
 
