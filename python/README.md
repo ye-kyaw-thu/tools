@@ -109,7 +109,7 @@
 37. [image2npy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/image2npy.py)  
 (class folder တစ်ခုချင်းစီအောက်မှာ ရှိနေတဲ့ image ဖိုင်တွေအားလုံးကို numpy array format နဲ့ သိမ်းထားတဲ့ feature ဖိုင်အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)
 
-38. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py) 
+38. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py)  
 (မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီး count လုပ်တာ သို့မဟုတ် freq တွက်တာကို sklearn library သုံးလုပ်ပြထား)  
 
 
