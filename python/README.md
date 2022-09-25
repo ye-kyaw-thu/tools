@@ -118,6 +118,8 @@
 40. [syl2idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2idf.py)  
 (tf-idf ရဲ့ idf အပိုင်းတွက်တာကို sklearn library သုံးပြီး ရေးပြထားတာပါ)  
 
+41. [syl2tf-idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf-idf.py) (မြန်မာစာ စာကြောင်းတွေကို syllable unit အဖြစ် segmentation လုပ်ပြီးတော့ tf-idf ကို ဥပမာ အနေနဲ့ တွက်ပြထားတာပါ။ အထက်က no. 38 to no. 40 ရဲ့ အဆက်ပါပဲ။)  
+
 
 
 
