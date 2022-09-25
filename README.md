@@ -216,4 +216,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 36. [image2npy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/image2npy.py)  
 37. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py)  
 38. [syl2tf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
+39. 40. [syl2idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2idf.py)  
 
