@@ -115,6 +115,9 @@
 39. [syl2tf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
 (မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီး tf-idf ရဲ့ tf အပိုင်းတွက်တာကို sklearn libary သုံး ရေးပြထားတာပါ)  
 
+40. [syl2idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2idf.py)  
+(tf-idf ရဲ့ idf အပိုင်းတွက်တာကို sklearn library သုံးပြီး ရေးပြထားတာပါ)  
+
 
 
 
