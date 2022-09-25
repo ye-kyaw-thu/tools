@@ -2005,4 +2005,30 @@ file size တွေကိုလည်း စစ်ဆေးကြည့် ရ�
 - https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html
 - https://morioh.com/p/a6ef01110316?f=5c21fb01c16e2556b555ab32&fbclid=IwAR1z5bVfqVf2kZYTZksqM3lkMV6HRKQwRyzkGrFkeAdyA1UUP0mcTay8A3M
 
+## 37. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py) 
+
+input ဖိုင်က အောက်ပါအတိုင်း  
+
+```
+(py3.8.10) ye@ykt-pro:/media/ye/project1/cadt/student/internship/demo/text$ cat eg-corpus.txt 
+နေကောင်း တယ် နော်
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း အောင် နေ ပါ နော်
+အခု အလုပ် လုပ် နေ တယ်
+
+```
+
+syllabe ဖြတ်ပြီးတော့ count လုပ်ကြည့်ဖို့ အတွက် အောက်ပါအတိုင်း run ပါ။  
+
+```
+(py3.8.10) ye@ykt-pro:/media/ye/project1/cadt/student/internship/demo/text$ python ./syl2freq.py ./eg-corpus.txt 
+   ကောင်း  ခု  တယ်  နေ  နော်  ပါ  ဘာ  လုပ်  လဲ  သ  အ  အောင်
+0       1   0    1   1     1   0   0     0   0  0  0      0
+1       0   1    0   1     0   0   1     1   1  1  1      0
+2       1   0    0   2     1   1   0     0   0  0  0      1
+3       0   1    1   1     0   0   0     2   0  0  2      0
+(py3.8.10) ye@ykt-pro:/media/ye/project1/cadt/student/internship/demo/text$
+```
+
+
 
