@@ -38,8 +38,8 @@ with open(sys.argv[1]) as f:
 
 #print("input corpus:\n", corpus, "\n")
 
-# Add a custom list of stopwords for punctuation
-my_stop_words = ['၊', '။', '၏', '၍', '၌'] # Dummy stop word example, you have to replace it
+# Dummy stop word example, you have to replace it
+my_stop_words = ['၊', '။', '၏', '၍', '၌'] 
 
 vectorizer = CountVectorizer(tokenizer=sylbreak_my, stop_words=my_stop_words)
 matrix = vectorizer.fit_transform(corpus)
