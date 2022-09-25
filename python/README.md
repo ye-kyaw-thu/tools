@@ -112,7 +112,7 @@
 38. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py)  
 (မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီး count လုပ်တာ သို့မဟုတ် freq တွက်တာကို sklearn library သုံးလုပ်ပြထား)  
 
-39. [syl2tf](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
+39. [syl2tf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
 (မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီး tf-idf ရဲ့ tf အပိုင်းတွက်တာကို sklearn libary သုံး ရေးပြထားတာပါ)  
 
 
