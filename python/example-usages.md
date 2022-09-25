@@ -2030,7 +2030,7 @@ syllabe ဖြတ်ပြီးတော့ count လုပ်ကြည့်�
 (py3.8.10) ye@ykt-pro:/media/ye/project1/cadt/student/internship/demo/text$
 ```
 
-## 38. [syl2tf](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
+## 38. [syl2tf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
 
 tf-idf ရဲ့ tf အပိုင်းကို တွက်ပြထားတာပါ။  
 
