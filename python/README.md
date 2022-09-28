@@ -55,6 +55,7 @@
 
 18. [csv-str2mapping123.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/csv-str2mapping123.py)  
 (ဗမာစာကြောင်းတွေကို string similarity တိုင်းတဲ့အခါမှာ အသံထွက်တူတဲ့စာကြောင်းတွေကိုလည်း ဆွဲထုတ်နိုင်အောင် စဉ်းစားထားတဲ့ mapping သုံးမျိုးကို proposal တင်ထားတာ ရှိပါတယ်။ အခု code က ပုံမှန် ဗမာစာကြောင်းကနေ mapping 1, 2, 3 တစ်မျိုးမျိုးကို convert လုပ်ပေးတဲ့ ပရိုဂရမ်ပါ။ စိတ်ဝင်စားသူတွေ လေ့လာနိုင်အောင်လို့ published လုပ်ခဲ့တဲ့ စာတမ်းနဲ့ပတ်သက်တဲ့ information ကိုလည်း Python code ထဲမှာ ဖော်ပြထားပါတယ်။)  
+
 19. [str2mapping123.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/str2mapping123.py)  
 (အထက်က Python code နံပါတ် 19 နဲ့ အခြေခံအားဖြင့် အတူတူပါပဲ။ ဒီပရိုဂရမ်ကတော့ ပုံမှန် text file ကို input လုပ်ပြီး သုံးဖို့အတွက် ရည်ရွယ်ပါတယ်။ အများသောအားဖြင့်က text file ကနေပဲ ပြောင်းကြမှာမို့...)  
 
@@ -85,43 +86,43 @@
 28. [python-list-eg.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/python-list-eg.py)  
 (Python programming ရဲ့ list အသုံးပြုပုံကို ဒီမိုရေးပြထားတာ...)  
 
-30. [split-train-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py)  
+29. [split-train-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py)  
 (parallel data ကို Python programming နဲ့ training ဒေတာ၊ test ဒေတာ အဖြစ် ခွဲတာကို ဥပမာ အနေနဲ့ ရေးပြထားတာပါ)  
 
-31. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)  
+30. [split-train-valid-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-valid-test.py)  
 (ပရိုဂရမ် 30 နဲ့ အခြေခံအားဖြင့်က တူပါတယ်။ validation ဒေတာကိုပါခွဲချင်တာမို့ train_test_split() ကို နှစ်ခါခေါ်သုံးပြီး training, validation, test ဒေတာတွေကို ခွဲပေးတဲ့ python script ပါ)  
 
-32. [add-sign.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign.py)
+31. [add-sign.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign.py)
 (PDF ထဲက စာမျက်နှာတွေ အားလုံးရဲ့ ဘယ်ဘက်ထောင့် နေရာမှာ ကိုယ့်လက်မှတ်ပုံကို ဝင်ဖြည့်ဖို့အတွက် ရေးခဲ့။ pyMuPDF library တော့ လိုအပ်တယ်။)  
 
-33. [add-sign-onepage-pdf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign-onepage-pdf.py)  
+32. [add-sign-onepage-pdf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/add-sign-onepage-pdf.py)  
 (အထက်က နံပါတ် 31 ရဲ့ program ကိုပဲ update လုပ်ထားတာပါ။ ဒီတစ်ခါတော့ စာမျက်နှာ တစ်မျက်နှာတည်းရှိတဲ့ PDF ဖိုင်မှာ လက်မှတ်ဝင်ထိုးတဲ့ case ပါ။)  
 
-34. [print-img-resolution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-img-resolution.py)  
+33. [print-img-resolution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-img-resolution.py)  
 (ပုံတစ်ပုံရဲ့ resolution နဲ့ channel information ကို print ထုတ်ပေးဖို့ ရေးခဲ့တယ်)  
 
-35. [print-pixel-value.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-pixel-value.py)  
+34. [print-pixel-value.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print-pixel-value.py)  
 (ပေးလိုက်တဲ့ ပုံရဲ့ pixel တန်ဖိုးအားလုံးကို ရိုက်ထုတ်ခိုင်းတဲ့ ဥပမာ python code ပါ)  
 
-36. [RGB2grey.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/RGB2grey.py)  
+35. [RGB2grey.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/RGB2grey.py)  
 (RGB ကနေ grey ပုံအဖြစ် ပြောင်းတာကို skimage library သုံးပြီး လုပ်ကြည့်ထားတာပါ)  
 
-37. [image2npy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/image2npy.py)  
+36. [image2npy.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/image2npy.py)  
 (class folder တစ်ခုချင်းစီအောက်မှာ ရှိနေတဲ့ image ဖိုင်တွေအားလုံးကို numpy array format နဲ့ သိမ်းထားတဲ့ feature ဖိုင်အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)
 
-38. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py)  
+37. [syl2freq.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2freq.py)  
 (မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီး count လုပ်တာ သို့မဟုတ် freq တွက်တာကို sklearn library သုံးလုပ်ပြထား)  
 
-39. [syl2tf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
+38. [syl2tf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf.py)  
 (မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီး tf-idf ရဲ့ tf အပိုင်းတွက်တာကို sklearn libary သုံး ရေးပြထားတာပါ)  
 
-40. [syl2idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2idf.py)  
+39. [syl2idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2idf.py)  
 (tf-idf ရဲ့ idf အပိုင်းတွက်တာကို sklearn library သုံးပြီး ရေးပြထားတာပါ)  
 
-41. [syl2tf-idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf-idf.py)  
+40. [syl2tf-idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf-idf.py)  
 (မြန်မာစာ စာကြောင်းတွေကို syllable unit အဖြစ် segmentation လုပ်ပြီးတော့ tf-idf ကို ဥပမာ အနေနဲ့ တွက်ပြထားတာပါ။ အထက်က no. 38 to no. 40 ရဲ့ အဆက်ပါပဲ။)  
 
-42. [syl2onehot-sklearn-4teaching.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2onehot-sklearn-4teaching.py)  
+41. [syl2onehot-sklearn-4teaching.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2onehot-sklearn-4teaching.py)  
 (input ပေးလိုက်တဲ့ ဖိုင်ထဲက မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီးတော့ One-hot encoding ပြောင်းတာကို ဥပမာအနေနဲ့ ရေးပြထားတာ။ ဒီ version ကတော့ စာသင်ဖို့အတွက် ရည်ရွယ်တာမို့ တချို့ print out လုပ်ပြထားတာတွေ ပါဝင်တယ်။)  
 
 
