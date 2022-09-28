@@ -125,6 +125,9 @@
 41. [syl2onehot-sklearn-4teaching.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2onehot-sklearn-4teaching.py)  
 (input ပေးလိုက်တဲ့ ဖိုင်ထဲက မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီးတော့ One-hot encoding ပြောင်းတာကို ဥပမာအနေနဲ့ ရေးပြထားတာ။ ဒီ version ကတော့ စာသင်ဖို့အတွက် ရည်ရွယ်တာမို့ တချို့ print out လုပ်ပြထားတာတွေ ပါဝင်တယ်။)  
 
+42. [syl2onehot-sklearn.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2onehot-sklearn.py)  
+(ပရိုဂရမ် နံပါတ် 41 နဲ့ အတူတူပါပဲ။ အသေးစိတ် print လုပ်တာတွေကို ဖယ်ထားလိုက်ပြီးတော့ syllable level One-hot embedding လုပ်ဖို့အတွက် tool အနေနဲ့ သုံးနိုင်ဖို့ ရည်ရွယ်ပါတယ်။)  
+
 
 
 
