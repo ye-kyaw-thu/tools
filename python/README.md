@@ -121,6 +121,9 @@
 41. [syl2tf-idf.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2tf-idf.py)  
 (မြန်မာစာ စာကြောင်းတွေကို syllable unit အဖြစ် segmentation လုပ်ပြီးတော့ tf-idf ကို ဥပမာ အနေနဲ့ တွက်ပြထားတာပါ။ အထက်က no. 38 to no. 40 ရဲ့ အဆက်ပါပဲ။)  
 
+42. [syl2onehot-sklearn-4teaching.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2onehot-sklearn-4teaching.py)  
+(input ပေးလိုက်တဲ့ ဖိုင်ထဲက မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ပြီးတော့ One-hot encoding ပြောင်းတာကို ဥပမာအနေနဲ့ ရေးပြထားတာ။ ဒီ version ကတော့ စာသင်ဖို့အတွက် ရည်ရွယ်တာမို့ တချို့ print out လုပ်ပြထားတာတွေ ပါဝင်တယ်။)  
+
 
 
 
