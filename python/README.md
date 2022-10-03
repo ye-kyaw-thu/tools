@@ -131,6 +131,8 @@
 43. [zawgyi2unicode.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode.py)  
 (Zawgyi encoding နဲ့ သိမ်းထားတဲ့ မြန်မာစာဖိုင်ကို Unicode encoding အဖြစ် ပြောင်းတာကို PyICU library ကိုသုံးပြီး လုပ်ပြထားတာပါ)  
 
+44. [zawgyi2unicode-syl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode-syl.py)  
+(အထက်က Python code no. 43 ကိုပဲ update လုပ်ထားတာပါ။ ဒီတစ်ခါတော့ Zawgyi ကနေ Unicode ကို ပြောင်းပြီးတော့ တစ်ခါတည်း print ရိုက်ထုတ်တာ မဟုတ်ပဲနဲ့ syllable unit အဖြစ် ဖြတ်ပြီးမှ print ရိုက်ထုတ်တာပါ)  
 
 
 
