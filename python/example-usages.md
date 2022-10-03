@@ -2242,3 +2242,56 @@ running output က အောက်ပါအတိုင်းပါ။
  [0. 0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0.]
  [0. 0. 1. 0. 0. 0. 0. 0. 0. 0. 0. 0.]]
 ```
+
+## 43. [zawgyi2unicode.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode.py)  
+
+ဇော်ဂျီဖောင့်ကနေ ယူနီကုဒ်ဖောင့်အဖြစ် ပြောင်းတာက NLP သမားတွေအတွက် လုပ်ကိုလုပ်ကြရပါတယ်။ conversion က ကိုယ့်ဖာသာကိုယ်လည်း လေ့လာပြီး ပြောင်းလို့ရပေမဲ့ ဒီနေရာမှာတော့ PyICU library ကို သုံးပြီး conversion လုပ်ဖို့အတွက် python script တစ်ပုဒ် ရေးပြီး ပြောင်းပြပါမယ်။  
+
+Python code က အောက်ပါအတိုင်းပါ ...   
+
+```python
+from icu import Transliterator
+import sys
+
+# Written by Ye Kyaw Thu, Affiliate Professor, IDRI, CADT, Cambodia
+# Converting Zawgyi to Unicode Encoding
+# Last updated: 1 Oct 2022
+# How to run:
+# If you don't have icu library, do installation: "pip install PyICU"
+# $ python ./zawgyi2unicode.py ./eg-corpus-zawgyi.txt
+#
+# References
+# https://github.com/google/myanmar-tools/blob/master/clients/python/README.rst
+
+with open(sys.argv[1]) as f:
+    corpus = []
+    for line in f:
+        corpus.append(line.rstrip())
+#print(corpus)
+
+for zawgyi_line in corpus:
+   converter = Transliterator.createInstance('Zawgyi-my')
+   uni_line = converter.transliterate(zawgyi_line)
+   print(uni_line)
+
+```
+
+Zawgyi font နဲ့ ရိုက်ထားတဲ့ စာကြောင်းလေးကြောင်းပါတဲ့ input ဖိုင် (eg-corpus-zawgyi.txt) က အောက်ပါအတိုင်းပါ။  
+
+```
+ေနေကာင္း တယ္ ေနာ္
+အခု ဘာ လုပ္ ေန သလဲ
+ေနေကာင္း ေအာင္ ေန ပါ ေနာ္
+အခု အလုပ္ လုပ္ ေန တယ္
+```
+
+conversion လုပ်ကြည့်ရအောင် ...  
+
+```
+(base) ye@ykt-pro:/media/ye/project1/4github/zawgyi2unicode$ python ./zawgyi2unicode.py ./eg-corpus-zawgyi.txt 
+နေကောင်း တယ် နော်
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း အောင် နေ ပါ နော်
+အခု အလုပ် လုပ် နေ တယ်
+(base) ye@ykt-pro:/media/ye/project1/4github/zawgyi2unicode$
+```
