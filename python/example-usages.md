@@ -2295,3 +2295,16 @@ conversion လုပ်ကြည့်ရအောင် ...
 အခု အလုပ် လုပ် နေ တယ်
 (base) ye@ykt-pro:/media/ye/project1/4github/zawgyi2unicode$
 ```
+
+## 44. [zawgyi2unicode-syl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode-syl.py)  
+
+Zawgyi ကနေ Unicode encoding အဖြစ် ပြောင်းပြီးတော့ syllable unit ဖြတ်ပေးတဲ့ Python code ပါ။ အထက်က ပရိုဂရမ်နံပါတ် 44 ကိုပဲ update လုပ်ထားတာပါ။  
+
+```
+$ python ./zawgyi2unicode-syl.py ./eg-corpus-zawgyi.txt 
+နေ ကောင်း တယ် နော်
+အ ခု ဘာ လုပ် နေ သ လဲ
+နေ ကောင်း အောင် နေ ပါ နော်
+အ ခု အ လုပ် လုပ် နေ တယ်
+```
+
