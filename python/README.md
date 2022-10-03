@@ -128,6 +128,9 @@
 42. [syl2onehot-sklearn.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl2onehot-sklearn.py)  
 (ပရိုဂရမ် နံပါတ် 41 နဲ့ အတူတူပါပဲ။ အသေးစိတ် print လုပ်တာတွေကို ဖယ်ထားလိုက်ပြီးတော့ syllable level One-hot embedding လုပ်ဖို့အတွက် tool အနေနဲ့ သုံးနိုင်ဖို့ ရည်ရွယ်ပါတယ်။)  
 
+43. [zawgyi2unicode.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode.py)  
+(Zawgyi encoding နဲ့ သိမ်းထားတဲ့ မြန်မာစာဖိုင်ကို Unicode encoding အဖြစ် ပြောင်းတာကို PyICU library ကိုသုံးပြီး လုပ်ပြထားတာပါ)  
+
 
 
 
