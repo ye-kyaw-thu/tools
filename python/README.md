@@ -134,6 +134,9 @@
 44. [zawgyi2unicode-syl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode-syl.py)  
 (အထက်က Python code no. 43 ကိုပဲ update လုပ်ထားတာပါ။ ဒီတစ်ခါတော့ Zawgyi ကနေ Unicode ကို ပြောင်းပြီးတော့ တစ်ခါတည်း print ရိုက်ထုတ်တာ မဟုတ်ပဲနဲ့ syllable unit အဖြစ် ဖြတ်ပြီးမှ print ရိုက်ထုတ်တာပါ)  
 
+45. [word2vec.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word2vec.py)  
+(word2vec မော်ဒယ်ကို gensim library သုံးပြီး ဆောက်ပြထားတာပါ)  
+
 
 
 
