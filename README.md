@@ -113,7 +113,8 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 101. [random-no.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/random-no.sh)  
 102. [sort-capitalized-letter-first.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/sort-capitalized-letter-first.sh)  
 103. [chk-wavefile-duration-for-unicode-filename.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/chk-wavefile-duration-for-unicode-filename.sh)  
-104. [calc-chrF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-chrF.sh)
+104. [calc-chrF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-chrF.sh)  
+105. [check-end-mark.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/check-end-mark.sh)  
 
 # perl
 
