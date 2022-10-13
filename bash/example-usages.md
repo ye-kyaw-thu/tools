@@ -6369,3 +6369,38 @@ end_time:	1654572827
 ...
 ```
 	
+## 105. [check-end-mark.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/check-end-mark.sh)   
+
+input file example:  
+	
+```
+$ head sentences.txt
+Summit/B ဟိုတယ်/O အခန်း/O နံပါတ်/O ၃၀၂/O မှာ/O နေ/O ဖို့/O ခင်ဗျား/O အတွက်/O စီစဉ်/O ပေး/N ထား/N ပါ/N တယ်/E
+ကူးစက်ရောဂါ/B ဖြစ်/N ပါ/N တယ်/E
+ဘာ/B ကို/N ခင်ဗျား/N အကြိုက်ဆုံး/N လဲ/E
+ခင်ဗျား/B ဘယ်လောက်/O ဆိုဒ်/O ကြီးကြီး/O လို/N ချင်/N တာ/N လဲ/E
+အနီးဆုံး/B စားသောက်ဆိုင်/O ဘယ်/N နား/N မှာ/N လဲ/E
+လူ/B မှာ/O ပါးစပ်/O ရှိ/O ရင်/O ထင်မြင်ယူဆချက်/O တွေ/O ဝေဖန်ချက်/O တွေ/O က/O တော့/N ရှိ/N မှာ/N ပဲ/E
+၅၀/B သား/E
+အို/B ကို/O တိုက်ရိုက်/N သွား/N ဖို့/N လား/E
+ကျွန်တော်/B အထက်တန်း/O အိပ်စင်/N တွဲ/N မှာ/N ပါ/E
+မင်္ဂလာ/B ပါ/E ကြား/B ဖူး/O တာ/O ထက်/O ပို/O တော်/O တယ်/O ဆို/O တာ/O ကို/O လူကိုယ်တိုင်/O တွေ့/O မှ/O သိ/N တော့/N တယ်/N	
+```
+	
+$ bash check-end-mark.sh ./sentences.txt ./sentences.end-mark.err	
+	
+```
+$ head ./sentences.end-mark.err
+10:N
+19:N
+186:N
+200:O
+503:N
+630:O
+654:N
+737:N
+893:N
+1094:N	
+```
+	
+	
