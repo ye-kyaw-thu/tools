@@ -224,6 +224,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 43. [zawgyi2unicode.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode.py)  
 44. [zawgyi2unicode-syl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/zawgyi2unicode-syl.py)  
 45. [word2vec.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word2vec.py)  
+46. [make-edit-error.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/make-edit-error.py)  
 
 
 
