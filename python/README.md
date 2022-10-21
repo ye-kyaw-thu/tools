@@ -137,6 +137,9 @@
 45. [word2vec.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word2vec.py)  
 (word2vec မော်ဒယ်ကို gensim library သုံးပြီး ဆောက်ပြထားတာပါ)  
 
+46. [make-edit-error.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/make-edit-error.py)  
+(Producing spelling mistake words based on the edit-distance and print out as parallel data)  
+
 
 
 
