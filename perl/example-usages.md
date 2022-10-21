@@ -2437,3 +2437,45 @@ And was a dignity that the success of the endition of Myanmar development .
 It is also a state which is inhabited by Kayah state which is including in Bafter with a village .
 The four pression is want to read their village in the newster .
 ```
+
+## 59. [mk-spelling-dict.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-spelling-dict.pl)  
+				
+Demo small corpus of Khmer spelling is as follows:  
+													    
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ cat 5-sentences.txt
+បើ<គាត>ការពារព្រៃឈើមិនបាន គាត់នឹងកាត់ក្បាលគាត់ចោល ||| បើ(គាត់/vow)ការពារព្រៃឈើមិនបាន គាត់នឹងកាត់ក្បាលគាត់ចោល
+សាកធ្វើតាមបងហើយរសជាតិឆ្ងាញ់ថែមអំពិល<ទំ>បន្តិច|||សាកធ្វើតាមបងហើយរសជាតិឆ្ងាញ់ថែមអំពិល(ទុំ/pho)បន្តិច
+សុំប្អូនជួយថតស្ពានស្រែង<អោយ>បងប្អូនយើងមើលផង|||សុំប្អូនជួយថតស្ពានស្រែង(ឲ្យ/dia)បងប្អូនយើងមើលផង
+<ញុំ>ចូលដែរ។ ជាការរិះគន់បែបស្ថាបនា ខ្ញុំដឹងថានៅស្រុកស្រែធ្វើហូបខ្លួនឯងមិនពាក់ស្រោមដៃទេ ចឹងហើយបានត្រូវកែប្រែទោះធ្វើលក់ឬធ្វើហូបខ្លួនឯង ធ្វើថតឬមិនថត មានអនាម័យបន្តិចទៅ ទាំងនេះក៏ដើម្បីសុខភាពខ្លួនឯងដែរ ||| (ខ្ញុំ/dia)ចូលដែរ។ ជាការរិះគន់បែបស្ថាបនា ខ្ញុំដឹងថានៅស្រុកស្រែធ្វើហូបខ្លួនឯងមិនពាក់ស្រោមដៃទេ ចឹងហើយបានត្រូវកែប្រែទោះធ្វើលក់ឬធ្វើហូបខ្លួនឯង ធ្វើថតឬមិនថត មានអនាម័យបន្តិចទៅ ទាំងនេះក៏ដើម្បីសុខភាពខ្លួនឯងដែរ
+មាន<ច្រេីន>ណាស់ស្រុកខ្ញុំចេញទាំងថ្ងៃទាំងយប់ គ្មានខ្លាច<អី><តិច>|||មាន(ច្រើន/seq)ណាស់ស្រុកខ្ញុំចេញទាំងថ្ងៃទាំងយប់ គ្មានខ្លាច(អ្វី/typo)(បន្តិច/dia)
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$									
+```
+
+Running with "text" option ...  
+	
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ perl ./mk-spelling-dict.pl ./5-sentences.txt text
+គាត     គាត់
+ទំ      ទុំ
+អោយ     ឲ្យ
+ញុំ     ខ្ញុំ
+ច្រេីន  ច្រើន
+អី      អ្វី
+តិច     បន្តិច
+```
+
+Running with "type" option ...  
+	
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ perl ./mk-spelling-dict.pl ./5-sentences.txt type
+គាត     គាត់    vow
+ទំ      ទុំ     pho
+អោយ     ឲ្យ     dia
+ញុំ     ខ្ញុំ   dia
+ច្រេីន  ច្រើន   seq
+អី      អ្វី    typo
+តិច     បន្តិច  dia
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$													    
+```
+													    
