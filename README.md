@@ -176,6 +176,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 56. [roman2myno.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/roman2myno.pl)  
 57. [bracket-tree2sentence.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/bracket-tree2sentence.pl)  
 58. [clean-punctuation.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-punctuation.pl)  
+59. [mk-spelling-dict.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-spelling-dict.pl)  
 
 # Python
 
