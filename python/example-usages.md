@@ -2308,3 +2308,79 @@ $ python ./zawgyi2unicode-syl.py ./eg-corpus-zawgyi.txt
 အ ခု အ လုပ် လုပ် နေ တယ်
 ```
 
+## 46. [make-edit-error.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/make-edit-error.py)  
+
+Demo running with a Khmer small dictionary that contained only 5 words.  
+
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py kh-input.txt 1
+ស្រូវនាងក្រុង    ស្រូវនាងក្ររង
+សហគាមី   សហគមាី
+ពានព្រះឈុត       ពានពរ្ះឈុត
+ប្រទាលប្រហោង     ប្រាទលប្រហោង
+រន្ទា    ន្ទា
+ល្គាយ    ល្គយយ
+ផាង      ផផង
+ជ្រែះ    ជ្រះែ
+អក្ខបាដ          អក្ខបដ
+ទាសីទាសា         ទាសីាទាសា
+```
+
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py kh-input.txt 2
+ស្រូវនាងក្រុង    សង្រូវនាងក្្រុង
+សហគាមី   ហហហគាមី
+ពានព្រះឈុត       ពានពរ្ះុត
+ប្រទាលប្រហោង     ប្ទរាលបោរហោង
+រន្ទា    រន្
+ល្គាយ    ាល្គយា
+ផាង      ផាងផ
+ជ្រែះ    ជ្ រះ
+អក្ខបាដ          ដកដ្ខបាដ
+ទាសីទាសា         ទាសីទាសា
+```
+
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py kh-input.txt r
+ស្រូវនាងក្រុង    ស្រូវនាក្រុង
+សហគាមី   សហគមគមី
+ពានព្រះឈុត       ពានព្រុឈត
+ប្រទាលប្រហោង     ប្រ្ាលប្រ្ហោង
+រន្ទា    ្រនទា
+ល្គាយ    ល្គាគ
+ផាង      ផ ាង
+ជ្រែះ    រ្រែះ
+អក្ខបាដ          អក្ខាបដ
+ទាសីទាសា         ទាសីទាាា
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$
+```
+
+Demo running with a 5 words Myanmar dictionary.  
+
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py my-input.txt 1
+ပြားပြားဝပ်      ပြားပြးာဝပ်
+ပုစွန်ဆိတ်       ပုွန်ဆိတ်
+ကျွဲမြီးတို      ကွဲမြီးတို
+ဝေဿန္တရာ         ဝေဿနန္တရာ
+အယူခံ    အယူံခ
+```
+
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py my-input.txt 2
+ပြားပြားဝပ်      ပြားပြားဝပ်
+ပုစွန်ဆိတ်       ပုတွန်ဆ်ိတ်
+ကျွဲမြီးတို      ကျွွဲမြီးတိ
+ဝေဿန္တရာ         ဝေဿဿန္တာ
+အယူခံ    အူူယခံ
+```
+
+```
+ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py my-input.txt r
+ပြားပြားဝပ်      ပြားပာြးဝပပ်
+ပုစွန်ဆိတ်       ပုစွန်နဆိတ်
+ကျွဲမြီးတို      ကျိွဲမြီးတြို
+ဝေဿန္တရာ         ဝေဿန္ရာ
+အယူခံ    အယူံခ
+```
+
