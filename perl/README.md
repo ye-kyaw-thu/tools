@@ -178,6 +178,10 @@
 
 59. [mk-spelling-dict.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/mk-spelling-dict.pl)  
 Extracting wrong words, manually corrected words and spelling-error-type from the manually collected spelling mistake corpus  
+
+60. [remove-one-char-lines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/remove-one-char-lines.pl) 
+
+
     
     
     
