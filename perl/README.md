@@ -181,6 +181,8 @@ Extracting wrong words, manually corrected words and spelling-error-type from th
 
 60. [remove-one-char-lines.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/remove-one-char-lines.pl) 
 
+61. [clean-brackets-tags.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/clean-brackets-tags.pl)  
+
 
     
     
