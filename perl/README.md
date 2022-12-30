@@ -185,6 +185,8 @@ Extracting wrong words, manually corrected words and spelling-error-type from th
 
 62. [check-empty-field.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/check-empty-field.pl)  
 
+67. [eng-sentence-split.pl](https://github.com/ye-kyaw-thu/tools/blob/master/perl/eng-sentence-split.pl)  (CPAN library Lingua::EN::Sentence ကိုသုံးပြီး အင်္ဂလိပ်စာ စာကြောင်းတွေကို sentence segmentation လုပ်ပြထားတာ)
+
     
     
     
