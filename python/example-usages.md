@@ -2388,5 +2388,52 @@ ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py my-input.
 
 Machine translation experiment တွေ ကိုလုပ်တဲ့အခါမှာ မော်ဒယ်တွေက ဘယ်လောက် ကောင်းမကောင်းကို test dataset နဲ့ အနည်းဆုံး BLEU score metric ကိုသုံးပြီး evaluation လုပ်ကြရပါတယ်။ သို့သော် မြန်မာစာ၊ ဂျပန်စာလို မျိုးအတွက်က word order အပြောင်းအလဲကိစ္စတွေပါရှိလို့ BLEU score တစ်ခုတည်းကြည့်ယုံနဲ့ မလုံလောက်ပါဘူး။ အဲဒါကြောင့် ကျောင်းသားတွေကို BLEU score အပြင် RIBES score, chrF++ score နဲ့ တိုင်းခိုင်းတာတွေ လုပ်ပြီးတော့၊ error analysis အသေးစိတ်လုပ်ဖို့အတွက်လည်း SCLITE toolkit ကို သုံးပြီး WER score တွက်ထုတ်ခိုင်းရပါတယ်။ စိတ်ကူးပေါက်လာတာနဲ့ NLTK library လို installation လုပ်ရတာလွယ်တာမျိုးနဲ့ evaluation metric ရှစ်မျိုးကို တွက်ထုတ်ပေးဖို့ code ရေးဖြစ်ခဲ့ပါတယ်။ ပေးလိုက်တဲ့ reference, hypothesis (မော်ဒယ်က ထွက်လာတဲ့ output) ကို ယူပြီး BLEU, RIBES, chrF++, NIST, WER, GLEU, TER, ROUGE စုစုပေါင်း ၈မျိုးနဲ့ evaluation score တွေကို တွက်ထုတ်ပေးပါလိမ့်မယ်။ Reference, hypothesis ကိုလည်း sentence level ရော corpus level ရော နှစ်မျိုးစလုံးကို လက်ခံပေးနိုင်မှာမို့ အသုံးဝင်ပါလိမ့်မယ်။  
 
+Sentence level အတွက် example running ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+python 8eval.py --level sentence --reference "နေ ကောင်း လား" --hypothesis "နေ ကောင်း တယ်"
+Sentence BLEU score: 0.21177974141341938
+Sentence RIBES score: 0.9036020036098448
+Sentence chrF++ score: 0.6317279942279942
+Sentence NIST score: 1.0566416671474375
+Sentence WER score: 0.23076923076923078
+Sentence GLEU score: 0.5
+Sentence TER score: 0.23076923076923078
+Sentence ROUGE scores: [{'rouge-1': {'r': 0.6666666666666666, 'p': 0.6666666666666666, 'f': 0.6666666616666668}, 'rouge-2': {'r': 0.5, 'p': 0.5, 'f': 0.4999999950000001}, 'rouge-l': {'r': 0.6666666666666666, 'p': 0.6666666666666666, 'f': 0.6666666616666668}}]
+```
+
+Corpus level အတွက် example running ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+type ref.txt
+နေကောင်း လား
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း ပါ စေ
+မြန်မြန် သွား နော်
+သွား ပြီ လား
+သွား ပါ ပြီ
+```
+
+```
+type hyp.txt
+နေကောင်း ရဲ့ လား
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း ပါ ပြီ
+မြန်မြန် သွား
+သွား ပြီ လား
+သွား ပြီ
+```
+
+```
+python 8eval.py --level corpus --reference ref.txt --hypothesis hyp.txt
+Corpus BLEU score: 0.5102547701105773
+Corpus RIBES score: 0.7930722386200673
+Corpus chrF++ score: 0.7749542696450177
+Corpus NIST score: 3.3797203595001917
+Corpus WER score: 0.2222222222222222
+Corpus GLEU score: 0.6818181818181818
+Corpus TER score: 0.24999999999999997
+Average Corpus ROUGE scores: {'rouge-1': {'r': 0.8333333333333334, 'p': 0.8888888888888888, 'f': 0.8444444395444446}, 'rouge-2': {'r': 0.5, 'p': 0.5833333333333334, 'f': 0.527777774537037}, 'rouge-l': {'r': 0.8333333333333334, 'p': 0.8888888888888888, 'f': 0.8444444395444446}}
+```
 
 
