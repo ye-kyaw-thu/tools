@@ -140,6 +140,9 @@
 46. [make-edit-error.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/make-edit-error.py)  
 (Producing spelling mistake words based on the edit-distance and print out as parallel data)  
 
+47. [8eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/8eval.py)  
+(Machine translation နဲ့ တခြား NLP Task တွေအတွက် evaluation ကို metirc ၈မျိုးနဲ့ လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)
+
 
 
 
