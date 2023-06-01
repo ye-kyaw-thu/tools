@@ -2384,3 +2384,9 @@ ye@lst-gpu-3090:~/exp/kh-spell/data/code$ python3 ./make-edit-error.py my-input.
 အယူခံ    အယူံခ
 ```
 
+## 47. [8eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/8eval.py)  
+
+Machine translation experiment တွေ ကိုလုပ်တဲ့အခါမှာ မော်ဒယ်တွေက ဘယ်လောက် ကောင်းမကောင်းကို test dataset နဲ့ အနည်းဆုံး BLEU score metric ကိုသုံးပြီး evaluation လုပ်ကြရပါတယ်။ သို့သော် မြန်မာစာ၊ ဂျပန်စာလို မျိုးအတွက်က word order အပြောင်းအလဲကိစ္စတွေပါရှိလို့ BLEU score တစ်ခုတည်းကြည့်ယုံနဲ့ မလုံလောက်ပါဘူး။ အဲဒါကြောင့် ကျောင်းသားတွေကို BLEU score အပြင် RIBES score, chrF++ score နဲ့ တိုင်းခိုင်းတာတွေ လုပ်ပြီးတော့၊ error analysis အသေးစိတ်လုပ်ဖို့အတွက်လည်း SCLITE toolkit ကို သုံးပြီး WER score တွက်ထုတ်ခိုင်းရပါတယ်။ စိတ်ကူးပေါက်လာတာနဲ့ NLTK library လို installation လုပ်ရတာလွယ်တာမျိုးနဲ့ evaluation metric ရှစ်မျိုးကို တွက်ထုတ်ပေးဖို့ code ရေးဖြစ်ခဲ့ပါတယ်။ ပေးလိုက်တဲ့ reference, hypothesis (မော်ဒယ်က ထွက်လာတဲ့ output) ကို ယူပြီး BLEU, RIBES, chrF++, NIST, WER, GLEU, TER, ROUGE စုစုပေါင်း ၈မျိုးနဲ့ evaluation score တွေကို တွက်ထုတ်ပေးပါလိမ့်မယ်။ Reference, hypothesis ကိုလည်း sentence level ရော corpus level ရော နှစ်မျိုးစလုံးကို လက်ခံပေးနိုင်မှာမို့ အသုံးဝင်ပါလိမ့်မယ်။  
+
+
+
