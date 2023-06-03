@@ -18,7 +18,7 @@ import os
 parser = argparse.ArgumentParser(description='String similarity measurements')
 parser.add_argument('text1', type=str, help='First text string or file')
 parser.add_argument('text2', type=str, help='Second text string or file')
-parser.add_argument('-m', '--measurement', type=str, help='String similarity measurement to use')
+parser.add_argument('-m', '--measurement', type=str, help='String similarity measurement to use: levenshtein, jaro_winkler, cosine, dices_coefficient, jaccard, lcs_ratio, sorensen_dice_coefficient')
 
 args = parser.parse_args()
 
