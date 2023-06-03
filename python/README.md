@@ -143,7 +143,7 @@
 47. [8eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/8eval.py)  
 (Machine translation နဲ့ တခြား NLP Task တွေအတွက် evaluation ကို metirc ၈မျိုးနဲ့ လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)
 
-48. 48. [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py)  
+48. [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py)  
 (dictionary ဖိုင်ထဲကနေ Soundex နဲ့ Metaphone code တွေအဖြစ် ပြောင်းပေးတဲ့ script)  
 
 
