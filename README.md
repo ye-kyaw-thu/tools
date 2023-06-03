@@ -232,6 +232,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 46. [make-edit-error.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/make-edit-error.py)  
 47. [8eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/8eval.py)  
 48. [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py)  
+49. [7sim.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/7sim.py)  
 
 
 
