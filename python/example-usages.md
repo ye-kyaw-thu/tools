@@ -2442,5 +2442,29 @@ Soundex ရဲ့ patent ကတော့ 1918, 1922 က တင်ထားတာ
 
 [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py) ကတော့ ပေးလိုက်တဲ့ အင်္ဂလိပ်စာလုံးတွေကို Soundex သို့မဟုတ် Metaphone code တွေအဖြစ် ပြောင်းပေးတဲ့ Python script ပါ။ ပထမဆုံး run သူတွေအတွက် အဆင်ပြေအောင်လို့ running demo ကတော့ အောက်ပါအတိုင်းပါ  
 
+```
+>type en-word.txt
+car
+telephone
+English
+Myanmar
+John
+```
 
- 
+```
+>python soundex-metaphone.py -f en-word.txt -c "soundex"
+C600
+T415
+E524
+M560
+J500
+```
+
+```
+(base) C:\Users\801680\.spyder-py3>python soundex-metaphone.py -f en-word.txt -c "metaphone"
+('KR', '')
+('TLFN', '')
+('ANKLX', 'ANLX')
+('MNMR', '')
+('JN', 'AN')
+ ```
