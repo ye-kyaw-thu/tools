@@ -2461,7 +2461,7 @@ J500
 ```
 
 ```
-(base) C:\Users\801680\.spyder-py3>python soundex-metaphone.py -f en-word.txt -c "metaphone"
+>python soundex-metaphone.py -f en-word.txt -c "metaphone"
 ('KR', '')
 ('TLFN', '')
 ('ANKLX', 'ANLX')
