@@ -2469,3 +2469,73 @@ J500
 ('JN', 'AN')
  ```
 
+## 49. [7sim.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/7sim.py)  
+
+Running example က အောက်ပါအတိုင်းပါ။  
+စာကြောင်း နှစ်ကြောင်းအတွက် similarity score တွေ တွက်ကြည့်ချင်တယ် ဆိုရင် ...  
+
+```
+python 7sim.py -m jaccard "သမီးတော်" "သမားတော်"
+jaccard: 0.7777777777777778
+```
+
+ဒီတစ်ခါတော့ Levenshtein score တွက်ကြည့်တာပါ။  
+
+```
+>python 7sim.py -m levenshtein "သမီးတော်" "သမားတော်"
+levenshtein: 1
+```
+
+LCS ration တွက်ကြည့်တဲ့ ဥပမာ ...  
+
+```
+>python 7sim.py -m lcs_ratio "သမီးတော်" "သမားတော်"
+lcs_ratio: 0.875
+```
+
+Similarity score ကို ၇မျိုးစလုံးနဲ့ တွက်ကြည့်တဲ့ ဥပမာ ...  
+
+```
+>python 7sim.py -m all "သမီးတော်" "သမားတော်"
+levenshtein: 1
+jaro_winkler: 0.9333333333333333
+cosine: 0.875
+dices_coefficient: 0.875
+jaccard: 0.7777777777777778
+lcs_ratio: 0.875
+sorensen_dice_coefficient: 0.875
+```
+
+Reference နဲ့ Hypothesis ဖိုင်နှစ်ဖိုင်ကို သုံးပြီး တွက်တဲ့ ဥပမာက အောက်ပါအတိုင်းပါ။  
+
+```
+>type ref.txt
+နေကောင်း လား
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း ပါ စေ
+မြန်မြန် သွား နော်
+သွား ပြီ လား
+သွား ပါ ပြီ
+```
+
+```
+>type hyp.txt
+နေကောင်း ရဲ့ လား
+အခု ဘာ လုပ် နေ သလဲ
+နေကောင်း ပါ ပြီ
+မြန်မြန် သွား
+သွား ပြီ လား
+သွား ပြီ
+```
+
+```
+>python 7sim.py -m all ref.txt hyp.txt
+levenshtein: 14
+jaro_winkler: 0.8911530972374345
+cosine: 0.9326431430741515
+dices_coefficient: 0.9325842696629213
+jaccard: 0.8736842105263158
+lcs_ratio: 0.9101123595505618
+sorensen_dice_coefficient: 0.9325842696629213
+```
+
