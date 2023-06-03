@@ -231,6 +231,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 45. [word2vec.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word2vec.py)  
 46. [make-edit-error.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/make-edit-error.py)  
 47. [8eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/8eval.py)  
+48. [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py)  
 
 
 
