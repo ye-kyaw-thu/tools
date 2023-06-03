@@ -146,6 +146,7 @@
 48. [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py)  
 (dictionary ဖိုင်ထဲကနေ Soundex နဲ့ Metaphone code တွေအဖြစ် ပြောင်းပေးတဲ့ script)  
 
-
+49. [7sim.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/7sim.py)  
+(input အဖြစ် ပေးလိုက်တဲ့ စာကြောင်း နှစ်ကြောင်း သို့မဟုတ် ဖိုင် နှစ်ဖိုင်ထဲက စာကြောင်းတွေကို Levenshtein, Jaro Winkler, Cosine, Dices Coefficient, jaccard, LCS ratio, Sorensen Dice Coefficient တွေ တွက်ပေးတဲ့ Python script ပါ)  
 
 
