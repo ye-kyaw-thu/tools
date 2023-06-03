@@ -2436,4 +2436,11 @@ Corpus TER score: 0.24999999999999997
 Average Corpus ROUGE scores: {'rouge-1': {'r': 0.8333333333333334, 'p': 0.8888888888888888, 'f': 0.8444444395444446}, 'rouge-2': {'r': 0.5, 'p': 0.5833333333333334, 'f': 0.527777774537037}, 'rouge-l': {'r': 0.8333333333333334, 'p': 0.8888888888888888, 'f': 0.8444444395444446}}
 ```
 
+## 48. [soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py)  
 
+Soundex ရဲ့ patent ကတော့ 1918, 1922 က တင်ထားတာမို့လို့ တော်တော်ကြာပြီဖြစ်တဲ့ algorithm ပါပဲ။ Phonetic algorithm ဖြစ်ပြီး အင်္ဂလိပ်နာမည်တွေကို ရှာဖွေတဲ့အခါမှာ စာလုံးပေါင်းတာကွဲပေမဲ့ အသံတူ (သို့) အသံဆင်တူတဲ့ နာမည်တွေကိုလည်း ဆွဲထုတ်ယူနိုင်ဖို့ အတွက် အဓိကသုံးပါတယ်။ Robert C. Russell နဲ့ Margaret King Odell က တင်ခဲ့တဲ့ proposal ပါ။ Metaphone ကတော့ Soundex algorithm ကို အခြေခံပြီး ပိုကောင်းအောင် လုပ်ထားတဲ့ phonetic algorithm တစ်ခုပါ။ Lawrence Philips က 1990 မှာ proposal တင်ခဲ့တာ ဖြစ်ပါတယ်။  
+
+[soundex-metaphone.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/soundex-metaphone.py) ကတော့ ပေးလိုက်တဲ့ အင်္ဂလိပ်စာလုံးတွေကို Soundex သို့မဟုတ် Metaphone code တွေအဖြစ် ပြောင်းပေးတဲ့ Python script ပါ။ ပထမဆုံး run သူတွေအတွက် အဆင်ပြေအောင်လို့ running demo ကတော့ အောက်ပါအတိုင်းပါ  
+
+
+ 
