@@ -2539,3 +2539,20 @@ lcs_ratio: 0.9101123595505618
 sorensen_dice_coefficient: 0.9325842696629213
 ```
 
+```
+>python 7sim.py --help
+usage: 7sim.py [-h] [-m MEASUREMENT] text1 text2
+
+String similarity measurements
+
+positional arguments:
+  text1                 First text string or file
+  text2                 Second text string or file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -m MEASUREMENT, --measurement MEASUREMENT
+                        String similarity measurement to use: levenshtein, jaro_winkler, cosine,
+                        dices_coefficient, jaccard, lcs_ratio, sorensen_dice_coefficient
+```
+
