@@ -149,4 +149,7 @@
 49. [7sim.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/7sim.py)  
 (input အဖြစ် ပေးလိုက်တဲ့ စာကြောင်း နှစ်ကြောင်း သို့မဟုတ် ဖိုင် နှစ်ဖိုင်ထဲက စာကြောင်းတွေကို Levenshtein, Jaro Winkler, Cosine, Dices Coefficient, jaccard, LCS ratio, Sorensen Dice Coefficient တွေ တွက်ပေးတဲ့ Python script ပါ)  
 
+50. [abugida.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/abugida.py)  
+(Abugida ဘာသာစကား အုပ်စုထဲမှာ ပါဝင်တဲ့ language တွေမှာ သုံးတဲ့ ဗျည်း၊ သရ၊ နံပါတ်တွေကို ဥပမာအနေနဲ့ ရိုက်ထုတ်ပြပေးတဲ့ python script ပါ။ Writing system က အခြေခံအားဖြင့် တူတာကို ကျောင်းသားတွေ လေ့လာနိုင်ဖို့ ရည်ရွယ်ပါတယ်။)  
+
 
