@@ -5,11 +5,20 @@ Created on Sun Jun  4 15:50:50 2023
 @author: Ye Kyaw Thu, Visiting Professor, LST, NECTEC, Thailand.
 Reference: https://en.wikipedia.org/wiki/Abugida
 
-How to run:
+## How to run
+
+For help screen:  
 python abugida.py -h
+
+For printing numbers, consonants and vowels of Northern Indian languages:  
 python abugida.py -g ni
+
+For priting numbers, consonants and vowels of Myanmar language or Burmese:
 python abugida.py --l my
 
+Note: This program is to show some common nature of writing system between Abugida languages to my students. 
+And thus it is not cover all the characters. 
+If you want to show all the characters such as independent vowels and symbols etc. freely update by yourself.
 """
 
 import argparse
