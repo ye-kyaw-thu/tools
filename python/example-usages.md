@@ -2558,4 +2558,42 @@ optional arguments:
 
 ## 50. [abugida.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/abugida.py)  
 
-ဒီ ပရိုဂရမ်က မြန်မာ ဘာသာစကားအပါအဝင် ထိုင်း၊ ကမာ၊ လာအို စတဲ့ Abugida စနစ် ဘာသာစကားတွေမှာ တူညီတဲ့ writing system ရှိတယ် ဆိုတာကို ကျောင်းသားတွေကို ပြဖို့အတွက် ရေးခဲ့တာ ဖြစ်ပါတယ်။ ဥပမာ အနေနဲ့ နှိုင်းယှဉ်ပြီး လေ့လာနိုင်အောင် နံပါတ်၊ ဗျည်း နဲ့ သရ စာလုံးတွေကို ရိုက်ထုတ်ပြထားတာဖြစ်ပါတယ်။ ဘာသာစကား တစ်ခုစီမှာ ပါဝင်တဲ့ စာလုံး အားလုံးပါဝင်တာတော့ မဟုတ်ပါဘူး။ အဲဒါကြောင့် လိုအပ်ရင် လက်ရှိ ပရိုဂရမ်မှာ ထားထားတဲ့ Unicode range ကို ပြင်သုံးပါ။
+ဒီ ပရိုဂရမ်က မြန်မာ ဘာသာစကားအပါအဝင် ထိုင်း၊ ကမာ၊ လာအို စတဲ့ Abugida စနစ် ဘာသာစကားတွေမှာ တူညီတဲ့ writing system ရှိတယ် ဆိုတာကို ကျောင်းသားတွေကို ပြဖို့အတွက် ရေးခဲ့တာ ဖြစ်ပါတယ်။ ဥပမာ အနေနဲ့ နှိုင်းယှဉ်ပြီး လေ့လာနိုင်အောင် နံပါတ်၊ ဗျည်း နဲ့ သရ စာလုံးတွေကို ရိုက်ထုတ်ပြထားတာဖြစ်ပါတယ်။ ဘာသာစကား တစ်ခုစီမှာ ပါဝင်တဲ့ စာလုံး အားလုံးပါဝင်တာတော့ မဟုတ်ပါဘူး။ အဲဒါကြောင့် လိုအပ်ရင် လက်ရှိ ပရိုဂရမ်မှာ ထားထားတဲ့ Unicode range ကို ပြင်သုံးပါ။ Running example တချို့က အောက်ပါအတိုင်းပါ။  
+
+```
+python abugida.py -h
+usage: abugida.py [-h] [-a] [-l LANGUAGE] [-g GROUP]
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -a, --all             Print all characters for each language
+  -l LANGUAGE, --language LANGUAGE
+                        Print characters for one language. Available languages are: my (Burmese), th
+                        (Thai), km (Khmer), lo (Laos), hi (Hindi), mr (Marathi), bn (Bengali), si
+                        (Sinhala), ml (Malayalam), ta (Tamil), te (Telugu), kn (Kannada), bl
+                        (Balinese), jv (Javanese), sd (Sundanese), as (Assamese), gu (Gujarati), pa
+                        (Gurmukhi), or (Odia), bo (Tibetan)
+  -g GROUP, --group GROUP
+                        Print characters for a group of languages. Available groups are: ni (Assamese,
+                        Bengali, Hindi, Gujarati, Gurmukhi, Odia, Tibetan), si (Sinhala, Malayalam,
+                        Tamil, Telugu, Kannada), m (Burmese, Khmer, Thai, Laos), t (Balinese, Javanese,
+                        Sundanese), Here, ni for Northern Indian languages, si for Southern Indian
+                        languages, m for SouthEast Asian, mainland languages and t for SouthEase Asian,
+                        maritime languages
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
