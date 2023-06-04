@@ -2560,6 +2560,8 @@ optional arguments:
 
 ဒီ ပရိုဂရမ်က မြန်မာ ဘာသာစကားအပါအဝင် ထိုင်း၊ ကမာ၊ လာအို စတဲ့ Abugida စနစ် ဘာသာစကားတွေမှာ တူညီတဲ့ writing system ရှိတယ် ဆိုတာကို ကျောင်းသားတွေကို ပြဖို့အတွက် ရေးခဲ့တာ ဖြစ်ပါတယ်။ ဥပမာ အနေနဲ့ နှိုင်းယှဉ်ပြီး လေ့လာနိုင်အောင် နံပါတ်၊ ဗျည်း နဲ့ သရ စာလုံးတွေကို ရိုက်ထုတ်ပြထားတာဖြစ်ပါတယ်။ ဘာသာစကား တစ်ခုစီမှာ ပါဝင်တဲ့ စာလုံး အားလုံးပါဝင်တာတော့ မဟုတ်ပါဘူး။ အဲဒါကြောင့် လိုအပ်ရင် လက်ရှိ ပရိုဂရမ်မှာ ထားထားတဲ့ Unicode range ကို ပြင်သုံးပါ။ Running example တချို့က အောက်ပါအတိုင်းပါ။  
 
+help screen ခေါ်ကြည့်ရင် ...  
+
 ```
 python abugida.py -h
 usage: abugida.py [-h] [-a] [-l LANGUAGE] [-g GROUP]
@@ -2582,18 +2584,94 @@ optional arguments:
                         maritime languages
 ```
 
-```
+Northern Indian Abugida  ဘာသာစကားတွေကိုပဲ print လုပ်စေချင်ရင် ...  
 
 ```
+python abugida.py -g ni
+
+Language: Assamese
+
+Numbers:
+০ ১ ২ ৩ ৪ ৫ ৬ ৭ ৮
+Consonants:
+ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ দ ধ ন ঩ প ফ ব ভ ম য র ঱ ল ঳ ঴ ঵ শ ষ স
+Vowels:
+অ আ ই ঈ উ ঊ ঋ ঌ ঍ ঎ এ ঐ ঑ ঒ ও
+
+
+Language: Bengali
+
+Numbers:
+০ ১ ২ ৩ ৪ ৫ ৬ ৭ ৮
+Consonants:
+ক খ গ ঘ ঙ চ ছ জ ঝ ঞ ট ঠ ড ঢ ণ ত থ দ ধ ন ঩ প ফ ব ভ ম য র ঱ ল ঳ ঴ ঵ শ ষ স
+Vowels:
+অ আ ই ঈ উ ঊ ঋ ঌ ঍ ঎ এ ঐ ঑ ঒ ও
+
+
+Language: Hindi
+
+Numbers:
+० १ २ ३ ४ ५ ६ ७ ८
+Consonants:
+क ख ग घ ङ च छ ज झ ञ ट ठ ड ढ ण त थ द ध न ऩ प फ ब भ म य र ऱ ल ळ ऴ व श ष स
+Vowels:
+अ आ इ ई उ ऊ ऋ ऌ ऍ ऎ ए ऐ ऑ ऒ ओ
+
+
+Language: Gujarati
+
+Numbers:
+૦ ૧ ૨ ૩ ૪ ૫ ૬ ૭ ૮
+Consonants:
+ક ખ ગ ઘ ઙ ચ છ જ ઝ ઞ ટ ઠ ડ ઢ ણ ત થ દ ધ ન ઩ પ ફ બ ભ મ ય ર ઱ લ ળ ઴ વ શ ષ સ
+Vowels:
+અ આ ઇ ઈ ઉ ઊ ઋ ઌ ઍ ઎ એ ઐ ઑ ઒ ઓ
+
+
+Language: Gurmukhi
+
+Numbers:
+੦ ੧ ੨ ੩ ੪ ੫ ੬ ੭ ੮
+Consonants:
+ਕ ਖ ਗ ਘ ਙ ਚ ਛ ਜ ਝ ਞ ਟ ਠ ਡ ਢ ਣ ਤ ਥ ਦ ਧ ਨ ਩ ਪ ਫ ਬ ਭ ਮ ਯ ਰ ਱ ਲ ਲ਼ ਴ ਵ ਸ਼ ਷ ਸ
+Vowels:
+ਅ ਆ ਇ ਈ ਉ ਊ ਋ ਌ ਍ ਎ ਏ ਐ ਑ ਒ ਓ
+
+
+Language: Odia
+
+Numbers:
+୦ ୧ ୨ ୩ ୪ ୫ ୬ ୭ ୮
+Consonants:
+କ ଖ ଗ ଘ ଙ ଚ ଛ ଜ ଝ ଞ ଟ ଠ ଡ ଢ ଣ ତ ଥ ଦ ଧ ନ ଩ ପ ଫ ବ ଭ ମ ଯ ର ଱ ଲ ଳ ଴ ଵ ଶ ଷ ସ
+Vowels:
+ଅ ଆ ଇ ଈ ଉ ଊ ଋ ଌ ଍ ଎ ଏ ଐ ଑ ଒ ଓ
+
+
+Language: Tibetan
+
+Numbers:
+༠ ༡ ༢ ༣ ༤ ༥ ༦ ༧ ༨
+Consonants:
+ཀ ཁ ག གྷ ང ཅ ཆ ཇ ཈ ཉ ཊ ཋ ཌ ཌྷ ཎ ཏ ཐ ད དྷ ན པ ཕ བ བྷ མ ཙ ཚ ཛ ཛྷ ཝ ཞ ཟ འ ཡ ར ལ ཤ ཥ ས ཧ ཨ ཀྵ ཪ ཫ
+Vowels:
+ི ཱི ུ ཱུ ྲྀ ཷ ླྀ ཹ ེ ཻ ོ ཽ ཾ ཿ
+
+language တစ်ခုချင်းစီကိုပဲ ရိုက်ထုတ်စေချင်ရင် -l or --language ဆိုတဲ့ option ကို သုံးပါ ...  
 
 ```
+python abugida.py -l my
 
+Language: Burmese
+
+Numbers:
+၀ ၁ ၂ ၃ ၄ ၅ ၆ ၇ ၈ ၉
+Consonants:
+က ခ ဂ ဃ င စ ဆ ဇ ဈ ဉ ည ဋ ဌ ဍ ဎ ဏ တ ထ ဒ ဓ န ပ ဖ ဗ ဘ မ ယ ရ လ ဝ သ ဟ ဠ အ
+Vowels:
+ါ ာ ိ ီ ု
 ```
 
-```
+Abugida ဘာသာစကား အားလုံးကို ရိုက်ထုတ်ပေးစေချင်ရင်တော့ -a or -all option ကို သုံးလို့ ရပါတယ်။ ဒီနေရာမှာတော့ running output screen ကို မပြတော့ဘူး။  
 
-```
-
-```
-
-```
