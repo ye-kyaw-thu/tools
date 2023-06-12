@@ -152,4 +152,5 @@
 50. [abugida.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/abugida.py)  
 (Abugida ဘာသာစကား အုပ်စုထဲမှာ ပါဝင်တဲ့ language တွေမှာ သုံးတဲ့ ဗျည်း၊ သရ၊ နံပါတ်တွေကို ဥပမာအနေနဲ့ ရိုက်ထုတ်ပြပေးတဲ့ python script ပါ။ Writing system က အခြေခံအားဖြင့် တူတာကို ကျောင်းသားတွေ လေ့လာနိုင်ဖို့ ရည်ရွယ်ပါတယ်။)  
 
-
+51. [tex-spellcheck.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tex-spellcheck.py)  
+(Latex file အပါအဝင် text ဖိုင်တွေကို စာလုံးပေါင်းအမှားတွေ ဆွဲထုတ်နိုင်ဖို့ ရေးခဲ့တယ်။)  
