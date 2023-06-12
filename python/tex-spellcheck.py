@@ -2,7 +2,8 @@
 """
 Created on Mon Jun 12 20:39:57 2023
 @author: Ye Kyaw Thu
-Prepared for checking mes journal paper.
+Prepared for checking mes journal paper.  
+Reference: https://github.com/barrust/pyspellchecker  
 """
 
 import argparse
