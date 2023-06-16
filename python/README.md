@@ -154,3 +154,6 @@
 
 51. [tex-spellcheck.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tex-spellcheck.py)  
 (Latex file အပါအဝင် text ဖိုင်တွေကို စာလုံးပေါင်းအမှားတွေ ဆွဲထုတ်နိုင်ဖို့ ရေးခဲ့တယ်။)  
+
+52. [video_augment.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/video_augment.py)  
+(ကမ္ဘောဒီးယားက ITC တက္ကသိုလ်က undergrad internship ကျောင်းသားတွေအတွက် ရေးခဲ့တာ။ Video ဒေတာကို augment method လေးမျိုးနဲ့ လုပ်ထားတဲ့ demo code ပါ။)  
