@@ -2676,3 +2676,44 @@ Vowels:
 
 Abugida ဘာသာစကား အားလုံးကို ရိုက်ထုတ်ပေးစေချင်ရင်တော့ -a or -all option ကို သုံးလို့ ရပါတယ်။ ဒီနေရာမှာတော့ running output screen ကို မပြတော့ဘူး။  
 
+## 52. [video_augment.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/video_augment.py)  
+
+```
+(base) rnd@gpu:~/demo/vr$ conda activate sl-vr
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/temporal/ --augment temporal
+
+real    0m7.612s
+user    0m6.764s
+sys     0m0.471s
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/spatial/ --augment spatial
+
+real    0m6.273s
+user    0m8.083s
+sys     0m1.432s
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/noise/ --augment noise
+
+real    0m39.320s
+user    0m33.797s
+sys     0m5.597s
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/brightness_contrast/ --augment brightness_contrast
+
+real    0m21.550s
+user    0m15.165s
+sys     0m6.995s
+(sl-vr) rnd@gpu:~/demo/vr$
+```
+
+
+
