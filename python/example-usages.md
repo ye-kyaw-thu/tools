@@ -2678,9 +2678,17 @@ Abugida ဘာသာစကား အားလုံးကို ရိုက်�
 
 ## 52. [video_augment.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/video_augment.py)  
 
+CADT မှာ တစ်နှစ်ခန့် လူကိုယ်တိုင် သွားလိုက်ပြန်လိုက် လုပ်ပြီး Visiting Professor လုပ်ခဲ့တဲ့ အလုပ်ရဲ့ အဆက်အနေနဲ့ ITC တက္ကသိုလ်က နောက်ဆုံးနှစ် အင်ဂျင်နီယာ ကျောင်းသား ၅ယောက်ကို undergrad thesis ရေးနိုင်ဖို့အတွက် အပတ်စဉ် seminar လုပ်ပေးပြီး သင်ပေးစရာရှိတာတွေကို သင်ပေးနေဖြစ်တယ်။ ကျောင်းသား သုံးယောက်နဲ့က Cambodia Sign Language Video Recognition ပရောဂျက်အတွက် corpus အသစ်တစ်ခု ဆောက်ဖြစ်ခဲ့တယ်။ ထုံးစံအတိုင်း ဗီဒီယို ဒေတာက class တစ်ခုကို sign language ဗီဒီယို တစ်ဖိုင်ရဖို့တောင် တော်တော် ကြိုးစားရတာလေ။ အဲဒါကြောင့် လက်ရှိ ရှိနေတဲ့ ဗီဒီယို ဒေတာတွေကို data augmentation လုပ်ဖို့ ကျောင်းသားတွေကို အကြံပေးခဲ့တယ်။ အဲဒီအတွက် demo code အဖြစ် ရေးပြထားတဲ့ python script ပါ။  
+
 ```
 (base) rnd@gpu:~/demo/vr$ conda activate sl-vr
 ```
+
+```
+(base) rnd@gpu:~/demo/vr/1v$ ls
+ខាំ.mp4
+```
+
 
 ```
 (sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/temporal/ --augment temporal
