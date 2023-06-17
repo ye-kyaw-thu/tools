@@ -2680,15 +2680,21 @@ Abugida ဘာသာစကား အားလုံးကို ရိုက်�
 
 CADT မှာ တစ်နှစ်ခန့် လူကိုယ်တိုင် သွားလိုက်ပြန်လိုက် လုပ်ပြီး Visiting Professor လုပ်ခဲ့တဲ့ အလုပ်ရဲ့ အဆက်အနေနဲ့ ITC တက္ကသိုလ်က နောက်ဆုံးနှစ် အင်ဂျင်နီယာ ကျောင်းသား ၅ယောက်ကို undergrad thesis ရေးနိုင်ဖို့အတွက် အပတ်စဉ် seminar လုပ်ပေးပြီး သင်ပေးစရာရှိတာတွေကို သင်ပေးနေဖြစ်တယ်။ ကျောင်းသား သုံးယောက်နဲ့က Cambodia Sign Language Video Recognition ပရောဂျက်အတွက် corpus အသစ်တစ်ခု ဆောက်ဖြစ်ခဲ့တယ်။ ထုံးစံအတိုင်း ဗီဒီယို ဒေတာက class တစ်ခုကို sign language ဗီဒီယို တစ်ဖိုင်ရဖို့တောင် တော်တော် ကြိုးစားရတာလေ။ အဲဒါကြောင့် လက်ရှိ ရှိနေတဲ့ ဗီဒီယို ဒေတာတွေကို data augmentation လုပ်ဖို့ ကျောင်းသားတွေကို အကြံပေးခဲ့တယ်။ အဲဒီအတွက် demo code အဖြစ် ရေးပြထားတဲ့ python script ပါ။  
 
+Running example ကတော့ အောက်ပါအတိုင်းပါ။  
+အရင်ဆုံး လိုအပ်တဲ့ library တွေရှိတဲ့ Anaconda environment ထဲကို ဝင်ပါတယ်။  
+
 ```
 (base) rnd@gpu:~/demo/vr$ conda activate sl-vr
 ```
+
+1v/ လို့ နာမည်ပေးထားတဲ့ ဖိုလ်ဒါအောက်မှာ ရှိတဲ့ ဗီဒီယိုဖိုင် တစ်ဖိုင်ကို တည်ပြီး နမူနာအနေနဲ့ augmentation လုပ်ပြပါမယ်။  
 
 ```
 (base) rnd@gpu:~/demo/vr/1v$ ls
 ខាំ.mp4
 ```
 
+temporal augmentation ဆိုတာကတော့ လှုပ်ရှားမှုကို နှေးအောင်၊ မြန်အောင် လုပ်တာမျိုးပါ။  
 
 ```
 (sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/temporal/ --augment temporal
@@ -2698,6 +2704,8 @@ user    0m6.764s
 sys     0m0.471s
 ```
 
+spatial augmentation ကိုလည်း အလွယ် ဒေါင်လိုက် shift လုပ်တာကို လုပ်ပြထားတယ်လို့ ထင်တယ်။  
+
 ```
 (sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/spatial/ --augment spatial
 
@@ -2705,6 +2713,8 @@ real    0m6.273s
 user    0m8.083s
 sys     0m1.432s
 ```
+
+noise ကိုလည်း မြင်သာအောင် weight များများပေးပြီး ဥပမာ လုပ်ပြထားပါတယ်။ မဟုတ်ရင် လူမျက်စိနဲ့ ကြည့်ရင် မသိသာတာမျိုးလည်း ဖြစ်တတ်လို့။   
 
 ```
 (sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/noise/ --augment noise
@@ -2714,6 +2724,8 @@ user    0m33.797s
 sys     0m5.597s
 ```
 
+ဒီတစ်ခေါက်တော့ brightness, contrast ကို ကစားထားတာပါ။  
+
 ```
 (sl-vr) rnd@gpu:~/demo/vr$ time python ./video_augment.py --input_folder ./1v/ --output_folder ./1v/brightness_contrast/ --augment brightness_contrast
 
@@ -2722,6 +2734,8 @@ user    0m15.165s
 sys     0m6.995s
 (sl-vr) rnd@gpu:~/demo/vr$
 ```
+
+ဒီနေရာမှာ တစ်ခု သတိထားရမှာက augmented video တွေကို original video ရှိတဲ့ ဖိုလ်ဒါမှာပဲ output လုပ်ရင် နောက်ထပ် augmentation တစ်မျိုးထပ် run တဲ့အခါမှာ အဲဒီ 1v/ folder အောက်မှာ ရှိသမျှဖိုင်ကို ဝင် augmentation လုပ်သွားမှာမို့လို့ အခု နမူနာ လုပ်ပြထားသလို augmentation method တစ်မျိုးကို ဖိုလ်ဒါတစ်ခုစီမှာ ခွဲလုပ်တာက ဘယ်လိုပြောင်းလဲသွားသလဲ ဆိုတာကို လေ့လာဖို့အတွက် ပိုအဆင်ပြေပါလိမ့်မယ်။ မဟုတ်ရင် temporal-spatial, temporal-spatial-noise စတဲ့ combination output တွေ ထွက်လာမှာမို့လို့ ...  
 
 
 
