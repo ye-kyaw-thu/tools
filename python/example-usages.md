@@ -2833,6 +2833,257 @@ videos
 (base) rnd@gpu:~/demo/vr$
 ```
 
+လုပ်ချင်တာက basename တူတာတွေအားလုံးကို ဖိုင်ဒါတစ်ခုအောက်ထဲမှာ သိမ်းချင်တယ်လေ။ အဲဒါမှ ၅ဖိုင် ကို class တစ်ခုအနေနဲ့ သတ်မှတ်ပြီးတော့ video recognition မော်ဒယ်ဆောက်နိုင်မှာပေါ့။ အဲဒီအတွက် mk-video-class.py ကို ရေးခဲ့တာပါ။ Example running လုပ်ပြရရင် အောက်ပါအတိုင်းပါ။  
+
+(base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ time python ./mk-class.py videos data
+
+real    0m0.733s
+user    0m0.096s
+sys     0m0.636s
+
+(base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ tree data
+data
+├── ខាំ
+│   ├── ខាំ-brightness_contrast.mp4
+│   ├── ខាំ.mp4
+│   ├── ខាំ-noise.mp4
+│   ├── ខាំ-spatial.mp4
+│   └── ខាំ-temporal.mp4
+├── ខាត
+│   ├── ខាត-brightness_contrast.mp4
+│   ├── ខាត.mp4
+│   ├── ខាត-noise.mp4
+│   ├── ខាត-spatial.mp4
+│   └── ខាត-temporal.mp4
+├── ខួរក្បាល
+│   ├── ខួរក្បាល-brightness_contrast.mp4
+│   ├── ខួរក្បាល.mp4
+│   ├── ខួរក្បាល-noise.mp4
+│   ├── ខួរក្បាល-spatial.mp4
+│   └── ខួរក្បាល-temporal.mp4
+├── ខេត្តព្រះសីហនុ
+│   ├── ខេត្តព្រះសីហនុ -brightness_contrast.mp4
+│   ├── ខេត្តព្រះសីហនុ .mp4
+│   ├── ខេត្តព្រះសីហនុ -noise.mp4
+│   ├── ខេត្តព្រះសីហនុ -spatial.mp4
+│   └── ខេត្តព្រះសីហនុ -temporal.mp4
+├── ខេត្តមណ្ឌលគិរី
+│   ├── ខេត្តមណ្ឌលគិរី -brightness_contrast.mp4
+│   ├── ខេត្តមណ្ឌលគិរី .mp4
+│   ├── ខេត្តមណ្ឌលគិរី -noise.mp4
+│   ├── ខេត្តមណ្ឌលគិរី -spatial.mp4
+│   └── ខេត្តមណ្ឌលគិរី -temporal.mp4
+├── ខែ
+│   ├── ខែ-brightness_contrast.mp4
+│   ├── ខែ.mp4
+│   ├── ខែ-noise.mp4
+│   ├── ខែ-spatial.mp4
+│   ├── ខែ-temporal.mp4
+│   ├── ខែ្ស -brightness_contrast.mp4
+│   ├── ខែ្ស .mp4
+│   ├── ខែ្ស -noise.mp4
+│   ├── ខែ្ស -spatial.mp4
+│   └── ខែ្ស -temporal.mp4
+├── ខែ្ស
+│   ├── ខែ្ស -brightness_contrast.mp4
+│   ├── ខែ្ស .mp4
+│   ├── ខែ្ស -noise.mp4
+│   ├── ខែ្ស -spatial.mp4
+│   └── ខែ្ស -temporal.mp4
+├── ខោ
+│   ├── ខោ-brightness_contrast.mp4
+│   ├── ខោ.mp4
+│   ├── ខោ-noise.mp4
+│   ├── ខោ-spatial.mp4
+│   └── ខោ-temporal.mp4
+├── ខ្ជិល
+│   ├── ខ្ជិល-brightness_contrast.mp4
+│   ├── ខ្ជិល.mp4
+│   ├── ខ្ជិល-noise.mp4
+│   ├── ខ្ជិល-spatial.mp4
+│   └── ខ្ជិល-temporal.mp4
+├── ខ្ទង់
+│   ├── ខ្ទង់-brightness_contrast.mp4
+│   ├── ខ្ទង់.mp4
+│   ├── ខ្ទង់-noise.mp4
+│   ├── ខ្ទង់-spatial.mp4
+│   ├── ខ្ទង់-temporal.mp4
+│   ├── ខ្ទង់រយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រយ.mp4
+│   ├── ខ្ទង់រយ-noise.mp4
+│   ├── ខ្ទង់រយ-spatial.mp4
+│   ├── ខ្ទង់រយ-temporal.mp4
+│   ├── ខ្ទង់រាយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រាយ.mp4
+│   ├── ខ្ទង់រាយ-noise.mp4
+│   ├── ខ្ទង់រាយ-spatial.mp4
+│   └── ខ្ទង់រាយ-temporal.mp4
+├── ខ្ទង់រយ
+│   ├── ខ្ទង់រយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រយ.mp4
+│   ├── ខ្ទង់រយ-noise.mp4
+│   ├── ខ្ទង់រយ-spatial.mp4
+│   └── ខ្ទង់រយ-temporal.mp4
+├── ខ្ទង់រាយ
+│   ├── ខ្ទង់រាយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រាយ.mp4
+│   ├── ខ្ទង់រាយ-noise.mp4
+│   ├── ខ្ទង់រាយ-spatial.mp4
+│   └── ខ្ទង់រាយ-temporal.mp4
+├── ខ្ទឹម
+│   ├── ខ្ទឹម-brightness_contrast.mp4
+│   ├── ខ្ទឹម.mp4
+│   ├── ខ្ទឹម-noise.mp4
+│   ├── ខ្ទឹម-spatial.mp4
+│   └── ខ្ទឹម-temporal.mp4
+├── ខ្មែរ
+│   ├── ខ្មែរ-brightness_contrast.mp4
+│   ├── ខ្មែរ.mp4
+│   ├── ខ្មែរ-noise.mp4
+│   ├── ខ្មែរ-spatial.mp4
+│   └── ខ្មែរ-temporal.mp4
+├── ខ្មៅ
+│   ├── ខ្មៅ-brightness_contrast.mp4
+│   ├── ខ្មៅ.mp4
+│   ├── ខ្មៅ-noise.mp4
+│   ├── ខ្មៅ-spatial.mp4
+│   └── ខ្មៅ-temporal.mp4
+└── ខ្លី
+    ├── ខ្លី-brightness_contrast.mp4
+    ├── ខ្លី.mp4
+    ├── ខ្លី-noise.mp4
+    ├── ខ្លី-spatial.mp4
+    └── ខ្លី-temporal.mp4
+
+16 directories, 95 files
+(base) rnd@gpu:~/demo/vr$
+
+တကယ်လို့ --index option နဲ့ run မယ် ဆိုရင်တော့
+
+(base) rnd@gpu:~/demo/vr$ time python ./mk-class.py videos class --index
+
+real    0m1.459s
+user    0m0.108s
+sys     0m0.676s
+(base) rnd@gpu:~/demo/vr$
+
+(base) rnd@gpu:~/demo/vr$ tree class
+class
+├── 1
+│   ├── ខេត្តមណ្ឌលគិរី -brightness_contrast.mp4
+│   ├── ខេត្តមណ្ឌលគិរី .mp4
+│   ├── ខេត្តមណ្ឌលគិរី -noise.mp4
+│   ├── ខេត្តមណ្ឌលគិរី -spatial.mp4
+│   └── ខេត្តមណ្ឌលគិរី -temporal.mp4
+├── 10
+│   ├── ខ្មៅ-brightness_contrast.mp4
+│   ├── ខ្មៅ.mp4
+│   ├── ខ្មៅ-noise.mp4
+│   ├── ខ្មៅ-spatial.mp4
+│   └── ខ្មៅ-temporal.mp4
+├── 11
+│   ├── ខ្ទឹម-brightness_contrast.mp4
+│   ├── ខ្ទឹម.mp4
+│   ├── ខ្ទឹម-noise.mp4
+│   ├── ខ្ទឹម-spatial.mp4
+│   └── ខ្ទឹម-temporal.mp4
+├── 12
+│   ├── ខ្មែរ-brightness_contrast.mp4
+│   ├── ខ្មែរ.mp4
+│   ├── ខ្មែរ-noise.mp4
+│   ├── ខ្មែរ-spatial.mp4
+│   └── ខ្មែរ-temporal.mp4
+├── 13
+│   ├── ខ្ទង់-brightness_contrast.mp4
+│   ├── ខ្ទង់.mp4
+│   ├── ខ្ទង់-noise.mp4
+│   ├── ខ្ទង់-spatial.mp4
+│   ├── ខ្ទង់-temporal.mp4
+│   ├── ខ្ទង់រយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រយ.mp4
+│   ├── ខ្ទង់រយ-noise.mp4
+│   ├── ខ្ទង់រយ-spatial.mp4
+│   ├── ខ្ទង់រយ-temporal.mp4
+│   ├── ខ្ទង់រាយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រាយ.mp4
+│   ├── ខ្ទង់រាយ-noise.mp4
+│   ├── ខ្ទង់រាយ-spatial.mp4
+│   └── ខ្ទង់រាយ-temporal.mp4
+├── 14
+│   ├── ខ្ទង់រាយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រាយ.mp4
+│   ├── ខ្ទង់រាយ-noise.mp4
+│   ├── ខ្ទង់រាយ-spatial.mp4
+│   └── ខ្ទង់រាយ-temporal.mp4
+├── 15
+│   ├── ខួរក្បាល-brightness_contrast.mp4
+│   ├── ខួរក្បាល.mp4
+│   ├── ខួរក្បាល-noise.mp4
+│   ├── ខួរក្បាល-spatial.mp4
+│   └── ខួរក្បាល-temporal.mp4
+├── 16
+│   ├── ខាត-brightness_contrast.mp4
+│   ├── ខាត.mp4
+│   ├── ខាត-noise.mp4
+│   ├── ខាត-spatial.mp4
+│   └── ខាត-temporal.mp4
+├── 2
+│   ├── ខេត្តព្រះសីហនុ -brightness_contrast.mp4
+│   ├── ខេត្តព្រះសីហនុ .mp4
+│   ├── ខេត្តព្រះសីហនុ -noise.mp4
+│   ├── ខេត្តព្រះសីហនុ -spatial.mp4
+│   └── ខេត្តព្រះសីហនុ -temporal.mp4
+├── 3
+│   ├── ខែ្ស -brightness_contrast.mp4
+│   ├── ខែ្ស .mp4
+│   ├── ខែ្ស -noise.mp4
+│   ├── ខែ្ស -spatial.mp4
+│   └── ខែ្ស -temporal.mp4
+├── 4
+│   ├── ខែ-brightness_contrast.mp4
+│   ├── ខែ.mp4
+│   ├── ខែ-noise.mp4
+│   ├── ខែ-spatial.mp4
+│   ├── ខែ-temporal.mp4
+│   ├── ខែ្ស -brightness_contrast.mp4
+│   ├── ខែ្ស .mp4
+│   ├── ខែ្ស -noise.mp4
+│   ├── ខែ្ស -spatial.mp4
+│   └── ខែ្ស -temporal.mp4
+├── 5
+│   ├── ខោ-brightness_contrast.mp4
+│   ├── ខោ.mp4
+│   ├── ខោ-noise.mp4
+│   ├── ខោ-spatial.mp4
+│   └── ខោ-temporal.mp4
+├── 6
+│   ├── ខាំ-brightness_contrast.mp4
+│   ├── ខាំ.mp4
+│   ├── ខាំ-noise.mp4
+│   ├── ខាំ-spatial.mp4
+│   └── ខាំ-temporal.mp4
+├── 7
+│   ├── ខ្លី-brightness_contrast.mp4
+│   ├── ខ្លី.mp4
+│   ├── ខ្លី-noise.mp4
+│   ├── ខ្លី-spatial.mp4
+│   └── ខ្លី-temporal.mp4
+├── 8
+│   ├── ខ្ជិល-brightness_contrast.mp4
+│   ├── ខ្ជិល.mp4
+│   ├── ខ្ជិល-noise.mp4
+│   ├── ខ្ជិល-spatial.mp4
+│   └── ខ្ជិល-temporal.mp4
+├── 9
+│   ├── ខ្ទង់រយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រយ.mp4
+│   ├── ខ្ទង់រយ-noise.mp4
+│   ├── ខ្ទង់រយ-spatial.mp4
+│   └── ខ្ទង់រយ-temporal.mp4
+└── index.txt
+
+16 directories, 96 files
+(base) rnd@gpu:~/demo/vr$
 
 
 
