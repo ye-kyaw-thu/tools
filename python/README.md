@@ -157,3 +157,6 @@
 
 52. [video_augment.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/video_augment.py)  
 (ကမ္ဘောဒီးယားက ITC တက္ကသိုလ်က undergrad internship ကျောင်းသားတွေအတွက် ရေးခဲ့တာ။ Video ဒေတာကို augment method လေးမျိုးနဲ့ လုပ်ထားတဲ့ demo code ပါ။)  
+
+53. [mk-video-class.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-video-class.py)  
+(Augmented video ဖိုင်တွေကို class folder တွေအသီးသီး ဆောက်ပြီး သိမ်းဖို့ ရေးခဲ့တဲ့ script ပါ။)    
