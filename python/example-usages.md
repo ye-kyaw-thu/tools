@@ -2835,13 +2835,37 @@ videos
 
 လုပ်ချင်တာက basename တူတာတွေအားလုံးကို ဖိုင်ဒါတစ်ခုအောက်ထဲမှာ သိမ်းချင်တယ်လေ။ အဲဒါမှ ၅ဖိုင် ကို class တစ်ခုအနေနဲ့ သတ်မှတ်ပြီးတော့ video recognition မော်ဒယ်ဆောက်နိုင်မှာပေါ့။ အဲဒီအတွက် mk-video-class.py ကို ရေးခဲ့တာပါ။ Example running လုပ်ပြရရင် အောက်ပါအတိုင်းပါ။  
 
+--help နဲ့ helpscreen ခေါ်ကြည့်လို့ ရတယ်။  
+
 ```
-(base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ time python ./mk-class.py videos data
+(base) rnd@gpu:~/demo/vr$ python ./mk-video-class.py --help
+usage: mk-video-class.py [-h] [-i] base_dir output_folder
+
+Sort files into class directories.
+
+positional arguments:
+  base_dir       The directory containing the files to sort.
+  output_folder  The directory to output the class directories to.
+
+optional arguments:
+  -h, --help     show this help message and exit
+  -i, --index    Use indexed class names instead of the original names.
+(base) rnd@gpu:~/demo/vr$
+```
+
+Run တဲ့အခါမှာ --index option ကို ထည့်ပြီးတော့ မ run ရင်လည်း ရတယ်။  
+ဒီနေရာမှာ videos ဆိုတာက အထက်မှာ ပြခဲ့တဲ့ augmented ဗီဒီယိုဖိုင်တွေရှိတဲ့ ဖိုလ်ဒါပါ။  
+data ဆိုတဲ့ ဖိုလ်ဒါကတော့ output folder path ပါ။  
+
+```
+(base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ time python ./mk-video-class.py videos data
 
 real    0m0.733s
 user    0m0.096s
 sys     0m0.636s
 ```
+
+တကယ်လို့ --index or -i option ကို ထည့်ပြီးတော့ run တာ မဟုတ်ရင်တော့ ကမ္ဘောဒီးယား basename တွေနဲ့ပဲ class folder တွေ ဆောက်ပေးသွားလိမ့်မယ်။  
 
 ```
 (base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ tree data
@@ -2962,16 +2986,18 @@ data
 (base) rnd@gpu:~/demo/vr$
 ```
 
-တကယ်လို့ --index option နဲ့ run မယ် ဆိုရင်တော့  
+တကယ်လို့ --index option နဲ့ run မယ် ဆိုရင်တော့ class နာမည်တွေကို 1, 2, 3 အသီးသီး ပေးသွားမှာမို့ command line environment မှာ လုပ်ရကိုင်ရတာ ပိုလွယ်ကူတာပေါ့။    
 
 ```
-(base) rnd@gpu:~/demo/vr$ time python ./mk-class.py videos class --index
+(base) rnd@gpu:~/demo/vr$ time python ./mk-video-class.py videos class --index
 
 real    0m1.459s
 user    0m0.108s
 sys     0m0.676s
 (base) rnd@gpu:~/demo/vr$
 ```
+
+--index option နဲ့ run ပြီး ထွက်လာမယ့် output ကတော့ အောက်ပါအတိုင်းပါ။  
 
 ```
 (base) rnd@gpu:~/demo/vr$ tree class
