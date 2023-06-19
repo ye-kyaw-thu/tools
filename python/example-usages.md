@@ -2737,5 +2737,102 @@ sys     0m6.995s
 
 ဒီနေရာမှာ တစ်ခု သတိထားရမှာက augmented video တွေကို original video ရှိတဲ့ ဖိုလ်ဒါမှာပဲ output လုပ်ရင် နောက်ထပ် augmentation တစ်မျိုးထပ် run တဲ့အခါမှာ အဲဒီ 1v/ folder အောက်မှာ ရှိသမျှဖိုင်ကို ဝင် augmentation လုပ်သွားမှာမို့လို့ အခု နမူနာ လုပ်ပြထားသလို augmentation method တစ်မျိုးကို ဖိုလ်ဒါတစ်ခုစီမှာ ခွဲလုပ်တာက ဘယ်လိုပြောင်းလဲသွားသလဲ ဆိုတာကို လေ့လာဖို့အတွက် ပိုအဆင်ပြေပါလိမ့်မယ်။ မဟုတ်ရင် temporal-spatial, temporal-spatial-noise စတဲ့ combination output တွေ ထွက်လာမှာမို့လို့ ...  
 
+## 53. [mk-video-class.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-video-class.py)  
+
+Augmented လုပ်ထားတဲ့ Cambodian Sign Language ဗီဒီယိုဖိုင်တွေက အောက်ပါအတိုင်း ရှိနေတယ်။  
+
+```
+(base) rnd@gpu:~/demo/vr$ tree videos
+videos
+├── brightness_contrast
+│   ├── ខាំ-brightness_contrast.mp4
+│   ├── ខាត-brightness_contrast.mp4
+│   ├── ខួរក្បាល-brightness_contrast.mp4
+│   ├── ខេត្តព្រះសីហនុ -brightness_contrast.mp4
+│   ├── ខេត្តមណ្ឌលគិរី -brightness_contrast.mp4
+│   ├── ខែ-brightness_contrast.mp4
+│   ├── ខែ្ស -brightness_contrast.mp4
+│   ├── ខោ-brightness_contrast.mp4
+│   ├── ខ្ជិល-brightness_contrast.mp4
+│   ├── ខ្ទង់-brightness_contrast.mp4
+│   ├── ខ្ទង់រយ-brightness_contrast.mp4
+│   ├── ខ្ទង់រាយ-brightness_contrast.mp4
+│   ├── ខ្ទឹម-brightness_contrast.mp4
+│   ├── ខ្មែរ-brightness_contrast.mp4
+│   ├── ខ្មៅ-brightness_contrast.mp4
+│   └── ខ្លី-brightness_contrast.mp4
+├── noise
+│   ├── ខាំ-noise.mp4
+│   ├── ខាត-noise.mp4
+│   ├── ខួរក្បាល-noise.mp4
+│   ├── ខេត្តព្រះសីហនុ -noise.mp4
+│   ├── ខេត្តមណ្ឌលគិរី -noise.mp4
+│   ├── ខែ-noise.mp4
+│   ├── ខែ្ស -noise.mp4
+│   ├── ខោ-noise.mp4
+│   ├── ខ្ជិល-noise.mp4
+│   ├── ខ្ទង់-noise.mp4
+│   ├── ខ្ទង់រយ-noise.mp4
+│   ├── ខ្ទង់រាយ-noise.mp4
+│   ├── ខ្ទឹម-noise.mp4
+│   ├── ខ្មែរ-noise.mp4
+│   ├── ខ្មៅ-noise.mp4
+│   └── ខ្លី-noise.mp4
+├── spatial
+│   ├── ខាំ-spatial.mp4
+│   ├── ខាត-spatial.mp4
+│   ├── ខួរក្បាល-spatial.mp4
+│   ├── ខេត្តព្រះសីហនុ -spatial.mp4
+│   ├── ខេត្តមណ្ឌលគិរី -spatial.mp4
+│   ├── ខែ-spatial.mp4
+│   ├── ខែ្ស -spatial.mp4
+│   ├── ខោ-spatial.mp4
+│   ├── ខ្ជិល-spatial.mp4
+│   ├── ខ្ទង់-spatial.mp4
+│   ├── ខ្ទង់រយ-spatial.mp4
+│   ├── ខ្ទង់រាយ-spatial.mp4
+│   ├── ខ្ទឹម-spatial.mp4
+│   ├── ខ្មែរ-spatial.mp4
+│   ├── ខ្មៅ-spatial.mp4
+│   └── ខ្លី-spatial.mp4
+├── temporal
+│   ├── ខាំ-temporal.mp4
+│   ├── ខាត-temporal.mp4
+│   ├── ខួរក្បាល-temporal.mp4
+│   ├── ខេត្តព្រះសីហនុ -temporal.mp4
+│   ├── ខេត្តមណ្ឌលគិរី -temporal.mp4
+│   ├── ខែ-temporal.mp4
+│   ├── ខែ្ស -temporal.mp4
+│   ├── ខោ-temporal.mp4
+│   ├── ខ្ជិល-temporal.mp4
+│   ├── ខ្ទង់-temporal.mp4
+│   ├── ខ្ទង់រយ-temporal.mp4
+│   ├── ខ្ទង់រាយ-temporal.mp4
+│   ├── ខ្ទឹម-temporal.mp4
+│   ├── ខ្មែរ-temporal.mp4
+│   ├── ខ្មៅ-temporal.mp4
+│   └── ខ្លី-temporal.mp4
+├── ខាំ.mp4
+├── ខាត.mp4
+├── ខួរក្បាល.mp4
+├── ខេត្តព្រះសីហនុ .mp4
+├── ខេត្តមណ្ឌលគិរី .mp4
+├── ខែ.mp4
+├── ខែ្ស .mp4
+├── ខោ.mp4
+├── ខ្ជិល.mp4
+├── ខ្ទង់.mp4
+├── ខ្ទង់រយ.mp4
+├── ខ្ទង់រាយ.mp4
+├── ខ្ទឹម.mp4
+├── ខ្មែរ.mp4
+├── ខ្មៅ.mp4
+└── ខ្លី.mp4
+
+4 directories, 80 files
+(base) rnd@gpu:~/demo/vr$
+```
+
+
 
 
