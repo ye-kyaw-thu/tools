@@ -2835,12 +2835,15 @@ videos
 
 လုပ်ချင်တာက basename တူတာတွေအားလုံးကို ဖိုင်ဒါတစ်ခုအောက်ထဲမှာ သိမ်းချင်တယ်လေ။ အဲဒါမှ ၅ဖိုင် ကို class တစ်ခုအနေနဲ့ သတ်မှတ်ပြီးတော့ video recognition မော်ဒယ်ဆောက်နိုင်မှာပေါ့။ အဲဒီအတွက် mk-video-class.py ကို ရေးခဲ့တာပါ။ Example running လုပ်ပြရရင် အောက်ပါအတိုင်းပါ။  
 
+```
 (base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ time python ./mk-class.py videos data
 
 real    0m0.733s
 user    0m0.096s
 sys     0m0.636s
+```
 
+```
 (base) rnd@gpu:~/demo/vr$ (base) rnd@gpu:~/demo/vr$ tree data
 data
 ├── ខាំ
@@ -2957,16 +2960,20 @@ data
 
 16 directories, 95 files
 (base) rnd@gpu:~/demo/vr$
+```
 
-တကယ်လို့ --index option နဲ့ run မယ် ဆိုရင်တော့
+တကယ်လို့ --index option နဲ့ run မယ် ဆိုရင်တော့  
 
+```
 (base) rnd@gpu:~/demo/vr$ time python ./mk-class.py videos class --index
 
 real    0m1.459s
 user    0m0.108s
 sys     0m0.676s
 (base) rnd@gpu:~/demo/vr$
+```
 
+```
 (base) rnd@gpu:~/demo/vr$ tree class
 class
 ├── 1
@@ -3084,6 +3091,8 @@ class
 
 16 directories, 96 files
 (base) rnd@gpu:~/demo/vr$
+```
+
 
 
 
