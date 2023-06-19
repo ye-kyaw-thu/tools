@@ -2,6 +2,12 @@
 # Create a new folder and copy augmented video files based on their classes (i.e. basename of the file)
 # If you want to move instead of copy, update the code: shutil.copy to shutil.move
 # Last updated: 19 June 2023
+# How to run:
+# If you want to save the class folder name with the original basename:
+# $ time python ./mk-video-class.py videos class
+#
+# If you want to save the class folder name with 1, 2, 3 instead of basename:
+# $ time python ./mk-video-class.py videos class --index
 
 import os
 import shutil
