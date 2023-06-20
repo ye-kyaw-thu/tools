@@ -3164,6 +3164,8 @@ coding လုပ်စဉ်မှာ ထုံးစံအတိုင်း ex
 (sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$
 ```
 
+class folder တစ်ခုအောက်ကို ဝင်ကြည့်ရင် original video ဖိုင်ကိုရော augmented လုပ်ထားတဲ့ ဗီဒီယိုဖိုင်တွေကိုကော ပြီးတော့ (1), (2), (3), စသည်ဖြင့် ခွဲထားတဲ့ ဖိုင်နာမည်တူတွေရော အတူတူ စုပေးထားတာကို တွေ့ရပါလိမ့်မယ်။  
+
 ```
 (sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$ cd class
 (sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/class$ cd ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត
@@ -3176,6 +3178,57 @@ coding လုပ်စဉ်မှာ ထုံးစံအတိုင်း ex
 (sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/class/ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត$
 ```
 
+--inded ထည့်ပြီး run ရင်တော့ class name တွေကို 1, 2, 3 စသည်ဖြင့် index လုပ်ပြီးသိမ်းပေးသွားပါလိမ့်မယ်။   
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$ python mk-video-class-for-sentence.py sent label --index
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$ cd label
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$ ls
+1  2  3  4  5  6  7  8  index.txt
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$ cat index.txt
+អ្នកបានបាក់ជើង : 1
+អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ : 2
+ហែលទឹក : 3
+មនុស្សម្នាក់បានបាក់ដៃ : 4
+មនុស្សម្នាក់បានរងរបួស : 5
+មានតែអ្នកយាមអ្នកជំងឺម្នាក់ប៉ុណ្ណោះដែលនឹងត្រូវបានអនុញ្ញាតឱ្យស្នាក់នៅពេលយប់ : 6
+អ្នកបានបាក់ដៃ : 7
+ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត : 8
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$ ls 1
+'អ្នកបានបាក់ជើង (1)-brightness_contrast.mp4'  'អ្នកបានបាក់ជើង (2)-brightness_contrast.mp4'
+'អ្នកបានបាក់ជើង (1).mp4'                      'អ្នកបានបាក់ជើង (2).mp4'
+'អ្នកបានបាក់ជើង (1)-noise.mp4'                'អ្នកបានបាក់ជើង (2)-noise.mp4'
+'អ្នកបានបាក់ជើង (1)-spatial.mp4'              'អ្នកបានបាក់ជើង (2)-spatial.mp4'
+'អ្នកបានបាក់ជើង (1)-temporal.mp4'             'អ្នកបានបាក់ជើង (2)-temporal.mp4'
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$ ls 2
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (1)-brightness_contrast.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (1).mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (1)-noise.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (1)-spatial.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (1)-temporal.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (2)-brightness_contrast.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (2).mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (2)-noise.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (2)-spatial.mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (2)-temporal.mp4'
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$ ls 3
+ហែលទឹក-brightness_contrast.mp4  ហែលទឹក.mp4  ហែលទឹក-noise.mp4  ហែលទឹក-spatial.mp4  ហែលទឹក-temporal.mp4
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/label$
+```
 
 ## 55. [m4v_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/m4v_to_mp4.py)  
 
