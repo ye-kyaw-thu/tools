@@ -3119,7 +3119,65 @@ class
 (base) rnd@gpu:~/demo/vr$
 ```
 
-## 54. [m4v_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/m4v_to_mp4.py)  
+## 54. [mk-video-class-for-sentence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-video-class-for-sentence.py)  
+
+အထက်က mk-video-class.py နဲ့ အတူတူပါပဲ။ ဒီတစ်ခါတော့ label တွေက စာကြောင်းတွေ ဖြစ်သွားလို့ ပိုရှည်လာပါလိမ့်မယ်။ အဲဒီအပြင် ဗီဒီရိုကို ရိုက်တဲ့အခါမှာ signer တွေက Cambodian Sign Language တစ်မျိုးတည်း ဆိုလိုတာက sign တစ်မျိုးတည်းကိုပဲ နှစ်ခါ၊ သုံးခါ ရိုက်တာမျိုးတွေ ရှိပါတယ်။ အဲဒီအတွက်ကို ဖိုင်နာမည်မှာ (1), (2), (3), (4) စတာတွေ ပါလာပါတယ်။ အခု Python script နံပါတ် ၅၄ က အဲဒီ ကိစ္စကို ဖြေရှင်းဖို့အတွက် ပြင်ရေးထားတာပါ။ ဆိုလိုတာက နံပါမှာ (1), (2), (3), (4) တွေ ပါလာရင်လည်း ဖိုင်နာမည်တူရင် class တစ်ခုတည်းအောက်မှာ ထားဖို့အတွက် RE ကို အဓိက ဝင်ပြင်ထားတာပါ။
+
+Running example တချို့ကို ဥပမာအနေနဲ့ ထည့်ပေးထားလိုက်မယ်။  
+coding လုပ်စဉ်မှာ ထုံးစံအတိုင်း example ဖိုင်တချို့ ကိုပဲ ထည့်ပြီး သွားပါမယ်။ မဟုတ်ရင် ကြာနေမှာမို့ ...  
+
+အောက်ပါ video folder ကို ဥပမာအနေနဲ့ သုံးပြီး run ပြမယ်။  
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/sent$ ls
+ brightness_contrast
+ noise
+ spatial
+ temporal
+'មនុស្សម្នាក់បានបាក់ដៃ(2).mp4'
+'មនុស្សម្នាក់បានបាក់ដៃ(3).mp4'
+'មនុស្សម្នាក់បានបាក់ដៃ(4).mp4'
+'មនុស្សម្នាក់បានរងរបួស(1).mp4'
+ មនុស្សម្នាក់បានរងរបួស.mp4
+'មានតែអ្នកយាមអ្នកជំងឺម្នាក់ប៉ុណ្ណោះដែលនឹងត្រូវបានអនុញ្ញាតឱ្យស្នាក់នៅពេលយប់(1).mp4'
+ មានតែអ្នកយាមអ្នកជំងឺម្នាក់ប៉ុណ្ណោះដែលនឹងត្រូវបានអនុញ្ញាតឱ្យស្នាក់នៅពេលយប់.mp4
+ ហែលទឹក.mp4
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (1).mp4'
+'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ (2).mp4'
+'អ្នកបានបាក់ជើង (1).mp4'
+'អ្នកបានបាក់ជើង (2).mp4'
+'អ្នកបានបាក់ដៃ (1).mp4'
+'អ្នកបានបាក់ដៃ (2).mp4'
+'ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត(1).mp4'
+ ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត.mp4
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/sent$
+```
+
+--index option မပါပဲ run ရင် အောက်ပါအတိုင်း class name တွေ သို့မဟုတ် class folder တွေကို ရလာပါလိမ့်မယ်။  
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$ ls class
+ មនុស្សម្នាក់បានបាក់ដៃ                                         'អាចចាប់ពីម៉ោង1000ព្រឹក នៅថ្ងៃសៅរ៍ និង ថ្ងៃអាទិត្យ'
+ មនុស្សម្នាក់បានរងរបួស                                          អ្នកបានបាក់ជើង
+ មានតែអ្នកយាមអ្នកជំងឺម្នាក់ប៉ុណ្ណោះដែលនឹងត្រូវបានអនុញ្ញាតឱ្យស្នាក់នៅពេលយប់   អ្នកបានបាក់ដៃ
+ ហែលទឹក                                                     ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$
+```
+
+```
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing$ cd class
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/class$ cd ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/class/ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត$ ls
+'ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត(1)-brightness_contrast.mp4'   ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត-brightness_contrast.mp4
+'ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត(1).mp4'                       ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត.mp4
+'ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត(1)-noise.mp4'                 ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត-noise.mp4
+'ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត(1)-spatial.mp4'               ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត-spatial.mp4
+'ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត(1)-temporal.mp4'              ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត-temporal.mp4
+(sl-vr) rnd@gpu:~/demo/vr/exp/sentence/preprocessing/class/ឱ្យគាត់នៅស្ងៀមបែបនេះបន្តទៀត$
+```
+
+
+## 55. [m4v_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/m4v_to_mp4.py)  
 
 Cambodian Sign Language (CSL) ဒေတာတွေကို ပြင်ဆင်တဲ့အခါမှာ mp4 ဖိုင်တွေရော၊ m4v ဖိုင်တွေရော ရောပါနေတာမို့ mp4 format အဖြစ် ပြောင်းဖို့ preprocessing အလုပ်တစ်ခု က မထင်မှတ်ပဲ ဝင်လာပါတယ်။ m4v video ဖိုင်တွေက Apple OS မှာ သုံးတဲ့ format ပါ။ ဒီ m4v_to_mp4.py က m4v တွေ့ရင် mp4 ပြောင်းပြီး output folder ထဲမှာ သိမ်းဆည်းပေးမယ်။ တကယ်လို့ mp4 ဖိုင်ကိုပဲ တွေ့ရင်တော့ အဲဒီဖိုင်ကို output folder ဆီကို copy ကူးပေးပါလိမ့်မယ်။  
 
@@ -3243,7 +3301,7 @@ Video ဖိုင်တွေကို သိမ်းထားတဲ့ folder
 (base) rnd@gpu:~/demo/vr/exp/word/Words$
 ```
 
-## 55. [mov_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mov_to_mp4.py)  
+## 56. [mov_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mov_to_mp4.py)  
 
 အထက်က m4v_to_mp4.py နဲ့ အတူတူပါပဲ။ ဒီတစ်ခါတော့ mov ကနေ mp4 ကို ပြောင်းဖို့အတွက် သုံးခဲ့တာပါ။  
 Running example က အောက်ပါအတိုင်းပါ။  
