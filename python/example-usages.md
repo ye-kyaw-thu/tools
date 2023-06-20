@@ -3119,6 +3119,10 @@ class
 (base) rnd@gpu:~/demo/vr$
 ```
 
+## 54. [m4v_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/m4v_to_mp4.py)  
+
+Cambodian Sign Language (CSL) ဒေတာတွေကို ပြင်ဆင်တဲ့အခါမှာ mp4 ဖိုင်တွေရော၊ m4v ဖိုင်တွေရော ရောပါနေတာမို့ mp4 format အဖြစ် ပြောင်းဖို့ preprocessing အလုပ်တစ်ခု က မထင်မှတ်ပဲ ဝင်လာပါတယ်။ m4v video ဖိုင်တွေက Apple OS မှာ သုံးတဲ့ format ပါ။ ဒီ m4v_to_mp4.py က m4v တွေ့ရင် mp4 ပြောင်းပြီး output folder ထဲမှာ သိမ်းဆည်းပေးမယ်။ တကယ်လို့ mp4 ဖိုင်ကိုပဲ တွေ့ရင်တော့ အဲဒီဖိုင်ကို output folder ဆီကို copy ကူးပေးပါလိမ့်မယ်။  
+
 
 
 
