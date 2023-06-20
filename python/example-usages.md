@@ -3123,6 +3123,105 @@ class
 
 Cambodian Sign Language (CSL) ဒေတာတွေကို ပြင်ဆင်တဲ့အခါမှာ mp4 ဖိုင်တွေရော၊ m4v ဖိုင်တွေရော ရောပါနေတာမို့ mp4 format အဖြစ် ပြောင်းဖို့ preprocessing အလုပ်တစ်ခု က မထင်မှတ်ပဲ ဝင်လာပါတယ်။ m4v video ဖိုင်တွေက Apple OS မှာ သုံးတဲ့ format ပါ။ ဒီ m4v_to_mp4.py က m4v တွေ့ရင် mp4 ပြောင်းပြီး output folder ထဲမှာ သိမ်းဆည်းပေးမယ်။ တကယ်လို့ mp4 ဖိုင်ကိုပဲ တွေ့ရင်တော့ အဲဒီဖိုင်ကို output folder ဆီကို copy ကူးပေးပါလိမ့်မယ်။  
 
+## Check m4v Files
 
+mp4 ဖိုင်တွေကတော့ ပိုများတယ်။  
 
+```
+(base) rnd@gpu:~/demo/vr/exp/word/Words$ ls *.mp4 | wc
+   1572    1628   37384
+(base) rnd@gpu:~/demo/vr/exp/word/Words$
+```
 
+အဲဒီ ဖိုလ်ဒါအောက်မှာပဲ m4v ဖိုင်တွေလည်း အောက်ပါအတိုင်း ရောပါနေတယ်။  
+
+```
+(base) rnd@gpu:~/demo/vr/exp/word/Words$ ls *.m4v
+ ចក.m4v           ញញឹម.m4v       ទឹកត្រី.m4v     បាយ័ន.m4v           មុង.m4v       វិទ្យាសាស្ត្រ.m4v   សាវម៉ាវ.m4v
+ ចង្កូម.m4v         ដប.m4v        ទេសចរណ៍.m4v   ប៉ោងប៉ោង.m4v         មេសា.m4v     សកម្មភាព.m4v     សិល្បៈ.m4v
+ ចង្វាក់.m4v       'ដាំ(ស្ល).m4v'   ធូលី.m4v       ប្រពៃណី.m4v          យប់មិញ.m4v     សង់ទីម៉ែត.m4v      សិស្ស.m4v
+ ចម្លីយ.m4v         ដេស៊ីម៉ែត.m4v    ធ្នូ.m4v       ផឹក.m4v             រងចាំ.m4v     សត្រូវ.m4v        សុខ.m4v
+ ច្រាសដុសធ្មេញ.m4v   តុ.m4v         នំ.m4v        ផ្លែក្រូច.m4v         រត់.m4v       សត្វ.m4v
+ ឆ្នាំង.m4v         ត្បូង.m4v       និមន្ត.m4v     ពុទ្ធសករាជ.m4v       រមិលគុណ.m4v   'ស(ពណ៌).m4v'
+ ជ័រលុប.m4v         ថ្មកែវ.m4v     បទ.m4v       ព្រះបរមរាជវាំង.m4v   រោងចក្រ.m4v   សមាសធាតុ.m4v
+ ជិតស្និទ្ធិ.m4v       ថ្លៃ.m4v       បាគង.m4v     ភាគបែង.m4v         ល្ហុង.m4v      សាគរ.m4v
+ ឈឺក្បាល.m4v        ទឹកខ្មៅ.m4v     បាពួន.m4v     មង្ឈុត.m4v           វិច្ឆិកា.m4v    សារ.m4v
+(base) rnd@gpu:~/demo/vr/exp/word/Words$ ls *.m4v | wc
+     58      58    1332
+(base) rnd@gpu:~/demo/vr/exp/word/Words$
+```
+
+## --help
+
+```
+(base) rnd@gpu:~/demo/vr/exp/word$ python m4v_to_mp4.py --help
+usage: m4v_to_mp4.py [-h] [--input INPUT] [--output OUTPUT]
+
+Convert m4v videos to mp4.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --input INPUT    Input folder path
+  --output OUTPUT  Output folder path
+(base) rnd@gpu:~/demo/vr/exp/word$
+```
+
+## Example Running
+
+```
+(base) rnd@gpu:~/demo/vr/exp/word$ time python m4v_to_mp4.py --input Words --output allmp4
+...
+...
+...
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Words/ត្បូង.m4v':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    creation_time   : 2019-03-06T07:33:36.000000Z
+    encoder         : HandBrake 1.2.2 2019022300
+  Duration: 00:00:03.61, start: 0.000000, bitrate: 496 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt709/bt709), 960x720 [SAR 4:3 DAR 16:9], 329 kb/s, 29.97 fps, 29.97 tbr, 90k tbn, 180k tbc (default)
+    Metadata:
+      creation_time   : 2019-03-06T07:33:36.000000Z
+      handler_name    : VideoHandler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 155 kb/s (default)
+    Metadata:
+      creation_time   : 2019-03-06T07:33:36.000000Z
+      handler_name    : SoundHandler
+Output #0, mp4, to 'allmp4/ត្បូង.mp4':
+  Metadata:
+    major_brand     : mp42
+    minor_version   : 512
+    compatible_brands: isomiso2avc1mp41
+    encoder         : Lavf58.29.100
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, smpte170m/bt709/bt709), 960x720 [SAR 4:3 DAR 16:9], q=2-31, 329 kb/s, 29.97 fps, 29.97 tbr, 90k tbn, 90k tbc (default)
+    Metadata:
+      creation_time   : 2019-03-06T07:33:36.000000Z
+      handler_name    : VideoHandler
+    Stream #0:1(eng): Audio: aac (LC) (mp4a / 0x6134706D), 48000 Hz, stereo, fltp, 155 kb/s (default)
+    Metadata:
+      creation_time   : 2019-03-06T07:33:36.000000Z
+      handler_name    : SoundHandler
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+frame=  108 fps=0.0 q=-1.0 Lsize=     219kB time=00:00:03.56 bitrate= 502.6kbits/s speed=3.88e+03x
+video:145kB audio:68kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 2.434549%
+Total no. of successfully converted m4v files: 58
+
+real    0m54.499s
+user    0m4.515s
+sys     0m4.643s
+```
+
+## Check the Output Folder
+
+```
+(base) rnd@gpu:~/demo/vr/exp/word/allmp4$ ls *.m4v
+ls: cannot access '*.m4v': No such file or directory
+(base) rnd@gpu:~/demo/vr/exp/word/allmp4$ ls *.mp4 | wc
+   1629    1685   38696
+(base) rnd@gpu:~/demo/vr/exp/word/allmp4$
+```
