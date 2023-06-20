@@ -3242,3 +3242,55 @@ Video ဖိုင်တွေကို သိမ်းထားတဲ့ folder
 ./.DS_Store
 (base) rnd@gpu:~/demo/vr/exp/word/Words$
 ```
+
+```
+(base) rnd@gpu:~/demo/vr/exp/sentence$ time python mov_to_mp4.py --input Sentences --output allmp4
+...
+...
+...
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from 'Sentences/ធុងទឹក.mov':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 0
+    compatible_brands: qt
+    creation_time   : 2023-03-15T07:11:45.000000Z
+    com.apple.quicktime.artwork: {"data":{"edittime":10,"infoStickerId":"","musicId":"","os":"mac","product":"vicut","stickerId":"","videoEffectId":"","videoId":"9d7f18ae-124e-48fa-bc51-bad3c59db7df","videoParams":{"be":0,"ef":0,"ft":0,"ma":0,"me":0,"mu":0,"re":0,"sp":0,"st":0,"te":0,"tx
+  Duration: 00:00:04.73, start: 0.000000, bitrate: 14718 kb/s
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080, 14615 kb/s, 30 fps, 30 tbr, 600 tbn, 1200 tbc (default)
+    Metadata:
+      creation_time   : 2023-03-15T07:11:45.000000Z
+      handler_name    : Core Media Video
+      encoder         : H.264
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 94 kb/s (default)
+    Metadata:
+      creation_time   : 2023-03-15T07:11:45.000000Z
+      handler_name    : Core Media Audio
+Output #0, mp4, to 'allmp4/ធុងទឹក.mp4':
+  Metadata:
+    major_brand     : qt
+    minor_version   : 0
+    compatible_brands: qt
+    com.apple.quicktime.artwork: {"data":{"edittime":10,"infoStickerId":"","musicId":"","os":"mac","product":"vicut","stickerId":"","videoEffectId":"","videoId":"9d7f18ae-124e-48fa-bc51-bad3c59db7df","videoParams":{"be":0,"ef":0,"ft":0,"ma":0,"me":0,"mu":0,"re":0,"sp":0,"st":0,"te":0,"tx
+    encoder         : Lavf58.29.100
+    Stream #0:0(und): Video: h264 (High) (avc1 / 0x31637661), yuv420p(tv, bt709), 1920x1080, q=2-31, 14615 kb/s, 30 fps, 30 tbr, 19200 tbn, 600 tbc (default)
+    Metadata:
+      creation_time   : 2023-03-15T07:11:45.000000Z
+      handler_name    : Core Media Video
+      encoder         : H.264
+    Stream #0:1(und): Audio: aac (LC) (mp4a / 0x6134706D), 44100 Hz, stereo, fltp, 94 kb/s (default)
+    Metadata:
+      creation_time   : 2023-03-15T07:11:45.000000Z
+      handler_name    : Core Media Audio
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+  Stream #0:1 -> #0:1 (copy)
+Press [q] to stop, [?] for help
+frame=  142 fps=0.0 q=-1.0 Lsize=    8506kB time=00:00:04.71 bitrate=14787.7kbits/s speed=79.3x
+video:8445kB audio:55kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.075300%
+Total no. of successfully converted mov files: 247
+
+real    9m3.096s
+user    0m13.782s
+sys     0m32.286s
+```
+
