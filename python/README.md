@@ -161,7 +161,7 @@
 53. [mk-video-class.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-video-class.py)  
 (Augmented video ဖိုင်တွေကို class folder တွေအသီးသီး ဆောက်ပြီး သိမ်းဖို့ ရေးခဲ့တဲ့ script ပါ။)
 
-54. [mk-video-class-for-sentence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-video-class-for-sentence.py)
+54. [mk-video-class-for-sentence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk-video-class-for-sentence.py)  
 (mk-video-class.py နဲ့ အတူတူပါပဲ၊ အဓိက ကွဲသွားတာက ဖိုင်နာမည်တွေမှာ (1), (2), (3), (4) တွေ ပါလာပြီး ရှေ့ပိုင်းဖိုင်နာမည်က တူရင် class တစ်ခုတည်း ထားဖို့အတွက် ပြင်ရေးထားတာ။)
 
 55. [m4v_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/m4v_to_mp4.py)  
