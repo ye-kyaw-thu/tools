@@ -3216,12 +3216,29 @@ user    0m4.515s
 sys     0m4.643s
 ```
 
+m4v ဖိုင် စုစုပေါင်း ၅၈ ဖိုင်စလုံးကို convert လုပ်ပေးသွားတာကို တွေ့ရပါလိမ့်မယ်။  
+
 ## Check the Output Folder
+
+output folder ထဲမှာ m4v ဖိုင်တွေရှိသလား ဆိုတာကို စစ်ကြည့်ရင် မရှိတာကို အောက်ပါအတိုင်း တွေ့ရပါလိမ့်မယ်။  
 
 ```
 (base) rnd@gpu:~/demo/vr/exp/word/allmp4$ ls *.m4v
 ls: cannot access '*.m4v': No such file or directory
+```
+
+mp4 ဖိုင်စုစုပေါင်းက အောက်ပါအတိုင်း ...  
+
+```
 (base) rnd@gpu:~/demo/vr/exp/word/allmp4$ ls *.mp4 | wc
    1629    1685   38696
 (base) rnd@gpu:~/demo/vr/exp/word/allmp4$
+```
+
+Video ဖိုင်တွေကို သိမ်းထားတဲ့ folder တွေမှာ hidden file တွေရှိတတ်တာကိုလည်း မမေ့ပါနဲ့ ... 
+
+```
+(base) rnd@gpu:~/demo/vr/exp/word/Words$ find . -not -name "*.m4v" -not -name "*.mp4" -type f
+./.DS_Store
+(base) rnd@gpu:~/demo/vr/exp/word/Words$
 ```
