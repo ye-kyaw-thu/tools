@@ -3243,6 +3243,11 @@ Video ဖိုင်တွေကို သိမ်းထားတဲ့ folder
 (base) rnd@gpu:~/demo/vr/exp/word/Words$
 ```
 
+## 55. [mov_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mov_to_mp4.py)  
+
+အထက်က m4v_to_mp4.py နဲ့ အတူတူပါပဲ။ ဒီတစ်ခါတော့ mov ကနေ mp4 ကို ပြောင်းဖို့အတွက် သုံးခဲ့တာပါ။  
+Running example က အောက်ပါအတိုင်းပါ။  
+
 ```
 (base) rnd@gpu:~/demo/vr/exp/sentence$ time python mov_to_mp4.py --input Sentences --output allmp4
 ...
@@ -3292,5 +3297,14 @@ Total no. of successfully converted mov files: 247
 real    9m3.096s
 user    0m13.782s
 sys     0m32.286s
+```
+
+mov ဖိုင် စုစုပေါင်း 247 ဖိုင်ကို mp4 encoding အဖြစ် ပြောင်းပေးသွားတာကို တွေ့ရပါလိမ့်မယ်။  
+ပြောင်းပြီးသွားတဲ့ အခါမှာတော့ sentence level CSL ဗီဒီယိုဖိုင်တွေက စုစုပေါင်း 1035 ဖိုင် ရှိတာကို အောက်ပါအတိုင်း တွေ့ရပါတယ်။  
+
+```
+(base) rnd@gpu:~/demo/vr/exp/sentence/allmp4$ ls *.mp4 | wc
+   1035    1464   83908
+(base) rnd@gpu:~/demo/vr/exp/sentence/allmp4$
 ```
 
