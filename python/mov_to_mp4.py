@@ -1,7 +1,9 @@
 ## Written by Ye Kyaw Thu
-## 
-## How to run:
-## 
+# for conversion video format mov to mp4
+# Last updated: 20 June 2023
+#
+# How to run:
+# (base) rnd@gpu:~/demo/vr/exp/word$ time python mov_to_mp4.py --input Sentences --output allmp4
 
 import os
 import subprocess
