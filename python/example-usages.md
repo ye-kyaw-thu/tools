@@ -3432,7 +3432,7 @@ Automatic Speech Recognition (ASR) system တစ်ခု သို့မဟု�
 Running လုပ်ပုံလုပ်နည်းက အောက်ပါအတိုင်း။  
 
 ```
-python jiwer-wer-mer-wil2.py -s "ye kyaw thu" "thu ye kyaw"
+python jiwer_wer_mer_wil2.py -s "ye kyaw thu" "thu ye kyaw"
 WER: 0.6666666666666666
 MER: 0.5
 WIL: 0.5555555555555556
@@ -3460,5 +3460,11 @@ WIL: 0.5555555555555556
 သွား ပြီ
 ```
 
+```
+>python jiwer_wer_mer_wil.py -f ref.txt hyp.txt
+WER: 0.21052631578947367
+MER: 0.2
+WIL: 0.2514619883040936
+```
 
 
