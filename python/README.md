@@ -168,4 +168,7 @@
 (m4v encoding က Apple OS စက်တွေမှာ သုံးတာပါ။ လက်တွေ့ ဗီဒီယိုဖိုင်တွေနဲ့ အလုပ်လုပ်တဲ့အခါမှာ ရောပါလာတတ်တယ်။ ဒီ script က m4v ကနေ mp4 ကို ပြောင်းပေးတာပါ။)
 
 56. [mov_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mov_to_mp4.py)  
-(အထက်က m4v_to_mp4.py နဲ့ အတူတူပါပဲ။ ဒီ ပရိုဂရမ်ကတော့ mov encoding ကနေ mp4 ကို ပြောင်းဖို့အတွက် သုံးခဲ့တယ်။)  
+(အထက်က m4v_to_mp4.py နဲ့ အတူတူပါပဲ။ ဒီ ပရိုဂရမ်ကတော့ mov encoding ကနေ mp4 ကို ပြောင်းဖို့အတွက် သုံးခဲ့တယ်။)
+
+57. [jiwer_wer_mer_wil.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/jiwer_wer_mer_wil.py)
+(ijwer ဆိုတဲ့ Python library ကို သုံးပြီးတော့ WER, MER, WIL သုံးမျိုးကို တွက်ဖို့အတွက် ရေးခဲ့တယ်။ ASR evaluation အတွက် အသုံးဝင်လိမ့်မယ်။)   
