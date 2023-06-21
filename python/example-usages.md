@@ -3427,3 +3427,6 @@ Automatic Speech Recognition (ASR) system တစ်ခု သို့မဟု�
   
 - Word Information Lost (WIL): This metric indicates the percentage of words that were incorrectly predicted between a set of ground-truth sentences and a set of hypothesis sentences. A lower WIL indicates better performance, with a WIL of 0 being perfect. The formula for it is `WIL = 1 - (C/N) + (C/P)` where `C` is the number of correct words, `N` is the number of words in the reference, and `P` is the number of words in the prediction.
 
+တွက်ချက်ပုံ အသေးစိတ်က [ဒီစာတမ်း](https://www.isca-speech.org/archive_v0/archive_papers/interspeech_2004/i04_2765.pdf) ကို ဖတ်ပါ။  
+
+
