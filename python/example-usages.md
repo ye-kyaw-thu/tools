@@ -3419,3 +3419,11 @@ mov ဖိုင် စုစုပေါင်း 247 ဖိုင်ကို 
 (base) rnd@gpu:~/demo/vr/exp/sentence/allmp4$
 ```
 
+## 57. [jiwer_wer_mer_wil.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/jiwer_wer_mer_wil.py)  
+
+Automatic Speech Recognition (ASR) system တစ်ခု သို့မဟုတ် မော်ဒယ် တစ်ခုရဲ့ performance ကို ပုံမှန်အားဖြင့် edit-distance ကိုအခြေခံပြီးတွက်တဲ့ Word Error Rate (WER) ကိုပဲ သုံးပြီးတော့ evaluation လုပ်ကြပါတယ်။ သို့သော် ကျောင်းသားတွေအနေနဲ့က Match Error Rate (MER) နဲ့ Word Information Lost (WIL) evaluation metric တွေကိုလည်း သိထားသင့်တယ်။  
+
+- Match Error Rate (MER): This metric also evaluates the performance of an ASR system. The MER value indicates the percentage of words that were incorrectly predicted and inserted. A lower MER value indicates better performance, with a MER of 0 being perfect. The formula for it is `MER = (S + D + I) / (N + I)` where `S` is the number of substitutions, `D` is the number of deletions, `I` is the number of insertions, and `N` is the number of words in the reference.
+  
+- Word Information Lost (WIL): This metric indicates the percentage of words that were incorrectly predicted between a set of ground-truth sentences and a set of hypothesis sentences. A lower WIL indicates better performance, with a WIL of 0 being perfect. The formula for it is `WIL = 1 - (C/N) + (C/P)` where `C` is the number of correct words, `N` is the number of words in the reference, and `P` is the number of words in the prediction.
+
