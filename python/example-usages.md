@@ -3467,4 +3467,52 @@ MER: 0.2
 WIL: 0.2514619883040936
 ```
 
+## 58. [passphrase_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/passphrase_generator.py)  
+
+passphrase generation ဆိုတာက password တွေကို automatic ထုတ်တဲ့ နည်းလမ်းတစ်ခုပါ။  
+အဲဒီ method က လွယ်ပေမဲ့ လက်တွေ့ မြန်မာစာ စာလုံးတွေနဲ့ ထုတ်ကြည့်တဲ့အခါမှာ ဘယ်လိုနေသလဲ ဆိုတာကို သိချင်လို့ စမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။  
+
+ပရိုဂရမ်ကို သုံးပုံသုံးနည်းက အောက်ပါအတိုင်းပါ။  
+
+```
+(base) C:\Users\ye\.spyder-py3>python passphrase_generator.py --help
+usage: passphrase_generator.py [-h] [-n NUM_WORDS] [-s] wordlist
+
+Generate a passphrase from a list of words.
+
+positional arguments:
+  wordlist              The file name of the word list.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -n NUM_WORDS, --num_words NUM_WORDS
+                        The number of words in the passphrase (default: 3).
+  -s, --space           Include spaces between words.
+```
+
+```
+(base) C:\Users\ye\.spyder-py3>python passphrase_generator.py word-my.txt
+ကျောင်းသားအုန်းသီးမြန်မာ
+```
+
+```
+(base) C:\Users\ye\.spyder-py3>python passphrase_generator.py word-my.txt -s
+လူ သရက်သီး တက္ကသိုလ်
+```
+
+```
+(base) C:\Users\ye\.spyder-py3>python passphrase_generator.py word-my.txt -s -n 2
+တိရစ္ဆာန် အုန်းသီး
+```
+
+```
+(base) C:\Users\ye\.spyder-py3>python passphrase_generator.py word-my.txt -s -n 3
+လူ တက္ကသိုလ် တိရစ္ဆာန်
+```
+
+```
+(base) C:\Users\ye\.spyder-py3>python passphrase_generator.py word-my.txt -n 3
+သရက်သီးလူကျောင်းသား
+```
+
 
