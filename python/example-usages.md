@@ -3560,22 +3560,22 @@ optional arguments:
 ```
 
 ```
-(base) C:\Users\801680\.spyder-py3>python ./rule_based_password_gen.py -s syllable.txt -n number.txt -e extra.txt -r sen
+(base) C:\Users\ye\.spyder-py3>python ./rule_based_password_gen.py -s syllable.txt -n number.txt -e extra.txt -r sen
 ကားg၅
 ```
 
 ```
-(base) C:\Users\801680\.spyder-py3>python ./rule_based_password_gen.py -r se
+(base) C:\Users\ye\.spyder-py3>python ./rule_based_password_gen.py -r se
 ကd
 ```
 
 ```
-(base) C:\Users\801680\.spyder-py3>python ./rule_based_password_gen.py -r sen
+(base) C:\Users\ye\.spyder-py3>python ./rule_based_password_gen.py -r sen
 ကော်e၀
 ```
 
 ```
-(base) C:\Users\801680\.spyder-py3>python ./rule_based_password_gen.py -r nsnseses
+(base) C:\Users\ye\.spyder-py3>python ./rule_based_password_gen.py -r nsnseses
 ၀ကု၇ခါeခeခု
 ```
 
