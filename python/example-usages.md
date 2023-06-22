@@ -3490,6 +3490,22 @@ optional arguments:
   -s, --space           Include spaces between words.
 ```
 
+အဘိဓာန်အသေးလေးနဲ့ ပဲ test လုပ်ပြမယ်။  
+
+```
+(base) C:\Users\ye\.spyder-py3>type word-my.txt
+ကျောင်းသား
+ဆရာ
+မိဘ
+သမီး
+မြန်မာ
+တက္ကသိုလ်
+တိရစ္ဆာန်
+လူ
+အုန်းသီး
+သရက်သီး
+```
+
 ```
 (base) C:\Users\ye\.spyder-py3>python passphrase_generator.py word-my.txt
 ကျောင်းသားအုန်းသီးမြန်မာ
