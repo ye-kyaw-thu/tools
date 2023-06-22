@@ -170,8 +170,8 @@
 56. [mov_to_mp4.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mov_to_mp4.py)  
 (အထက်က m4v_to_mp4.py နဲ့ အတူတူပါပဲ။ ဒီ ပရိုဂရမ်ကတော့ mov encoding ကနေ mp4 ကို ပြောင်းဖို့အတွက် သုံးခဲ့တယ်။)
 
-57. [jiwer_wer_mer_wil.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/jiwer_wer_mer_wil.py)
+57. [jiwer_wer_mer_wil.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/jiwer_wer_mer_wil.py)  
 (ijwer ဆိုတဲ့ Python library ကို သုံးပြီးတော့ WER, MER, WIL သုံးမျိုးကို တွက်ဖို့အတွက် ရေးခဲ့တယ်။ ASR evaluation အတွက် အသုံးဝင်လိမ့်မယ်။)
 
-58. [passphrase_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/passphrase_generator.py)
+58. [passphrase_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/passphrase_generator.py)  
 (passphrase generation ကို မြန်မာစာလုံးတွေနဲ့ လက်တွေ့စမ်းကြည့်ဖို့ ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
