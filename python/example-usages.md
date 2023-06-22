@@ -3634,6 +3634,110 @@ f
 g
 ```
 
+## 60. [MOS_eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/MOS_eval.py)  
 
+TTS model တွေကို Mean Opinion Score (MOS) သုံးပြီး subjective evaluation လုပ်လေ့ရှိတယ်။ TTS model က ထုတ်ပေးထားတဲ့ synthesized speech file တွေကို native speaker က နားထောင်ပြီး 1 to 5 scale နဲ့ evaluation လုပ်သွားတဲ့ ပုံစံပါ။ ဒီ python script မှာတော့ ဖိုင်တစ်ဖိုင်ကို သုံးခါအထိ နားထောင်ခွင့် ပေးထားတယ်။ ဒါကလည်း လက်တွေ့ user-study လုပ်တဲ့ အခါမှာ လိုအပ်တယ်။ တစ်ခေါက်ပဲ play လုပ်ရင် အာရုံမစိုက်လိုက်နိုင်လို့ မကြားလိုက်နိုင်တဲ့ အပိုင်းတွေလည်း ရှိသွားနိုင်လို့။ အထူးသဖြင့် ရှည်တဲ့ စာကြောင်းတွေကို TTS လုပ်ထားတဲ့ အခါမျိုးမှာ ဆိုရင် ပိုလိုအပ်လို့...   
 
+--help ဆိုတဲ့ option နဲ့ help ခေါ်ကြည့်ပါ။  
+
+```
+(base) C:\Users\ye\.spyder-py3>python ./MOS_eval1.py --help
+C:\Users\ye\Anaconda3\lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+usage: MOS_eval1.py [-h] audio_folder log_folder
+
+MOS Evaluation Program
+
+positional arguments:
+  audio_folder  Path to the audio folder
+  log_folder    Path to the log folder
+
+optional arguments:
+  -h, --help    show this help message and exit
+
+(base) C:\Users\ye\.spyder-py3>
+```
+
+wavefiles\ ဆိုတဲ့ ဖိုလ်ဒါအောက်မှာ example running အတွက် အသံဖိုင် သုံးဖိုင်ကို သိမ်းထားတယ်။  
+log\ ဆိုတဲ့ ဖိုလ်ဒါက output folder ပါ။ မရှိရင် ပရိုဂရမ်က create လုပ်ပေးလိမ့်မယ်။  
+
+Example running က အောက်ပါအတိုင်းပါ။  
+
+```
+(base) C:\Users\ye\.spyder-py3>python MOS_eval1.py wavefiles log
+C:\Users\ye\Anaconda3\lib\site-packages\pydub\utils.py:170: RuntimeWarning: Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work
+  warn("Couldn't find ffmpeg or avconv - defaulting to ffmpeg, but may not work", RuntimeWarning)
+Enter your name: Ye Kyaw Thu
+Enter your age: 13
+Enter your sex: Male
+Enter your native language: Burmese
+Enter your second language: Japanese
+Enter other languages you understand well (comma-separated): English, Rakhine
+Welcome to the MOS evaluation!
+You will listen to the synthesized speech and rate its quality.
+Please rate each speech sample on a scale of 1-5.
+Press 'Q' to quit the evaluation.
+
+Speech Sample: wavefiles\221222_0276S1.wav
+Do you want to replay the audio? (Y/N): Y
+Do you want to replay the audio? (Y/N): Y
+Rate the speech quality on a scale of 1-5 (1: Bad, 5: Excellent): 3
+
+Speech Sample: wavefiles\221222_0275S1.wav
+Do you want to replay the audio? (Y/N): N
+Rate the speech quality on a scale of 1-5 (1: Bad, 5: Excellent): 5
+
+Speech Sample: wavefiles\221222_0278S1.wav
+Do you want to replay the audio? (Y/N): N
+Rate the speech quality on a scale of 1-5 (1: Bad, 5: Excellent): 5
+
+Evaluation log saved as: log\mos_evaluation_log_2023-06-22_19-22-33.txt
+```
+
+ထွက်လာမယ့် log ဖိုင်ကိုလည်း ဝင်ကြည့်ကြရအောင်။  
+
+```
+(base) C:\Users\ye\.spyder-py3>cd log
+
+(base) C:\Users\ye\.spyder-py3\log>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9C54-A208
+
+ Directory of C:\Users\ye\.spyder-py3\log
+
+06/22/2023  07:22 PM    <DIR>          .
+06/22/2023  07:22 PM    <DIR>          ..
+06/22/2023  07:22 PM               412 mos_evaluation_log_2023-06-22_19-22-33.txt
+               1 File(s)            412 bytes
+               2 Dir(s)  27,005,231,104 bytes free
+```
+
+Log ဖိုင်ထဲမှာတော့ အောက်ပါအတိုင်း User information နဲ့ evaluation score တွေကို သိမ်းပေးထားလိမ့်မယ်။  
+
+```
+MOS Evaluation Log
+Date: 2023-06-22_19-22-33
+
+User Information:
+Name: Ye Kyaw Thu
+Age: 13
+Sex: Male
+Native Language: Burmese
+Second Language: Japanese
+Other Languages: English, Rakhine
+
+Scores:
+Audio File: wavefiles\221222_0276S1.wav
+Score: 3
+
+Audio File: wavefiles\221222_0275S1.wav
+Score: 5
+
+Audio File: wavefiles\221222_0278S1.wav
+Score: 5
+
+Total Audio Files: 3
+Average MOS Score: 4.33
+
+```
 
