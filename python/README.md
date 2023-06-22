@@ -174,4 +174,7 @@
 (ijwer ဆိုတဲ့ Python library ကို သုံးပြီးတော့ WER, MER, WIL သုံးမျိုးကို တွက်ဖို့အတွက် ရေးခဲ့တယ်။ ASR evaluation အတွက် အသုံးဝင်လိမ့်မယ်။)
 
 58. [passphrase_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/passphrase_generator.py)  
-(passphrase generation ကို မြန်မာစာလုံးတွေနဲ့ လက်တွေ့စမ်းကြည့်ဖို့ ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
+(passphrase generation ကို မြန်မာစာလုံးတွေနဲ့ လက်တွေ့စမ်းကြည့်ဖို့ ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)
+
+59. [rule_based_password_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rule_based_password_gen.py)
+(Rule-based password generation ကို မြန်မာစာ အတွက် စမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
