@@ -3531,4 +3531,51 @@ optional arguments:
 သရက်သီးလူကျောင်းသား
 ```
 
+## 59. [rule_based_password_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rule_based_password_gen.py)  
+
+Rule-based password ဆိုတာကလည်း password တွေကို အော်တိုမစ်တစ် ထုတ်လို့ရတဲ့ နည်းလမ်းတစ်ခုပါ။ Rule ကို ဒီဇိုင်းလုပ်ထားတဲ့အပေါ်ကိုမူတည်ပြီးတော့ hacker တွေအနေနဲ့ ဖြေရတာ ခက်တဲ့ အပိုင်းတွေ ရှိပါတယ်။  
+ဒီ ပရိုဂရမ်ကတော့ မြန်မာစာအတွက် အလွယ်စမ်းထားကြည့်တာပါ။  
+
+```
+(base) C:\Users\ye\.spyder-py3>python ./rule_based_password_gen.py --help
+usage: rule_based_password_gen.py [-h] [-s SYLLABLE] [-n NUMBER] [-e EXTRA] -r RULE
+
+Generate a rule-based password.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s SYLLABLE, --syllable SYLLABLE
+                        The file name for the syllable list (default: syllable.txt).
+  -n NUMBER, --number NUMBER
+                        The file name for the number list (default: number.txt).
+  -e EXTRA, --extra EXTRA
+                        The file name for the special characters list (default: extra.txt).
+  -r RULE, --rule RULE  The rule for generating the password, for example "s+e+n+n".
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+
 
