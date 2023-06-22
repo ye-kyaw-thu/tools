@@ -177,4 +177,7 @@
 (passphrase generation ကို မြန်မာစာလုံးတွေနဲ့ လက်တွေ့စမ်းကြည့်ဖို့ ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)
 
 59. [rule_based_password_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rule_based_password_gen.py)  
-(Rule-based password generation ကို မြန်မာစာ အတွက် စမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
+(Rule-based password generation ကို မြန်မာစာ အတွက် စမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)
+
+60. [MOS_eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/MOS_eval.py)
+(TTS model တွေကို Mean Opinion Score evaluation လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
