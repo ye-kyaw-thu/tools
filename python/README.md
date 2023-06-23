@@ -186,4 +186,7 @@
 (Spacy Library ကို သုံးပြီး အင်္ဂလိပ်စာကြောင်းတွေကို POS/NER tagging လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)
 
 62. [spacy_pos_dep_jp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_dep_jp.py)  
-(Spacy Library ကို သုံးပြီး ဂျပန်စာကြောင်းတွေကို POS tagging နဲ့ Dependency parsing လုပ်ကြည့်ထားတာပါ။)  
+(Spacy Library ကို သုံးပြီး ဂျပန်စာကြောင်းတွေကို POS tagging နဲ့ Dependency parsing လုပ်ကြည့်ထားတာပါ။)
+
+63. [spacy_pos_ner_dep_zh.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_ner_dep_zh.py)  
+(အထက်က ပရိုဂရမ် နှစ်ပုဒ်တဲ့ အတူတူပါပဲ။ ဒီတစ်ခါတော့ တရုပ်စာကြောင်းတွေကို tagging လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ POS/NER/Dependency သုံးမျိုးစလုံးအတွက် ရတယ်။)  
