@@ -4221,11 +4221,72 @@ security/O
 ./O
 ```
 
+## 62. [spacy_pos_dep_jp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_dep_jp.py)  
+
+ဒီတစ်ခါတော့ ဂျပန်စာကြောင်းတွေအတွက် Spacy library ကို သုံးပြီး POS နဲ့ Dependency tagging နှစ်မျိုးကို လုပ်ကြည့်ထားတာပါ။ သိရသလောက် NER ကို Spacy library က support လုပ်မထားလို့ နှစ်မျိုးကိုပဲ စမ်းကြည့်ခဲ့တယ်။   
+
+NHK site ကနေ ကော်ပီယူထားတဲ့ စာကြောင်း သုံးကြောင်းကို input ဖိုင်အနေနဲ့ သိမ်းထားပြီး testing လုပ်ခဲ့တယ်။  
+
+```
+NHKが海外配信に利用している衛星を直接受信することで、1日およそ5時間、ニュースを中心に日本語の番組を無料で視聴できます。
+衛星からの直接受信により無料で視聴できる、ノンスクランブル時間帯の番組表です。
+一部の番組はインターネットで視聴できます。
+```
+
+POS Tagging ...  
+
+```
+python spacy_pos_dep_jp.py -i jp-sentence.txt -t pos -f left-to-right
+NHK/PROPN が/ADP 海外/NOUN 配信/NOUN に/ADP 利用/VERB し/AUX て/SCONJ いる/VERB 衛星/NOUN を/ADP 直接/ADV 受信/VERB する/AUX こと/NOUN で/AUX 、/PUNCT 1/NUM 日/NOUN およそ/NOUN 5/NUM 時間/NOUN 、/PUNCT ニュース/NOUN を/ADP 中心/NOUN に/ADP 日本/PROPN 語/NOUN の/ADP 番組/NOUN を/ADP 無料/NOUN で/ADP 視聴/VERB でき/AUX ます/AUX 。/PUNCT
+衛星/NOUN から/ADP の/ADP 直接/ADV 受信/NOUN に/ADP より/VERB 無料/NOUN で/ADP 視聴/VERB できる/AUX 、/PUNCT ノンスクランブル/NOUN 時間/NOUN 帯/NOUN の/ADP 番組/NOUN 表/NOUN です/AUX 。/PUNCT
+一部/NOUN の/ADP 番組/NOUN は/ADP インターネット/NOUN で/ADP 視聴/VERB でき/AUX ます/AUX 。/PUNCT
+```
+
+Dependency parsing ...  
+
+```
+python spacy_pos_dep_jp.py -i jp-sentence.txt -t dep -f left-to-right
+NHK/nsubj が/case 海外/compound 配信/obl に/case 利用/acl し/aux て/mark いる/fixed 衛星/obj を/case 直接/advmod 受信/acl する/aux こと/advcl で/cop 、/punct 1/nummod 日/nmod およそ/compound 5/nummod 時間/obl  、/punct ニュース/obj を/case 中心/obl に/case 日本/compound 語/nmod の/case 番組/obj を/case 無料/obl で/case 視聴/ROOT でき/aux ます/aux 。/punct
+衛星/obl から/case の/case 直接/advmod 受信/obl に/case より/fixed 無料/obl で/case 視聴/acl できる/aux  、/punct ノンスクランブル/compound 時間/compound 帯/nmod の/case 番組/compound 表/ROOT です/cop 。/punct
+一部/nmod の/case 番組/nsubj は/case インターネット/obl で/case 視聴/ROOT でき/aux ます/aux 。/punct
+```
+
+အထက်က အင်္ဂလိပ်စာ ပရိုဂရမ်လိုပါပဲ။ Tag တွေချည်းပဲ ဆွဲထုတ်တွေလည်း ရပါတယ်။  
+
+```
+python spacy_pos_dep_jp.py -i jp-sentence.txt -t dep -f left-to-right -to
+nsubj case compound obl case acl aux mark fixed obj case advmod acl aux advcl cop punct nummod nmod compound nummod obl punct obj case obl case compound nmod case obj case obl case ROOT aux aux punct
+obl case case advmod obl case fixed obl case acl aux punct compound compound nmod case compound ROOT cop punct
+nmod case nsubj case obl case ROOT aux aux punct
+```
+
+Column format အနေနဲ့တော့ လုပ်မပြတော့ဘူး။  
+ပြီးတော့ output ဖိုင်အနေနဲ့လည်း သိမ်းလို့ ရပါတယ်။  
+
+```
+python spacy_pos_dep_jp.py -i jp-sentence.txt -t dep -f left-to-right -to -o output.txt
+```
+
 
 ```
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
