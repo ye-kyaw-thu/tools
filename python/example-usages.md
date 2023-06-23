@@ -3764,16 +3764,31 @@ The/DET 18th/ADJ International/PROPN Joint/PROPN Symposium/PROPN on/ADP Artifici
 The/DET iSAI/PROPN -/PUNCT NLP/PROPN -/PUNCT AIoT/PROPN 2023/NUM conference/NOUN aims/VERB to/PART facilitate/VERB technology/NOUN and/CCONJ knowledge/NOUN exchange/NOUN among/ADP international/ADJ researchers/NOUN //SYM scholars/NOUN in/ADP the/DET field/NOUN of/ADP artificial/ADJ intelligence/NOUN and/CCONJ natural/ADJ language/NOUN processing/NOUN ,/PUNCT by/ADP covering/VERB a/DET broad/ADJ range/NOUN of/ADP research/NOUN topics/NOUN in/ADP machine/NOUN learning/NOUN ,/PUNCT data/NOUN analytics/NOUN ,/PUNCT robotics/NOUN ,/PUNCT Internet/NOUN of/ADP Things/PROPN ,/PUNCT embedded/VERB systems/NOUN ,/PUNCT signal/NOUN ,/PUNCT image/NOUN speech/NOUN processing/NOUN ,/PUNCT smart/ADJ technology/NOUN and/CCONJ security/NOUN ./PUNCT
 ```
 
-```
+ဒီတစ်ခါတော့ NER tagging လုပ်ကြည့်ရအောင်။  
+`python spacy_pos_ner.py -i en-sentence.txt -t ner -f left-to-right`   
 
 ```
-
+Two/CARDINAL international/O key/O players/O in/O the/O area/O of/O computational/O linguistics/O ,/O the/ORG ELRA/ORG Language/ORG Resources/ORG Association/ORG (/O ELRA/ORG )/O and/O the/ORG International/ORG Committee/ORG on/ORG Computational/ORG Linguistics/ORG (/O ICCL/ORG )/O ,/O are/O joining/O forces/O to/O organize/O the/O 2024/DATE Joint/EVENT International/EVENT Conference/EVENT on/EVENT Computational/EVENT Linguistics/EVENT ,/EVENT Language/EVENT Resources/EVENT and/EVENT Evaluation/EVENT (/O LREC/O -/O COLING/O 2024/O )/O to/O be/O held/O in/O Torino/GPE ,/O Italy/GPE on/O 20/DATE -/DATE 25/DATE May/DATE ,/DATE 2024/DATE ./O
+The/O 18th/ORDINAL International/EVENT Joint/EVENT Symposium/EVENT on/EVENT Artificial/EVENT Intelligence/EVENT and/EVENT Natural/EVENT Language/EVENT Processing/EVENT (/O iSAI/O -/O NLP/O 2023/O )/O and/O The/LAW International/LAW Conference/LAW on/LAW Artificial/LAW Intelligence/LAW and/LAW Internet/LAW of/LAW Things/LAW (/O AIoT/O 2023/O )/O is/O a/O joint/O conference/O organized/O by/O Artificial/ORG Intelligence/ORG Association/ORG of/ORG Thailand/ORG (/O AIAT/O )/O and/O Rajamangala/ORG University/ORG of/ORG Technology/ORG Thanyaburi/ORG (/O RMUTT/ORG )/O ,/O to/O be/O held/O on/O November/DATE 27/DATE -/DATE 29/DATE ,/O 2023/DATE in/O Bangkok/GPE ,/O Thailand/GPE ./O
+The/O iSAI/O -/O NLP/O -/O AIoT/O 2023/O conference/O aims/O to/O facilitate/O technology/O and/O knowledge/O exchange/O among/O international/O researchers/O //O scholars/O in/O the/O field/O of/O artificial/O intelligence/O and/O natural/O language/O processing/O ,/O by/O covering/O a/O broad/O range/O of/O research/O topics/O in/O machine/O learning/O ,/O data/O analytics/O ,/O robotics/O ,/O Internet/O of/O Things/O ,/O embedded/O systems/O ,/O signal/O ,/O image/O speech/O processing/O ,/O smart/O technology/O and/O security/O ./O
 ```
 
-```
+စာကြောင်းနဲ့ tag တွေကို သပ်သပ်စီ ခွဲထုတ်ပြီးတော့ parallel data အနေနဲ့ ယူချင်ရင်တော့ -to (tag only) ဆိုတဲ့ option နဲ့ run ပါ။  
+`python spacy_pos_ner.py -i en-sentence.txt -t pos -f left-to-right -to`  
 
 ```
+NUM ADJ ADJ NOUN ADP DET NOUN ADP ADJ NOUN PUNCT DET PROPN PROPN PROPN PROPN PUNCT PROPN PUNCT CCONJ DET PROPN PROPN ADP PROPN PROPN PUNCT PROPN PUNCT PUNCT AUX VERB NOUN PART VERB DET NUM PROPN PROPN PROPN ADP PROPN PROPN PUNCT PROPN PROPN CCONJ PROPN PUNCT PROPN PUNCT PROPN NUM PUNCT PART AUX VERB ADP PROPN PUNCT PROPN ADP NUM SYM NUM PROPN PUNCT NUM PUNCT
+DET ADJ PROPN PROPN PROPN ADP PROPN PROPN CCONJ PROPN PROPN PROPN PUNCT NOUN NOUN PROPN NUM PUNCT CCONJ DET PROPN PROPN ADP PROPN PROPN CCONJ PROPN ADP PROPN PUNCT PROPN NUM PUNCT AUX DET ADJ NOUN VERB ADP PROPN PROPN PROPN ADP PROPN PUNCT PROPN PUNCT CCONJ PROPN PROPN ADP PROPN PROPN PUNCT PROPN PUNCT PUNCT PART AUX VERB ADP PROPN NUM SYM NUM PUNCT NUM ADP PROPN PUNCT PROPN PUNCT
+DET PROPN PUNCT PROPN PUNCT PROPN NUM NOUN VERB PART VERB NOUN CCONJ NOUN NOUN ADP ADJ NOUN SYM NOUN ADP DET NOUN ADP ADJ NOUN CCONJ ADJ NOUN NOUN PUNCT ADP VERB DET ADJ NOUN ADP NOUN NOUN ADP NOUN NOUN PUNCT NOUN NOUN PUNCT NOUN PUNCT NOUN ADP PROPN PUNCT VERB NOUN PUNCT NOUN PUNCT NOUN NOUN NOUN PUNCT ADJ NOUN CCONJ NOUN PUNCT
+```
 
+NER tag တွေပဲ လိုချင်တဲ့အခါအတွက်က ...   
+`python spacy_pos_ner.py -i en-sentence.txt -t ner -f left-to-right -to`  
+
+```
+CARDINAL O O O O O O O O O O ORG ORG ORG ORG ORG O ORG O O ORG ORG ORG ORG ORG ORG O ORG O O O O O O O O DATE EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT O O O O O O O O O O GPE O GPE O DATE DATE DATE DATE DATE DATE O
+O ORDINAL EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT EVENT O O O O O O O LAW LAW LAW LAW LAW LAW LAW LAW LAW LAW O O O O O O O O O O ORG ORG ORG ORG ORG O O O O ORG ORG ORG ORG ORG O ORG O O O O O O DATE DATE DATE DATE O DATE O GPE O GPE O
+O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O O
 ```
 
 ```
