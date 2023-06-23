@@ -4267,17 +4267,41 @@ Column format အနေနဲ့တော့ လုပ်မပြတော့�
 python spacy_pos_dep_jp.py -i jp-sentence.txt -t dep -f left-to-right -to -o output.txt
 ```
 
+## 63. [spacy_pos_ner_dep_zh.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_ner_dep_zh.py)  
+
+အထက်က ပရိုဂရမ် နှစ်ပုဒ်လိုပါပဲ။ ဒီ script ကတော့ တရုပ်စာကြောင်းတွေကို POS tagging, NER tagging နဲ့ Dependency parsing လုပ်ဖို့အတွက် အသုံးဝင်ပါလိမ့်မယ်။  
+
+အရင်ဆုံး POS tagging ကို လုပ်ကြည့်ရအောင်ပါ။  
 
 ```
+python spacy_pos_ner_dep_zh.py -i zh-sentence.txt -t pos -f left-to-right
+“/PUNCT 泰坦/ADJ ”/PUNCT 潜水器/NOUN 失联/VERB ：/PUNCT 探索/VERB 泰坦尼克号/NOUN 残骸/NOUN 要/VERB 冒多/VERB 大/VERB 的/PART 风险/NOUN ？/PUNCT
 
+我/PRON 喜欢/VERB 中国/PROPN 功夫/NOUN 。/PUNCT
+
+你好/VERB 吗/PART ？/PUNCT
+我/PRON 的/PART 老朋友/NOUN
 ```
 
-```
+ဒီတစ်ခါတော့ NER tagging လုပ်မယ်။  
 
 ```
-
+python spacy_pos_ner_dep_zh.py -i zh-sentence.txt -t ner -f left-to-right
+“/O 泰坦/O ”/O 潜水器/O 失联/O ：/O 探索/O 泰坦尼克号/O 残骸/O 要/O 冒多/O 大/O 的/O 风险/O ？/O
+/O 我/O 喜欢/O 中国/GPE 功夫/O 。/O
+/O 你好/O 吗/O ？/O 我/O 的/O 老朋友/O
 ```
 
+Chinese အတွက်က Spacy library က POS/NER/Depedency parsing သုံးမျိုးစလုံးကို support လုပ်ပါတယ်။ Dependency parsing ကို လုပ်ရင် အောက်ပါလိုမျိုး Output ကို ရလိမ့်မယ်။  
+
+```
+python spacy_pos_ner_dep_zh.py -i zh-sentence.txt -t dep -f left-to-right
+“/punct 泰坦/amod ”/punct 潜水器/nsubj 失联/ROOT ：/punct 探索/conj 泰坦尼克号/compound:nn 残骸/dobj 要/xcomp 冒多/ccomp 大/amod 的/mark 风险/dobj ？/punct
+
+我/nsubj 喜欢/ROOT 中国/nmod:assmod 功夫/dobj 。/punct
+
+你好/dep 吗/discourse ？/ROOT
+我/nmod:assmod 的/case 老朋友/ROOT
 ```
 
 ```
