@@ -3745,12 +3745,23 @@ Average MOS Score: 4.33
 
 လက်တွေ့ မြန်မာစာအတွက် NLP corpus development လုပ်တဲ့အခါမှာ တခြားဘာသာစကားတွေမှာ ဘယ်လို POS tagging လုပ်ကြသလဲ၊ NER Tagging လုပ်ကြသလဲ ဆိုတာကိုလည်း လေ့လာကြရပါတယ်။ ငါ့အတွက်တော့ အင်္ဂလိပ်စာနဲ့ ဂျပန်စာကို အဓိက မှီငြမ်းဖြစ်ခဲ့ပါတယ်။ ဒီ ပရိုဂရမ်က Spacy library ကို သုံးပြီးတော့ အင်္ဂလိပ်စာ စာကြောင်းတွေကို POS tagging, NER tagging လုပ်ဖို့အတွက် စမ်းရေးထားတာ ဖြစ်ပါတယ်။   
 
-```
+အင်္ဂလိပ်စာ စာကြောင်း သုံးကြောင်း copy/paste လုပ်ထားတဲ့ ဖိုင်ကို သုံးပြီး လက်တွေ့ run ပြပါမယ်။  
 
 ```
+> type en-sentence.txt
+Two international key players in the area of computational linguistics, the ELRA Language Resources Association (ELRA) and the International Committee on Computational Linguistics (ICCL), are joining forces to organize the 2024 Joint International Conference on Computational Linguistics, Language Resources and Evaluation (LREC-COLING 2024) to be held in Torino, Italy on 20-25 May, 2024.
 
+The 18th International Joint Symposium on Artificial Intelligence and Natural Language Processing (iSAI-NLP 2023) and The International Conference on Artificial Intelligence and Internet of Things (AIoT 2023) is a joint conference organized by Artificial Intelligence Association of Thailand (AIAT) and Rajamangala University of Technology Thanyaburi (RMUTT), to be held on November 27-29, 2023 in Bangkok, Thailand.
+
+The iSAI-NLP-AIoT 2023 conference aims to facilitate technology and knowledge exchange among international researchers/scholars in the field of artificial intelligence and natural language processing, by covering a broad range of research topics in machine learning, data analytics, robotics, Internet of Things, embedded systems, signal, image speech processing, smart technology and security.
 ```
 
+`python spacy_pos_ner.py -i en-sentence.txt -t pos -f left-to-right` ဆိုတဲ့ command ပေးပြီးတော့ POS tagging လုပ်ကြည့်ရင်  ...  
+
+```
+Two/NUM international/ADJ key/ADJ players/NOUN in/ADP the/DET area/NOUN of/ADP computational/ADJ linguistics/NOUN ,/PUNCT the/DET ELRA/PROPN Language/PROPN Resources/PROPN Association/PROPN (/PUNCT ELRA/PROPN )/PUNCT and/CCONJ the/DET International/PROPN Committee/PROPN on/ADP Computational/PROPN Linguistics/PROPN (/PUNCT ICCL/PROPN )/PUNCT ,/PUNCT are/AUX joining/VERB forces/NOUN to/PART organize/VERB the/DET 2024/NUM Joint/PROPN International/PROPN Conference/PROPN on/ADP Computational/PROPN Linguistics/PROPN ,/PUNCT Language/PROPN Resources/PROPN and/CCONJ Evaluation/PROPN (/PUNCT LREC/PROPN -/PUNCT COLING/PROPN 2024/NUM )/PUNCT to/PART be/AUX held/VERB in/ADP Torino/PROPN ,/PUNCT Italy/PROPN on/ADP 20/NUM -/SYM 25/NUM May/PROPN ,/PUNCT 2024/NUM ./PUNCT
+The/DET 18th/ADJ International/PROPN Joint/PROPN Symposium/PROPN on/ADP Artificial/PROPN Intelligence/PROPN and/CCONJ Natural/PROPN Language/PROPN Processing/PROPN (/PUNCT iSAI/NOUN -/NOUN NLP/PROPN 2023/NUM )/PUNCT and/CCONJ The/DET International/PROPN Conference/PROPN on/ADP Artificial/PROPN Intelligence/PROPN and/CCONJ Internet/PROPN of/ADP Things/PROPN (/PUNCT AIoT/PROPN 2023/NUM )/PUNCT is/AUX a/DET joint/ADJ conference/NOUN organized/VERB by/ADP Artificial/PROPN Intelligence/PROPN Association/PROPN of/ADP Thailand/PROPN (/PUNCT AIAT/PROPN )/PUNCT and/CCONJ Rajamangala/PROPN University/PROPN of/ADP Technology/PROPN Thanyaburi/PROPN (/PUNCT RMUTT/PROPN )/PUNCT ,/PUNCT to/PART be/AUX held/VERB on/ADP November/PROPN 27/NUM -/SYM 29/NUM ,/PUNCT 2023/NUM in/ADP Bangkok/PROPN ,/PUNCT Thailand/PROPN ./PUNCT
+The/DET iSAI/PROPN -/PUNCT NLP/PROPN -/PUNCT AIoT/PROPN 2023/NUM conference/NOUN aims/VERB to/PART facilitate/VERB technology/NOUN and/CCONJ knowledge/NOUN exchange/NOUN among/ADP international/ADJ researchers/NOUN //SYM scholars/NOUN in/ADP the/DET field/NOUN of/ADP artificial/ADJ intelligence/NOUN and/CCONJ natural/ADJ language/NOUN processing/NOUN ,/PUNCT by/ADP covering/VERB a/DET broad/ADJ range/NOUN of/ADP research/NOUN topics/NOUN in/ADP machine/NOUN learning/NOUN ,/PUNCT data/NOUN analytics/NOUN ,/PUNCT robotics/NOUN ,/PUNCT Internet/NOUN of/ADP Things/PROPN ,/PUNCT embedded/VERB systems/NOUN ,/PUNCT signal/NOUN ,/PUNCT image/NOUN speech/NOUN processing/NOUN ,/PUNCT smart/ADJ technology/NOUN and/CCONJ security/NOUN ./PUNCT
 ```
 
 ```
