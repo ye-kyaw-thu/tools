@@ -243,6 +243,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 57. [jiwer_wer_mer_wil.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/jiwer_wer_mer_wil.py)
 58. [passphrase_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/passphrase_generator.py)
 59. [rule_based_password_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rule_based_password_gen.py)
-60. [MOS_eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/MOS_eval.py)  
+60. [MOS_eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/MOS_eval.py)
+61. [spacy_pos_ner.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_ner.py)  
 
 
