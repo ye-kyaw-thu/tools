@@ -180,4 +180,7 @@
 (Rule-based password generation ကို မြန်မာစာ အတွက် စမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)
 
 60. [MOS_eval.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/MOS_eval.py)  
-(TTS model တွေကို Mean Opinion Score evaluation လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
+(TTS model တွေကို Mean Opinion Score evaluation လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)
+
+61. [spacy_pos_ner.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_ner.py)
+(Spacy Library ကို သုံးပြီး အင်္ဂလိပ်စာကြောင်းတွေကို POS/NER tagging လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
