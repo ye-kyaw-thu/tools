@@ -189,4 +189,7 @@
 (Spacy Library ကို သုံးပြီး ဂျပန်စာကြောင်းတွေကို POS tagging နဲ့ Dependency parsing လုပ်ကြည့်ထားတာပါ။)
 
 63. [spacy_pos_ner_dep_zh.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/spacy_pos_ner_dep_zh.py)  
-(အထက်က ပရိုဂရမ် နှစ်ပုဒ်တဲ့ အတူတူပါပဲ။ ဒီတစ်ခါတော့ တရုပ်စာကြောင်းတွေကို tagging လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ POS/NER/Dependency သုံးမျိုးစလုံးအတွက် ရတယ်။)  
+(အထက်က ပရိုဂရမ် နှစ်ပုဒ်တဲ့ အတူတူပါပဲ။ ဒီတစ်ခါတော့ တရုပ်စာကြောင်းတွေကို tagging လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။ POS/NER/Dependency သုံးမျိုးစလုံးအတွက် ရတယ်။)
+
+64. [nltk-lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm.py)  
+(NLTK library ကို သုံးပြီးတော့ language model ဆောက်တာကို ဥပမာ လုပ်ပြထားတဲ့ ပရိုဂရမ်ပါ။)  
