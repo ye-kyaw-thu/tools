@@ -4304,8 +4304,108 @@ python spacy_pos_ner_dep_zh.py -i zh-sentence.txt -t dep -f left-to-right
 我/nmod:assmod 的/case 老朋友/ROOT
 ```
 
-```
+64. [nltk-lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm.py)
 
+NLTK library က တကယ့် professional language model ဆောက်တဲ့ library မဟုတ်ပေမဲ့ ဥပမာ အနေနဲ့ python code နဲ့ရေးပြထားတာပါ။  
+
+2gram LM building ...  
+
+python .\nltk-lm.py -c .\corpus\mypos.txt -s .\corpus\stopwords.txt -n 2 -o .\corpus\mypos.2gram.txt -sm 1
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Most common 2-grams:  [(('ပါ', 'တယ်'), 3522), (('ဖြစ်', 'သည်'), 1416), (('ခဲ့', 'သည်'), 1286), (('တစ်', 'ခု'), 1066), (('ပေး', 'ပါ'), 1059)]
+
+10 lines of .\corpus\mypos.2gram.txt ...  
+
+('၁၉၆၂', 'ခုနှစ်') 23
+('ခုနှစ်', 'ခန့်မှန်း') 2
+('ခန့်မှန်း', 'သန်းခေါင်စာရင်း') 2
+('သန်းခေါင်စာရင်း', 'အရ') 6
+('အရ', 'လူဦးရေ') 7
+('လူဦးရေ', '၁၁၅၉၃၁') 1
+('၁၁၅၉၃၁', 'ယောက်') 1
+('ယောက်', 'ရှိ') 46
+('ရှိ', 'သည်') 668
+('လူ', 'တိုင်း') 53
+
+10 lines of .\corpus\mypos.2gram.txt ...  
+
+('ထမင်းဟင်း', 'ချက်') 1
+('တဝက်', 'စီ') 1
+('ဇူလိုင်', '၁၄') 1
+('မယ့်', 'us') 1
+('us', '123') 1
+('123', 'မှာ') 1
+('ကား', 'မှ') 1
+('မှ', 'ကားဘီး') 1
+('ကားဘီး', 'ကို') 1
+('အလွန်တရာ', 'ပြည့်ကျပ်') 1
+
+python .\nltk-lm.py -c .\corpus\mypos.txt -s .\corpus\stopwords.txt -n 2 -o .\corpus\mypos.2gram.bin -sm 1 -b
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Most common 2-grams:  [(('ပါ', 'တယ်'), 3522), (('ဖြစ်', 'သည်'), 1416), (('ခဲ့', 'သည်'), 1286), (('တစ်', 'ခု'), 1066), (('ပေး', 'ပါ'), 1059)]
+
+3gram model text file format 
+
+python .\nltk-lm.py -c .\corpus\mypos.txt -s .\corpus\stopwords.txt -n 3 -o .\corpus\mypos.3gram.txt -sm 1
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Most common 3-grams:  [(('ချင်', 'ပါ', 'တယ်'), 490), (('ရ', 'ပါ', 'တယ်'), 334), (('ပေး', 'နိုင်', 'မလား'), 267), (('လို့', 'ရ', 'မလား'), 265), (('ရှိ', 'ပါ', 'တယ်'), 259)]
+
+3gram LM ဖိုင်ရဲ့ ထိပ်ဆုံး ၁၀ကြောင်းက အောက်ပါအတိုင်း ...  
+
+('၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း') 2
+('ခုနှစ်', 'ခန့်မှန်း', 'သန်းခေါင်စာရင်း') 2
+('ခန့်မှန်း', 'သန်းခေါင်စာရင်း', 'အရ') 2
+('သန်းခေါင်စာရင်း', 'အရ', 'လူဦးရေ') 1
+('အရ', 'လူဦးရေ', '၁၁၅၉၃၁') 1
+('လူဦးရေ', '၁၁၅၉၃၁', 'ယောက်') 1
+('၁၁၅၉၃၁', 'ယောက်', 'ရှိ') 1
+('ယောက်', 'ရှိ', 'သည်') 4
+('လူ', 'တိုင်း', 'တွင်') 19
+('တိုင်း', 'တွင်', 'သင့်မြတ်') 1
+
+3gram LM ဖိုင်ရဲ့ နောက်ဆုံး ၁၀ကြောင်းက အောက်ပါအတိုင်း ...  
+
+('ပါ', 'ဟုတ်', 'လား') 1
+('ကား', 'မှ', 'ကားဘီး') 1
+('မှ', 'ကားဘီး', 'ကို') 1
+('ကားဘီး', 'ကို', 'ဖြုတ်') 1
+('ကို', 'ဖြုတ်', 'လိုက်') 1
+('ဖြုတ်', 'လိုက်', 'သည်') 1
+('ဘူတာရုံ', 'က', 'အလွန်တရာ') 1
+('က', 'အလွန်တရာ', 'ပြည့်ကျပ်') 1
+('အလွန်တရာ', 'ပြည့်ကျပ်', 'နေ') 1
+('ပြည့်ကျပ်', 'နေ', 'သည်') 1
+
+ဒီတစ်ခါတော့ 3gram model ကိုပဲ binary file format နဲ့ ဆောက်ခိုင်းကြည့်မယ်
+
+python .\nltk-lm.py -c .\corpus\mypos.txt -s .\corpus\stopwords.txt -n 3 -o .\corpus\mypos.3gram.bin -sm 1 -b
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Most common 3-grams:  [(('ချင်', 'ပါ', 'တယ်'), 490), (('ရ', 'ပါ', 'တယ်'), 334), (('ပေး', 'နိုင်', 'မလား'), 267), (('လို့', 'ရ', 'မလား'), 265), (('ရှိ', 'ပါ', 'တယ်'), 259)]
+
+
+လက်ရှိ folder အောက်ကို ကြည့်ရအောင် ...  
+
+dir .\corpus
+ Volume in drive C has no label.
+ Volume Serial Number is 9C54-A208
+
+ Directory of C:\Users\801680\.spyder-py3\corpus
+
+06/26/2023  06:33 PM    <DIR>          .
+06/26/2023  06:33 PM    <DIR>          ..
+06/26/2023  06:24 PM         4,510,660 mypos.2gram.bin
+06/26/2023  05:54 PM         7,361,805 mypos.2gram.txt
+06/26/2023  06:33 PM        13,077,276 mypos.3gram.bin
+06/26/2023  06:28 PM        18,029,201 mypos.3gram.txt
+06/26/2023  04:12 PM         7,347,011 mypos.txt
+06/26/2023  04:56 PM                61 stopwords.txt
+               6 File(s)     50,326,014 bytes
+               2 Dir(s)  28,262,445,056 bytes free
+			   
+			   
+
+
+```
 ```
 
 ```
