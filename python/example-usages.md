@@ -4421,9 +4421,33 @@ dir .\corpus
                2 Dir(s)  28,262,445,056 bytes free
 ```		   
 			   
+## 65. [nltk-lm-predict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm-predict.py)  
 
+Language model (LM) က ခုချိန်ခါမှာ ဆိုရင် ChatGPT ရဲ့ ကျေးဇူးကြောင့် CS, IT နဲ့ ဆိုင်တဲ့သူ မဟုတ်ရင်တောင်မှ ကြားဖူးနေကြလောက်ပါပြီ။ ဟုတ်တယ် LM ကို သုံးပြီး NLP downstream task တွေ အမျိုးမျိုး လုပ်လို့ ရပါတယ်။ သို့သော် အဲဒီလိုလုပ်နိုင်ဖို့အတွက်က ဒေတာတွေက တကယ့်ကို အများကြီး လိုအပ်ပါတယ်။ ဒီ nltk-lm-predict.py ပရိုဂရမ်ကတော့ အထက်က nltk-lm.py နဲ့ ဆောက်ထားခဲ့တဲ့ LM နှစ်မျိုး (2gram, 3gram) ကို သုံးပြီးတော့ input ပေးလိုက်တဲ့ စာကြောင်းအပေါ်မူတည်ပြီးတော့ နောက်ဆက်တွဲ ဖြစ်လာနိုင်တဲ့ စကားလုံး (word) ကို ခန့်မှန်းတဲ့ အလုပ်ကို ဒီမို လုပ်ပြထားတာပါ။ အင်္ဂလိပ်လိုဆိုရင်တော့ next word prediction ပေါ့။ လက်ရှိ ဒီမို လုပ်ဖို့အတွက် သုံးခဲ့တဲ့ ဒေတာက myPOS မို့လို့ training ဒေတာက စုစုပေါင်း စာကြောင်းရေ လေးသောင်း သုံးထောင်ကျော်ပဲ ရှိပါတယ်။ အဲဒါကြောင့် LM အနေနဲ့ဆိုရင် ဒေတာက နည်းတယ်လို့ ပြောလို့ ရပါတယ်။ ဘာပဲဖြစ်ဖြစ် လက်တွေ့လုပ်ပြလိုက်မှ မြင်သာတာမို့ ...  
+
+အရင်ဆုံး 2gram model ကို သုံးပြီးတော့ ရိုက်ထည့်လိုက်တဲ့ စာကြောင်းရဲ့ နောက်မှာ ဘယ်လို စာလုံးမျိုးဖြစ်နိုင်တယ်လို့ ခန့်မှန်းပေးတာကို လေ့လာကြည့်ကြရအောင် ...  
 
 ```
+python nltk-lm-predict.py -m .\corpus\mypos.2gram.bin
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Language model loaded successfully.
+Enter a sentence or phrase (or press 'q' to quit): နေကောင်း ရဲ့
+Next possible words: ['လား', 'အိတ်', 'နာမည်', 'လက်မှတ်', 'စကား']
+Enter a sentence or phrase (or press 'q' to quit): ဗိုက်
+Next possible words: ['မ', 'အရမ်း', 'က', 'ကို', 'ထဲ']
+Enter a sentence or phrase (or press 'q' to quit): မြန်မြဏ္ တွါ။ ဦှ
+Next possible words: ['<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း', 'သန်းခေါင်စာရင်း']
+Enter a sentence or phrase (or press 'q' to quit): ကျောင်းသား များ
+Next possible words: ['ကို', 'သည်', 'နှင့်', 'တွင်', 'ဖြစ်']
+Enter a sentence or phrase (or press 'q' to quit): စိတ်ဝင်စား
+Next possible words: ['စရာ', 'တယ်', 'ဖို့', 'မှု', 'ဖွယ်']
+Enter a sentence or phrase (or press 'q' to quit): အဲဒီ အချိန် ကို
+Next possible words: ['သွား', 'မ', 'လည်း', 'တွေ့', 'ဘယ်']
+Enter a sentence or phrase (or press 'q' to quit): ဘယ်လို တေးဂီတ
+Next possible words: ['ကို', 'များ', 'မျိုး', 'က', 'အမျိုးအစား']
+Enter a sentence or phrase (or press 'q' to quit): ရန်ကုန် နှင့်
+Next possible words: ['ပတ်သက်', 'အခြား', 'မြန်မာ', 'တစ်', 'တူ']
+Enter a sentence or phrase (or press 'q' to quit):
 ```
 
 ```
