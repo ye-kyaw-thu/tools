@@ -193,3 +193,6 @@
 
 64. [nltk-lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm.py)  
 (NLTK library ကို သုံးပြီးတော့ language model ဆောက်တာကို ဥပမာ လုပ်ပြထားတဲ့ ပရိုဂရမ်ပါ။)  
+
+65. [nltk-lm-predict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm-predict.py)  
+(အထက်က nltk-lm.py နဲ့ ဆောက်ထားခဲ့တဲ့ language model ကို သုံးပြီးတော့ interactive next word prediction ကို ဒီမိုလုပ်ပါထားတာပါ။)  
