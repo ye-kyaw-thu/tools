@@ -4450,6 +4450,8 @@ Next possible words: ['ပတ်သက်', 'အခြား', 'မြန်မ�
 Enter a sentence or phrase (or press 'q' to quit):
 ```
 
+ဒီတစ်ခါတော့ 3gram LM ကို သုံးပြီး next word prediction ကို လုပ်ကြည့်ပါမယ်။  
+
 ```
 
 ```
