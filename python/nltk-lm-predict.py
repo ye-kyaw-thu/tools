@@ -10,8 +10,6 @@ python ..\nltk-predict.py -m .\mypos.lm.txt
 
 Reference:
 https://medium.com/swlh/language-modelling-with-nltk-20eac7e70853#6463
-
-
 """
 
 import argparse
