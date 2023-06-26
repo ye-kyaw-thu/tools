@@ -18,21 +18,6 @@ import os
 import codecs
 import nltk
 
-#def load_model(model_path):
-#    with open(model_path, 'rb') as f:
-#        model = dill.load(f)
-#    return model
-
-#def load_model(model_path):
-#    with open(model_path, 'rb') as f:
-#        try:
-#            model = dill.load(f)
-#        except ModuleNotFoundError:
-#            f.seek(0)
-#            model = f.read()
-#    return model
-
-
 def load_model(model_path):
     _, ext = os.path.splitext(model_path)
 
