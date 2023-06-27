@@ -4524,6 +4524,8 @@ Enter a sentence or phrase (or press 'q' to quit): q
 
 ဒီ nltk-lm.py နဲ့ nltk-lm-predict ပရိုဂရမ်နှစ်ပုဒ်ကနေ language model ရဲ့ အသုံးဝင်ပုံကို ခန့်မှန်းလို့ ရမယ်လို့ ထင်ပါတယ်။ ဒေတာအများကြီးကို သုံးပြီးတော့ LLM (Large Language Model) ဆောက်နိုင်ရင်တော့ intelligent လို့ ဆိုလို့ရတဲ့ အပိုင်းအထိ ဖြစ်လာတယ်။ လက်ရှိ ChatGPT က ဥပမာ တစ်ခုပါပဲ။ အဲဒါကြောင့် languagem modeling နဲ့ ပတ်သက်တဲ့ သုတေသနကလည်း စိတ်ဝင်စားဖို့ ကောင်းပါတယ်။   
 
+## 
+
 ## Next program 
 
 ```
