@@ -4524,7 +4524,56 @@ Enter a sentence or phrase (or press 'q' to quit): q
 
 ဒီ nltk-lm.py နဲ့ nltk-lm-predict ပရိုဂရမ်နှစ်ပုဒ်ကနေ language model ရဲ့ အသုံးဝင်ပုံကို ခန့်မှန်းလို့ ရမယ်လို့ ထင်ပါတယ်။ ဒေတာအများကြီးကို သုံးပြီးတော့ LLM (Large Language Model) ဆောက်နိုင်ရင်တော့ intelligent လို့ ဆိုလို့ရတဲ့ အပိုင်းအထိ ဖြစ်လာတယ်။ လက်ရှိ ChatGPT က ဥပမာ တစ်ခုပါပဲ။ အဲဒါကြောင့် languagem modeling နဲ့ ပတ်သက်တဲ့ သုတေသနကလည်း စိတ်ဝင်စားဖို့ ကောင်းပါတယ်။   
 
-## 
+## 66. [format_conversion.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion.py)  
+
+NLP သမားတွေဆိုရင်တော့ သိပြီးသားဖြစ်ပါလိမ့်မယ်။ ဒေတာ format တွေကို left-to-right ရေးတဲ့ ပုံစံကနေ top-down သို့မဟုတ် column အလိုက်ရေးတဲ့ ပုံစံကို ပြောင်းကြရတာကို။ အထူးသဖြင့် CRF လိုမော်ဒယ်မျိုး training လုပ်ဖို့အတွက် ဆိုရင်ပေါ့။ ထိုနည်းလည်းကောင်း CRF model နဲ့ testing လုပ်ပြီး ရလာတဲ့ column format ဒေတာဖိုင်တွေကိုလည်း ပုံမှန်အတိုင်း left-to-right ရေးတဲ့ပုံစံအဖြစ် ပြောင်းကြရတာကို။ ဒီ python script က အဲဒီအလုပ်အတွက် ရေးထားတာပါ။  
+
+မသုံးခင်မှာ၊ အရင်ဆုံး -h, --help နဲ့ help screen ခေါ်ကြည့်ပါ။  
+
+```
+python format_conversion.py --help
+usage: format_conversion.py [-h] -f {top-down,left-to-right} input_file output_file
+
+Convert between CRF and left-to-right formats.
+
+positional arguments:
+  input_file            Path to the input file
+  output_file           Path to the output file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f {top-down,left-to-right}, --format {top-down,left-to-right}
+                        Format of the output file
+```
+
+left-to-right ကနေ column format အဖြစ် ပြောင်းမယ် ဆိုရင် အောက်ပါအတိုင်း။  
+
+```
+python format_conversion.py .\small-ner.txt .\top-down.txt -f top-down
+```
+
+CRF format သို့မဟုတ် column format ကနေ left-to-right format ကို ပြောင်းချင်ရင်တော့ အောက်ပါအတိုင်း run ပါ။  
+
+```
+python format_conversion.py .\top-down.txt .\left-to-right.txt -f left-to-right
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
 
 ## Next program 
 
