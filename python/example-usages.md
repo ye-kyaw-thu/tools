@@ -4453,6 +4453,92 @@ Enter a sentence or phrase (or press 'q' to quit):
 ဒီတစ်ခါတော့ 3gram LM ကို သုံးပြီး next word prediction ကို လုပ်ကြည့်ပါမယ်။  
 
 ```
+python nltk-lm-predict.py -m .\corpus\mypos.3gram.bin
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Language model loaded successfully.
+Enter a sentence or phrase (or press 'q' to quit): ဂျီဒီပီ
+Next possible words: ['ကို', '၏', 'သည်', 'ကိန်းဂဏန်း', 'တက်']
+Enter a sentence or phrase (or press 'q' to quit): ဈေး က
+Next possible words: ['တော့', 'များ', 'ဘာ', 'လည်း', 'ဝယ်']
+Enter a sentence or phrase (or press 'q' to quit): ဘူတာရုံ က
+Next possible words: ['ဘယ်', 'နေ', 'ဘာ', 'တောင်', 'ယာဉ်စီးခ']
+Enter a sentence or phrase (or press 'q' to quit): ရန်ကုန် နှင့်
+Next possible words: ['အခြား', 'မန္တလေး', 'နိုင်ငံ', 'ပဲခူး', 'တိုက်ရိုက်']
+Enter a sentence or phrase (or press 'q' to quit): မျှော်လင့်ချက် က
+Next possible words: ['<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း', 'သန်းခေါင်စာရင်း']
+Enter a sentence or phrase (or press 'q' to quit): သော့
+Next possible words: ['ကို', '</s>', 'များ', 'ပါ', 'ရှိ']
+Enter a sentence or phrase (or press 'q' to quit): မင်း ဘာ
+Next possible words: ['ဖြစ်', 'စား', 'လုပ်', 'လို့', 'လို']
+Enter a sentence or phrase (or press 'q' to quit): ငါ့ အမ
+Next possible words: ['ကြီး', '<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း']
+Enter a sentence or phrase (or press 'q' to quit): ကျွန်တော့ သဘော
+Next possible words: ['<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း', 'သန်းခေါင်စာရင်း']
+Enter a sentence or phrase (or press 'q' to quit): စစ်ဆေး
+Next possible words: ['ပေး', 'ကြည့်', 'မှု', 'ပါ', 'ပြီး']
+Enter a sentence or phrase (or press 'q' to quit): q
+```
+
+ဒီ Python script က text file format LM ဖိုင်ကိုလည်း support လုပ်ပါတယ်။  
+
+```
+python nltk-lm-predict.py -m .\corpus\mypos.3gram.bin
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Language model loaded successfully.
+Enter a sentence or phrase (or press 'q' to quit): မင်း ကို
+Next possible words: ['ပြော', 'ကြည့်', 'ပါ', 'မ', 'ပဲ']
+Enter a sentence or phrase (or press 'q' to quit): ကောင်မလေး
+Next possible words: ['က', 'နဲ့', 'ကို', 'ရှိ', 'တွေ']
+Enter a sentence or phrase (or press 'q' to quit): ကောင်မလေး ရဲ့
+Next possible words: ['<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း', 'သန်းခေါင်စာရင်း']
+Enter a sentence or phrase (or press 'q' to quit): ကန့်သတ်
+Next possible words: ['ထား', 'ချုပ်ချယ်', 'ချက်', 'ခြင်း', 'သည့်']
+Enter a sentence or phrase (or press 'q' to quit): အားလပ်ခွင့်
+Next possible words: ['ခံစားပိုင်ခွင့်', '<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း']
+Enter a sentence or phrase (or press 'q' to quit): အာဂုံဆောင်
+Next possible words: ['အလွတ်ကျက်', '<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း']
+Enter a sentence or phrase (or press 'q' to quit): မီးဖွား
+Next possible words: ['ဖို့', 'ထုံးတမ်း', '<s>', '၁၉၆၂', 'ခုနှစ်']
+Enter a sentence or phrase (or press 'q' to quit): ခေါင်းလောင်း ကို
+Next possible words: ['အချိန်', '<s>', '၁၉၆၂', 'ခုနှစ်', 'ခန့်မှန်း']
+Enter a sentence or phrase (or press 'q' to quit): ဆယ့်ငါး
+Next possible words: ['မိနစ်', '</s>', '<s>', '၁၉၆၂', 'ခုနှစ်']
+Enter a sentence or phrase (or press 'q' to quit): လည်
+Next possible words: ['တာ', 'ချင်', 'စရာ', 'နိုင်', 'ဖို့']
+Enter a sentence or phrase (or press 'q' to quit): ရွှေတိဂုံ
+Next possible words: ['စေတီတော်', 'ဘုရား', 'စေတီ', 'လို့', 'စေတီတော်မြတ်']
+Enter a sentence or phrase (or press 'q' to quit): ဝန်ဆောင်
+Next possible words: ['မှု', 'ပေး', 'တဲ့', 'ခ', 'ထူထောင်']
+Enter a sentence or phrase (or press 'q' to quit): ထောက်ခံ
+Next possible words: ['ပေး', 'မှု', 'သူ', 'အားပေး', 'ခဲ့']
+Enter a sentence or phrase (or press 'q' to quit): နာနတ်သီး
+Next possible words: ['</s>', 'ကို', 'စား', 'ဖျော်ရည်', 'ဒါမှမဟုတ်']
+Enter a sentence or phrase (or press 'q' to quit): စပျစ်ရည်
+Next possible words: ['နည်းနည်း', 'ထည့်', '<s>', '၁၉၆၂', 'ခုနှစ်']
+Enter a sentence or phrase (or press 'q' to quit): ဘူမိဗေဒ
+Next possible words: ['ပညာရှင်', 'ကို', 'တိုင်းတာ', 'ပညာရပ်', 'သည်']
+Enter a sentence or phrase (or press 'q' to quit): ကြိုးကြိုးစားစား
+Next possible words: ['လုပ်', 'စာကျက်', 'အလုပ်', 'စာ', 'နဲ့']
+Enter a sentence or phrase (or press 'q' to quit): q
+```
+
+ဒီ nltk-lm.py နဲ့ nltk-lm-predict ပရိုဂရမ်နှစ်ပုဒ်ကနေ language model ရဲ့ အသုံးဝင်ပုံကို ခန့်မှန်းလို့ ရမယ်လို့ ထင်ပါတယ်။  
+
+## Next program 
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
