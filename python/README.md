@@ -195,7 +195,7 @@
 (NLTK library ကို သုံးပြီးတော့ language model ဆောက်တာကို ဥပမာ လုပ်ပြထားတဲ့ ပရိုဂရမ်ပါ။)  
 
 65. [nltk-lm-predict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm-predict.py)  
-(အထက်က nltk-lm.py နဲ့ ဆောက်ထားခဲ့တဲ့ language model ကို သုံးပြီးတော့ interactive next word prediction ကို ဒီမိုလုပ်ပါထားတာပါ။)
+(အထက်က nltk-lm.py နဲ့ ဆောက်ထားခဲ့တဲ့ language model ကို သုံးပြီးတော့ interactive next word prediction ကို ဒီမိုလုပ်ပြထားတာပါ။)
 
 66. [format_conversion.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion.py)  
 (left-to-right ကနေ top-down format ထိုနည်းလည်းကောင်း top-down ကနေ left-to-right ကို ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)  
