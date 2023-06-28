@@ -118,7 +118,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Convert between CRF and left-to-right formats.')
     parser.add_argument('input_file', type=str, help='Path to the input file')
     parser.add_argument('output_file', type=str, help='Path to the output file')
-    parser.add_argument('-d', '--delimiter', type=str, required=True, help='Delimiter between word and tag')
+    parser.add_argument('-d', '--delimiter', type=str, required=True, help='Delimiter between word and tag for input corpus')
     parser.add_argument('-f', '--format', type=str, required=True, 
                         choices=['top-down', 'left-to-right'], help='Format of the output file')
     parser.add_argument('-e', '--error_filename', type=str, required=False,
