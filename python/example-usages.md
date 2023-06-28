@@ -4667,11 +4667,137 @@ output file ဖြစ်တဲ့ left-to-right.txt ဖိုင်ကတော�
 ...
 ...
 ```
-## Next program 
+
+## 67. [format_conversion_with_error_check.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion_with_error_check.py)  
+
+Corpus တစ်ခုကို development လုပ်တဲ့အခါမှာ tagging လုပ်တဲ့သူက များရင်များသလို error တွေ ရှိတတ်ပါတယ်။ ဒီပရိုဂရမ်က NER corpus development လုပ်နေစဉ်မှာ ဖြစ်တတ်တဲ့ tagging အမှား (ဒီနေရာမှာ အမှားဆိုတာက typing အမှားကြောင့် word နဲ့ tag နဲ့ ပူးသွားတာမျိုး၊ tag နာမည်က defined လုပ်ထားတဲ့အတိုင်း အတိအကျမတူတဲ့ အမှားမျိုးကို ဆိုလို) တွေကို စစ်ဆေးဖို့အတွက် ရေးခဲ့ပါတယ်။   
+
+Error checking for test-NER corpus (crf or top-down format):  
 
 ```
+\crf>python ..\..\..\..\format_conversion_with_error_check2.py test.ner tmp.out -f left-to-right -l labels.txt -e tmp-error.out -d " "
+Found 28 lines with format errors. Details are written to 'tmp-error.out' if provided.
+```
+
+စစ်ဆေးပြီး CRF format နဲ့ ပြင်ဆင်ထားတဲ့ corpus ထဲမှာ အမှားတွေကို တွေ့လို့ tmp-error.out ဆိုတဲ့ ဖိုင်မှာ ရေးပေးပါလိမ့်မယ်။ အဲဒီ ဖိုင်ထဲမှာတော့ အောက်ပါလိုမျိုး အမှားတွေကို တွေ့ရပါလိမ့်မယ်။  
 
 ```
+Sentence 73, Token 1883: အက်ဥပဒေ S-lAW
+Sentence 90, Token 2363: ဖွံ့ဖြိုး o
+Sentence 102, Token 2716: ။ O​
+Sentence 169, Token 4159: ။ Oဒါ
+Sentence 192, Token 4702: ။ Oသတ်မှတ်
+Sentence 252, Token 5913: ။ Oရေတွင်း
+Sentence 473, Token 11324: ရေး Oအဖွဲ့အစည်း
+Sentence 655, Token 15148: မစ္စတာ B-PRE
+Sentence 1091, Token 25139: အဖွဲ့အစည်း Oမနုဿဗေဒ
+Sentence 1135, Token 26054: မင်း E-MER
+Sentence 1157, Token 26581: ။ Oကျွန်မ
+Sentence 1246, Token 28440: ။ O​
+Sentence 1325, Token 30189: မယ် o
+Sentence 1376, Token 31420: ။ O​
+Sentence 1398, Token 31853: ။ Oသင်တန်း
+Sentence 1483, Token 34014: ။ O​
+Sentence 1610, Token 36979: ၁၂ဝ S-NUMD
+Sentence 1632, Token 37518: ကျောင်း E-LOCနှင့်
+Sentence 1652, Token 38000: ဖိုးဆင် s-PER
+Sentence 1669, Token 38432: ရန်ကုန် B-FACTION
+Sentence 1669, Token 38433: တက္ကသိုလ် I-FACTION
+Sentence 1669, Token 38434: စာကြည့်တိုက် E-FACTION
+Sentence 1700, Token 39223: ။ Oအညို
+Sentence 1831, Token 42191: ငွေကြေး S-O
+Sentence 1834, Token 42285: CB B-PROUDCT
+Sentence 1869, Token 43145: ။ Oမယ်လ်ဗင်
+Sentence 1953, Token 45128: King E-DENT
+Sentence 1982, Token 45745: ။ Oသို့သော်လည်း
+```
+
+Error checking for test-NER corpus (left-to-right format):  
+
+```
+\ltor>python ..\..\..\..\format_conversion_with_error_check2.py test.ner tmp.out -f top-down -l labels.txt -e tmp-error.out -d "/"
+Found 73 lines with format errors. Details are written to 'tmp-error.out' if provided.
+```
+
+စစ်ဆေးပြီး left-to-right format နဲ့ ရိုက်ထားတဲ့ corpus ထဲမှာ အမှားတွေကို တွေ့လို့ tmp-error.out ဆိုတဲ့ ဖိုင်မှာ ရေးပေးပါလိမ့်မယ်။ အဲဒီ ဖိုင်ထဲမှာတော့ အောက်ပါလိုမျိုး အမှားတွေကို တွေ့ရပါလိမ့်မယ်။  
+
+
+```
+Sentence 66, Token 17: //O
+Sentence 73, Token 11: အက်ဥပဒေ/S-lAW
+Sentence 90, Token 4: ဖွံ့ဖြိုး/o
+Sentence 102, Token 14: ။/O​
+Sentence 111, Token 9: /O
+Sentence 141, Token 3: /O
+Sentence 141, Token 8: /O
+Sentence 162, Token 28: /O
+Sentence 162, Token 29: /O
+Sentence 169, Token 2: ။/Oဒါ/O
+Sentence 186, Token 4: /O
+Sentence 186, Token 24: /O
+Sentence 192, Token 2: ။/Oသတ်မှတ်/O
+Sentence 233, Token 4: /O
+Sentence 252, Token 12: ။/Oရေတွင်း/O
+Sentence 334, Token 2: /O
+Sentence 344, Token 6: /O
+Sentence 469, Token 55: သလဲ
+Sentence 473, Token 47: ရေး/Oအဖွဲ့အစည်း/O
+Sentence 479, Token 7: /O
+Sentence 586, Token 3: /O
+Sentence 615, Token 4: /O
+Sentence 650, Token 34: /O
+Sentence 651, Token 1: ဒီလောက်
+Sentence 655, Token 1: မစ္စတာ/B-PRE
+Sentence 664, Token 3: တယ်
+Sentence 790, Token 8: ရဲဘော်
+Sentence 802, Token 33: /O
+Sentence 855, Token 8: လေ
+Sentence 862, Token 11: /O
+Sentence 927, Token 9: ပါဦး
+Sentence 1026, Token 13: /O
+Sentence 1068, Token 5: လေ
+Sentence 1091, Token 12: အဖွဲ့အစည်း/Oမနုဿဗေဒ/O
+Sentence 1135, Token 2: မင်း/E-MER
+Sentence 1143, Token 8: /O
+Sentence 1157, Token 4: ။/Oကျွန်မ/O
+Sentence 1198, Token 7: လဲ
+Sentence 1211, Token 34: /O
+Sentence 1246, Token 9: ။/O​/O
+Sentence 1325, Token 3: မယ်/o
+Sentence 1343, Token 5: /O
+Sentence 1376, Token 48: ။/O​
+Sentence 1398, Token 2: ။/Oသင်တန်း/O
+Sentence 1480, Token 5: ပေါ်ထွန်း
+Sentence 1483, Token 15: ။/O​
+Sentence 1610, Token 3: ၁၂ဝ/S-NUMD
+Sentence 1632, Token 7: ကျောင်း/E-LOCနှင့်/O
+Sentence 1632, Token 14: /O
+Sentence 1632, Token 17: /O
+Sentence 1652, Token 2: ဖိုးဆင်/s-PER
+Sentence 1667, Token 24: /O
+Sentence 1669, Token 7: ရန်ကုန်/B-FACTION
+Sentence 1669, Token 8: တက္ကသိုလ်/I-FACTION
+Sentence 1669, Token 9: စာကြည့်တိုက်/E-FACTION
+Sentence 1669, Token 18: /O
+Sentence 1679, Token 41: /O
+Sentence 1680, Token 9: /O
+Sentence 1680, Token 18: /O
+Sentence 1700, Token 7: ။/Oအညို/O
+Sentence 1749, Token 44: မယ်
+Sentence 1831, Token 1: ငွေကြေး/S-O
+Sentence 1834, Token 36: CB/B-PROUDCT
+Sentence 1869, Token 4: ။/Oမယ်လ်ဗင်/S-GPE
+Sentence 1882, Token 33: ။/O/O
+Sentence 1897, Token 14: /O
+Sentence 1951, Token 43: တယ်
+Sentence 1953, Token 5: King/E-DENT
+Sentence 1969, Token 5: /O
+Sentence 1982, Token 10: ။/Oသို့သော်လည်း/O
+Sentence 1983, Token 18: လား
+Sentence 1990, Token 35: /O
+Sentence 1990, Token 37: /O
+```
+
 
 ```
 
