@@ -201,6 +201,9 @@
 (left-to-right ကနေ top-down format ထိုနည်းလည်းကောင်း top-down ကနေ left-to-right ကို ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)
 
 67. [format_conversion_with_error_check.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion_with_error_check.py)  
-(ဒီတစ်ခါတော့ ပရိုဂရမ် နံပါတ် ၆၆ ကို corpus error checking ထပ်ဖြည့်ထားတာပါ။ format conversion မလုပ်ခင်မှာ corpus ထဲက အမှားတချို့ကို ရှာပေးပါလိမ့်မယ်။)  
+(ဒီတစ်ခါတော့ ပရိုဂရမ် နံပါတ် ၆၆ ကို corpus error checking ထပ်ဖြည့်ထားတာပါ။ format conversion မလုပ်ခင်မှာ corpus ထဲက အမှားတချို့ကို ရှာပေးပါလိမ့်မယ်။)
+
+68. [cut_columns.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cut_columns.py)  
+(Linux OS ရဲ့ cut command လို အလုပ်ကို Python နဲ့ ရေးကြည့်ထားတာပါ။)   
 
     
