@@ -250,6 +250,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 64. [nltk-lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm.py)
 65. [nltk-lm-predict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/nltk-lm-predict.py)
 66. [format_conversion.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion.py)
-67. [format_conversion_with_error_check.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion_with_error_check.py)  
+67. [format_conversion_with_error_check.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format_conversion_with_error_check.py)
+68. [cut_columns.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cut_columns.py)  
 
 
