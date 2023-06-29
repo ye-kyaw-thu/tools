@@ -204,6 +204,10 @@
 (ဒီတစ်ခါတော့ ပရိုဂရမ် နံပါတ် ၆၆ ကို corpus error checking ထပ်ဖြည့်ထားတာပါ။ format conversion မလုပ်ခင်မှာ corpus ထဲက အမှားတချို့ကို ရှာပေးပါလိမ့်မယ်။)
 
 68. [cut_columns.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cut_columns.py)  
-(Linux OS ရဲ့ cut command လို အလုပ်ကို Python နဲ့ ရေးကြည့်ထားတာပါ။)   
+(Linux OS ရဲ့ cut command လို အလုပ်ကို Python နဲ့ ရေးကြည့်ထားတာပါ။)
+
+
+69. [bidirectional_maximum_matching.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/bidirectional_maximum_matching.py)   
+(Maximum Matching နဲ့ Bidirectional Maximum Matching algorithm ကိုသုံးပြီး မြန်မာစာ စာလုံးတွေကို word segmentation NLP task အတွက် စမ်းထားတာ။ Segmentation unit ကို character level နဲ့ရော မြန်မာစာအတွက် အရေးပါတဲ့ syllable unit နဲ့ရော နှစ်မျိုးလုံးသုံးပြီး စမ်းထားတယ်။)   
 
     
