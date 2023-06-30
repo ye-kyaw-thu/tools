@@ -5221,8 +5221,35 @@ python cut_columns.py -i myg2p.txt -o dict.txt -c 2,4-5
 
 ```
 
-```
+##  
 
+```
+python extract_filename_parts.py -d _ -c 2 -t count -f 'F:\NECTEC\Project\MyanmarSpeech\MyanmarSpeech' -v True  
+...
+...
+...
+Processing file: 'my_9135_6838773436.wav', split parts: ['my', '9135', '6838773436'], delimiter: '_'
+Processing file: 'my_9135_6874672543.wav', split parts: ['my', '9135', '6874672543'], delimiter: '_'
+Processing file: 'my_9135_8132251154.wav', split parts: ['my', '9135', '8132251154'], delimiter: '_'
+Processing file: 'my_9135_8216260569.wav', split parts: ['my', '9135', '8216260569'], delimiter: '_'
+Processing file: 'my_9135_8800445756.wav', split parts: ['my', '9135', '8800445756'], delimiter: '_'
+Processing file: 'my_9135_8984330841.wav', split parts: ['my', '9135', '8984330841'], delimiter: '_'
+Processing file: 'my_9762_1332691553.wav', split parts: ['my', '9762', '1332691553'], delimiter: '_'
+Processing file: 'my_9762_1375209801.wav', split parts: ['my', '9762', '1375209801'], delimiter: '_'
+Processing file: 'my_9762_1545151994.wav', split parts: ['my', '9762', '1545151994'], delimiter: '_'
+Processing file: 'my_9762_1798008689.wav', split parts: ['my', '9762', '1798008689'], delimiter: '_'
+Processing file: 'my_9762_2206342814.wav', split parts: ['my', '9762', '2206342814'], delimiter: '_'
+Processing file: 'my_9762_2946203558.wav', split parts: ['my', '9762', '2946203558'], delimiter: '_'
+Processing file: 'my_9762_3152139971.wav', split parts: ['my', '9762', '3152139971'], delimiter: '_'
+Processing file: 'my_9762_3320949406.wav', split parts: ['my', '9762', '3320949406'], delimiter: '_'
+Processing file: 'my_9762_3455363699.wav', split parts: ['my', '9762', '3455363699'], delimiter: '_'
+Processing file: 'my_9762_3890976555.wav', split parts: ['my', '9762', '3890976555'], delimiter: '_'
+Processing file: 'my_9762_4183637449.wav', split parts: ['my', '9762', '4183637449'], delimiter: '_'
+Processing file: 'my_9762_5699386864.wav', split parts: ['my', '9762', '5699386864'], delimiter: '_'
+Processing file: 'my_9762_6066737770.wav', split parts: ['my', '9762', '6066737770'], delimiter: '_'
+Processing file: 'my_9762_7115411053.wav', split parts: ['my', '9762', '7115411053'], delimiter: '_'
+Processing file: 'my_9762_7662037577.wav', split parts: ['my', '9762', '7662037577'], delimiter: '_'
+20
 ```
 
 ```
