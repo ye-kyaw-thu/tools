@@ -5221,7 +5221,7 @@ python cut_columns.py -i myg2p.txt -o dict.txt -c 2,4-5
 
 ```
 
-##  
+## 70. [extract_filename_parts.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract_filename_parts.py)   
 
 ```
 python extract_filename_parts.py -d _ -c 2 -t count -f 'F:\NECTEC\Project\MyanmarSpeech\MyanmarSpeech' -v True  
