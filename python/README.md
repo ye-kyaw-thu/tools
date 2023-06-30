@@ -211,6 +211,9 @@
 (Maximum Matching နဲ့ Bidirectional Maximum Matching algorithm ကိုသုံးပြီး မြန်မာစာ စာလုံးတွေကို word segmentation NLP task အတွက် စမ်းထားတာ။ Segmentation unit ကို character level နဲ့ရော မြန်မာစာအတွက် အရေးပါတဲ့ syllable unit နဲ့ရော နှစ်မျိုးလုံးသုံးပြီး စမ်းထားတယ်။)
 
 70. [extract_filename_parts.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract_filename_parts.py)  
-(Filename က my_9762_1798008689.wav ဆိုတဲ့ ပုံစံမျိုး ရှိနေတာမို့၊ underscore ကို delimiter အဖြစ်ထားပြီးတော့ ကော်လံအလိုက် unique count လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
+(Filename က my_9762_1798008689.wav ဆိုတဲ့ ပုံစံမျိုး ရှိနေတာမို့၊ underscore ကို delimiter အဖြစ်ထားပြီးတော့ ကော်လံအလိုက် unique count လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)
+
+71. [sort_openslr_transcript.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/sort_openslr_transcript.py)  
+(OpenSLR, 80 ရဲ့ မြန်မာစာဒေတာ index ဖိုင်က randomized ဖြစ်နေတာကြောင့်၊ sorting စီဖို့အတွက် ရေးခဲ့တယ်။)   
 
     
