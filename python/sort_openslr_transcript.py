@@ -44,7 +44,7 @@ def main():
         data.sort(key=operator.itemgetter(0))
 
     # write the sorted data to the output file
-    with open(args.output, 'w', encoding='utf-8') as file:
+    with open(args.output, 'w', encoding='utf-8', newline='') as file:
         writer = csv.writer(file, delimiter=args.delimiter)
         writer.writerows(data)
 
