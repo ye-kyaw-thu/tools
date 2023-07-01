@@ -218,4 +218,6 @@
 
 72. [speech_corpus_info.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/speech_corpus_info.py)  
 (ASR, TTS အတွက် speech corpus တွေကို သိမ်းထားတဲ့ format က အမျိုးမျိုးမို့လို့ လူသိများ၊ လူသုံးများတဲ့ format နဲ့ ပတ်သက်ပြီး information ပေးဖို့ ရည်ရွယ်တယ်။ update လုပ်ရဦးမယ်)    
-    
+
+73. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN.py)  
+(KNN မော်ဒယ်ကိုပဲ Neural Network နဲ့ ပေါင်းပြီး experiment တချို့ လုပ်ထားတာ။)  
