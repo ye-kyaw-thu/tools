@@ -9,6 +9,11 @@ https://ogunlao.github.io/2020/05/23/knn-as-a-neural-network.html
 How to run:
 python dKNN.py --help
 
+python dKNN.py --mode knn --dataset wine
+python dKNN.py --mode diffknn --dataset iris
+python dKNN.py --mode diffknn --dataset wine
+python dKNN.py --mode deepknn --dataset wine --n_layers 2 --epochs 100
+python dKNN.py --mode deepknn --dataset wine --n_layers 6 --epochs 100
     
 """
 
