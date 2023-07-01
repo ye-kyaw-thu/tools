@@ -5298,7 +5298,152 @@ bur_0366_0627382718	ကချင် ပြည်နယ် နှင့် ဆက
 ...
 ```
 
-## Next Program  
+## 73. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN.py)     
+
+Running examples are as follows:  
+
+```
+python dKNN.py -h
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+usage: dKNN.py [-h] [--mode {knn,deepknn,diffknn}] [--dataset {iris,wine}] [--epochs EPOCHS]
+               [--n_layers N_LAYERS] [--n_neighbors N_NEIGHBORS]
+
+This program provides 3 methods for classification: KNN, DeepKNN, and DiffKNN. KNN is the traditional
+K-Nearest Neighbors. DeepKNN first trains a neural network on the input data, and uses the trained
+model to transform the input data before applying the KNN algorithm. DiffKNN treats the K-Nearest
+Neighbors process as a differentiable operation, optimizing the entire process end-to-end.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --mode {knn,deepknn,diffknn}
+                        The mode to run: traditional KNN, DeepKNN, or DiffKNN.
+  --dataset {iris,wine}
+                        The dataset to use: Iris or Wine.
+  --epochs EPOCHS       The number of epochs to train for (DeepKNN only).
+  --n_layers N_LAYERS   The number of layers in the neural network (DeepKNN only).
+  --n_neighbors N_NEIGHBORS
+                        The number of neighbors to use in KNN.
+```
+
+Running KNN ...   
+the default dataset is Iris.  
+
+```
+python dKNN.py --mode knn
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: iris
+Test accuracy (KNN): 1.0
+Confusion matrix (KNN):
+ [[10  0  0]
+ [ 0  9  0]
+ [ 0  0 11]]
+```
+
+for this time I run with Wine dataset:  
+
+```
+python dKNN.py --mode knn --dataset wine
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: wine
+Test accuracy (KNN): 0.9444444444444444
+Confusion matrix (KNN):
+ [[14  0  0]
+ [ 1 12  1]
+ [ 0  0  8]]
+```
+
+diffKNN mode with Iris dataset ...  
+
+```
+python dKNN.py --mode diffknn --dataset iris
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: iris
+Test accuracy (DiffKNN): 1.0
+Confusion matrix (DiffKNN):
+ [[10  0  0]
+ [ 0  9  0]
+ [ 0  0 11]]
+```
+
+diffKNN with Wine dataset.  
+Note: we don't need hyperparameters for diffKNN approach.  
+
+```
+python dKNN.py --mode diffknn --dataset wine
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: wine
+Test accuracy (DiffKNN): 0.9444444444444444
+Confusion matrix (DiffKNN):
+ [[14  0  0]
+ [ 1 12  1]
+ [ 0  0  8]]
+```
+
+For this time, running deepKNN with Wine dataset.  
+Number of layers = 2 and number of epochs = 300.  
+
+```
+python dKNN.py --mode deepknn --dataset wine --n_layers 2 --epochs 300
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: wine
+Test accuracy (DeepKNN): 1.0
+Confusion matrix (DeepKNN):
+ [[14  0  0]
+ [ 0 14  0]
+ [ 0  0  8]]
+```
+
+Let's play --n_layers and --epochs parameters ...  
+
+```
+python dKNN.py --mode deepknn --dataset wine --n_layers 6 --epochs 100
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: wine
+Test accuracy (DeepKNN): 0.9722222222222222
+Confusion matrix (DeepKNN):
+ [[13  1  0]
+ [ 0 14  0]
+ [ 0  0  8]]
+```
+
+For this time, --n_layers = 6 and --epochs = 10 setting ...  
+
+```
+python dKNN.py --mode deepknn --dataset wine --n_layers 6 --epochs 10
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: wine
+Test accuracy (DeepKNN): 0.8055555555555556
+Confusion matrix (DeepKNN):
+ [[12  2  0]
+ [ 3 10  1]
+ [ 0  1  7]]
+```
+
+## Next Program
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
