@@ -216,4 +216,6 @@
 71. [sort_openslr_transcript.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/sort_openslr_transcript.py)  
 (OpenSLR, 80 ရဲ့ မြန်မာစာဒေတာ index ဖိုင်က randomized ဖြစ်နေတာကြောင့်၊ sorting စီဖို့အတွက် ရေးခဲ့တယ်။)   
 
+72. [speech_corpus_info.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/speech_corpus_info.py)  
+(ASR, TTS အတွက် speech corpus တွေကို သိမ်းထားတဲ့ format က အမျိုးမျိုးမို့လို့ လူသိများ၊ လူသုံးများတဲ့ format နဲ့ ပတ်သက်ပြီး information ပေးဖို့ ရည်ရွယ်တယ်။ update လုပ်ရဦးမယ်)    
     
