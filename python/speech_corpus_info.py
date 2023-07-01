@@ -3,8 +3,9 @@
 Created on Sat Jul  1 14:00:11 2023
 
 @author: Ye Kyaw Thu, LU Lab., Myanmar
-I plan to update with detail examples ...
-
+I plan to update with detail examples ...  
+speech corpus တွေရဲ့ format တွေက အမျိုးမျိုးရှိလို့ စလေ့လာတဲ့သူအတွက်က အချိန်ပေးရတာမို့။
+အချိန်ရတဲ့အခါမှာ corpus ရဲ့ စုစုပေါင်းနာရီနဲ့ transcription information အသေးစိတ်ကို ဖြည့်မယ်။  
 """
 
 import argparse
