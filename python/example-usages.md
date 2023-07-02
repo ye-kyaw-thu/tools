@@ -5432,6 +5432,12 @@ Confusion matrix (DeepKNN):
  [ 0  0 11]]
 ```
 
+deepKNN ရဲ့ Architecture ပုံကို အောက်ပါအတိုင်း ရပါလိမ့်မယ်။  
+
+<p align="center" width="100%">
+    <img width="33%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/deepknn.png">
+</p>
+
 ```
 python dKNN-ver2.py --mode diffknn --draw_diagram
 <frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
@@ -5442,6 +5448,12 @@ Confusion matrix (DiffKNN):
  [ 0  9  0]
  [ 0  0 11]]
 ```
+
+diffKNN က ဘယ်လို အလုပ်လုပ်သလဲ ဆိုတာကို ရှင်းပြတဲ့ပုံကို ဆွဲပေးပါလိမ့်မယ်။  
+
+<p align="center" width="100%">
+    <img width="33%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/deepknn.png">
+</p>
 
 ```
 
