@@ -220,4 +220,7 @@
 (ASR, TTS အတွက် speech corpus တွေကို သိမ်းထားတဲ့ format က အမျိုးမျိုးမို့လို့ လူသိများ၊ လူသုံးများတဲ့ format နဲ့ ပတ်သက်ပြီး information ပေးဖို့ ရည်ရွယ်တယ်။ update လုပ်ရဦးမယ်)    
 
 73. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN.py)  
-(KNN မော်ဒယ်ကိုပဲ Neural Network နဲ့ ပေါင်းပြီး experiment တချို့ လုပ်ထားတာ။)  
+(KNN မော်ဒယ်ကိုပဲ Neural Network နဲ့ ပေါင်းပြီး experiment တချို့ လုပ်ထားတာ။)
+
+74. [dKNN-ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py)  
+(အဓိက Function က အပေါ်က dKNN.py နဲ့ အတူတူပါပဲ၊ Graphviz ကို သုံးပြီး deepKNN နဲ့ diffKNN ရဲ့ အလုပ်လုပ်ပုံကို diagram ဆွဲပေးတဲ့ function နှစ်ခုတိုးပေးထားတာပါ။ Graphviz ကတော့ ကိုယ့်စက်ထဲမှာ မရှိသေးရင် installation လုပ်ဖို့ လိုအပ်လိမ်မယ်။)    
