@@ -257,4 +257,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 71. [sort_openslr_transcript.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/sort_openslr_transcript.py)
 72. [speech_corpus_info.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/speech_corpus_info.py)
 73. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN.py)  
-
+74. [dKNN-ver2.p](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py)  
