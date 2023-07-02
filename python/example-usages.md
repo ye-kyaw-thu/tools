@@ -5419,7 +5419,7 @@ Confusion matrix (DeepKNN):
  [ 0  1  7]]
 ```
 
-## 74. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py) 
+## 74. [dKNN-ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py) 
 
 ```
 python dKNN-ver2.py --mode deepknn --draw_diagram
