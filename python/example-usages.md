@@ -5455,8 +5455,6 @@ diffKNN က ဘယ်လို အလုပ်လုပ်သလဲ ဆိုတ
     <img width="33%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/diffknn.png">
 </p>
 
-```
-
 ## 75. [change_sampling_rate.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/change_sampling_rate.py)  
 
 ပေးလိုက်တဲ့ ဖိုလ်ဒါအောက်မှာ ရှိတဲ့ wave ဖိုင်တွေကို ကိုယ်လိုချင်တဲ့ sampling rate ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။
