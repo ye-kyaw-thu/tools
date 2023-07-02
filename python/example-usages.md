@@ -5457,8 +5457,28 @@ diffKNN က ဘယ်လို အလုပ်လုပ်သလဲ ဆိုတ
 
 ```
 
+## 75. [change_sampling_rate.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/change_sampling_rate.py)  
+
+ပေးလိုက်တဲ့ ဖိုလ်ဒါအောက်မှာ ရှိတဲ့ wave ဖိုင်တွေကို ကိုယ်လိုချင်တဲ့ sampling rate ကို ပြောင်းဖို့အတွက် ရေးခဲ့တဲ့ script ပါ။
+သုံးပုံသုံးနည်းက အောက်ပါအတိုင်းပါ။
+
+```
+(tacotron2) root@500e9f8181d8:/home/ye/exp/speech_data/MyanmarSpeech# time python ./change_sampling_rate.py --input_folder ./wavs --output_folder ./wavs_22khz --target_sample_rate 22050
+Successfully converted 2530 files from original sampling rate to 22050 Hz
+
+real    5m25.370s
+user    3m36.422s
+sys     0m14.277s
 ```
 
+Sampling လုပ်စဉ်မှာ error ရှိပြီး ပြောင်းမပေးတာမျိုးလည်း ဖြစ်နိုင်လို့ ဖိုင်အရေအတွက် ကို တိုက်စစ်ပြီး အကြမ်းစစ်တာပါ။  
+
+```
+(tacotron2) root@500e9f8181d8:/home/ye/exp/speech_data/MyanmarSpeech# ls ./wavs_22khz/*.wav | wc
+   2530    2530   91080
+(tacotron2) root@500e9f8181d8:/home/ye/exp/speech_data/MyanmarSpeech# ls ./wavs/*.wav | wc
+   2530    2530   75900
+(tacotron2) root@500e9f8181d8:/home/ye/exp/speech_data/MyanmarSpeech#
 ```
 
 ```
