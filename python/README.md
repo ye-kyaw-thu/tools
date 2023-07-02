@@ -223,4 +223,7 @@
 (KNN မော်ဒယ်ကိုပဲ Neural Network နဲ့ ပေါင်းပြီး experiment တချို့ လုပ်ထားတာ။)
 
 74. [dKNN-ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py)  
-(အဓိက Function က အပေါ်က dKNN.py နဲ့ အတူတူပါပဲ၊ Graphviz ကို သုံးပြီး deepKNN နဲ့ diffKNN ရဲ့ အလုပ်လုပ်ပုံကို diagram ဆွဲပေးတဲ့ function နှစ်ခုတိုးပေးထားတာပါ။ Graphviz ကတော့ ကိုယ့်စက်ထဲမှာ မရှိသေးရင် installation လုပ်ဖို့ လိုအပ်လိမ်မယ်။)    
+(အဓိက Function က အပေါ်က dKNN.py နဲ့ အတူတူပါပဲ၊ Graphviz ကို သုံးပြီး deepKNN နဲ့ diffKNN ရဲ့ အလုပ်လုပ်ပုံကို diagram ဆွဲပေးတဲ့ function နှစ်ခုတိုးပေးထားတာပါ။ Graphviz ကတော့ ကိုယ့်စက်ထဲမှာ မရှိသေးရင် installation လုပ်ဖို့ လိုအပ်လိမ်မယ်။)
+
+75. [change_sampling_rate.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/change_sampling_rate.py)  
+(ASR, TTS မော်ဒယ် ဆောက်တဲ့အခါမျိုးမှာ သုံးတဲ့ framework ပေါ်မူတည်ပြီးတော့ အသံဖိုင်တွေကို သတ်မှတ်ထားတဲ့ sampling rate ကို ပြောင်းပေးဖို့ လိုအပ်ပါတယ်။ ဒီ python script က အဲဒီအလုပ်အတွက် ရေးခဲ့တာ။)  
