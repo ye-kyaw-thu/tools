@@ -5419,14 +5419,28 @@ Confusion matrix (DeepKNN):
  [ 0  1  7]]
 ```
 
-## Next Program
+## 74. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py) 
 
+```
+python dKNN-ver2.py --mode deepknn --draw_diagram
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: iris
+Test accuracy (DeepKNN): 0.9666666666666667
+Confusion matrix (DeepKNN):
+ [[10  0  0]
+ [ 0  8  1]
+ [ 0  0 11]]
 ```
 
 ```
-
-```
-
+python dKNN-ver2.py --mode diffknn --draw_diagram
+<frozen importlib._bootstrap>:228: RuntimeWarning: scipy._lib.messagestream.MessageStream size changed, may indicate binary incompatibility. Expected 56 from C header, got 64 from PyObject
+Dataset: iris
+Test accuracy (DiffKNN): 1.0
+Confusion matrix (DiffKNN):
+ [[10  0  0]
+ [ 0  9  0]
+ [ 0  0 11]]
 ```
 
 ```
