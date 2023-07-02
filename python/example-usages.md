@@ -5452,7 +5452,7 @@ Confusion matrix (DiffKNN):
 diffKNN က ဘယ်လို အလုပ်လုပ်သလဲ ဆိုတာကို ရှင်းပြတဲ့ပုံကို ဆွဲပေးပါလိမ့်မယ်။  
 
 <p align="center" width="100%">
-    <img width="33%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/deepknn.png">
+    <img width="33%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/diffknn.png">
 </p>
 
 ```
