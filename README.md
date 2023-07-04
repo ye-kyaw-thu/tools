@@ -258,4 +258,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 72. [speech_corpus_info.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/speech_corpus_info.py)
 73. [dKNN.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN.py)  
 74. [dKNN-ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py)
-75. [change_sampling_rate.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/change_sampling_rate.py)  
+75. [change_sampling_rate.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/change_sampling_rate.py)
+76. [check_silence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_silence.py)   
