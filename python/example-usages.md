@@ -5481,6 +5481,16 @@ Sampling လုပ်စဉ်မှာ error ရှိပြီး ပြော
 
 ## 76. [check_silence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_silence.py)  
 
+
+အသံဒေတာရဲ့ root mean square (RMS) ကို NumPy library ကိုသုံးပြီးတွက်ထားပါတယ်။ RMS ဆိုတာက math formula အနေနဲ့ ရေးမယ် ဆိုရင်အောက်ပါအတိုင်းပါ။   
+
+$RMS = \sqrt{\frac{1}{N} \sum_{i=0}^{N-1} x^2[i]}$
+
+ဒီ formula မှာ N က sequence မှာရှိနေတဲ့ sample စုစုပေါင်း အရေအတွက်ကို ကိုယ်စားပြုပါတယ်။   
+ပြီးတော့ x[i] ဆိုတာကတော့ i-th sample ရဲ့ amplitude ပါ။   
+
+တကယ်လို့ တွက်လို့ ရလာတဲ့ RMS တန်ဖိုးက < threshold ဆိုရင် silent ဖြစ်နေတယ်လို့ ဆုံးဖြတ်တယ်။  
+
 Running example ...  
 
 ```
