@@ -5479,9 +5479,18 @@ Sampling လုပ်စဉ်မှာ error ရှိပြီး ပြော
 (tacotron2) root@500e9f8181d8:/home/ye/exp/speech_data/MyanmarSpeech#
 ```
 
-```
+## 76. [check_silence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_silence.py)  
+
+Running example ...  
 
 ```
+python ./check_silence.py --input_folder ./test_out/
+0.wav might be silent, RMS=0.00010648194071440837
+1.wav might be silent, RMS=0.0
+2.wav might be silent, RMS=0.0
+```
+
+## Next Program 
 
 ```
 
