@@ -5484,7 +5484,7 @@ Sampling လုပ်စဉ်မှာ error ရှိပြီး ပြော
 
 အသံဒေတာရဲ့ root mean square (RMS) ကို NumPy library ကိုသုံးပြီးတွက်ထားပါတယ်။ RMS ဆိုတာက math formula အနေနဲ့ ရေးမယ် ဆိုရင်အောက်ပါအတိုင်းပါ။   
 
-$`RMS = \sqrt{\frac{1}{N} \sum_{i=0}^{N-1} x^2[i]}`$
+$$RMS = \sqrt{\frac{1}{N} \sum_{i=0}^{N-1} x^2[i]}$$
 
 ဒီ formula မှာ N က sequence မှာရှိနေတဲ့ sample စုစုပေါင်း အရေအတွက်ကို ကိုယ်စားပြုပါတယ်။   
 ပြီးတော့ x[i] ဆိုတာကတော့ i-th sample ရဲ့ amplitude ပါ။   
