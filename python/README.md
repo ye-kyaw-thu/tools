@@ -231,3 +231,5 @@
 76. [check_silence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_silence.py)  
 (TTS model ကိုသုံးပြီးတော့ testing လုပ်တဲ့အခါမှာ အကြောင်းအမျိုးမျိုးကြောင့် output ထွက်လာတဲ့ wave ဖိုင်တွေက silence ဖြစ်နေတာမျိုး ကြုံရတတ်တယ်။ အဲဒီအတွက် silence ဖြစ်နေသလား ဆိုတာကို စစ်ဆေးဖို့အတွက် ရေးခဲ့တာ။)
 
+77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)  
+(graph+LM based spelling checking, just testing ...)  
