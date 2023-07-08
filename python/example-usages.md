@@ -5500,18 +5500,51 @@ python ./check_silence.py --input_folder ./test_out/
 2.wav might be silent, RMS=0.0
 ```
 
+## 77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)  
+
+
+spell_err.txt ဖိုင်က အောက်ပါအတိုင်း ...  
+
+```
+ကျောင်သား
+မရား
+ချစသူ
+ပိသာ
+ဖုရား
+ဆယာမား
+ထမင်
+ပဲပုတ်
+ဉီးဉီး
+မြက်မှန်
+ပိဿ
+မိန်းက
+ချက
+```
+
+```
+python ./graph_spellcheck2.py -d ./corpus/dict.txt -e ./spell_err.txt -o checked.txt -m 6 -c ./corpus/mypos.txt -n 3
+```
+
+မှားတာကို detect လုပ်ပြီး စာလုံးပေါင်း အမှန်ကို ပြင်ပေးထားတဲ့ output ကအောက်ပါအတိုင်း ...  
+
+```
+No correction found for "ကျောင်သား"
+No correction found for "မရား"
+No correction found for "ချစသူ"
+No correction found for "ပိသာ"
+No correction found for "ဖုရား"
+No correction found for "ဆယာမား"
+The correction for "ထမင်" is "ထမင်းဘူး"
+No correction found for "ပဲပုတ်"
+No correction found for "ဉီးဉီး"
+No correction found for "မြက်မှန်"
+The correction for "ပိဿ" is "ပိဿာ"
+The correction for "မိန်းက" is "မိန်းကလေး"
+The correction for "ချက" is "ချက်ချာ"
+```
+
+လက်ရှိ experiment က myG2P dictionary နဲ့ myPOS ဒေတာကို language model ဆောက်ပြီး စမ်းကြည့်ထားတာ။ လက်ရှိ ရလဒ်ထက် ပိုကောင်း စေချင်ရင်တော့ error model ကို ဆောက်ပြီး (error dictionary ကိုတော့ပြင်ရမယ်) စမ်းလို့ ရနိုင်တယ်။ သို့သော် ရလဒ်ကတော့ ဘယ်လောက်ထိ တိုးတက်လာမလဲ ဆိုတာက ပြောလို့ မရဘူး။ word level နဲ့ပဲ သွားနေတော့ ...  
+
 ## Next Program 
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
 
 ```
