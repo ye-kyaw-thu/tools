@@ -4,7 +4,7 @@
 Testing graph+LM based spelling checking
 Last updated: 9 July 2023
 How to run:
-python ./graph_spellcheck2.py -d ./corpus/dict.txt -e ./spell_err.txt -o checked.txt -m 6 -c ./corpus/mypos.txt -n 3
+python ./graph_lm_spellcheck.py -d ./corpus/dict.txt -e ./spell_err.txt -o checked.txt -m 6 -c ./corpus/mypos.txt -n 3
 
 """
 
