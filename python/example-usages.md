@@ -5576,6 +5576,7 @@ Eleventh of July, Twenty-Three.
 ```
 
 Run ကြည့်ရင် အောက်ပါအတိုင်း detect လုပ်လို့ ရတဲ့ ဘာသာစကားတွေကို % နဲ့ ပြသပေးပါလိမ့်မယ်။  
+Error တော့ မကင်းပါဘူး။ French 5.26% ဆိုတာနဲ့ Korean 5.26% ဆိုတာက classification error ပါ။  
 
 ```
 python detect_language_ver1.py multi_lingual_text.txt
