@@ -262,3 +262,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 76. [check_silence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_silence.py)
 77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)
 78. [detect_language_ver1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver1.py)  
+79. [detect_language_ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver2.py)  
+    
