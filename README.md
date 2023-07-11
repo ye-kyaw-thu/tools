@@ -260,4 +260,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 74. [dKNN-ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/dKNN-ver2.py)
 75. [change_sampling_rate.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/change_sampling_rate.py)
 76. [check_silence.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_silence.py)
-77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)  
+77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)
+78. [detect_language_ver1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver1.py)  
