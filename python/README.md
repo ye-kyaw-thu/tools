@@ -232,4 +232,7 @@
 (TTS model ကိုသုံးပြီးတော့ testing လုပ်တဲ့အခါမှာ အကြောင်းအမျိုးမျိုးကြောင့် output ထွက်လာတဲ့ wave ဖိုင်တွေက silence ဖြစ်နေတာမျိုး ကြုံရတတ်တယ်။ အဲဒီအတွက် silence ဖြစ်နေသလား ဆိုတာကို စစ်ဆေးဖို့အတွက် ရေးခဲ့တာ။)
 
 77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)  
-(graph+LM based spelling checking, just testing ...)  
+(graph+LM based spelling checking, just testing ...)
+
+78. [detect_language_ver1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver1.py)  
+(ဖိုင်ထဲက စာကြောင်းတွေကို တစ်ကြောင်းချင်း ဖတ်ပြီး ဘယ်ဘာသာလဲ ဆိုတာကို ဆုံးဖြတ်ပြီး၊ တစ်ဖိုင်လုံးမှာ ဘယ်ဘာသာနဲ့ ရေးထားတဲ့ စာကြောင်းက ရာခိုင်နှုန်း ဘယ်လောက် ဆိုတာကို တွက်ပေးတဲ့ ပရိုဂရမ် version 1.0 ပါ။ ဒီပရိုဂရမ်နဲ့က မြန်မာစာတို့ ကမာစာတို့ဆိုရင် Unknown အနေနဲ့ပဲ ပြပေးပါလိမ့်မယ်။)   
