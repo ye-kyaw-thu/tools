@@ -5591,7 +5591,67 @@ French: 5.26%
 Japanese: 10.53%
 ```
 
-## 
+## 79. [detect_language_ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver2.py)   
+
+Python script no. 78 မှာတုန်းက langdetect ကနေ စစ်ပြီး အောက်ပါအတိုင်း Unknown ဖြစ်တာတွေ ရှိပါတယ်။  
+
+```python
+def detect_language(text):
+    try:
+        lang = detect(text)
+        if lang in language_codes:
+            return language_codes[lang]
+        else:
+            return 'unknown'
+    except:
+        return 'unknown'
+```
+
+ဖြေရှင်းတဲ့ နည်းကတော့ အရင်ဆုံး Unicode table ရဲ့ code နံပါတ်တွေရဲ့ range တွေအလိုက် ဘာသာစကားတွေကို python dictionary ဆောက်ပြီး အောက်ပါအတိုင်း သတ်မှတ်လိုက်ပါတယ်။   
+
+```python
+language_unicode_ranges = {
+    'Latin': ('\u0020', '\u007E'),
+    'Latin Extended-A': ('\u0100', '\u017F'),
+    'Latin Extended-B': ('\u0180', '\u024F'),
+    'IPA Extensions': ('\u0250', '\u02AF'),
+    'Spacing Modifier Letters': ('\u02B0', '\u02FF'),
+    'Combining Diacritical Marks': ('\u0300', '\u036F'),
+    'Greek and Coptic': ('\u0370', '\u03FF'),
+    'Cyrillic': ('\u0400', '\u04FF'),
+    'Cyrillic Supplement': ('\u0500', '\u052F'),
+    'Armenian': ('\u0530', '\u058F'),
+    'Hebrew': ('\u0590', '\u05FF'),
+    'Arabic': ('\u0600', '\u06FF'),
+    'Syriac': ('\u0700', '\u074F'),
+...
+...
+...
+    'CJK Compatibility Ideographs': ('\uF900', '\uFAFF'),
+    'Alphabetic Presentation Forms': ('\uFB00', '\uFB4F'),
+    'Arabic Presentation Forms-A': ('\uFB50', '\uFDFF'),
+    'Variation Selectors': ('\uFE00', '\uFE0F'),
+    'Vertical Forms': ('\uFE10', '\uFE1F'),
+    'Combining Half Marks': ('\uFE20', '\uFE2F'),
+    'CJK Compatibility Forms': ('\uFE30', '\uFE4F'),
+    'Small Form Variants': ('\uFE50', '\uFE6F'),
+    'Arabic Presentation Forms-B': ('\uFE70', '\uFEFF'),
+    'Halfwidth and Fullwidth Forms': ('\uFF00', '\uFFEF'),
+    'Specials': ('\uFFF0', '\uFFFF')
+}
+```
+
+ပြီးတော့မှ detect_dominant_script ဆိုတဲ့ function ကို ဆောက်ထားပြီး unknown exception ဖြစ်တဲ့ sentence တွေကို function argument အနေနဲ့ ပေးလိုက်ပြီး ဘာသာစကား ထပ်ခွဲခြားတဲ့ အလုပ်ကို လုပ်တဲ့ ပုံစံပါ။  
+
+```python
+def detect_dominant_script(sentence):
+    script_counts = Counter(detect_unicode_script(c) for c in sentence if detect_unicode_script(c) is not None)
+    if not script_counts:  # The sentence does not contain any characters from known scripts
+        return None
+    return script_counts.most_common(1)[0][0]
+```
+
+အဲဒီလိုနည်းနဲ့ ပထမ ဗားရှင်းမှာ မသိတဲ့ မြန်မာစာတို့ ကမာဘာသာစကားတို့ကို classification လုပ်ပေးနိုင်အောင် update လုပ်ထားတဲ့ ပရိုဂရမ်ပါ။ ဒီကောင်ကိုတော့ version 2.0 အဖြစ် သတ်မှတ်ထားပါတယ်။  
 
 ```
 python detect_language_ver2.py multi_lingual_text.txt
@@ -5606,6 +5666,10 @@ Japanese: 10.53%
 Guess, Myanmar: 26.32%
 Guess, Khmer: 10.53%
 ```
+
+တစ်ခု သိထားရမှာက language detection ဆိုတဲ့ problem ကလည်း တကယ့် လက်တွေ့မှာ 100% မှန်ဖို့ ဆိုတာက ခက်ပါတယ်။ ဘာကြောင့်လဲ ဆိုတော့ တချို့ Unicode နံပါတ်နဲ့ သတ်မှတ်ထားတဲ့ စာလုံးတွေကလည်း share လုပ်ပြီး သုံးတဲ့ ဘာသာစကားတွေက ရှိလို့ပါ။ ဥပမာ မြင်သာအောင် ပြောရရင် မြန်မာ ဗျည်းတချို့ ဆိုရင် စကောကရင်ကကော၊ ရှမ်းကကော သုံးပါတယ်။ တကယ်က ဒီနေရာမှာ မြင်သာအောင် မြန်မာ ဗျည်းလို့ ပြောနေပေမဲ့ ကရင်တွေ၊ ရှမ်းတွေအနေနဲ့ ကြည့်ရင် ကရင်စာလုံး၊ ရှမ်းစာလုံးပါပဲ။ အသံထွက်လည်း မတူကြပါဘူး။ ထိုနည်းလည်းကောင်း ဥရောပ ဘာသာစကားတွေမှာလည်း အဲဒီလိုမျိုး စာလုံးတွေကို ရှဲလုပ်ပြီးသုံးနေကြတဲ့ ဘာသာစကားတွေက အများကြီးပါ။ အဲဒါကြောင့် input ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို အခြေခံပြီး ဘယ်ဘာသာစကားတွေက ဘယ်လောက် ရာခိုင်းနှုန်းဆိုတာကို တိတိကျကျ classification လုပ်ရတဲ့ အလုပ်က အရမ်း အလွယ်ကြီး မဟုတ်တာကိုတော့ သိထားစေချင်ပါတယ်။ နောက်တစ်ခုက detection လုပ်ပေးနိုင်တဲ့ speed ကလည်း လက်တွေ့ အလုပ်တွေမှာဆိုရင် အရေးကြီးပါတယ်။   
+
+## Next program  
 
 ```
 
