@@ -5545,6 +5545,54 @@ The correction for "ချက" is "ချက်ချာ"
 
 လက်ရှိ experiment က myG2P dictionary နဲ့ myPOS ဒေတာကို language model ဆောက်ပြီး စမ်းကြည့်ထားတာ။ လက်ရှိ ရလဒ်ထက် ပိုကောင်း စေချင်ရင်တော့ error model ကို ဆောက်ပြီး (error dictionary ကိုတော့ပြင်ရမယ်) စမ်းလို့ ရနိုင်တယ်။ သို့သော် ရလဒ်ကတော့ ဘယ်လောက်ထိ တိုးတက်လာမလဲ ဆိုတာက ပြောလို့ မရဘူး။ word level နဲ့ပဲ သွားနေတော့ ...  
 
+## 78. [detect_language_ver1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver1.py)  
+
+ဒီ ပရိုဂရမ်မှာ [langdetect](https://github.com/Mimino666/langdetect) ဆိုတဲ့ Python library ကို သုံးပြီး input ဖိုင်ထဲက စာကြောင်း တစ်ကြောင်းချင်းစီရဲ့ ဘာသာစကားကို detect လုပ်ပါတယ်။ ပြီးမှ တစ်ဖိုင်လုံးမှာ ပါဝင်တဲ့ ဘာသာစကား တစ်ခုခြင်းစီရဲ့ % ကို တွက်ပြီး print လုပ်ပေးတာ ဖြစ်ပါတယ်။ တစ်ခုရှိတာက ဒီ library က ကြာလည်း ကြာပါပြီ။ Original version က Java နဲ့ ရေးထားတာပါ။ Language detection လုပ်တဲ့ algorithm ကတော့ character n-gram ကိုသုံးပြီးတော့ Naive Bayse နဲ့ classification လုပ်တဲ့ ပုံစံမျိုးပါ။ Approach အသေးစိတ် ကတော့ slideshare မှာတင်ထားတဲ့ [presentation slide](https://www.slideshare.net/shuyo/language-detection-library-for-java) ကို မှီငြမ်းပါ။   
+
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+
 ## Next Program 
+
+```
 
 ```
