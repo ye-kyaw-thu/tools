@@ -241,4 +241,7 @@
 (ဒီ version 2 မှာတော့ Unknown ဖြစ်နေတဲ့ စာကြောင်းတွေကို Unicode page no. အလိုက် ခွဲလိုက်ပြီး ဖြစ်နိုင်တဲ့ ဘာသာစကားကို ခန့်မှန်းပေးတာ ဖြစ်ပါတယ်။ မှားတဲ့ case တွေလည်း ရှိမှာ ဖြစ်ပေမဲ့ အတိုင်းအတာ တစ်ခုအထိ အသုံးဝင်ပါလိမ့်မယ်။)
 
 80. [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py)  
-(tf-idf, word2vec နဲ့ fasttext ဆိုတဲ့ ထင်ရှားတဲ့ word embedding မော်ဒယ် သုံးမျိုးကို ဗမာစာနဲ့ ဆောက်ဖို့အတွက် ရေးခဲ့တယ်။)  
+(tf-idf, word2vec နဲ့ fasttext ဆိုတဲ့ ထင်ရှားတဲ့ word embedding မော်ဒယ် သုံးမျိုးကို ဗမာစာနဲ့ ဆောက်ဖို့အတွက် ရေးခဲ့တယ်။)
+
+81. [test_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/test_embedding.py)  
+(အထက်က embedder.py ပရိုဂရမ်နဲ့ ဆောက်ထားခဲ့တဲ့ tf-idf, word2vec, fasttext မော်ဒယ်တွေကနေ similar words တွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့။)  
