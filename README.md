@@ -263,5 +263,6 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 77. [graph_lm_spellchek.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/graph_lm_spellchek.py)
 78. [detect_language_ver1.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver1.py)  
 79. [detect_language_ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver2.py)
-80. [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py)  
+80. [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py)
+81. [test_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/test_embedding.py)  
     
