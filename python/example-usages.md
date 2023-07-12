@@ -5669,14 +5669,63 @@ Guess, Khmer: 10.53%
 
 တစ်ခု သိထားရမှာက language detection ဆိုတဲ့ problem ကလည်း တကယ့် လက်တွေ့မှာ 100% မှန်ဖို့ ဆိုတာက ခက်ပါတယ်။ ဘာကြောင့်လဲ ဆိုတော့ တချို့ Unicode နံပါတ်နဲ့ သတ်မှတ်ထားတဲ့ စာလုံးတွေကလည်း share လုပ်ပြီး သုံးတဲ့ ဘာသာစကားတွေက ရှိလို့ပါ။ ဥပမာ မြင်သာအောင် ပြောရရင် မြန်မာ ဗျည်းတချို့ ဆိုရင် စကောကရင်ကကော၊ ရှမ်းကကော သုံးပါတယ်။ တကယ်က ဒီနေရာမှာ မြင်သာအောင် မြန်မာ ဗျည်းလို့ ပြောနေပေမဲ့ ကရင်တွေ၊ ရှမ်းတွေအနေနဲ့ ကြည့်ရင် ကရင်စာလုံး၊ ရှမ်းစာလုံးပါပဲ။ အသံထွက်လည်း မတူကြပါဘူး။ ထိုနည်းလည်းကောင်း ဥရောပ ဘာသာစကားတွေမှာလည်း အဲဒီလိုမျိုး စာလုံးတွေကို ရှဲလုပ်ပြီးသုံးနေကြတဲ့ ဘာသာစကားတွေက အများကြီးပါ။ အဲဒါကြောင့် input ဖိုင်ထဲမှာ ရှိတဲ့ စာကြောင်းတွေကို အခြေခံပြီး ဘယ်ဘာသာစကားတွေက ဘယ်လောက် ရာခိုင်းနှုန်းဆိုတာကို တိတိကျကျ classification လုပ်ရတဲ့ အလုပ်က အရမ်း အလွယ်ကြီး မဟုတ်တာကိုတော့ သိထားစေချင်ပါတယ်။ နောက်တစ်ခုက detection လုပ်ပေးနိုင်တဲ့ speed ကလည်း လက်တွေ့ အလုပ်တွေမှာဆိုရင် အရေးကြီးပါတယ်။   
 
-## Next program  
+## 80. [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py)   
+
+NLP field, AI field ထဲမှာ word embedding ဆိုတာကို သိထားဖို့ အရမ်းအရေးကြီးပါတယ်။ ဘာကြောင့်လဲ ဆိုတော့ text တွေ စာကြောင်းတွေကို ကိုယ်လိုချင်တဲ့ မော်ဒယ် တစ်ခုခု မဆောက်ခင်မှာ အရင်ဆုံး embedding တစ်မျိုးမျိုးကို လုပ်ကြရတာမို့ပါ။ ပြီးတော့ ဒီ word embedding ဟာလည်း သုတေသန တစ်ခုအနေနဲ့ စိတ်ဝင်စားဖို့ ကောင်းပါတယ်။ 
+
+ဒီ script ကို သုံးပြီး text embedding မှာ နာမည်ကြီးတဲ့၊ တကယ်လည်း အသုံးဝင်တဲ့ tf-idf, word2vec နဲ့ fasttext ဆိုတဲ့ embedding သုံးမျိုးကို လုပ်ကြည့်လို့ ရပါလိမ့်မယ်။  
+
+Manually word segmented လုပ်ထားတဲ့ ဗမာစာ corpus information က အောက်ပါအတိုင်းပါ။  
 
 ```
-
+(base) rnd@gpu:~/demo/ai4my/corpus$ wc segmentation-data-updated2
+  213104  5342347 69130416 segmentation-data-updated2
 ```
 
+shell script တစ်ပုဒ် ရေးပြီး training လုပ်ပါမယ်။  
+
+```
+(base) rnd@gpu:~/demo/ai4my$ cat run_train.sh
+#!/bin/bash
+
+# training with default parameters
+time python ./embedder.py ./corpus/segmentation-data-updated2 -e tfidf
+time python ./embedder.py ./corpus/segmentation-data-updated2 -e word2vec
+time python ./embedder.py ./corpus/segmentation-data-updated2 -e fasttext
 ```
 
+Training ...  
+
+```
+(ai4my) rnd@gpu:~/demo/ai4my$ ./run_train.sh
+/home/rnd/anaconda3/envs/ai4my/lib/python3.8/site-packages/sklearn/feature_extraction/text.py:525: UserWarning: The parameter 'token_pattern' will not be used since 'tokenizer' is not None'
+  warnings.warn(
+TF-IDF embeddings have been saved to ./corpus/segmentation-data-updated2_tfidf.npz
+TF-IDF features have been saved to ./corpus/segmentation-data-updated2_tfidf_features.json
+
+real    0m6.928s
+user    0m7.068s
+sys     0m2.454s
+Word2Vec model has been saved to ./corpus/segmentation-data-updated2_word2vec.model
+
+real    0m15.679s
+user    0m51.297s
+sys     0m2.676s
+FastText model has been saved to ./corpus/segmentation-data-updated2_fasttext.model
+
+real    0m46.201s
+user    2m38.502s
+sys     0m3.190s
+(ai4my) rnd@gpu:~/demo/ai4my$
+```
+
+Training က အဆင်ပြေပြေနဲ့ run လို့ ပြီးသွားရင်တော့ အောက်ပါအတိုင်း tf-idf, word2vec နဲ့ fasttext မော်ဒယ်တွေကို ရရှိပါလိမ့်မယ်။  
+
+```
+(base) rnd@gpu:~/demo/ai4my/corpus$ ls *.{model,npz} -lh
+-rw-rw-r-- 1 rnd rnd 41M Jul 13 00:52 segmentation-data-updated2_fasttext.model
+-rw-rw-r-- 1 rnd rnd 36M Jul 13 00:51 segmentation-data-updated2_tfidf.npz
+-rw-rw-r-- 1 rnd rnd 41M Jul 13 00:51 segmentation-data-updated2_word2vec.model
 ```
 
 ```
