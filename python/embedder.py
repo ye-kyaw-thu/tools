@@ -1,4 +1,5 @@
-## for searching/retrieving similar words
+## for building tf-idf, word2vec and fasttext embedding models
+## Note, input corpus should be word or syllable segmented
 ## last updated: 13 July 2023
 ## @author: Ye Kyaw Thu
 ## 
