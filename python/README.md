@@ -244,4 +244,7 @@
 (tf-idf, word2vec နဲ့ fasttext ဆိုတဲ့ ထင်ရှားတဲ့ word embedding မော်ဒယ် သုံးမျိုးကို ဗမာစာနဲ့ ဆောက်ဖို့အတွက် ရေးခဲ့တယ်။)
 
 81. [test_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/test_embedding.py)  
-(အထက်က embedder.py ပရိုဂရမ်နဲ့ ဆောက်ထားခဲ့တဲ့ tf-idf, word2vec, fasttext မော်ဒယ်တွေကနေ similar words တွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့။)  
+(အထက်က embedder.py ပရိုဂရမ်နဲ့ ဆောက်ထားခဲ့တဲ့ tf-idf, word2vec, fasttext မော်ဒယ်တွေကနေ similar words တွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့။)
+
+82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)  
+(myPOS corpus လိုမျိုး left-to-right Tagged data ကို CONLLU column type format အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)
