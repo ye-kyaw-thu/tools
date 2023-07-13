@@ -265,5 +265,6 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 79. [detect_language_ver2.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/detect_language_ver2.py)
 80. [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py)
 81. [test_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/test_embedding.py)
-82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)  
+82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)
+83. [convert_to_spacyNER_json.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_spacyNER_json.py)
     
