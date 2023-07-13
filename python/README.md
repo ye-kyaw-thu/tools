@@ -246,5 +246,8 @@
 81. [test_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/test_embedding.py)  
 (အထက်က embedder.py ပရိုဂရမ်နဲ့ ဆောက်ထားခဲ့တဲ့ tf-idf, word2vec, fasttext မော်ဒယ်တွေကနေ similar words တွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့။)
 
-82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)  
+82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)   
 (myPOS corpus လိုမျိုး left-to-right Tagged data ကို CONLLU column type format အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)
+
+83. [convert_to_spacyNER_json.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_spacyNER_json.py)  
+(Spacy library က လက်ခံတဲ့ NER corpus ပုံစံကို ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)
