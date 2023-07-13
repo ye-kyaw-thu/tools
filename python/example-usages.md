@@ -6162,7 +6162,7 @@ Top 5 similar words to "ငြိမ်းချမ်းရေး" are: [('င�
 
 ## 82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)    
 
-CONLLU format က NLP သမားတွေအနေနဲ့ အားလုံး သိပြီးသားဖြစ်ပြီး၊ တော်တော်များများသော modeling လုပ်ပေးနိုင်တဲ့ machine learning tool တွေ၊ framework တွေက အဲဒီ format ကို input file အနေနဲ့ လက်ခံကြတာများပါတယ်။ ဒီ python script က ငါတို့ရဲ့ မြန်မာစာ POS tag dataset ဖြစ်တဲ့ myPOS tagged data format (ပုံမှန်အတိုင်း ဘယ်ကနေ ညာဘက် ရေးသွားပြီး slash ခြားထားပြီး POS tag တွဲထားတဲ့ ပုံစံ) ကနေ CONLLU format (ကော်လံအလိုက် ရေးထားပြီးတော့ mophological information, dependency information တွေပါ ပါတဲ့ 5 column format) ကို ပြောင်းဖို့ ရေးခဲ့တယ်။  
+CONLLU format က NLP သမားတွေအနေနဲ့ အားလုံး သိပြီးသားဖြစ်ပြီး၊ တော်တော်များများသော modeling လုပ်ပေးနိုင်တဲ့ machine learning tool တွေ၊ framework တွေက အဲဒီ format ကို input file အနေနဲ့ လက်ခံကြတာများပါတယ်။ ဒီ python script က ငါတို့ရဲ့ မြန်မာစာ POS tag dataset ဖြစ်တဲ့ myPOS tagged data format (ပုံမှန်အတိုင်း ဘယ်ကနေ ညာဘက် ရေးသွားပြီး slash ခြားထားပြီး POS tag တွဲထားတဲ့ ပုံစံ) ကနေ CONLLU format (ကော်လံအလိုက် ရေးထားပြီးတော့ mophological information, dependency information တွေပါ ပါတဲ့ 10 column format) ကို ပြောင်းဖို့ ရေးခဲ့တယ်။  
 
 test run အတွက် myPOS corpus ထဲကနေ စာကြောင်း ၅ကြောင်းကို အောက်ပါအတိုင်း ဆွဲထုတ်ထားပါတယ်။ pipe တွေလည်း ဖြုတ်ထားပါတယ်။  
 
