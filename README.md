@@ -267,5 +267,6 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 81. [test_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/test_embedding.py)
 82. [convert_to_conllu.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_conllu.py)
 83. [convert_to_spacyNER_json.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_spacyNER_json.py)
-84. [split_parallel_data.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split_parallel_data.py)  
+84. [split_parallel_data.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split_parallel_data.py)
+85. [clean_text.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/clean_text.py)  
     
