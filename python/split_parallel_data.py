@@ -2,7 +2,7 @@
 """
 For splitting into source and target files
 Last updated: Jul 14, 2023
-@author: Ye Kyaw Thu
+@author: Ye Kyaw Thu, LU Lab., Myanmar
 
 How to run:
 python split_parallel_data.py --help
