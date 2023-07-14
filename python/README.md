@@ -253,4 +253,7 @@
 (Spacy library က လက်ခံတဲ့ NER corpus ပုံစံကို ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)
 
 84. [split_parallel_data.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split_parallel_data.py)  
-(Machine translation မလုပ်ခင်မှာ TAB သို့မဟုတ် ||| နဲ့ ခြားထားတဲ့ parallel corpus ကနေ ဘာသာစကား တစ်ခုခြင်းစီအတွက် source file, target file ခွဲတဲ့ အလုပ်ကို လုပ်ရပါတယ်။ အဲဒီအတွက် ရေးထားတဲ့ python script တစ်ပုဒ်ပါ။)  
+(Machine translation မလုပ်ခင်မှာ TAB သို့မဟုတ် ||| နဲ့ ခြားထားတဲ့ parallel corpus ကနေ ဘာသာစကား တစ်ခုခြင်းစီအတွက် source file, target file ခွဲတဲ့ အလုပ်ကို လုပ်ရပါတယ်။ အဲဒီအတွက် ရေးထားတဲ့ python script တစ်ပုဒ်ပါ။)
+
+85. [clean_text.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/clean_text.py)  
+(စာလုံး တစ်လုံးနဲ့ တစ်လုံး အကြားမှာ အပိုပါနေတဲ့ space တွေ၊ စာကြောင်းရဲ့ ရှေ့ပိုင်းမှာ နောက်ဆုံး အပိုင်းမှာ ရှိနေတဲ့ heading, trailing space တွေနဲ့ မျက်စိနဲ့ မမြင်ရတဲ့ ZWSP စာလုံးကို ရှင်းပစ်ဖို့အတွက် ရေးထားခဲ့တဲ့ python code ပါ။)  
