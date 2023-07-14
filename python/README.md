@@ -252,5 +252,5 @@
 83. [convert_to_spacyNER_json.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_spacyNER_json.py)  
 (Spacy library က လက်ခံတဲ့ NER corpus ပုံစံကို ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)
 
-84. [split_parallel_data.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split_parallel_data.py)
+84. [split_parallel_data.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split_parallel_data.py)  
 (Machine translation မလုပ်ခင်မှာ TAB သို့မဟုတ် ||| နဲ့ ခြားထားတဲ့ parallel corpus ကနေ ဘာသာစကား တစ်ခုခြင်းစီအတွက် source file, target file ခွဲတဲ့ အလုပ်ကို လုပ်ရပါတယ်။ အဲဒီအတွက် ရေးထားတဲ့ python script တစ်ပုဒ်ပါ။)  
