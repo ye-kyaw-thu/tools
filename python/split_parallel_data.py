@@ -46,6 +46,7 @@ def main():
     args = parser.parse_args()
 
     # Check if the delimiter is surrounded by single or double quotes and remove them
+    # "\t" or '\t' ကို command line argument အဖြစ်ပေးတဲ့အခါမှာ error တက်နေတာနဲ့ ...  
     if args.delimiter[0] == args.delimiter[-1] and args.delimiter.startswith(("'", '"')):
         delimiter = args.delimiter[1:-1]
     else:
