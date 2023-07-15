@@ -22,6 +22,13 @@
   
 မ့မ့ၢ် ဖီသၣ်န့ၣ် ကဂ့ၤလီၤ .	ပန်းသီး ဆိုရင် ကောင်းမယ်   
 
+BLEU Formula:
+
+\[
+\text{{BLEU}} = BP \cdot \exp\left(\sum_{{n=1}}^{N}\frac{1}{N} \log p_n\right)
+\]
+
+
 ​
 
 ​
