@@ -24,9 +24,9 @@
 
 BLEU Formula:
 
-\[
+$\[
 \text{{BLEU}} = BP \cdot \exp\left(\sum_{{n=1}}^{N}\frac{1}{N} \log p_n\right)
-\]
+\]$
 
 
 ​
