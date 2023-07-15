@@ -36,6 +36,16 @@ Where:
 - $N$ is the maximum order of n-grams used in the calculation. Usually, $N = 4$ is used, meaning unigrams, bigrams, trigrams, and 4-grams are considered.
 - The $\exp(\cdot)$ and $\log(\cdot)$ functions are the exponential and natural logarithm functions, respectively. The logarithm function is used to convert the product of precisions to a sum in the logarithmic space.
 
+-----------
+
+ဒီ Dartmouth Conference က AI သမိုင်းမှာ အရေးပါတယ်​  
+- တစ်ခု သိထားသင့်တာက အဲဒီ conference အပြီး 1956 နောက်ပိုင်း မှာ ဆက်လုပ်ခဲ့ကြတဲ့ AI R&D ရဲ့ တိုးတက်မှုက အရမ်းကို နှေးပါတယ်​  
+- လူရဲ့ အသိဉာဏ်ကို တုပဖို့ စက်ကို သင်ကြားပေးနိုင်ဖို့၊ လူပြောတဲ့ စကားကို နားလည်နိုင်ဖို့ ကိစ္စတွေဟာ အရမ်း ရှုပ်ထွေးတဲ့ problem တွေပါလား ဆိုတာကို တဖြည်းဖြည်းနဲ့ ပိုနားလည်လာကြတယ်​  
+
+​
+
+​
+
 
 ​
 
