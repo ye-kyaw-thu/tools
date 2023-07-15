@@ -22,11 +22,19 @@
   
 မ့မ့ၢ် ဖီသၣ်န့ၣ် ကဂ့ၤလီၤ .	ပန်းသီး ဆိုရင် ကောင်းမယ်   
 
-BLEU Formula:
+The BLEU score is given by the formula:
 
-$\[
+$$
 \text{{BLEU}} = BP \cdot \exp\left(\sum_{{n=1}}^{N}\frac{1}{N} \log p_n\right)
-\]$
+$$
+
+Where:
+
+- $\text{{BLEU}}$ is the score for the evaluated machine translation. It ranges from 0 to 1. A score of 1 means a perfect match with the reference translation.
+- $BP$ is the brevity penalty. It penalizes shorter machine translations. If the length of the machine translation is less than the reference translation, then $BP = e^{1 - r/c}$, otherwise $BP = 1$. Here, $r$ is the effective reference corpus length and $c$ is the length of the machine translation.
+- $p_n$ is the precision for n-gram comparisons. It is the ratio of the number of n-grams in both the machine translation and the reference translation to the number of n-grams in the machine translation.
+- $N$ is the maximum order of n-grams used in the calculation. Usually, $N = 4$ is used, meaning unigrams, bigrams, trigrams, and 4-grams are considered.
+- The $\exp(\cdot)$ and $\log(\cdot)$ functions are the exponential and natural logarithm functions, respectively. The logarithm function is used to convert the product of precisions to a sum in the logarithmic space.
 
 
 ​
