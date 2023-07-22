@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 """
-List emoji characters
+List unique emojis
 Created on Sun Jul 23 00:42:47 2023
 @author: Ye Kyaw Thu, LU Lab., Myanmar
 
 How to run:
 python extract_emoji.py ./emoji.txt
+
 """
 
 import emoji
@@ -31,21 +32,27 @@ def extract_emojis_from_line(line):
     return emoji_pattern.findall(line)
 
 def main(filename):
+    # A set to keep track of processed emojis
+    processed_emojis = set()
+    
     # Open the input file in utf-8 encoding and read line by line
     with open(filename, 'r', encoding='utf-8') as file:
         for line in file:
             emojis_in_line = extract_emojis_from_line(line)
             for e in emojis_in_line:
-                print(f"Emoji Character: {e}")
-                print(f"Unicode Value: {ord(e)}")
-                print(f"Emoji Name: {emoji.demojize(e)}")
-                # We don't have definitions, so just display name as a placeholder
-                print(f"Emoji Definition: {emoji.demojize(e)}\n")
+                # Check if the emoji is already processed
+                if e not in processed_emojis:
+                    processed_emojis.add(e)
+                    print(f"Emoji Character: {e}")
+                    print(f"Unicode Value: {ord(e)}")
+                    print(f"Emoji Name: {emoji.demojize(e)}")
+                    # We don't have definitions, so just display name as a placeholder
+                    print(f"Emoji Definition: {emoji.demojize(e)}\n")
 
 if __name__ == '__main__':
     # Check if a filename was provided as a command-line argument
     if len(sys.argv) != 2:
-        print("Usage: python <script_name.py> <input_filename>")
+        print("Usage: python extract_emoji.py <input_filename>")
         sys.exit(1)
     
     input_filename = sys.argv[1]
