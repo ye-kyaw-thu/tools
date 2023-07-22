@@ -257,3 +257,6 @@
 
 85. [clean_text.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/clean_text.py)  
 (စာလုံး တစ်လုံးနဲ့ တစ်လုံး အကြားမှာ အပိုပါနေတဲ့ space တွေ၊ စာကြောင်းရဲ့ ရှေ့ပိုင်းမှာ နောက်ဆုံး အပိုင်းမှာ ရှိနေတဲ့ heading, trailing space တွေနဲ့ မျက်စိနဲ့ မမြင်ရတဲ့ ZWSP စာလုံးကို ရှင်းပစ်ဖို့အတွက် ရေးထားခဲ့တဲ့ python code ပါ။)  
+
+86. [extract_emoji.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract_emoji.py)  
+(Input file ထဲမှာ ပါတဲ့ emoji စာလုံးတွေကို ဆွဲထုတ်ပြီး list လုပ်ပြလိမ့်မယ်။)  
