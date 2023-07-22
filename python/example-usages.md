@@ -6356,15 +6356,49 @@ target.my ဖိုင်က အောက်ပါအတိုင်းပါ။
 ပုဂံ မြို့ က အမှတ်တရ ပစ္စည်း ဘာ ဝယ် ရ မလဲ
 ```
 
+## 86. [extract_emoji.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract_emoji.py)  
+
+ဖိုင်ထဲမှာ ပါနေတဲ့ emoji စာလုံးတွေကို ဆွဲထုတ်ပြီးတော့ list လုပ်ပြလိမ့်မယ်။ ထပ်ခါထပ်ခါ ပါနေတဲ့ emoji တွေကိလည်း တစ်ခါပဲ ပြပေးမှာမို့ unique list ပါ။  
+test input ဖိုင်က အောက်ပါအတိုင်းပါ။  
+
+```
+RIP the future of 🧑‍⚕️&🚝
+ငွေသား ဒေါ်လှ တစ်သိန်းလောက် ထုတ်ပြလ်ုက် ကွီးတင် ။ 😉
+ဟိ.. တိုတိုထိုးလိုက်ဦးမယ်😅
+Hi! 😅
+```
+
+ဥပမာ အနေနဲ့ run ကြည့်ထားတဲ့ output က အေက်ပါအတိုင်းပါ။  
+
+```
+(base) C:\Users\801680\.spyder-py3>python extract_emoji.py ./emoji.txt
+Emoji Character: 🧑
+Unicode Value: 129489
+Emoji Name: :person:
+Emoji Definition: :person:
+
+Emoji Character: ⚕
+Unicode Value: 9877
+Emoji Name: :medical_symbol:
+Emoji Definition: :medical_symbol:
+
+Emoji Character: 🚝
+Unicode Value: 128669
+Emoji Name: :monorail:
+Emoji Definition: :monorail:
+
+Emoji Character: 😉
+Unicode Value: 128521
+Emoji Name: :winking_face:
+Emoji Definition: :winking_face:
+
+Emoji Character: 😅
+Unicode Value: 128517
+Emoji Name: :grinning_face_with_sweat:
+Emoji Definition: :grinning_face_with_sweat:
+```
+
 ## Next Program  
-
-```
-
-```
-
-```
-
-```
 
 ```
 
