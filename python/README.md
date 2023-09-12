@@ -261,5 +261,5 @@
 86. [extract_emoji.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract_emoji.py)  
 (Input file ထဲမှာ ပါတဲ့ emoji စာလုံးတွေကို ဆွဲထုတ်ပြီး unique list လုပ်ပြလိမ့်မယ်။)
 
-87. [compare_characters.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_characters.py  
+87. [compare_characters.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_characters.py)  
 (character ဖြတ်ထားတဲ့ ဖိုင်နှစ်ဖိုင်အကြားကို နှိုးယှဉ်ကြည့်ဖို့အတွက်)
