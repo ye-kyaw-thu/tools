@@ -263,3 +263,6 @@
 
 87. [compare_characters.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_characters.py)  
 (character ဖြတ်ထားတဲ့ ဖိုင်နှစ်ဖိုင်အကြားကို နှိုးယှဉ်ကြည့်ဖို့အတွက်)
+
+88. [word_length_analysis.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word_length_analysis.py)  
+(vocab ဘာညာ မဆောက်ခင်မှာ ကိုယ့် corpus ဖိုင်ထဲက စာကြောင်းတွေထဲမှာ ပါဝင်တဲ့ စာလုံးရေ အရေအတွက် min, max number of words ကို သိထားရင် ကောင်းပါတယ်။ အဲဒီအတွက်)  
