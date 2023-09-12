@@ -6398,6 +6398,26 @@ Emoji Name: :grinning_face_with_sweat:
 Emoji Definition: :grinning_face_with_sweat:
 ```
 
+## 87. [compare_characters.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_characters.py   
+
+Running example ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/bg-br/data/splitting/segmentation/space_cleaned$ python ./compare_characters
+.py ./train.bg ./train.br
+Total Bengali characters: 3758690
+Total Braille characters: 9614764
+Braille has 155.80% more characters than Bengali.
+(base) ye@lst-gpu-3090:~/exp/bg-br/data/splitting/segmentation/space_cleaned$ python ./compare_characters.py ./valid.bg ./valid.br
+Total Bengali characters: 449140
+Total Braille characters: 1143854
+Braille has 154.68% more characters than Bengali.
+(base) ye@lst-gpu-3090:~/exp/bg-br/data/splitting/segmentation/space_cleaned$ python ./compare_characters.py ./test.bg ./test.br
+Total Bengali characters: 445636
+Total Braille characters: 1137612
+Braille has 155.28% more characters than Bengali.
+```
+
 ## Next Program  
 
 ```
