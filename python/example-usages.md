@@ -6398,7 +6398,7 @@ Emoji Name: :grinning_face_with_sweat:
 Emoji Definition: :grinning_face_with_sweat:
 ```
 
-## 87. [compare_characters.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_characters.py   
+## 87. [compare_characters.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_characters.py)   
 
 Running example ...  
 
