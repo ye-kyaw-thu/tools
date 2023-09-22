@@ -6445,6 +6445,46 @@ Line 14517: ⠃ ⠚ ⠚ ⠋ ⠄ ⡳ ⠭ ⠴ ⠴ ⠆ ⠙ ⠄ ⠑ ⠗ ⠄ ⡳ ⠭ 
 (base) ye@lst-gpu-3090:~/exp/bg-br/data$
 ```
 
+## 89. [comma2tab_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/comma2tab_label2digit.py)  
+
+ကော်မာခြားထားတဲ့ ဖိုင်ပုံစံကနေ TAB ကီးနဲ့ခြားထားတဲ့ ပုံစံအဖြစ်ပြောင်းလဲဖို့နဲ့ စာသားနဲ့ ရိုက်ထားတဲ့ လေဘယ်နှစ်မျိုးကို digit label (i.e. 0, 1) အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။ အသုံးပြုပုံ ဥပမာက အောက်ပါအတိုင်းပါ။  
+
+ဥပမာအဖြစ် run ပြဖို့အတွက် သုံးမယ့် CSV ဖိုင်က အောက်ပါအတိုင်းပါ။  
+
+```
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ head sentiment_my_dataset.csv
+text,sentiment
+အရမ်း လှ နေ ပါလား,positive
+ရုပ်ဆိုး ကြီး,negative
+အပေါက် ဆိုး တယ်,negative
+စောက် သုံး မကျ,negative
+မင်္ဂလာ ပါ,positive
+စား လို့ ကောင်း တယ်,positive
+အိပ် လို့ ကောင်း တယ်,positive
+လိမ္မာ တယ်,positive
+မ လိမ္မာ ဘူး,negative
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
+```
+
+Run ပြီးသွားတဲ့အခါမှာ ပြောင်းသွားတဲ့ TSV file format က အောက်ပါအတိုင်းပါ။  
+
+```
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ python ./comma2tab_label2digit.py ./sentiment_my_dataset.csv sentiment_my_dataset.tsv
+Processed data saved to sentiment_my_dataset.tsv
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ head sentiment_my_dataset.tsv
+text    sentiment
+အရမ်း လှ နေ ပါလား       0
+ရုပ်ဆိုး ကြီး   1
+အပေါက် ဆိုး တယ် 1
+စောက် သုံး မကျ  1
+မင်္ဂလာ ပါ      0
+စား လို့ ကောင်း တယ်     0
+အိပ် လို့ ကောင်း တယ်    0
+လိမ္မာ တယ်      0
+မ လိမ္မာ ဘူး    1
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
+```
+
 ## Next Program  
 
 ```
