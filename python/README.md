@@ -268,4 +268,7 @@
 (NMT မလုပ်ခင်မှာ ကိုယ့် corpus ဖိုင်ထဲက စာကြောင်းတွေထဲမှာ ပါဝင်တဲ့ စာလုံးရေ အရေအတွက် min, max number of words ကို သိထားရင် ကောင်းပါတယ်။ အဲဒီအတွက်)
 
 89. [comma2tab_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/comma2tab_label2digit.py)  
-(CSV file ကနေ TSV format ကို ပြောင်းဖို့နဲ့ text label နှစ်မျိုးကို digit အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)  
+(CSV file ကနေ TSV format ကို ပြောင်းဖို့နဲ့ text label နှစ်မျိုးကို digit အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)
+
+90. [conv_delimiter_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/conv_delimiter_label2digit.py)  
+(အထက်က program no. 89 ကို extension လုပ်ထားတဲ့ ဗားရှင်းပါ။ ဒီ တစ်ခါတော့ delimiter တွေကို --from, --to ဆိုတဲ့ option နှစ်ခုနဲ့ သတ်မှတ်ပေးလို့ ရပါတယ်။ ပြီးတော့ text label တွေကိုလည်း ပရိုဂရမ်က input file ကနေ auto count လုပ်ပြီး digit label အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။)    
