@@ -6485,6 +6485,11 @@ text    sentiment
 (demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
 ```
 
+## 90. [conv_delimiter_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/conv_delimiter_label2digit.py)  
+
+အထက်က ပရိုဂရမ် ၈၉ တုန်းကလို CSV ကနေ TSV ကိုပဲ ပြောင်းတာ မဟုတ်ပဲ လက်ရှိဖိုင်ရဲ့ delimiter နဲ့ ကိုယ်ပြောင်းချင်တဲ့ delimiter တွေကို -f or --from, -t or --to ဆိုတဲ့ option နှစ်ခုသုံးပြီး သတ်မှတ်ပေးလို့ ရအောင် ရေးခဲ့တယ်။ text label တွေကိုလည်း ပေးလိုက်တဲ့ input corpus ဖိုင်မှာ ဘယ်နှစ်မျိုး ရှိတာလဲ ဆိုတာကို python code က ရေတွက်ပြီး digit label တွေကို သတ်မှတ်ပေးလိမ့်မယ်။ အဲဒါကြောင့် ဒီပရိုဂရမ်ကတော့ ပိုအသုံးရတာ အဆင်ပြေလိမ့်မယ်။  
+
+
 ## Next Program  
 
 ```
