@@ -265,7 +265,7 @@
 (character ဖြတ်ထားတဲ့ ဖိုင်နှစ်ဖိုင်အကြားကို နှိုးယှဉ်ကြည့်ဖို့အတွက်)
 
 88. [word_length_analysis.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word_length_analysis.py)  
-( NMT မလုပ်ခင်မှာ ကိုယ့် corpus ဖိုင်ထဲက စာကြောင်းတွေထဲမှာ ပါဝင်တဲ့ စာလုံးရေ အရေအတွက် min, max number of words ကို သိထားရင် ကောင်းပါတယ်။ အဲဒီအတွက်)
+(NMT မလုပ်ခင်မှာ ကိုယ့် corpus ဖိုင်ထဲက စာကြောင်းတွေထဲမှာ ပါဝင်တဲ့ စာလုံးရေ အရေအတွက် min, max number of words ကို သိထားရင် ကောင်းပါတယ်။ အဲဒီအတွက်)
 
 89. [comma2tab_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/comma2tab_label2digit.py)  
-( CSV file ကနေ TSV format ကို ပြောင်းဖို့နဲ့ text label နှစ်မျိုးကို digit အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)  
+(CSV file ကနေ TSV format ကို ပြောင်းဖို့နဲ့ text label နှစ်မျိုးကို digit အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့)  
