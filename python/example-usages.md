@@ -6489,6 +6489,72 @@ text    sentiment
 
 အထက်က ပရိုဂရမ် ၈၉ တုန်းကလို CSV ကနေ TSV ကိုပဲ ပြောင်းတာ မဟုတ်ပဲ လက်ရှိဖိုင်ရဲ့ delimiter နဲ့ ကိုယ်ပြောင်းချင်တဲ့ delimiter တွေကို -f or --from, -t or --to ဆိုတဲ့ option နှစ်ခုသုံးပြီး သတ်မှတ်ပေးလို့ ရအောင် ရေးခဲ့တယ်။ text label တွေကိုလည်း ပေးလိုက်တဲ့ input corpus ဖိုင်မှာ ဘယ်နှစ်မျိုး ရှိတာလဲ ဆိုတာကို python code က ရေတွက်ပြီး digit label တွေကို သတ်မှတ်ပေးလိမ့်မယ်။ အဲဒါကြောင့် ဒီပရိုဂရမ်ကတော့ ပိုအသုံးရတာ အဆင်ပြေလိမ့်မယ်။  
 
+```
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ python ./conv_delimiter_label2digit.py --help
+usage: conv_delimiter_label2digit.py [-h] [-f FROM_DELIMITER] [-t TO_DELIMITER]
+                                     input_filename output_filename
+
+Convert file formats and text labels to digits.
+
+positional arguments:
+  input_filename        Path to the input file.
+  output_filename       Path to the output file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FROM_DELIMITER, --from-delimiter FROM_DELIMITER
+                        Original delimiter (default is ',').
+  -t TO_DELIMITER, --to-delimiter TO_DELIMITER
+                        New delimiter (default is tab).
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
+```
+
+CSV ကနေ TSV ကို ပြောင်းပေးတာက default delimiter တွေအဖြစ် သတ်မှတ်ထားတာမို့လို့ --from, --to တွေကို assign မလုပ်ပေးရင်လည်း အိုကေတယ်။ ဥပမာ အောက်ပါလိုမျိုး command ပေးပြီး run လို့ ရပါတယ်။  
+
+```
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ python ./conv_delimiter_label2digit.py ./sentiment_my_dataset.csv output.tsv
+Processed data saved to output.tsv
+
+Label to Digit Mapping:
+'negative': 0
+'positive': 1
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ head output.tsv
+text    sentiment
+အရမ်း လှ နေ ပါလား       1
+ရုပ်ဆိုး ကြီး   0
+အပေါက် ဆိုး တယ် 0
+စောက် သုံး မကျ  0
+မင်္ဂလာ ပါ      1
+စား လို့ ကောင်း တယ်     1
+အိပ် လို့ ကောင်း တယ်    1
+လိမ္မာ တယ်      1
+မ လိမ္မာ ဘူး    0
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
+```
+
+CSV ဖိုင်ကနေ pipe character နဲ့ ခြားထားတဲ့ file format အဖြစ် ပြောင်းချင်ရင်တော့ အောက်ပါအတိုင်း ...  
+တစ်ခုရှိတာက 0, 1 ... ဆိုပြီး digit label တွေအဖြစ် ပြောင်းတဲ့ အခါမှာတော့ auto assign လုပ်သွားမှာ ဖြစ်တယ်။  
+
+```
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ python ./conv_delimiter_label2digit.py -t "|" ./sentiment_my_dataset.csv output.psv
+Processed data saved to output.psv
+
+Label to Digit Mapping:
+'negative': 0
+'positive': 1
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$ head output.psv
+text|sentiment
+အရမ်း လှ နေ ပါလား|1
+ရုပ်ဆိုး ကြီး|0
+အပေါက် ဆိုး တယ်|0
+စောက် သုံး မကျ|0
+မင်္ဂလာ ပါ|1
+စား လို့ ကောင်း တယ်|1
+အိပ် လို့ ကောင်း တယ်|1
+လိမ္မာ တယ်|1
+မ လိမ္မာ ဘူး|0
+(demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
+```
 
 ## Next Program  
 
