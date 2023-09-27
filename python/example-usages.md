@@ -6566,7 +6566,7 @@ Example running ကတော့ အောက်ပါအတိုင်းပါ
 (base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$ cat input.txt
 ကျွန်တော်က တက္ကသိုလ် ကျောင်းသားပါ။
 သစ္စာရှိမှ သစ္စာပန်း ပွင့်လိမ့်မယ်
-ဒုက္ကသစ္စာ
+ဒုက္ခသစ္စာ
 ```
 
 output filename ကို option နဲ့ မပေးပဲ run ရင် output ကို scree မှာပဲ print လုပ်ပေးပါလိမ့်မယ်။  
@@ -6575,7 +6575,7 @@ output filename ကို option နဲ့ မပေးပဲ run ရင် outp
 (base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$ python ./padsint_detection.py ./input.txt
 က္က
 စ္စ, စ္စ
-က္က, စ္စ
+က္ခ, စ္စ
 (base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$
 ```
 
