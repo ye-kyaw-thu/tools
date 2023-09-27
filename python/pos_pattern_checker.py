@@ -9,7 +9,7 @@
 import argparse
 from textx import metamodel_from_file
 
-# Define the DSL Grammar with updated tagset
+# Define the DSL Grammar with myPOS tagset
 grammar = """
 Model: patterns*=Pattern;
 Pattern: 'pattern' name=ID ':' elements*=ELEMENT 'END';
