@@ -275,4 +275,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 89. [comma2tab_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/comma2tab_label2digit.py)
 90. [conv_delimiter_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/conv_delimiter_label2digit.py)
 91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)  
-    
+92. [replace_pipe_with_space.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/replace_pipe_with_space.py)  
