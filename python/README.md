@@ -272,3 +272,6 @@
 
 90. [conv_delimiter_label2digit.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/conv_delimiter_label2digit.py)  
 (အထက်က program no. 89 ကို extension လုပ်ထားတဲ့ ဗားရှင်းပါ။ ဒီ တစ်ခါတော့ delimiter တွေကို --from, --to ဆိုတဲ့ option နှစ်ခုနဲ့ သတ်မှတ်ပေးလို့ ရပါတယ်။ ပြီးတော့ text label တွေကိုလည်း ပရိုဂရမ်က input file ကနေ auto count လုပ်ပြီး digit label အဖြစ် ပြောင်းပေးပါလိမ့်မယ်။)    
+
+91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)  
+(ပါဌ်ဆင့် သို့မဟုတ် ဆင့်ထားတဲ့ ဗျည်းတွေကို detect လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
