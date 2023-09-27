@@ -6556,6 +6556,29 @@ text|sentiment
 (demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
 ```
 
+91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)
+
+Input ဖိုင်ထဲက စာကြောင်းတွေထဲကနေ ပါဌ်ဆင့် တွေကိုပဲ ဆွဲထုတ်ဖို့ ရေးခဲ့တ့ ပရိုဂရမ်ပါ။ word level unit အနေနဲ့ ဆွဲထုတ်တာ မဟုတ်ပါဘူး။ character+padsint_symbol+character ဆိုတဲ့ pattern ကိုပဲ ဆွဲထုတ်ကြည့်ထားတာပါ။ ဥပမာ ပေးလိုက်တဲ့ input corpus ထဲမှာ ဆင့်ထားတဲ့ pattern ဘယ်နှစ်မျိုး ပါသလဲ ဆိုတာကို သိချင်တဲ့အခါမှာ အသုံးဝင်ပါလိမ့်မယ်။ သိတဲ့အတိုင်းပဲ လက်တွေ့ စာကြောင်းတွေထဲမှာက လူတွေက မှားရိုက်ထားတာတွေကော၊ textbook ထဲမှာ သတ်မှတ်ထားတဲ့အတိုင်း မဟုတ်တဲ့ ဆင့်ပုံဆင့်နည်းတွေကိုလည်း လုပ်ကြတာမို့လို့ raw data ကနေ ဆွဲထုတ်ကြည့်ဖို့ ပါ။  
+
+Example running ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$ cat input.txt
+ကျွန်တော်က တက္ကသိုလ် ကျောင်းသားပါ။
+သစ္စာရှိမှ သစ္စာပန်း ပွင့်လိမ့်မယ်
+ဒုက္ကသစ္စာ
+```
+
+output filename ကို option နဲ့ မပေးပဲ run ရင် output ကို scree မှာပဲ print လုပ်ပေးပါလိမ့်မယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$ python ./padsint_detection.py ./input.txt
+က္က
+စ္စ, စ္စ
+က္က, စ္စ
+(base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$
+```
+
 ## Next Program  
 
 ```
