@@ -6579,6 +6579,107 @@ output filename ကို option နဲ့ မပေးပဲ run ရင် outp
 (base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$
 ```
 
+93. [pos_pattern_checker.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/pos_pattern_checker.py)
+
+လေ့လာစေချင်တာက ဒီ code ကို ရေးတဲ့အခါမှာ DSL parser library တစ်ခုကို ယူသုံးပြထားတယ်။ အသုံးဝင်ပါလိမ့်မယ်။   
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$ python ./pos_pattern_checker.py --help
+usage: pos_pattern_checker.py [-h] -p PATTERN [-o OUTPUT_FILENAME] filename
+
+Parse Burmese POS-tagged sentences against a pattern.
+
+positional arguments:
+  filename              Input filename with POS-tagged Burmese sentences.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PATTERN, --pattern PATTERN
+                        Pattern DSL string.
+  -o OUTPUT_FILENAME, --output_filename OUTPUT_FILENAME
+                        Output filename to save the results. Defaults to printing on screen.
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$
+```
+
+မြန်မာစာရဲ့ POS pattern အမျိုးမျိုးကို ဆွဲထုတ်ကြည့်ခဲ့တယ်။   
+ဒီနေရာမှာ demo run ပြဖို့အတွက် head command နဲ့ ၁၀ကြောင်းစီကိုပဲ ဆွဲထုတ်ကြည့်ခဲ့တယ်။ Python ရဲ့ print နဲ့ ရိုက်ထုတ်ထားတဲ့ output ကို head commnad ကို ပေးရင် စာကြောင်းအရေအတွက် များတဲ့အခါမှာ Broken pipe error ပေးတာကြောင့်မို့လို့ အဲဒီ error ကို မပေါ်အောင် "2> /dev/null" လုပ်ထားတာပါ။  
+
+ဆွဲထုတ်ကြည့်လို့ ထွက်လာတဲ့ ရလဒ်တွေက အောက်ပါအတိုင်း ...   
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$ python ./pos_pattern_checker.py ./pos_data/mypos-ver.3.0.nopipe.txt --pattern "pattern basic: pron n END" 2> /dev/null | head
+အဲ့ဒီ/pron အခန်း/n
+ခင်ဗျား/pron သူဌေး/n
+ခင်ဗျား/pron အသက်/n
+ငါ့/pron စကား/n
+ဒီ/pron နန်းတော်/n
+ကျွန်တော်/pron အိမ်နီးနားချင်း/n
+အဲဒီ/pron လူ/n
+ကျွန်တော့်/pron အရွယ်အစား/n
+ခင်ဗျား/pron အပေါ်/n
+ကျွန်တော်/pron ရှေ့လျှောက်/n
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$ python ./pos_pattern_checker.py ./pos_data/mypos-ver.3.0.nopipe.txt --pattern "pattern basic: pron v END" 2> /dev/null | head
+ကျွန်တော်/pron စဉ်းစား/v
+မင်း/pron စား/v
+သူ/pron ခေါင်းဆောင်/v
+ဘာ/pron ဖြစ်/v
+ဘာ/pron ဖြစ်/v
+ဘာ/pron ဝယ်/v
+ဘာ/pron ကျွေး/v
+မင်း/pron အကြံပြု/v
+ဘာ/pron လုပ်/v
+ကျွန်တော်/pron ဆိုလို/v
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$ python ./pos_pattern_checker.py ./pos_data/mypos-ver.3.0.nopipe.txt --pattern "pattern basic: n adj v n END" 2> /dev/null | head
+ဒေသ/n အသီးသီး/adj ရှိ/v ဥရောပ/n
+မြို့/n ဟောင်း/adj ရှိ/v ပုဂံ/n
+နယ်မြေ/n သစ်/adj ရှိ/v မကောင်းဆိုးဝါး/n
+ဆရာမ/n ကြီး/adj ဖြစ်/v သူ/n
+ဆရာ/n ဘာ/adj အရေးကြီး/v ကိစ္စ/n
+ကုန်ပစ္စည်း/n ထက်/adj ယှဉ်ပြိုင်/v အား/n
+အာဏာ/n ကြီးမား/adj ထင်ပေါ်/v အရာရာ/n
+အခန်း/n လွတ်/adj ရှိ/v လား/n
+ကီလို/n အခမဲ့/adj သယ်/v ခွင့်/n
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$ python ./pos_pattern_checker.py ./pos_data/mypos-ver.3.0.nopipe.txt --pattern "pattern basic: adv v END" 2> /dev/null | head
+ဆက်လက်/adv လုပ်ကိုင်/v
+ဘယ်လို/adv ရှိ/v
+ဘယ်လောက်/adv ရှိ/v
+အမြန်/adv ထွက်/v
+အမြဲ/adv သတိရ/v
+ဆင်ဆင်/adv တူ/v
+နည်းနည်း/adv လျော့/v
+တော်တော်/adv ကြာ/v
+အလွန်/adv ပြင်းထန်/v
+လတ်တလော/adv ရှာဖွေ/v
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$ python ./pos_pattern_checker.py ./pos_data/mypos-ver.3.0.nopipe.txt --pattern "pattern basic: n v n END" 2> /dev/null | head
+သမ္မတ/n ဖြစ်/v သူ/n
+အပြင်/n ရှိ/v ရုပ်ဝတ္ထု/n
+ကုန်/n ထုတ်လုပ်/v သူ/n
+နှစ်/n ပြည့်/v မွေးနေ့/n
+ဂျိုဝါ/n ခေါ်/v ကောက်/n
+အရောင်း/n ဖြစ်/v ပမာဏ/n
+စစ်တပ်/n ပိုင်/v လေယာဉ်/n
+နတ်/n ကိုးကွယ်/v သူ/n
+မေမြို့/n ရှိ/v လူဦးရေ/n
+နိုင်ငံ/n ရှိ/v ပြည်ထောင်စုသား/n
+(base) ye@lst-gpu-3090:~/exp/4teaching/dsl_parser$
+```
+
 ## Next Program  
 
 ```
