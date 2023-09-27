@@ -1,5 +1,5 @@
 ## Written by Ye Kyaw Thu, LU Lab., Myanmar
-## for POS pattern anslysis
+## for analysis on POS pattern combinations of Burmese
 ## Last updated: 27 Sept 2023
 ## How to run:
 ## python ./pos_pattern_checker.py ./pos_data/mypos-ver.3.0.nopipe.txt --pattern "pattern basic: pron v END" 2> /dev/null | head
