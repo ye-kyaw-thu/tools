@@ -277,3 +277,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)  
 92. [replace_pipe_with_space.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/replace_pipe_with_space.py)  
 93. [pos_pattern_checker.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/pos_pattern_checker.py)  
+94. [sort_ngram.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/sort_ngram.py)  
