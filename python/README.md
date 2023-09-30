@@ -280,4 +280,7 @@
 (Input ဖိုင်ထဲက pipe (|) ကို space နဲ့ အစားထိုးဖို့အတွက် ရေးခဲ့တယ်။)  
 
 93. [pos_pattern_checker.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/pos_pattern_checker.py)  
-(မြန်မာစာရဲ့ POS pattern combination တွေအမျိုးမျိုး ရှိနေတဲ့အထဲကနေ ကိုယ်ဆွဲထုတ်ကြည့်ချင်တဲ့ pattern ကို ကြည့်လို့ ရဖို့အတွက် ရေးခဲ့တယ်။ DSL library ကိုလည်း သုံးထားတယ်။)  
+(မြန်မာစာရဲ့ POS pattern combination တွေအမျိုးမျိုး ရှိနေတဲ့အထဲကနေ ကိုယ်ဆွဲထုတ်ကြည့်ချင်တဲ့ pattern ကို ကြည့်လို့ ရဖို့အတွက် ရေးခဲ့တယ်။ DSL library ကိုလည်း သုံးထားတယ်။)
+
+94. [sort_ngram.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/sort_ngram.py)  
+(ngram ဖိုင်တွေကို စာသားနဲ့ သို့မဟုတ် ngram value နဲ့ sorting စီပေးဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)  
