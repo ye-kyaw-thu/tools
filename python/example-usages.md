@@ -6556,7 +6556,7 @@ text|sentiment
 (demo) ye@lst-gpu-3090:~/exp/demo/relativity_meaning/data/tmp$
 ```
 
-91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)
+## 91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)
 
 Input ဖိုင်ထဲက စာကြောင်းတွေထဲကနေ ပါဌ်ဆင့် တွေကိုပဲ ဆွဲထုတ်ဖို့ ရေးခဲ့တ့ ပရိုဂရမ်ပါ။ word level unit အနေနဲ့ ဆွဲထုတ်တာ မဟုတ်ပါဘူး။ character+padsint_symbol+character ဆိုတဲ့ pattern ကိုပဲ ဆွဲထုတ်ကြည့်ထားတာပါ။ ဥပမာ ပေးလိုက်တဲ့ input corpus ထဲမှာ ဆင့်ထားတဲ့ pattern ဘယ်နှစ်မျိုး ပါသလဲ ဆိုတာကို သိချင်တဲ့အခါမှာ အသုံးဝင်ပါလိမ့်မယ်။ သိတဲ့အတိုင်းပဲ လက်တွေ့ စာကြောင်းတွေထဲမှာက လူတွေက မှားရိုက်ထားတာတွေကော၊ textbook ထဲမှာ သတ်မှတ်ထားတဲ့အတိုင်း မဟုတ်တဲ့ ဆင့်ပုံဆင့်နည်းတွေကိုလည်း လုပ်ကြတာမို့လို့ raw data ကနေ ဆွဲထုတ်ကြည့်ဖို့ ပါ။  
 
@@ -6579,7 +6579,7 @@ output filename ကို option နဲ့ မပေးပဲ run ရင် outp
 (base) ye@lst-gpu-3090:~/exp/4teaching/turing_machine$
 ```
 
-93. [pos_pattern_checker.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/pos_pattern_checker.py)
+## 93. [pos_pattern_checker.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/pos_pattern_checker.py)
 
 လေ့လာစေချင်တာက ဒီ code ကို ရေးတဲ့အခါမှာ DSL parser library တစ်ခုကို ယူသုံးပြထားတယ်။ အသုံးဝင်ပါလိမ့်မယ်။   
 
@@ -6850,6 +6850,142 @@ n-gram value နဲ့ပဲ ကြီးစဉ်ငယ်လိုက် စ�
 ဒါ ပေ မဲ့ 0.0003259903372944639
 နိုင် ပါ စေ 0.0003231788760476865
 ```
+
+## 95. [analyze_NER_corpus.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/analyze_NER_corpus.py)  
+
+NER corpus မှာ တပ်ထားတဲ့ tag အရေအတွက်ရဲ့ frequency/distribution တွေကို စစ်ဆေးဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။ Corpus တစ်ခု ဆောက်တဲ့နေရာမှာ tag တစ်ခုတည်းက များနေတာမျိုး ဖြစ်နေရင် မော်ဒယ်မှာ bias ဖြစ်တာမို့လို့ ...  
+
+--help နဲ့ ဘယ်လို run ရသလဲ ဆိုတာကို ခေါ်ကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNER/data$ python ./analyze_NER_corpus.py --help
+usage: analyze_NER_corpus.py [-h] [-f {abstract,detailed}] filename
+
+Analyze NER tagged data.
+
+positional arguments:
+  filename              Path to the input file.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f {abstract,detailed}, --format {abstract,detailed}
+                        Output format. "abstract" to consider all B, I, E, S tags as one
+                        tag; "detailed" for detailed tags.
+```
+
+ဒီ ပရိုဂရမ်မှာက format နှစ်မျိုးနဲ့ print လုပ်ပေးဖို့ ရေးထားပါတယ်။  
+Running example with --format abstract:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNER/data$ python ./analyze_NER_corpus.py ./10k_NER_draft_version1_KaungLwinThant.txt --format abstract
+Analysis of './10k_NER_draft_version1_KaungLwinThant.txt'
+----------------------------------------
+1. Number of sentences without named entities: 7490
+2. Frequency of each tag:
+   DATE: 1647
+   EVENT: 186
+   LOC: 3190
+   NUM: 1093
+   O: 137129
+   ORG: 990
+   PER: 1179
+   PRODUCT: 49
+   TIME: 404
+3. Distribution of each tag:
+   DATE: 1.13%
+   EVENT: 0.13%
+   LOC: 2.19%
+   NUM: 0.75%
+   O: 94.01%
+   ORG: 0.68%
+   PER: 0.81%
+   PRODUCT: 0.03%
+   TIME: 0.28%
+
+(base) ye@lst-gpu-3090:~/exp/myNER/data$
+```
+
+Running example with --format option:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNER/data$ python ./analyze_NER_corpus.py ./10k_NER_draft_version1_KaungLwinThant.txt --format detailed
+Analysis of './10k_NER_draft_version1_KaungLwinThant.txt'
+----------------------------------------
+1. Number of sentences without named entities: 7490
+2. Frequency of each tag:
+   B-DATE: 540
+   B-EVENT: 61
+   B-LOC: 1066
+   B-NUM: 179
+   B-ORG: 307
+   B-PER: 235
+   B-PRODUCT: 15
+   B-TIME: 133
+   E-DATE: 540
+   E-EVENT: 61
+   E-LOC: 1066
+   E-NUM: 179
+   E-ORG: 307
+   E-PER: 235
+   E-PRODUCT: 15
+   E-TIME: 133
+   I-DATE: 444
+   I-EVENT: 52
+   I-LOC: 166
+   I-NUM: 32
+   I-ORG: 226
+   I-PER: 11
+   I-PRODUCT: 2
+   I-TIME: 82
+   O: 137129
+   S-DATE: 123
+   S-EVENT: 12
+   S-LOC: 892
+   S-NUM: 703
+   S-ORG: 150
+   S-PER: 698
+   S-PRODUCT: 17
+   S-TIME: 56
+3. Distribution of each tag:
+   B-DATE: 0.37%
+   B-EVENT: 0.04%
+   B-LOC: 0.73%
+   B-NUM: 0.12%
+   B-ORG: 0.21%
+   B-PER: 0.16%
+   B-PRODUCT: 0.01%
+   B-TIME: 0.09%
+   E-DATE: 0.37%
+   E-EVENT: 0.04%
+   E-LOC: 0.73%
+   E-NUM: 0.12%
+   E-ORG: 0.21%
+   E-PER: 0.16%
+   E-PRODUCT: 0.01%
+   E-TIME: 0.09%
+   I-DATE: 0.30%
+   I-EVENT: 0.04%
+   I-LOC: 0.11%
+   I-NUM: 0.02%
+   I-ORG: 0.15%
+   I-PER: 0.01%
+   I-PRODUCT: 0.00%
+   I-TIME: 0.06%
+   O: 94.01%
+   S-DATE: 0.08%
+   S-EVENT: 0.01%
+   S-LOC: 0.61%
+   S-NUM: 0.48%
+   S-ORG: 0.10%
+   S-PER: 0.48%
+   S-PRODUCT: 0.01%
+   S-TIME: 0.04%
+
+(base) ye@lst-gpu-3090:~/exp/myNER/data$
+```
+
+အထက်မှာ မြင်ရတဲ့အတိုင်းပါပဲ လက်ရှိ develop လုပ်နေတဲ့ NER corpus မှာ O tag တွေက တအားများနေတာကို တွေ့ရပါလိမ့်မယ်။  
+O tag တွေကလည်း မပါလို့ မဖြစ်ပါဘူး။ သို့သော် လက်ရှိလိုမျိုး တအားများနေရင်လည်း အဆင်မပြေပါဘူး။  
 
 ## Next Program  
 
