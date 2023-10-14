@@ -283,4 +283,7 @@
 (မြန်မာစာရဲ့ POS pattern combination တွေအမျိုးမျိုး ရှိနေတဲ့အထဲကနေ ကိုယ်ဆွဲထုတ်ကြည့်ချင်တဲ့ pattern ကို ကြည့်လို့ ရဖို့အတွက် ရေးခဲ့တယ်။ DSL library ကိုလည်း သုံးထားတယ်။)
 
 94. [sort_ngram.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/sort_ngram.py)  
-(ngram ဖိုင်တွေကို စာသားနဲ့ သို့မဟုတ် ngram value နဲ့ sorting စီပေးဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)  
+(ngram ဖိုင်တွေကို စာသားနဲ့ သို့မဟုတ် ngram value နဲ့ sorting စီပေးဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)
+
+95. [analyze_NER_corpus.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/analyze_NER_corpus.py)  
+(NER corpus မှာ တပ်ထားတဲ့ tag အရေအတွက်နဲ့ ပတ်သက်ပြီး စစ်ဆေးဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
