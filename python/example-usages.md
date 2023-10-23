@@ -7037,10 +7037,49 @@ Testing ၅ခု အတွက် ဆွဲပေးခဲ့တဲ့ graph က
     <img width="75%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/sentence_compare.png">
 </p>
 
+97. [compare_word_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_word_tag_distributions.py)
+
+အထက်က ပရိုဂရမ် နံပါတ် 96 ကို modify လုပ်ထားတဲ့ python code ပါ။ အလုပ်လုပ်တဲ့ ပုံစံကလည်း အတူတူပါပဲ။ ဒီတစ်ခါတော့ ဖတ်ယူရတဲ့ ဖိုင်က word level or phrase level အနေနဲ့ tag လုပ်ထားတဲ့ input text ဖိုင်ပါ။  ဖိုင် format ကအောက်ပါအတိုင်းပါ။  
 
 ```
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/word_phrase$ head -n 3 Test-2
+မနက် ၅ နာရီ ခု ထိ မ လာ ဘူး ၅ မိနစ် ၅ နာရီ ထိ ပျက် သွား အောင် ပေး တာ လား လီး/ab ပဲ ဟေ့ မအေလိုး/ab တွေ
+မီး ပျက် သွား ပြီ ပြန် ဖျက် သလို ပဲ
+မီး လာ ရ မှာ မီး ပေး ပြီး ၅ မိနစ် တောင် မ ပြည့် တော့ ဘူး မအေလိုး/ab တွေ မီး နာရီ ပြန် ပျက် တယ် ဆို တော့ မ သိ ရင် လည်း နာရီဝက် လည်း ပျက် ပြီ လီး/ab ပဲ ဟေ့
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/word_phrase$ tail -n 3 Test-5
+ဘုန်းကြီး က တော့ မင်း တို့ က ဘယ်လို အဟုတ် မှာ လဲ ကျေနပ် မ ဆိုင် တာ နဲ့ တစ် ယောက် မှာ လေးစား ပါ တယ်
+လူ က ရော နင် တို့ တစ် ယောက် က အစား ဖူး တုန်း က ကိုယ့် အများကြီး လို့ ရ တယ် ရှင်း ပေါ် က နေ မြန်မာ လူမျိုး တွေ က သူ တို့ နိုင်ငံ လေး တွေ က လုပ် ခဲ့ ရ လေ နေ လို့ အမေ မ ဟုတ် ဘူး တဲ့ သူ တွေ သူ တို့ အတွက် တောင် မ စား လို့ လား နော်
+အခု မှ သန့် တာ ပဲ မြန်မာ ပြည် မှာ ပဲ လေ မအလ/ab ကြီး ရာ ချင် စရာ
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/word_phrase$ head -n 3 Test-1
+မနက် ၅ နာရီ ခု ထိ မ လာ ဘူး ၅ မိနစ် ၅ နာရီ ထိ ပျက် သွား အောင် ပေး တာ လား လီး/ab ပဲ ဟေ့ မအေလိုး/ab တွေပျက် သွား ပြီ ပြန် ဖျက် သလို ပဲောင် မ ပြည့် တော့ ဘူး မအေလိုး/ab တွေ မီး နာရီ ပြန် ပျက် တယ် ဆို တော့ မ သိဝက် လည်း ပျက် ပြီ လီး/ab ပဲ ဟေ့
+မအေလိုး/ab တွေ မီတာခ ကျတော့ ပြည်သူ တွေ အကုန်လုံး ခု မီး လာ မယ့် အချိန် မှန် အိပ် ပေး ပြီ နော် မီး ပျက် နေ တာေ ရေ
+မအေလိုး/ab တွေ တစ် နေကုန် ပျက် ၉ နာရီ လာ ပြီး ၉ နာရီ တော့ မှာ လာ ဖြတ် နေ တာ ပဲ
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/word_phrase$
+```
+
+help screen ခေါ်ကြည့်ချင်ရင် --help ကို သု့းပါ။  
 
 ```
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script$ python ./compare_word_tag_distributions.py --help
+usage: compare_word_tag_distributions.py [-h] -p PATH -g GRAPH_FILENAME
+
+Compare Hate Speech Tag Distributions Among Files.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PATH, --path PATH  Path to the folder containing the files.
+  -g GRAPH_FILENAME, --graph_filename GRAPH_FILENAME
+                        Output graph filename.
+```
+
+Running example is as follows:  
+
+```
+ python ./compare_word_tag_distributions.py -p ./word_phrase/ -g word_compare.png
+```
+
+output graph က အောက်ပါ အတိုင်းပါ။  
+
 
 
 ## Next Program  
