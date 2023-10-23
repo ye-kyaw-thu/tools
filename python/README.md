@@ -286,4 +286,7 @@
 (ngram ဖိုင်တွေကို စာသားနဲ့ သို့မဟုတ် ngram value နဲ့ sorting စီပေးဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)
 
 95. [analyze_NER_corpus.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/analyze_NER_corpus.py)  
-(NER corpus မှာ တပ်ထားတဲ့ tag အရေအတွက်နဲ့ ပတ်သက်ပြီး စစ်ဆေးဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)  
+(NER corpus မှာ တပ်ထားတဲ့ tag အရေအတွက်နဲ့ ပတ်သက်ပြီး စစ်ဆေးဖို့အတွက် ရေးခဲ့တဲ့ ပရိုဂရမ်ပါ။)
+
+96. [compare_sentence_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_sentence_tag_distributions.py)  
+(GPT-2 LLM ကနေ testig လုပ်ပြီး ထွက်လာတဲ့ hatespeech စာကြောင်းတွေကို manual tagging ပြန်လုပ်ပြီးတော့ ဘယ်လို hatespeech တွေထုတ်ပေးသလဲ ဆိုတာကို graph ထုတ်ပြီး လေ့လာဖို့ ရေးခဲ့တဲ့ python script ပါ။)  
