@@ -1,6 +1,8 @@
 ## Written by Ye Kyaw Thu, LU Lab., Myanmar
 ## For drawing a graph of word/phrase level hatespeech tag distributions
 ## Last updated: 23 Oct 2023
+## How to run:
+## E.g. (base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script$ python ./compare_word_tag_distributions.py -p ./word_phrase/ -g word_compare.png
 
 ## File/Folder information for your reference
 ## (base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script$ tree word_phrase/
