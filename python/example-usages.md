@@ -6987,6 +6987,57 @@ Analysis of './10k_NER_draft_version1_KaungLwinThant.txt'
 အထက်မှာ မြင်ရတဲ့အတိုင်းပါပဲ လက်ရှိ develop လုပ်နေတဲ့ NER corpus မှာ O tag တွေက တအားများနေတာကို တွေ့ရပါလိမ့်မယ်။  
 O tag တွေကလည်း မပါလို့ မဖြစ်ပါဘူး။ သို့သော် လက်ရှိလိုမျိုး တအားများနေရင်လည်း အဆင်မပြေပါဘူး။  
 
+96. [compare_sentence_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_sentence_tag_distributions.py)
+
+Hatespeech တွေကို GPT-2 LLM မော်ဒယ်ဆောက်ပြီး generate လုပ်တဲ့ experiment ကို လုပ်ကြည့်ခဲ့တယ်။ Testing ၅ခါ လုပ်ခဲ့ပြီး အဲဒီ ထွက်လာတဲ့ output တွေမှာ ဘယ်လို hatespeech စာကြောင်းတွေက များနေသလဲ ဆိုတာကို သိချင်လို့ manually sentence level အနေနဲ့ tagging ပြန်လုပ်ပြီး အဲဒီ testing ၅ခုရဲ့ output တွေအကြား hatespeech distribution ကို graph အနေနဲ့ ထုတ်ပြီး နှိုင်းယှဉ်ကြည့်နိုင်ဖို့အတွက် ဒီ python code ကို ရေးခဲ့တယ်။  
+
+GPT-2 model ကနေ ထုတ်ပေးထားတဲ့ စာကြောင်းတွေကို sentence level tagging လုပ်ထားတဲ့ format က အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/sentence$ ls
+Test-1  Test-2  Test-3  Test-4  Test-5
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/sentence$ head -n 3 Test-1
+မနက် ၅ နာရီ ခု ထိ မ လာ ဘူး ၅ မိနစ် ၅ နာရီ ထိ ပျက် သွား အောင် ပေး တာ လား လီး ပဲ ဟေ့ မအေလိုး တွေပျက် သွား ပြီ ပြန် ဖျက် သလို ပဲောင် မ ပြည့် တော့ ဘူး မအေလိုး တွေ မီး နာရီ ပြန် ပျက် တယ် ဆို တော့ မ သိဝက် လည်း ပျက် ပြီ လီး ပဲ ဟေ့     ab
+မအေလိုး တွေ မီတာခ ကျတော့ ပြည်သူ တွေ အကုန်လုံး ခု မီး လာ မယ့် အချိန် မှန် အိပ် ပေး ပြီ နော် မီး ပျက် နေ တာေ ရေ     ab
+မအေလိုး တွေ တစ် နေကုန် ပျက် ၉ နာရီ လာ ပြီး ၉ နာရီ တော့ မှာ လာ ဖြတ် နေ တာ ပဲ     ab
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/sentence$ tail -n 3 Test-5
+ဘုန်းကြီး က တော့ မင်း တို့ က ဘယ်လို အဟုတ် မှာ လဲ ကျေနပ် မ ဆိုင် တာ နဲ့ တစ် ယောက် မှာ လေးစား ပါ တယ်        no
+လူ က ရော နင် တို့ တစ် ယောက် က အစား ဖူး တုန်း က ကိုယ့် အများကြီး လို့ ရ တယ် ရှင်း ပေါ် က နေ မြန်မာ လူမျိုး တွေ က သူ တို့ နိုင်ငံ လေး တွေ က လုပ် ခဲ့ ရ လေ နေ လို့ အမေ မ ဟုတ် ဘူး တဲ့ သူ တွေ သူ တို့ အတွက် တောင် မ စား လို့ လား နော်   no
+အခု မှ သန့် တာ ပဲ မြန်မာ ပြည် မှာ ပဲ လေ မအလ ကြီး ရာ ချင် စရာ    ab
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/sentence$
+```
+
+--help ခေါ်ကြည့်ရင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script$ python ./compare_sentence_tag_distributions.py --help
+usage: compare_sentence_tag_distributions.py [-h] -p PATH -g GRAPH_FILENAME
+
+Compare Hate Speech Tag Distributions Among Files.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PATH, --path PATH  Path to the folder containing the files.
+  -g GRAPH_FILENAME, --graph_filename GRAPH_FILENAME
+                        Output graph filename.
+```
+
+Run တဲ့ ပုံစံက အောက်ပါအတိုင်း  
+
+```
+python ./compare_sentence_tag_distributions.py -p ./sentence/ -g ./sentence_compare.png
+```
+
+Testing ၅ခု အတွက် ဆွဲပေးခဲ့တဲ့ graph က အောက်ပါအတိုင်းပါ။  
+
+```
+
+```
+
+
 ## Next Program  
 
 ```
