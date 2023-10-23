@@ -7033,6 +7033,11 @@ python ./compare_sentence_tag_distributions.py -p ./sentence/ -g ./sentence_comp
 
 Testing ၅ခု အတွက် ဆွဲပေးခဲ့တဲ့ graph က အောက်ပါအတိုင်းပါ။  
 
+<p align="center" width="100%">
+    <img width="33%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/sentence_compare.png">
+</p>
+
+
 ```
 
 ```
