@@ -291,5 +291,5 @@
 96. [compare_sentence_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_sentence_tag_distributions.py)  
 (GPT-2 LLM ကနေ testig လုပ်ပြီး ထွက်လာတဲ့ hatespeech စာကြောင်းတွေကို manual tagging ပြန်လုပ်ပြီးတော့ ဘယ်လို hatespeech တွေထုတ်ပေးသလဲ ဆိုတာကို graph ထုတ်ပြီး လေ့လာဖို့ ရေးခဲ့တဲ့ python script ပါ။)  
 
-97. [compare_sentence_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_word_tag_distributions.py)  
+97. [compare_word_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_word_tag_distributions.py)  
 (အထက်က no. 96 ပရိုဂရမ်ကို word/phrase level tag distribution လုပ်ဖို့အတွက် ပြင်ရေးခဲ့တဲ့ python script ပါ။)  
