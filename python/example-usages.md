@@ -7080,6 +7080,9 @@ Running example is as follows:
 
 output graph က အောက်ပါ အတိုင်းပါ။  
 
+<p align="center" width="100%">
+    <img width="75%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/word_compare.png">
+</p>
 
 
 ## Next Program  
