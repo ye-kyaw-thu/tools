@@ -7084,6 +7084,107 @@ output graph က အောက်ပါ အတိုင်းပါ။
     <img width="75%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/word_compare.png">
 </p>
 
+98. [print_codepoint.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print_codepoint.py)
+
+မိတ်ဆွေ တစ်ယောက်က request လုပ်တာနဲ့ Perl programming language နဲ့ ရေးထားတဲ့ print_codepoint.pl ဖိုင်ကို Python အတွက် ရေးခဲ့တာပါ။   
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ python ./print_codepoint.py --help
+usage: print_codepoint.py [-h] [--output_type {ordinal,unicode,both}] [--output OUTPUT]
+                          [--no_print_original]
+                          filename
+
+Process a text file with various options.
+
+positional arguments:
+  filename              The filename to process
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --output_type {ordinal,unicode,both}
+                        Choose to print ordinal value, Unicode code point, or both
+                        (default: both)
+  --output OUTPUT       Output file name (optional)
+  --no_print_original   Do not print the original sentences (default: False)
+```
+
+Example input file:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ cat khmer.txt
+ខ្ញុំស្រឡាញ់កម្ពុជា។
+អាហាររបស់ខ្មែរឆ្ងាញ់ណាស់។
+យើងត្រូវរួមគ្នាថែរក្សាបរិស្ថាន។
+បណ្ឌិតសភាចារ្យជាអ្នកបង្រៀនដ៏ល្អ។
+កុំភ្លេចយកឆ័ត្រទៅរៀននៅសាលា។
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$
+```
+
+Example running with several commandline arguments are as follows. The first one is running with default printing setting.   
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ python ./print_codepoint.py khmer.txt
+ខ្ញុំស្រឡាញ់កម្ពុជា។
+ខ (6017, U1781) ្ (6098, U17d2) ញ (6025, U1789) ុ (6075, U17bb) ំ (6086, U17c6) ស (6047, U179f) ្ (6098, U17d2) រ (6042, U179a) ឡ (6049, U17a1) ា (6070, U17b6) ញ (6025, U1789) ់ (6091, U17cb) ក (6016, U1780) ម (6040, U1798) ្ (6098, U17d2) ព (6038, U1796) ុ (6075, U17bb) ជ (6023, U1787) ា (6070, U17b6) ។ (6100, U17d4) , no. of char = 20
+អាហាររបស់ខ្មែរឆ្ងាញ់ណាស់។
+អ (6050, U17a2) ា (6070, U17b6) ហ (6048, U17a0) ា (6070, U17b6) រ (6042, U179a) រ (6042, U179a) ប (6036, U1794) ស (6047, U179f) ់ (6091, U17cb) ខ (6017, U1781) ្ (6098, U17d2) ម (6040, U1798) ែ (6082, U17c2) រ (6042, U179a) ឆ (6022, U1786) ្ (6098, U17d2) ង (6020, U1784) ា (6070, U17b6) ញ (6025, U1789) ់ (6091, U17cb) ណ (6030, U178e) ា (6070, U17b6) ស (6047, U179f) ់ (6091, U17cb) ។ (6100, U17d4) , no. of char = 25
+យើងត្រូវរួមគ្នាថែរក្សាបរិស្ថាន។
+យ (6041, U1799) ើ (6078, U17be) ង (6020, U1784) ត (6031, U178f) ្ (6098, U17d2) រ (6042, U179a) ូ (6076, U17bc) វ (6044, U179c) រ (6042, U179a) ួ (6077, U17bd) ម (6040, U1798) គ (6018, U1782) ្ (6098, U17d2) ន (6035, U1793) ា (6070, U17b6) ថ (6032, U1790) ែ (6082, U17c2) រ (6042, U179a) ក (6016, U1780) ្ (6098, U17d2) ស (6047, U179f) ា (6070, U17b6) ប (6036, U1794) រ (6042, U179a) ិ (6071, U17b7) ស (6047, U179f) ្ (6098, U17d2) ថ (6032, U1790) ា (6070, U17b6) ន (6035, U1793) ។ (6100, U17d4) , no. of char = 31
+បណ្ឌិតសភាចារ្យជាអ្នកបង្រៀនដ៏ល្អ។
+ប (6036, U1794) ណ (6030, U178e) ្ (6098, U17d2) ឌ (6028, U178c) ិ (6071, U17b7) ត (6031, U178f) ស (6047, U179f) ភ (6039, U1797) ា (6070, U17b6) ច (6021, U1785) ា (6070, U17b6) រ (6042, U179a) ្ (6098, U17d2) យ (6041, U1799) ជ (6023, U1787) ា (6070, U17b6) អ (6050, U17a2) ្ (6098, U17d2) ន (6035, U1793) ក (6016, U1780) ប (6036, U1794) ង (6020, U1784) ្ (6098, U17d2) រ (6042, U179a) ៀ (6080, U17c0) ន (6035, U1793) ដ (6026, U178a) ៏ (6095, U17cf) ល (6043, U179b) ្ (6098, U17d2) អ (6050, U17a2) ។ (6100, U17d4) , no. of char = 32
+កុំភ្លេចយកឆ័ត្រទៅរៀននៅសាលា។
+ក (6016, U1780) ុ (6075, U17bb) ំ (6086, U17c6) ភ (6039, U1797) ្ (6098, U17d2) ល (6043, U179b) េ (6081, U17c1) ច (6021, U1785) យ (6041, U1799) ក (6016, U1780) ឆ (6022, U1786) ័ (6096, U17d0) ត (6031, U178f) ្ (6098, U17d2) រ (6042, U179a) ទ (6033, U1791) ៅ (6085, U17c5) រ (6042, U179a) ៀ (6080, U17c0) ន (6035, U1793) ន (6035, U1793) ៅ (6085, U17c5) ស (6047, U179f) ា (6070, U17b6) ល (6043, U179b) ា (6070, U17b6) ។ (6100, U17d4) , no. of char = 27
+```
+
+Print out only Unicode numbers:  
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ python ./print_codepoint.py khmer.txt --output_type unicode
+ខ្ញុំស្រឡាញ់កម្ពុជា។
+ខ (U1781) ្ (U17d2) ញ (U1789) ុ (U17bb) ំ (U17c6) ស (U179f) ្ (U17d2) រ (U179a) ឡ (U17a1) ា (U17b6) ញ (U1789) ់ (U17cb) ក (U1780) ម (U1798) ្ (U17d2) ព (U1796) ុ (U17bb) ជ (U1787) ា (U17b6) ។ (U17d4) , no. of char = 20
+អាហាររបស់ខ្មែរឆ្ងាញ់ណាស់។
+អ (U17a2) ា (U17b6) ហ (U17a0) ា (U17b6) រ (U179a) រ (U179a) ប (U1794) ស (U179f) ់ (U17cb) ខ (U1781) ្ (U17d2) ម (U1798) ែ (U17c2) រ (U179a) ឆ (U1786) ្ (U17d2) ង (U1784) ា (U17b6) ញ (U1789) ់ (U17cb) ណ (U178e) ា (U17b6) ស (U179f) ់ (U17cb) ។ (U17d4) , no. of char = 25
+យើងត្រូវរួមគ្នាថែរក្សាបរិស្ថាន។
+យ (U1799) ើ (U17be) ង (U1784) ត (U178f) ្ (U17d2) រ (U179a) ូ (U17bc) វ (U179c) រ (U179a) ួ (U17bd) ម (U1798) គ (U1782) ្ (U17d2) ន (U1793) ា (U17b6) ថ (U1790) ែ (U17c2) រ (U179a) ក (U1780) ្ (U17d2) ស (U179f) ា (U17b6) ប (U1794) រ (U179a) ិ (U17b7) ស (U179f) ្ (U17d2) ថ (U1790) ា (U17b6) ន (U1793) ។ (U17d4) , no. of char = 31
+បណ្ឌិតសភាចារ្យជាអ្នកបង្រៀនដ៏ល្អ។
+ប (U1794) ណ (U178e) ្ (U17d2) ឌ (U178c) ិ (U17b7) ត (U178f) ស (U179f) ភ (U1797) ា (U17b6) ច (U1785) ា (U17b6) រ (U179a) ្ (U17d2) យ (U1799) ជ (U1787) ា (U17b6) អ (U17a2) ្ (U17d2) ន (U1793) ក (U1780) ប (U1794) ង (U1784) ្ (U17d2) រ (U179a) ៀ (U17c0) ន (U1793) ដ (U178a) ៏ (U17cf) ល (U179b) ្ (U17d2) អ (U17a2) ។ (U17d4) , no. of char = 32
+កុំភ្លេចយកឆ័ត្រទៅរៀននៅសាលា។
+ក (U1780) ុ (U17bb) ំ (U17c6) ភ (U1797) ្ (U17d2) ល (U179b) េ (U17c1) ច (U1785) យ (U1799) ក (U1780) ឆ (U1786) ័ (U17d0) ត (U178f) ្ (U17d2) រ (U179a) ទ (U1791) ៅ (U17c5) រ (U179a) ៀ (U17c0) ន (U1793) ន (U1793) ៅ (U17c5) ស (U179f) ា (U17b6) ល (U179b) ា (U17b6) ។ (U17d4) , no. of char = 27
+```
+
+Print out only ordinal numbers:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ python ./print_codepoint.py khmer.txt --output_type ordinal
+ខ្ញុំស្រឡាញ់កម្ពុជា។
+ខ (6017) ្ (6098) ញ (6025) ុ (6075) ំ (6086) ស (6047) ្ (6098) រ (6042) ឡ (6049) ា (6070) ញ (6025) ់ (6091) ក (6016) ម (6040) ្ (6098) ព (6038) ុ (6075) ជ (6023) ា (6070) ។ (6100) , no. of char = 20
+អាហាររបស់ខ្មែរឆ្ងាញ់ណាស់។
+អ (6050) ា (6070) ហ (6048) ា (6070) រ (6042) រ (6042) ប (6036) ស (6047) ់ (6091) ខ (6017) ្ (6098) ម (6040) ែ (6082) រ (6042) ឆ (6022) ្ (6098) ង (6020) ា (6070) ញ (6025) ់ (6091) ណ (6030) ា (6070) ស (6047) ់ (6091) ។ (6100) , no. of char = 25
+យើងត្រូវរួមគ្នាថែរក្សាបរិស្ថាន។
+យ (6041) ើ (6078) ង (6020) ត (6031) ្ (6098) រ (6042) ូ (6076) វ (6044) រ (6042) ួ (6077) ម (6040) គ (6018) ្ (6098) ន (6035) ា (6070) ថ (6032) ែ (6082) រ (6042) ក (6016) ្ (6098) ស (6047) ា (6070) ប (6036) រ (6042) ិ (6071) ស (6047) ្ (6098) ថ (6032) ា (6070) ន (6035) ។ (6100) , no. of char = 31
+បណ្ឌិតសភាចារ្យជាអ្នកបង្រៀនដ៏ល្អ។
+ប (6036) ណ (6030) ្ (6098) ឌ (6028) ិ (6071) ត (6031) ស (6047) ភ (6039) ា (6070) ច (6021) ា (6070) រ (6042) ្ (6098) យ (6041) ជ (6023) ា (6070) អ (6050) ្ (6098) ន (6035) ក (6016) ប (6036) ង (6020) ្ (6098) រ (6042) ៀ (6080) ន (6035) ដ (6026) ៏ (6095) ល (6043) ្ (6098) អ (6050) ។ (6100) , no. of char = 32
+កុំភ្លេចយកឆ័ត្រទៅរៀននៅសាលា។
+ក (6016) ុ (6075) ំ (6086) ភ (6039) ្ (6098) ល (6043) េ (6081) ច (6021) យ (6041) ក (6016) ឆ (6022) ័ (6096) ត (6031) ្ (6098) រ (6042) ទ (6033) ៅ (6085) រ (6042) ៀ (6080) ន (6035) ន (6035) ៅ (6085) ស (6047) ា (6070) ល (6043) ា (6070) ។ (6100) , no. of char = 27
+```
+
+Print out both ordinal and Unicode numbers:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ python ./print_codepoint.py khmer.txt --output_type unicode --no_print_original
+ខ (U1781) ្ (U17d2) ញ (U1789) ុ (U17bb) ំ (U17c6) ស (U179f) ្ (U17d2) រ (U179a) ឡ (U17a1) ា (U17b6) ញ (U1789) ់ (U17cb) ក (U1780) ម (U1798) ្ (U17d2) ព (U1796) ុ (U17bb) ជ (U1787) ា (U17b6) ។ (U17d4) , no. of char = 20
+អ (U17a2) ា (U17b6) ហ (U17a0) ា (U17b6) រ (U179a) រ (U179a) ប (U1794) ស (U179f) ់ (U17cb) ខ (U1781) ្ (U17d2) ម (U1798) ែ (U17c2) រ (U179a) ឆ (U1786) ្ (U17d2) ង (U1784) ា (U17b6) ញ (U1789) ់ (U17cb) ណ (U178e) ា (U17b6) ស (U179f) ់ (U17cb) ។ (U17d4) , no. of char = 25
+យ (U1799) ើ (U17be) ង (U1784) ត (U178f) ្ (U17d2) រ (U179a) ូ (U17bc) វ (U179c) រ (U179a) ួ (U17bd) ម (U1798) គ (U1782) ្ (U17d2) ន (U1793) ា (U17b6) ថ (U1790) ែ (U17c2) រ (U179a) ក (U1780) ្ (U17d2) ស (U179f) ា (U17b6) ប (U1794) រ (U179a) ិ (U17b7) ស (U179f) ្ (U17d2) ថ (U1790) ា (U17b6) ន (U1793) ។ (U17d4) , no. of char = 31
+ប (U1794) ណ (U178e) ្ (U17d2) ឌ (U178c) ិ (U17b7) ត (U178f) ស (U179f) ភ (U1797) ា (U17b6) ច (U1785) ា (U17b6) រ (U179a) ្ (U17d2) យ (U1799) ជ (U1787) ា (U17b6) អ (U17a2) ្ (U17d2) ន (U1793) ក (U1780) ប (U1794) ង (U1784) ្ (U17d2) រ (U179a) ៀ (U17c0) ន (U1793) ដ (U178a) ៏ (U17cf) ល (U179b) ្ (U17d2) អ (U17a2) ។ (U17d4) , no. of char = 32
+ក (U1780) ុ (U17bb) ំ (U17c6) ភ (U1797) ្ (U17d2) ល (U179b) េ (U17c1) ច (U1785) យ (U1799) ក (U1780) ឆ (U1786) ័ (U17d0) ត (U178f) ្ (U17d2) រ (U179a) ទ (U1791) ៅ (U17c5) រ (U179a) ៀ (U17c0) ន (U1793) ន (U1793) ៅ (U17c5) ស (U179f) ា (U17b6) ល (U179b) ា (U17b6) ។ (U17d4) , no. of char = 27
+
+```
+
+If you need as output file:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$ python ./print_codepoint.py khmer.txt --output_type unicode --no_print_original --output code.txt
+(base) ye@lst-gpu-3090:~/exp/demo/print_unicode$
+```
 
 ## Next Program  
 
