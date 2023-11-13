@@ -293,3 +293,6 @@
 
 97. [compare_word_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_word_tag_distributions.py)  
 (အထက်က no. 96 ပရိုဂရမ်ကို word/phrase level tag distribution လုပ်ဖို့အတွက် ပြင်ရေးခဲ့တဲ့ python script ပါ။)  
+
+98. [print_codepoint.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print_codepoint.py)  
+(Extension of print_codepoint.pl for Python language. Added some more command line arguments. Enjoy!)  
