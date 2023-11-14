@@ -298,4 +298,7 @@
 (Extension of print_codepoint.pl for Python language. Added some more command line arguments. Enjoy!)
 
 99. [syl_ngram_mi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl_ngram_mi.py)  
-(Mutual information ကို တွက်ပြီးတော့ syllable pair n-gram တွေကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်။)  
+(Mutual information ကို တွက်ပြီးတော့ syllable pair n-gram တွေကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်။)
+
+100. [txt_dl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/txt_dl.py)  
+(ကိုယ်ရှာဖွေချင်တဲ့ keyword နဲ့ website link ကို ပေးပြီး အဲဒီ keyword ပါဝင်နေတဲ့ မြန်မာစာကြောင်းတွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့တယ်။)  
