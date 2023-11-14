@@ -7384,6 +7384,31 @@ Python code ထဲမှာက 7-gram အထိ support လုပ်ထားတ
             collocations[ngram] = score
 ```
 
+syllable ngram pair တွေကို ဆွဲထုတ်ပြီး output ထွက်လာတဲ့ဖိုင်တွေရဲ့ size ကို နှိုင်းယှဉ်ကြည့်ရင် အောက်ပါအတိုင်း ရတယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ wc *gram_c3*txt
+  163829   491490  6918570 2gram_c3_mi.txt
+  415352  1661412 20957724 3gram_c3_mi.txt
+  381016  1905085 22405431 4gram_c3_mi.txt
+  244918  1469514 16578552 5gram_c3_mi.txt
+ 1205115  5527501 66860277 total
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$
+```
+
+တကယ်လို့ count တန်ဖိုးကို မကန့်သတ်ဘူး ဆိုရင် count=1 ကနေ စယူမှာမို့ ထွက်လာတဲ့ ဖိုင်တွေရဲ့ size က ပိုကြီးလိမ့်မယ်။ ကိုယ်က ဘာလုပ်ချင်တာလဲဆိုတဲ့ NLP task အပေါ်ကို မူတည်ပြီးတော့ ngram value နဲ့ count ကို ကစားပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ wc *gram_mi.txt
+   364950   1094853  15695346 2gram_mi.txt
+  1977491   7909968 102251276 3gram_mi.txt
+  3860349  19301750 233980848 4gram_mi.txt
+  5059678  30358074 353671348 5gram_mi.txt
+ 11262468  58664645 705598818 total
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$
+```
+
+
 ## Next Program  
 
 ```
