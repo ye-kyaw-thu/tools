@@ -7057,7 +7057,7 @@ Testing ၅ခု အတွက် ဆွဲပေးခဲ့တဲ့ graph က
 (base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script/word_phrase$
 ```
 
-help screen ခေါ်ကြည့်ချင်ရင် --help ကို သု့းပါ။  
+help screen ခေါ်ကြည့်ချင်ရင် --help ကို သုံးပါ။  
 
 ```
 (base) ye@lst-gpu-3090:~/exp/myHatespeech/eval/script$ python ./compare_word_tag_distributions.py --help
