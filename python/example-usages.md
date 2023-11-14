@@ -6987,7 +6987,7 @@ Analysis of './10k_NER_draft_version1_KaungLwinThant.txt'
 အထက်မှာ မြင်ရတဲ့အတိုင်းပါပဲ လက်ရှိ develop လုပ်နေတဲ့ NER corpus မှာ O tag တွေက တအားများနေတာကို တွေ့ရပါလိမ့်မယ်။  
 O tag တွေကလည်း မပါလို့ မဖြစ်ပါဘူး။ သို့သော် လက်ရှိလိုမျိုး တအားများနေရင်လည်း အဆင်မပြေပါဘူး။  
 
-96. [compare_sentence_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_sentence_tag_distributions.py)
+## 96. [compare_sentence_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_sentence_tag_distributions.py)
 
 Hatespeech တွေကို GPT-2 LLM မော်ဒယ်ဆောက်ပြီး generate လုပ်တဲ့ experiment ကို လုပ်ကြည့်ခဲ့တယ်။ Testing ၅ခါ လုပ်ခဲ့ပြီး အဲဒီ ထွက်လာတဲ့ output တွေမှာ ဘယ်လို hatespeech စာကြောင်းတွေက များနေသလဲ ဆိုတာကို သိချင်လို့ manually sentence level အနေနဲ့ tagging ပြန်လုပ်ပြီး အဲဒီ testing ၅ခုရဲ့ output တွေအကြား hatespeech distribution ကို graph အနေနဲ့ ထုတ်ပြီး နှိုင်းယှဉ်ကြည့်နိုင်ဖို့အတွက် ဒီ python code ကို ရေးခဲ့တယ်။  
 
@@ -7037,7 +7037,7 @@ Testing ၅ခု အတွက် ဆွဲပေးခဲ့တဲ့ graph က
     <img width="75%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/sentence_compare.png">
 </p>
 
-97. [compare_word_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_word_tag_distributions.py)
+## 97. [compare_word_tag_distributions.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/compare_word_tag_distributions.py)
 
 အထက်က ပရိုဂရမ် နံပါတ် 96 ကို modify လုပ်ထားတဲ့ python code ပါ။ အလုပ်လုပ်တဲ့ ပုံစံကလည်း အတူတူပါပဲ။ ဒီတစ်ခါတော့ ဖတ်ယူရတဲ့ ဖိုင်က word level or phrase level အနေနဲ့ tag လုပ်ထားတဲ့ input text ဖိုင်ပါ။  ဖိုင် format ကအောက်ပါအတိုင်းပါ။  
 
@@ -7084,7 +7084,7 @@ output graph က အောက်ပါ အတိုင်းပါ။
     <img width="75%" src="https://github.com/ye-kyaw-thu/tools/blob/master/python/pic/word_compare.png">
 </p>
 
-98. [print_codepoint.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print_codepoint.py)
+## 98. [print_codepoint.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print_codepoint.py)
 
 မိတ်ဆွေ တစ်ယောက်က request လုပ်တာနဲ့ Perl programming language နဲ့ ရေးထားတဲ့ print_codepoint.pl ဖိုင်ကို Python အတွက် ရေးခဲ့တာပါ။   
 
@@ -7186,7 +7186,7 @@ If you need as output file:
 (base) ye@lst-gpu-3090:~/exp/demo/print_unicode$
 ```
 
-99. [syl_ngram_mi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl_ngram_mi.py)
+## 99. [syl_ngram_mi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl_ngram_mi.py)
 
 မြန်မာစာအတွက်က syllable unit တွေက အရေးကြီးတယ်။ Syllable cooccurrence တွေကို ngram အလိုက် ဆွဲထုတ်ဖို့အတွက် ရေးထားတဲ့ python code ပါ။ Information theory ကို အခြေခံတဲ့ mutual information တွက်တဲ့နည်းကို apply လုပ်ထားတယ်။  
 
@@ -7408,6 +7408,152 @@ syllable ngram pair တွေကို ဆွဲထုတ်ပြီး output 
 (base) ye@lst-gpu-3090:~/exp/demo/mutual_info$
 ```
 
+## 100. [txt_dl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/txt_dl.py)
+
+text web mining လုပ်ဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။ မြန်မာစာ စာကြောင်းတွေထဲကနေ ကိုယ်ဆွဲထုတ်ယူချင်တဲ့ keyword စာလုံးကို သတ်မှတ်ပြီး ဆွဲထုတ်လို့ ရဖို့ ရည်ရွယ်တယ်။ တခုရှိတာက website အပေါ်ကို မူတည်ပြီး extract လုပ်ဖို့ အခက်အခဲရှိတာတွေလည်း ရှိပါတယ်။ နောက် သတိထားရမှာက အဲဒီလို mining လုပ်ပြီး ယူထားတဲ့ စာကြောင်းတွေကို သုံးတဲ့အခါမှာ copyright ကိစ္စတို့ commercial အတွက် ခွင့်ပြု/မပြုတဲ့ ကိစ္စတို့ကိုတော့ ကိုယ်တိုင် တာဝန်ယူရပါလိမ့်မယ်။   
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ python ./txt_dl.py --help
+usage: txt_dl.py [-h] (--url URL | --url_file URL_FILE) --keyword KEYWORD
+                 [--num_sentences NUM_SENTENCES] [--output_filename OUTPUT_FILENAME]
+
+Download sentences from webpages containing a specific keyword.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --url URL             URL of the webpage to scrape
+  --url_file URL_FILE   File containing URLs to scrape, one per line
+  --keyword KEYWORD     Keyword to search in sentences
+  --num_sentences NUM_SENTENCES
+                        Number of sentences to return
+  --output_filename OUTPUT_FILENAME
+                        File to save the downloaded sentences (optional, prints to
+                        stdout if not specified)
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ python ./txt_dl.py --url "https://bbc.com/burmese" --keyword "တိုက်ပွဲ" --num_sentences 5
+လွန်ခဲ့သော တစ်နာရီ က၁၀၂၇ စစ်ဆင်ရေး ရက်စွဲမှတ်တမ်းရှမ်းမြောက်က ၁၀၂၇ စစ်ဆင်ရေးနဲ့ပတ်သက်ပြီး အဓိကကျတဲ့နေ့ရက်တွေအကြောင်း ရုပ်မြင်အထူးပြုလုပ်ချက်နဲ့စုစည်းတင်ဆက်မှု ၁၃ နိုဝင်ဘာ ၂၀၂၃ရခိုင်တိုက်ပွဲ အေအေ ဘာပြောလဲရသေ့တောင်မြို့ထဲကနေရာအချို့နဲ့ မင်းပြားမြို့နယ်ထဲ တိုက်ပွဲတွေဖြစ်နေပြီး ရသေ့တောင်က တပ်စခန်းအချို့ကိုသိမ်းပိုက်ရရှိထားတယ်လို့ ‌ရက္ခိုင့်တပ်တော်(အေအေ)ပြောခွင့်ရ ခိုင်သုခက ဘီဘီစီကို အတည်ပြုပါတယ်
+၁၃ နိုဝင်ဘာ ၂၀၂၃နိုဝင်ဘာ ၁၃ ရက် ထိပ်တန်းသတင်းများ - တိုက်ပွဲဆက်ပြင်းထန်နေတဲ့ လွိုင်ကော်မှာ အရပ်သားတွေပိတ်မိနေဆဲ ပြီးခဲ့တဲ့ရက်ပိုင်းက ရန်ကုန်အပါအဝင်မြို့ကြီးအချို့မှာ စက်သုံးဆီပြတ်လပ်တာကြုံတွေ့ခဲ့ရပြီးနောက်မှာပဲ  စက်သုံးဆီသင်္ဘောတွေဆိုက်ကပ်လာပြီဖြစ်တယ်လို့ စစ်ကောင်စီဘက်က ပြောလာပါတယ်
+
+၁၂ နိုဝင်ဘာ ၂၀၂၃“တပ်ကိုတပ်နဲ့တူအောင်တည်ဆောက်ပြီး စစ်ကိုစစ်နဲ့တူအောင်တိုက်ခိုက်မယ်” - မန္တလေး PDF ကွပ်ကဲရေးမှူးမန္တလေး PDF ဟာ ၁၀၂၇ စစ်ဆင်ရေးရဲ့ ရှမ်းပြည်နယ်မြောက်ပိုင်းက ထိုးစစ်တိုက်ပွဲတွေဆီ စစ်ကူသွားဖို့ စစ်ကောင်စီတပ်ဖြတ်သန်းရတဲ့ မိုးကုတ်
+ ဂါဇာက နောက်ဆုံးအခြေအနေ ... စတဲ့ နိုဝင်ဘာလ ၁၂ ရက်ညပိုင်းနိုင်ငံတကာသတင်းများ ၁၂ နိုဝင်ဘာ ၂၀၂၃နိုဝင်ဘာ ၁၂ ရက်ထိပ်တန်းသတင်းများ - ကွမ်းလုံမြို့ကို MNDAA သိမ်းပိုက်ဗမာပြည်ကွန်မြူနစ်ပါတီနဲ့ တိုက်ခဲ့တဲ့ နာမည်ကျော် ‘‘ကွမ်းလုံ ရက် ၄၀ တိုက်ပွဲ’’ပြီးကတည်းက နှစ်ပေါင်း ငါးဆယ်ကျော်ထိန်းချုပ်နိုင်ခဲ့တဲ့အရေးပါတဲ့ကွမ်းလုံကြိုးတံတားကို မြန်မာစစ်တပ်က လက်လွှတ်လိုက်ရတာပဲဖြစ်ပါတယ်
+ ၁၁ နိုဝင်ဘာ ၂၀၂၃အထူးစာမျက်နှာ၉၉ တပ်မမှူး သေဆုံးမှု ဘာတွေထူးခြားလဲ၈ နိုဝင်ဘာ ၂၀၂၃လောက်ကိုင် - တိုက်ပွဲတွေဝန်းရံနေတဲ့မြို့ ၈ နိုဝင်ဘာ ၂၀၂၃၁၀ ရက်အတွင်း စစ်ကောင်စီ လက်လွှတ်လိုက်ရတဲ့နယ်မြေတိုးလာတဲ့ မြောက်ပိုင်းအခြေအနေ၆ နိုဝင်ဘာ ၂၀၂၃အီလွန်မတ်စ်ခ်ကို  အေအိုင်အကြောင်း ယူကေဝန်ကြီးချုပ် မေးမြန်းခန်း၄ နိုဝင်ဘာ ၂၀၂၃ဟက်ဇ်ဘိုလာတပ် ဘယ်လောက် အင်အားကြီးလဲ
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ python ./txt_dl.py --url "https://bbc.com/burmese" --keyword "တိုက်ပွဲ" --num_sentences 5 --output_file result.txt
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ cat result.txt
+လွန်ခဲ့သော တစ်နာရီ က၁၀၂၇ စစ်ဆင်ရေး ရက်စွဲမှတ်တမ်းရှမ်းမြောက်က ၁၀၂၇ စစ်ဆင်ရေးနဲ့ပတ်သက်ပြီး အဓိကကျတဲ့နေ့ရက်တွေအကြောင်း ရုပ်မြင်အထူးပြုလုပ်ချက်နဲ့စုစည်းတင်ဆက်မှု ၁၃ နိုဝင်ဘာ ၂၀၂၃ရခိုင်တိုက်ပွဲ အေအေ ဘာပြောလဲရသေ့တောင်မြို့ထဲကနေရာအချို့နဲ့ မင်းပြားမြို့နယ်ထဲ တိုက်ပွဲတွေဖြစ်နေပြီး ရသေ့တောင်က တပ်စခန်းအချို့ကိုသိမ်းပိုက်ရရှိထားတယ်လို့ ‌ရက္ခိုင့်တပ်တော်(အေအေ)ပြောခွင့်ရ ခိုင်သုခက ဘီဘီစီကို အတည်ပြုပါတယ်
+၁၃ နိုဝင်ဘာ ၂၀၂၃နိုဝင်ဘာ ၁၃ ရက် ထိပ်တန်းသတင်းများ - တိုက်ပွဲဆက်ပြင်းထန်နေတဲ့ လွိုင်ကော်မှာ အရပ်သားတွေပိတ်မိနေဆဲ ပြီးခဲ့တဲ့ရက်ပိုင်းက ရန်ကုန်အပါအဝင်မြို့ကြီးအချို့မှာ စက်သုံးဆီပြတ်လပ်တာကြုံတွေ့ခဲ့ရပြီးနောက်မှာပဲ  စက်သုံးဆီသင်္ဘောတွေဆိုက်ကပ်လာပြီဖြစ်တယ်လို့ စစ်ကောင်စီဘက်က ပြောလာပါတယ်
+
+၁၂ နိုဝင်ဘာ ၂၀၂၃“တပ်ကိုတပ်နဲ့တူအောင်တည်ဆောက်ပြီး စစ်ကိုစစ်နဲ့တူအောင်တိုက်ခိုက်မယ်” - မန္တလေး PDF ကွပ်ကဲရေးမှူးမန္တလေး PDF ဟာ ၁၀၂၇ စစ်ဆင်ရေးရဲ့ ရှမ်းပြည်နယ်မြောက်ပိုင်းက ထိုးစစ်တိုက်ပွဲတွေဆီ စစ်ကူသွားဖို့ စစ်ကောင်စီတပ်ဖြတ်သန်းရတဲ့ မိုးကုတ်
+ ဂါဇာက နောက်ဆုံးအခြေအနေ ... စတဲ့ နိုဝင်ဘာလ ၁၂ ရက်ညပိုင်းနိုင်ငံတကာသတင်းများ ၁၂ နိုဝင်ဘာ ၂၀၂၃နိုဝင်ဘာ ၁၂ ရက်ထိပ်တန်းသတင်းများ - ကွမ်းလုံမြို့ကို MNDAA သိမ်းပိုက်ဗမာပြည်ကွန်မြူနစ်ပါတီနဲ့ တိုက်ခဲ့တဲ့ နာမည်ကျော် ‘‘ကွမ်းလုံ ရက် ၄၀ တိုက်ပွဲ’’ပြီးကတည်းက နှစ်ပေါင်း ငါးဆယ်ကျော်ထိန်းချုပ်နိုင်ခဲ့တဲ့အရေးပါတဲ့ကွမ်းလုံကြိုးတံတားကို မြန်မာစစ်တပ်က လက်လွှတ်လိုက်ရတာပဲဖြစ်ပါတယ်
+ ၁၁ နိုဝင်ဘာ ၂၀၂၃အထူးစာမျက်နှာ၉၉ တပ်မမှူး သေဆုံးမှု ဘာတွေထူးခြားလဲ၈ နိုဝင်ဘာ ၂၀၂၃လောက်ကိုင် - တိုက်ပွဲတွေဝန်းရံနေတဲ့မြို့ ၈ နိုဝင်ဘာ ၂၀၂၃၁၀ ရက်အတွင်း စစ်ကောင်စီ လက်လွှတ်လိုက်ရတဲ့နယ်မြေတိုးလာတဲ့ မြောက်ပိုင်းအခြေအနေ၆ နိုဝင်ဘာ ၂၀၂၃အီလွန်မတ်စ်ခ်ကို  အေအိုင်အကြောင်း ယူကေဝန်ကြီးချုပ် မေးမြန်းခန်း၄ နိုဝင်ဘာ ၂၀၂၃ဟက်ဇ်ဘိုလာတပ် ဘယ်လောက် အင်အားကြီးလဲ
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ cat url_file.txt
+https://my.wikipedia.org/wiki/%E1%80%A1%E1%80%91%E1%80%B0%E1%80%B8:%E1%80%85%E1%80%AC%E1%80%99%E1%80%BB%E1%80%80%E1%80%BA%E1%80%94%E1%80%BE%E1%80%AC%E1%80%A1%E1%80%AC%E1%80%B8%E1%80%9C%E1%80%AF%E1%80%B6%E1%80%B8/%E1%80%90
+https://bbc.com/burmese
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ python ./txt_dl.py --url_file ./url_file.txt --key "တက် --num_sentences 10 --output_file result2.txt
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ cat ./result2.txt
+ ကျိုက်ထိုမြို့နယ်
+တကဲအုချိ ယူးကို
+တက္ကစီ
+တက္ကဆက်ပြည်နယ်
+တက္ကဆပ် ကန်းထရီးဂီတ
+တက္ကဆပ်ပြည်နယ်
+တက္ကဆပ်သမ္မတနိုင်ငံ
+တက္ကနက်တီယမ်
+တက္ကပဏ္ဍိတဇာတ်
+တက္ကလဇာတ်
+တက္ကသိုလ်
+တက္ကသိုလ် ကျောင်းသားများ သမဂ္ဂ
+တက္ကသိုလ် ခင်မောင်ဇော်
+တက္ကသိုလ် နေဝင်း
+တက္ကသိုလ် ပညာပဒေသာစာစောင်
+တက္ကသိုလ် မြတ်စိုး
+တက္ကသိုလ် လှကြွယ်
+တက္ကသိုလ်ကြယ်ပွင့်
+တက္ကသိုလ်စိန်တင်
+တက္ကသိုလ်စိုး
+တက္ကသိုလ်ဆုမြိုင်
+တက္ကသိုလ်တင်ခ
+တက္ကသိုလ်တင်မြင့်
+တက္ကသိုလ်ထင်ကြီး
+တက္ကသိုလ်ထွန်းနောင်
+တက္ကသိုလ်နန္ဒမိတ်
+တက္ကသိုလ်နန္ဒမိတ် စာ‌ရေးဆရာ
+တက္ကသိုလ်နေဝင်း
+တက္ကသိုလ်နှင်းဝေ
+တက္ကသိုလ်ပြည်
+တက္ကသိုလ်ဘုန်းနိုင်
+တက္ကသိုလ်မင်းမော်
+တက္ကသိုလ်မောင်မောင်ကြီး
+တက္ကသိုလ်များ ဘောလုံးအသင်း
+တက္ကသိုလ်များ​ သမိုင်း​ သု​တေသန ဌာန
+တက္ကသိုလ်မြစိမ်း
+တက္ကသိုလ်လှ(မောင်မောင်လှ)
+တက္ကသိုလ်ဝင်တန်းစာမေးပွဲ
+တက္ကသိုလ်ဝင်း
+တက္ကသိုလ်ဝင်းမွန်
+တက္ကသီလာ
+တက်ကဆပ်ပြည်နယ်
+တက်ကပ်မှာ ပညာ
+ ဆုတ်ကပ်မှာ ဥစ္စာ
+တက်ကော့ရွာ
+တက်ကော့ရွာ
+ ရမ်းဗြဲငယ်ချောင်းဖျား
+တက်ကျမ်း
+တက်ကျသံ
+တက်ကျသံဘာသာစကား
+တက်ကြွထက်သန်သူများ
+တက်ခက်ရွာ
+ ဟုမ္မလင်းမြို့နယ်
+တက်ခလေး (မြောက်)ရွာ
+ ပဲခူးမြို့နယ်
+တက်ခိုမြို့
+ အအိုမိုရိ
+တက်ခေါင်းရွာ
+ ဒီပဲယင်းမြို့နယ်
+တက်ခ်တိုင်ဘာဟီ
+တက်ဂျမဟာ သင်းချိုင်းဂူ
+တက်စည်ရွာ
+ နွားထိုးကြီးမြို့နယ်
+တက်စမေးနီးယား
+တက်စမေးနီးယား တောရိုင်းမြေ ကမ္ဘာ့အမွေအနှစ်ဒေသ
+တက်စမေးနီးယားကျွန်း
+တက်စမေးနီးယားပြည်နယ်
+တက်စိန်
+တက်စီဒါမီအတတ်
+တက်စ်ဆေးလီး နာဂျဲ
+တက်စ်မန်ပင်လယ်
+တက်ဆက်ပြည်နယ်
+တက်ဆိပ်ရွာ
+ တက်ဆိပ်
+တက်ဆိပ်ရွာ
+ ဘိုးတီလွတ်
+တက်ဆိပ်ရွာ
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$
+```
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$ python ./txt_dl.py -"--url "https://bbc.com/burmese" --key"တက်" --url_file ur_file.txt --num_sentences 5--output_file result2.txt
+usage: txt_dl.py [-h] (--url URL | --url_file URL_FILE) --keyword KEYWORD
+                 [--num_sentences NUM_SENTENCES] [--output_filename OUTPUT_FILENAME]
+txt_dl.py: error: argument --url_file: not allowed with argument --url
+(base) ye@lst-gpu-3090:~/exp/demo/data_mining$
+```
 
 ## Next Program  
 
