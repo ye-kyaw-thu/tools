@@ -7186,6 +7186,204 @@ If you need as output file:
 (base) ye@lst-gpu-3090:~/exp/demo/print_unicode$
 ```
 
+99. [syl_ngram_mi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl_ngram_mi.py)
+
+မြန်မာစာအတွက်က syllable unit တွေက အရေးကြီးတယ်။ Syllable cooccurrence တွေကို ngram အလိုက် ဆွဲထုတ်ဖို့အတွက် ရေးထားတဲ့ python code ပါ။ Information theory ကို အခြေခံတဲ့ mutual information တွက်တဲ့နည်းကို apply လုပ်ထားတယ်။  
+
+### Mutual Information Calculation:
+
+The Mutual Information (MI) of a bigram (or n-gram) measures the amount of information that the presence of one word contributes about the presence of the other. In simpler terms, it tells us how much knowing one word helps in predicting the other.
+
+For a bigram (word1, word2), the Mutual Information is calculated as follows:
+
+1. **Probability of word1 (P(w1))**: The frequency of word1 divided by the total number of words.
+2. **Probability of word2 (P(w2))**: The frequency of word2 divided by the total number of words.
+3. **Joint Probability of word1 and word2 (P(w1, w2))**: The frequency of the bigram (word1, word2) divided by the total number of bigrams.
+4. **MI Score**: The MI score is calculated using the formula:
+   
+   \[ MI(word1, word2) = \log\frac{P(w1, w2)}{P(w1) \times P(w2)} \]
+
+   Here, log is the natural logarithm. This formula measures how much more often the words co-occur than if they were independent.
+
+--help ခေါ်ကြည့်ရင် အောက်ပါအတိုင်း မြင်ရလိမ့်မယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ python ./syl_ngram_mi.py --help
+usage: syl_ngram_mi.py [-h] [-f FILE] [-n {2,3,4,5,6,7}] [-o OUTPUT] [-c COUNT]
+
+N-Gram Collocation Extraction with Mutual Information (Supports 2 to 7-grams)
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f FILE, --file FILE  Path to the syllable-segmented corpus file
+  -n {2,3,4,5,6,7}, --ngram {2,3,4,5,6,7}
+                        Size of the n-gram (2 to 7)
+  -o OUTPUT, --output OUTPUT
+                        Optional output file to write the collocations
+  -c COUNT, --count COUNT
+                        Minimum count of co-occurrences to be considered for MI
+                        calculation
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$
+```
+
+Test run လုပ်ဖို့အတွက် shell script ကို အောက်ပါအတိုင်း ရေးခဲ့တယ်။  
+
+```bash
+#!/bin/bash
+
+time python ./syl_ngram_mi.py --file ./segmentation-data-updated2.cleaned.syl \
+--ngram 2 --count 3 --output 2gram_c3_mi.txt
+
+time python ./syl_ngram_mi.py --file ./segmentation-data-updated2.cleaned.syl \
+--ngram 3 --count 3 --output 3gram_c3_mi.txt
+
+time python ./syl_ngram_mi.py --file ./segmentation-data-updated2.cleaned.syl \
+--ngram 4 --count 3 --output 4gram_c3_mi.txt
+
+time python ./syl_ngram_mi.py --file ./segmentation-data-updated2.cleaned.syl \
+--ngram 5 --count 3 --output 5gram_c3_mi.txt
+```
+
+Test run as follows:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ ./run.sh
+
+real    0m6.163s
+user    0m6.283s
+sys     0m1.547s
+
+real    0m8.001s
+user    0m8.154s
+sys     0m1.700s
+
+real    0m7.942s
+user    0m8.203s
+sys     0m2.188s
+
+real    0m7.891s
+user    0m7.820s
+sys     0m1.796s
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$
+```
+
+2-gram output ဖိုင်ကို လေ့လာကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ head 2gram_c3_mi.txt
+ဟန္တ ဒုန္ဒု: 14.676212467075088
+ဒန္နိ မိတ္တံ: 14.676212467075088
+ရမ်းစ် ဒေးလ်: 14.388530394623306
+ပစ္စုပ္ပန္နာ အဇ္စျတ္တံ: 14.165386843309097
+ာ ါ: 14.165386843309097
+တင်္ခ ဏုပ္ပတ္တိ: 13.828914606687883
+ဝေက္ခိ တဗ္ဗံ: 13.828914606687883
+ကုရ် အာန်: 13.605771055373674
+ဝေါ့ထ် ဝေါ့ထ်: 13.577600178406977
+ပုဏ္ဍ ရိက်: 13.541232534236103
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ tail 2gram_c3_mi.txt
+အ ချင်: -5.469481635862199
+အ တွေ: -5.490230424997056
+အ တော့: -5.8408427049724585
+အ တယ်: -5.896372282545035
+အ ဒီ: -5.9906562283077385
+အ ဘူး: -6.170574156759379
+အ လည်း: -6.272625387051672
+အ သည်: -6.305896698282836
+အ တစ်: -6.410758586441049
+အ တဲ့: -6.575146473363342(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$
+```
+
+3gram output ဖိုင်ကို လေ့လာကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ head 3gram_c3_mi.txt
+ဋိစ္စ သ မုပ္ပါဒ်: 14.16538670235403
+သဒ္ဓေါ ပါ ပဂ္ဂ: 14.16538670235403
+တော်လ် စ တွိုင်း: 13.983065145560078
+ဏှံ ပစ္စ ဝေက္ခိ: 13.828914465732819
+အက်ဒ် ဝုဒ် ဝက်ဒ်: 13.577600037451912
+ဝတ္တေ ယျ လဗ္ဘေ: 13.184557449342305
+ဝဇ္ဇေ န သောတ္ထိ: 13.172134929343748
+ဘွေ လပ် ယိန်း: 13.135767285172873
+ဒမ္ပိ သံ ဃေ: 12.815459985405015
+ဝဏ္ဏိ နော ဣဒ္ဓိ: 12.634991997260384
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ tail 3gram_c3_mi.txt
+အ တောက် အ: -8.34688337353481
+အ ယုတ် အ: -8.34688337353481
+အ ချ အ: -8.34688337353481
+အ ကြေး အ: -8.34688337353481
+အ ချီး အ: -8.34688337353481
+အ ကွယ် အ: -8.34688337353481
+အ မြိုက် အ: -8.34688337353481
+အ ဖျား အ: -8.34688337353481
+အ မြား အ: -8.34688337353481
+အ ကျူး အ: -8.34688337353481
+```
+
+4gram output ဖိုင်ကို လေ့လာကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ head 4gram_c3_mi.txt
+အဇ္စျတ္တံ ဝါ ဗ ဟိဒ္ဓါ: 14.165386561398947
+သမ္မပ္ပ ညာ ယ ဒဋ္ဌဗ္ဗံ: 14.165386561398947
+ဏှံ ပစ္စ ဝေက္ခိ တဗ္ဗံ: 13.828914324777735
+ဒမ္မ သာ ရ ထိံ: 13.376929201034676
+နိစ္စာ ဝါ အ နိစ္စာ: 12.98161646439053
+ချတ် မာ စ တာစ်: 12.912623592903579
+သစ္စ ဝဇ္ဇေ န သောတ္ထိ: 12.804410008263346
+သမ္ဗော ဓာ ယ နိဗ္ဗာ: 12.730302036109624
+ကမ္မံ ဉာ ဏ ပုဗ္ဗင်္ဂ: 12.624941520451799
+ကမ္မံ ဉာ ဏာ ပုဗ္ဗင်္ဂ: 12.624941520451799
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ tail 4gram_c3_mi.txt
+အ သင်း ဘုတ် အ: -8.346883514489894
+အ ချို့ မှာ အ: -8.346883514489894
+အ စား ဆုံး အ: -8.346883514489894
+အ လံ တွင် အ: -8.346883514489894
+အ လံ ရှိ အ: -8.346883514489894
+အ ဘိ ဓာန် အ: -8.346883514489894
+အ စ တွင် အ: -8.346883514489894
+အ မြု တေ အ: -8.346883514489894
+အ သံ ရဲ့ အ: -8.346883514489894
+အ လံ ၏ အ: -8.346883514489894
+```
+
+5gram output ဖိုင်ကို လေ့လာကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ head 5gram_c3_mi.txt
+မိတ္တံ အ ဝ မင်္ဂ လဉ္စ: 14.676212044209832
+ပစ္စုပ္ပန္နာ အဇ္စျတ္တံ ဝါ ဗ ဟိဒ္ဓါ: 14.165386420443841
+ဣန္ဒ နာ မာ မ ဟဗ္ဗ: 13.605770632508419
+သစ္စန္တိ မေ ဘိက္ခ ဝေ ပုဗ္ဗေ: 13.066774131775732
+တဗ္ဗန္တိ မေ ဘိက္ခ ဝေ ပုဗ္ဗေ: 13.066774131775732
+မီးစ် ရို ဒ ရီ ဂွက်ဇ်: 13.027553418622452
+သန္နိ ပ တိ တာ ဟောန္တိ: 13.002235610638161
+ဿု ပိ နံ အ ကန္တံ: 12.941610988821726
+ပုဗ္ဗေ အ န နု ဿု: 12.718467437507517
+ဇု တိ မန္တော ဝဏ္ဏ ဝန္တော: 12.614789008032675
+(base) ye@lst-gpu-3090:~/exp/demo/mutual_info$ tail 5gram_c3_mi.txt
+အ ရန် သ င့် အ: -8.346883655445
+အ မြင့် မား ဆုံး အ: -8.346883655445
+အ မေ ရိ က အ: -8.346883655445
+အ ချိတ် အ ဆက် အ: -8.346883655445
+အ လံ တော် ရှိ အ: -8.346883655445
+အ ရောင် ဖြစ် သော အ: -8.346883655445
+အ နား များ တွင် အ: -8.346883655445
+အ လုပ် အ ကျွေး အ: -8.346883655445
+အ ဘယ် ရွာ နေ အ: -8.346883655445
+အ ရောင် ပုံ သဏ္ဌာန် အ: -8.346883655445
+```
+
+Python code ထဲမှာက 7-gram အထိ support လုပ်ထားတယ်။ အောက်ပါ အတိုင်း coding လုပ်ထားတယ်။  
+
+```python
+    for ngram in ngram_fd:
+        if 2 <= len(ngram) <= 7 and ngram_fd[ngram] >= min_count:
+            score = mutual_information_score(word_fd, ngram_fd, total_ngrams, ngram)
+            collocations[ngram] = score
+```
+
 ## Next Program  
 
 ```
