@@ -301,4 +301,7 @@
 (Mutual information ကို တွက်ပြီးတော့ syllable pair n-gram တွေကို ဆွဲထုတ်ဖို့ ရေးခဲ့တယ်။)
 
 100. [txt_dl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/txt_dl.py)  
-(ကိုယ်ရှာဖွေချင်တဲ့ keyword နဲ့ website link ကို ပေးပြီး အဲဒီ keyword ပါဝင်နေတဲ့ မြန်မာစာကြောင်းတွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့တယ်။)  
+(ကိုယ်ရှာဖွေချင်တဲ့ keyword နဲ့ website link ကို ပေးပြီး အဲဒီ keyword ပါဝင်နေတဲ့ မြန်မာစာကြောင်းတွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့တယ်။)
+
+101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)
+(Markov Chain နဲ့ မြန်မာစာကြောင်းတွေကို generate လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
