@@ -7573,6 +7573,250 @@ txt_dl.py: error: argument --url_file: not allowed with argument --url
 (base) ye@lst-gpu-3090:~/exp/demo/data_mining$
 ```
 
+## 101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)  
+
+program ရဲ့ helpscreen က အောက်ပါအတိုင်းပါ။  
+
+```
+$ python ./markov_txt_gen.py --help
+usage: markov_txt_gen.py [-h] [--input INPUT] [--output OUTPUT] [--ngram NGRAM]
+                         [--length LENGTH] [--prefix PREFIX] --mode
+                         {training,generation} [--model_filename MODEL_FILENAME]
+
+Generate text using a Markov chain model.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Input file name for training
+  --output OUTPUT       Output file name for generated text
+  --ngram NGRAM         Size of the n-gram. For generation, this must match the n-gram
+                        size used during training.
+  --length LENGTH       Length of the generated text
+  --prefix PREFIX       Custom prefix for text generation
+  --mode {training,generation}
+                        Mode: training or generation
+  --model_filename MODEL_FILENAME
+                        Model file name
+```
+
+## Corpus File Info
+
+(base) ye@lst-gpu-3090:~/exp/markov$ wc segmentation-data-updated2.cleaned.syl.rm_no.cleaned
+  212750  6984282 69094601 segmentation-data-updated2.cleaned.syl.rm_no.cleaned
+(base) ye@lst-gpu-3090:~/exp/markov$
+
+ဖိုင်ထဲမှာတော့ မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ထားပါတယ်။ နံပါတ်တို့ symbol စတာတွေကို ရှင်းထားပြီးသားပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/markov$ shuf ./segmentation-data-updated2.cleaned.syl.rm_no.cleaned | head
+မ လေး ရှား မှာ သူ ဌေး က ပွား လို့ စိတ် ညစ် နေ လား
+ကန့် ကွက် နိုင် ကြောင်း ကြော် ငြာ ခြင်း
+နေ ပြည် တော် က ရာ ဇ ဌာ နီ လမ်း မ ကြီး ကို မာ ဆတ် ဌာ နီ ဟု နာ မည် ပြောင် ပေး ထား ကြ ကြောင်း ဂျာ နယ် တွေ ထဲ မှာ လည်း သူ မ ကြာ ခ ဏ ဖတ် ခဲ့ ဖူး ပါ သည်
+သိမ် တော့ မ ဟုတ် တော့ ဘူး
+ကို နေ တိုး အ ရမ်း မိုက် တယ်
+စီ စီ အ ရမ်း လှ နေ တယ် ချစ် သက် လေး က အ တို လေး တွေ ဝတ် လည်း လိုက် ပါ တယ် ချစ် တယ် မေ မွန် ရေ ကြွေ ပြီ လေ ကြွေ ပြီ မ မ အ ရမ်း လှ နေ တယ် မ မ သက် ရေ မ မ သက် အ ရမ်း ချစ် ချစ် စ ရာ လေး ပါ မေ မွန် ဟာ အ ရမ်း မိုက် ချစ် သက် ချစ် တယ် ဘယ် လို နေ နေ ချစ် တယ် အ ရမ်း လှ ချစ် မ ချစ် လိုက် တာ အို ကြွေ ချက် အ ခု လို လေး ကျ ပြန် တော့ လည်း အ မြင် တစ် မျိုး နဲ့ ချစ် ရ တာ ပဲ က လေး မေး နော် အ ရမ်း လှ နေ တယ် အ ရမ်း ကို ချစ် စ ရာ ကောင်း နေ တယ် ချစ် သက် ရယ် ချစ် လိုက် ချစ် သက် လေး အ ရမ်း ချစ် တယ် ချစ် သက် ရေ ဂါး
+ဒီ လို စဉ်း စား ရ အောင် အ ဘ ရယ် ဒီ အိမ် ကြီး ဟာ အ ဘ အ ဖေ လက် ထက် က တည်း က ဆောက် ခဲ့ တာ အုတ် တွေ လည်း ဆွေး နေ ပါ ပြီ သူ တို့ လက် ထက် တုန်း က နေ ခဲ့ တဲ့ သူ က များ တယ် လေ အိမ် ကို ကြီး ကြီး ဆောက် ရ မှာ ပေါ့
+ဒီ နှစ် လည်း မြ င့် မြတ် ကို ပဲ ရ စေ ချင် တယ် ဒါ ပေ မဲ့ သူ ဒီ နှစ် လည်း ရ မယ် မ ထင် ဘူး
+ဟုတ် ပါ ရဲ့ ကို ထွေး ရင် ရေ ကား ကို အ ထဲ သွင်း ခဲ့ ပါ
+အ နီး အ ပါး တွင် နေ ပုံ ရ သည့် အ မျိုး သား ကြီး နှစ် ဦး သည် ဝါး လုံး ရှည် များ ဖြင့် အ မှိုက် တို့ ကို တွန်း ထိုး ရွှေ့ ကာ လမ်း ဘေး သို့ စု ပုံ စေ သည်
+(base) ye@lst-gpu-3090:~/exp/markov$
+```
+
+## Training or Building Markov Chain Models
+
+2-gram ကနေ 7-gram model အထိ စမ်းဆောက်ကြည့်ဖို့အတွက် သုံးခဲ့တဲ့ bash shell script က အောက်ပါအတိုင်းပါ။  
+
+```bash
+#!/bin/bash
+
+# Path to the Python script
+SCRIPT="./markov_txt_gen.py"
+
+# Input file
+INPUT_FILE="./segmentation-data-updated2.cleaned.syl.rm_no.cleaned"
+
+# Loop from 2-gram to 7-gram
+for NGRAM in {2..7}
+do
+    echo "Building ${NGRAM}-gram model..."
+    time python $SCRIPT --input $INPUT_FILE --mode training --ngram $NGRAM
+    echo "Completed ${NGRAM}-gram model."
+done
+
+echo "All models built."
+```
+
+အထက်ပါ shell script ကို သုံးပြီး run ရင် အောက်ပါအတိုင်း မော်ဒယ်တွေကို ဆောက်ပေးသွားလိမ့်မယ်။  
+
+```bash
+(base) ye@lst-gpu-3090:~/exp/markov$ ./build_models.sh
+Building 2-gram model...
+
+real    0m3.889s
+user    0m2.695s
+sys     0m0.295s
+Completed 2-gram model.
+Building 3-gram model...
+
+real    0m4.623s
+user    0m4.288s
+sys     0m0.332s
+Completed 3-gram model.
+Building 4-gram model...
+
+real    0m8.325s
+user    0m7.796s
+sys     0m0.528s
+Completed 4-gram model.
+Building 5-gram model...
+
+real    0m11.085s
+user    0m10.192s
+sys     0m0.892s
+Completed 5-gram model.
+Building 6-gram model...
+
+real    0m12.837s
+user    0m11.873s
+sys     0m0.960s
+Completed 6-gram model.
+Building 7-gram model...
+
+real    0m13.849s
+user    0m12.651s
+sys     0m1.195s
+Completed 7-gram model.
+All models built.
+(base) ye@lst-gpu-3090:~/exp/markov$
+```
+
+ထွက်လာမယ့် model ဖိုင်တွေကိုတော့ json ဖိုင်အဖြစ်နဲ့ သိမ်းထားပါတယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/markov$ ls *.json
+2gram_model.json  4gram_model.json  6gram_model.json
+3gram_model.json  5gram_model.json  7gram_model.json
+(base) ye@lst-gpu-3090:~/exp/markov$
+```
+
+## Testing or Text Generation
+
+```bash
+#!/bin/bash
+
+# Check if a command-line argument is provided
+if [ "$#" -ne 1 ]; then
+    echo "Usage: $0 [length]"
+    exit 1
+fi
+
+# The length of the generated text
+LENGTH=$1
+
+# Script path
+SCRIPT="./markov_txt_gen.py"
+
+# Loop from 2-gram to 7-gram models
+for NGRAM in {2..7}
+do
+    MODEL_FILENAME="${NGRAM}gram_model.json"
+
+    # Generate text without prefix
+    echo "Generating text with ${NGRAM}-gram model..."
+    GENERATED_TEXT=$(python $SCRIPT --mode generation --model_filename $MODEL_FILENAME --length $LENGTH --ngram $NGRAM)
+    echo "Generated text: $GENERATED_TEXT"
+
+    # Extract the last n-1 words as prefix
+    PREFIX=$(echo "$GENERATED_TEXT" | awk '{for(i=NF-'$(($NGRAM-2))';i<=NF;i++) printf $i" "; print ""}')
+
+    # Generate text with extracted prefix
+    echo "Generating text with prefix '${PREFIX}'..."
+    GENERATED_TEXT_WITH_PREFIX=$(python $SCRIPT --mode generation --model_filename $MODEL_FILENAME --length $LENGTH --ngram $NGRAM --prefix "$PREFIX")
+    echo "Generated text with prefix: $GENERATED_TEXT_WITH_PREFIX"
+    echo "------------------------------------------------"
+done
+```
+
+## Generation Experiment 1
+
+Testing with --length 10
+
+```
+(base) ye@lst-gpu-3090:~/exp/markov$ ./generation_test.sh 10
+Generating text with 2-gram model...
+Generated text: ဝိတ် တန်း ပြီး တော့ ဘာ လဲ အ တို က ရေ
+Generating text with prefix 'ရေ '...
+Generated text with prefix: ရေ မျက် နှာ သစ် တော ရက်ဇ် တို့ နှစ် တို့ လို
+------------------------------------------------
+Generating text with 3-gram model...
+Generated text: တောင် ဘေး က ပေါ့ မ ကစ် ညီ မ သွား ပါ
+Generating text with prefix 'သွား ပါ '...
+Generated text with prefix: သွား ပါ ကစ် ရော မ စစ် ခွေး တွေ လို တစ်
+------------------------------------------------
+Generating text with 4-gram model...
+Generated text: ကြ သံ နဲ့ လုပ် လည်း စိတ် မ တို စမ်း ပါ
+Generating text with prefix 'တို စမ်း ပါ '...
+Generated text with prefix: တို စမ်း ပါ နဲ့ ဟု တစ် ထောင့် မှ အော် သည်
+------------------------------------------------
+Generating text with 5-gram model...
+Generated text: သူ ၏ လက် နက် ဘေး မှ လုံ ခြုံ သော ငှာ
+Generating text with prefix 'လုံ ခြုံ သော ငှာ '...
+Generated text with prefix: လုံ ခြုံ သော ငှာ မြ င့် သော မြား ကာ ကို
+------------------------------------------------
+Generating text with 6-gram model...
+Generated text: မျှ သာ ပေး ၍ အ လုပ် ခိုင်း လေ သည် တ
+Generating text with prefix 'လုပ် ခိုင်း လေ သည် တ '...
+Generated text with prefix: လုပ် ခိုင်း လေ သည် တ ပ ည့် အ လုပ် သ
+------------------------------------------------
+Generating text with 7-gram model...
+Generated text: ရိ သတ် ကို မိ တ နော် မ တိုး နိုင် ခဲ့
+Generating text with prefix 'တ နော် မ တိုး နိုင် ခဲ့ '...
+Generated text with prefix: တ နော် မ တိုး နိုင် ခဲ့ ပ ရိ သတ် အ
+------------------------------------------------
+(base) ye@lst-gpu-3090:~/exp/markov$
+```
+
+## Generation Experiment 2
+
+testing with --length 5
+
+```
+(base) ye@lst-gpu-3090:~/exp/markov$ ./generation_test.sh 5
+Generating text with 2-gram model...
+Generated text: ငြိုး သည် ဒု တိ ထား
+Generating text with prefix 'ထား '...
+Generated text with prefix: ထား တွေ အ တွက် ဒီ
+------------------------------------------------
+Generating text with 3-gram model...
+Generated text: ထု တွေ ပို မို တိုး
+Generating text with prefix 'မို တိုး '...
+Generated text with prefix: မို တိုး တက် တယ် အဲ
+------------------------------------------------
+Generating text with 4-gram model...
+Generated text: ခန်း ထဲ ဖိုင်လ် တွေ သွား
+Generating text with prefix 'ဖိုင်လ် တွေ သွား '...
+Generated text with prefix: ဖိုင်လ် တွေ သွား လှန် လိုက်
+------------------------------------------------
+Generating text with 5-gram model...
+Generated text: ရင် အား လုံး ပါ ဝင်
+Generating text with prefix 'အား လုံး ပါ ဝင် '...
+Generated text with prefix: အား လုံး ပါ ဝင် မှု
+------------------------------------------------
+Generating text with 6-gram model...
+Generated text: က နိုင် ငံ များ နှင့်
+Generating text with prefix 'က နိုင် ငံ များ နှင့် '...
+Generated text with prefix: က နိုင် ငံ များ နှင့်
+------------------------------------------------
+Generating text with 7-gram model...
+Generated text: တော့ အ ရင် က ဘော မ
+Generating text with prefix 'တော့ အ ရင် က ဘော မ '...
+Generated text with prefix: တော့ အ ရင် က ဘော မ
+------------------------------------------------
+(base) ye@lst-gpu-3090:~/exp/markov$
+```
+
+အခု စမ်းပြထားတာက syllabl ဖြတ်ထားတဲ့ မြန်မာစာ စာကြောင်းတွေနဲ့ပါ။ word generate လုပ်ချင်တာ ဆိုရင်တော့ word ဖြစ်ထားတဲ့ corpus နဲ့ training လုပ်ရမှာ ဖြစ်ပါတယ်။ လက်ရှိ ခေတ်စားနေတဲ့ LLM တွေနဲ့ ပတ်သက်ပြီး အသေးစိတ် လေ့လာမယ် ဆိုရင် ကျောင်းသားတွေကို Markov Chain က စပြီး သိစေချင်ပါတယ်။    
+
 ## Next Program  
 
 ```
