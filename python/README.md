@@ -276,7 +276,7 @@
 91. [padsint_detection.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/padsint_detection.py)  
 (ပါဌ်ဆင့် သို့မဟုတ် ဆင့်ထားတဲ့ ဗျည်းတွေကို detect လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
 
-92. [replace_pipe_with_space.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/replace_pipe_with_space.py)  
+92. [replace_pipe_with_space.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/replace_pipe_with_space.py)   
 (Input ဖိုင်ထဲက pipe (|) ကို space နဲ့ အစားထိုးဖို့အတွက် ရေးခဲ့တယ်။)  
 
 93. [pos_pattern_checker.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/pos_pattern_checker.py)  
@@ -303,5 +303,5 @@
 100. [txt_dl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/txt_dl.py)  
 (ကိုယ်ရှာဖွေချင်တဲ့ keyword နဲ့ website link ကို ပေးပြီး အဲဒီ keyword ပါဝင်နေတဲ့ မြန်မာစာကြောင်းတွေကို ဆွဲထုတ်ယူဖို့အတွက် ရေးခဲ့တယ်။)
 
-101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)
+101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)  
 (Markov Chain နဲ့ မြန်မာစာကြောင်းတွေကို generate လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
