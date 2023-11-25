@@ -305,3 +305,6 @@
 
 101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)  
 (Markov Chain နဲ့ မြန်မာစာကြောင်းတွေကို generate လုပ်ဖို့အတွက် ရေးခဲ့တယ်။)  
+
+102. [tesseract_ocr.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tesseract_ocr.py)
+(Google ရဲ့ pytesseract module ကို သုံးပြီး မြန်မာစာ OCR အကြမ်းစမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။)  
