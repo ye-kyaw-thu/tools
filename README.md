@@ -284,4 +284,6 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 98. [print_codepoint.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/print_codepoint.py) 
 99. [syl_ngram_mi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/syl_ngram_mi.py)  
 100. [txt_dl.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/txt_dl.py)
-101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)
+101. [markov_txt_gen.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/markov_txt_gen.py)  
+102. [tesseract_ocr.pyy](https://github.com/ye-kyaw-thu/tools/blob/master/python/tesseract_ocr.py)  
+
