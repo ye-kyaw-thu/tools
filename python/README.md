@@ -310,4 +310,4 @@
 (Google ရဲ့ pytesseract module ကို သုံးပြီး မြန်မာစာ OCR အကြမ်းစမ်းကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။)
 
 103. [NER_23to9_conv.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/NER_23to9_conv.py)  
-()
+(လက်ရှိ LU Lab. မှာက NER corpus ကို 23 tagsets နဲ့ 9 tagsets ဆိုပြီး နှစ်မျိုး develop လုပ်နေတာမို့လို့ အရင်ရှိပြီးသား 23 tagsets နဲ့ tag လုပ်ထားတဲ့ စာကြောင်းတွေကို 9 tagsets အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)  
