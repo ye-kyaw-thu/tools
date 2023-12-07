@@ -6402,5 +6402,25 @@ $ head ./sentences.end-mark.err
 893:N
 1094:N	
 ```
-	
-	
+
+## 106. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)   
+
+တခါတလေ WinWord ဖိုင်ကို PDF ဖိုင်အဖြစ် command line ကနေ ပြောင်းနိုင်ဖို့ လိုအပ်ပါတယ်။ ဥပမာ ကိုယ်လက်ရှိသုံးနေတဲ့ စက်မှာက WinWord မထည့်ထားတာမျိုး၊ official version မရှိတာမျိုး ဆိုတဲ့ အခြေအနေမှာ GoogleDoc ပေါ်ကို တင်ပြီးဖွင့်ကြည့်တာမျိုးလည်း မလုပ်ချင်တဲ့အခါမျိုးမှာပါ။ အဲဒီလို အခြေအနေမှာတော့ Linux OS ရှိတဲ့ စက်မှာ word2pdf.sh ကို သုံးပြီး PDF ဖိုင်အဖြစ် ပြောင်းလို့ ရပါလိမ့်မယ်။ တစ်ခုရှိတာက libreoffice ကတော့ အဲဒီ Linux စက်ထဲမှာ installation လုပ်ပြီးသား ဖြစ်ရပါမယ်။ ပုံမှန် installation လုပ်ထားရင် libreoffice က Linux OS စက်ထဲမှာ ရှိပြီးသားပါ။  
+
+Example usage ကတော့ အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/word2pdf$ time ./word2pdf.sh -i ./aaa23.docx -o ./shell_output/aaa23.pdf
+Converted ./aaa23.docx to ./shell_output/aaa23.pdf
+
+real    0m0.707s
+user    0m0.008s
+sys     0m0.001s
+```
+
+convert လုပ်ပြီးသားဖိုင်ကို check လုပ်ကြည့်ရင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/demo/word2pdf/shell_output$ file aaa23.pdf
+aaa23.pdf: PDF document, version 1.6, 2 pages
+```
