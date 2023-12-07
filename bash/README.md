@@ -320,5 +320,7 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 (Neural Machine Translation ရဲ့ အဓိကကျတဲ့ architecture နှစ်ခုဖြစ်တဲ့ seq2seq နဲ့ transformer အတွက် testing လုပ်ပြီးထွက်လာတဲ့ hypothesis ဖိုင်တွေနဲ့ reference ဖိုင်ကို နှိုင်းယှဉ်ပြီး chrF score တွက်ဖို့အတွက် ရေးခဲ့တဲ့ ဖိုင်ပါ။)  
 
 105. [check-end-mark.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/check-end-mark.sh)  
+106. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)  
+(WinWord ဖိုင် ကနေ PDF ဖိုင်အဖြစ် command-line ကနေ ပြောင်းဖို့အတွက် ရေးခဲ့တာ။)  
 
 
