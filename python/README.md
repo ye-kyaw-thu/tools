@@ -311,3 +311,8 @@
 
 103. [NER_23to9_conv.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/NER_23to9_conv.py)  
 (လက်ရှိ LU Lab. မှာက NER corpus ကို 23 tagsets နဲ့ 9 tagsets ဆိုပြီး နှစ်မျိုး develop လုပ်နေတာမို့လို့ အရင်ရှိပြီးသား 23 tagsets နဲ့ tag လုပ်ထားတဲ့ စာကြောင်းတွေကို 9 tagsets အဖြစ် ပြောင်းဖို့အတွက် ရေးခဲ့တယ်။)  
+
+104. [tf_event2txt.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tf_event2txt.py)  
+(tensorflow framework ကိုသုံးပြီး မော်ဒယ်တခုခု ဆောက်ရင် event log ဖိုင်ရလာလိမ့်မယ်။ အဲဒီဖိုင်က ပုံမှန်အားဖြင့်က tensorboard နဲ့ ကြည့်ရတာ။ သို့သော် တခါတလေမှာ command line မှာပဲ အကြမ်းဖတ်ကြည့်ချင်တဲ့ အခါမျိုး ရှိတတ်ပါတယ်။ အဲဒီလိုအခါအတွက် text ဖိုင် format အဖြစ်ပြောင်းပေးတဲ့ python code ပါ။)
+
+
