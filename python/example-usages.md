@@ -7908,3 +7908,299 @@ Website/O တစ်/O ခု/O ကို/O ကျွန်တော်/O တိ�
 
 - Converter နဲ့ ပြောင်းထားတဲ့ output ကို manual စစ်ဆေးရန်
 
+## 104. [tf_event2txt.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tf_event2txt.py)   
+
+Tensorflow နဲ့ အလုပ်တခုခု လုပ်ပြီး ထွက်လာတဲ့ event ဖိုင်ကို အကြမ်း terminal မှာ ဖတ်ကြည့်ချင်ရင် ဖတ်ကြည့်လို့ ရအောင် text ဖိုင်အဖြစ် ပြောင်းပေးတဲ့ script ပါ။   
+
+အရင်ဆုံး help ခေါ်ကြည့်ပါ။  
+
+```
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$ python ./tf_event2txt.py --help
+2023-12-15 10:13:34.991912: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-12-15 10:13:35.022845: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-15 10:13:35.664767: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+usage: tf_event2txt.py [-h] [-i INPUT] [-o OUTPUT]
+
+Read TensorFlow event files.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input TensorFlow event file. If not provided, reads from stdin.
+  -o OUTPUT, --output OUTPUT
+                        Output file to write the results. If not provided, prints to
+                        stdout.
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$
+```
+
+--output or -o ဆိုတဲ့ argument နဲ့ ဖိုင်နာမည်မပေးရင် screen ပေါ်မှာ ရိုက်ထုတ်ပြလိမ့်မယ်။  
+
+```
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$ python ./tf_event2txt.py --input ./events.out.tfevents.1702602561.lst-gpu-3090.18783.0
+2023-12-15 10:14:27.818958: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-12-15 10:14:27.857226: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-15 10:14:28.506154: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING:tensorflow:From ./tf_event2txt.py:8: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and:
+`tf.data.TFRecordDataset(path)`
+Event: wall_time: 1702602561.4400527
+file_version: "brain.Event:2"
+source_metadata {
+  writer: "tensorboard.summary.writer.event_file_writer"
+}
+
+
+Event: wall_time: 1702602561.4404318
+summary {
+  value {
+    tag: "args/text_summary"
+    metadata {
+      plugin_data {
+        plugin_name: "text"
+      }
+    }
+    tensor {
+      dtype: DT_STRING
+      tensor_shape {
+        dim {
+          size: 1
+        }
+      }
+      string_val: "{\n  \"output_dir\": \"./results\",\n  \"overwrite_output_dir\": false,\n  \"do_train\": false,\n  \"do_eval\": false,\n  \"do_predict\": false,\n  \"evaluation_strategy\": \"no\",\n  \"prediction_loss_only\": false,\n  \"per_device_train_batch_size\": 16,\n  \"per_device_eval_batch_size\": 16,\n  \"per_gpu_train_batch_size\": null,\n  \"per_gpu_eval_batch_size\": null,\n  \"gradient_accumulation_steps\": 1,\n  \"eval_accumulation_steps\": null,\n  \"eval_delay\": 0,\n  \"learning_rate\": 5e-05,\n  \"weight_decay\": 0.01,\n  \"adam_beta1\": 0.9,\n  \"adam_beta2\": 0.999,\n  \"adam_epsilon\": 1e-08,\n  \"max_grad_norm\": 1.0,\n  \"num_train_epochs\": 3,\n  \"max_steps\": -1,\n  \"lr_scheduler_type\": \"linear\",\n  \"lr_scheduler_kwargs\": {},\n  \"warmup_ratio\": 0.0,\n  \"warmup_steps\": 500,\n  \"log_level\": \"passive\",\n  \"log_level_replica\": \"warning\",\n  \"log_on_each_node\": true,\n  \"logging_dir\": \"./logs\",\n  \"logging_strategy\": \"steps\",\n  \"logging_first_step\": false,\n  \"logging_steps\": 10,\n  \"logging_nan_inf_filter\": true,\n  \"save_strategy\": \"epoch\",\n  \"save_steps\": 500,\n  \"save_total_limit\": null,\n  \"save_safetensors\": true,\n  \"save_on_each_node\": false,\n  \"save_only_model\": false,\n  \"no_cuda\": false,\n  \"use_cpu\": false,\n  \"use_mps_device\": false,\n  \"seed\": 42,\n  \"data_seed\": null,\n  \"jit_mode_eval\": false,\n  \"use_ipex\": false,\n  \"bf16\": false,\n  \"fp16\": false,\n  \"fp16_opt_level\": \"O1\",\n  \"half_precision_backend\": \"auto\",\n  \"bf16_full_eval\": false,\n  \"fp16_full_eval\": false,\n  \"tf32\": null,\n  \"local_rank\": 0,\n  \"ddp_backend\": null,\n  \"tpu_num_cores\": null,\n  \"tpu_metrics_debug\": false,\n  \"debug\": [],\n  \"dataloader_drop_last\": false,\n  \"eval_steps\": null,\n  \"dataloader_num_workers\": 0,\n  \"past_index\": -1,\n  \"run_name\": \"./results\",\n  \"disable_tqdm\": false,\n  \"remove_unused_columns\": true,\n  \"label_names\": null,\n  \"load_best_model_at_end\": false,\n  \"metric_for_best_model\": null,\n  \"greater_is_better\": null,\n  \"ignore_data_skip\": false,\n  \"fsdp\": [],\n  \"fsdp_min_num_params\": 0,\n  \"fsdp_config\": {\n    \"min_num_params\": 0,\n    \"xla\": false,\n    \"xla_fsdp_grad_ckpt\": false\n  },\n  \"fsdp_transformer_layer_cls_to_wrap\": null,\n  \"deepspeed\": null,\n  \"label_smoothing_factor\": 0.0,\n  \"optim\": \"adamw_torch\",\n  \"optim_args\": null,\n  \"adafactor\": false,\n  \"group_by_length\": false,\n  \"length_column_name\": \"length\",\n  \"report_to\": [\n    \"tensorboard\"\n  ],\n  \"ddp_find_unused_parameters\": null,\n  \"ddp_bucket_cap_mb\": null,\n  \"ddp_broadcast_buffers\": null,\n  \"dataloader_pin_memory\": true,\n  \"dataloader_persistent_workers\": false,\n  \"skip_memory_metrics\": true,\n  \"use_legacy_prediction_loop\": false,\n  \"push_to_hub\": false,\n  \"resume_from_checkpoint\": null,\n  \"hub_model_id\": null,\n  \"hub_strategy\": \"every_save\",\n  \"hub_token\": \"<HUB_TOKEN>\",\n  \"hub_private_repo\": false,\n  \"hub_always_push\": false,\n  \"gradient_checkpointing\": false,\n  \"gradient_checkpointing_kwargs\": null,\n  \"include_inputs_for_metrics\": false,\n  \"fp16_backend\": \"auto\",\n  \"push_to_hub_model_id\": null,\n  \"push_to_hub_organization\": null,\n  \"push_to_hub_token\": \"<PUSH_TO_HUB_TOKEN>\",\n  \"mp_parameters\": \"\",\n  \"auto_find_batch_size\": false,\n  \"full_determinism\": false,\n  \"torchdynamo\": null,\n  \"ray_scope\": \"last\",\n  \"ddp_timeout\": 1800,\n  \"torch_compile\": false,\n  \"torch_compile_backend\": null,\n  \"torch_compile_mode\": null,\n  \"dispatch_batches\": null,\n  \"split_batches\": false,\n  \"include_tokens_per_second\": false,\n  \"include_num_input_tokens_seen\": false,\n  \"neftune_noise_alpha\": null\n}"
+    }
+  }
+}
+
+Summary Value: tag: "args/text_summary"
+metadata {
+  plugin_data {
+    plugin_name: "text"
+  }
+}
+tensor {
+  dtype: DT_STRING
+  tensor_shape {
+    dim {
+      size: 1
+    }
+  }
+  string_val: "{\n  \"output_dir\": \"./results\",\n  \"overwrite_output_dir\": false,\n  \"do_train\": false,\n  \"do_eval\": false,\n  \"do_predict\": false,\n  \"evaluation_strategy\": \"no\",\n  \"prediction_loss_only\": false,\n  \"per_device_train_batch_size\": 16,\n  \"per_device_eval_batch_size\": 16,\n  \"per_gpu_train_batch_size\": null,\n  \"per_gpu_eval_batch_size\": null,\n  \"gradient_accumulation_steps\": 1,\n  \"eval_accumulation_steps\": null,\n  \"eval_delay\": 0,\n  \"learning_rate\": 5e-05,\n  \"weight_decay\": 0.01,\n  \"adam_beta1\": 0.9,\n  \"adam_beta2\": 0.999,\n  \"adam_epsilon\": 1e-08,\n  \"max_grad_norm\": 1.0,\n  \"num_train_epochs\": 3,\n  \"max_steps\": -1,\n  \"lr_scheduler_type\": \"linear\",\n  \"lr_scheduler_kwargs\": {},\n  \"warmup_ratio\": 0.0,\n  \"warmup_steps\": 500,\n  \"log_level\": \"passive\",\n  \"log_level_replica\": \"warning\",\n  \"log_on_each_node\": true,\n  \"logging_dir\": \"./logs\",\n  \"logging_strategy\": \"steps\",\n  \"logging_first_step\": false,\n  \"logging_steps\": 10,\n  \"logging_nan_inf_filter\": true,\n  \"save_strategy\": \"epoch\",\n  \"save_steps\": 500,\n  \"save_total_limit\": null,\n  \"save_safetensors\": true,\n  \"save_on_each_node\": false,\n  \"save_only_model\": false,\n  \"no_cuda\": false,\n  \"use_cpu\": false,\n  \"use_mps_device\": false,\n  \"seed\": 42,\n  \"data_seed\": null,\n  \"jit_mode_eval\": false,\n  \"use_ipex\": false,\n  \"bf16\": false,\n  \"fp16\": false,\n  \"fp16_opt_level\": \"O1\",\n  \"half_precision_backend\": \"auto\",\n  \"bf16_full_eval\": false,\n  \"fp16_full_eval\": false,\n  \"tf32\": null,\n  \"local_rank\": 0,\n  \"ddp_backend\": null,\n  \"tpu_num_cores\": null,\n  \"tpu_metrics_debug\": false,\n  \"debug\": [],\n  \"dataloader_drop_last\": false,\n  \"eval_steps\": null,\n  \"dataloader_num_workers\": 0,\n  \"past_index\": -1,\n  \"run_name\": \"./results\",\n  \"disable_tqdm\": false,\n  \"remove_unused_columns\": true,\n  \"label_names\": null,\n  \"load_best_model_at_end\": false,\n  \"metric_for_best_model\": null,\n  \"greater_is_better\": null,\n  \"ignore_data_skip\": false,\n  \"fsdp\": [],\n  \"fsdp_min_num_params\": 0,\n  \"fsdp_config\": {\n    \"min_num_params\": 0,\n    \"xla\": false,\n    \"xla_fsdp_grad_ckpt\": false\n  },\n  \"fsdp_transformer_layer_cls_to_wrap\": null,\n  \"deepspeed\": null,\n  \"label_smoothing_factor\": 0.0,\n  \"optim\": \"adamw_torch\",\n  \"optim_args\": null,\n  \"adafactor\": false,\n  \"group_by_length\": false,\n  \"length_column_name\": \"length\",\n  \"report_to\": [\n    \"tensorboard\"\n  ],\n  \"ddp_find_unused_parameters\": null,\n  \"ddp_bucket_cap_mb\": null,\n  \"ddp_broadcast_buffers\": null,\n  \"dataloader_pin_memory\": true,\n  \"dataloader_persistent_workers\": false,\n  \"skip_memory_metrics\": true,\n  \"use_legacy_prediction_loop\": false,\n  \"push_to_hub\": false,\n  \"resume_from_checkpoint\": null,\n  \"hub_model_id\": null,\n  \"hub_strategy\": \"every_save\",\n  \"hub_token\": \"<HUB_TOKEN>\",\n  \"hub_private_repo\": false,\n  \"hub_always_push\": false,\n  \"gradient_checkpointing\": false,\n  \"gradient_checkpointing_kwargs\": null,\n  \"include_inputs_for_metrics\": false,\n  \"fp16_backend\": \"auto\",\n  \"push_to_hub_model_id\": null,\n  \"push_to_hub_organization\": null,\n  \"push_to_hub_token\": \"<PUSH_TO_HUB_TOKEN>\",\n  \"mp_parameters\": \"\",\n  \"auto_find_batch_size\": false,\n  \"full_determinism\": false,\n  \"torchdynamo\": null,\n  \"ray_scope\": \"last\",\n  \"ddp_timeout\": 1800,\n  \"torch_compile\": false,\n  \"torch_compile_backend\": null,\n  \"torch_compile_mode\": null,\n  \"dispatch_batches\": null,\n  \"split_batches\": false,\n  \"include_tokens_per_second\": false,\n  \"include_num_input_tokens_seen\": false,\n  \"neftune_noise_alpha\": null\n}"
+}
+
+
+Event: wall_time: 1702602561.4407294
+summary {
+  value {
+    tag: "model_config/text_summary"
+    metadata {
+      plugin_data {
+        plugin_name: "text"
+      }
+    }
+    tensor {
+      dtype: DT_STRING
+      tensor_shape {
+        dim {
+          size: 1
+        }
+      }
+      string_val: "{\n  \"_name_or_path\": \"t5-small\",\n  \"architectures\": [\n    \"T5ForConditionalGeneration\"\n  ],\n  \"classifier_dropout\": 0.0,\n  \"d_ff\": 2048,\n  \"d_kv\": 64,\n  \"d_model\": 512,\n  \"decoder_start_token_id\": 0,\n  \"dense_act_fn\": \"relu\",\n  \"dropout_rate\": 0.1,\n  \"eos_token_id\": 1,\n  \"feed_forward_proj\": \"relu\",\n  \"initializer_factor\": 1.0,\n  \"is_encoder_decoder\": true,\n  \"is_gated_act\": false,\n  \"layer_norm_epsilon\": 1e-06,\n  \"model_type\": \"t5\",\n  \"n_positions\": 512,\n  \"num_decoder_layers\": 6,\n  \"num_heads\": 8,\n  \"num_layers\": 6,\n  \"output_past\": true,\n  \"pad_token_id\": 0,\n  \"relative_attention_max_distance\": 128,\n  \"relative_attention_num_buckets\": 32,\n  \"task_specific_params\": {\n    \"summarization\": {\n      \"early_stopping\": true,\n      \"length_penalty\": 2.0,\n      \"max_length\": 200,\n      \"min_length\": 30,\n      \"no_repeat_ngram_size\": 3,\n      \"num_beams\": 4,\n      \"prefix\": \"summarize: \"\n    },\n    \"translation_en_to_de\": {\n      \"early_stopping\": true,\n      \"max_length\": 300,\n      \"num_beams\": 4,\n      \"prefix\": \"translate English to German: \"\n    },\n    \"translation_en_to_fr\": {\n      \"early_stopping\": true,\n      \"max_length\": 300,\n      \"num_beams\": 4,\n      \"prefix\": \"translate English to French: \"\n    },\n    \"translation_en_to_ro\": {\n      \"early_stopping\": true,\n      \"max_length\": 300,\n      \"num_beams\": 4,\n      \"prefix\": \"translate English to Romanian: \"\n    }\n  },\n  \"transformers_version\": \"4.36.1\",\n  \"use_cache\": true,\n  \"vocab_size\": 32128\n}\n"
+    }
+  }
+}
+
+Summary Value: tag: "model_config/text_summary"
+metadata {
+  plugin_data {
+    plugin_name: "text"
+  }
+}
+tensor {
+  dtype: DT_STRING
+  tensor_shape {
+    dim {
+      size: 1
+    }
+  }
+  string_val: "{\n  \"_name_or_path\": \"t5-small\",\n  \"architectures\": [\n    \"T5ForConditionalGeneration\"\n  ],\n  \"classifier_dropout\": 0.0,\n  \"d_ff\": 2048,\n  \"d_kv\": 64,\n  \"d_model\": 512,\n  \"decoder_start_token_id\": 0,\n  \"dense_act_fn\": \"relu\",\n  \"dropout_rate\": 0.1,\n  \"eos_token_id\": 1,\n  \"feed_forward_proj\": \"relu\",\n  \"initializer_factor\": 1.0,\n  \"is_encoder_decoder\": true,\n  \"is_gated_act\": false,\n  \"layer_norm_epsilon\": 1e-06,\n  \"model_type\": \"t5\",\n  \"n_positions\": 512,\n  \"num_decoder_layers\": 6,\n  \"num_heads\": 8,\n  \"num_layers\": 6,\n  \"output_past\": true,\n  \"pad_token_id\": 0,\n  \"relative_attention_max_distance\": 128,\n  \"relative_attention_num_buckets\": 32,\n  \"task_specific_params\": {\n    \"summarization\": {\n      \"early_stopping\": true,\n      \"length_penalty\": 2.0,\n      \"max_length\": 200,\n      \"min_length\": 30,\n      \"no_repeat_ngram_size\": 3,\n      \"num_beams\": 4,\n      \"prefix\": \"summarize: \"\n    },\n    \"translation_en_to_de\": {\n      \"early_stopping\": true,\n      \"max_length\": 300,\n      \"num_beams\": 4,\n      \"prefix\": \"translate English to German: \"\n    },\n    \"translation_en_to_fr\": {\n      \"early_stopping\": true,\n      \"max_length\": 300,\n      \"num_beams\": 4,\n      \"prefix\": \"translate English to French: \"\n    },\n    \"translation_en_to_ro\": {\n      \"early_stopping\": true,\n      \"max_length\": 300,\n      \"num_beams\": 4,\n      \"prefix\": \"translate English to Romanian: \"\n    }\n  },\n  \"transformers_version\": \"4.36.1\",\n  \"use_cache\": true,\n  \"vocab_size\": 32128\n}\n"
+}
+
+
+Event: wall_time: 1702602643.987766
+step: 10
+summary {
+  value {
+    tag: "train/loss"
+    simple_value: 0.3594
+  }
+}
+
+Summary Value: tag: "train/loss"
+simple_value: 0.3594
+
+
+Event: wall_time: 1702602643.9877958
+step: 10
+summary {
+  value {
+    tag: "train/learning_rate"
+    simple_value: 1e-06
+  }
+}
+
+Summary Value: tag: "train/learning_rate"
+simple_value: 1e-06
+
+
+Event: wall_time: 1702602643.9878044
+step: 10
+summary {
+  value {
+    tag: "train/epoch"
+    simple_value: 0
+  }
+}
+
+Summary Value: tag: "train/epoch"
+simple_value: 0
+
+
+Event: wall_time: 1702602730.3667874
+step: 20
+summary {
+  value {
+    tag: "train/loss"
+    simple_value: 0.3682
+  }
+}
+
+Summary Value: tag: "train/loss"
+simple_value: 0.3682
+
+
+Event: wall_time: 1702602730.3668182
+step: 20
+summary {
+  value {
+    tag: "train/learning_rate"
+    simple_value: 2e-06
+  }
+}
+
+Summary Value: tag: "train/learning_rate"
+simple_value: 2e-06
+
+
+Event: wall_time: 1702602730.3668265
+step: 20
+summary {
+  value {
+    tag: "train/epoch"
+    simple_value: 0.01
+  }
+}
+
+Summary Value: tag: "train/epoch"
+simple_value: 0.01
+
+
+Event: wall_time: 1702602817.4335556
+step: 30
+summary {
+  value {
+    tag: "train/loss"
+    simple_value: 0.319
+  }
+}
+
+Summary Value: tag: "train/loss"
+simple_value: 0.319
+
+
+Event: wall_time: 1702602817.4335856
+step: 30
+summary {
+  value {
+    tag: "train/learning_rate"
+    simple_value: 3e-06
+  }
+}
+
+Summary Value: tag: "train/learning_rate"
+simple_value: 3e-06
+
+
+Event: wall_time: 1702602817.4335947
+step: 30
+summary {
+  value {
+    tag: "train/epoch"
+    simple_value: 0.01
+  }
+}
+
+Summary Value: tag: "train/epoch"
+simple_value: 0.01
+
+...
+...
+...
+```
+
+--output ဆိုတဲ့ argument နဲ့ ကိုယ်သိမ်းချင်တဲ့ ဖိုင်နာမည်ကို ပေးပြီး run တဲ့ ပုံစံပါ။  
+
+```
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$ time python ./tf_event2txt.py --input ./events.out.tfevents.1702602561.lst-gpu-3090.18783.0 --output ./log.txt
+2023-12-15 10:16:26.752276: I tensorflow/core/util/port.cc:110] oneDNN custom operations are on. You may see slightly different numerical results due to floating-point round-off errors from different computation orders. To turn them off, set the environment variable `TF_ENABLE_ONEDNN_OPTS=0`.
+2023-12-15 10:16:26.787101: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 AVX_VNNI FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2023-12-15 10:16:27.345469: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+WARNING:tensorflow:From ./tf_event2txt.py:8: tf_record_iterator (from tensorflow.python.lib.io.tf_record) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use eager execution and:
+`tf.data.TFRecordDataset(path)`
+
+real    0m1.907s
+user    0m2.289s
+sys     0m1.547s
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$
+```
+
+filesize ကို စစ်ဆေးကြည့်တာ ...  
+
+```
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$ wc ./log.txt
+ 3320  6536 61628 ./log.txt
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$
+```
+
+log.txt ဖိုင်ရဲ့ ထိပ်ဆုံးစာကြောင်း အကြောင်း ၂၀ ကို ရိုက်ထုတ်ကြည့်တာ ...  
+
+```
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$ head -n 20 ./log.txt
+Event: wall_time: 1702602561.4400527
+file_version: "brain.Event:2"
+source_metadata {
+  writer: "tensorboard.summary.writer.event_file_writer"
+}
+
+Event: wall_time: 1702602561.4404318
+summary {
+  value {
+    tag: "args/text_summary"
+    metadata {
+      plugin_data {
+        plugin_name: "text"
+      }
+    }
+    tensor {
+      dtype: DT_STRING
+      tensor_shape {
+        dim {
+          size: 1
+(t5) ye@lst-gpu-3090:~/exp/nmt/zh-my/t5/logs$
+```
+
