@@ -4,7 +4,7 @@ Created on Fri, 15 Dec 2023
 @author: Ye Kyaw Thu, Visiting Professor, LST, NECTEC, Thailand
 
 How to Run:
-$ python ./zwsp_or_u200b_cleaner.py --help
+$ python ./tf_event2txt.py --help
 $ time python ./tf_event2txt.py --input ./events.out.tfevents.1702602561.lst-gpu-3090.18783.0 --output ./log.txt
 """
 
