@@ -318,5 +318,5 @@
 105. [hangul_syl_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/hangul_syl_generator.py)  
 (for printing all Korean syllables)
 
-106. [ngram_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/ngram_segmentation.py)
+106. [ngram_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/ngram_segmentation.py)  
 (word segmentation simulation for Burmese)  
