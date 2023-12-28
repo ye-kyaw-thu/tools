@@ -5,6 +5,7 @@ Written by Ye Kyaw Thu, LU Lab., Myanmar
 Last updated: 28 Dec 2023
 
 How to use:
+$ python ./ngram_segmentation.py --help
 python ./ngram_segmentation.py --input ./corpus.txt --ngram 3
 python ./ngram_segmentation.py --input ./corpus.txt --ngram 3 --output out
 python ./ngram_segmentation.py --input ./corpus.txt --ngram 3 --output out --max 20
