@@ -1,4 +1,5 @@
 """
+
 For simulation of possible word segmentation.
 Written by Ye Kyaw Thu, LU Lab., Myanmar
 Last updated: 28 Dec 2023
