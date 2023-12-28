@@ -290,4 +290,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 103. [NER_23to9_conv.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/NER_23to9_conv.py)  
 104. [tf_event2txt.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tf_event2txt.py)  
 105. [hangul_syl_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/hangul_syl_generator.py)  
+106. [ngram_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/ngram_segmentation.py)  
 
