@@ -316,4 +316,7 @@
 (tensorflow framework ကိုသုံးပြီး မော်ဒယ်တခုခု ဆောက်ရင် event log ဖိုင်ရလာလိမ့်မယ်။ အဲဒီဖိုင်က ပုံမှန်အားဖြင့်က tensorboard နဲ့ ကြည့်ရတာ။ သို့သော် တခါတလေမှာ command line မှာပဲ အကြမ်းဖတ်ကြည့်ချင်တဲ့ အခါမျိုး ရှိတတ်ပါတယ်။ အဲဒီလိုအခါအတွက် text ဖိုင် format အဖြစ်ပြောင်းပေးတဲ့ python code ပါ။)  
 
 105. [hangul_syl_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/hangul_syl_generator.py)  
-(for printing all Korean syllables)  
+(for printing all Korean syllables)
+
+106. [ngram_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/ngram_segmentation.py)
+(word segmentation simulation for Burmese)  
