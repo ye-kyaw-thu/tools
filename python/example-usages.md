@@ -7601,9 +7601,11 @@ optional arguments:
 
 ## Corpus File Info
 
+```
 (base) ye@lst-gpu-3090:~/exp/markov$ wc segmentation-data-updated2.cleaned.syl.rm_no.cleaned
   212750  6984282 69094601 segmentation-data-updated2.cleaned.syl.rm_no.cleaned
 (base) ye@lst-gpu-3090:~/exp/markov$
+```
 
 ဖိုင်ထဲမှာတော့ မြန်မာစာကြောင်းတွေကို syllable ဖြတ်ထားပါတယ်။ နံပါတ်တို့ symbol စတာတွေကို ရှင်းထားပြီးသားပါ။  
 
