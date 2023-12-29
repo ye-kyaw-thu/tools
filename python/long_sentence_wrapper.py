@@ -1,6 +1,6 @@
 """
 
-For wrapping long sentences.
+To wrap long sentences.
 Written by Ye Kyaw Thu, LU Lab., Myanmar
 Last updated: 29 Dec 2023
 
