@@ -8538,6 +8538,87 @@ optional arguments:
 
 ```
 
+သုံးထားတဲ့ json ဖိုင်က ဒီလင့်ကနေ ယူထားတာ။  
+Link: [https://github.com/sannlynnhtun-coding/Burma-Project-Ideas/tree/main/05.%20Myanmar%20Proverbs](https://github.com/sannlynnhtun-coding/Burma-Project-Ideas/tree/main/05.%20Myanmar%20Proverbs)  
+
+ဖိုင် content ကို မြင်သာအောင် ပြရရင် အောက်ပါအတိုင်း ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/Burma-Project-Ideas/05. Myanmar Proverbs$ head -n 30 ./MyanmarProverbs.json
+{
+  "Tbl_MMProverbsTitle": [
+    {
+      "TitleId": 1,
+      "TitleName": "က"
+    },
+    {
+      "TitleId": 2,
+      "TitleName": "ခ"
+    },
+    {
+      "TitleId": 3,
+      "TitleName": "ဂ"
+    },
+    {
+      "TitleId": 4,
+      "TitleName": "ဃ"
+    },
+    {
+      "TitleId": 5,
+      "TitleName": "င"
+    },
+    {
+      "TitleId": 6,
+      "TitleName": "စ"
+    },
+    {
+      "TitleId": 7,
+      "TitleName": "ဆ"
+    },
+...
+...
+...
+```
+
+ဖိုင်ရဲ့နောက်ဆုံးပိုင်းမှာက အောက်ပါလိုမျိုး structure ရှိတယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/Burma-Project-Ideas/05. Myanmar Proverbs$ tail -n 30 ./Myanma
+rProverbs.json
+      "ProverbId": 122,
+      "ProverbName": "အိမ်လာ ယာဆုတ်",
+      "ProverbDesp": "လူနေအိမ်များ တိုးချဲ့လာသည်နှင့်အမျှ ယာမြေများလျော့ပါး ဆုတ်ယုတ်သကဲ့သို့ တစ်ဖက်က တိုးချဲ့နေရာယူလာသည်နှင့်အမျှ တစ်ဖက်ကဆုတ်ယုတ် ကွယ်ပျောက်သည်။"
+    },
+    {
+      "TitleId": 33,
+      "ProverbId": 121,
+      "ProverbName": "အိမ်ရှေ့ပူ အိမ်နောက်မချမ်းသာ",
+      "ProverbDesp": "အိမ်ရှေ့ခန်း၌ရှိသူများ ပူပင်သောက ဖြစ်နေကြစဉ် အိမ်နောက်ခန်း၌ ရှိသူများလည်း သာယာချမ်း မြေ့ခြင်း မရှိနိုင်သကဲ့သို့ ဦးဆောင်ဦးရွက်ပြုသူများ ပူပင်သောက ဖြစ်နေကြလျှင် မှီခိုအားထား နေရ သူများလည်း သာယာပျော်ရွှင်ခြင်း မရှိနိုင်။"
+    },
+    {
+      "TitleId": 33,
+      "ProverbId": 123,
+      "ProverbName": "အိမ်သာလို့ ဧည့်လာ",
+      "ProverbDesp": "အိမ်၏အခြေအနေ သာယာကောင်းမွန်သဖြင့် ဧည့်သည်အရောက်အပေါက် များသကဲ့သို့ တိုင်း ပြည်မြို့ရွာ အေးချမ်းသာယာလျှင် အရပ်လေးမျက်နှာမှ ရှင်လူအများ ဝင်ထွက်သွားလာမှု များသည်။"
+    },
+    {
+      "TitleId": 33,
+      "ProverbId": 124,
+      "ProverbName": "အိမ်သူကို ဧည့်မောင်း",
+      "ProverbDesp": "အိမ်ရှင်ကို ဧည့်သည်က မောင်းထုတ်သည် ဆိုသကဲ့သို့ နေရာဌာနတစ်ခု၌ မူလရှိနှင့် ပြီးသူကို နောက်မှရောက်လာသူက လွှမ်းမိုး ကြီးစိုးသည်။"
+    },
+    {
+      "TitleId": 33,
+      "ProverbId": 125,
+      "ProverbName": "အိမ်အိုမှ စားဖိုထုတ်",
+      "ProverbDesp": "အိမ်အိုသောအခါမှ စားဖိုဆောင်ထုတ်ခြင်းဖြင့် အိမ်အတွင်း၌ စွဲနေသောကျပ်ခိုးများ မပျောက်နိုင် တော့သကဲ့သို့ အရွယ်လွန်မှ အလှပြင်ဆင်နေခြင်းဖြင့် ပြန်လည် နုပျိုမလာနိုင်။"
+    }
+  ]
+}(base) ye@lst-gpu-3090:~/exp/Burma-Project-Ideas/05. Myanmar Proverbs$
+```
+
+ဥပမာအနေနဲ့ run ပြရရင် အောက်ပါအတိုင်းပါ။  
+
 --titleid 33 (အ၊ ဥ) နဲ့ စတဲ့ ဗမာစကားပုံတွေကို ဆွဲထုတ်ကြည့်တာ...  
 
 ```
