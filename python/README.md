@@ -323,3 +323,6 @@
 
 107. [long_sentence_wrapper.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/long_sentence_wrapper.py)  
 (to wrap long sentences)  
+
+108. [mm_proverb_parser.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mm_proverb_parser.py)  
+(Json file extraction for Burmese proverbs)   
