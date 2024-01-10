@@ -291,5 +291,6 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 104. [tf_event2txt.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/tf_event2txt.py)  
 105. [hangul_syl_generator.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/hangul_syl_generator.py)  
 106. [ngram_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/ngram_segmentation.py)  
-107. [long_sentence_wrapper.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/long_sentence_wrapper.py)    
+107. [long_sentence_wrapper.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/long_sentence_wrapper.py)  
+108. [mm_proverb_parser.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mm_proverb_parser.py)  
 
