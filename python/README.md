@@ -329,3 +329,6 @@
 
 109. [grapheme_tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/grapheme_tokenizer.py)  
 (Grapheme tokenizer)  
+
+110. [icu_collation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_collation.py)  
+(string collation based on ICU library)  
