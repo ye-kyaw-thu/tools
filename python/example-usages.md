@@ -8943,24 +8943,156 @@ $ python ./grapheme_tokenizer.py --input ./bn.txt -l jn_BD
 
 Of course, you can use this grapheme_tokenizer.py tool for all Unicode languages. Cheers! :)  
 
+## 110. [icu_collation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_collation.py)  
+
+Note: Collation and Sorting are similar but ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ python ./icu_collation.py --help
+usage: icu_collation.py [-h] [--input INPUT] [--output OUTPUT] [-l LOCALE]
+                        [--show_locales]
+
+Sort lines of text using ICU Collation
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Input file path
+  --output OUTPUT       Output file path
+  -l LOCALE, --locale LOCALE
+                        Locale for collation (default: my_MM)
+  --show_locales        Show all supported locales
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
+Example Myanmar names ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ cat my_names.txt
+ချောဆုသင်းသွယ်
+ကဆွန်းဇီတာရမ်
+သော်မင်းခန့်စိုး
+ကဗျာဘွဲ့မှူး
+ကရှီးပေါ့
+ဇာခြည်ဝင်း
+ကြယ်စင်မှူး
+စုလတ်ဖြူ
+အိဆုမွန်ထိုက်
+ကလျာကျော်ဇင်
+စိုင်းဝင်းပြည့်
+သက်အိဖြူ
+ဟေမာန်ဝင်းမောင်
+အွမ်ရှီး
+နန်းသဉ္ဇာဝင်း
+နန်းသပြေဝင်းမြင့်
+အိစန္ဒီဝင်းဌေး
+သူဇင်ဖြိုး
+မိုးသန်းထွေး
+ချစ်စုစုထွန်း
+ခိုင်ဝတ်ရည်ဖြိုး
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
+The default local is set to my_MM and thus running without --locale option is fine.  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ python ./icu_collation.py --input ./my_names.txt
+ကဆွန်းဇီတာရမ်
+ကဗျာဘွဲ့မှူး
+ကရှီးပေါ့
+ကလျာကျော်ဇင်
+ကြယ်စင်မှူး
+ခိုင်ဝတ်ရည်ဖြိုး
+ချောဆုသင်းသွယ်
+ချစ်စုစုထွန်း
+စုလတ်ဖြူ
+စိုင်းဝင်းပြည့်
+ဇာခြည်ဝင်း
+နန်းသပြေဝင်းမြင့်
+နန်းသဉ္ဇာဝင်း
+မိုးသန်းထွေး
+သူဇင်ဖြိုး
+သော်မင်းခန့်စိုး
+သက်အိဖြူ
+ဟေမာန်ဝင်းမောင်
+အိစန္ဒီဝင်းဌေး
+အိဆုမွန်ထိုက်
+အွမ်ရှီး
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
+Example Japanese sirnames ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ cat jp_names.txt
+田中
+浦野
+中司
+鈴木
+豊田
+藤崎
+吉田
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
+After collation ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ python ./icu_collation.py --input ./jp_names.txt --locale ja_JP
+浦野
+吉田
+中司
+田中
+藤崎
+豊田
+鈴木
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
+You can check all supported locales with --show_locales option.  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ python ./icu_collation.py --show_locales | grep th
+th
+th_TH
+```
+
+Example Thai common names ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ cat thai_names.txt
+ทองชัย
+วรรณภา
+อารยา
+ดวงกมล
+บุญชัย
+ศิริพร
+ชาย
+พิมพ์
+เกษม
+ณรงค์
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
+After collation ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$ python ./icu_collation.py --input ./thai_names.txt --locale th_TH
+เกษม
+ชาย
+ณรงค์
+ดวงกมล
+ทองชัย
+บุญชัย
+พิมพ์
+วรรณภา
+ศิริพร
+อารยา
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
+```
+
 ## Next Program  
 
 ```
 
 ```
 
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
