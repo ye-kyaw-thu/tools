@@ -8788,67 +8788,151 @@ mm_proverb_parser.py: error: the following arguments are required: --titleid
 
 ## 109. [grapheme_tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/grapheme_tokenizer.py)
 
-Sub_word level tokenization 
+Sub_word level tokenization examples ...  
 
+Check with --help option.  
+
+```
+$ python ./grapheme_tokenizer.py --help
+usage: grapheme_tokenizer.py [-h] [-i INPUT] [-l LOCALE] [-o OUTPUT] [--list-locales]
+
+Grapheme segmentation script supporting multiple languages.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input file name (optional, default: stdin)
+  -l LOCALE, --locale LOCALE
+                        Locale code for text segmentation (default: en_US)
+  -o OUTPUT, --output OUTPUT
+                        Output file name (optional, default: stdout)
+  --list-locales        List all supported locale codes
+```
+
+Myanmar language text file.  
+
+```
+$ cat my.txt
+ဒီကုမ္ပဏီနဲ့ပတ်သတ်ပြီးနည်းနည်းမိတ်ဆက်ပေးပါ။
+နောက်မှတွေ့တာပေါ့။
+```
+
+Grapheme segmentation for Burmese or Myanmar language.  
+
+```
+$ cat ./my.txt | python grapheme_tokenizer.py -l my_MM
+ဒီ ကု မ္ ပ ဏီ နဲ့ ပ တ် သ တ် ပြီ း န ည် း န ည် း မိ တ် ဆ က် ပေ း ပ ါ ။
+နေ ာ က် မှ တွေ့ တ ာ ပေ ါ့ ။
+```
+
+Check locale codes:
+
+```
+$ python ./grapheme_tokenizer.py --list-locales | wc
+    752     754    4348
 ```
 
 ```
+$ python ./grapheme_tokenizer.py --list-locales | head
+Supported locale codes:
+af
+af_NA
+af_ZA
+agq
+agq_CM
+ak
+ak_GH
+am
+am_ET
+```
 
+Let's check locales for Chinese ...
+
+```
+$ python ./grapheme_tokenizer.py --list-locales | grep zh
+zh
+zh_Hans
+zh_Hans_CN
+zh_Hans_HK
+zh_Hans_MO
+zh_Hans_SG
+zh_Hant
+zh_Hant_HK
+zh_Hant_MO
+zh_Hant_TW
+```
+
+Let's try with Korean ...
+
+```
+$ cat ko.txt
+그가동점골을넣자침체되었던분위기는반전되었다.
+마리를생일선물로친구에게주었다.
+```
+
+As you know, Korean have unicode for all of their syllables and thus ...
+
+```
+$ python grapheme_tokenizer.py --input ko.txt -l ko_KR
+그 가 동 점 골 을 넣 자 침 체 되 었 던 분 위 기 는 반 전 되 었 다 .
+마 리 를 생 일 선 물 로 친 구 에 게 주 었 다 .
+```
+
+Testing for the Chinese ...
+
+```
+$ cat ./zh.txt
+你的哥哥去哪儿？
+坐车要多久。
+我没有自己的固定签名可以签一般的签名吗？
+在咖啡店的后面。
+要我来帮你吗？
+```
+
+I used "zh_Hans_CN" locales ...  
+
+```
+$ python ./grapheme_tokenizer.py --input ./zh.txt -l zh_Hans_CN
+你 的 哥 哥 去 哪 儿 ？
+坐 车 要 多 久 。
+我 没 有 自 己 的 固 定 签 名 可 以 签 一 般 的 签 名 吗 ？
+在 咖 啡 店 的 后 面 。
+要 我 来 帮 你 吗 ？
+```
+
+Let's test for Japanese ...
+
+```
+$ cat ./jp.txt
+ミャンマーに一週間行く予定です。
+沖縄は海が綺麗でお酒も美味しいです。
+私はカンファレンスに出席するためにサンフランシスコへ行きました。
 ```
 
 ```
-
+$ python ./grapheme_tokenizer.py --input ./jp.txt -l ja_JP
+ミ ャ ン マ ー に 一 週 間 行 く 予 定 で す 。
+沖 縄 は 海 が 綺 麗 で お 酒 も 美 味 し い で す 。
+私 は カ ン フ ァ レ ン ス に 出 席 す る た め に サ ン フ ラ ン シ ス コ へ 行 き ま し た 。
 ```
 
 ```
-
+$ python ./grapheme_tokenizer.py --list-locales | grep bn
+bn
+bn_BD
+bn_IN
 ```
 
 ```
-
+$ cat bn.txt
+আমি একটি সম্মেলনে যোগ দিতে সান ফ্রান্সিসকো গিয়েছিলাম।
 ```
 
 ```
-
+$ python ./grapheme_tokenizer.py --input ./bn.txt -l jn_BD
+আ মি   এ ক টি   স ম্মে ল নে   যো গ   দি তে   সা ন   ফ্রা ন্সি স কো   গি য়ে ছি লা ম ।
 ```
 
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
 
 ## Next Program  
 
