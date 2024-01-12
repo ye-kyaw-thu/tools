@@ -325,4 +325,7 @@
 (to wrap long sentences)  
 
 108. [mm_proverb_parser.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mm_proverb_parser.py)  
-(Json file extraction for Burmese proverbs)   
+(Json file extraction for Burmese proverbs)  
+
+109. [grapheme_tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/grapheme_tokenizer.py)  
+(Grapheme tokenizer)  
