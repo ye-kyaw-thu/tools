@@ -8786,6 +8786,70 @@ mm_proverb_parser.py: error: the following arguments are required: --titleid
 
 ```
 
+## 109. [grapheme_tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/grapheme_tokenizer.py)
+
+Sub_word level tokenization 
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
 ## Next Program  
 
 ```
