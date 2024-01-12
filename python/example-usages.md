@@ -9090,9 +9090,203 @@ After collation ...
 (base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/collation$
 ```
 
+## 111. [icu_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_transliteration.py)   
+
+Check command line options with --help ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ python ./icu_transliteration.py --help
+usage: icu_transliteration.py [-h] [--input INPUT] [--output OUTPUT] [-t TRANSLIT_ID]
+                              [--reverse] [--show_locales]
+
+Perform text transliteration using ICU
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Input file path
+  --output OUTPUT       Output file path
+  -t TRANSLIT_ID, --translit_id TRANSLIT_ID
+                        Transliteration ID (default: Any-Latin)
+  --reverse             Perform reverse transliteration
+  --show_locales        Show all supported transliteration locales
+
+```
+
+Greek to Latin conversion:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ echo "Ψάπφω" | python icu_transliteration.py --translit_id Greek-Latin
+Psápphō
+```
+
+For some languages, --reverse option will work.  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ echo "Ψάπφω" | python icu_transliteration.py --translit_id Greek-Latin --reverse
+Ψάπφω
+```
+
+Let's test for Burmese with ICU based transliteration.  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ echo "ချစ်စုစုထွန်း" | python icu_transliteration.py --translit_id Myanmar-Latin
+hkyithcuhcuhtwann
+```
+
+Note: We need to write some rules for --reverse option.  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ echo "ချစ်စုစုထွန်း" | python icu_transliteration.py --translit_id Myanmar-Latin --reverse
+Error creating transliterator with ID 'Myanmar-Latin': A '::id' rule specifies an unknown transliterator, error code: 65569
+```
+
+Example Myanmar names ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ cat my_names.txt
+ချောဆုသင်းသွယ်
+ကဆွန်းဇီတာရမ်
+သော်မင်းခန့်စိုး
+ကဗျာဘွဲ့မှူး
+ကရှီးပေါ့
+ဇာခြည်ဝင်း
+ကြယ်စင်မှူး
+စုလတ်ဖြူ
+အိဆုမွန်ထိုက်
+ကလျာကျော်ဇင်
+စိုင်းဝင်းပြည့်
+သက်အိဖြူ
+ဟေမာန်ဝင်းမောင်
+အွမ်ရှီး
+နန်းသဉ္ဇာဝင်း
+နန်းသပြေဝင်းမြင့်
+အိစန္ဒီဝင်းဌေး
+သူဇင်ဖြိုး
+မိုးသန်းထွေး
+ချစ်စုစုထွန်း
+ခိုင်ဝတ်ရည်ဖြိုး
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$
+```
+
+Transliteration output are as follows:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ python ./icu_transliteration.py --input ./my_names.txt -t Myanmar-Latin
+hkyawwsusainnswal
+kaswannjetarram
+sawmainnhkaanthcoe
+kabyaarbhwalmhauu
+kasheepot
+jarhkyiwainn
+kyaalhcainmhauu
+hculaathpyauu
+aisumwanhtite
+kalyaarkyawjain
+hcinewainnpyi
+saataihpyauu
+haymaranwainnmaung
+awmshee
+naannsanyjarwainn
+naannsapyaywainnmyint
+aihcandewainnhtayy
+suujainhpyaoe
+moesaannhtway
+hkyithcuhcuhtwann
+hkinewaatraihpyaoe
+```
+
+Some common Thai names ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ cat thai_names.txt
+ทองชัย
+วรรณภา
+อารยา
+ดวงกมล
+บุญชัย
+ศิริพร
+ชาย
+พิมพ์
+เกษม
+ณรงค์
+```
+
+Transliteration output for Thai names are as follows:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ python ./icu_transliteration.py --input ./thai_names.txt -t Thai-Latin
+thxng chạy
+wrrṇ p̣hā
+xāry ā
+dwng kml
+buỵ chạy
+ṣ̄iri phr
+chāy
+phimph̒
+kes̄ʹm
+ṇrngkh̒
+
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$
+```
+
+For the Japanese, let's try for Hiragana names ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ cat hiragana_names.txt
+たなか
+うらの
+なかつか
+すずき
+とよた
+ふじさき
+よしだ
+```
+
+Depends on the rules, working well right! Check the outputs:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ python ./icu_transliteration.py --input ./hiragana_names.txt -t Hiragana-Latin
+tanaka
+urano
+nakatsuka
+suzuki
+toyota
+fujisaki
+yoshida
+```
+
+For this time, I wanna try for Japanese Katakana names:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ cat katakana_names.txt
+タナカ
+ウラノ
+ナカツカ
+スズキ
+トヨタ
+フジサキ
+ヨシダ
+```
+
+Transliteration output for Katakana names:  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/icu_tool/transliteration$ python ./icu_transliteration.py --input ./katakana_names.txt -t Katakana-Latin
+tanaka
+urano
+nakatsuka
+suzuki
+toyota
+fujisaki
+yoshida
+```
+
 ## Next Program  
 
 ```
 
 ```
 
+```
+
+```
