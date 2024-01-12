@@ -294,4 +294,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 107. [long_sentence_wrapper.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/long_sentence_wrapper.py)  
 108. [mm_proverb_parser.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mm_proverb_parser.py)  
 109. [grapheme_tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/grapheme_tokenizer.py)  
+110. [icu_collation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_collation.py)  
 
