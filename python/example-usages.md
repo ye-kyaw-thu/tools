@@ -8909,12 +8909,16 @@ $ cat ./jp.txt
 私はカンファレンスに出席するためにサンフランシスコへ行きました。
 ```
 
+Grapheme segmentation output for Japanese.  
+
 ```
 $ python ./grapheme_tokenizer.py --input ./jp.txt -l ja_JP
 ミ ャ ン マ ー に 一 週 間 行 く 予 定 で す 。
 沖 縄 は 海 が 綺 麗 で お 酒 も 美 味 し い で す 。
 私 は カ ン フ ァ レ ン ス に 出 席 す る た め に サ ン フ ラ ン シ ス コ へ 行 き ま し た 。
 ```
+
+Let's check locales for Bengali. As you can see, bn_BD is for Bengali as spoken in Bangladesh and bn_IN for Bengali as spoken in India.  
 
 ```
 $ python ./grapheme_tokenizer.py --list-locales | grep bn
@@ -8923,16 +8927,21 @@ bn_BD
 bn_IN
 ```
 
+Example text file for Bengali language.  
+
 ```
 $ cat bn.txt
 আমি একটি সম্মেলনে যোগ দিতে সান ফ্রান্সিসকো গিয়েছিলাম।
 ```
+
+Grapheme segmentation output for Bengali.  
 
 ```
 $ python ./grapheme_tokenizer.py --input ./bn.txt -l jn_BD
 আ মি   এ ক টি   স ম্মে ল নে   যো গ   দি তে   সা ন   ফ্রা ন্সি স কো   গি য়ে ছি লা ম ।
 ```
 
+Of course, you can use this grapheme_tokenizer.py tool for all Unicode languages. Cheers! :)  
 
 ## Next Program  
 
