@@ -332,3 +332,6 @@
 
 110. [icu_collation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_collation.py)  
 (string collation based on ICU library)  
+
+120. [icu_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_transliteration.py)  
+(Transliteration, Reverse transliteration example program based on ICU library)
