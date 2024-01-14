@@ -7,6 +7,7 @@ Last updated: 14 Jan 2024.
 Reference:
 https://online-resources.aa-ken.jp/resources/detail/IOR000125
 http://www.aa.tufs.ac.jp/~sawadah/burroman2.pdf
+https://www.loc.gov/catdir/cpso/roman.html
 
 How to run:
 python ./my_transliteration.py --help
