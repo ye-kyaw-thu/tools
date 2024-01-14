@@ -1,6 +1,6 @@
 """
 
-Transliteration with ALALC and Sawada mappings.
+Transliteration with ALA-LC and Sawada mappings.
 Written by Ye Kyaw Thu, LU Lab., Myanmar.
 Last updated: 14 Jan 2024.
 
