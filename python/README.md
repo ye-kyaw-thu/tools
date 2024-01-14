@@ -333,8 +333,8 @@
 110. [icu_collation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_collation.py)  
 (string collation based on ICU library)  
 
-120. [icu_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_transliteration.py)  
+111. [icu_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_transliteration.py)  
 (Transliteration, Reverse transliteration example program based on ICU library)  
 
-121. [my_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_transliteration.py)  
+112. [my_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_transliteration.py)  
 (Experiment code for Burmese transliteration with two transliteration systems: ALA-LC and Sawada)  
