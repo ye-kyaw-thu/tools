@@ -9281,7 +9281,37 @@ fujisaki
 yoshida
 ```
 
-## Next Program  
+## 112. [my_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_transliteration.py)  
+
+မြန်မာစာ transliteration အတွက် ALA-LC နဲ့ မိတ်ဆွေ ဂျပန်ဆရာ ဆာဝါဒ ရဲ့ transliteration system နှစ်ခုကို perl code နဲ့ ရေးပြီး စမ်းခဲ့တာကြာပြီ။ ဒီနေ့တော့ Python code ပြောင်းပြီး ရေးထားတာကို တင်ပေးလိုက်တယ်။ Formal testing မလုပ်ရသေးဘူး။ သို့သော် အသုံးဝင်ပါလိမ့်မယ်။  
+
+အရင်ဆုံး --help ခေါ်ကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$ python ./my_transliteration.py --help
+usage: my_transliteration.py [-h] [--input INPUT] [--output OUTPUT]
+                             [--method {sawada,alalc}] [--verbose] [--show_map]
+                             [--show_parallel]
+
+Transliterate Burmese script to Roman script.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Input file name containing Burmese text.
+  --output OUTPUT       Output file name for the transliterated text.
+  --method {sawada,alalc}
+                        Choose the transliteration method: "sawada" or "alalc".
+  --verbose             Enable verbose mode to show matched and unmatched characters.
+  --show_map            Show the transliteration mapping tables.
+  --show_parallel       Show input and transliterated sentences side by side.
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
+```
+
+```
+
+```
+
+```
 
 ```
 
@@ -9290,3 +9320,91 @@ yoshida
 ```
 
 ```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+
