@@ -9334,27 +9334,531 @@ test တစ်ဖိုင်က မိတ်ဆွေ ဆရာ ဆာဝါဒ
 (base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
 ```
 
+Sawada's Transliteration System နဲ့ အထက်ပါ စာပိုဒ်ကို ပြောင်းကြည့်ရင် အောက်ပါအတိုင်း output ရတယ်။  
+
 ```
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$ python ./my_transliteration.py --input ./test2.txt --method sawada
+rwhetiguM
+@rwhY rwaasuukrii:\i’ @im’kaa: pn’:lhuing’mrc’km’:paa:twng’ tN~’rhilesN~’||
+rwaa@twng’:\nh’ chok’thaa:so @im’mhut’||
+rwaa\i’ @cwn’@phyaa:twng’ chok’thaa:so @im’phrc’\i’||
+@nii:@naa:twng’ @im’tluM: nhc’luM:saa rhilesN~’||
+thuisuukrii:@im’mhaa krii:krii:kyy’kyy’ khm’:khm’:naa:naa:@im’mhut’||
+khp’ngy’ngy’| khp’kyn~’:kyn~’:| sk’ky’mui:| waa:kp’kaaso @im’kle: phrc’lesN~’||
+sip=pMmong’w wt=tuchong’:paa:myaa:| 1965| rn’kun’| caapebimaan’ caa@up’chuing’| caa 152)
+
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
+```
+
+ALA-LC (American Library Association – Library of Congress) ရဲ့ Transliteration System ရဲ့ mapping နဲ့ ပြောင်းကြည့်ရင်တော့ အောက်ပါအတိုင်း transliteration လုပ်ထားတဲ့ output ကို ထုတ်ပေးလိမ့်မယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$ python ./my_transliteration.py --input ./test2.txt --method alalc
+rwhetiguṃ
+‘Arwhai rwāsūkrī"e* ‘Aim’kā" pn’"lhuiṅ’mrc’km’"pā"twṅ’ tññ’rhilesññ’.
+rwā‘Atwṅ’"n* chok’thā"so ‘Aim’mhut’.
+rwāe* ‘Acwn’‘Aphyā"twṅ’ chok’thā"so ‘Aim’phrc’e*.
+‘Anī"‘Anā"twṅ’ ‘Aim’tluṃ" nhc’luṃ"sā rhilesññ’.
+thuisūkrī"‘Aim’mhā krī"krī"kyy’kyy’ khm’"khm’"nā"nā"‘Aim’mhut’.
+khp’ṅy’ṅy’, khp’kyñ’"kyñ’", sk’ky’mui", vā"kp’kāso ‘Aim’kle" phrc’lesññ’.
+sippṃmoṅ’v vttuchoṅ’"pā"myā", 1965, rn’kun’, cāpebimān’ cā‘Aup’chuiṅ’, cā 152)
+
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
+```
+
+Verbose mode ဆိုပြီးတော့ mapping နဲ့ match ဖြစ်တာတွေ၊ မဖြစ်တာတွေကိုလည်း အသေးစိတ် print ထုတ်ပေးတဲ့ command line argument ကိုလည်း ထည့်ပေးထားတယ်။ mapping table ကို update လုပ်ချင်တဲ့အခါမျိုး အသေးစိတ် sutdy လုပ်ချင်တဲ့အခါအမျိုးအတွက် အသုံးဝင်နိုင်တာမို့လို့ ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$ python ./my_transliteration.py --input ./test2.txt --method sawada --verbose
+Matched: 'ရ' -> 'r'
+Matched: 'ွ' -> 'w'
+Matched: 'ှ' -> 'h'
+Matched: 'ေ' -> 'e'
+Matched: 'တ' -> 't'
+Matched: 'ိ' -> 'i'
+Matched: 'ဂ' -> 'g'
+Matched: 'ု' -> 'u'
+Matched: 'ံ' -> 'M'
+No match for: '
+' -> '
+'
+Matched: 'အ' -> '@'
+Matched: 'ရ' -> 'r'
+Matched: 'ွ' -> 'w'
+Matched: 'ှ' -> 'h'
+Matched: 'ဲ' -> 'Y'
+No match for: ' ' -> ' '
+Matched: 'ရ' -> 'r'
+Matched: 'ွ' -> 'w'
+Matched: 'ာ' -> 'aa'
+Matched: 'သ' -> 's'
+Matched: 'ူ' -> 'uu'
+Matched: 'က' -> 'k'
+Matched: 'ြ' -> 'r'
+Matched: 'ီ' -> 'ii'
+Matched: 'း' -> ':'
+Matched: '၏' -> '\i’'
+No match for: ' ' -> ' '
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+No match for: ' ' -> ' '
+Matched: 'ပ' -> 'p'
+Matched: 'န' -> 'n'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: 'လ' -> 'l'
+Matched: 'ှ' -> 'h'
+Matched: 'ို' -> 'ui'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+Matched: 'မ' -> 'm'
+Matched: 'ြ' -> 'r'
+Matched: 'စ' -> 'c'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: 'ပ' -> 'p'
+Matched: 'ါ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'တ' -> 't'
+Matched: 'ွ' -> 'w'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+No match for: ' ' -> ' '
+Matched: 'တ' -> 't'
+Matched: 'ည' -> 'N~'
+Matched: '်' -> '’'
+Matched: 'ရ' -> 'r'
+Matched: 'ှ' -> 'h'
+Matched: 'ိ' -> 'i'
+Matched: 'လ' -> 'l'
+Matched: 'ေ' -> 'e'
+Matched: 'သ' -> 's'
+Matched: 'ည' -> 'N~'
+Matched: '်' -> '’'
+Matched: '။' -> '||'
+No match for: '
+' -> '
+'
+Matched: 'ရ' -> 'r'
+Matched: 'ွ' -> 'w'
+Matched: 'ာ' -> 'aa'
+Matched: 'အ' -> '@'
+Matched: 'တ' -> 't'
+Matched: 'ွ' -> 'w'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: '၌' -> '\nh’'
+No match for: ' ' -> ' '
+Matched: 'ဆ' -> 'ch'
+Matched: 'ော' -> 'o'
+Matched: 'က' -> 'k'
+Matched: '်' -> '’'
+Matched: 'ထ' -> 'th'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'သ' -> 's'
+Matched: 'ော' -> 'o'
+No match for: ' ' -> ' '
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'မ' -> 'm'
+Matched: 'ဟ' -> 'h'
+Matched: 'ု' -> 'u'
+Matched: 'တ' -> 't'
+Matched: '်' -> '’'
+Matched: '။' -> '||'
+No match for: '
+' -> '
+'
+Matched: 'ရ' -> 'r'
+Matched: 'ွ' -> 'w'
+Matched: 'ာ' -> 'aa'
+Matched: '၏' -> '\i’'
+No match for: ' ' -> ' '
+Matched: 'အ' -> '@'
+Matched: 'စ' -> 'c'
+Matched: 'ွ' -> 'w'
+Matched: 'န' -> 'n'
+Matched: '်' -> '’'
+Matched: 'အ' -> '@'
+Matched: 'ဖ' -> 'ph'
+Matched: 'ျ' -> 'y'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'တ' -> 't'
+Matched: 'ွ' -> 'w'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+No match for: ' ' -> ' '
+Matched: 'ဆ' -> 'ch'
+Matched: 'ော' -> 'o'
+Matched: 'က' -> 'k'
+Matched: '်' -> '’'
+Matched: 'ထ' -> 'th'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'သ' -> 's'
+Matched: 'ော' -> 'o'
+No match for: ' ' -> ' '
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'ဖ' -> 'ph'
+Matched: 'ြ' -> 'r'
+Matched: 'စ' -> 'c'
+Matched: '်' -> '’'
+Matched: '၏' -> '\i’'
+Matched: '။' -> '||'
+No match for: '
+' -> '
+'
+Matched: 'အ' -> '@'
+Matched: 'န' -> 'n'
+Matched: 'ီ' -> 'ii'
+Matched: 'း' -> ':'
+Matched: 'အ' -> '@'
+Matched: 'န' -> 'n'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'တ' -> 't'
+Matched: 'ွ' -> 'w'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+No match for: ' ' -> ' '
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'တ' -> 't'
+Matched: 'လ' -> 'l'
+Matched: 'ု' -> 'u'
+Matched: 'ံ' -> 'M'
+Matched: 'း' -> ':'
+No match for: ' ' -> ' '
+Matched: 'န' -> 'n'
+Matched: 'ှ' -> 'h'
+Matched: 'စ' -> 'c'
+Matched: '်' -> '’'
+Matched: 'လ' -> 'l'
+Matched: 'ု' -> 'u'
+Matched: 'ံ' -> 'M'
+Matched: 'း' -> ':'
+Matched: 'သ' -> 's'
+Matched: 'ာ' -> 'aa'
+No match for: ' ' -> ' '
+Matched: 'ရ' -> 'r'
+Matched: 'ှ' -> 'h'
+Matched: 'ိ' -> 'i'
+Matched: 'လ' -> 'l'
+Matched: 'ေ' -> 'e'
+Matched: 'သ' -> 's'
+Matched: 'ည' -> 'N~'
+Matched: '်' -> '’'
+Matched: '။' -> '||'
+No match for: '
+' -> '
+'
+Matched: 'ထ' -> 'th'
+Matched: 'ို' -> 'ui'
+Matched: 'သ' -> 's'
+Matched: 'ူ' -> 'uu'
+Matched: 'က' -> 'k'
+Matched: 'ြ' -> 'r'
+Matched: 'ီ' -> 'ii'
+Matched: 'း' -> ':'
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'မ' -> 'm'
+Matched: 'ှ' -> 'h'
+Matched: 'ာ' -> 'aa'
+No match for: ' ' -> ' '
+Matched: 'က' -> 'k'
+Matched: 'ြ' -> 'r'
+Matched: 'ီ' -> 'ii'
+Matched: 'း' -> ':'
+Matched: 'က' -> 'k'
+Matched: 'ြ' -> 'r'
+Matched: 'ီ' -> 'ii'
+Matched: 'း' -> ':'
+Matched: 'က' -> 'k'
+Matched: 'ျ' -> 'y'
+Matched: 'ယ' -> 'y'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'ျ' -> 'y'
+Matched: 'ယ' -> 'y'
+Matched: '်' -> '’'
+No match for: ' ' -> ' '
+Matched: 'ခ' -> 'kh'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: 'ခ' -> 'kh'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: 'န' -> 'n'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'န' -> 'n'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'မ' -> 'm'
+Matched: 'ဟ' -> 'h'
+Matched: 'ု' -> 'u'
+Matched: 'တ' -> 't'
+Matched: '်' -> '’'
+Matched: '။' -> '||'
+No match for: '
+' -> '
+'
+Matched: 'ခ' -> 'kh'
+Matched: 'ပ' -> 'p'
+Matched: '်' -> '’'
+Matched: 'င' -> 'ng'
+Matched: 'ယ' -> 'y'
+Matched: '်' -> '’'
+Matched: 'င' -> 'ng'
+Matched: 'ယ' -> 'y'
+Matched: '်' -> '’'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: 'ခ' -> 'kh'
+Matched: 'ပ' -> 'p'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'ျ' -> 'y'
+Matched: 'ဉ' -> 'n~'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: 'က' -> 'k'
+Matched: 'ျ' -> 'y'
+Matched: 'ဉ' -> 'n~'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: 'သ' -> 's'
+Matched: 'က' -> 'k'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'ယ' -> 'y'
+Matched: '်' -> '’'
+Matched: 'မ' -> 'm'
+Matched: 'ို' -> 'ui'
+Matched: 'း' -> ':'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: 'ဝ' -> 'w'
+Matched: 'ါ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'က' -> 'k'
+Matched: 'ပ' -> 'p'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'ာ' -> 'aa'
+Matched: 'သ' -> 's'
+Matched: 'ော' -> 'o'
+No match for: ' ' -> ' '
+Matched: 'အ' -> '@'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'လ' -> 'l'
+Matched: 'ေ' -> 'e'
+Matched: 'း' -> ':'
+No match for: ' ' -> ' '
+Matched: 'ဖ' -> 'ph'
+Matched: 'ြ' -> 'r'
+Matched: 'စ' -> 'c'
+Matched: '်' -> '’'
+Matched: 'လ' -> 'l'
+Matched: 'ေ' -> 'e'
+Matched: 'သ' -> 's'
+Matched: 'ည' -> 'N~'
+Matched: '်' -> '’'
+Matched: '။' -> '||'
+No match for: '
+' -> '
+'
+Matched: 'သ' -> 's'
+Matched: 'ိ' -> 'i'
+Matched: 'ပ' -> 'p'
+Matched: '္' -> '='
+Matched: 'ပ' -> 'p'
+Matched: 'ံ' -> 'M'
+Matched: 'မ' -> 'm'
+Matched: 'ော' -> 'o'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+Matched: 'ဝ' -> 'w'
+No match for: ' ' -> ' '
+Matched: 'ဝ' -> 'w'
+Matched: 'တ' -> 't'
+Matched: '္' -> '='
+Matched: 'တ' -> 't'
+Matched: 'ု' -> 'u'
+Matched: 'ဆ' -> 'ch'
+Matched: 'ော' -> 'o'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+Matched: 'း' -> ':'
+Matched: 'ပ' -> 'p'
+Matched: 'ါ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: 'မ' -> 'm'
+Matched: 'ျ' -> 'y'
+Matched: 'ာ' -> 'aa'
+Matched: 'း' -> ':'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: '၁' -> '1'
+Matched: '၉' -> '9'
+Matched: '၆' -> '6'
+Matched: '၅' -> '5'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: 'ရ' -> 'r'
+Matched: 'န' -> 'n'
+Matched: '်' -> '’'
+Matched: 'က' -> 'k'
+Matched: 'ု' -> 'u'
+Matched: 'န' -> 'n'
+Matched: '်' -> '’'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: 'စ' -> 'c'
+Matched: 'ာ' -> 'aa'
+Matched: 'ပ' -> 'p'
+Matched: 'ေ' -> 'e'
+Matched: 'ဗ' -> 'b'
+Matched: 'ိ' -> 'i'
+Matched: 'မ' -> 'm'
+Matched: 'ာ' -> 'aa'
+Matched: 'န' -> 'n'
+Matched: '်' -> '’'
+No match for: ' ' -> ' '
+Matched: 'စ' -> 'c'
+Matched: 'ာ' -> 'aa'
+Matched: 'အ' -> '@'
+Matched: 'ု' -> 'u'
+Matched: 'ပ' -> 'p'
+Matched: '်' -> '’'
+Matched: 'ဆ' -> 'ch'
+Matched: 'ို' -> 'ui'
+Matched: 'င' -> 'ng'
+Matched: '်' -> '’'
+Matched: '၊' -> '|'
+No match for: ' ' -> ' '
+Matched: 'စ' -> 'c'
+Matched: 'ာ' -> 'aa'
+No match for: ' ' -> ' '
+Matched: '၁' -> '1'
+Matched: '၅' -> '5'
+Matched: '၂' -> '2'
+No match for: ')' -> ')'
+No match for: '
+' -> '
+'
+rwhetiguM
+@rwhY rwaasuukrii:\i’ @im’kaa: pn’:lhuing’mrc’km’:paa:twng’ tN~’rhilesN~’||
+rwaa@twng’:\nh’ chok’thaa:so @im’mhut’||
+rwaa\i’ @cwn’@phyaa:twng’ chok’thaa:so @im’phrc’\i’||
+@nii:@naa:twng’ @im’tluM: nhc’luM:saa rhilesN~’||
+thuisuukrii:@im’mhaa krii:krii:kyy’kyy’ khm’:khm’:naa:naa:@im’mhut’||
+khp’ngy’ngy’| khp’kyn~’:kyn~’:| sk’ky’mui:| waa:kp’kaaso @im’kle: phrc’lesN~’||
+sip=pMmong’w wt=tuchong’:paa:myaa:| 1965| rn’kun’| caapebimaan’ caa@up’chuing’| caa 152)
+
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
+```
+
+တကယ်လို့ input လုပ်တဲ့ ဖိုင်ထဲက စာကြောင်းတွေနဲ့ transliteration လုပ်ပြီး ထွက်လာတဲ့ စာကြောင်းတွေကို တစ်ကြောင်းချင်းစီ နှိုင်းယှဉ်ကြည့်ချင်ရင်လည်း ကြည့်လို့ရအောင် --show_parallel ဆိုတဲ့ option ကိုပါ ထည့်ပေးထားပါတယ်။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$ python ./my_transliteration.py --input ./test2.txt --method sawada --show_parallel
+ရွှေတိဂုံ
+rwhetiguM
+
+အရွှဲ ရွာသူကြီး၏ အိမ်ကား ပန်းလှိုင်မြစ်ကမ်းပါးတွင် တည်ရှိလေသည်။
+@rwhY rwaasuukrii:\i’ @im’kaa: pn’:lhuing’mrc’km’:paa:twng’ tN~’rhilesN~’||
+
+ရွာအတွင်း၌ ဆောက်ထားသော အိမ်မဟုတ်။
+rwaa@twng’:\nh’ chok’thaa:so @im’mhut’||
+
+ရွာ၏ အစွန်အဖျားတွင် ဆောက်ထားသော အိမ်ဖြစ်၏။
+rwaa\i’ @cwn’@phyaa:twng’ chok’thaa:so @im’phrc’\i’||
+
+အနီးအနားတွင် အိမ်တလုံး နှစ်လုံးသာ ရှိလေသည်။
+@nii:@naa:twng’ @im’tluM: nhc’luM:saa rhilesN~’||
+
+ထိုသူကြီးအိမ်မှာ ကြီးကြီးကျယ်ကျယ် ခမ်းခမ်းနားနားအိမ်မဟုတ်။
+thuisuukrii:@im’mhaa krii:krii:kyy’kyy’ khm’:khm’:naa:naa:@im’mhut’||
+
+ခပ်ငယ်ငယ်၊ ခပ်ကျဉ်းကျဉ်း၊ သက်ကယ်မိုး၊ ဝါးကပ်ကာသော အိမ်ကလေး ဖြစ်လေသည်။
+khp’ngy’ngy’| khp’kyn~’:kyn~’:| sk’ky’mui:| waa:kp’kaaso @im’kle: phrc’lesN~’||
+
+သိပ္ပံမောင်ဝ ဝတ္တုဆောင်းပါးများ၊ ၁၉၆၅၊ ရန်ကုန်၊ စာပေဗိမာန် စာအုပ်ဆိုင်၊ စာ ၁၅၂)
+sip=pMmong’w wt=tuchong’:paa:myaa:| 1965| rn’kun’| caapebimaan’ caa@up’chuing’| caa 152)
+
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
+```
+
+ALA-LC mapping ကို အခြေခံထားတဲ့ transliteration အတွက်လည်း --show_parallel လုပ်ခိုင်းကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$ python ./my_transliteration.py --input ./test2.txt --method alalc --show_parallel
+ရွှေတိဂုံ
+rwhetiguṃ
+
+အရွှဲ ရွာသူကြီး၏ အိမ်ကား ပန်းလှိုင်မြစ်ကမ်းပါးတွင် တည်ရှိလေသည်။
+‘Arwhai rwāsūkrī"e* ‘Aim’kā" pn’"lhuiṅ’mrc’km’"pā"twṅ’ tññ’rhilesññ’.
+
+ရွာအတွင်း၌ ဆောက်ထားသော အိမ်မဟုတ်။
+rwā‘Atwṅ’"n* chok’thā"so ‘Aim’mhut’.
+
+ရွာ၏ အစွန်အဖျားတွင် ဆောက်ထားသော အိမ်ဖြစ်၏။
+rwāe* ‘Acwn’‘Aphyā"twṅ’ chok’thā"so ‘Aim’phrc’e*.
+
+အနီးအနားတွင် အိမ်တလုံး နှစ်လုံးသာ ရှိလေသည်။
+‘Anī"‘Anā"twṅ’ ‘Aim’tluṃ" nhc’luṃ"sā rhilesññ’.
+
+ထိုသူကြီးအိမ်မှာ ကြီးကြီးကျယ်ကျယ် ခမ်းခမ်းနားနားအိမ်မဟုတ်။
+thuisūkrī"‘Aim’mhā krī"krī"kyy’kyy’ khm’"khm’"nā"nā"‘Aim’mhut’.
+
+ခပ်ငယ်ငယ်၊ ခပ်ကျဉ်းကျဉ်း၊ သက်ကယ်မိုး၊ ဝါးကပ်ကာသော အိမ်ကလေး ဖြစ်လေသည်။
+khp’ṅy’ṅy’, khp’kyñ’"kyñ’", sk’ky’mui", vā"kp’kāso ‘Aim’kle" phrc’lesññ’.
+
+သိပ္ပံမောင်ဝ ဝတ္တုဆောင်းပါးများ၊ ၁၉၆၅၊ ရန်ကုန်၊ စာပေဗိမာန် စာအုပ်ဆိုင်၊ စာ ၁၅၂)
+sippṃmoṅ’v vttuchoṅ’"pā"myā", 1965, rn’kun’, cāpebimān’ cā‘Aup’chuiṅ’, cā 152)
+
+
+(base) ye@lst-gpu-3090:~/exp/myNLP/transliteration$
+```
+
+Note: ဒီနေရာမှာ တစ်ခု သိစေချင်တာက အခု ရေးထားတဲ့ python code က ဆရာ ဆာဝါဒ ရဲ့ proposal တို့ ALA-LC တို့ရဲ့ mapping ကို အခြေခံထားပေမဲ့ တသွေမသိမ်းထပ်တူ ညီတာ မဟုတ်ဘူး ဆိုတဲ့ အချက်ကိုပါ။ ဘာကြောင့်လည်း ဆိုတော့ Unicode encoding ကြောင့်မို့လို့ order ပြောင်းတဲ့ ကိစ္စကြောင့် ပြီးတော့ ဆရာ ဆာဝါဒရဲ့ ဥပမာအတိုင်း အသေးစိတ်သွားရင် code ကိုလည်း ထပ်ပြီးတော့ ပြင်ရေးရမယ့် အပိုင်းတွေ ကျန်သေးလို့ပါ။ ဥပမာ အ အသံ အတိအကျ ဆိုတဲ့ အခါမျိုးကိစ္စတွေအတွက်ပါ။ နောက်ပိုင်း အချိန်ရတဲ့အခါမှာ update လုပ်ဖြစ်ချင်ရင်လည်း လုပ်ဖြစ်လိမ့်မယ်။ လောလောဆယ်မှာက NLP downstream task တွေအတွက်က လက်ရှိဗားရှင်းနဲ့လည်း အဆင်ပြေနိုင်လို့ transliteration စာကြောင်းတွေလည်း ပိုမရှည်သွားလို့ အသုံးဝင်ပါလိမ့်မယ်။  
 
 ```
 
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
+## Next Program
 
 ```
 
