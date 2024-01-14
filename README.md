@@ -296,4 +296,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 109. [grapheme_tokenizer.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/grapheme_tokenizer.py)  
 110. [icu_collation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_collation.py)  
 111. [icu_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/icu_transliteration.py)  
+112. [my_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_transliteration.py)  
 
