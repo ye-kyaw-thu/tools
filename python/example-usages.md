@@ -10058,7 +10058,207 @@ kohi
 
 ```
 
+"hepburn", "nihon" နဲ့ "kunrei" romaji system တွေအကြား မတူတာတွေကို နှိုင်းယှဉ်ကြည့်ဖို့အတွက် အောက်ပါ compare.txt ကို ပြင်ခဲ့တယ်။  
+
 ```
+$ cat compare.txt
+し ち つ ふ じ ぢ づ
+シ チ ツ フ ジ ヂ ヅ
+
+ゐ ゑ を
+ヰ ヱ ヲ
+
+
+しゃ しゅ しょ
+シャ シュ ショ
+
+じゃ じゅ じょ
+ジャ ジュ ジョ
+
+ちゃ ちゅ ちょ
+チャ チュ チョ
+
+ぢゃ ぢゅ ぢょ
+ヂャ ヂュ ヂョ
+```
+
+shell script for testing is as follows:
+
+```bash
+#!/bin/bash
+
+set -x;
+
+python ./kana2roman.py --input ./compare.txt --method hepburn --output hepburn.txt
+python ./kana2roman.py --input ./compare.txt --method nihon --output nihon.txt
+python ./kana2roman.py --input ./compare.txt --method kunrei --output kunrei.txt
+
+cat hepburn.txt
+cat nihon.txt
+cat kunrei.txt
+
+diff hepburn.txt nihon.txt
+diff hepburn.txt kunrei.txt
+diff nihon.txt kunrei.txt
+
+set +x;
+```
+
+testing result က အောက်ပါအတိုင်းပါ။  
+
+```
+$ ./method_compare.sh
++ python ./kana2roman.py --input ./compare.txt --method hepburn --output hepburn.txt
++ python ./kana2roman.py --input ./compare.txt --method nihon --output nihon.txt
++ python ./kana2roman.py --input ./compare.txt --method kunrei --output kunrei.txt
++ cat hepburn.txt
+shi chi tsu fu ji ji zu
+shi chi tsu fu ji ji zu
+
+i e o
+i e o
+
+
+sha shu sho
+sha shu sho
+
+ja ju jo
+ja ju jo
+
+cha chu cho
+cha chu cho
+
+ja ju jo
+ja ju jo
++ cat nihon.txt
+si ti tu hu zi di du
+si ti tu hu zi di du
+
+wi we wo
+wi we wo
+
+
+siya siyu siyo
+siya siyu siyo
+
+ziya ziyu ziyo
+ziya ziyu ziyo
+
+tiya tiyu tiyo
+tiya tiyu tiyo
+
+diya diyu diyo
+diya diyu diyo
++ cat kunrei.txt
+si ti tu hu zi zi zu
+si ti tu hu zi zi zu
+
+i e o
+i e o
+
+
+siya siyu siyo
+siya siyu siyo
+
+ziya ziyu ziyo
+ziya ziyu ziyo
+
+tiya tiyu tiyo
+tiya tiyu tiyo
+
+ziya ziyu ziyo
+ziya ziyu ziyo
++ diff hepburn.txt nihon.txt
+1,2c1,2
+< shi chi tsu fu ji ji zu
+< shi chi tsu fu ji ji zu
+---
+> si ti tu hu zi di du
+> si ti tu hu zi di du
+4,5c4,5
+< i e o
+< i e o
+---
+> wi we wo
+> wi we wo
+8,9c8,9
+< sha shu sho
+< sha shu sho
+---
+> siya siyu siyo
+> siya siyu siyo
+11,12c11,12
+< ja ju jo
+< ja ju jo
+---
+> ziya ziyu ziyo
+> ziya ziyu ziyo
+14,15c14,15
+< cha chu cho
+< cha chu cho
+---
+> tiya tiyu tiyo
+> tiya tiyu tiyo
+17,18c17,18
+< ja ju jo
+< ja ju jo
+---
+> diya diyu diyo
+> diya diyu diyo
++ diff hepburn.txt kunrei.txt
+1,2c1,2
+< shi chi tsu fu ji ji zu
+< shi chi tsu fu ji ji zu
+---
+> si ti tu hu zi zi zu
+> si ti tu hu zi zi zu
+8,9c8,9
+< sha shu sho
+< sha shu sho
+---
+> siya siyu siyo
+> siya siyu siyo
+11,12c11,12
+< ja ju jo
+< ja ju jo
+---
+> ziya ziyu ziyo
+> ziya ziyu ziyo
+14,15c14,15
+< cha chu cho
+< cha chu cho
+---
+> tiya tiyu tiyo
+> tiya tiyu tiyo
+17,18c17,18
+< ja ju jo
+< ja ju jo
+---
+> ziya ziyu ziyo
+> ziya ziyu ziyo
++ diff nihon.txt kunrei.txt
+1,2c1,2
+< si ti tu hu zi di du
+< si ti tu hu zi di du
+---
+> si ti tu hu zi zi zu
+> si ti tu hu zi zi zu
+4,5c4,5
+< wi we wo
+< wi we wo
+---
+> i e o
+> i e o
+17,18c17,18
+< diya diyu diyo
+< diya diyu diyo
+---
+> ziya ziyu ziyo
+> ziya ziyu ziyo
++ set +x
+```
+
+## Next Program  
 
 ```
 
@@ -10099,5 +10299,26 @@ kohi
 ```
 
 ```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
 
 
