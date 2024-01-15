@@ -1,4 +1,4 @@
-အောက်ပါ Python shell script ပရိုဂရမ် တစ်ခုချင်းစီရဲ့ အသုံးပြုပုံကို [example-usages.md](https://github.com/ye-kyaw-thu/tools/blob/master/python/example-usages.md) ဖိုင်မှာ ရှင်းပြထားပါတယ်။  
+အောက်ပါ Python shell script ပရိုဂရမ် တစ်ခုချင်းစီရဲ့ အသုံးပြုပုံကို [example-usages.md](https://github.com/ye-kyaw-thu/tools/blob/master/python/example-usages.md) ဖိုင်မှာ ရှင်းပြထားပါတယ်။ အချိန်မရလို့ ရှင်းမပြထားတဲ့ ပရိုဂရမ်တချို့လည်း ရှိပေမဲ့ coding ကို တတ်နိုင်သ၍ ရှင်းအောင်ရေးထားတာမို့ အဆင်ပြေပါလိမ့်မယ်။   
 
 # TOC of Python scripts
 
