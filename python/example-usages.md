@@ -9858,23 +9858,121 @@ Note: ဒီနေရာမှာ တစ်ခု သိစေချင်တာ
 
 ```
 
-## Next Program
+## 113. [kana2roman.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/kana2roman.py)
+
+ဟိရဂန၊ ကတကန ကနေ romaji အဖြစ် ပြောင်းတာကို စမ်းထားတဲ့ code ပါ။   
+
+```
+$ python kana2roman.py --help
+usage: kana2roman.py [-h] [--input INPUT] [--output OUTPUT]
+                     [--method {hepburn,nihon,kunrei}] [--upcase] [--traditional]
+
+Japanese Romanization
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Input file containing Kana text
+  --output OUTPUT       Output file for Romaji text
+  --method {hepburn,nihon,kunrei}
+                        Choose the romanization method: "hepburn", "nihon", or "kunrei"
+  --upcase              Return text in upper case
+  --traditional         Use traditional Hepburn rules
+```
+
+sentence level ပြောင်းဖို့အတွက် ဖိုင်တစ်ဖိုင်ကို အောက်ပါအတိုင်း ပြင်ဆင်ခဲ့တယ်။
+
+```
+$ cat hiragana_sentence.txt
+おはようございます。
+こんにちは。
+こんばんは。
+では、また。
+じゃ、また。
+じゃあ(ね)。
+おげんきですか。
+ありがとうございます。げんきです。
+どうぞ。
+すみません。
+ちょっとまってください。
+だいじょうぶですか。
+だいじょうぶです。
+はい。
+いいえ。
 
 ```
 
+အထက်ပါဖိုင်နဲ့ test-run လုပ်ဖို့အတွက် shell script ကို အောက်ပါအတိုင်း ရေးခဲ့ ...
+
+```bash
+#!/bin/bash
+
+set -x;
+
+python ./kana2roman.py --input ./hiragana_sentence.txt --method hepburn
+python ./kana2roman.py --input ./hiragana_sentence.txt --method nihon
+python ./kana2roman.py --input ./hiragana_sentence.txt --method kunrei
+
+set +x;
 ```
 
-```
+running output ကအောက်ပါအတိုင်း ...  
 
 ```
+$ ./hiragana_test.sh
++ python ./kana2roman.py --input ./hiragana_sentence.txt --method hepburn
+ohayogozaimasu.
+konnichiha.
+konbanha.
+deha,mata.
+ja,mata.
+jaa(ne).
+ogenkidesuka.
+arigatogozaimasu.genkidesu.
+dozo.
+sumimasen.
+chottomattekudasai.
+daijobudesuka.
+daijobudesu.
+hai.
+iie.
 
++ python ./kana2roman.py --input ./hiragana_sentence.txt --method nihon
+ohayogozaimasu.
+konnitiha.
+konbanha.
+deha,mata.
+ziya,mata.
+ziyaa(ne).
+ogenkidesuka.
+arigatogozaimasu.genkidesu.
+dozo.
+sumimasen.
+tiyottomattekudasai.
+daiziyobudesuka.
+daiziyobudesu.
+hai.
+iie.
+
++ python ./kana2roman.py --input ./hiragana_sentence.txt --method kunrei
+ohayogozaimasu.
+konnitiha.
+konbanha.
+deha,mata.
+ziya,mata.
+ziyaa(ne).
+ogenkidesuka.
+arigatogozaimasu.genkidesu.
+dozo.
+sumimasen.
+tiyottomattekudasai.
+daiziyobudesuka.
+daiziyobudesu.
+hai.
+iie.
+
++ set +x
 ```
 
-```
-
-```
-
-```
 
 ```
 
