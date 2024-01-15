@@ -338,3 +338,6 @@
 
 112. [my_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_transliteration.py)  
 (Experiment code for Burmese transliteration with two transliteration systems: ALA-LC and Sawada)  
+
+113. [kana2roman.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/kana2roman.py)  
+(Hiragana, Katakana to Romanization)  
