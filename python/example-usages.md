@@ -9973,17 +9973,88 @@ iie.
 + set +x
 ```
 
-```
+long vowel တွေကို စမ်းဖို့အတွက် text ဖိုင်တစ်ဖိုင်ကို အောက်ပါအတိုင်း ပြင်ဆင်ခဲ့တယ်။  
 
 ```
+$ cat long_v.txt
+ああ アー
+いい イー
+うう ウー
+ええ えい エー
+おお おう オー
 
+パーティー
+ビール
+スーパー
+チョコㇾート
+チョコレート
+コーヒー
 ```
 
+အထက်ပါဖိုင်နဲ့ စမ်းဖို့အတွက် shell script ကအောက်ပါအတိုင်း ...  
+
+```bash
+#!/bin/bash
+
+set -x;
+
+python ./kana2roman.py --input ./long_v.txt --method hepburn
+python ./kana2roman.py --input ./long_v.txt --method nihon
+python ./kana2roman.py --input ./long_v.txt --method kunrei
+
+set +x;
 ```
 
-```
+long vowel တွေကို အောက်ပါအတိုင်း test လုပ်ခဲ့ ...  
 
 ```
+$ ./longv_test.sh
++ python ./kana2roman.py --input ./long_v.txt --method hepburn
+aa a
+ii i
+u u
+ee ei e
+o o o
+
+patei
+biru
+supa
+chokoㇾto
+chokoreto
+kohi
+
++ python ./kana2roman.py --input ./long_v.txt --method nihon
+aa a
+ii i
+u u
+ee ei e
+o o o
+
+patei
+biru
+supa
+tiyokoㇾto
+tiyokoreto
+kohi
+
++ python ./kana2roman.py --input ./long_v.txt --method kunrei
+aa a
+ii i
+u u
+ee ei e
+o o o
+
+patei
+biru
+supa
+tiyokoㇾto
+tiyokoreto
+kohi
+
++ set +x
+```
+
+အထက်မှာ မပြောင်းပေးနိုင်တဲ့ small rei character ပုံမှန် ဂျပန်စာမှာ မသုံးပါဘူး။ အဲဒီစာလုံးကတကယ်ကတော့ အိုင်အိနု ဘာသာစကားမှာ သုံးပါတယ်။ သို့သော်လည်း ခုနောက်ပိုင်း ထွင်ရေးတာမျိုးတွေမှာတော့ ထည့်ရေးတာမျိုးလည်း ရှိပါတယ်။   
 
 ```
 
