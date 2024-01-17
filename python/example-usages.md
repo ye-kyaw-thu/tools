@@ -10365,6 +10365,7 @@ suffix ဖိုင်ရဲ့ output ကအောက်ပါအတိုင�
 အေး+မောင်|||1
 အေး+အေး|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
 Experiment တစ်ခုအနေနဲ့ myWord corpus ထဲကနေ ဆွဲထုတ်ယူထားတဲ့ syllable list ကို အဘိဓာန်အနေနဲ့ သတ်မှတ်ပြီး၊ g2p (ver. 2) ရဲ့ ဒုတိယကော်လံ စားလုံးတွေကိုပဲ ဆွဲထုတ်ယူထားတဲ့ ဖိုင်ကို corpus အနေနဲ့ ထားပြီး လုပ်ကြည့်ခဲ့တယ်။  
 
@@ -10456,6 +10457,7 @@ Shell script က အောက်ပါအတိုင်း ...
 + set +x
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
 ```
+
 Checking Extracted Prefix Words ...  
 
 ```
