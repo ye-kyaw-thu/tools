@@ -10300,6 +10300,7 @@ optional arguments:
 မောင်အေး မောင်အေး မောင်အေး
 အေးမောင်
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
 Test Run ကို အောက်ပါအတိုင်း run ခဲ့တယ်။  
 
