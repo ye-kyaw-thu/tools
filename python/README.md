@@ -341,3 +341,6 @@
 
 113. [kana2roman.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/kana2roman.py)  
 (Hiragana, Katakana to Romanization)  
+
+114. [prefix_suffix_extract.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/prefix_suffix_extract.py)  
+(Prefix, Suffix တွေကို အဘိဓာန်ဖိုင်နဲ့ corpus ဖိုင်နှစ်ဖိုင်သုံးပြီး ဆွဲထုတ်ကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။ )
