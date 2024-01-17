@@ -10258,6 +10258,9 @@ ziya ziyu ziyo
 
 ## 114. [prefix_suffix_extract.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/prefix_suffix_extract.py)  
 
+--help ခေါ်ကြည့်ရအောင် ...  
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ python ./prefix_suffix_extract.py --help
 usage: prefix_suffix_extract.py [-h] --dict DICT --corpus CORPUS --prefix PREFIX
                                 --suffix SUFFIX [--freq FREQ] [--delimiter DELIMITER]
@@ -10275,13 +10278,21 @@ optional arguments:
   --delimiter DELIMITER
                         Delimiter for output (default: "|||")
   --verbose             Enable verbose mode.
+```
 
+အဘိဓာန်အသေးလေး တစ်ခုနဲ့ အရင်ဆုံး စမ်း run ကြည့်မယ်။  
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ cat ./demo/dict.txt
 ကို
 မ
 မောင်
 အေး
+```
 
+ထိုနည်းလည်းကောင်း corpus ဖိုင်ကိုလည်း အသေးလေးနဲ့ စမ်းမယ်။  
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ cat ./demo/corpus.txt
 ကိုကို မောင်မောင် မမ
 ကိုအေး မအေး
@@ -10290,25 +10301,42 @@ optional arguments:
 အေးမောင်
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
 
-## Test Run
+Test Run ကို အောက်ပါအတိုင်း run ခဲ့တယ်။  
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ python ./prefix_suffix_extract.py --dict ./demo/dict.txt --corpus ./demo/corpus.txt --prefix prefix.txt --suffix suffix.txt --freq 1
+```
+
+extract လုပ်ပြီး ရလာတဲ့ prefix ဖိုင်ကို ကြည့်ကြည့်ရအောင် ...
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ cat prefix.txt
 ကို|||2
 မ|||6
 မောင်|||4
 အေး|||2
+```
 
+extract လုပ်ပြီး ထွက်လာတဲ့ suffix ဖိုင်ကိုလည်း ကြည့်ကြည့်ရအောင် ...
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ cat suffix.txt
 ကို|||1
 မ|||1
 မောင်|||2
 အေး|||6
+```
 
-## Verbose Mode
+Verbose Mode နဲ့ run ရင်တော့ prefix, suffix နဲ့ တွဲနေတဲ့ အပိုင်းကိုပါ ပြပေးပြီး၊ corpus ဖိုင်ထဲမှာ ဘယ်နှခါ ပါသလဲ ဆိုတဲ့ အကြိမ်အရေအတွက်ကိုတော့ ဒုတိယကော်လံမှာ ပြပေးပါလိမ့်မယ်။
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ python ./prefix_suffix_extract.py --dict ./demo/dict.txt --corpus ./demo/corpus.txt --prefix prefix.txt --suffix suffix.txt --freq 1 --verbose
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+
+prefix file က အောက်ပါအတိုင်း  ...
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ cat prefix.txt
 ကို+ကို|||1
 ကို+အေး|||1
@@ -10321,6 +10349,11 @@ optional arguments:
 အေး+မောင်|||1
 အေး+အေး|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+
+suffix ဖိုင်ရဲ့ output ကအောက်ပါအတိုင်းပါ။
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ cat suffix.txt
 ကို+ကို|||1
 ကို+အေး|||1
@@ -10332,13 +10365,17 @@ optional arguments:
 အေး+အေး|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
 
-## Running for Experiment
+Experiment တစ်ခုအနေနဲ့ myWord corpus ထဲကနေ ဆွဲထုတ်ယူထားတဲ့ syllable list ကို အဘိဓာန်အနေနဲ့ သတ်မှတ်ပြီး၊ g2p (ver. 2) ရဲ့ ဒုတိယကော်လံ စားလုံးတွေကိုပဲ ဆွဲထုတ်ယူထားတဲ့ ဖိုင်ကို corpus အနေနဲ့ ထားပြီး လုပ်ကြည့်ခဲ့တယ်။  
 
 Dictionary File ...  
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ wc dict.txt
  5723  5723 85364 dict.txt
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ head dict.txt
 က
 ကက္ကာ
@@ -10351,6 +10388,9 @@ Dictionary File ...
 ကင့်
 ကင့်မ်
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ tail dict.txt
 ၉
 ၉ဋ္ဌ
@@ -10363,12 +10403,17 @@ Dictionary File ...
 ႔
 ႕႕႕႕႕႕႕
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
 Corpus file ...  
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ wc f2
  24798  24798 691632 f2
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ head f2
 ကကတစ်
 ကကတိုး
@@ -10381,6 +10426,9 @@ Corpus file ...
 ကကြီး
 ကကြီးထွန်
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ tail f2
 ဧည့်မထ
 ဧည့်မြေ
@@ -10393,9 +10441,11 @@ Corpus file ...
 ဧည့်သည်စောင်သည်
 ဪလဲ
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
-Running output ...  
+Shell script က အောက်ပါအတိုင်း ...   
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ ./run.sh
 + python ./prefix_suffix_extract.py --dict ./dict.txt --corpus ./f2 --prefix p.txt --suffix s.txt --freq 1 --verbose --delimiter '|||'
 + wc p.txt
@@ -10404,9 +10454,10 @@ Running output ...
   55972   55972 1871937 s.txt
 + set +x
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
+Checking Extracted Prefix Words ...  
 
-### Checking Extracted Prefix Words
-
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ head -n 100 ./p.txt
 က+ကတစ်|||1
 က+ကတိုး|||1
@@ -10509,7 +10560,9 @@ Running output ...
 က+ညစ်|||1
 က+ညာ|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ tail -n 100 ./p.txt
 ဦး+ရင်|||1
 ဦး+ရစ်|||1
@@ -10612,7 +10665,11 @@ Running output ...
 ဩတ္တ+ပ္ပ|||1
 ဪ+လဲ|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
+suffix ဖိုင်ကတော့ အောက်ပါအတိုင်း ...  
+
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ head -n 100 s.txt
 က+ကြိုး|||1
 က+ကြီး|||1
@@ -10715,7 +10772,9 @@ Running output ...
 ကက်ကင်းဓာ+တ်|||1
 ကက်ကင်းဓာတ+်|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
+```
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$ tail -n 100 ./s.txt
 ဧည့်ပရိ+သတ်|||1
 ဧည့်ပရိသ+တ်|||1
@@ -10818,7 +10877,9 @@ Running output ...
 ဪ+လဲ|||1
 ဪလ+ဲ|||1
 (base) ye@lst-gpu-3090:~/exp/myNLP/prefix_suffix/my/test-2$
+```
 
+ဒီ tool လေးကလည်း NLP task တော်တော်များများအတွက် အသုံးဝင်နိုင်ပါလိမ့်မယ်။   
 
 
 ## Next Program  
