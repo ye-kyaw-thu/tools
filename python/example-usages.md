@@ -10949,6 +10949,29 @@ Gene Hong သို့ - ဟားဟားဟား ။ မင်း ငါ့ 
 ဟိုင်း ငါ တို့ အသံ စစ်ဆေးမှု မှာ ခဏနေ အဖြေထွက် တော့ မယ် ။ ငါ တို့ သိ ရတဲ့ အချိန် ကျ ရင် အဲဒီ အကြောင်း မင်း ကို စာသားတို ပို့ လိုက် မယ် ။ ငြိမ်းချမ်း ပါစေ ။(base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/preprocessing/demo$
 ```
 
+## 116. [rm_my_two_symbols.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_my_two_symbols.py)  
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+
 ## Next Program  
 
 ```
