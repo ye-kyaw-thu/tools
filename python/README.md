@@ -343,4 +343,7 @@
 (Hiragana, Katakana to Romanization)  
 
 114. [prefix_suffix_extract.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/prefix_suffix_extract.py)  
-(Prefix, Suffix တွေကို အဘိဓာန်ဖိုင်နဲ့ corpus ဖိုင်နှစ်ဖိုင်သုံးပြီး ဆွဲထုတ်ကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။ )
+(Prefix, Suffix တွေကို အဘိဓာန်ဖိုင်နဲ့ corpus ဖိုင်နှစ်ဖိုင်သုံးပြီး ဆွဲထုတ်ကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။ )  
+
+115. [mk_only_my.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk_only_my.py)  
+(ဖိုင်ထဲမှာ ရှိတဲ့စာကြောင်းတွေထဲက အင်္ဂလိပ်စာလုံးတို့ တရုတ်စာလုံးစတာတွေအားလုံးကို ဖယ်လိုက်ပြီး မြန်မာစာလုံးတွေပဲ ရှိစေဖို့အတွက် ရေးထားတဲ့ Python code ပါ။ မြန်မစာ NLP အလုပ်တွေအတွက် မရှိမဖြစ်တဲ့ ပရိုဂရမ်တစ်ပုဒ်လို့ ပြောလို့ ရပါတယ်။)     
