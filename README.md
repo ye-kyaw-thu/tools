@@ -299,3 +299,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 112. [my_transliteration.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_transliteration.py)  
 113. [kana2roman.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/kana2roman.py)  
 114. [prefix_suffix_extract.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/prefix_suffix_extract.py)  
+115. [mk_only_my.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk_only_my.py)  
