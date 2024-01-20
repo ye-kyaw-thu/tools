@@ -349,4 +349,7 @@
 (ဖိုင်ထဲမှာ ရှိတဲ့စာကြောင်းတွေထဲက အင်္ဂလိပ်စာလုံးတို့ တရုတ်စာလုံးစတာတွေအားလုံးကို ဖယ်လိုက်ပြီး မြန်မာစာလုံးတွေပဲ ရှိစေဖို့အတွက် ရေးထားတဲ့ Python code ပါ။ မြန်မစာ NLP အလုပ်တွေအတွက် မရှိမဖြစ်တဲ့ ပရိုဂရမ်တစ်ပုဒ်လို့ ပြောလို့ ရပါတယ်။)  
 
 116. [rm_my_two_symbols.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_my_two_symbols.py)  
-(ကိုယ်လုပ်ချင်တဲ့ NLP task အပေါ်ကို မူတည်ပြီးတော့ ပုဒ်ထီး၊ ပုဒ်မ တွေကို ဖြုတ်ဖို့လိုအပ်တဲ့အခါတွေရှိပါတယ်။ အဲဒီအတွက် ရေးထားခဲ့တဲ့ python script ပါ။)   
+(ကိုယ်လုပ်ချင်တဲ့ NLP task အပေါ်ကို မူတည်ပြီးတော့ ပုဒ်ထီး၊ ပုဒ်မ တွေကို ဖြုတ်ဖို့လိုအပ်တဲ့အခါတွေရှိပါတယ်။ အဲဒီအတွက် ရေးထားခဲ့တဲ့ python script ပါ။)  
+
+117. [char_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char_segmentation.py)  
+(ဒီ code က character segmentation လုပ်ပေးလိမ့်မယ်။)  
