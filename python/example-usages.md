@@ -11067,11 +11067,70 @@ character segmentation လုပ်ထားပြီးသား ဖိုင�
 (base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/lang_data/char_seg$
 ```
 
+## 118. [fasttext_format_converter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fasttext_format_converter.py)    
+
+FastText ကို သုံးပြီးတော့ classification လုပ်တော့မယ် ဆိုရင် အရင်ဆုံး FastText က သတ်မှတ်ထားတဲ့ labeling format ကို ပြောင်းရပါတယ်။ ကိုယ့် corpus က အောက်ပါအတိုင်း ရှိနေတယ် ဆိုကြပါစို့ ...  
+
+```
+(base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/fasttext/preprocessing$ head ./all_languages.txt
+၁ ၀ စက္ကန့်     bamar
+သ လၣ် လီၤ ဖီ တ ဖၣ် ဧါ   sgaw_kayin
+ကျွန် မ လာ ချင် ရယ် ပဲ့ လာ ဝို မ ရ က ။  beik
+အဝ်ႏ အ ခန်ꩻ ဖဲ ချာ နဝ်ꩻ ဟွိုန် စဲင်း တဝ်း နာꩻ ငဝ်း      pao
+တ သ့ ဖဲ အ သ့ တၢ် ဝဲ န့ၣ် ဆှၢ လီၤ ဒၣ် ချ့ ချ့ တ က့ၢ်     sgaw_kayin
+အ ဝဲ လဲၤ ဝဲ ဖဲ လဲၣ် လဲၣ် န့ၣ် ယ တ သ့ၣ် ညါ ဝဲ တီ တီ ဘၣ်  sgaw_kayin
+သူ က က ကောင်း ဟောင် နီ လို့ ငါ အိမ် နီး ချင်း တိ က ရက် ပြတ် က န့် ကွက် နီ ရေ ။  rakhine
+ငါ့ ဘ ဝ ရဲ့ အ ကောင်း ဆုံး ည ကို စွန့် ခွာ ရ တော့ မယ် ငါ ငို မိ တော့ မယ် bamar
+နွံ က ထိ တ က ယၤ သၢ ဆံ   sgaw_kayin
+ၶဝ် ဢမ်ႇ ၵူဝ် သူ        shan
+```
+
+အဲဒီ အထက်ပါ format ကနေ FastText က လက်ခံတဲ့ format ကို ပြောင်းမယ် ဆိုရင် အောက်ပါအတိုင်း run ပါ။  
+
+```
+$ python ./fasttext_format_converter.py --input ./all_languages.txt --output ./all_languages.fasttext
+```
+
+ပြောင်းပေး လိုက်တဲ့ FastText format က အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/fasttext/preprocessing$ head ./all_languages.fasttext
+__label__bamar  ၁ ၀ စက္ကန့်
+__label__sgaw_kayin     သ လၣ် လီၤ ဖီ တ ဖၣ် ဧါ
+__label__beik   ကျွန် မ လာ ချင် ရယ် ပဲ့ လာ ဝို မ ရ က ။
+__label__pao    အဝ်ႏ အ ခန်ꩻ ဖဲ ချာ နဝ်ꩻ ဟွိုန် စဲင်း တဝ်း နာꩻ ငဝ်း
+__label__sgaw_kayin     တ သ့ ဖဲ အ သ့ တၢ် ဝဲ န့ၣ် ဆှၢ လီၤ ဒၣ် ချ့ ချ့ တ က့ၢ်
+__label__sgaw_kayin     အ ဝဲ လဲၤ ဝဲ ဖဲ လဲၣ် လဲၣ် န့ၣ် ယ တ သ့ၣ် ညါ ဝဲ တီ တီ ဘၣ်
+__label__rakhine        သူ က က ကောင်း ဟောင် နီ လို့ ငါ အိမ် နီး ချင်း တိ က ရက် ပြတ် က န့် ကွက် နီ ရေ ။
+__label__bamar  ငါ့ ဘ ဝ ရဲ့ အ ကောင်း ဆုံး ည ကို စွန့် ခွာ ရ တော့ မယ် ငါ ငို မိ တော့ မယ်
+__label__sgaw_kayin     နွံ က ထိ တ က ယၤ သၢ ဆံ
+__label__shan   ၶဝ် ဢမ်ႇ ၵူဝ် သူ
+```
+
+ဒီ Python code မှာ အသုံးပြုရတာ အဆင်ပြေအောင် --reverse option ကိုလည်း ထည့်ပေးထားပါတယ်။  
+ဆိုလိုတာက FastText format ကနေ ပုံမှန် သုံးနေကြ "sentence\tlabel" ပုံစံကို ပြန်ပြောင်းပေးဖို့အတွက်ပါ။   
+
+```
+(base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/fasttext/preprocessing$ python ./fasttext_format_converter.py --input ./all_languages.fasttext --output output.txt --reverse
+```
+
+--reverse option ကို သုံးပြီး ပြောင်းထားတဲ့ output format က အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/fasttext/preprocessing$ head output.txt
+၁ ၀ စက္ကန့်     bamar
+သ လၣ် လီၤ ဖီ တ ဖၣ် ဧါ   sgaw_kayin
+ကျွန် မ လာ ချင် ရယ် ပဲ့ လာ ဝို မ ရ က ။  beik
+အဝ်ႏ အ ခန်ꩻ ဖဲ ချာ နဝ်ꩻ ဟွိုန် စဲင်း တဝ်း နာꩻ ငဝ်း      pao
+တ သ့ ဖဲ အ သ့ တၢ် ဝဲ န့ၣ် ဆှၢ လီၤ ဒၣ် ချ့ ချ့ တ က့ၢ်     sgaw_kayin
+အ ဝဲ လဲၤ ဝဲ ဖဲ လဲၣ် လဲၣ် န့ၣ် ယ တ သ့ၣ် ညါ ဝဲ တီ တီ ဘၣ်  sgaw_kayin
+သူ က က ကောင်း ဟောင် နီ လို့ ငါ အိမ် နီး ချင်း တိ က ရက် ပြတ် က န့် ကွက် နီ ရေ ။  rakhine
+ငါ့ ဘ ဝ ရဲ့ အ ကောင်း ဆုံး ည ကို စွန့် ခွာ ရ တော့ မယ် ငါ ငို မိ တော့ မယ် bamar
+နွံ က ထိ တ က ယၤ သၢ ဆံ   sgaw_kayin
+ၶဝ် ဢမ်ႇ ၵူဝ် သူ        shan
+```
+
 ## Next Program  
-
-```
-
-```
 
 ```
 
