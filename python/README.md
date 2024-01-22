@@ -353,3 +353,6 @@
 
 117. [char_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char_segmentation.py)  
 (ဒီ code က character segmentation လုပ်ပေးလိမ့်မယ်။)  
+
+118. [fasttext_format_converter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fasttext_format_converter.py)  
+(FastText ကိုသုံးပြီး classification experiment ဘာညာ လုပ်တော့မယ်ဆိုရင် ဒေတာကို format ပြောင်းပေးဖို့ လိုအပ်ပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ Python code ပါ။)  
