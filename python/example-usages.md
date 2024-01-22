@@ -11130,11 +11130,24 @@ __label__shan   ၶဝ် ဢမ်ႇ ၵူဝ် သူ
 ၶဝ် ဢမ်ႇ ၵူဝ် သူ        shan
 ```
 
+--help option နဲ့ သုံးပုံသုံးနည်းကို လေ့လာပါ။  
+
+```
+(base) ye@lst-gpu-3090:~/exp/sylbreak4all/lang_detection/fasttext/preprocessing$ python ./fasttext_format_converter.py --help
+usage: fasttext_format_converter.py [-h] [--input INPUT] [--output OUTPUT] [--reverse]
+
+Converts text data for FastText format.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --input INPUT    Input file path. If not provided, reads from stdin.
+  --output OUTPUT  Output file path. If not provided, writes to stdout.
+  --reverse        Reverse conversion (from FastText format to original).
+
+```
+
 ## Next Program  
 
-```
-
-```
 
 ```
 
