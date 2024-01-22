@@ -1826,7 +1826,7 @@ after merging two lists:  {'Cafe Latte': 60, 'American Coffee': 45, 'Matcha Latt
 (base) ye@:/media/ye/project2/4github/4students/python-list$
 ```
 
-## 29. https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py
+## 29. [split-train-test.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-train-test.py)  
 
 Machine Translation မှာ သုံးတဲ့ parallel corpus ကို training data, test data အဖြစ် ခွဲတာကို လက်တွေ့ လုပ်ကြည့်ကြရအောင်။  
 
