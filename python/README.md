@@ -356,3 +356,6 @@
 
 118. [fasttext_format_converter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fasttext_format_converter.py)  
 (FastText ကိုသုံးပြီး classification experiment ဘာညာ လုပ်တော့မယ်ဆိုရင် ဒေတာကို format ပြောင်းပေးဖို့ လိုအပ်ပါတယ်။ အဲဒီအတွက် ရေးခဲ့တဲ့ Python code ပါ။)  
+
+119. [run_sylbreak.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/run_sylbreak.py)  
+(Machine translation မလုပ်ခင်မှာ source langauge အတွက်ကော၊ target language အတွက်ကော syllable breaking လုပ်တာမျိုး လုပ်လေ့ရှိပါတယ်။ အဲဒီအလုပ်အတွက် သုံးခဲ့တဲ့ Python code ပါ။)  
