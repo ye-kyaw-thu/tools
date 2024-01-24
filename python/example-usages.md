@@ -11277,8 +11277,131 @@ Syllable ဖြတ်ပြီးသား target language ရခိုင်ဖ
 (opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ 
 ```
 
-## Next Program 
+## 120. [rm_zwnj_zwsp_hsp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_zwnj_zwsp_hsp.py)  
 
+--help ခေါ်ကြည့်ပါ။  
+
+```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ python rm_zwnj_zwsp_hsp.py --help
+usage: rm_zwnj_zwsp_hsp.py [-h] [--input INPUT] [--output OUTPUT] [--verbose]
+
+Remove ZWNJ, ZWSP, HSP characters from text
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --input INPUT    Input file path
+  --output OUTPUT  Output file path
+  --verbose        Print counts of removed characters
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ 
+```
+
+သုံးပုံသုံးနည်း က အောက်ပါအတိုင်း ...  
+
+```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ python ./rm_zwnj_zwsp_hsp.py --input ./train.my.syl --verbose | head 
+Removed 0 ZWNJ, 303 ZWSP, 0 HSP characters
+မင်း အဲ့ ဒါ ကို အ ခြား တစ် ခု နဲ့ မ ချိတ် ဘူး လား ။
+သူ မ ဘယ် သူ့ ကို မှ မ မှတ် မိ တော့ ဘူး ။
+အဲ့ ဒါ ကျွန် တော် တို့ အ တွက် ခက် ခဲ တယ် ။
+ခင် ဗျား ပြော ခဲ့ သ လို ကျွန် တော် ရှင်း ပြ ခဲ့ တယ် ။
+သူ့ ကို ထိန်း ဖို့ မင်း ပဲ တတ် နိုင် တယ် ။
+အဲ့ ဒါ ကို ကိုယ် တက် နင်း မိ သွား လား ။
+ငါ စဉ်း စား သ လို စဉ်း စား ပါ ။
+အ တင်း ပြော ရ တာ မုန်း တယ် ။
+ နောက် ဆုံး တစ် ကြိမ် သူ့ ကို ချစ် ပါ တယ် လို့ ပြော ခွင့် တောင် မ ရ တော့ ဘူး ။
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$
+```
+
+```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ python ./rm_zwnj_zwsp_hsp.py --input ./train.rk.syl --verbose | head
+Removed 0 ZWNJ, 241 ZWSP, 0 HSP characters
+မင်း ယင်း ချင့် ကို အ ခြား တစ် ခု နန့် မ ချိတ် ပါ လား ။
+ထို မ ချေ တစ် ယောက် လေ့ မ မှတ် မိ ပါ ယာ ။
+ယင်း ချင့် ကျွန် တော် ရို့ အ တွက် ခက် ခ ရေ ။
+မင်း ပြော ခ ရေ ပိုင် ကျွန် တော် ယှင်း ပြ ခ ရေ ။
+သူ့ ကို ထိန်း ဖို့ မင်း ရာ တတ် နိုင် ရေ ။
+ယင်း ချင့် ကို ငါ တက် နင်း မိ လား လာ ။
+ငါ စဉ်း စား ရေ ပိုင် စဉ်း စား ပါ ။
+အ တင်း ပြော ရ စွာ မုန်း ရေ ။
+ နောက် ဆုံး တစ် ကြိမ် သူ့ ကို ချစ် ပါ ရေ လို့ ပြော ခွင့် တောင် မ ရ ပါ ။
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ 
+```
+
+ဖိုင်အများကြီးကို ဖျက်မယ်၊ ပြီးတော့ ခဏခဏလည်း လုပ်ရမယ့် အလုပ်ဆိုရင်တော့ shell script ရေးသုံးတာ ပိုအဆင်ပြေလိမ့်မယ်။  
+
+```bash
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ cat ./clean_all.sh 
+#!/bin/bash
+
+# Loop through all .syl files in the current directory
+for file in *.syl; do
+    # Generate the output file name by appending .rm
+    output_file="${file}.rm"
+
+    # Run the Python script with each .syl file
+    python ./rm_zwnj_zwsp_hsp.py --input "${file}" --output "${output_file}"
+
+    echo "Processed ${file} and created ${output_file}"
+done
+
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$
+```
+
+တစ်ခု သိစေချင်တာက ZWNJ, ZWSP တို့ HSP တို့ကို ဖျက်ပြီးသွားရင် တခါတလေ input လုပ်လိုက်တဲ့ ဖိုင်နဲ့က စာကြောင်းရေအရေအတွက်က တူချင်မှ တူလိမ့်မယ်။  
+မမြင်ရတဲ့ စာလုံးတစ်ခုတည်းက စာကြောင်းတစ်ကြောင်းအနေနဲ့ ရှိနေရင် အဲဒီ စာလုံးကို ဖျက်လိုက်ရင် အဲဒီလိုင်းပါ ပျက်သွားမှာမို့လို့ ...  
+
+```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ ./clean_all.sh 
+Processed dev.my.syl and created dev.my.syl.rm
+Processed dev.rk.syl and created dev.rk.syl.rm
+Processed test.my.syl and created test.my.syl.rm
+Processed test.rk.syl and created test.rk.syl.rm
+Processed train.my.syl and created train.my.syl.rm
+Processed train.rk.syl and created train.rk.syl.rm
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ wc *.syl
+   2485   31708  301620 dev.my.syl
+   2485   31240  296112 dev.rk.syl
+   1811   23158  219371 test.my.syl
+   1811   22815  215386 test.rk.syl
+  14076  176702 1669753 train.my.syl
+  14076  174173 1644153 train.rk.syl
+  36744  459796 4346395 total
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ wc *.syl.rm
+   2484   31681  301416 dev.my.syl.rm
+   2484   31211  295917 dev.rk.syl.rm
+   1810   23143  219262 test.my.syl.rm
+   1810   22794  215276 test.rk.syl.rm
+  14075  176429 1668505 train.my.syl.rm
+  14075  173969 1643135 train.rk.syl.rm
+  36738  459227 4343511 total
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ 
+```
+
+## Next  
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
