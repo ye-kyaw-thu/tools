@@ -304,4 +304,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 117. [char_segmentation.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/char_segmentation.py)  
 118. [fasttext_format_converter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fasttext_format_converter.py)  
 119. [run_sylbreak.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/run_sylbreak.py)  
+120. [rm_zwnj_zwsp_hsp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_zwnj_zwsp_hsp.py)  
 
