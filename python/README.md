@@ -359,3 +359,6 @@
 
 119. [run_sylbreak.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/run_sylbreak.py)  
 (Machine translation မလုပ်ခင်မှာ source langauge အတွက်ကော၊ target language အတွက်ကော syllable breaking လုပ်တာမျိုး လုပ်လေ့ရှိပါတယ်။ အဲဒီအလုပ်အတွက် သုံးခဲ့တဲ့ Python code ပါ။)  
+
+120. [rm_zwnj_zwsp_hsp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_zwnj_zwsp_hsp.py)  
+(မမြင်ရတဲ့ ZWNJ, ZWSP, HSP character တွေကို ဖယ်ဖို့ ရေးခဲ့တဲ့ python code ပါ။)  
