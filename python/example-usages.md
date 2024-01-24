@@ -11146,40 +11146,139 @@ optional arguments:
 
 ```
 
-## Next Program  
+## 119. [run_sylbreak.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/run_sylbreak.py)    
 
+Call --help  
+
+```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ python run_sylbreak.py --help
+usage: run_sylbreak.py [-h] [--source_extension SOURCE_EXTENSION]
+                       [--target_extension TARGET_EXTENSION]
+
+Process files with specified extensions.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --source_extension SOURCE_EXTENSION
+                        Source file extension
+  --target_extension TARGET_EXTENSION
+                        Target file extension
 
 ```
 
-```
+ဥပမာအနေနဲ့ မြန်မာ ကနေ ရခိုင် ကို neural machine translation လုပ်မယ်ဆိုရင် Source ဖိုင်တွေက အောက်ပါအတိုင်း ရှိလိမ့်မယ် ...  
 
 ```
-
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ ls *.my
+dev.my  test.my  train.my
 ```
 
-```
+Target language ဖြစ်အတွက် ရခိုင်ဘာသာစကားအတွက်က အောက်ပါအတိုင်း ဖြစ်လိမ့်မယ်။  
 
 ```
-
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ ls *.rk
+dev.rk  test.rk  train.rk
 ```
 
-```
+Source extension နဲ့ target extension ကို command line parameter အနေနဲ့ပေးပြီး run ရအောင် ...  
 
 ```
-
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ python ./run_sylbreak.py --source_extension my --target_extension rk
+Processed dev.my
+Processed train.my
+Processed test.my
+Processed dev.rk
+Processed train.rk
+Processed test.rk
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$
 ```
 
-```
+syllable မဖြတ်ရသေးတဲ့ မြန်မာစာ source ဖိုင်တွေက အောက်ပါအတိုင်း word level အကြမ်းဖျဉ်းဖြတ်ထားတယ်။  
 
 ```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ head -n 3 *.my
+==> dev.my <==
+ကျွန်တော် မနက်ဖြန် ကား အသစ် တွေ သွား ကြည့် မလို့ ။
+မင်း ဘာ တွေ သတင်းပေး မှာလဲ ။
+အကြံဉာဏ် ကောင်းတွေ လိုချင် လား ။
 
+==> test.my <==
+သူ အမှန်အတိုင်း မ ကျိန်ဆို ရဲ ဘူးလား ။
+ကျွန်တော်သာဆို ပြန်ပေး လိုက်မှာ ။
+ဆူပြီးတဲ့ ရေကို သောက် သင့်တယ် ။
+
+==> train.my <==
+မင်း အဲ့ဒါ ကို အခြား တစ်ခုနဲ့ မ ချိတ် ဘူးလား ။
+သူမ ဘယ်သူ့ကိုမှ မ မှတ်မိတော့ဘူး ။
+အဲ့ဒါ ကျွန်တော်တို့ အတွက် ခက်ခဲတယ် ။
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$
 ```
 
-```
+Syllable ဖြတ်ပြီးသား မြန်မာစာဖိုင်တွေက အောက်ပါအတိုင်း ရှိလိမ့်မယ်။  
 
 ```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ head -n 3 *.my.syl
+==> dev.my.syl <==
+ကျွန် တော် မ နက် ဖြန် ကား အ သစ် တွေ သွား ကြ ည့် မ လို့ ။
+မင်း ဘာ တွေ သ တင်း ပေး မှာ လဲ ။
+အ ကြံ ဉာဏ် ကောင်း တွေ လို ချင် လား ။
+
+==> test.my.syl <==
+သူ အ မှန် အ တိုင်း မ ကျိန် ဆို ရဲ ဘူး လား ။
+ကျွန် တော် သာ ဆို ပြန် ပေး လိုက် မှာ ။
+ဆူ ပြီး တဲ့ ရေ ကို သောက် သ င့် တယ် ။
+
+==> train.my.syl <==
+မင်း အဲ့ ဒါ ကို အ ခြား တစ် ခု နဲ့ မ ချိတ် ဘူး လား ။
+သူ မ ဘယ် သူ့ ကို မှ မ မှတ် မိ တော့ ဘူး ။
+အဲ့ ဒါ ကျွန် တော် တို့ အ တွက် ခက် ခဲ တယ် ။
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ 
+```
+
+ထိုနည်းလည်းကောင်း original target ဖြစ်တဲ့ ရခိုင်စာ ဖိုင်တွေက အောက်ပါအတိုင်း ရှိလိမ့်မယ်။  
 
 ```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ head -n 3 *.rk
+==> dev.rk <==
+ကျွန်တော် နက်ဖန် ကား အသစ် တိ လား ကြည့် ဖို့လို့ ။
+မင်း ဇာ တိ သတင်းပီး ဖို့လေး။
+အကြံဉာဏ် ကောင်းတိ လိုချင် လား ။
+
+==> test.rk <==
+သူ အမှန်အတိုင်း မ ကျိန်ဆို ရဲ  ပါလား။
+ကျွန်တော်ဆိုကေ ပြန်ပီး လိုက်ဖို့ ။
+ဆူပြီး ရီကို သောက် သင့်ရေ။
+
+==> train.rk <==
+မင်း ယင်းချင့် ကို အခြား တစ်ခုနန့်  မ ချိတ် ပါလား ။
+ထိုမချေ   တစ်ယောက်လေ့  မ မှတ်မိပါယာ ။
+ယင်းချင့် ကျွန်တော်  ရို့ အတွက် ခက်ခ ရေ ။
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$
+```
+
+Syllable ဖြတ်ပြီးသား target language ရခိုင်ဖိုင်တွေက အောက်ပါအတိုင်း ရလာပါလိမ့်မယ်။  
+
+```
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ head -n 3 *.rk.syl
+==> dev.rk.syl <==
+ကျွန် တော် နက် ဖန် ကား အ သစ် တိ လား ကြ ည့် ဖို့ လို့ ။
+မင်း ဇာ တိ သ တင်း ပီး ဖို့ လေး ။
+အ ကြံ ဉာဏ် ကောင်း တိ လို ချင် လား ။
+
+==> test.rk.syl <==
+သူ အ မှန် အ တိုင်း မ ကျိန် ဆို ရဲ ပါ လား ။
+ကျွန် တော် ဆို ကေ ပြန် ပီး လိုက် ဖို့ ။
+ဆူ ပြီး ရီ ကို သောက် သ င့် ရေ ။
+
+==> train.rk.syl <==
+မင်း ယင်း ချင့် ကို အ ခြား တစ် ခု နန့် မ ချိတ် ပါ လား ။
+ထို မ ချေ တစ် ယောက် လေ့ မ မှတ် မိ ပါ ယာ ။
+ယင်း ချင့် ကျွန် တော် ရို့ အ တွက် ခက် ခ ရေ ။
+(opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original$ 
+```
+
+## Next Program 
+
 
 ```
 
