@@ -1,3 +1,32 @@
+"""
+
+For cleaning non Burmese, Burmese numbers and all symbols.
+(ဒီ python code က ဗမာစာ NLP အလုပ်အတွက် တကယ်အသုံးဝယ်ပါတယ်။ 
+နံပါတ်တွေကိုလည်း ဖယ်ထားတယ်။ syllable dictionary ဆောက်ဖို့နဲ့ language model မဆောက်ခင်မှာ cleaning လုပ်ဖို့အတွက် သုံးခဲ့တယ်။)
+Written by Ye Kyaw Thu, LU Lab., Myanmar.
+Last updated: 10 Feb 2024
+
+Usage Example:  
+
+python ./clean_non_burmese.py --input ./all_file.syl --output ./all_file.syl.clean --verbose
+Removed 342155 unwanted characters
+
+Running with --space_cleaning
+
+(base) yekyaw.thu@gpu:~/exp/normalization/mk_syl_dict$ python ./clean_non_burmese.py --input ./all_file.syl --output ./all_file.syl.clean.sc --verbose --space_cleaning
+Removed 342155 unwanted characters
+
+Checked with wc:  
+
+(base) yekyaw.thu@gpu:~/exp/normalization/mk_syl_dict$ wc all_file.syl*
+   338597   4346925  41676004 all_file.syl
+   338597   4017777  40789462 all_file.syl.clean
+   338596   4017777  40466632 all_file.syl.clean.sc
+  1015790  12382479 122932098 total
+(base) yekyaw.thu@gpu:~/exp/normalization/mk_syl_dict$
+
+"""
+
 import sys
 import argparse
 import errno
