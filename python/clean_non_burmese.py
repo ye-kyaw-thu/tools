@@ -1,6 +1,6 @@
 """
 
-For cleaning non Burmese, Burmese numbers and all symbols.
+Useful for cleaning invisible characters such as ZWNJ, ZWSP, non Burmese characters, Burmese numbers and all symbols.
 (ဒီ python code က ဗမာစာ NLP အလုပ်အတွက် တကယ်အသုံးဝယ်ပါတယ်။ 
 နံပါတ်တွေကိုလည်း ဖယ်ထားတယ်။ syllable dictionary ဆောက်ဖို့နဲ့ language model မဆောက်ခင်မှာ cleaning လုပ်ဖို့အတွက် သုံးခဲ့တယ်။)
 Written by Ye Kyaw Thu, LU Lab., Myanmar.
@@ -8,10 +8,33 @@ Last updated: 10 Feb 2024
 
 Usage Example:  
 
+## Call --help
+
+(LM) yekyaw.thu@gpu:~/exp/normalization/mk_syl_dict$ python ./clean_non_burmese.py --help
+usage: clean_non_burmese.py [-h] [--input INPUT] [--output OUTPUT] [--verbose]
+                            [--space_cleaning]
+
+Remove unwanted characters from text while preserving the overall structure
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input INPUT         Input file path
+  --output OUTPUT       Output file path
+  --verbose             Print counts of removed characters
+  --space_cleaning, -s  Clean up space characters (remove leading/trailing spaces,
+                        multiple spaces)
+(LM) yekyaw.thu@gpu:~/exp/normalization/mk_syl_dict$
+
+## without Space Cleaning
+
+Note: အောက်ပါအတိုင်း run ရင် ဘယ်နေရာက စာလုံးတွေကို ဖျက်သွားတယ် ဆိုတာကို လူအတွက် manual စစ်ရတာ လွယ်တယ်။ သို့သော် space အပိုတွေ အနေနဲ့ ရှိနေလိမ့်မယ်။   
+
 python ./clean_non_burmese.py --input ./all_file.syl --output ./all_file.syl.clean --verbose
 Removed 342155 unwanted characters
 
-Running with --space_cleaning
+## Running with --space_cleaning
+
+တကယ်ကတော့ အောက်ပါအတိုင်း --space_cleaning ဆိုတဲ့ option ကို ဖြည့်ပြီး run တာကမှ output cleaned file မှာ မလိုအပ်တဲ့ extra space တွေ ရှိမနေမှာ။  
 
 (base) yekyaw.thu@gpu:~/exp/normalization/mk_syl_dict$ python ./clean_non_burmese.py --input ./all_file.syl --output ./all_file.syl.clean.sc --verbose --space_cleaning
 Removed 342155 unwanted characters
