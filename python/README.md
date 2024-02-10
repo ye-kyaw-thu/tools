@@ -362,3 +362,6 @@
 
 120. [rm_zwnj_zwsp_hsp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_zwnj_zwsp_hsp.py)  
 (မမြင်ရတဲ့ ZWNJ, ZWSP, HSP character တွေကို ဖယ်ဖို့ ရေးခဲ့တဲ့ python code ပါ။)  
+
+121. [clean_non_burmese.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/clean_non_burmese.py)  
+(မမြင်ရတဲ့ ZWNJ, ZWSP တို့ကိုလည်းဖယ်မယ်။ ဗမာစာလုံး မဟုတ်တဲ့ နိုင်ငံခြားဘာသာစကားတွေကိုလည်း ဖယ်ချင်တယ်၊ ပြီးတော့ သင်္ကေတာတွေလည်း ဖယ်ဖို့အတွက် ရေးခဲ့တယ်။ ဒီ script က ဗမာစာ NLP အတွက်က မရှိမဖြစ် ပါပဲ)  
