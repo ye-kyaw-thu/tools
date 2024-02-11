@@ -365,3 +365,6 @@
 
 121. [clean_non_burmese.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/clean_non_burmese.py)  
 (မမြင်ရတဲ့ ZWNJ, ZWSP တို့ကိုလည်းဖယ်မယ်။ ဗမာစာလုံး မဟုတ်တဲ့ နိုင်ငံခြားဘာသာစကားတွေကိုလည်း ဖယ်ချင်တယ်၊ ပြီးတော့ သင်္ကေတာတွေလည်း ဖယ်ဖို့အတွက် ရေးခဲ့တယ်။ ဒီ script က ဗမာစာ NLP အတွက်က မရှိမဖြစ် ပါပဲ)  
+
+122. [eval_ngram_lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/eval_ngram_lm.py)  
+(for Ngram language model evaluation with test-data)    
