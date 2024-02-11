@@ -11377,19 +11377,215 @@ Processed train.rk.syl and created train.rk.syl.rm
 (opennmt) ye@lst-gpu-3090:~/exp/opennmt/data/myrk/original/syl$ 
 ```
 
-## Next  
+## 121. [eval_ngram_lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/eval_ngram_lm.py)  
+
+call --help for checking usage options ...  
 
 ```
+(LM) yekyaw.thu@gpu:~/exp/lm/kenlm$ python ./eval_ngram_lm.py --help
+usage: eval_ngram_lm.py [-h] -l LANGUAGE_MODEL -v VOCAB_FILE -t TEST_DATA [-p]
 
+Evaluate a language model.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -l LANGUAGE_MODEL, --language_model LANGUAGE_MODEL
+                        Path to the KenLM language model file
+  -v VOCAB_FILE, --vocab_file VOCAB_FILE
+                        Path to the vocabulary file
+  -t TEST_DATA, --test_data TEST_DATA
+                        Path to the test data file
+  -p, --perplexity      Calculate perplexity
+(LM) yekyaw.thu@gpu:~/exp/lm/kenlm$
 ```
 
-```
+Evaluation with test1.txt ...  
 
 ```
+(LM) yekyaw.thu@gpu:~/exp/lm/kenlm$ time python ./eval_ngram_lm.py --language_model ./model/5gram.arpa \
+--vocab_> --vocab_file ./corpus/vocab.txt --test_data ./corpus/test1.txt
+Loading the LM will be faster if you build a binary file.
+Reading /home/yekyaw.thu/exp/lm/kenlm/model/5gram.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+Sentence: <s> ကြိုးစား နေ ပါ တယ် </s>
+Log Probability Score: -8.356277465820312
+OOV Words:
+Number of OOV words: 0
+Next word suggestions:
+        ခင်ဗျာ  Score: -7.6588358879089355
+        ရှင်    Score: -7.86376953125
+        </s>    Score: -8.356277465820312
+        ဘုရား   Score: -8.382424354553223
+        ရှင့်   Score: -8.456396102905273
 
+Sentence: <s> အားလုံး ညှစ် တယ် </s>
+Log Probability Score: -9.53565788269043
+OOV Words:
+Number of OOV words: 0
+Next word suggestions:
+        </s>    Score: -9.53565788269043
+        တဲ့     Score: -10.213935852050781
+        လေ      Score: -10.232338905334473
+        နော်    Score: -10.288532257080078
+        ပေါ့    Score: -10.30185317993164
+
+Sentence: <s> လယ်ယာ လုပ်ငန်း ကို အဓိက လုပ်ကိုင် ပြီး မြန်မာ့ ဓလေ့ ဝါးဓနိ အိမ် များ အများစု စုဖွဲ့ တည်ရှိ နေ သည့် အေး ကျေးရွာ ၏ အဓိက ရေ အရင်းအမြစ် အဖြစ် စပါး ရေသွင်း စိုက်ပျိုး ရန် အတွက် နိုင်ငံတော် အစိုးရ က တူးမြောင်း တစ် ခု ဆောက်လုပ် ကာ ဧရာဝတီ မြစ် မှ ရေ ကို သွယ်ယူ ပေး ထား ပြီး ကျေးရွာလူထု သောက်သုံး ရန် ၊ ချက်ပြုတ် ရာ တွင် အသုံးပြု ရန် အတွက် မူ အဝီစိရေ သွယ်ယူ သည့် ပိုက် တစ် ခု သာ လျှင် ရှိ ပါ သည် ။ </s>
+Log Probability Score: -65.08269500732422
+OOV Words: ၊, ။
+Number of OOV words: 2
+Next word suggestions:
+        <s>     Score: -63.57292938232422
+        သည်     Score: -64.43460845947266
+        ပါ      Score: -64.46748352050781
+        တယ်     Score: -64.73475646972656
+        ၏       Score: -64.78410339355469
+
+Sentence: <s> သူ ဟာ ဘေးဘျမ်း ကင်းကင်း နဲ့ ပြန်ရောက် လာ ခဲ့ တယ် လေ ။ </s>
+Log Probability Score: -20.666202545166016
+OOV Words: ။
+Number of OOV words: 1
+Next word suggestions:
+        <s>     Score: -19.15643310546875
+        သည်     Score: -20.018110275268555
+        ပါ      Score: -20.050981521606445
+        တယ်     Score: -20.318260192871094
+        ၏       Score: -20.367610931396484
+
+Sentence: <s> အခု ချိန် မှာ ထိုင်ဝမ် က နေ ဗြိတိန် ကို တိုက်ရိုက် လေယာဉ် မ ရှိ ဘူး ။ ခင်ဗျား ဟောင်ကောင် က နေ တဆင့် သွား ရ မယ် ။ </s>
+Log Probability Score: -41.217063903808594
+OOV Words: ။, ။
+Number of OOV words: 2
+Next word suggestions:
+        <s>     Score: -39.70729446411133
+        သည်     Score: -40.568973541259766
+        ပါ      Score: -40.601844787597656
+        တယ်     Score: -40.86912155151367
+        ၏       Score: -40.91847229003906
+
+Sentence: <s> သူ့ ဘာသာ သူ ပြော ချင် ရာ ပြော ပြီး သူ့ ဘက် အဖော် လှည့် ညှိ သေး ၏ ။ </s>
+Log Probability Score: -25.022071838378906
+OOV Words: ။
+Number of OOV words: 1
+Next word suggestions:
+        <s>     Score: -23.51230239868164
+        သည်     Score: -24.373979568481445
+        ပါ      Score: -24.406850814819336
+        တယ်     Score: -24.674129486083984
+        ၏       Score: -24.723480224609375
+
+Sentence: <s> အန်ကယ် မနက် စောစော ထ ပြီး ပုံမှန် လမ်းလျှောက် ပေး ပါ လား ။ </s>
+Log Probability Score: -23.394229888916016
+OOV Words: ။
+Number of OOV words: 1
+Next word suggestions:
+        <s>     Score: -21.88446044921875
+        သည်     Score: -22.746137619018555
+        ပါ      Score: -22.779008865356445
+        တယ်     Score: -23.046287536621094
+        ၏       Score: -23.095638275146484
+
+Sentence: <s> ဒီလို လေး ပဲ အမြဲ ထာဝရ မြင် ချင် ပါ တယ် ခန့်စည်သူ ကို မ တွေ့ မိ ပါ လား နိုင်ငံတော် ကို ဖား ( အဲ လေ ) နိုင်ငံတော် အကျိုးပြု ဇာတ်ကား တွေ ရိုက် နေ ကျ အနုပညာရှင် တွေ က ရှေ့ ဆုံး တန်း မှာ ကွ ။ </s>
+Log Probability Score: -62.0733528137207
+OOV Words: (, ), ။
+Number of OOV words: 3
+Next word suggestions:
+        <s>     Score: -60.56358337402344
+        သည်     Score: -61.425262451171875
+        ပါ      Score: -61.458133697509766
+        တယ်     Score: -61.72541046142578
+        ၏       Score: -61.77476119995117
+
+Sentence: <s> ကျွန်တော့် ကို ပိုက်ဆံ နည်းနည်း ချေး မလား ။ </s>
+Log Probability Score: -19.40286636352539
+OOV Words: ။
+Number of OOV words: 1
+Next word suggestions:
+        <s>     Score: -17.893096923828125
+        သည်     Score: -18.75477409362793
+        ပါ      Score: -18.78764533996582
+        တယ်     Score: -19.05492401123047
+        ၏       Score: -19.10427474975586
+
+Sentence: <s> သူ က လူရင်း ပါ ။ </s>
+Log Probability Score: -19.079509735107422
+OOV Words: ။
+Number of OOV words: 1
+Next word suggestions:
+        <s>     Score: -17.569740295410156
+        သည်     Score: -18.43141746520996
+        ပါ      Score: -18.46428871154785
+        တယ်     Score: -18.7315673828125
+        ၏       Score: -18.78091812133789
+
+Total number of OOV words: 12
+
+real    0m9.781s
+user    0m9.559s
+sys     0m0.216s
+(LM) yekyaw.thu@gpu:~/exp/lm/kenlm$
 ```
 
+Evaluation with --perplexity command line argument ...  
+
 ```
+(LM) yekyaw.thu@gpu:~/exp/lm/kenlm$ time python ./eval_ngram_lm.py --language_model ./model/5gram.arpa --vocab_file ./corpus/vocab.txt --test_data ./corpus/test1.txt --perplexity
+Loading the LM will be faster if you build a binary file.
+Reading /home/yekyaw.thu/exp/lm/kenlm/model/5gram.arpa
+----5---10---15---20---25---30---35---40---45---50---55---60---65---70---75---80---85---90---95--100
+****************************************************************************************************
+Sentence: <s> ကြိုးစား နေ ပါ တယ် </s>
+Log Probability Score: -8.356277465820312
+OOV Words:
+Number of OOV words: 0
+Sentence: <s> အားလုံး ညှစ် တယ် </s>
+Log Probability Score: -9.53565788269043
+OOV Words:
+Number of OOV words: 0
+Sentence: <s> လယ်ယာ လုပ်ငန်း ကို အဓိက လုပ်ကိုင် ပြီး မြန်မာ့ ဓလေ့ ဝါးဓနိ အိမ် များ အများစု စုဖွဲ့ တည်ရှိ နေ သည့် အေး ကျေးရွာ ၏ အဓိက ရေ အရင်းအမြစ် အဖြစ် စပါး ရေသွင်း စိုက်ပျိုး ရန် အတွက် နိုင်ငံတော် အစိုးရ က တူးမြောင်း တစ် ခု ဆောက်လုပ် ကာ ဧရာဝတီ မြစ် မှ ရေ ကို သွယ်ယူ ပေး ထား ပြီး ကျေးရွာလူထု သောက်သုံး ရန် ၊ ချက်ပြုတ် ရာ တွင် အသုံးပြု ရန် အတွက် မူ အဝီစိရေ သွယ်ယူ သည့် ပိုက် တစ် ခု သာ လျှင် ရှိ ပါ သည် ။ </s>
+Log Probability Score: -65.08269500732422
+OOV Words: ၊, ။
+Number of OOV words: 2
+Sentence: <s> သူ ဟာ ဘေးဘျမ်း ကင်းကင်း နဲ့ ပြန်ရောက် လာ ခဲ့ တယ် လေ ။ </s>
+Log Probability Score: -20.666202545166016
+OOV Words: ။
+Number of OOV words: 1
+Sentence: <s> အခု ချိန် မှာ ထိုင်ဝမ် က နေ ဗြိတိန် ကို တိုက်ရိုက် လေယာဉ် မ ရှိ ဘူး ။ ခင်ဗျား ဟောင်ကောင် က နေ တဆင့် သွား ရ မယ် ။ </s>
+Log Probability Score: -41.217063903808594
+OOV Words: ။, ။
+Number of OOV words: 2
+Sentence: <s> သူ့ ဘာသာ သူ ပြော ချင် ရာ ပြော ပြီး သူ့ ဘက် အဖော် လှည့် ညှိ သေး ၏ ။ </s>
+Log Probability Score: -25.022071838378906
+OOV Words: ။
+Number of OOV words: 1
+Sentence: <s> အန်ကယ် မနက် စောစော ထ ပြီး ပုံမှန် လမ်းလျှောက် ပေး ပါ လား ။ </s>
+Log Probability Score: -23.394229888916016
+OOV Words: ။
+Number of OOV words: 1
+Sentence: <s> ဒီလို လေး ပဲ အမြဲ ထာဝရ မြင် ချင် ပါ တယ် ခန့်စည်သူ ကို မ တွေ့ မိ ပါ လား နိုင်ငံတော် ကို ဖား ( အဲ လေ ) နိုင်ငံတော် အကျိုးပြု ဇာတ်ကား တွေ ရိုက် နေ ကျ အနုပညာရှင် တွေ က ရှေ့ ဆုံး တန်း မှာ ကွ ။ </s>
+Log Probability Score: -62.0733528137207
+OOV Words: (, ), ။
+Number of OOV words: 3
+Sentence: <s> ကျွန်တော့် ကို ပိုက်ဆံ နည်းနည်း ချေး မလား ။ </s>
+Log Probability Score: -19.40286636352539
+OOV Words: ။
+Number of OOV words: 1
+Sentence: <s> သူ က လူရင်း ပါ ။ </s>
+Log Probability Score: -19.079509735107422
+OOV Words: ။
+Number of OOV words: 1
+
+10 sentences, 207 words
+logprob= -293.829927444458
+Total number of OOV words: 12
+
+real    0m6.523s
+user    0m6.263s
+sys     0m0.256s
+(LM) yekyaw.thu@gpu:~/exp/lm/kenlm$
+```
+
+## Next 
 
 ```
 
