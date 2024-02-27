@@ -367,4 +367,7 @@
 (မမြင်ရတဲ့ ZWNJ, ZWSP တို့ကိုလည်းဖယ်မယ်။ ဗမာစာလုံး မဟုတ်တဲ့ နိုင်ငံခြားဘာသာစကားတွေကိုလည်း ဖယ်ချင်တယ်၊ ပြီးတော့ သင်္ကေတာတွေလည်း ဖယ်ဖို့အတွက် ရေးခဲ့တယ်။ ဒီ script က ဗမာစာ NLP အတွက်က မရှိမဖြစ် ပါပဲ)  
 
 122. [eval_ngram_lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/eval_ngram_lm.py)  
-(for Ngram language model evaluation with test-data)    
+(for Ngram language model evaluation with test-data)  
+
+123. [parquet_extractor.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/parquet_extractor.py)  
+(Big Data ecosystem တွေဖြစ်တဲ့ Apache Hadoop, Apache Spark နဲ့ Apache Arrow တို့မှာ ဖိုင်တွေကို သိမ်းတဲ့အခါမှာ .parquet ဆိုတဲ့ format နဲ့ သိမ်းလေ့ရှိတယ်။ အဲဒီဖိုင်ကို ဖြေဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ)  
