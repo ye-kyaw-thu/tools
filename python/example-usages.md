@@ -11585,7 +11585,108 @@ sys     0m0.256s
 (LM) yekyaw.thu@gpu:~/exp/lm/kenlm$
 ```
 
-## Next 
+## 123. [parquet_extractor.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/parquet_extractor.py)   
+
+Python library တွေကတော့ ကိုယ့်စက်ထဲမှာ မရှိသေးရင် install လုပ်ရလိမ့်မယ်။ လုပ်တဲ့အခါမှာလည်း ပုံမှန်အတိုင်း pip install ဆိုပြီး သွားလို့ ရတဲ့အခါမျိုးလည်း ရှိပေမဲ့ ကိုယ်သုံးနေတဲ့ server setting နဲ့ Anaconda environment တွေရဲ့ setting ပေါ်မူတည်ပြီး အောက်မှာ ပြထားသလိုမျိုး ကိုယ်သုံးမယ့် Python version ကို အတိအကျ ခေါ်ပြီးမှ python -m pip install ဆိုပြီး လုပ်ရတဲ့ အခါမျိုးလည်း ရှိနိုင်တယ်။  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$ /home/ye/anaconda3/bin/python -m pip install pyarrow
+WARNING: Keyring is skipped due to an exception: Failed to unlock the collection!
+Collecting pyarrow
+  Downloading pyarrow-15.0.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (38.5 MB)
+     |████████████████████████████████| 38.5 MB 2.0 MB/s
+Requirement already satisfied: numpy<2,>=1.16.6 in /home/ye/anaconda3/lib/python3.8/site-packages (from pyarrow) (1.19.2)
+Installing collected packages: pyarrow
+Successfully installed pyarrow-15.0.0
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$
+```
+
+```
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$ /home/ye/anaconda3/bin/python -m pip install fastparquet
+WARNING: Keyring is skipped due to an exception: Failed to unlock the collection!
+Collecting fastparquet
+  Downloading fastparquet-2024.2.0-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (1.7 MB)
+     |████████████████████████████████| 1.7 MB 2.0 MB/s
+Collecting numpy>=1.20.3
+  Downloading numpy-1.24.4-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.3 MB)
+     |████████████████████████████████| 17.3 MB 81.2 MB/s
+Collecting pandas>=1.5.0
+  Downloading pandas-2.0.3-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.4 MB)
+     |████████████████████████████████| 12.4 MB 83.3 MB/s
+Requirement already satisfied: packaging in /home/ye/anaconda3/lib/python3.8/site-packages (from fastparquet) (20.4)
+Collecting cramjam>=2.3
+  Downloading cramjam-2.8.1-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.0 MB)
+     |████████████████████████████████| 2.0 MB 85.6 MB/s
+Requirement already satisfied: fsspec in /home/ye/anaconda3/lib/python3.8/site-packages (from fastparquet) (0.8.3)
+Requirement already satisfied: pytz>=2020.1 in /home/ye/anaconda3/lib/python3.8/site-packages (from pandas>=1.5.0->fastparquet) (2020.1)
+Collecting python-dateutil>=2.8.2
+  Downloading python_dateutil-2.8.2-py2.py3-none-any.whl (247 kB)
+     |████████████████████████████████| 247 kB 86.7 MB/s
+Collecting tzdata>=2022.1
+  Downloading tzdata-2024.1-py2.py3-none-any.whl (345 kB)
+     |████████████████████████████████| 345 kB 88.1 MB/s
+Requirement already satisfied: pyparsing>=2.0.2 in /home/ye/anaconda3/lib/python3.8/site-packages (from packaging->fastparquet) (2.4.7)
+Requirement already satisfied: six in /home/ye/anaconda3/lib/python3.8/site-packages (from packaging->fastparquet) (1.15.0)
+Installing collected packages: numpy, python-dateutil, tzdata, pandas, cramjam, fastparquet
+  Attempting uninstall: numpy
+    Found existing installation: numpy 1.19.2
+    Uninstalling numpy-1.19.2:
+      Successfully uninstalled numpy-1.19.2
+  Attempting uninstall: python-dateutil
+    Found existing installation: python-dateutil 2.8.1
+    Uninstalling python-dateutil-2.8.1:
+      Successfully uninstalled python-dateutil-2.8.1
+  Attempting uninstall: pandas
+    Found existing installation: pandas 1.1.3
+    Uninstalling pandas-1.1.3:
+      Successfully uninstalled pandas-1.1.3
+ERROR: After October 2020 you may experience errors when installing or updating packages. This is because pip will change the way that it resolves dependency conflicts.
+
+We recommend you use --use-feature=2020-resolver to test your packages with the new resolver before it becomes the default.
+
+transformers 4.38.1 requires huggingface-hub<1.0,>=0.19.3, which is not installed.
+transformers 4.38.1 requires safetensors>=0.4.1, which is not installed.
+transformers 4.38.1 requires tokenizers<0.19,>=0.14, which is not installed.
+nlpatl 0.0.4.dev0 requires scikit-learn>=1.0.1, but you'll have scikit-learn 0.23.2 which is incompatible.
+nlpatl 0.0.4.dev0 requires scipy>=1.7.0, but you'll have scipy 1.5.2 which is incompatible.
+Successfully installed cramjam-2.8.1 fastparquet-2024.2.0 numpy-1.24.4 pandas-2.0.3 python-dateutil-2.8.2 tzdata-2024.1
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$
+```
+
+.parquet ဖိုင်တစ်ဖိုင်ကို ဖြေကြည့်ရအောင် ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$ time python parquet_extractor.py --parquet_file ./train-00000-of-00001-d3450385c0ae3f98.parquet
+/home/ye/anaconda3/lib/python3.8/site-packages/pandas/core/computation/expressions.py:20: UserWarning: Pandas requires version '2.7.3' or newer of 'numexpr' (version '2.7.1' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+Parquet file './train-00000-of-00001-d3450385c0ae3f98.parquet' extracted to 'train-00000-of-00001-d3450385c0ae3f98.csv'
+
+real    0m3.648s
+user    0m5.081s
+sys     0m2.824s
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$
+```
+
+ဖြေပြီးသား ဖိုင်ရဲ့ ထိပ်ဆုံး ၁၀ကြောင်းကို ရိုက်ထုတ်ခိုင်းကြည့်ပြီး extraction လုပ်တာက အဆင်ပြေရဲ့လား confirm လုပ်ကြည့်ရအောင် ....  
+
+
+```
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$ head train-00000-of-00001-d3450385c0ae3f98.csv
+response,prompt
+". Determine the cause of the clog. Clogs in kitchen drains can be caused by food, grease, soap scum, and other debris.
+
+2. If you have a plunger, try using it to dislodge the clog. Make sure to cover any drain and overflow openings with a towel to create a tight seal. Use your plunger in a steady up-and-down motion.
+
+3. If a plunger doesn’t remove the clog, you may need to use a drain auger (also known as a “snake”) to remove it. You can rent one from a hardware store or purchase one online.
+
+4. If a drain auger fails to remove the clog, you may need to disassemble the pipe and use a hand-held plumber’s snake and/or rigid wire to try and break up the clog.
+
+5. Consider calling a professional plumber if your kitchen drain continues to remain clogged after all of these steps.","What’s the best way to fix my kitchen drain?
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$
+```
+
+
+## Next ?
 
 ```
 
