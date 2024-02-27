@@ -11685,6 +11685,21 @@ response,prompt
 (base) ye@lst-gpu-server-197:~/ye/4github/parquet$
 ```
 
+ဖြေလိုက်တဲ့ csv or text ဖိုင်က 93M ရှိတာကို တွေ့ရပါလိမ့်မယ်။  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$ ls -lh ./train-00000-of-00001-d3450385c0ae3f98.*
+-rw-rw-r-- 1 ye ye 93M Feb 27 18:50 ./train-00000-of-00001-d3450385c0ae3f98.csv
+-rw-rw-r-- 1 ye ye 60M Feb 27 18:39 ./train-00000-of-00001-d3450385c0ae3f98.parquet
+```
+file command နဲ့ ဖိုင်အမျိုးအစားကို ရိုက်ထုတ်ခိုင်းရင် အောက်ပါလိုမျိုး မြင်တွေ့ရပါလိမ့်မယ်။  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$ file ./train*
+./train-00000-of-00001-d3450385c0ae3f98.csv:     CSV text
+./train-00000-of-00001-d3450385c0ae3f98.parquet: Apache Parquet
+(base) ye@lst-gpu-server-197:~/ye/4github/parquet$
+```
 
 ## Next ?
 
