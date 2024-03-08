@@ -371,3 +371,6 @@
 
 123. [parquet_extractor.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/parquet_extractor.py)  
 (Big Data ecosystem တွေဖြစ်တဲ့ Apache Hadoop, Apache Spark နဲ့ Apache Arrow တို့မှာ ဖိုင်တွေကို သိမ်းတဲ့အခါမှာ .parquet ဆိုတဲ့ format နဲ့ သိမ်းလေ့ရှိတယ်။ အဲဒီဖိုင်ကို ဖြေဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ)  
+
+124. [g2p-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/g2p-compare.py)  
+(word level g2p model ထွက်လာတဲ့ original phoneme tagging ဖိုင်နဲ့ manual checked လုပ်ထားတဲ့ phoneme tagging ဖိုင်နှစ်ခုအကြားကို compare လုပ်ကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code)  
