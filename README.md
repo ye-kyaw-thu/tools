@@ -307,3 +307,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 120. [rm_zwnj_zwsp_hsp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_zwnj_zwsp_hsp.py)  
 122. [eval_ngram_lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/eval_ngram_lm.py)  
 123. [parquet_extractor.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/parquet_extractor.py)  
+124. [g2p-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/g2p-compare.py)  
