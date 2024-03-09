@@ -11753,6 +11753,225 @@ $ head extract-word.txt
 3, 10:  တယ်/te  တယ်/de
 ```
 
+## 125. [extract-ReMeDi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract-ReMeDi.py)    
+
+Original corpus format:   
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 54)' ReMeDi-large-0.json
+{
+  "dialogue": 54,
+  "information": [
+    {
+      "turn": 0,
+      "role": "patient",
+      "sentence": "缺铁性贫血应该吃什么（女，15岁）",
+      "actions": [
+        {
+          "slot": "disease",
+          "aspect": "贫血",
+          "intent": "Inform"
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "role": "doctor",
+      "sentence": "饮食治疗是治疗轻度贫血的有效手段之一。以下食物有利于改善贫血症状和补充造血功能的营养成分，应注意选用。 　　富含优质蛋白质的食物如蛋类、乳类、鱼类、瘦肉类、虾及豆类等。 　　富含维生素C的食物新鲜的水果和绿色蔬菜，如酸枣、杏、橘子、山楂、西红柿、苦瓜、青柿椒、生菜、青笋等。维生素C有参与造血、促进铁吸收利用的功能。 　　富含铁的食物鸡肝、猪肝、牛羊肾脏、瘦肉、蛋黄、海带、黑芝麻、芝麻酱、黑木耳、黄豆、蘑菇、红糖、油菜、芹菜等。铁是构成血液的主要成分，缺铁性贫血者较为常见。 　　上述食物在日常饮食中应注意调配，尽量做到食物的多样化。",
+      "actions": [
+        {
+          "slot": "temperature",
+          "aspect": "含铁",
+          "intent": "Recommend",
+          "value": "度"
+        }
+      ]
+    }
+  ]
+}
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
+```
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 55)' ReMeDi-large-0.json
+{
+  "dialogue": 55,
+  "information": [
+    {
+      "turn": 0,
+      "role": "patient",
+      "sentence": "不能排除所有胎儿畸形是什么意思（女，32岁）",
+      "actions": [
+        {
+          "slot": "disease",
+          "aspect": "胎儿畸形",
+          "intent": "Inform"
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "role": "doctor",
+      "sentence": "你好，做B超的医生一般都是这样提示的，不能排除胎儿所有畸形。就是也有看不到的地方。",
+      "actions": [
+        {
+          "intent": "Inform"
+        }
+      ]
+    }
+  ]
+}
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
+```
+
+Prepared bash shell script for extraction ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ cat extract_all.sh
+#!/bin/bash
+
+# Loop through all JSON files in the directory
+for json_file in *.json; do
+    # Extract the dialogue number from the filename
+    dialogue_number=$(basename "$json_file" .json | grep -oE '[0-9]+')
+
+    # Run the extract.py script for the current JSON file
+    python extract-ReMeDi.py "$json_file" "${dialogue_number}.txt"
+done
+```
+
+Before extraction ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ ls
+extract_all.sh        ReMeDi-large-13.json  ReMeDi-large-1.json  ReMeDi-large-8.json
+extract-ReMeDi.py     ReMeDi-large-14.json  ReMeDi-large-2.json  ReMeDi-large-9.json
+ReMeDi-large-0.json   ReMeDi-large-15.json  ReMeDi-large-3.json  tmp
+ReMeDi-large-10.json  ReMeDi-large-16.json  ReMeDi-large-4.json
+ReMeDi-large-11.json  ReMeDi-large-17.json  ReMeDi-large-5.json
+ReMeDi-large-12.json  ReMeDi-large-18.json  ReMeDi-large-6.json
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
+```
+
+Run the above shell script ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ time ./extract_all.sh
+Sentences extracted and saved to 0.txt
+Sentences extracted and saved to 10.txt
+Sentences extracted and saved to 11.txt
+Sentences extracted and saved to 12.txt
+Sentences extracted and saved to 13.txt
+Sentences extracted and saved to 14.txt
+Sentences extracted and saved to 15.txt
+Sentences extracted and saved to 16.txt
+Sentences extracted and saved to 17.txt
+Sentences extracted and saved to 18.txt
+Sentences extracted and saved to 1.txt
+Sentences extracted and saved to 2.txt
+Sentences extracted and saved to 3.txt
+Sentences extracted and saved to 4.txt
+Sentences extracted and saved to 5.txt
+Sentences extracted and saved to 6.txt
+Sentences extracted and saved to 8.txt
+Sentences extracted and saved to 9.txt
+
+real    0m13.414s
+user    0m10.596s
+sys     0m2.849s
+```
+
+Folder and file information after running the bash shell script or extraction:   
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ ls
+0.txt   17.txt  8.txt                 ReMeDi-large-13.json  ReMeDi-large-3.json
+10.txt  18.txt  9.txt                 ReMeDi-large-14.json  ReMeDi-large-4.json
+11.txt  1.txt   extract_all.sh        ReMeDi-large-15.json  ReMeDi-large-5.json
+12.txt  2.txt   extract-ReMeDi.py     ReMeDi-large-16.json  ReMeDi-large-6.json
+13.txt  3.txt   ReMeDi-large-0.json   ReMeDi-large-17.json  ReMeDi-large-8.json
+14.txt  4.txt   ReMeDi-large-10.json  ReMeDi-large-18.json  ReMeDi-large-9.json
+15.txt  5.txt   ReMeDi-large-11.json  ReMeDi-large-1.json   tmp
+16.txt  6.txt   ReMeDi-large-12.json  ReMeDi-large-2.json
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
+```
+
+Let's see the extracted output file format ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ head -n 30 ./
+0.txt
+Dialogue 0:
+patient: 感冒能做普通的胃镜吗（男，24岁）
+doctor: 你好，有没有发烧？扁桃体肿大吗？
+patient: 发烧倒是没有喉咙上面有点疼痛
+doctor: 那就晚些时间再做吧。
+patient: 不能做是吗
+doctor: 是的，因为胃镜的管子会通过咽喉部的。
+
+Dialogue 1:
+patient: 前列腺增生可以服用仁青芒觉吗（男，51岁）
+doctor: 你好         可以的
+patient: 我服用温肾前列胶囊和仁青芒觉
+doctor: 可以
+doctor: 这两个都属于中成药
+doctor: 一般性情比较温和
+patient: 没付作用吧
+patient: 我是轻微的前列腺增生
+doctor: 嗯嗯   排尿费力症状明显吗
+patient: 排尿没问题现在就是小腹坠胀和夜尿多一夜尿四次
+doctor: 哦
+doctor: 可以先通过这两个药物改善
+doctor: 如果效果不明显可以改服坦索罗辛缓释胶囊
+
+Dialogue 2:
+patient: 先兆流产孩子保得住吗（女，25岁）
+doctor: 你好，只能说先用上保胎药试下
+patient: 吃了一个星期的保胎药了
+patient: 我就下面有点褐色分泌物 躺床上就没有时间上厕所会带出来一点
+doctor: 那还可以，褐色分泌物是积存的，不要紧张
+patient: 吃了保胎药好很多了 我就是想问下我最后一次月经是3月1号 怀孕多久了啊
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
+```
+
+Let's check one more output file ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ head -n 30 18
+.txt
+Dialogue 0:
+patient: 女人气虚体寒怎么调理（女，34岁）
+doctor: 您好，很荣幸解答您的疑惑
+doctor: 请问这种情况大概多久了？
+patient: 1年
+doctor: 有什么表现呢？
+patient: 全身疲倦乏力、声音低沉、动则气短、易出汗，头晕心悸、食欲不振，虚热，自汗舌淡而胖
+doctor: 您好，您这是脾虚肾虚的表现啊
+doctor: 排便怎么样？
+patient: 还可以。一天两次
+doctor: 成型吗？
+patient: 成行
+doctor: 您好，请问您平时吃什么药了吗？
+patient: 不吃药
+doctor: 您可以吃点中成药
+doctor: 参苓白术散，适合您的病症
+doctor: 平时多喝生姜红糖水
+patient: 怎么副用
+doctor: 按说明吃就可以
+patient: 好的
+patient: 谢谢
+doctor: 武大夫希望您早日康复，身体健康
+patient: 晚安
+doctor: ^_^晚安
+
+Dialogue 1:
+patient: 我的是鼻甲肥大怎么治疗最好（男，26岁）
+doctor: 你有些什么症状？如鼻塞，流涕，头昏痛？
+patient: 请问做一个等离子消融手术有职工医保需要多少费用
+doctor: 这个跟地区和医院级别有关，如果只做下鼻甲等离子消融，在四川三甲医院大概在七千左右，医保报销后具体要用多少就不知道了
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
+```
+
 ## Next ?!  
 
 ```
@@ -11767,6 +11986,75 @@ $ head extract-word.txt
 
 ```
 
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
