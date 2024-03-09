@@ -309,3 +309,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 123. [parquet_extractor.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/parquet_extractor.py)  
 124. [g2p-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/g2p-compare.py)  
 125. [extract-ReMeDi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract-ReMeDi.py)  
+126. [split-sentences-by-pipe.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-sentences-by-pipe.py)   
