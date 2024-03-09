@@ -11757,8 +11757,9 @@ $ head extract-word.txt
 
 Original corpus format:   
 
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 54)' ReMeDi-large-0.json  
+
 ```json
-(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 54)' ReMeDi-large-0.json
 {
   "dialogue": 54,
   "information": [
@@ -11789,11 +11790,11 @@ Original corpus format:
     }
   ]
 }
-(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
 ```
 
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 55)' ReMeDi-large-0.json  
+
 ```json
-(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 55)' ReMeDi-large-0.json
 {
   "dialogue": 55,
   "information": [
@@ -11821,7 +11822,6 @@ Original corpus format:
     }
   ]
 }
-(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
 ```
 
 Prepared bash shell script for extraction ...  
