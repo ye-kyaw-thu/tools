@@ -11899,8 +11899,7 @@ Folder and file information after running the bash shell script or extraction:
 Let's see the extracted output file format ...  
 
 ```
-(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ head -n 30 ./
-0.txt
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ head -n 30 ./0.txt
 Dialogue 0:
 patient: 感冒能做普通的胃镜吗（男，24岁）
 doctor: 你好，有没有发烧？扁桃体肿大吗？
@@ -11937,8 +11936,7 @@ patient: 吃了保胎药好很多了 我就是想问下我最后一次月经是3
 Let's check one more output file ...  
 
 ```
-(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ head -n 30 18
-.txt
+(base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ head -n 30 18.txt
 Dialogue 0:
 patient: 女人气虚体寒怎么调理（女，34岁）
 doctor: 您好，很荣幸解答您的疑惑
