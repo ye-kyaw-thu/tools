@@ -376,4 +376,9 @@
 (word level g2p model ထွက်လာတဲ့ original phoneme tagging ဖိုင်နဲ့ manual checked လုပ်ထားတဲ့ phoneme tagging ဖိုင်နှစ်ခုအကြားကို compare လုပ်ကြည့်ဖို့အတွက် ရေးခဲ့တဲ့ code)
 
 125. [extract-ReMeDi.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/extract-ReMeDi.py)  
-(ReMeDi Chinese corpus က json ဖိုင်၊ အဲဒီဖိုင်ထဲကနေ ကိုယ်လိုချင်တဲ့ field သုံးခုကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)  
+(ReMeDi Chinese corpus က json ဖိုင်၊ အဲဒီဖိုင်ထဲကနေ ကိုယ်လိုချင်တဲ့ field သုံးခုကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)   
+
+126. [split-sentences-by-pipe.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-sentences-by-pipe.py)   
+(စာကြောင်းတွေကို pipe နဲ့ခြားထားတဲ့ တစ်လိုင်းထဲ ဖြစ်နေတဲ့ Harry Porter data ဖိုင်ထဲက စာကြောင်းတွေကို တစ်ကြောင်းချင်းစီ ဆွဲထုတ်ဖို့ ရေးခဲ့တဲ့ code)
+
+ 
