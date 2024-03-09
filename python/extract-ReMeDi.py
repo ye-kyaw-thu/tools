@@ -1,6 +1,7 @@
 """
 ReMeDi corpus က medical domain dialogue တရုတ်စကားပြောဒေတာပါ။  
 အဲဒီ corpus ကနေ ကိုယ်လိုချင်တဲ့ dialogue ID ရယ်၊ ဒေါက်တာကပြောတဲ့ စာကြောင်းရယ်၊ လူနာက ပြောတဲ့စာကြောင်းတွေရယ်ကို ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ code ပါ။  
+Written by Ye Kyaw Thu, Visiting Professor, NECTEC, Thailand.  
 Last updated: 8 Mar 2024
 Usage: python extract_sentences.py <json_file> <output_file>
 """
