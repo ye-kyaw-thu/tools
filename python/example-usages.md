@@ -11757,7 +11757,7 @@ $ head extract-word.txt
 
 Original corpus format:   
 
-```
+```json
 (base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 54)' ReMeDi-large-0.json
 {
   "dialogue": 54,
@@ -11792,7 +11792,7 @@ Original corpus format:
 (base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$
 ```
 
-```
+```json
 (base) ye@lst-gpu-server-197:~/ye/data/ReMeDi/medical_dialogue/ReMeDi-large$ jq '.[] | select(.dialogue == 55)' ReMeDi-large-0.json
 {
   "dialogue": 55,
