@@ -305,6 +305,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 118. [fasttext_format_converter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/fasttext_format_converter.py)  
 119. [run_sylbreak.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/run_sylbreak.py)  
 120. [rm_zwnj_zwsp_hsp.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_zwnj_zwsp_hsp.py)  
+121. [clean_non_burmese.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/clean_non_burmese.py)  
 122. [eval_ngram_lm.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/eval_ngram_lm.py)  
 123. [parquet_extractor.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/parquet_extractor.py)  
 124. [g2p-compare.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/g2p-compare.py)  
