@@ -12089,7 +12089,92 @@ Keitaရဲ့ Outfitကတော့ <အင်္ကျီ> က Neon Greenန�
 (base) ye@lst-gpu-server-197:~/ye/data/spelling/format-conv$
 ```
 
-## 
+## 128. [wtc-paste.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wtc-paste.py)  
+
+ပရိုဂရမ် နံပါတ် 127 နဲ့ ဆက်စပ်နေတဲ့ ပရိုဂရမ်ပါ။ အထက်က format-conv.py နဲ့ ဆွဲထုတ်ပြီးတော့ ထွက်လာတဲ့ output ဖိုင်သုံးဖိုင်ကို paste လုပ်ဖို့အတွက် ရေးခဲ့တာပါ။  
+
+Usage example က အောက်ပါအတိုင်းပါ။  
+
+```
+python wtc-paste.py --wrong ./w.txt --tagged ./t.txt --correct \
+./c.txt > wrong-tagged-correct.txt
+```
+
+ဖိုင်သုံးဖိုင် ပေါင်းပြီးထွက်လာမယ့် output က အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/data/spelling/format-conv$ head -n 12 wrong-tagged-corre
+ct.txt
+<စိတိ> အုပ်ထွက်ရင်အားပေးပါမယ် <အ> ကိုရေ
+$typo $keep $pho $keep
+<စာ> အုပ်ထွက်ရင်အားပေးပါမယ် <အစ်> ကိုရေ
+
+<တစ်> ချို့ဟာတွေက <ကျန်> <မား> ရေးနဲ့မညီ <ညွှတ်> တဲ့ဟာတွေကို ချရောင်းနေတာရှိသ <လို့> တကယ်သန့်ရှင်း <လက်> <ဆက်> တဲ့ foodတွေလဲရှိပါတယ်
+$pho $keep $typo $typo $keep $typo $keep $keep $typo $keep $pho $pho $keep $keep
+<တ> ချို့ဟာတွေက <ကျန်း> <မာ> ရေးနဲ့မညီ <ညွတ်> တဲ့ဟာတွေကို ချရောင်းနေတာရှိသ <လို> တကယ်သန့်ရှင်း <လတ်> <ဆတ်> တဲ့ foodတွေလဲရှိပါတယ်
+
+မေ့နိုင်အောင် <ကြိူး> စားပါ။
+$keep $typo $keep
+မေ့နိုင်အောင် <ကြိုး> စားပါ။
+
+(base) ye@lst-gpu-server-197:~/ye/data/spelling/format-conv$
+```
+
+Manual ပြန်စစ်ဖို့အတွက်ကျတော့ အထက်ပါလိုမျိုး တွဲထားမှ အဆင်ပြေတာမို့လို့ ...  
+
+## Next?!  
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
