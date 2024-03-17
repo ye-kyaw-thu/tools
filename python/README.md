@@ -381,7 +381,7 @@
 126. [split-sentences-by-pipe.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/split-sentences-by-pipe.py)   
 (စာကြောင်းတွေကို pipe နဲ့ခြားထားတဲ့ တစ်လိုင်းထဲ ဖြစ်နေတဲ့ Harry Porter data ဖိုင်ထဲက စာကြောင်းတွေကို တစ်ကြောင်းချင်းစီ ဆွဲထုတ်ဖို့ ရေးခဲ့တဲ့ code)  
 
-127. [https://github.com/ye-kyaw-thu/tools/blob/master/python/format-conv.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format-conv.py)  
+127. [format-conv.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/format-conv.py)  
 (Spelling corpus ကို သတ်မှတ်ထားတဲ့ format တစ်ခုနဲ့ ကျောင်းသားတွေကို ပြင်ဆင်ခိုင်းခဲ့တယ်။ အဲဒီ corpus ဖိုင်ကနေ အမှားစာကြောင်း၊ spelling error type စာကြောင်းနဲ့ အမှန်ပြင်ထားတဲ့ စာကြောင်းတွေကို သပ်သပ်စီဆွဲထုတ်ပြီး၊ ဖိုင် တစ်ဖိုင်စီမှာ ခွဲသိမ်းဖို့ ရေးခဲ့တဲ့ python code ပါ)    
 
  
