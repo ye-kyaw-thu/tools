@@ -12122,7 +12122,405 @@ $keep $typo $keep
 
 Manual ပြန်စစ်ဖို့အတွက်ကျတော့ အထက်ပါလိုမျိုး တွဲထားမှ အဆင်ပြေတာမို့လို့ ...  
 
-## Next?!  
+## 129. [cv-split.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cv-split.py)    
+
+
+## Hold Out
+
+(base) yekyaw.thu@gpu:~/4github/cv$ head 100.km
+អ៊ីតាលី បាន ឈ្នះ លើ ព័រទុយហ្គាល់ 31-5 ក្នុង ប៉ូល C នៃ ពិធី ប្រកួត ពាន រង្វាន់ ពិភព លោក នៃ កីឡា បាល់ ឱប ឆ្នាំ 2007 ដែល ប្រព្រឹត្ត នៅ ប៉ាស ឌេស ប្រីន ក្រុង ប៉ារីស បារាំង ។
+អេនត្រា ម៉ាស៊ី បាន ស៊ុត ចូល ក្នុង នាទី ទី បួន គ្រា ដំបូង នៃ ពាក់ កណ្តាល សំរាប់ អ៊ីតាលី ។
+ទោះបី បាន គ្រប់ គ្រង ក្នុង គ្រា ដំបូង នៃ វគ្គ ពាក់ កណ្តាល ដំបូង ក៏ ដោយ អ៊ីតាលី មិន បាន បន្ថែម ពិន្ទុ មុន នឹង សំរាក បាន ឡើយ តែ ដេវីត បូតុលូសស៊ី បាន ទាត់ ចូល ៣ គ្រាប់ នៃ បាល់ ពិន័យ ហើយ ពង្វាត បន្ថែម ទៀត នៃ ការ នាំ មុខ ។
+ព័រទុយហ្គាល់ មិន ដក ថយ ឡើយ ហើយ ដេវីត ផេណាលវ៉ា បាន ស៊ុត ចូល ក្នុង នាទី ទី ៣៣ ដែល ជា ពិន្ទុ តែ មួយ គត់ របស់ ពួក គេ ក្នុង ការ ប្រគួត នោះ ។
+អ៊ីតាលី 16-5 បាន នាំ មុខ ក្នុង វគ្គ ដំបូង តែ ត្រូវ ព័រទុយហ្គាល់ មក ជិត ទាន់ ក្នុង វគ្គ ពាក់ កណ្តាល ចុង ក្រោយ ។
+យ៉ាង ណា ក៏ ដោយ បូតុលូសស៊ី ស៊ុត ចូល លើក ទី ៤ នៃ ការ ទាត់ បាល់ ពិន័យ នៃ ប្រកួត នេះ ហើយ បន្ទាប់ មក ម័ររូ ប៊ីហ្គាម៉ាស្កូ និង អេនត្រា ម៉ាស៊ី បាន ស៊ុត ចូល នាំ អោយ អ៊ីតាលី ឈ្នះ ។
+ឥឡូវ នេះ បាន ៨ ពិន្ទុ ក្នុង ចំណាត់ថ្នាក់ ទី ៣ នៃ ក្រុម C អ៊ីតាលី បាន ប្រកួត យ៉ាង តឹងតែង ជាមួយ ចំណាត់ថ្នាក់ ទី ២ ស្កុតឡេន នៅ ថ្ងៃ ទី 29 ខែ កញ្ញា ។
+ញូវ សាឡេន បាន នាំ មុខ នៅ ក្នុង ក្រុម មាន ១០ ពិន្ទុ ឈរ លើ ស្កុតឡេន ដោយសារ ពិន្ទុ ខុស គ្នា ។
+ព័រទុយហ្គាល់ ស្ថិត នៅ ក្រោម គេ ក្នុង ក្រុម ដោយ គ្មាន ពិន្ទុ បន្ទាប់ ពី រ៉ូមេនា មាន មួយ ពិន្ទុ ។
+ទិន្នន័យ មួយ ចំនួន របស់ ជន ជាតិ អង់គ្លេស ក្នុង ចំណោម 3 លាន នាក់ ដែល បាន ដាក់ ពាក្យ " ប្រឡង ទ្រឹស្តី " សំរាប់ ទទួល ប័ណ្ណ បើក បរ ត្រូវ បាត់ បង់ នៅ រដ្ឋ អ័រវ៉ា សហ រដ្ឋ អាមេរិក ។
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --met
+hod holdout --test_size 0.2
+
+real    0m2.189s
+user    0m0.403s
+sys     0m0.068s
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --met
+hod holdout --test_size 0.2
+
+real    0m2.189s
+user    0m0.403s
+sys     0m0.068s
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./holdout/
+test.txt  train.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/train.txt
+   80  2590 33112 ./holdout/train.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/test.txt
+  20  706 8965 ./holdout/test.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --method holdout --test_size 0.3
+
+real    0m0.322s
+user    0m0.286s
+sys     0m0.036s
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/train.txt
+   70  2326 29701 ./holdout/train.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/test.txt
+   30   970 12376 ./holdout/test.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+## K-Fold
+
+5-fold
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./5-fold --meth
+od kfold -k 5
+
+real    0m0.330s
+user    0m0.325s
+sys     0m0.004s
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./5-fold/
+test_fold_1.txt  test_fold_3.txt  test_fold_5.txt   train_fold_2.txt  train_fold_4.txt
+test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold_5.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./5-fold/train*.txt
+    80   2557  32547 ./5-fold/train_fold_1.txt
+    80   2573  32721 ./5-fold/train_fold_2.txt
+    80   2814  35913 ./5-fold/train_fold_3.txt
+    80   2698  34338 ./5-fold/train_fold_4.txt
+    80   2542  32789 ./5-fold/train_fold_5.txt
+   400  13184 168308 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./5-fold/test*.txt
+   20   739  9530 ./5-fold/test_fold_1.txt
+   20   723  9356 ./5-fold/test_fold_2.txt
+   20   482  6164 ./5-fold/test_fold_3.txt
+   20   598  7739 ./5-fold/test_fold_4.txt
+   20   754  9288 ./5-fold/test_fold_5.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+10-fold
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./10-fold --met
+hod kfold -k 10
+
+real    0m0.431s
+user    0m0.295s
+sys     0m0.048s
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./10-fold/
+test_fold_10.txt  test_fold_4.txt  test_fold_8.txt    train_fold_2.txt  train_fold_6.txt
+test_fold_1.txt   test_fold_5.txt  test_fold_9.txt    train_fold_3.txt  train_fold_7.txt
+test_fold_2.txt   test_fold_6.txt  train_fold_10.txt  train_fold_4.txt  train_fold_8.txt
+test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fold_9.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./10-fold/train*.txt
+    90   2867  36692 ./10-fold/train_fold_10.txt
+    90   3019  38460 ./10-fold/train_fold_1.txt
+    90   2834  36164 ./10-fold/train_fold_2.txt
+    90   2849  36509 ./10-fold/train_fold_3.txt
+    90   3020  38289 ./10-fold/train_fold_4.txt
+    90   3051  38805 ./10-fold/train_fold_5.txt
+    90   3059  39185 ./10-fold/train_fold_6.txt
+    90   2969  37804 ./10-fold/train_fold_7.txt
+    90   3025  38611 ./10-fold/train_fold_8.txt
+    90   2971  38174 ./10-fold/train_fold_9.txt
+   900  29664 378693 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./10-fold/test*.txt
+   10   429  5385 ./10-fold/test_fold_10.txt
+   10   277  3617 ./10-fold/test_fold_1.txt
+   10   462  5913 ./10-fold/test_fold_2.txt
+   10   447  5568 ./10-fold/test_fold_3.txt
+   10   276  3788 ./10-fold/test_fold_4.txt
+   10   245  3272 ./10-fold/test_fold_5.txt
+   10   237  2892 ./10-fold/test_fold_6.txt
+   10   327  4273 ./10-fold/test_fold_7.txt
+   10   271  3466 ./10-fold/test_fold_8.txt
+   10   325  3903 ./10-fold/test_fold_9.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+leave one out
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./leave-one-out --method leaveoneout
+
+real    0m2.563s
+user    0m0.379s
+sys     0m0.039s
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-one-out/
+test_100.txt  test_40.txt  test_71.txt    train_11.txt  train_42.txt  train_73.txt
+test_10.txt   test_41.txt  test_72.txt    train_12.txt  train_43.txt  train_74.txt
+test_11.txt   test_42.txt  test_73.txt    train_13.txt  train_44.txt  train_75.txt
+test_12.txt   test_43.txt  test_74.txt    train_14.txt  train_45.txt  train_76.txt
+test_13.txt   test_44.txt  test_75.txt    train_15.txt  train_46.txt  train_77.txt
+test_14.txt   test_45.txt  test_76.txt    train_16.txt  train_47.txt  train_78.txt
+test_15.txt   test_46.txt  test_77.txt    train_17.txt  train_48.txt  train_79.txt
+test_16.txt   test_47.txt  test_78.txt    train_18.txt  train_49.txt  train_7.txt
+test_17.txt   test_48.txt  test_79.txt    train_19.txt  train_4.txt   train_80.txt
+test_18.txt   test_49.txt  test_7.txt     train_1.txt   train_50.txt  train_81.txt
+test_19.txt   test_4.txt   test_80.txt    train_20.txt  train_51.txt  train_82.txt
+test_1.txt    test_50.txt  test_81.txt    train_21.txt  train_52.txt  train_83.txt
+test_20.txt   test_51.txt  test_82.txt    train_22.txt  train_53.txt  train_84.txt
+test_21.txt   test_52.txt  test_83.txt    train_23.txt  train_54.txt  train_85.txt
+test_22.txt   test_53.txt  test_84.txt    train_24.txt  train_55.txt  train_86.txt
+test_23.txt   test_54.txt  test_85.txt    train_25.txt  train_56.txt  train_87.txt
+test_24.txt   test_55.txt  test_86.txt    train_26.txt  train_57.txt  train_88.txt
+test_25.txt   test_56.txt  test_87.txt    train_27.txt  train_58.txt  train_89.txt
+test_26.txt   test_57.txt  test_88.txt    train_28.txt  train_59.txt  train_8.txt
+test_27.txt   test_58.txt  test_89.txt    train_29.txt  train_5.txt   train_90.txt
+test_28.txt   test_59.txt  test_8.txt     train_2.txt   train_60.txt  train_91.txt
+test_29.txt   test_5.txt   test_90.txt    train_30.txt  train_61.txt  train_92.txt
+test_2.txt    test_60.txt  test_91.txt    train_31.txt  train_62.txt  train_93.txt
+test_30.txt   test_61.txt  test_92.txt    train_32.txt  train_63.txt  train_94.txt
+test_31.txt   test_62.txt  test_93.txt    train_33.txt  train_64.txt  train_95.txt
+test_32.txt   test_63.txt  test_94.txt    train_34.txt  train_65.txt  train_96.txt
+test_33.txt   test_64.txt  test_95.txt    train_35.txt  train_66.txt  train_97.txt
+test_34.txt   test_65.txt  test_96.txt    train_36.txt  train_67.txt  train_98.txt
+test_35.txt   test_66.txt  test_97.txt    train_37.txt  train_68.txt  train_99.txt
+test_36.txt   test_67.txt  test_98.txt    train_38.txt  train_69.txt  train_9.txt
+test_37.txt   test_68.txt  test_99.txt    train_39.txt  train_6.txt
+test_38.txt   test_69.txt  test_9.txt     train_3.txt   train_70.txt
+test_39.txt   test_6.txt   train_100.txt  train_40.txt  train_71.txt
+test_3.txt    test_70.txt  train_10.txt   train_41.txt  train_72.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-one-out/{train_1,test_1}.txt
+   99  3264 41652 ./leave-one-out/train_1.txt
+    1    32   425 ./leave-one-out/test_1.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-one-out/{train_2,test_2}.txt
+   99  3279 41844 ./leave-one-out/train_2.txt
+    1    17   233 ./leave-one-out/test_2.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-one-out/{train_100,test_100}.txt
+   99  3250 41518 ./leave-one-out/train_100.txt
+    1    46   559 ./leave-one-out/test_100.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+leave p out
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./leave-p3-out --method leavepout -p 3
+
+real    1m0.935s
+user    0m21.243s
+sys     0m11.005s
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-p3-out/ | head
+test_100000.txt
+test_100001.txt
+test_100002.txt
+test_100003.txt
+test_100004.txt
+test_100005.txt
+test_100006.txt
+test_100007.txt
+test_100008.txt
+test_100009.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-p3-out/ | tail
+train_99994.txt
+train_99995.txt
+train_99996.txt
+train_99997.txt
+train_99998.txt
+train_99999.txt
+train_9999.txt
+train_999.txt
+train_99.txt
+train_9.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-p3-out/ | wc
+ 323400  323400 5113890
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/train_1.txt
+   97  3203 40853 ./leave-p3-out/train_1.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/test_1.txt
+   3   93 1224 ./leave-p3-out/test_1.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/train_100000.txt
+   97  3201 40886 ./leave-p3-out/train_100000.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/test_100000.txt
+   3   95 1191 ./leave-p3-out/test_100000.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/train_99999.txt
+   97  3203 40923 ./leave-p3-out/train_99999.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/test_99999.txt
+   3   93 1154 ./leave-p3-out/test_99999.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+Stratified k-fold cross-validation
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./s-5k-fold --method stratifiedkfold -k 5
+
+real    0m0.367s
+user    0m0.303s
+sys     0m0.036s
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./s-5k-fold/
+test_fold_1.txt  test_fold_3.txt  test_fold_5.txt   train_fold_2.txt  train_fold_4.txt
+test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold_5.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-5k-fold/train*.txt
+    80   2557  32547 ./s-5k-fold/train_fold_1.txt
+    80   2573  32721 ./s-5k-fold/train_fold_2.txt
+    80   2814  35913 ./s-5k-fold/train_fold_3.txt
+    80   2698  34338 ./s-5k-fold/train_fold_4.txt
+    80   2542  32789 ./s-5k-fold/train_fold_5.txt
+   400  13184 168308 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-5k-fold/test*.txt
+   20   739  9530 ./s-5k-fold/test_fold_1.txt
+   20   723  9356 ./s-5k-fold/test_fold_2.txt
+   20   482  6164 ./s-5k-fold/test_fold_3.txt
+   20   598  7739 ./s-5k-fold/test_fold_4.txt
+   20   754  9288 ./s-5k-fold/test_fold_5.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./s-10k-fold --
+method stratifiedkfold -k 10
+
+real    0m0.534s
+user    0m0.454s
+sys     0m0.060s
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./s-10k-fold/
+test_fold_10.txt  test_fold_4.txt  test_fold_8.txt    train_fold_2.txt  train_fold_6.txt
+test_fold_1.txt   test_fold_5.txt  test_fold_9.txt    train_fold_3.txt  train_fold_7.txt
+test_fold_2.txt   test_fold_6.txt  train_fold_10.txt  train_fold_4.txt  train_fold_8.txt
+test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fold_9.txt
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-10k-fold/train*.txt
+    90   2867  36692 ./s-10k-fold/train_fold_10.txt
+    90   3019  38460 ./s-10k-fold/train_fold_1.txt
+    90   2834  36164 ./s-10k-fold/train_fold_2.txt
+    90   2849  36509 ./s-10k-fold/train_fold_3.txt
+    90   3020  38289 ./s-10k-fold/train_fold_4.txt
+    90   3051  38805 ./s-10k-fold/train_fold_5.txt
+    90   3059  39185 ./s-10k-fold/train_fold_6.txt
+    90   2969  37804 ./s-10k-fold/train_fold_7.txt
+    90   3025  38611 ./s-10k-fold/train_fold_8.txt
+    90   2971  38174 ./s-10k-fold/train_fold_9.txt
+   900  29664 378693 total
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-10k-fold/test*.txt
+   10   429  5385 ./s-10k-fold/test_fold_10.txt
+   10   277  3617 ./s-10k-fold/test_fold_1.txt
+   10   462  5913 ./s-10k-fold/test_fold_2.txt
+   10   447  5568 ./s-10k-fold/test_fold_3.txt
+   10   276  3788 ./s-10k-fold/test_fold_4.txt
+   10   245  3272 ./s-10k-fold/test_fold_5.txt
+   10   237  2892 ./s-10k-fold/test_fold_6.txt
+   10   327  4273 ./s-10k-fold/test_fold_7.txt
+   10   271  3466 ./s-10k-fold/test_fold_8.txt
+   10   325  3903 ./s-10k-fold/test_fold_9.txt
+  100  3296 42077 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+Repeated k-fold cross-validation
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r3-5k-fold --
+method repeatedkfold -k 5 --n_repeats 3
+
+real    0m0.334s
+user    0m0.298s
+sys     0m0.036s
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./r3-5k-fold/
+test_fold_10.txt  test_fold_1.txt  test_fold_7.txt    train_fold_13.txt  train_fold_4.txt
+test_fold_11.txt  test_fold_2.txt  test_fold_8.txt    train_fold_14.txt  train_fold_5.txt
+test_fold_12.txt  test_fold_3.txt  test_fold_9.txt    train_fold_15.txt  train_fold_6.txt
+test_fold_13.txt  test_fold_4.txt  train_fold_10.txt  train_fold_1.txt   train_fold_7.txt
+test_fold_14.txt  test_fold_5.txt  train_fold_11.txt  train_fold_2.txt   train_fold_8.txt
+test_fold_15.txt  test_fold_6.txt  train_fold_12.txt  train_fold_3.txt   train_fold_9.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./r3-5k-fold/ | wc
+     30      30     507
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./r3-5k-fold/train*.txt
+    80   2624  33446 ./r3-5k-fold/train_fold_10.txt
+    80   2656  33906 ./r3-5k-fold/train_fold_11.txt
+    80   2539  32700 ./r3-5k-fold/train_fold_12.txt
+    80   2610  33196 ./r3-5k-fold/train_fold_13.txt
+    80   2639  33556 ./r3-5k-fold/train_fold_14.txt
+    80   2740  34950 ./r3-5k-fold/train_fold_15.txt
+    80   2585  33032 ./r3-5k-fold/train_fold_1.txt
+    80   2648  33684 ./r3-5k-fold/train_fold_2.txt
+    80   2682  34156 ./r3-5k-fold/train_fold_3.txt
+    80   2664  34171 ./r3-5k-fold/train_fold_4.txt
+    80   2605  33265 ./r3-5k-fold/train_fold_5.txt
+    80   2643  33952 ./r3-5k-fold/train_fold_6.txt
+    80   2608  33118 ./r3-5k-fold/train_fold_7.txt
+    80   2630  33842 ./r3-5k-fold/train_fold_8.txt
+    80   2679  33950 ./r3-5k-fold/train_fold_9.txt
+  1200  39552 504924 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./r3-5k-fold/test*.txt
+    20    672   8631 ./r3-5k-fold/test_fold_10.txt
+    20    640   8171 ./r3-5k-fold/test_fold_11.txt
+    20    757   9377 ./r3-5k-fold/test_fold_12.txt
+    20    686   8881 ./r3-5k-fold/test_fold_13.txt
+    20    657   8521 ./r3-5k-fold/test_fold_14.txt
+    20    556   7127 ./r3-5k-fold/test_fold_15.txt
+    20    711   9045 ./r3-5k-fold/test_fold_1.txt
+    20    648   8393 ./r3-5k-fold/test_fold_2.txt
+    20    614   7921 ./r3-5k-fold/test_fold_3.txt
+    20    632   7906 ./r3-5k-fold/test_fold_4.txt
+    20    691   8812 ./r3-5k-fold/test_fold_5.txt
+    20    653   8125 ./r3-5k-fold/test_fold_6.txt
+    20    688   8959 ./r3-5k-fold/test_fold_7.txt
+    20    666   8235 ./r3-5k-fold/test_fold_8.txt
+    20    617   8127 ./r3-5k-fold/test_fold_9.txt
+   300   9888 126231 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r2-3k-fold --
+method repeatedkfold -k 3 --n_repeats 2
+
+real    0m0.344s
+user    0m0.307s
+sys     0m0.036s
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./r2-3k-fold/
+test_fold_1.txt  test_fold_4.txt  train_fold_1.txt  train_fold_4.txt
+test_fold_2.txt  test_fold_5.txt  train_fold_2.txt  train_fold_5.txt
+test_fold_3.txt  test_fold_6.txt  train_fold_3.txt  train_fold_6.txt
+(base) yekyaw.thu@gpu:~/4github/cv$ ls ./r2-3k-fold/ | wc
+     12      12     198
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./r2-3k-fold/train*.txt
+    66   2172  27616 ./r2-3k-fold/train_fold_1.txt
+    67   2189  28036 ./r2-3k-fold/train_fold_2.txt
+    67   2231  28502 ./r2-3k-fold/train_fold_3.txt
+    66   2006  25694 ./r2-3k-fold/train_fold_4.txt
+    67   2315  29676 ./r2-3k-fold/train_fold_5.txt
+    67   2271  28784 ./r2-3k-fold/train_fold_6.txt
+   400  13184 168308 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+(base) yekyaw.thu@gpu:~/4github/cv$ wc ./r2-3k-fold/test*.txt
+   34  1124 14461 ./r2-3k-fold/test_fold_1.txt
+   33  1107 14041 ./r2-3k-fold/test_fold_2.txt
+   33  1065 13575 ./r2-3k-fold/test_fold_3.txt
+   34  1290 16383 ./r2-3k-fold/test_fold_4.txt
+   33   981 12401 ./r2-3k-fold/test_fold_5.txt
+   33  1025 13293 ./r2-3k-fold/test_fold_6.txt
+  200  6592 84154 total
+(base) yekyaw.thu@gpu:~/4github/cv$
+
+
 
 ```
 
