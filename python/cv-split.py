@@ -4,6 +4,7 @@ Written by Ye Kyaw Thu, LU Lab., Myanmar
 Last updated: 18 Mar 2024
 
 Usage:
+python ./cv-split.py --help
 time python cv-split.py -i ./100.km -o ./holdout --method holdout --test_size 0.2
 time python cv-split.py -i ./100.km -o ./5-fold --method kfold -k 5
 time python cv-split.py -i ./100.km -o ./leave-one-out --method leaveoneout
