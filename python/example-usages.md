@@ -12124,9 +12124,43 @@ Manual ပြန်စစ်ဖို့အတွက်ကျတော့ အထ
 
 ## 129. [cv-split.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cv-split.py)    
 
+ဒီ cv-split.py code နဲ့ cross-validation method ခြောက်မျိုးအတွက် ခွဲတာကို ဒီမို လုပ်ပြထားတယ်။  
+တခု သိထားရမှာက တချို့ method တွေက သီအိုရီအရ ရှိနေပေမဲ့ လုပ်တဲ့ experiment ပေါ်မူတည်ပြီး လက်တွေ့မှာ မသုံးကြတာမျိုးလည်း ရှိတယ်။  
 
-## Hold Out
+command line program တွေကို သုံးတဲ့ပုံစံအတိုင်း အရင်ဆုံး help ခေါ်လိုက်ပြီး option တွေကို လေ့လာကြည့်ပါ။  
 
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ python ./cv-split.py --help
+usage: cv-split.py [-h] [-i INPUT_FILE] [-o OUTPUT_FOLDER]
+                   [--method {holdout,kfold,leaveoneout,leavepout,stratifiedkfold,repeatedkfold}]
+                   [-k K_VALUE] [-p P_VALUE] [--test_size TEST_SIZE]
+                   [--n_repeats N_REPEATS]
+
+Split input file based on specified cross-validation method
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -i INPUT_FILE, --input_file INPUT_FILE
+                        Input file path
+  -o OUTPUT_FOLDER, --output_folder OUTPUT_FOLDER
+                        Output folder path
+  --method {holdout,kfold,leaveoneout,leavepout,stratifiedkfold,repeatedkfold}
+                        Cross-validation method
+  -k K_VALUE, --k_value K_VALUE
+                        Value of k for k-fold cross-validation
+  -p P_VALUE, --p_value P_VALUE
+                        Value of p for leave-p-out cross-validation
+  --test_size TEST_SIZE
+                        Fraction of the dataset to include in the test split
+                        for holdout method
+  --n_repeats N_REPEATS
+                        Number of times cross-validator needs to be repeated
+(base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+ဥပမာအနေနဲ့ run ပြဖို့အတွက်က စာကြောင်းရေ အကြောင်း ၁၀၀ တိတိရှိတဲ့ အောက်ပါ 100.km ဆိုတဲ့ ခမာစာရိုက်ထားတဲ့ ဖိုင်ကို သုံးပါမယ်။  
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ head 100.km
 អ៊ីតាលី បាន ឈ្នះ លើ ព័រទុយហ្គាល់ 31-5 ក្នុង ប៉ូល C នៃ ពិធី ប្រកួត ពាន រង្វាន់ ពិភព លោក នៃ កីឡា បាល់ ឱប ឆ្នាំ 2007 ដែល ប្រព្រឹត្ត នៅ ប៉ាស ឌេស ប្រីន ក្រុង ប៉ារីស បារាំង ។
 អេនត្រា ម៉ាស៊ី បាន ស៊ុត ចូល ក្នុង នាទី ទី បួន គ្រា ដំបូង នៃ ពាក់ កណ្តាល សំរាប់ អ៊ីតាលី ។
@@ -12139,21 +12173,29 @@ Manual ပြန်စစ်ဖို့အတွက်ကျတော့ အထ
 ព័រទុយហ្គាល់ ស្ថិត នៅ ក្រោម គេ ក្នុង ក្រុម ដោយ គ្មាន ពិន្ទុ បន្ទាប់ ពី រ៉ូមេនា មាន មួយ ពិន្ទុ ។
 ទិន្នន័យ មួយ ចំនួន របស់ ជន ជាតិ អង់គ្លេស ក្នុង ចំណោម 3 លាន នាក់ ដែល បាន ដាក់ ពាក្យ " ប្រឡង ទ្រឹស្តី " សំរាប់ ទទួល ប័ណ្ណ បើក បរ ត្រូវ បាត់ បង់ នៅ រដ្ឋ អ័រវ៉ា សហ រដ្ឋ អាមេរិក ។
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --met
-hod holdout --test_size 0.2
+## Hold Out
+
+ကိုယ် လုပ်မယ့် cross-validation method ကို --method option နဲ့ assign လုပ်ပေးသွားပါ။  
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --method holdout --test_size 0.2
 
 real    0m2.189s
 user    0m0.403s
 sys     0m0.068s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --met
-hod holdout --test_size 0.2
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --method holdout --test_size 0.2
 
 real    0m2.189s
 user    0m0.403s
 sys     0m0.068s
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./holdout/
 test.txt  train.txt
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/train.txt
@@ -12161,33 +12203,44 @@ test.txt  train.txt
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/test.txt
   20  706 8965 ./holdout/test.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./holdout --method holdout --test_size 0.3
 
 real    0m0.322s
 user    0m0.286s
 sys     0m0.036s
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/train.txt
    70  2326 29701 ./holdout/train.txt
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./holdout/test.txt
    30   970 12376 ./holdout/test.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
 ## K-Fold
 
-5-fold
+5-fold ခွဲမယ် ...  
 
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./5-fold --meth
-od kfold -k 5
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./5-fold --method kfold -k 5
 
 real    0m0.330s
 user    0m0.325s
 sys     0m0.004s
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./5-fold/
 test_fold_1.txt  test_fold_3.txt  test_fold_5.txt   train_fold_2.txt  train_fold_4.txt
 test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold_5.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./5-fold/train*.txt
     80   2557  32547 ./5-fold/train_fold_1.txt
     80   2573  32721 ./5-fold/train_fold_2.txt
@@ -12196,6 +12249,9 @@ test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold
     80   2542  32789 ./5-fold/train_fold_5.txt
    400  13184 168308 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./5-fold/test*.txt
    20   739  9530 ./5-fold/test_fold_1.txt
    20   723  9356 ./5-fold/test_fold_2.txt
@@ -12204,23 +12260,29 @@ test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold
    20   754  9288 ./5-fold/test_fold_5.txt
   100  3296 42077 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-10-fold
+10-fold ခွဲမယ် ...    
 
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./10-fold --met
-hod kfold -k 10
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./10-fold --method kfold -k 10
 
 real    0m0.431s
 user    0m0.295s
 sys     0m0.048s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./10-fold/
 test_fold_10.txt  test_fold_4.txt  test_fold_8.txt    train_fold_2.txt  train_fold_6.txt
 test_fold_1.txt   test_fold_5.txt  test_fold_9.txt    train_fold_3.txt  train_fold_7.txt
 test_fold_2.txt   test_fold_6.txt  train_fold_10.txt  train_fold_4.txt  train_fold_8.txt
 test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fold_9.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./10-fold/train*.txt
     90   2867  36692 ./10-fold/train_fold_10.txt
     90   3019  38460 ./10-fold/train_fold_1.txt
@@ -12234,6 +12296,9 @@ test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fo
     90   2971  38174 ./10-fold/train_fold_9.txt
    900  29664 378693 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./10-fold/test*.txt
    10   429  5385 ./10-fold/test_fold_10.txt
    10   277  3617 ./10-fold/test_fold_1.txt
@@ -12247,16 +12312,20 @@ test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fo
    10   325  3903 ./10-fold/test_fold_9.txt
   100  3296 42077 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-leave one out
+## Leave One Out  
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./leave-one-out --method leaveoneout
 
 real    0m2.563s
 user    0m0.379s
 sys     0m0.039s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-one-out/
 test_100.txt  test_40.txt  test_71.txt    train_11.txt  train_42.txt  train_73.txt
 test_10.txt   test_41.txt  test_72.txt    train_12.txt  train_43.txt  train_74.txt
@@ -12293,30 +12362,42 @@ test_38.txt   test_69.txt  test_9.txt     train_3.txt   train_70.txt
 test_39.txt   test_6.txt   train_100.txt  train_40.txt  train_71.txt
 test_3.txt    test_70.txt  train_10.txt   train_41.txt  train_72.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-one-out/{train_1,test_1}.txt
    99  3264 41652 ./leave-one-out/train_1.txt
     1    32   425 ./leave-one-out/test_1.txt
   100  3296 42077 total
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-one-out/{train_2,test_2}.txt
    99  3279 41844 ./leave-one-out/train_2.txt
     1    17   233 ./leave-one-out/test_2.txt
   100  3296 42077 total
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-one-out/{train_100,test_100}.txt
    99  3250 41518 ./leave-one-out/train_100.txt
     1    46   559 ./leave-one-out/test_100.txt
   100  3296 42077 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-leave p out
+## Leave p Out
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./leave-p3-out --method leavepout -p 3
 
 real    1m0.935s
 user    0m21.243s
 sys     0m11.005s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-p3-out/ | head
 test_100000.txt
 test_100001.txt
@@ -12328,6 +12409,9 @@ test_100006.txt
 test_100007.txt
 test_100008.txt
 test_100009.txt
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-p3-out/ | tail
 train_99994.txt
 train_99995.txt
@@ -12340,11 +12424,15 @@ train_999.txt
 train_99.txt
 train_9.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./leave-p3-out/ | wc
  323400  323400 5113890
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/train_1.txt
    97  3203 40853 ./leave-p3-out/train_1.txt
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/test_1.txt
@@ -12360,20 +12448,27 @@ train_9.txt
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./leave-p3-out/test_99999.txt
    3   93 1154 ./leave-p3-out/test_99999.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-Stratified k-fold cross-validation
+## Stratified k-fold Cross-validation
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./s-5k-fold --method stratifiedkfold -k 5
 
 real    0m0.367s
 user    0m0.303s
 sys     0m0.036s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./s-5k-fold/
 test_fold_1.txt  test_fold_3.txt  test_fold_5.txt   train_fold_2.txt  train_fold_4.txt
 test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold_5.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-5k-fold/train*.txt
     80   2557  32547 ./s-5k-fold/train_fold_1.txt
     80   2573  32721 ./s-5k-fold/train_fold_2.txt
@@ -12382,6 +12477,9 @@ test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold
     80   2542  32789 ./s-5k-fold/train_fold_5.txt
    400  13184 168308 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-5k-fold/test*.txt
    20   739  9530 ./s-5k-fold/test_fold_1.txt
    20   723  9356 ./s-5k-fold/test_fold_2.txt
@@ -12390,21 +12488,27 @@ test_fold_2.txt  test_fold_4.txt  train_fold_1.txt  train_fold_3.txt  train_fold
    20   754  9288 ./s-5k-fold/test_fold_5.txt
   100  3296 42077 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./s-10k-fold --
-method stratifiedkfold -k 10
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./s-10k-fold --method stratifiedkfold -k 10
 
 real    0m0.534s
 user    0m0.454s
 sys     0m0.060s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./s-10k-fold/
 test_fold_10.txt  test_fold_4.txt  test_fold_8.txt    train_fold_2.txt  train_fold_6.txt
 test_fold_1.txt   test_fold_5.txt  test_fold_9.txt    train_fold_3.txt  train_fold_7.txt
 test_fold_2.txt   test_fold_6.txt  train_fold_10.txt  train_fold_4.txt  train_fold_8.txt
 test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fold_9.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-10k-fold/train*.txt
     90   2867  36692 ./s-10k-fold/train_fold_10.txt
     90   3019  38460 ./s-10k-fold/train_fold_1.txt
@@ -12417,6 +12521,9 @@ test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fo
     90   3025  38611 ./s-10k-fold/train_fold_8.txt
     90   2971  38174 ./s-10k-fold/train_fold_9.txt
    900  29664 378693 total
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./s-10k-fold/test*.txt
    10   429  5385 ./s-10k-fold/test_fold_10.txt
    10   277  3617 ./s-10k-fold/test_fold_1.txt
@@ -12430,16 +12537,20 @@ test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fo
    10   325  3903 ./s-10k-fold/test_fold_9.txt
   100  3296 42077 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-Repeated k-fold cross-validation
+## Repeated k-fold Cross-validation
 
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r3-5k-fold --
-method repeatedkfold -k 5 --n_repeats 3
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r3-5k-fold --method repeatedkfold -k 5 --n_repeats 3
 
 real    0m0.334s
 user    0m0.298s
 sys     0m0.036s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./r3-5k-fold/
 test_fold_10.txt  test_fold_1.txt  test_fold_7.txt    train_fold_13.txt  train_fold_4.txt
 test_fold_11.txt  test_fold_2.txt  test_fold_8.txt    train_fold_14.txt  train_fold_5.txt
@@ -12447,9 +12558,15 @@ test_fold_12.txt  test_fold_3.txt  test_fold_9.txt    train_fold_15.txt  train_f
 test_fold_13.txt  test_fold_4.txt  train_fold_10.txt  train_fold_1.txt   train_fold_7.txt
 test_fold_14.txt  test_fold_5.txt  train_fold_11.txt  train_fold_2.txt   train_fold_8.txt
 test_fold_15.txt  test_fold_6.txt  train_fold_12.txt  train_fold_3.txt   train_fold_9.txt
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./r3-5k-fold/ | wc
      30      30     507
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./r3-5k-fold/train*.txt
     80   2624  33446 ./r3-5k-fold/train_fold_10.txt
     80   2656  33906 ./r3-5k-fold/train_fold_11.txt
@@ -12468,6 +12585,9 @@ test_fold_15.txt  test_fold_6.txt  train_fold_12.txt  train_fold_3.txt   train_f
     80   2679  33950 ./r3-5k-fold/train_fold_9.txt
   1200  39552 504924 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./r3-5k-fold/test*.txt
     20    672   8631 ./r3-5k-fold/test_fold_10.txt
     20    640   8171 ./r3-5k-fold/test_fold_11.txt
@@ -12486,21 +12606,31 @@ test_fold_15.txt  test_fold_6.txt  train_fold_12.txt  train_fold_3.txt   train_f
     20    617   8127 ./r3-5k-fold/test_fold_9.txt
    300   9888 126231 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r2-3k-fold --
-method repeatedkfold -k 3 --n_repeats 2
+```
+(base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r2-3k-fold --method repeatedkfold -k 3 --n_repeats 2
 
 real    0m0.344s
 user    0m0.307s
 sys     0m0.036s
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./r2-3k-fold/
 test_fold_1.txt  test_fold_4.txt  train_fold_1.txt  train_fold_4.txt
 test_fold_2.txt  test_fold_5.txt  train_fold_2.txt  train_fold_5.txt
 test_fold_3.txt  test_fold_6.txt  train_fold_3.txt  train_fold_6.txt
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ ls ./r2-3k-fold/ | wc
      12      12     198
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./r2-3k-fold/train*.txt
     66   2172  27616 ./r2-3k-fold/train_fold_1.txt
     67   2189  28036 ./r2-3k-fold/train_fold_2.txt
@@ -12510,6 +12640,9 @@ test_fold_3.txt  test_fold_6.txt  train_fold_3.txt  train_fold_6.txt
     67   2271  28784 ./r2-3k-fold/train_fold_6.txt
    400  13184 168308 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
+
+```
 (base) yekyaw.thu@gpu:~/4github/cv$ wc ./r2-3k-fold/test*.txt
    34  1124 14461 ./r2-3k-fold/test_fold_1.txt
    33  1107 14041 ./r2-3k-fold/test_fold_2.txt
@@ -12519,8 +12652,9 @@ test_fold_3.txt  test_fold_6.txt  train_fold_3.txt  train_fold_6.txt
    33  1025 13293 ./r2-3k-fold/test_fold_6.txt
   200  6592 84154 total
 (base) yekyaw.thu@gpu:~/4github/cv$
+```
 
-
+## Next?!  
 
 ```
 
