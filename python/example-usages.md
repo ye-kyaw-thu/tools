@@ -12175,7 +12175,7 @@ optional arguments:
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## Hold Out
+### Hold Out
 
 ကိုယ် လုပ်မယ့် cross-validation method ကို --method option နဲ့ assign လုပ်ပေးသွားပါ။  
 ```
@@ -12221,7 +12221,7 @@ sys     0m0.036s
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## K-Fold
+### K-Fold
 
 5-fold ခွဲမယ် ...  
 
@@ -12314,7 +12314,7 @@ test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fo
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## Leave One Out  
+### Leave One Out  
 
 ```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./leave-one-out --method leaveoneout
@@ -12386,7 +12386,7 @@ test_3.txt    test_70.txt  train_10.txt   train_41.txt  train_72.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## Leave p Out
+### Leave p Out
 
 ```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./leave-p3-out --method leavepout -p 3
@@ -12450,7 +12450,7 @@ train_9.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## Stratified k-fold Cross-validation
+### Stratified k-fold Cross-validation
 
 ```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./s-5k-fold --method stratifiedkfold -k 5
@@ -12539,7 +12539,7 @@ test_fold_3.txt   test_fold_7.txt  train_fold_1.txt   train_fold_5.txt  train_fo
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## Repeated k-fold Cross-validation
+### Repeated k-fold Cross-validation
 
 ```
 (base) yekyaw.thu@gpu:~/4github/cv$ time python cv-split.py -i ./100.km -o ./r3-5k-fold --method repeatedkfold -k 5 --n_repeats 3
