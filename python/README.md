@@ -385,6 +385,9 @@
 (Spelling corpus ကို သတ်မှတ်ထားတဲ့ format တစ်ခုနဲ့ ကျောင်းသားတွေကို ပြင်ဆင်ခိုင်းခဲ့တယ်။ အဲဒီ corpus ဖိုင်ကနေ အမှားစာကြောင်း၊ spelling error type စာကြောင်းနဲ့ အမှန်ပြင်ထားတဲ့ စာကြောင်းတွေကို သပ်သပ်စီဆွဲထုတ်ပြီး၊ ဖိုင် တစ်ဖိုင်စီမှာ ခွဲသိမ်းဖို့ ရေးခဲ့တဲ့ python code ပါ)
 
 128. [wtc-paste.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wtc-paste.py)  
-(အထက်က format-conv.py ဖိုင်ကနေ ဆွဲထုတ်ပြီးထွက်လာတဲ့ output ဖိုင်သုံးဖိုင်ကို တွဲဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)    
+(အထက်က format-conv.py ဖိုင်ကနေ ဆွဲထုတ်ပြီးထွက်လာတဲ့ output ဖိုင်သုံးဖိုင်ကို တွဲဖို့အတွက် ရေးခဲ့တဲ့ python code ပါ။)
+
+129. [cv-split.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cv-split.py)  
+(cross-validation method ခြေက်မျိုးအတွက် ဒေတာခွဲပုံခွဲနည်းကို သရုပ်ပြဖို့ ရေးခဲ့တဲ့ python code)  
 
  
