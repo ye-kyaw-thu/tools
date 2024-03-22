@@ -12654,23 +12654,71 @@ test_fold_3.txt  test_fold_6.txt  train_fold_3.txt  train_fold_6.txt
 (base) yekyaw.thu@gpu:~/4github/cv$
 ```
 
-## Next?!  
+## 130. [mk_hatespeech_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk_hatespeech_dict.py)   
+
+Input file ရဲ့ format က အောက်ပါအတိုင်းပါ ...  
 
 ```
-
+(hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$ tail ./hs_data_Mar19.txt.fasttext.f2
+သူ့ ကို ဘာ ကြည့် ပြီး vote ပေး ကြ တာ ပါ လိမ့် $ရူးမ/ab ဘာ မ ဟုတ် တဲ့ ကိစ္စ ကြောင့် ရွှေကြို အခွင့်အရေး ကို ဆုံးရှုံး မ ခံ နိုင် လို့ ဆို ပြီး ပြော တဲ့ $ရူးမ/ab
+ဖင်အရှည်ကြီးခံလိုက်/ab တစ်ခါတည်း အကုန် ကြို ပြီး သား ပဲ 🦭
+အိပ်မက် က အမ တစ် ယောက် ပဲ ရှိ တာ လား 🥲
+SattPatt/ab !! ဘာ မ ဟုတ် တဲ့ ပြဿနာ တဲ့ PayloeeeMaaaGGG/ab
+စောက်ဆင့်မရှိ/ab တဲ့ ဟာ တွေ က လည်း အခုတလော ခပ်စိပ်စိပ် တွေ့ လာ ရ တယ် 🤣🤣🤣🤣🤣 ရေး ချင် လွန်း လို့ မ ဟုတ် ဘူး နော် ရှက် တတ် ဦး မ လား လို့ ဝင့် မန့် တာ
+ဘာ မ ဟုတ် တာ လေး တဲ့ အာ့ ဆို ဟုတ် တဲ့ ဟာ ဘောပဲမနေ/ab နော် အမကြီး
+ထမင်းစားတိုင်းလူမဖြစ်နိုင်ဘူး/ab ဆို တာ ခု မှ အရှင်လတ်လတ် မြင် ဖူး တော့ တယ် ကောင်မ/ab မွေးကတည်းကအသေလေးမွေးလာရမှာ/le
+အော် ဘာ မ ဟုတ် တာ တဲ့ လား ပြောထွက်တဲ့ပါးစပ်လေးကိုအက်ဆစ်လေးနဲ့သွားဆေးစေချင်/ab
+ဗန်းကိုင် နဲ့ မအလ/ab|po ဘောကိုင်/ab
+စိတ်မပူ နဲ့ ရွှေကြို ပြီး ရင် ဖင်ခံ/ab ရ မှာ ညီမလေး fighting 22 နှစ် က ငါ 25 နှစ် ထက် အို/bo နေ တော့ အား တောင် နာ တယ် 😂 😂
+(hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$
 ```
 
-```
+သုံးပုံသုံးနည်းက --help ခေါ်ကြည့်ပါ ...  
 
 ```
+(hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$ python ./mk_hatespeech_dict.py --help
+usage: mk_hatespeech_dict.py [-h] -i INPUT [-o OUTPUT]
+                             [--input_delimiter INPUT_DELIMITER]
+                             [--output_delimiter OUTPUT_DELIMITER]
 
+Extract tagged words and create a hate speech word dictionary.
+
+options:
+  -h, --help            show this help message and exit
+  -i INPUT, --input INPUT
+                        Input file path
+  -o OUTPUT, --output OUTPUT
+                        Output file path
+  --input_delimiter INPUT_DELIMITER
+                        Input delimiter
+  --output_delimiter OUTPUT_DELIMITER
+                        Output delimiter
 ```
 
-```
+input ဖိုင်ရဲ့ delimiter, output ဖိုင်ရဲ့ delimiter တွေကိုလည်း commandline ကနေ assign လုပ်ပေးလို့ ရပါတယ်။ မပြတော့ပဲ default delimiter နဲ့ပဲ run ပြတော့မယ် ...  
 
 ```
+(hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$ python ./mk_hatespeech_dict.py --input ./hs_data_Mar19.txt.fasttext.f2 --output hs_dict.txt
+```
+
+output အဖြစ် ရလာတဲ့ hatespeech dictionary ရဲ့ format က အောက်ပါအတိုင်းပါ ...  
 
 ```
+(hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$ head ./hs_dict.txt
+ဖော်လော်မော်    ab
+ဆောက်မြင်ကပ်    ab
+ဖလော်မော်       ab
+sမွေး   ab
+$မွှေး  ab
+စ-ပပြဲမ ab
+မဘသအရိုးကိုက်   re
+လူကမွေးထားတဲ့ဟာတွေလား   ab
+ကောင်မ  ab
+ဖင်စောင့်       ab
+(hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$
+```
+
+## Next ?!  
 
 ```
 
