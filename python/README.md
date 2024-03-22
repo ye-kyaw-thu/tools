@@ -390,4 +390,6 @@
 129. [cv-split.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cv-split.py)  
 (cross-validation method ခြေက်မျိုးအတွက် ဒေတာခွဲပုံခွဲနည်းကို သရုပ်ပြဖို့ ရေးခဲ့တဲ့ python code)  
 
+130. [mk_hatespeech_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk_hatespeech_dict.py)  
+(ပြင်ဆင်နေဆဲ tagged hatespeech စာကြောင်းဒေတာတွေကနေ hatespeech dictionary အနေနဲ့ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ code)  
  
