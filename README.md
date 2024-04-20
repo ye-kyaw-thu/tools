@@ -315,3 +315,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 128. [wtc-paste.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/wtc-paste.py)  
 129. [cv-split.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/cv-split.py)  
 130. [mk_hatespeech_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk_hatespeech_dict.py)  
+131. [train_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/train_embedding.py) 
