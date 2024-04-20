@@ -392,4 +392,6 @@
 
 130. [mk_hatespeech_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/mk_hatespeech_dict.py)  
 (ပြင်ဆင်နေဆဲ tagged hatespeech စာကြောင်းဒေတာတွေကနေ hatespeech dictionary အနေနဲ့ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ code)  
- 
+
+131. [train_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/train_embedding.py)  
+(80.  [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py) ရဲ့ extension ပါ။)   
