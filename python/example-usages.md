@@ -12718,11 +12718,67 @@ $မွှေး  ab
 (hs-fasttext) ye@lst-gpu-server-197:~/ye/exp/hs-fasttext$
 ```
 
-## Next ?!  
+## 132. [convert_to_two_words_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_two_words_dict.py)    
 
+စာလုံးတစ်လုံးစီ ကို လိုင်းတစ်လိုင်းစီ ရိုက်ထားတဲ့ dictionary ဖိုင်ကို စာလုံးနှစ်လုံး၊ လိုင်းနှစ်လိုင်း format အဖြစ်ပြောင်းဖို့ ရေးခဲ့တဲ့ Python code ပါ။ 
+
+g2p dictionary ဖိုင်ကနေ field-2 ကိုပဲ ဆွဲထုတ်ယူထားတဲ့ အော်ရဂျင်နယ် format က အောက်ပါအတိုင်း စာလုံးတစ်လုံးကို လိုင်းတစ်လိုင်း ပုံစံပါ။  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/exp/sp/corpus/extension$ head g2p.f2
+...ဖြစ်စေ...ဖြစ်စေ
+...ရိုး..စဉ်
+...ရိုး..စဉ်
+...လို...ငြား
+ကကတစ်
+ကကတိုး
+ကကုသန်
+ကကုသန်
+ကကူရံ
+ကကြိုး
+(base) ye@lst-gpu-server-197:~/ye/exp/sp/corpus/extension$
+```
+
+အဲဒီ ဖိုင်ကို တချို့ NLP task တွေအတွက် စာလုံးနှစ်လုံးစီကို လိုင်းတစ်လိုင်းစီ ထားဖို့ လိုအပ်တဲ့အခါမျိုး ရှိတတ်ပါတယ်။  
+အဲဒီအတွက် convert_to_two_words_dict.py ကို ရေးခဲ့တာပါ။ --delimiter option နဲ့ ကိုယ်ကြိုက်တဲ့ delimiter ကိုသတ်မှတ်ပေးလို့ ရပါတယ်။  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/exp/sp/corpus/extension$ python ./convert_to_two_words_dict.py --input ./g2p.f2  --delimiter "|||" | head
+...ဖြစ်စေ...ဖြစ်စေ|||...ရိုး..စဉ်
+...ရိုး..စဉ်|||...လို...ငြား
+ကကတစ်|||ကကတိုး
+ကကုသန်|||ကကုသန်
+ကကူရံ|||ကကြိုး
+ကကြိုးတန်ဆာ|||ကကြီကကြောင်လုပ်
+ကကြီး|||ကကြီးထွန်
+ကကွက်|||ကချလာ
+ကချင်|||ကချေသည်
+ကချော်ကချွတ်|||ကစဉ့်ကရဲ
+(base) ye@lst-gpu-server-197:~/ye/exp/sp/corpus/extension$
 ```
 
 ```
+(base) ye@lst-gpu-server-197:~/ye/exp/sp/corpus/extension$ python ./convert_to_two_words_dict.py --input ./g2p.f2  --delimiter "|" | tail
+ဧဝကန်|ဧသာန်
+ဧည့်ကြို|ဧည့်ခန်း
+ဧည့်ခံ|ဧည့်ခံဆိုင်း
+ဧည့်ခံပွဲ|ဧည့်စာရင်း
+ဧည့်ထောက်ခံ|ဧည့်ပရိသတ်
+ဧည့်မထ|ဧည့်မြေ
+ဧည့်မြှောင်|ဧည့်ရိပ်သာ
+ဧည့်လာဂမုန်း|ဧည့်ဝတ်
+ဧည့်ဝတ်ဆောင်ဝတ်|ဧည့်သည်
+ဧည့်သည်စောင်သည်|ဪလဲ
+(base) ye@lst-gpu-server-197:~/ye/exp/sp/corpus/extension$
+```
+
+output ကို ဖိုင်အနေနဲ့သိမ်းချင်ရင် --output command line option ကို သုံးပြီး ဖိုင်နာမည်ကို သတ်မှတ်ပေးပါ။  
+
+```
+python ./convert_to_two_words_dict.py --input ./g2p.f2  --output ./g2p.f2.two_words
+```
+
+## Next?!  
 
 ```
 
