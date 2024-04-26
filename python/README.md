@@ -404,3 +404,6 @@
 
 134. [rm_blank_line.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_blank_line.py)  
 (ရှေ့မှာ ရေးခဲ့တဲ့ rm_blank_line.pl ဖိုင်လိုပါပဲ။ python code အဖြစ် ပြောင်းရေးထားတာပါ။ blank line တွေကို ဖျက်ပေးတဲ့ အလုပ်လုပ်လိမ့်မယ်။)  
+
+135. [my_no_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_no_spacing.py)  
+(စာကြောင်းတွေထဲမှာ ရောပါနေတဲ့ မြန်မာနံပါတ်တစ်လုံးချင်းစီကို spacing လုပ်ဖို့အတွက် ရေးခဲ့တယ်။ ဥပမာ "၁၉၇၈" ကို "၁ ၉ ၇ ၈" အဖြစ် ပြောင်းဖို့)  
