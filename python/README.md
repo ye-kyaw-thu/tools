@@ -394,4 +394,7 @@
 (ပြင်ဆင်နေဆဲ tagged hatespeech စာကြောင်းဒေတာတွေကနေ hatespeech dictionary အနေနဲ့ဆွဲထုတ်ဖို့အတွက် ရေးခဲ့တဲ့ code)  
 
 131. [train_embedding.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/train_embedding.py)  
-(80.  [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py) ရဲ့ extension ပါ။)   
+(80.  [embedder.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/embedder.py) ရဲ့ extension ပါ။)  
+
+132. [convert_to_two_words_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_two_words_dict.py)  
+(စာလုံးတစ်လုံး တစ်လိုင်းစီ ရိုက်ထားတဲ့ ပုံစံကနေ စာလုံးနှစ်လုံးကို တစ်လိုင်းစီ ထားဖို့အတွက် ရေးခဲ့တဲ့ Python code ပါ။)  
