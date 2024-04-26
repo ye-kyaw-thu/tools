@@ -407,3 +407,6 @@
 
 135. [my_no_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_no_spacing.py)  
 (စာကြောင်းတွေထဲမှာ ရောပါနေတဲ့ မြန်မာနံပါတ်တစ်လုံးချင်းစီကို spacing လုပ်ဖို့အတွက် ရေးခဲ့တယ်။ ဥပမာ "၁၉၇၈" ကို "၁ ၉ ၇ ၈" အဖြစ် ပြောင်းဖို့)  
+
+136. [punc_emoji_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/punc_emoji_spacing.py)  
+(အထက်က 135 က code လိုပါပဲ။ ဒီတခါတော့ punctuation တွေ၊ ပုဒ်ထီး၊ ပုဒ်မ နဲ့ emoji တွေကိုပါ spacing လုပ်ပေးတဲ့ code ပါ။)  
