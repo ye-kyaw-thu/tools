@@ -24,11 +24,12 @@ def add_spacing_to_myanmar_numbers(input_file, output_file=None):
         for match in matches:
             # Add spacing between Myanmar numbers without spacing
             line = line.replace(match, ' '.join(match))
-        output_lines.append(line.rstrip('\n'))  # Strip newline character
+        output_lines.append(line.strip("\n"))  # Strip newline character
 
     if output_file:
         with open(output_file, 'w', encoding='utf-8') as f:
-            f.writelines(output_lines)
+            for line in output_lines:
+                f.write(line + '\n')  # Write each line with a newline character
     else:
         for line in output_lines:
             try:
