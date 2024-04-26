@@ -55,7 +55,8 @@ def add_spacing_to_text(input_file, output_file=None, emoji=False):
 
     if output_file:
         with open(output_file, 'w', encoding='utf-8') as f:
-            f.writelines(output_lines)
+            for line in output_lines:
+                f.write(line + '\n')  # Write each line with a newline character
     else:
         for line in output_lines:
             try:
