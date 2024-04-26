@@ -320,3 +320,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 133. [emoji_count.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/emoji_count.py)  
 134. [rm_blank_line.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_blank_line.py)  
 135. [my_no_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_no_spacing.py)  
+136. [punc_emoji_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/punc_emoji_spacing.py)
