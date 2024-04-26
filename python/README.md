@@ -398,3 +398,6 @@
 
 132. [convert_to_two_words_dict.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/convert_to_two_words_dict.py)  
 (စာလုံးတစ်လုံး တစ်လိုင်းစီ ရိုက်ထားတဲ့ ပုံစံကနေ စာလုံးနှစ်လုံးကို တစ်လိုင်းစီ ထားဖို့အတွက် ရေးခဲ့တဲ့ Python code ပါ။)  
+
+133. [emoji_count.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/emoji_count.py)  
+(မြန်မာစာဖိုင်ထဲမှာ ရောပါနေတဲ့ emoji တွေကို ရေတွက်ဖို့အတွက် ရေးခဲ့တဲ့ Python code ပါ။)  
