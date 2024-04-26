@@ -401,3 +401,6 @@
 
 133. [emoji_count.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/emoji_count.py)  
 (မြန်မာစာဖိုင်ထဲမှာ ရောပါနေတဲ့ emoji တွေကို ရေတွက်ဖို့အတွက် ရေးခဲ့တဲ့ Python code ပါ။)  
+
+134. [rm_blank_line.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_blank_line.py)  
+(ရှေ့မှာ ရေးခဲ့တဲ့ rm_blank_line.pl ဖိုင်လိုပါပဲ။ python code အဖြစ် ပြောင်းရေးထားတာပါ။ blank line တွေကို ဖျက်ပေးတဲ့ အလုပ်လုပ်လိမ့်မယ်။)  
