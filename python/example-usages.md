@@ -13345,15 +13345,40 @@ Combined Tag Distribution:
 
 အထက်မှာ မြင်ရတဲ့အတိုင်းပါပဲ လက်ရှိ ဆောက်နေဆဲ corpus မှာ tag တွေက balance မမျှတာကို တွေ့ရပါလိမ့်မယ်။  
 
+## 138. [check_corpus_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_corpus_tag_distribution.py)    
+
+အထက်က ပရိုဂရမ် နံပါတ် 137 နဲ့ တူပါတယ်။ သို့သော် ဒီတစ်ခါတော့ corpus တစ်ခုလုံးအတွက် စစ်ကြည့်ဖို့ ရည်ရွယ်ပါတယ်။  
+--help screen က အောက်ပါအတိုင်းပါ။  
+
+```
+(py3.8) ye@lst-gpu-server-197:~/ye/exp/entc$ python ./check_corpus_tag_distribution.py --help
+usage: check_corpus_tag_distribution.py [-h] --corpus CORPUS
+
+Find tag distribution in a corpus.
+
+optional arguments:
+  -h, --help       show this help message and exit
+  --corpus CORPUS  Path to the corpus data file.
+```
+
+လက်ရှိ ဆောက်နေဆဲ corpus ကို စစ်ကြည့်တဲ့အခါမှာ တွေ့ရတဲ့ tag distribution က အောက်ပါအတိုင်းပါ။  
+
+```
+(py3.8) ye@lst-gpu-server-197:~/ye/exp/entc$ python ./check_corpus_tag_distribution.py --corpus ./data/my_news.shuf.txt
+
+Corpus Tag Distribution:
+Tag            Count     Percentage
+sports         1232      34.08%
+business       1207      33.39%
+crime          270       7.47%
+politics       446       12.34%
+environment    156       4.32%
+sciencetech    198       5.48%
+entertainment  106       2.93%
+Total          3615      100.00%
+```
+
 ## Next?!  
-
-```
-
-```
-
-```
-
-```
 
 ```
 
