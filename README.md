@@ -321,4 +321,5 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 134. [rm_blank_line.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/rm_blank_line.py)  
 135. [my_no_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/my_no_spacing.py)  
 136. [punc_emoji_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/punc_emoji_spacing.py)  
-137. [check_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_tag_distribution.py)
+137. [check_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_tag_distribution.py)  
+138. [check_corpus_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_corpus_tag_distribution.py)
