@@ -412,4 +412,7 @@
 (အထက်က 135 က code လိုပါပဲ။ ဒီတခါတော့ punctuation တွေ၊ ပုဒ်ထီး၊ ပုဒ်မ နဲ့ emoji တွေကိုပါ spacing လုပ်ပေးတဲ့ code ပါ။)  
 
 137. [check_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_tag_distribution.py) 
-(news classification ဒေတာ ရဲ့ tag distribution ကို အကြမ်းစစ်ကြည့်ဖို့ ရေးခဲ့)
+(news classification ဒေတာ ရဲ့ tag distribution ကို အကြမ်းစစ်ကြည့်ဖို့ ရေးခဲ့)  
+
+138. [check_corpus_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_corpus_tag_distribution.py)  
+(program no. 137 နဲ့ တူပါတယ်။ ဒီတစ်ခါတော့ corpus တစ်ဖိုင်တည်းမှာရှိနေတဲ့ tag or label ရဲ့ distribution ကို စစ်ကြည့်ဖို့အတွက် ရေးခဲ့တာပါ)  
