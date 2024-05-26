@@ -410,3 +410,6 @@
 
 136. [punc_emoji_spacing.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/punc_emoji_spacing.py)  
 (အထက်က 135 က code လိုပါပဲ။ ဒီတခါတော့ punctuation တွေ၊ ပုဒ်ထီး၊ ပုဒ်မ နဲ့ emoji တွေကိုပါ spacing လုပ်ပေးတဲ့ code ပါ။)  
+
+137. [check_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_tag_distribution.py) 
+(news classification ဒေတာ ရဲ့ tag distribution ကို အကြမ်းစစ်ကြည့်ဖို့ ရေးခဲ့)
