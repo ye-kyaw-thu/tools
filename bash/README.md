@@ -325,6 +325,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 107. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)  
 (WinWord ဖိုင် ကနေ PDF ဖိုင်အဖြစ် command-line ကနေ ပြောင်းဖို့အတွက် ရေးခဲ့တာ။)   
 
-108. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)
+108. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)  
 (nllb api သုံးပြီး translation လုပ်တာကို test လုပ်ဖို့ ရေးခဲ့)
 
