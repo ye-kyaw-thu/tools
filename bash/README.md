@@ -323,6 +323,8 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 (sentence segmentation အတွက် လက်နဲ့ tagging လုပ်ထားတဲ့ စာကြောင်းတွေထဲက \E နဲ့ မဆုံးပဲ မှားနေတဲ့ \O သို့မဟုတ် \N နဲ့ ဆုံးနေတဲ့ စာကြောင်းအရေအတွက်ကို ရေတွက်ကြည့်ဖို့ ရေးထားတဲ့ shell script ပါ။)  
 
 107. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)  
-(WinWord ဖိုင် ကနေ PDF ဖိုင်အဖြစ် command-line ကနေ ပြောင်းဖို့အတွက် ရေးခဲ့တာ။)  
+(WinWord ဖိုင် ကနေ PDF ဖိုင်အဖြစ် command-line ကနေ ပြောင်းဖို့အတွက် ရေးခဲ့တာ။)   
 
+108. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)
+(nllb api သုံးပြီး translation လုပ်တာကို test လုပ်ဖို့ ရေးခဲ့)
 
