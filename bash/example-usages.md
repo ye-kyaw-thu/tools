@@ -6475,6 +6475,7 @@ sys     0m0.124s
 ```
 
 NLLB API ကိုသုံး ဘာသာပြန် ပြီး ထွက်လာတဲ့ output က အောက်ပါအတိုင်း ...  
+ဘာသာပြန်မပေးနိုင်တဲ့ စာကြောင်းတွေ ရှိတာကိုလည်း တွေ့ရပါလိမ့်မယ်။  
 
 ```
 (base) ye@lst-gpu-server-197:~/ye/exp/gpt-mt/nllb$ cat ./translated-output.txt
