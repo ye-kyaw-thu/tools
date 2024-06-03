@@ -6424,3 +6424,80 @@ convert လုပ်ပြီးသားဖိုင်ကို check လု�
 (base) ye@lst-gpu-3090:~/exp/demo/word2pdf/shell_output$ file aaa23.pdf
 aaa23.pdf: PDF document, version 1.6, 2 pages
 ```
+
+## 107.[nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)  
+
+ဆိုကြပါစို့ ထိုင်း စာကြောင်းတွေကို မြန်မာဘာသာ အဖြစ် ပြန်မယ် ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/exp/gpt-mt/nllb$ cat ./data/mahidol/eg-input.txt
+th
+ทำ ความ สะอาด ริม ขอบ แผล
+ผม เล่น น้ำ ใน ทะเล ครับ
+โรค จมูก อักเสบ จาก ภูมิ แพ้
+มี อาการ เมื่อ 2 วัน ที่ แล้ว
+แก้ม ของ เขา บวม และ เจ็บ
+ถ้า ส่ง ไม่ ทัน จะ ไม่ ได้ เงิน ครับ
+ต้อง แกว่ง แบบ นี้ กี่ ครั้ง คะ
+ใน ทารก หรือ เด็ก จะ ไม่ เจอ อาการ ไอ
+หมอ ใส่ ท่อ ช่วย หายใจ ให้
+วัน นี้ มา พบ หมอ
+ไม่ ต้อง กังวล นะ ครับ คุณ ยาย จะ ปลอด ภัย ครับ
+ฉัน เจ็บ คอ มี น้ำมูก ไหล และ เบื่อ อาหาร ค่ะ
+ปอด ยัง ดี
+บาง ตัว แค่ ฉีด กระตุ้น
+หรือ ที่ เรียก ว่า ความ ผิด ปกติ ที่ เกิด หลัง ความ เครียด ที่ สะเทือนใจ ครับ คุณ แม่
+ผม ชอบ คอนแทค เลนส์ มาก กว่า แว่นตา ผม ไม่ ชอบ แว่น
+อาการ บวม
+มี ถ่าย เป็น มูกเลือด หรือ อาการ อื่น ๆ ร่วม ด้วย ไหม ครับ
+ผม เอื้อม มือ ไป ผูก รองเท้า ไม่ ได้
+(base) ye@lst-gpu-server-197:~/ye/exp/gpt-mt/nllb$
+```
+
+Example running ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/exp/gpt-mt/nllb$ time ./nllb-translate.sh --input data/mahidol/eg-input.txt --source tha_Thai --target mya_Mymr --output ./translated-output.txt
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+parse error: Invalid numeric literal at line 1, column 9
+
+real    2m31.184s
+user    0m1.213s
+sys     0m0.124s
+```
+
+NLLB API ကိုသုံး ဘာသာပြန် ပြီး ထွက်လာတဲ့ output က အောက်ပါအတိုင်း ...  
+
+```
+(base) ye@lst-gpu-server-197:~/ye/exp/gpt-mt/nllb$ cat ./translated-output.txt
+th      th
+ทำ ความ สะอาด ริม ขอบ แผล       ทำ ความ สะอาด ริม ขอบ แผล
+ผม เล่น น้ำ ใน ทะเล ครับ        ကျွန်မက ရေထဲမှာ ကစားတယ်။
+โรค จมูก อักเสบ จาก ภูมิ แพ้    ဒေသတွင်းက နှာခေါင်းရောင်ရောဂါတွေ
+มี อาการ เมื่อ 2 วัน ที่ แล้ว   มี อาการ เมื่อ 2 วัน ที่ แล้ว
+แก้ม ของ เขา บวม และ เจ็บ       แก้ม ของ เขา บวม และ เจ็บ
+ถ้า ส่ง ไม่ ทัน จะ ไม่ ได้ เงิน ครับ    ถ้า ส่ง ไม่ ทัน จะ ไม่ ได้ เงิน ครับ
+ต้อง แกว่ง แบบ นี้ กี่ ครั้ง คะ ต้อง แกว่ง แบบ นี้ กี่ ครั้ง คะ
+ใน ทารก หรือ เด็ก จะ ไม่ เจอ อาการ ไอ   ใน ทารก หรือ เด็ก จะ ไม่ เจอ อาการ ไอ
+หมอ ใส่ ท่อ ช่วย หายใจ ให้      หมอ ใส่ ท่อ ช่วย หายใจ ให้
+วัน นี้ มา พบ หมอ       วัน นี้ มา พบ หมอ
+ไม่ ต้อง กังวล นะ ครับ คุณ ยาย จะ ปลอด ภัย ครับ ไม่ ต้อง กังวล นะ ครับ คุณ ยาย จะ ปลอด ภัย ครับ
+ฉัน เจ็บ คอ มี น้ำมูก ไหล และ เบื่อ อาหาร ค่ะ   လည်ချောင်းနာတယ်၊ နှာခေါင်းလျှောတာ၊ စားရတာ ငြီးငွေ့တယ်။
+ปอด ยัง ดี      အဆုတ်တွေလည်း ကောင်းတယ်။
+บาง ตัว แค่ ฉีด กระตุ้น တစ်ချို့က ထိုးသွင်းရုံပါ။
+หรือ ที่ เรียก ว่า ความ ผิด ปกติ ที่ เกิด หลัง ความ เครียด ที่ สะเทือนใจ ครับ คุณ แม่   ဒါမှမဟုတ် စိတ်ဖိစီးမှု နောက်ပိုင်းမှာ ဖြစ်တတ်တဲ့ အမှားတွေလို့ ခေါ်ပါတယ်။
+ผม ชอบ คอนแทค เลนส์ มาก กว่า แว่นตา ผม ไม่ ชอบ แว่น     ผม ชอบ คอนแทค เลนส์ มาก กว่า แว่นตา ผม ไม่ ชอบ แว่น
+อาการ บวม       อาการ บวม
+มี ถ่าย เป็น มูกเลือด หรือ อาการ อื่น ๆ ร่วม ด้วย ไหม ครับ      နှာခေါင်း သွေးထွက်တာ (သို့) အခြား ရောဂါလက္ခဏာတွေရော ရှိလား။
+ผม เอื้อม มือ ไป ผูก รองเท้า ไม่ ได้    ผม เอื้อม มือ ไป ผูก รองเท้า ไม่ ได้
+(base) ye@lst-gpu-server-197:~/ye/exp/gpt-mt/nllb$
+```
+
