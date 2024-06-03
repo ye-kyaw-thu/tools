@@ -116,6 +116,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 104. [calc-chrF.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/calc-chrF.sh)  
 105. [check-end-mark.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/check-end-mark.sh)  
 106. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)  
+107. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)   
 
 # perl
 
