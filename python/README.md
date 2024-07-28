@@ -416,3 +416,8 @@
 
 138. [check_corpus_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_corpus_tag_distribution.py)  
 (program no. 137 နဲ့ တူပါတယ်။ ဒီတစ်ခါတော့ corpus တစ်ဖိုင်တည်းမှာရှိနေတဲ့ tag or label ရဲ့ distribution ကို စစ်ကြည့်ဖို့အတွက် ရေးခဲ့တာပါ)  
+
+139. [utf8_file_char_counter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/utf8_file_char_counter.py)  
+(မြန်မာစာလို multi-byte character တွေ ပါတဲ့ ဖိုင်တွေကို linux tool ဖြစ်တဲ့ wc နဲ့ စာလုံးရေတွက်ရင် အမှန်မရပါဘူး။ အဲဒီအတွက် ရေးခဲ့တဲ့ python code)  
+
+
