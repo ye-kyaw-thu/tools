@@ -326,5 +326,7 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 (WinWord ဖိုင် ကနေ PDF ဖိုင်အဖြစ် command-line ကနေ ပြောင်းဖို့အတွက် ရေးခဲ့တာ။)   
 
 108. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)  
-(nllb api သုံးပြီး translation လုပ်တာကို test လုပ်ဖို့ ရေးခဲ့)
+(nllb api သုံးပြီး translation လုပ်တာကို test လုပ်ဖို့ ရေးခဲ့)  
 
+109. [install_python.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/install_python.sh)   
+(Linux OS မှာ ကိုယ် install လုပ်ချင်တဲ့ Python version ကို download လုပ်ပြီး installation လုပ်နိုင်ဖို့ ရေးခဲ့တဲ့ bash scipt)  
