@@ -326,3 +326,4 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 137. [check_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_tag_distribution.py)  
 138. [check_corpus_tag_distribution.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/check_corpus_tag_distribution.py)  
 139. [utf8_file_char_counter.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/utf8_file_char_counter.py)  
+140. [word_shuffle.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word_shuffle.py)  
