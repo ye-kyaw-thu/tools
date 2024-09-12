@@ -13378,7 +13378,55 @@ entertainment  106       2.93%
 Total          3615      100.00%
 ```
 
-## Next?!  
+## 140. [word_shuffle.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word_shuffle.py)     
+
+shuffle လုပ်မယ့် ဖိုင်က အောက်ပါအတိုင်း။  
+
+```
+(base) ye@lst-hpc3090:~/exp/newlan/edit/data/proverb/prepare$ cat ./proverb_sample.syl.chk
+အိမ် ကြက် ချင်း ခွပ်
+အိမ် ကြက် ချင်း အိုး မဲ သုတ်
+အိမ် ခြေ တစ် ရာ ၊ ပြည် စိုး အ စိတ်
+အိမ် နီး ချင်း ကောင်း မှ လင် ကောင်း ရ သည်
+အိမ် ရှေ့ က ရေ တွင်း အိမ် နောက် ဖေး ရွှေ့
+အိမ် လာ ယာ ဆုတ်
+အိမ် ရှေ့ ပူ အိမ် နောက် မ ချမ်း သာ
+အိမ် သာ လို့ ဧည့် လာ
+အိမ် သူ ကို ဧည့် မောင်း
+အိမ် အို မှ စား ဖို ထုတ်
+(base) ye@lst-hpc3090:~/exp/newlan/edit/data/proverb/prepare$
+```
+
+Word shuffling လုပ်ကြည့်မယ်...  
+
+```
+(base) ye@lst-hpc3090:~/exp/newlan/edit/data/proverb/prepare$ python ./word_shuffle.py --input ./proverb_sample.syl.chk --output ./proverb_sample.syl.shuf1.txt
+```
+
+Word shuffling လုပ်ပြီး ထွက်လာတဲ့ output ဖိုင်ကို ကြည့်ကြရအောင်။  
+
+```
+(base) ye@lst-hpc3090:~/exp/newlan/edit/data/proverb/prepare$ cat ./proverb_sample.syl.shuf1.txt
+ချင်း အိမ် ကြက် ခွပ်
+အိမ် အိုး မဲ သုတ် ကြက် ချင်း
+စိတ် အိမ် ရာ ပြည် ၊ အ ခြေ စိုး တစ်
+လင် ကောင်း မှ ရ သည် နီး ကောင်း ချင်း အိမ်
+နောက် ရှေ့ ရွှေ့ တွင်း ဖေး ရေ အိမ် က အိမ်
+အိမ် ယာ လာ ဆုတ်
+ရှေ့ အိမ် ချမ်း မ သာ ပူ နောက် အိမ်
+လာ သာ အိမ် ဧည့် လို့
+ကို ဧည့် မောင်း အိမ် သူ
+စား ထုတ် ဖို မှ အိမ် အို
+(base) ye@lst-hpc3090:~/exp/newlan/edit/data/proverb/prepare$
+```
+
+```
+
+```
+
+```
+
+```
 
 ```
 
