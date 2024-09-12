@@ -330,3 +330,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 
 109. [install_python.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/install_python.sh)   
 (Linux OS မှာ ကိုယ် install လုပ်ချင်တဲ့ Python version ကို download လုပ်ပြီး installation လုပ်နိုင်ဖို့ ရေးခဲ့တဲ့ bash scipt)  
+
+110. [extract_key_value_of_json.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract_key_value_of_json.sh)  
+(JSON ဖိုင်ကနေ ကိုယ်လိုချင်တဲ့ Key, value တွေကို jq command နဲ့ ဆွဲထုတ်ဖို့ ရေးထားတဲ့ bash script ဖိုင်)   
