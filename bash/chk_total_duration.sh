@@ -6,8 +6,11 @@
 
 # Note: Don't use space for folder names
 
-# find all wave files under current folders
-find . -name "*.wav" > wavefiles.txt
+# find all .wav files under current folders
+#find . -name "*.wav" > wavefiles.txt
+
+# find all wave files (case insensitive and thus, .wav, .WAV will be OK) under current folders
+find . -iname "*.wav" > wavefiles.txt
 
 # read wave filenames and pass them to "soxi" command
 # for calculating the duration (in seconds) for each file
