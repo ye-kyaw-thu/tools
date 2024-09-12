@@ -322,14 +322,14 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 105. [check-end-mark.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/check-end-mark.sh)  
 (sentence segmentation အတွက် လက်နဲ့ tagging လုပ်ထားတဲ့ စာကြောင်းတွေထဲက \E နဲ့ မဆုံးပဲ မှားနေတဲ့ \O သို့မဟုတ် \N နဲ့ ဆုံးနေတဲ့ စာကြောင်းအရေအတွက်ကို ရေတွက်ကြည့်ဖို့ ရေးထားတဲ့ shell script ပါ။)  
 
-107. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)  
+106. [word2pdf.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/word2pdf.sh)  
 (WinWord ဖိုင် ကနေ PDF ဖိုင်အဖြစ် command-line ကနေ ပြောင်းဖို့အတွက် ရေးခဲ့တာ။)   
 
-108. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)  
+107. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)  
 (nllb api သုံးပြီး translation လုပ်တာကို test လုပ်ဖို့ ရေးခဲ့)  
 
-109. [install_python.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/install_python.sh)   
+108. [install_python.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/install_python.sh)   
 (Linux OS မှာ ကိုယ် install လုပ်ချင်တဲ့ Python version ကို download လုပ်ပြီး installation လုပ်နိုင်ဖို့ ရေးခဲ့တဲ့ bash scipt)  
 
-110. [extract_key_value_of_json.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract_key_value_of_json.sh)  
+109. [extract_key_value_of_json.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract_key_value_of_json.sh)  
 (JSON ဖိုင်ကနေ ကိုယ်လိုချင်တဲ့ Key, value တွေကို jq command နဲ့ ဆွဲထုတ်ဖို့ ရေးထားတဲ့ bash script ဖိုင်)   
