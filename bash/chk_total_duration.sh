@@ -17,7 +17,7 @@ find . -iname "*.wav" > wavefiles.txt
 cat ./wavefiles.txt | while read -r filename
 #head ./wavefiles.txt | while read -r filename # for checking quickly ...
 do
-   soxi -D $filename
+   soxi -D "$filename"
 
 done > secondsfile # duration seconds of each wavefile will be save
 
