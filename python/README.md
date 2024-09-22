@@ -423,4 +423,6 @@
 140. [word_shuffle.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/word_shuffle.py)  
 (စာကြောင်းတစ်ကြောင်းထဲမှာ ပါနေတဲ့ word တွေကို shuffle လုပ်ဖို့ ရေးခဲ့...)  
 
+141. [chk-syspath.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-syspath.py)  
+(python system path ကို စစ်ကြည့်ဖို့)  
 
