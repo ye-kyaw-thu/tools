@@ -13420,9 +13420,22 @@ Word shuffling လုပ်ပြီး ထွက်လာတဲ့ output ဖ�
 (base) ye@lst-hpc3090:~/exp/newlan/edit/data/proverb/prepare$
 ```
 
-```
+## 141. [chk-syspath.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-syspath.py)    
+
+Example running output for your reference:  
 
 ```
+(lyric_trans) ye@lst-hpc3090:~/exp/ControllableLyricTranslation/BartFinetune$ python ./chk-syspath.py
+['/home/ye/exp/ControllableLyricTranslation/BartFinetune',
+ '/usr/bin/python',
+ '/home/ye/miniforge3/envs/lyric_trans/lib/python39.zip',
+ '/home/ye/miniforge3/envs/lyric_trans/lib/python3.9',
+ '/home/ye/miniforge3/envs/lyric_trans/lib/python3.9/lib-dynload',
+ '/home/ye/miniforge3/envs/lyric_trans/lib/python3.9/site-packages',
+ '/home/ye/exp/ControllableLyricTranslation/transformers/src']
+```
+
+## next?!  
 
 ```
 
