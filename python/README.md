@@ -426,3 +426,5 @@
 141. [chk-syspath.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/chk-syspath.py)  
 (python system path ကို စစ်ကြည့်ဖို့)  
 
+142. [arrow2text.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/arrow2text.py)  
+(.arrow ဖိုင်တွေကို column header စစ်ကြည့်ပြီး လူကဖတ်လို့ ရတဲ့ text သို့မဟုတ် CSV ဖိုင်အဖြစ်ပြောင်းပေးတဲ့ python codeပါ။)  
