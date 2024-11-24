@@ -2,6 +2,7 @@
 for converting arrow files to a plain text file or CSV file.
 Written by Ye Kyaw Thu, LU Lab., Myanmar
 How to use: python arrow2text.py <folder_path>
+Last updated: 24 Nov 2024
 """
 
 import os
