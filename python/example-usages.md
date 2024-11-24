@@ -13434,6 +13434,62 @@ Example running output for your reference:
  '/home/ye/miniforge3/envs/lyric_trans/lib/python3.9/site-packages',
  '/home/ye/exp/ControllableLyricTranslation/transformers/src']
 ```
+## 142. [arrow2text.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/arrow2text.py)    
+
+HuggingFace မှာ သိမ်းတာက arrow format မို့လို့ အဲဒီဖိုင်တွေကို text သို့မဟုတ် CSV ဖိုင်အဖြစ် ပြန်ပြောင်းဖို့ ရေးထားတဲ့ python code ပါ။  
+သုံးပုံသုံးနည်းက python arrow2text.py <folder_path>  ဆိုတဲ့ ပုံစံနဲ့ arrow file တွေရှိတဲ့ ဖိုလ်ဒါ path ကို ပြောပေးလိုက်ရင် အဲဒီ ဖိုလ်ဒါအောက်မှာရှိတဲ့ arrow ဖိုင်တွေအားလုံးကို convert လုပ်ပေးသွားပါလိမ့်မယ်။  
+
+ဥပမာ အနေနဲ့ အရင်ဆုံး myOCR dataset ကို အောက်ပါ python code နဲ့ download လုပ်ယူခဲ့တယ်။  
+
+```python
+from datasets import load_dataset
+
+dataset = load_dataset("LULab/myOCR")
+```
+
+download လုပ်ယူထားတဲ့ folder အောက်ထဲဝင်ပြီးတော့ arrow2text.py ကို run မယ်။ run တဲ့အခါမှာ current path ဖြစ်တဲ့ "." ကို command line parameter အဖြစ်နဲ့ ပေးခဲ့တယ်။  
+
+```
+(base) C:\Users\801680\.cache\huggingface\datasets\LULab___text\LULab--myOCR-6e66d31b7ceb8b64\0.0.0\cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2>python arrow2text.py .
+Found 2 Arrow file(s) to convert.
+Converting: .\text-train.arrow
+Saved: .\converted\text-train.text in text format.
+Converting: .\text-validation.arrow
+Saved: .\converted\text-validation.text in text format.
+Conversion complete. All files saved in '.\converted'.
+```
+
+ပြောင်းပေးထားတဲ့ ဖိုင်တွေကို converted ဆိုတဲ့ folder အောက်မှာ သိမ်းပေးထားတာမို့ အဲဒီအထဲ ဝင်ကြည့်ရင် ပြောင်းပြီးသား ဖိုင်တွေကို အောက်ပါအတိုင်း မြင်တွေ့ရလိမ့်မယ်။  
+
+```
+(base) C:\Users\801680\.cache\huggingface\datasets\LULab___text\LULab--myOCR-6e66d31b7ceb8b64\0.0.0\cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2\converted>dir
+ Volume in drive C has no label.
+ Volume Serial Number is 9C54-A208
+
+ Directory of C:\Users\801680\.cache\huggingface\datasets\LULab___text\LULab--myOCR-6e66d31b7ceb8b64\0.0.0\cb1e9bd71a82ad27976be3b12b407850fe2837d80c22c5e03a28949843a8ace2\converted
+
+11/24/2024  11:37 AM    <DIR>          .
+11/24/2024  11:37 AM    <DIR>          ..
+11/24/2024  11:37 AM         2,373,449 text-train.text
+11/24/2024  11:37 AM           757,102 text-validation.text
+               2 File(s)      3,130,551 bytes
+               2 Dir(s)  15,884,664,832 bytes free
+```
+
+text-validation.text ဖိုင်ထဲမှာက အောက်ပါအတိုင်း ...  
+
+```
+Images/MasterpieceUniType_312.png	တပို့တွဲ_လ_တွင်_၂၉_ရက်_ရှိ_သည်
+Images/Pyidaungsu_207.png	နောက်_အပတ်_စနေ_နေ့_မှာ
+Images/Press_1365.png	နောက်ဆုံး_ရထား_က_ဘယ်_အချိန်_ရှိ_ပါ_သလဲ
+Images/B_HW_2295.png	နောက်_တစ်_ခေါက်_ထပ်_ဆို_ပါ_ဦး
+Images/MasterpieceUniType_2125.png	ကိုင်_ထား_ပါ
+Images/UMoe_1890.png	ခင်ဗျား_ဘယ်_နေရာ_ကို_ကြည့်_ချင်_လဲ
+Images/Press_287.png	အာရုဏ်ခင်း_လေ_က_တကယ်_ကို_ပဲ_သန့်ရှင်း_လတ်ဆတ်_သည်
+Images/MasterpieceUniType_838.png	ကျွန်တော်_က_ဆိုးလ်_မှာ_နေ_ပါ_တယ်
+Images/MyanmarSanpya_627.png	ဟွန်း_က_အလုပ်_မ_လုပ်_ဘူး
+Images/Pyidaungsu_639.png	မကြာခဏ_တွေ့ဆုံ_ရင်_အနေနီး_လာ_တာ_သဘာဝ_ပဲ
+```
 
 ## next?!  
 
