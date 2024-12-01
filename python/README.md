@@ -427,4 +427,7 @@
 (python system path ကို စစ်ကြည့်ဖို့)  
 
 142. [arrow2text.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/arrow2text.py)  
-(.arrow ဖိုင်တွေကို column header စစ်ကြည့်ပြီး လူကဖတ်လို့ ရတဲ့ text သို့မဟုတ် CSV ဖိုင်အဖြစ်ပြောင်းပေးတဲ့ python codeပါ။)  
+(.arrow ဖိုင်တွေကို column header စစ်ကြည့်ပြီး လူကဖတ်လို့ ရတဲ့ text သို့မဟုတ် CSV ဖိုင်အဖြစ်ပြောင်းပေးတဲ့ python codeပါ။)
+
+143. [find_unmatched_files.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/find_unmatched_files.py)  
+(ဖိုလ်ဒါ တစ်ခုအောက်ထဲမှာ ရှိတဲ့ ဖိုင်တွေကို extension တစ်မျိုးကနေ တစ်မျိုးကို ပြောင်းကြတယ်လို့ ဆိုကြပါစို့၊ ဥပမာ .epub ဖိုင်တွေကို .pdf အဖြစ်ပြောင်းတာမျိုး၊ တော်တော်များများ ပြောင်းပြီးသွားလို့ မပြောင်းရသေးတဲ့ .epub ဖိုင်တွေကို ရှာကြည့်ချင်တယ် ဆိုတဲ့ အခါမျိုးအတွက် ရေးခဲ့တဲ့ python code ပါ။ extension နှစ်မျိုးကို -e1, -e2 ဆိုတဲ့ option နှစ်မျိုးနဲ့ သတ်မှတ်ပေးနိုင်ပါတယ်။)  
