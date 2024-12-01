@@ -119,6 +119,7 @@ Experiment တွေကို လုပ်ဖို့အတွက်က နေ�
 107. [nllb-translate.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/nllb-translate.sh)  
 108. [install_python.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/install_python.sh)  
 109. [extract_key_value_of_json.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/extract_key_value_of_json.sh)  
+110. [find_unmatched_files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find_unmatched_files.sh)  
 
 # perl
 
