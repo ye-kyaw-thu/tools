@@ -13491,39 +13491,132 @@ Images/MyanmarSanpya_627.png	ဟွန်း_က_အလုပ်_မ_လုပ�
 Images/Pyidaungsu_639.png	မကြာခဏ_တွေ့ဆုံ_ရင်_အနေနီး_လာ_တာ_သဘာဝ_ပဲ
 ```
 
-## next?!  
+## 144. [ornagai2tsv.py](https://github.com/ye-kyaw-thu/tools/blob/master/python/ornagai2tsv.py)
+[www.ornagai.com](www.ornagai.com) က နေ Kindle .mob ဖိုင်ကို TSV ဖိုင်ပြောင်းကြည့်ထားတာပါ။   
+သိရတာကတော့ အဲဒီမှာပေး download လုပ်ထားတာက English-Myanmar အဘိဓာန်ပါ။   
 
+ဒီ ornagai2tsv.py က html ဖိုင်ကနေ TSV ဖိုင်ပြောင်းပေးလိမ့်မယ်။  
+Ornagai Kindle ဖိုင်က .mobi file extension ပါ အဲဒါကြောင့် အရင်ဆုံး html ဖိုင်ရအောင် extract လုပ်ယူရပါတယ်။  
+
+လိုအပ်တဲ့ Kindle python library ကို install လုပ်ခဲ့တယ်။  
+
+```
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle$ pip install mobi --break-system-packages
+Defaulting to user installation because normal site-packages is not writeable
+Collecting mobi
+  Downloading mobi-0.3.3.tar.gz (90 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.9/90.9 kB 2.7 MB/s eta 0:00:00
+  Installing build dependencies ... done
+  Getting requirements to build wheel ... done
+  Preparing metadata (pyproject.toml) ... done
+Collecting loguru<0.7,>=0.6 (from mobi)
+  Downloading loguru-0.6.0-py3-none-any.whl.metadata (21 kB)
+Downloading loguru-0.6.0-py3-none-any.whl (58 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.3/58.3 kB 8.4 MB/s eta 0:00:00
+Building wheels for collected packages: mobi
+  Building wheel for mobi (pyproject.toml) ... done
+  Created wheel for mobi: filename=mobi-0.3.3-py3-none-any.whl size=101385 sha256=55c670c43c6d58e0df5ac4d272bccf4c775013ce1d7e0085c64f2e6189d40dfd
+  Stored in directory: /home/ye/.cache/pip/wheels/37/3f/4d/3662b1828209c13e568e9af8a410875e658774e44e1dc2d57c
+Successfully built mobi
+Installing collected packages: loguru, mobi
+Successfully installed loguru-0.6.0 mobi-0.3.3
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle$
+```
+
+Pip နဲ့ install လုပ်ပြီးရင် commandline tool "mobiunpack" က ပါလာပါလိမ့်မယ်။  
+အဲဒီ commandline tool ကို run ပြီး extract လုပ်ပါမယ်။  
+
+```
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle$ mobiunpack ./ornagai.mobi ./extracted
+KindleUnpack v0.82
+   Based on initial mobipocket version Copyright © 2009 Charles M. Hannum <root@ihack.net>
+   Extensive Extensions and Improvements Copyright © 2009-2014
+       by:  P. Durrant, K. Hendricks, S. Siebert, fandrieu, DiapDealer, nickredding, tkeo.
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, version 3.
+Unpacking Book...
+Completed
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle$
+```
+
+ဖြေထားတဲ့ ဖိုလ်ဒါအောက်ကနေ html, txt ဖိုင်တွေကို ရှာကြည့်ရင်...  
+
+```
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle/extracted$ find . -type f -name "*.html" -o -name "*.htm" -o -name "*.txt"
+./mobi7/book.html
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle/extracted$
+```
+
+ဖြေပြီး ရလာတဲ့ ဖိုလ်ဒါနဲ့ ဖိုင်တွေက အောက်ပါအတိုင်းပါ။  
+
+```
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle$ tree ./extracted/
+./extracted/
+├── HDImages
+├── kindlegenbuild.log
+├── kindlegensrc.zip
+└── mobi7
+    ├── book.html
+    ├── content.opf
+    ├── Images
+    └── toc.ncx
+
+4 directories, 5 files
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai/kindle$
+```
+
+Html ဖိုင်ကနေ TSV ဖိုင် ပြောင်းမယ်။  
+
+```
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$ time python ornagai2txt.py -i ./kindle/extracted/mobi7/book.html -o dictionary.txt
+Parsing dictionary content...
+Found 110424 dictionary entries
+
+real    0m1.626s
+user    0m1.362s
+sys     0m0.255s
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$
+```
+
+TSV ဖိုင်ကို လေ့လာကြည့်ရအောင်...  
+
+```
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$ wc ./dictionary.txt
+  110424  2957918 33463489 ./dictionary.txt
 ```
 
 ```
-
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$ head ./dictionary.txt
+E      letter /æ/ 1. လက်တင်အက္ခရာစဉ်တွင် a နှင့် e ပေါင်းစပ်ထားသော စာလုံး။ • Æ is a letter in the Latin alphabet.
+#       noun /ˈhæʃˌtæɡ/ 1. အကြောင်းအရာတစ်ခုကိုအမှတ်အသားပြုရန်အတွက် ဆိုရှယ်မီဒီယာပို့စ်များတွင် သုံးသော # သင်္ကေတ • Use the # symbol to mark a topic on social media posts.
+$       noun /ˈdɑːlər/ 1. ဒေါ်လာသင်္ကေတ • The price is $10. • Please pay $5 for the entrance fee.
+%       noun /pərˈsent/ 1. ရာခိုင်နှုန်း • What percentage of students passed the exam? • The interest rate is 5 percent.
+&       conjunction /ænd/ 1. နှင့် • He went to the store & bought some milk. • She likes to read & write.
+''      contraction /əd/ 1. would သို့မဟုတ် had ၏ အတိုကောက် • I'd like to go. • He'd already left.
+'Merica noun /əˈmerɪkə/ 1. အမေရိကန်ပြည်ထောင်စုကို ရည်ညွှန်းသော အသုံးအနှုန်း (အထူးသဖြင့် ခင်မင်ရင်းနှီးသော၊ လှောင်ပြောင်သော သို့မဟုတ် အထင်သေးသောသဘောဖြင့်) • Welcome to 'Merica, where anything is possible. • He's got that 'Merica attitude - loud and proud.
+'Ndrangheta     noun /ndrɑːŋˈɡeɪtə/ 1. အီတလီနိုင်ငံ Calabria ဒေသမှ မာဖီးယားဂိုဏ်းတစ်ခု • The 'Ndrangheta is considered one of the most powerful criminal organizations in the world. • Italian police have been cracking down on the 'Ndrangheta's operations in recent years.
+'em     pronoun //əm// 1. သူတို့၊ သူတို့ကို (တစ်စုံတစ်ယောက်ကို ရည်ညွှန်းရာတွင် သုံးသော စကားလုံး)။ • Tell 'em to come here. • I saw 'em at the park.
+'fraid  adjective /freɪd/ 1. ကြောက်သည်။ စိုးရိမ်သည်။ • I'm 'fraid I can't make it to the party.
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$
 ```
 
 ```
-
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$ tail ./dictionary.txt
+’tis    contraction /tɪz/ 1. ဖြစ်သည် (it is သို့မဟုတ် it has ၏ အတိုကောက်) • 'Tis the season to be jolly. • 'Tis but a scratch.
+’tude   noun /t(y)o͞od/ 1. attitude ၏ အတိုကောက် (slang) • Don't give me any ’tude, young man! • He's got a real ’tude problem.
+’tween decks    noun /ˈtwiːnˌdɛks/ 1. ကုန်းပတ်နှစ်ခုကြား • The sailors were ordered to work in the ’tween-decks. • Cargo was stored in the ’tween-decks to protect it from the weather.
+’twere  contraction /twɛr/ 1. it were ၏ အတိုကောက် • If 'twere done when 'tis done, then 'twere well It were done quickly. (Shakespeare - Macbeth) • I wish 'twere summer already.
+’twill  contraction /twɪl/ 1. it will ၏ အတိုကောက် • ’Twill be a cold day tomorrow. • I think ’twill rain later.
+’twixt  preposition, adverb /twɪkst/ 1. (archaic) between; betwixt • He stood 'twixt the devil and the deep blue sea. • ''Twixt twelve and one, methought they came to me.'
+’twould contraction /wʊd/ 1. it would ၏ အတိုကောက် • If I had the chance, ’twould be an honor. • ’Twould be a shame to waste such an opportunity.
+’un     suffix /əˈn/ 1. ၏ • the son of the person: သူ့သား • the car of the teacher: ဆရာမ၏ကား
+’ve     contraction /v/ 1. have ၏အတိုကောက် • I've been to Mandalay. • They've already eaten.
+€      noun /ˈjuːroʊ/ 1. ယူရိုငွေ • The price of the item is €10. • I paid €20 for the book.
+(base) ye@lst-hpc3090:~/exp/corpus_info/tool/dict/ornagai$
 ```
 
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
+## next?  
 
 ```
 
