@@ -336,3 +336,6 @@ CSV (Comma-Separated Values) ဖိုင်ထဲမှာ field ဘယ်န�
 
 110. [find_unmatched_files.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/find_unmatched_files.sh)  
 (ဖိုလ်ဒါ တစ်ခုအောက်ထဲမှာ ရှိတဲ့ ဖိုင်တွေကို extension တစ်မျိုးကနေ တစ်မျိုးကို ပြောင်းကြတယ်လို့ ဆိုကြပါစို့၊ ဥပမာ .epub ဖိုင်တွေကို .pdf အဖြစ်ပြောင်းတာမျိုး၊ တော်တော်များများ ပြောင်းပြီးသွားလို့ မပြောင်းရသေးတဲ့ .epub ဖိုင်တွေကို ရှာကြည့်ချင်တယ် ဆိုတဲ့ အခါမျိုးအတွက် ရေးခဲ့တဲ့ python code ပါ။ extension နှစ်မျိုးကို -e1, -e2 ဆိုတဲ့ option နှစ်မျိုးနဲ့ သတ်မှတ်ပေးနိုင်ပါတယ်။)   
+
+111. [disk_cleanup.sh](https://github.com/ye-kyaw-thu/tools/blob/master/bash/disk_cleanup.sh)  
+(HDD space ကို cleaning လုပ်တဲ့ shell script ပါ။ )
